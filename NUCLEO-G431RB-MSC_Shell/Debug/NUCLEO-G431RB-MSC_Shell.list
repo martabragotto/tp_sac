@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  000201e4  2**0
                   CONTENTS, READONLY
- 12 .debug_info   000141c1  00000000  00000000  00020214  2**0
+ 12 .debug_info   000141d1  00000000  00000000  00020214  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00002790  00000000  00000000  000343d5  2**0
+ 13 .debug_abbrev 00002790  00000000  00000000  000343e5  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 000010f8  00000000  00000000  00036b68  2**3
+ 14 .debug_aranges 000010f8  00000000  00000000  00036b78  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00001000  00000000  00000000  00037c60  2**3
+ 15 .debug_ranges 00001000  00000000  00000000  00037c70  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0001f0ad  00000000  00000000  00038c60  2**0
+ 16 .debug_macro  0001f0ad  00000000  00000000  00038c70  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0001361f  00000000  00000000  00057d0d  2**0
+ 17 .debug_line   0001361f  00000000  00000000  00057d1d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000c7829  00000000  00000000  0006b32c  2**0
+ 18 .debug_str    000c7829  00000000  00000000  0006b33c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  00132b55  2**0
+ 19 .comment      00000050  00000000  00000000  00132b65  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  000053b4  00000000  00000000  00132ba8  2**2
+ 20 .debug_frame  000053b4  00000000  00000000  00132bb8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -762,7 +762,7 @@ int main(void)
  800081e:	d107      	bne.n	8000830 <main+0x24c>
 				HAL_UART_Transmit(&huart2, startContent, sizeof(startContent), HAL_MAX_DELAY);
  8000820:	f04f 33ff 	mov.w	r3, #4294967295
- 8000824:	220e      	movs	r2, #14
+ 8000824:	220f      	movs	r2, #15
  8000826:	4926      	ldr	r1, [pc, #152]	; (80008c0 <main+0x2dc>)
  8000828:	4814      	ldr	r0, [pc, #80]	; (800087c <main+0x298>)
  800082a:	f002 facb 	bl	8002dc4 <HAL_UART_Transmit>
@@ -778,7 +778,7 @@ int main(void)
  800083e:	d107      	bne.n	8000850 <main+0x26c>
 				HAL_UART_Transmit(&huart2, stopContent, sizeof(stopContent), HAL_MAX_DELAY);
  8000840:	f04f 33ff 	mov.w	r3, #4294967295
- 8000844:	220e      	movs	r2, #14
+ 8000844:	2210      	movs	r2, #16
  8000846:	4920      	ldr	r1, [pc, #128]	; (80008c8 <main+0x2e4>)
  8000848:	480c      	ldr	r0, [pc, #48]	; (800087c <main+0x298>)
  800084a:	f002 fabb 	bl	8002dc4 <HAL_UART_Transmit>
