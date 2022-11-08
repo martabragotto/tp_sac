@@ -1,0 +1,25 @@
+!SESSION 2022-11-07 13:44:32.827 -----------------------------------------------
+eclipse.buildId=Version 1.10.1
+java.version=11.0.14.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=it_IT
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-11-07 13:45:02.861
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-11-07 13:45:03.041
+!MESSAGE Log4j initialized with config file D:\ProgettiSTEMENSEA\tp_sac\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-11-07 13:45:10.216
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-11-07 13:46:45.091
+!MESSAGE Indexed 'NUCLEO-G431RB-MSC_Shell' (24 sources, 117 headers) in 7,44 sec: 12.886 declarations; 70.879 references; 3 unresolved inclusions; 46 syntax errors; 171 unresolved names (0,2%)
+
+!ENTRY org.eclipse.core.resources 4 77 2022-11-07 14:00:09.741
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-11-07 14:00:09.741
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-11-07 14:00:09.741
+!MESSAGE D:\ProgettiSTEMENSEA\tp_sac\tp_sac_folder overlaps the location of another project: 'tp_sac_folder'
