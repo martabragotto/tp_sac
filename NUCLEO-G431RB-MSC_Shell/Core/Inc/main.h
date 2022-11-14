@@ -61,6 +61,10 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define BLUE_BUTTON_Pin GPIO_PIN_13
 #define BLUE_BUTTON_GPIO_Port GPIOC
+#define ISO_RESET_Pin GPIO_PIN_1
+#define ISO_RESET_GPIO_Port GPIOC
+#define ADC_CURRENT_Pin GPIO_PIN_0
+#define ADC_CURRENT_GPIO_Port GPIOA
 #define GREEN_LED_Pin GPIO_PIN_5
 #define GREEN_LED_GPIO_Port GPIOA
 #define T_SWDIO_Pin GPIO_PIN_13
