@@ -48,3 +48,9 @@ Following the shown formulas the first 3 lines of calculations have been compute
 
 	Actually 203 has been chosen as DTG in the code.
 	This is the minimum value, this value can be increased if needed (i.e. at 205)
+	
+ISO RESET CODE 
+In order to let inverter receive an up signal of at least 2 us, the following calculation has been done: 
+since the clock works at a frequency of 170MHz, the number of clockturns needed to arrive to 2 us is:
+	1/170 MHz : ClockTurnsNumber = 2us --> at least ClockTurnsNumber= 340 are needed to reach 2us //350 has been chosen as ISO_RESET_TIME (number of clockturns)
+
