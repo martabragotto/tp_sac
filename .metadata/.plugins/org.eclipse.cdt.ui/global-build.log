@@ -1,126 +1,28 @@
-15:50:04 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
+16:38:56 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G431xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:136:2: warning: implicit declaration of function 'memset' [-Wimplicit-function-declaration]
-  136 |  memset(argv,NULL,MAX_ARGS*sizeof(char*));
-      |  ^~~~~~
-../Core/Src/main.c:136:2: warning: incompatible implicit declaration of built-in function 'memset'
-../Core/Src/main.c:21:1: note: include '<string.h>' or provide a declaration of 'memset'
-   20 | #include "main.h"
-  +++ |+#include <string.h>
-   21 | 
-../Core/Src/main.c:136:14: warning: passing argument 2 of 'memset' makes integer from pointer without a cast [-Wint-conversion]
-  136 |  memset(argv,NULL,MAX_ARGS*sizeof(char*));
-      |              ^~~~
-      |              |
-      |              void *
-../Core/Src/main.c:136:14: note: expected 'int' but argument is of type 'void *'
-../Core/Src/main.c:137:19: warning: passing argument 2 of 'memset' makes integer from pointer without a cast [-Wint-conversion]
-  137 |  memset(cmdBuffer,NULL,CMD_BUFFER_SIZE*sizeof(char));
-      |                   ^~~~
-      |                   |
-      |                   void *
-../Core/Src/main.c:137:19: note: expected 'int' but argument is of type 'void *'
-../Core/Src/main.c:138:22: warning: passing argument 2 of 'memset' makes integer from pointer without a cast [-Wint-conversion]
-  138 |  memset(uartRxBuffer,NULL,UART_RX_BUFFER_SIZE*sizeof(char));
-      |                      ^~~~
-      |                      |
-      |                      void *
-../Core/Src/main.c:138:22: note: expected 'int' but argument is of type 'void *'
-../Core/Src/main.c:139:22: warning: passing argument 2 of 'memset' makes integer from pointer without a cast [-Wint-conversion]
-  139 |  memset(uartTxBuffer,NULL,UART_TX_BUFFER_SIZE*sizeof(char));
-      |                      ^~~~
-      |                      |
-      |                      void *
-../Core/Src/main.c:139:22: note: expected 'int' but argument is of type 'void *'
-../Core/Src/main.c:167:13: warning: implicit declaration of function 'strtok' [-Wimplicit-function-declaration]
-  167 |     token = strtok(cmdBuffer, " ");
-      |             ^~~~~~
-../Core/Src/main.c:167:11: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  167 |     token = strtok(cmdBuffer, " ");
-      |           ^
-../Core/Src/main.c:170:12: warning: assignment to 'char *' from 'int' makes pointer from integer without a cast [-Wint-conversion]
-  170 |      token = strtok(NULL, " ");
-      |            ^
-../Core/Src/main.c:175:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  175 |     HAL_UART_Transmit(&huart2, "\r\n ", sizeof("\r\n "), HAL_MAX_DELAY);
-      |                                ^~~~~~~
-      |                                |
-      |                                char *
-In file included from ../Core/Inc/stm32g4xx_hal_conf.h:348,
-                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:1611:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
- 1611 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:176:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  176 |     HAL_UART_Transmit(&huart2, cmdBuffer, sizeof(cmdBuffer), HAL_MAX_DELAY);
-      |                                ^~~~~~~~~
-      |                                |
-      |                                char *
-In file included from ../Core/Inc/stm32g4xx_hal_conf.h:348,
-                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:1611:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
- 1611 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:177:32: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
-  177 |     HAL_UART_Transmit(&huart2, "\r\n ", sizeof("\r\n "), HAL_MAX_DELAY);
-      |                                ^~~~~~~
-      |                                |
-      |                                char *
-In file included from ../Core/Inc/stm32g4xx_hal_conf.h:348,
-                 from ../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal.h:29,
-                 from ../Core/Inc/main.h:30,
-                 from ../Core/Src/main.c:20:
-../Drivers/STM32G4xx_HAL_Driver/Inc/stm32g4xx_hal_uart.h:1611:79: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
- 1611 | HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, const uint8_t *pData, uint16_t Size, uint32_t Timeout);
-      |                                                                ~~~~~~~~~~~~~~~^~~~~
-../Core/Src/main.c:196:7: warning: implicit declaration of function 'strcmp' [-Wimplicit-function-declaration]
-  196 |    if(strcmp(argv[0],"set")==0){
-      |       ^~~~~~
-../Core/Src/main.c:198:60: warning: implicit declaration of function 'atoi' [-Wimplicit-function-declaration]
-  198 |      HAL_GPIO_WritePin(GREEN_LED_GPIO_Port, GREEN_LED_Pin, atoi(argv[2]));
-      |                                                            ^~~~
-../Core/Src/main.c:199:6: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
-  199 |      sprintf(uartTxBuffer,"Switch on/off led : %d\r\n",atoi(argv[2]));
-      |      ^~~~~~~
-../Core/Src/main.c:199:6: warning: incompatible implicit declaration of built-in function 'sprintf'
-../Core/Src/main.c:21:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
-   20 | #include "main.h"
-  +++ |+#include <stdio.h>
-   21 | 
-../Core/Src/main.c:199:14: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
-  199 |      sprintf(uartTxBuffer,"Switch on/off led : %d\r\n",atoi(argv[2]));
-      |              ^~~~~~~~~~~~
-      |              |
-      |              uint8_t * {aka unsigned char *}
-../Core/Src/main.c:199:14: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
-arm-none-eabi-gcc -o "NUCLEO-G431RB-MSC_Shell.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\ProgettiSTEMENSEA\tp_sac\NUCLEO-G431RB-MSC_Shell\STM32G431RBTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="NUCLEO-G431RB-MSC_Shell.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: NUCLEO-G431RB-MSC_Shell.elf
- 
 arm-none-eabi-size   NUCLEO-G431RB-MSC_Shell.elf 
-arm-none-eabi-objdump -h -S  NUCLEO-G431RB-MSC_Shell.elf  > "NUCLEO-G431RB-MSC_Shell.list"
    text	   data	    bss	    dec	    hex	filename
-  36300	    536	   2072	  38908	   97fc	NUCLEO-G431RB-MSC_Shell.elf
+  36820	    536	   2072	  39428	   9a04	NUCLEO-G431RB-MSC_Shell.elf
 Finished building: default.size.stdout
  
-Finished building: NUCLEO-G431RB-MSC_Shell.list
- 
-15:50:06 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
+16:38:59 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
 make -j8 all 
 arm-none-eabi-size   NUCLEO-G431RB-MSC_Shell.elf 
    text	   data	    bss	    dec	    hex	filename
-  36300	    536	   2072	  38908	   97fc	NUCLEO-G431RB-MSC_Shell.elf
+  36820	    536	   2072	  39428	   9a04	NUCLEO-G431RB-MSC_Shell.elf
 Finished building: default.size.stdout
  
-15:50:20 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
+16:39:27 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
 make -j8 all 
 arm-none-eabi-size   NUCLEO-G431RB-MSC_Shell.elf 
    text	   data	    bss	    dec	    hex	filename
-  36300	    536	   2072	  38908	   97fc	NUCLEO-G431RB-MSC_Shell.elf
+  36820	    536	   2072	  39428	   9a04	NUCLEO-G431RB-MSC_Shell.elf
+Finished building: default.size.stdout
+ 
+16:40:06 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
+make -j8 all 
+arm-none-eabi-size   NUCLEO-G431RB-MSC_Shell.elf 
+   text	   data	    bss	    dec	    hex	filename
+  36820	    536	   2072	  39428	   9a04	NUCLEO-G431RB-MSC_Shell.elf
 Finished building: default.size.stdout
  
