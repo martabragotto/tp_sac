@@ -46,7 +46,7 @@
 #define ASCII_DEL 0x7F
 #define TIM1_ARR 5312
 //ISO_RESET
-#define ISO_RESET_TIME 350
+#define ISO_RESET_TIME 70
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
