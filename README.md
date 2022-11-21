@@ -59,5 +59,5 @@ DMA Settings
 The DMA has been associated to a new timer TIM8. The voltage output frequency of the full bridge is two times the switching frequency which is 16KHz, and since the required number of samplings per period is 10 the Timer has been set in order to work at 320KHz. 
 Callback function has been used only as a flag while the conversion has been performed in the main. 
 The conversion has been performed by averaging the 10 raw data and then dividing it by 4095 and multiplying it by 3,3.
-
+Have a look at the images "currentSensedValuesOnTerminal" "CurrentSensedWithOscilloscope" to see the measured current.
 
