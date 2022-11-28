@@ -1,0 +1,1087 @@
+\hypertarget{stm32g4xx__ll__rcc_8h_source}{}\doxysection{stm32g4xx\+\_\+ll\+\_\+rcc.\+h}
+\label{stm32g4xx__ll__rcc_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_rcc.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_rcc.h}}
+\mbox{\hyperlink{stm32g4xx__ll__rcc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{18 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef STM32G4xx\_LL\_RCC\_H}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define STM32G4xx\_LL\_RCC\_H}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{23 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx_8h}{stm32g4xx.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{47 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{51 \textcolor{comment}{/* Defines used to perform offsets*/}}
+\DoxyCodeLine{52 \textcolor{comment}{/* Offset used to access to RCC\_CCIPR and RCC\_CCIPR2 registers */}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define RCC\_OFFSET\_CCIPR        0U}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define RCC\_OFFSET\_CCIPR2       0x14U}}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{60 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#if defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*USE\_FULL\_LL\_DRIVER*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#if defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{83 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85   uint32\_t SYSCLK\_Frequency;        }
+\DoxyCodeLine{86   uint32\_t HCLK\_Frequency;          }
+\DoxyCodeLine{87   uint32\_t PCLK1\_Frequency;         }
+\DoxyCodeLine{88   uint32\_t PCLK2\_Frequency;         }
+\DoxyCodeLine{89 \} LL\_RCC\_ClocksTypeDef;}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_FULL\_LL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#if !defined  (HSE\_VALUE)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define HSE\_VALUE    8000000U   }}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSE\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#if !defined  (HSI\_VALUE)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define HSI\_VALUE    16000000U  }}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSI\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#if !defined  (LSE\_VALUE)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define LSE\_VALUE    32768U     }}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LSE\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#if !defined  (LSI\_VALUE)}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define LSI\_VALUE    32000U     }}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* LSI\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{126 }
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#if !defined  (HSI48\_VALUE)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define HSI48\_VALUE  48000000U  }}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HSI48\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#if !defined  (EXTERNAL\_CLOCK\_VALUE)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define EXTERNAL\_CLOCK\_VALUE    48000U     }}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* EXTERNAL\_CLOCK\_VALUE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_LSIRDYC                RCC\_CICR\_LSIRDYC     }}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_LSERDYC                RCC\_CICR\_LSERDYC     }}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_HSIRDYC                RCC\_CICR\_HSIRDYC     }}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_HSERDYC                RCC\_CICR\_HSERDYC     }}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_PLLRDYC                RCC\_CICR\_PLLRDYC     }}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_HSI48RDYC              RCC\_CICR\_HSI48RDYC   }}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_LSECSSC                RCC\_CICR\_LSECSSC     }}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define LL\_RCC\_CICR\_CSSC                   RCC\_CICR\_CSSC        }}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_LSIRDYF                RCC\_CIFR\_LSIRDYF     }}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_LSERDYF                RCC\_CIFR\_LSERDYF     }}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_HSIRDYF                RCC\_CIFR\_HSIRDYF     }}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_HSERDYF                RCC\_CIFR\_HSERDYF     }}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_PLLRDYF                RCC\_CIFR\_PLLRDYF     }}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_HSI48RDYF              RCC\_CIFR\_HSI48RDYF   }}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_LSECSSF                RCC\_CIFR\_LSECSSF     }}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define LL\_RCC\_CIFR\_CSSF                   RCC\_CIFR\_CSSF        }}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_LPWRRSTF                RCC\_CSR\_LPWRRSTF   }}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_OBLRSTF                 RCC\_CSR\_OBLRSTF    }}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_PINRSTF                 RCC\_CSR\_PINRSTF    }}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_SFTRSTF                 RCC\_CSR\_SFTRSTF    }}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_IWDGRSTF                RCC\_CSR\_IWDGRSTF   }}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_WWDGRSTF                RCC\_CSR\_WWDGRSTF   }}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define LL\_RCC\_CSR\_BORRSTF                 RCC\_CSR\_BORRSTF    }}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_LSIRDYIE               RCC\_CIER\_LSIRDYIE      }}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_LSERDYIE               RCC\_CIER\_LSERDYIE      }}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_HSIRDYIE               RCC\_CIER\_HSIRDYIE      }}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_HSERDYIE               RCC\_CIER\_HSERDYIE      }}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_PLLRDYIE               RCC\_CIER\_PLLRDYIE      }}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_HSI48RDYIE             RCC\_CIER\_HSI48RDYIE    }}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define LL\_RCC\_CIER\_LSECSSIE               RCC\_CIER\_LSECSSIE      }}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define LL\_RCC\_LSEDRIVE\_LOW                0x00000000U             }}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define LL\_RCC\_LSEDRIVE\_MEDIUMLOW          RCC\_BDCR\_LSEDRV\_0       }}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define LL\_RCC\_LSEDRIVE\_MEDIUMHIGH         RCC\_BDCR\_LSEDRV\_1       }}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define LL\_RCC\_LSEDRIVE\_HIGH               RCC\_BDCR\_LSEDRV         }}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define LL\_RCC\_LSCO\_CLKSOURCE\_LSI          0x00000000U                 }}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define LL\_RCC\_LSCO\_CLKSOURCE\_LSE          RCC\_BDCR\_LSCOSEL            }}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define LL\_RCC\_SYS\_CLKSOURCE\_HSI           RCC\_CFGR\_SW\_HSI    }}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define LL\_RCC\_SYS\_CLKSOURCE\_HSE           RCC\_CFGR\_SW\_HSE    }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define LL\_RCC\_SYS\_CLKSOURCE\_PLL           RCC\_CFGR\_SW\_PLL    }}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define LL\_RCC\_SYS\_CLKSOURCE\_STATUS\_HSI    RCC\_CFGR\_SWS\_HSI   }}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define LL\_RCC\_SYS\_CLKSOURCE\_STATUS\_HSE    RCC\_CFGR\_SWS\_HSE   }}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define LL\_RCC\_SYS\_CLKSOURCE\_STATUS\_PLL    RCC\_CFGR\_SWS\_PLL   }}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_1                RCC\_CFGR\_HPRE\_DIV1   }}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_2                RCC\_CFGR\_HPRE\_DIV2   }}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_4                RCC\_CFGR\_HPRE\_DIV4   }}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_8                RCC\_CFGR\_HPRE\_DIV8   }}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_16               RCC\_CFGR\_HPRE\_DIV16  }}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_64               RCC\_CFGR\_HPRE\_DIV64  }}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_128              RCC\_CFGR\_HPRE\_DIV128 }}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_256              RCC\_CFGR\_HPRE\_DIV256 }}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define LL\_RCC\_SYSCLK\_DIV\_512              RCC\_CFGR\_HPRE\_DIV512 }}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define LL\_RCC\_APB1\_DIV\_1                  RCC\_CFGR\_PPRE1\_DIV1  }}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define LL\_RCC\_APB1\_DIV\_2                  RCC\_CFGR\_PPRE1\_DIV2  }}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define LL\_RCC\_APB1\_DIV\_4                  RCC\_CFGR\_PPRE1\_DIV4  }}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define LL\_RCC\_APB1\_DIV\_8                  RCC\_CFGR\_PPRE1\_DIV8  }}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define LL\_RCC\_APB1\_DIV\_16                 RCC\_CFGR\_PPRE1\_DIV16 }}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define LL\_RCC\_APB2\_DIV\_1                  RCC\_CFGR\_PPRE2\_DIV1  }}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define LL\_RCC\_APB2\_DIV\_2                  RCC\_CFGR\_PPRE2\_DIV2  }}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define LL\_RCC\_APB2\_DIV\_4                  RCC\_CFGR\_PPRE2\_DIV4  }}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define LL\_RCC\_APB2\_DIV\_8                  RCC\_CFGR\_PPRE2\_DIV8  }}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define LL\_RCC\_APB2\_DIV\_16                 RCC\_CFGR\_PPRE2\_DIV16 }}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_NOCLOCK          0x00000000U                            }}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_SYSCLK           RCC\_CFGR\_MCOSEL\_0                      }}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_HSI              (RCC\_CFGR\_MCOSEL\_0| RCC\_CFGR\_MCOSEL\_1) }}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_HSE              RCC\_CFGR\_MCOSEL\_2                      }}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_PLLCLK           (RCC\_CFGR\_MCOSEL\_0|RCC\_CFGR\_MCOSEL\_2)  }}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_LSI              (RCC\_CFGR\_MCOSEL\_1|RCC\_CFGR\_MCOSEL\_2)  }}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_LSE              (RCC\_CFGR\_MCOSEL\_0|RCC\_CFGR\_MCOSEL\_1|RCC\_CFGR\_MCOSEL\_2) }}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1SOURCE\_HSI48            RCC\_CFGR\_MCOSEL\_3                      }}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1\_DIV\_1                  RCC\_CFGR\_MCOPRE\_DIV1       }}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1\_DIV\_2                  RCC\_CFGR\_MCOPRE\_DIV2       }}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1\_DIV\_4                  RCC\_CFGR\_MCOPRE\_DIV4       }}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1\_DIV\_8                  RCC\_CFGR\_MCOPRE\_DIV8       }}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define LL\_RCC\_MCO1\_DIV\_16                 RCC\_CFGR\_MCOPRE\_DIV16      }}
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#if defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{\#define LL\_RCC\_PERIPH\_FREQUENCY\_NO         0x00000000U                 }}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#define LL\_RCC\_PERIPH\_FREQUENCY\_NA         0xFFFFFFFFU                 }}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_FULL\_LL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#define LL\_RCC\_USART1\_CLKSOURCE\_PCLK2      (RCC\_CCIPR\_USART1SEL << 16U)                           }}
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#define LL\_RCC\_USART1\_CLKSOURCE\_SYSCLK     ((RCC\_CCIPR\_USART1SEL << 16U) | RCC\_CCIPR\_USART1SEL\_0) }}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define LL\_RCC\_USART1\_CLKSOURCE\_HSI        ((RCC\_CCIPR\_USART1SEL << 16U) | RCC\_CCIPR\_USART1SEL\_1) }}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#define LL\_RCC\_USART1\_CLKSOURCE\_LSE        ((RCC\_CCIPR\_USART1SEL << 16U) | RCC\_CCIPR\_USART1SEL)   }}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#define LL\_RCC\_USART2\_CLKSOURCE\_PCLK1      (RCC\_CCIPR\_USART2SEL << 16U)                           }}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define LL\_RCC\_USART2\_CLKSOURCE\_SYSCLK     ((RCC\_CCIPR\_USART2SEL << 16U) | RCC\_CCIPR\_USART2SEL\_0) }}
+\DoxyCodeLine{320 \textcolor{preprocessor}{\#define LL\_RCC\_USART2\_CLKSOURCE\_HSI        ((RCC\_CCIPR\_USART2SEL << 16U) | RCC\_CCIPR\_USART2SEL\_1) }}
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define LL\_RCC\_USART2\_CLKSOURCE\_LSE        ((RCC\_CCIPR\_USART2SEL << 16U) | RCC\_CCIPR\_USART2SEL)   }}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define LL\_RCC\_USART3\_CLKSOURCE\_PCLK1      (RCC\_CCIPR\_USART3SEL << 16U)                           }}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define LL\_RCC\_USART3\_CLKSOURCE\_SYSCLK     ((RCC\_CCIPR\_USART3SEL << 16U) | RCC\_CCIPR\_USART3SEL\_0) }}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define LL\_RCC\_USART3\_CLKSOURCE\_HSI        ((RCC\_CCIPR\_USART3SEL << 16U) | RCC\_CCIPR\_USART3SEL\_1) }}
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#define LL\_RCC\_USART3\_CLKSOURCE\_LSE        ((RCC\_CCIPR\_USART3SEL << 16U) | RCC\_CCIPR\_USART3SEL)   }}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR\_UART4SEL)}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define LL\_RCC\_UART4\_CLKSOURCE\_PCLK1       (RCC\_CCIPR\_UART4SEL << 16U)                           }}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define LL\_RCC\_UART4\_CLKSOURCE\_SYSCLK      ((RCC\_CCIPR\_UART4SEL << 16U) | RCC\_CCIPR\_UART4SEL\_0)  }}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define LL\_RCC\_UART4\_CLKSOURCE\_HSI         ((RCC\_CCIPR\_UART4SEL << 16U) | RCC\_CCIPR\_UART4SEL\_1)  }}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define LL\_RCC\_UART4\_CLKSOURCE\_LSE         ((RCC\_CCIPR\_UART4SEL << 16U) | RCC\_CCIPR\_UART4SEL)    }}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR\_UART4SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR\_UART5SEL)}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{\#define LL\_RCC\_UART5\_CLKSOURCE\_PCLK1       (RCC\_CCIPR\_UART5SEL << 16U)                           }}
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#define LL\_RCC\_UART5\_CLKSOURCE\_SYSCLK      ((RCC\_CCIPR\_UART5SEL << 16U) | RCC\_CCIPR\_UART5SEL\_0)  }}
+\DoxyCodeLine{342 \textcolor{preprocessor}{\#define LL\_RCC\_UART5\_CLKSOURCE\_HSI         ((RCC\_CCIPR\_UART5SEL << 16U) | RCC\_CCIPR\_UART5SEL\_1)  }}
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#define LL\_RCC\_UART5\_CLKSOURCE\_LSE         ((RCC\_CCIPR\_UART5SEL << 16U) | RCC\_CCIPR\_UART5SEL)    }}
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR\_UART5SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define LL\_RCC\_LPUART1\_CLKSOURCE\_PCLK1     0x00000000U                     }}
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define LL\_RCC\_LPUART1\_CLKSOURCE\_SYSCLK    RCC\_CCIPR\_LPUART1SEL\_0          }}
+\DoxyCodeLine{354 \textcolor{preprocessor}{\#define LL\_RCC\_LPUART1\_CLKSOURCE\_HSI       RCC\_CCIPR\_LPUART1SEL\_1          }}
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#define LL\_RCC\_LPUART1\_CLKSOURCE\_LSE       RCC\_CCIPR\_LPUART1SEL            }}
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#define LL\_RCC\_I2C1\_CLKSOURCE\_PCLK1        ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C1SEL\_Pos << 16U))                                                      }}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define LL\_RCC\_I2C1\_CLKSOURCE\_SYSCLK       ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C1SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C1SEL\_0 >> RCC\_CCIPR\_I2C1SEL\_Pos))     }}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define LL\_RCC\_I2C1\_CLKSOURCE\_HSI          ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C1SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C1SEL\_1 >> RCC\_CCIPR\_I2C1SEL\_Pos))     }}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define LL\_RCC\_I2C2\_CLKSOURCE\_PCLK1        ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C2SEL\_Pos << 16U))                                                      }}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define LL\_RCC\_I2C2\_CLKSOURCE\_SYSCLK       ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C2SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C2SEL\_0 >> RCC\_CCIPR\_I2C2SEL\_Pos))     }}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define LL\_RCC\_I2C2\_CLKSOURCE\_HSI          ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C2SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C2SEL\_1 >> RCC\_CCIPR\_I2C2SEL\_Pos))     }}
+\DoxyCodeLine{369 \textcolor{preprocessor}{\#define LL\_RCC\_I2C3\_CLKSOURCE\_PCLK1        ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C3SEL\_Pos << 16U))                                                      }}
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define LL\_RCC\_I2C3\_CLKSOURCE\_SYSCLK       ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C3SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C3SEL\_0 >> RCC\_CCIPR\_I2C3SEL\_Pos))     }}
+\DoxyCodeLine{371 \textcolor{preprocessor}{\#define LL\_RCC\_I2C3\_CLKSOURCE\_HSI          ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C3SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C3SEL\_1 >> RCC\_CCIPR\_I2C3SEL\_Pos))     }}
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR2\_I2C4SEL)}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{\#define LL\_RCC\_I2C4\_CLKSOURCE\_PCLK1        ((RCC\_OFFSET\_CCIPR2 << 24U) | (RCC\_CCIPR2\_I2C4SEL\_Pos << 16U))                                                    }}
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#define LL\_RCC\_I2C4\_CLKSOURCE\_SYSCLK       ((RCC\_OFFSET\_CCIPR2 << 24U) | (RCC\_CCIPR2\_I2C4SEL\_Pos << 16U) | (RCC\_CCIPR2\_I2C4SEL\_0 >> RCC\_CCIPR2\_I2C4SEL\_Pos)) }}
+\DoxyCodeLine{375 \textcolor{preprocessor}{\#define LL\_RCC\_I2C4\_CLKSOURCE\_HSI          ((RCC\_OFFSET\_CCIPR2 << 24U) | (RCC\_CCIPR2\_I2C4SEL\_Pos << 16U) | (RCC\_CCIPR2\_I2C4SEL\_1 >> RCC\_CCIPR2\_I2C4SEL\_Pos)) }}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR2\_I2C4SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#define LL\_RCC\_LPTIM1\_CLKSOURCE\_PCLK1      0x00000000U                                            }}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#define LL\_RCC\_LPTIM1\_CLKSOURCE\_LSI        RCC\_CCIPR\_LPTIM1SEL\_0                                  }}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define LL\_RCC\_LPTIM1\_CLKSOURCE\_HSI        RCC\_CCIPR\_LPTIM1SEL\_1                                  }}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define LL\_RCC\_LPTIM1\_CLKSOURCE\_LSE        RCC\_CCIPR\_LPTIM1SEL                                    }}
+\DoxyCodeLine{395 \textcolor{preprocessor}{\#define LL\_RCC\_SAI1\_CLKSOURCE\_SYSCLK       0x00000000U                                           }}
+\DoxyCodeLine{396 \textcolor{preprocessor}{\#define LL\_RCC\_SAI1\_CLKSOURCE\_PLL          RCC\_CCIPR\_SAI1SEL\_0                                   }}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#define LL\_RCC\_SAI1\_CLKSOURCE\_PIN          RCC\_CCIPR\_SAI1SEL\_1                                   }}
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#define LL\_RCC\_SAI1\_CLKSOURCE\_HSI          (RCC\_CCIPR\_SAI1SEL\_0 | RCC\_CCIPR\_SAI1SEL\_1)           }}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#define LL\_RCC\_I2S\_CLKSOURCE\_SYSCLK       0x00000000U                                          }}
+\DoxyCodeLine{407 \textcolor{preprocessor}{\#define LL\_RCC\_I2S\_CLKSOURCE\_PLL          RCC\_CCIPR\_I2S23SEL\_0                                 }}
+\DoxyCodeLine{408 \textcolor{preprocessor}{\#define LL\_RCC\_I2S\_CLKSOURCE\_PIN          RCC\_CCIPR\_I2S23SEL\_1                                 }}
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define LL\_RCC\_I2S\_CLKSOURCE\_HSI          (RCC\_CCIPR\_I2S23SEL\_0 | RCC\_CCIPR\_I2S23SEL\_1)        }}
+\DoxyCodeLine{414 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define LL\_RCC\_FDCAN\_CLKSOURCE\_HSE        0x00000000U             }}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define LL\_RCC\_FDCAN\_CLKSOURCE\_PLL        RCC\_CCIPR\_FDCANSEL\_0    }}
+\DoxyCodeLine{420 \textcolor{preprocessor}{\#define LL\_RCC\_FDCAN\_CLKSOURCE\_PCLK1      RCC\_CCIPR\_FDCANSEL\_1    }}
+\DoxyCodeLine{424 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{425 }
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define LL\_RCC\_RNG\_CLKSOURCE\_HSI48        0x00000000U             }}
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define LL\_RCC\_RNG\_CLKSOURCE\_PLL          RCC\_CCIPR\_CLK48SEL\_1    }}
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#define LL\_RCC\_USB\_CLKSOURCE\_HSI48        0x00000000U             }}
+\DoxyCodeLine{439 \textcolor{preprocessor}{\#define LL\_RCC\_USB\_CLKSOURCE\_PLL          RCC\_CCIPR\_CLK48SEL\_1    }}
+\DoxyCodeLine{447 \textcolor{preprocessor}{\#define LL\_RCC\_ADC12\_CLKSOURCE\_NONE        ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC12SEL\_Pos << 16U))                                                       }}
+\DoxyCodeLine{448 \textcolor{preprocessor}{\#define LL\_RCC\_ADC12\_CLKSOURCE\_PLL         ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC12SEL\_Pos << 16U) | (RCC\_CCIPR\_ADC12SEL\_0 >> RCC\_CCIPR\_ADC12SEL\_Pos))    }}
+\DoxyCodeLine{449 \textcolor{preprocessor}{\#define LL\_RCC\_ADC12\_CLKSOURCE\_SYSCLK      ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC12SEL\_Pos << 16U) | (RCC\_CCIPR\_ADC12SEL\_1 >> RCC\_CCIPR\_ADC12SEL\_Pos))    }}
+\DoxyCodeLine{450 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR\_ADC345SEL)}}
+\DoxyCodeLine{451 \textcolor{preprocessor}{\#define LL\_RCC\_ADC345\_CLKSOURCE\_NONE       ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC345SEL\_Pos << 16U))                                                      }}
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#define LL\_RCC\_ADC345\_CLKSOURCE\_PLL        ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC345SEL\_Pos << 16U) | (RCC\_CCIPR\_ADC345SEL\_0 >> RCC\_CCIPR\_ADC345SEL\_Pos)) }}
+\DoxyCodeLine{453 \textcolor{preprocessor}{\#define LL\_RCC\_ADC345\_CLKSOURCE\_SYSCLK     ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC345SEL\_Pos << 16U) | (RCC\_CCIPR\_ADC345SEL\_1 >> RCC\_CCIPR\_ADC345SEL\_Pos)) }}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR\_ADC345SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{462 \textcolor{preprocessor}{\#define LL\_RCC\_QUADSPI\_CLKSOURCE\_SYSCLK    0x00000000U              }}
+\DoxyCodeLine{463 \textcolor{preprocessor}{\#define LL\_RCC\_QUADSPI\_CLKSOURCE\_HSI       RCC\_CCIPR2\_QSPISEL\_0     }}
+\DoxyCodeLine{464 \textcolor{preprocessor}{\#define LL\_RCC\_QUADSPI\_CLKSOURCE\_PLL       RCC\_CCIPR2\_QSPISEL\_1     }}
+\DoxyCodeLine{473 \textcolor{preprocessor}{\#define LL\_RCC\_USART1\_CLKSOURCE            RCC\_CCIPR\_USART1SEL }}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define LL\_RCC\_USART2\_CLKSOURCE            RCC\_CCIPR\_USART2SEL }}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define LL\_RCC\_USART3\_CLKSOURCE            RCC\_CCIPR\_USART3SEL }}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR\_UART4SEL)}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#define LL\_RCC\_UART4\_CLKSOURCE             RCC\_CCIPR\_UART4SEL }}
+\DoxyCodeLine{485 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR\_UART4SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{486 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR\_UART5SEL)}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#define LL\_RCC\_UART5\_CLKSOURCE             RCC\_CCIPR\_UART5SEL }}
+\DoxyCodeLine{488 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR\_UART5SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{496 \textcolor{preprocessor}{\#define LL\_RCC\_LPUART1\_CLKSOURCE           RCC\_CCIPR\_LPUART1SEL }}
+\DoxyCodeLine{504 \textcolor{preprocessor}{\#define LL\_RCC\_I2C1\_CLKSOURCE              ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C1SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C1SEL >> RCC\_CCIPR\_I2C1SEL\_Pos)) }}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define LL\_RCC\_I2C2\_CLKSOURCE              ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C2SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C2SEL >> RCC\_CCIPR\_I2C2SEL\_Pos)) }}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define LL\_RCC\_I2C3\_CLKSOURCE              ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_I2C3SEL\_Pos << 16U) | (RCC\_CCIPR\_I2C3SEL >> RCC\_CCIPR\_I2C3SEL\_Pos)) }}
+\DoxyCodeLine{507 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR2\_I2C4SEL)}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{\#define LL\_RCC\_I2C4\_CLKSOURCE              ((RCC\_OFFSET\_CCIPR2 << 24U) | (RCC\_CCIPR2\_I2C4SEL\_Pos << 16U) | (RCC\_CCIPR2\_I2C4SEL >> RCC\_CCIPR2\_I2C4SEL\_Pos)) }}
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR2\_I2C4SEL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define LL\_RCC\_LPTIM1\_CLKSOURCE            RCC\_CCIPR\_LPTIM1SEL }}
+\DoxyCodeLine{525 \textcolor{preprocessor}{\#define LL\_RCC\_SAI1\_CLKSOURCE              RCC\_CCIPR\_SAI1SEL }}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define LL\_RCC\_I2S\_CLKSOURCE              RCC\_CCIPR\_I2S23SEL }}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#define LL\_RCC\_FDCAN\_CLKSOURCE             RCC\_CCIPR\_FDCANSEL }}
+\DoxyCodeLine{543 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{544 }
+\DoxyCodeLine{552 \textcolor{preprocessor}{\#define LL\_RCC\_RNG\_CLKSOURCE               RCC\_CCIPR\_CLK48SEL }}
+\DoxyCodeLine{560 \textcolor{preprocessor}{\#define LL\_RCC\_USB\_CLKSOURCE               RCC\_CCIPR\_CLK48SEL }}
+\DoxyCodeLine{568 \textcolor{preprocessor}{\#define LL\_RCC\_ADC12\_CLKSOURCE             ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC12SEL\_Pos << 16U) | (RCC\_CCIPR\_ADC12SEL >> RCC\_CCIPR\_ADC12SEL\_Pos))    }}
+\DoxyCodeLine{569 \textcolor{preprocessor}{\#if defined(RCC\_CCIPR\_ADC345SEL\_Pos)}}
+\DoxyCodeLine{570 \textcolor{preprocessor}{\#define LL\_RCC\_ADC345\_CLKSOURCE            ((RCC\_OFFSET\_CCIPR << 24U) | (RCC\_CCIPR\_ADC345SEL\_Pos << 16U) | (RCC\_CCIPR\_ADC345SEL >> RCC\_CCIPR\_ADC345SEL\_Pos)) }}
+\DoxyCodeLine{571 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* RCC\_CCIPR\_ADC345SEL\_Pos */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{579 \textcolor{preprocessor}{\#define LL\_RCC\_QUADSPI\_CLKSOURCE           RCC\_CCIPR2\_QSPISEL    }}
+\DoxyCodeLine{587 \textcolor{preprocessor}{\#define LL\_RCC\_RTC\_CLKSOURCE\_NONE          0x00000000U                   }}
+\DoxyCodeLine{588 \textcolor{preprocessor}{\#define LL\_RCC\_RTC\_CLKSOURCE\_LSE           RCC\_BDCR\_RTCSEL\_0       }}
+\DoxyCodeLine{589 \textcolor{preprocessor}{\#define LL\_RCC\_RTC\_CLKSOURCE\_LSI           RCC\_BDCR\_RTCSEL\_1       }}
+\DoxyCodeLine{590 \textcolor{preprocessor}{\#define LL\_RCC\_RTC\_CLKSOURCE\_HSE\_DIV32     RCC\_BDCR\_RTCSEL         }}
+\DoxyCodeLine{599 \textcolor{preprocessor}{\#define LL\_RCC\_PLLSOURCE\_NONE              0x00000000U             }}
+\DoxyCodeLine{600 \textcolor{preprocessor}{\#define LL\_RCC\_PLLSOURCE\_HSI               RCC\_PLLCFGR\_PLLSRC\_HSI  }}
+\DoxyCodeLine{601 \textcolor{preprocessor}{\#define LL\_RCC\_PLLSOURCE\_HSE               RCC\_PLLCFGR\_PLLSRC\_HSE  }}
+\DoxyCodeLine{609 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_1                  0x00000000U                                                                           }}
+\DoxyCodeLine{610 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_2                  RCC\_PLLCFGR\_PLLM\_0                                                                    }}
+\DoxyCodeLine{611 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_3                  RCC\_PLLCFGR\_PLLM\_1                                                                    }}
+\DoxyCodeLine{612 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_4                  (RCC\_PLLCFGR\_PLLM\_1 | RCC\_PLLCFGR\_PLLM\_0)                                             }}
+\DoxyCodeLine{613 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_5                  RCC\_PLLCFGR\_PLLM\_2                                                                    }}
+\DoxyCodeLine{614 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_6                  (RCC\_PLLCFGR\_PLLM\_2 | RCC\_PLLCFGR\_PLLM\_0)                                             }}
+\DoxyCodeLine{615 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_7                  (RCC\_PLLCFGR\_PLLM\_2 | RCC\_PLLCFGR\_PLLM\_1)                                             }}
+\DoxyCodeLine{616 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_8                  (RCC\_PLLCFGR\_PLLM\_2 | RCC\_PLLCFGR\_PLLM\_1 | RCC\_PLLCFGR\_PLLM\_0)                        }}
+\DoxyCodeLine{617 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_9                  RCC\_PLLCFGR\_PLLM\_3                                                                    }}
+\DoxyCodeLine{618 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_10                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_0)                                             }}
+\DoxyCodeLine{619 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_11                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_1)                                             }}
+\DoxyCodeLine{620 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_12                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_1 | RCC\_PLLCFGR\_PLLM\_0)                        }}
+\DoxyCodeLine{621 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_13                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_2)                                             }}
+\DoxyCodeLine{622 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_14                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_2 | RCC\_PLLCFGR\_PLLM\_0)                        }}
+\DoxyCodeLine{623 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_15                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_2 | RCC\_PLLCFGR\_PLLM\_1)                        }}
+\DoxyCodeLine{624 \textcolor{preprocessor}{\#define LL\_RCC\_PLLM\_DIV\_16                 (RCC\_PLLCFGR\_PLLM\_3 | RCC\_PLLCFGR\_PLLM\_2 | RCC\_PLLCFGR\_PLLM\_1 | RCC\_PLLCFGR\_PLLM\_0)   }}
+\DoxyCodeLine{632 \textcolor{preprocessor}{\#define LL\_RCC\_PLLR\_DIV\_2                  0x00000000U            }}
+\DoxyCodeLine{633 \textcolor{preprocessor}{\#define LL\_RCC\_PLLR\_DIV\_4                  (RCC\_PLLCFGR\_PLLR\_0)   }}
+\DoxyCodeLine{634 \textcolor{preprocessor}{\#define LL\_RCC\_PLLR\_DIV\_6                  (RCC\_PLLCFGR\_PLLR\_1)   }}
+\DoxyCodeLine{635 \textcolor{preprocessor}{\#define LL\_RCC\_PLLR\_DIV\_8                  (RCC\_PLLCFGR\_PLLR)     }}
+\DoxyCodeLine{643 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_2                  (RCC\_PLLCFGR\_PLLPDIV\_1)                                              }}
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_3                  (RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0)                        }}
+\DoxyCodeLine{645 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_4                  (RCC\_PLLCFGR\_PLLPDIV\_2)                                              }}
+\DoxyCodeLine{646 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_5                  (RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_0)                        }}
+\DoxyCodeLine{647 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_6                  (RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1)                        }}
+\DoxyCodeLine{648 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_7                  (RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0)  }}
+\DoxyCodeLine{649 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_8                  (RCC\_PLLCFGR\_PLLPDIV\_3)                                              }}
+\DoxyCodeLine{650 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_9                  (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_0)                        }}
+\DoxyCodeLine{651 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_10                 (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_1)                        }}
+\DoxyCodeLine{652 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_11                 (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0)  }}
+\DoxyCodeLine{653 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_12                 (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2)                        }}
+\DoxyCodeLine{654 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_13                 (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_0)  }}
+\DoxyCodeLine{655 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_14                 (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1)  }}
+\DoxyCodeLine{656 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_15                 (RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0) }}
+\DoxyCodeLine{657 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_16                 (RCC\_PLLCFGR\_PLLPDIV\_4)                                              }}
+\DoxyCodeLine{658 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_17                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_0)                        }}
+\DoxyCodeLine{659 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_18                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_1)                        }}
+\DoxyCodeLine{660 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_19                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0)  }}
+\DoxyCodeLine{661 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_20                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_2)                        }}
+\DoxyCodeLine{662 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_21                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_0)  }}
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_22                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1)  }}
+\DoxyCodeLine{664 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_23                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0) }}
+\DoxyCodeLine{665 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_24                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3)                        }}
+\DoxyCodeLine{666 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_25                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_0)  }}
+\DoxyCodeLine{667 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_26                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_1)  }}
+\DoxyCodeLine{668 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_27                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0) }}
+\DoxyCodeLine{669 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_28                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2)  }}
+\DoxyCodeLine{670 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_29                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_0) }}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_30                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1) }}
+\DoxyCodeLine{672 \textcolor{preprocessor}{\#define LL\_RCC\_PLLP\_DIV\_31                 (RCC\_PLLCFGR\_PLLPDIV\_4|RCC\_PLLCFGR\_PLLPDIV\_3|RCC\_PLLCFGR\_PLLPDIV\_2|RCC\_PLLCFGR\_PLLPDIV\_1|RCC\_PLLCFGR\_PLLPDIV\_0) }}
+\DoxyCodeLine{680 \textcolor{preprocessor}{\#define LL\_RCC\_PLLQ\_DIV\_2                  0x00000000U             }}
+\DoxyCodeLine{681 \textcolor{preprocessor}{\#define LL\_RCC\_PLLQ\_DIV\_4                  (RCC\_PLLCFGR\_PLLQ\_0)    }}
+\DoxyCodeLine{682 \textcolor{preprocessor}{\#define LL\_RCC\_PLLQ\_DIV\_6                  (RCC\_PLLCFGR\_PLLQ\_1)    }}
+\DoxyCodeLine{683 \textcolor{preprocessor}{\#define LL\_RCC\_PLLQ\_DIV\_8                  (RCC\_PLLCFGR\_PLLQ)      }}
+\DoxyCodeLine{692 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{707 \textcolor{preprocessor}{\#define LL\_RCC\_WriteReg(\_\_REG\_\_, \_\_VALUE\_\_) WRITE\_REG(RCC-\/>\_\_REG\_\_, \_\_VALUE\_\_)}}
+\DoxyCodeLine{708 }
+\DoxyCodeLine{714 \textcolor{preprocessor}{\#define LL\_RCC\_ReadReg(\_\_REG\_\_) READ\_REG(RCC-\/>\_\_REG\_\_)}}
+\DoxyCodeLine{753 \textcolor{preprocessor}{\#define \_\_LL\_RCC\_CALC\_PLLCLK\_FREQ(\_\_INPUTFREQ\_\_, \_\_PLLM\_\_, \_\_PLLN\_\_, \_\_PLLR\_\_) ((\_\_INPUTFREQ\_\_) * (\_\_PLLN\_\_) / ((((\_\_PLLM\_\_)>> RCC\_PLLCFGR\_PLLM\_Pos) + 1U)) / \(\backslash\)}}
+\DoxyCodeLine{754 \textcolor{preprocessor}{                   ((((\_\_PLLR\_\_) >> RCC\_PLLCFGR\_PLLR\_Pos) + 1U) * 2U))}}
+\DoxyCodeLine{755 }
+\DoxyCodeLine{813 \textcolor{preprocessor}{\#define \_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ(\_\_INPUTFREQ\_\_, \_\_PLLM\_\_, \_\_PLLN\_\_, \_\_PLLP\_\_) ((\_\_INPUTFREQ\_\_) * (\_\_PLLN\_\_) / ((((\_\_PLLM\_\_)>> RCC\_PLLCFGR\_PLLM\_Pos) + 1U)) / \(\backslash\)}}
+\DoxyCodeLine{814 \textcolor{preprocessor}{                   ((\_\_PLLP\_\_) >> RCC\_PLLCFGR\_PLLPDIV\_Pos))}}
+\DoxyCodeLine{815 }
+\DoxyCodeLine{846 \textcolor{preprocessor}{\#define \_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ(\_\_INPUTFREQ\_\_, \_\_PLLM\_\_, \_\_PLLN\_\_, \_\_PLLQ\_\_) ((\_\_INPUTFREQ\_\_) * (\_\_PLLN\_\_) / ((((\_\_PLLM\_\_)>> RCC\_PLLCFGR\_PLLM\_Pos) + 1U)) / \(\backslash\)}}
+\DoxyCodeLine{847 \textcolor{preprocessor}{                   ((((\_\_PLLQ\_\_) >> RCC\_PLLCFGR\_PLLQ\_Pos) + 1U) << 1U))}}
+\DoxyCodeLine{848 }
+\DoxyCodeLine{864 \textcolor{preprocessor}{\#define \_\_LL\_RCC\_CALC\_HCLK\_FREQ(\_\_SYSCLKFREQ\_\_,\_\_AHBPRESCALER\_\_) ((\_\_SYSCLKFREQ\_\_) >> (AHBPrescTable[((\_\_AHBPRESCALER\_\_) \& RCC\_CFGR\_HPRE) >>  RCC\_CFGR\_HPRE\_Pos] \& 0x1FU))}}
+\DoxyCodeLine{865 }
+\DoxyCodeLine{877 \textcolor{preprocessor}{\#define \_\_LL\_RCC\_CALC\_PCLK1\_FREQ(\_\_HCLKFREQ\_\_, \_\_APB1PRESCALER\_\_) ((\_\_HCLKFREQ\_\_) >> (APBPrescTable[(\_\_APB1PRESCALER\_\_) >>  RCC\_CFGR\_PPRE1\_Pos] \& 0x1FU))}}
+\DoxyCodeLine{878 }
+\DoxyCodeLine{890 \textcolor{preprocessor}{\#define \_\_LL\_RCC\_CALC\_PCLK2\_FREQ(\_\_HCLKFREQ\_\_, \_\_APB2PRESCALER\_\_) ((\_\_HCLKFREQ\_\_) >> (APBPrescTable[(\_\_APB2PRESCALER\_\_) >>  RCC\_CFGR\_PPRE2\_Pos] \& 0x1FU))}}
+\DoxyCodeLine{891 }
+\DoxyCodeLine{900 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{914 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_e_gac9185c0d34b7774d5c5b96c2799ae776}{LL\_RCC\_HSE\_EnableCSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{915 \{}
+\DoxyCodeLine{916   SET\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gacc05308869ad055e1e6f2c32d738aecd}{RCC\_CR\_CSSON}});}
+\DoxyCodeLine{917 \}}
+\DoxyCodeLine{918 }
+\DoxyCodeLine{924 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_e_gabe89f332b1d8d6be385e0ac742102faf}{LL\_RCC\_HSE\_EnableBypass}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{925 \{}
+\DoxyCodeLine{926   SET\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa3288090671af5a959aae4d7f7696d55}{RCC\_CR\_HSEBYP}});}
+\DoxyCodeLine{927 \}}
+\DoxyCodeLine{928 }
+\DoxyCodeLine{934 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_e_ga3ff0a43387450b9e82bdc850c3d85c77}{LL\_RCC\_HSE\_DisableBypass}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{935 \{}
+\DoxyCodeLine{936   CLEAR\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa3288090671af5a959aae4d7f7696d55}{RCC\_CR\_HSEBYP}});}
+\DoxyCodeLine{937 \}}
+\DoxyCodeLine{938 }
+\DoxyCodeLine{944 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_e_ga03f1df72bbbe1079a10d290e01797afc}{LL\_RCC\_HSE\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{945 \{}
+\DoxyCodeLine{946   SET\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gadb8228c9020595b4cf9995137b8c9a7d}{RCC\_CR\_HSEON}});}
+\DoxyCodeLine{947 \}}
+\DoxyCodeLine{948 }
+\DoxyCodeLine{954 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_e_gacb26387b241a14f93d1d8310aff74078}{LL\_RCC\_HSE\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{955 \{}
+\DoxyCodeLine{956   CLEAR\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gadb8228c9020595b4cf9995137b8c9a7d}{RCC\_CR\_HSEON}});}
+\DoxyCodeLine{957 \}}
+\DoxyCodeLine{958 }
+\DoxyCodeLine{964 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_e_ga6e974a4c506e1983f3cc34031473037e}{LL\_RCC\_HSE\_IsReady}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{965 \{}
+\DoxyCodeLine{966   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga86a34e00182c83409d89ff566cb02cc4}{RCC\_CR\_HSERDY}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga86a34e00182c83409d89ff566cb02cc4}{RCC\_CR\_HSERDY}})) ? 1UL : 0UL);}
+\DoxyCodeLine{967 \}}
+\DoxyCodeLine{968 }
+\DoxyCodeLine{983 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_ga69fc96a7bd05f2d221c8c57ade09cde5}{LL\_RCC\_HSI\_EnableInStopMode}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{984 \{}
+\DoxyCodeLine{985   SET\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa9172ae30b26b2daad9442579b8e2dd0}{RCC\_CR\_HSIKERON}});}
+\DoxyCodeLine{986 \}}
+\DoxyCodeLine{987 }
+\DoxyCodeLine{993 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_ga38d4fd158c616677a19398a9ace73706}{LL\_RCC\_HSI\_DisableInStopMode}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{994 \{}
+\DoxyCodeLine{995   CLEAR\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa9172ae30b26b2daad9442579b8e2dd0}{RCC\_CR\_HSIKERON}});}
+\DoxyCodeLine{996 \}}
+\DoxyCodeLine{997 }
+\DoxyCodeLine{1003 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_ga7df3a3681aaf5d6fffc190698e66fbc6}{LL\_RCC\_HSI\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1004 \{}
+\DoxyCodeLine{1005   SET\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf4fcacf94a97f7d49a70e089b39cf474}{RCC\_CR\_HSION}});}
+\DoxyCodeLine{1006 \}}
+\DoxyCodeLine{1007 }
+\DoxyCodeLine{1013 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_ga7378e93867ba13383054e284b8ec4b46}{LL\_RCC\_HSI\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1014 \{}
+\DoxyCodeLine{1015   CLEAR\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf4fcacf94a97f7d49a70e089b39cf474}{RCC\_CR\_HSION}});}
+\DoxyCodeLine{1016 \}}
+\DoxyCodeLine{1017 }
+\DoxyCodeLine{1023 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_ga80b799f34d7a32793c6298c66034e65f}{LL\_RCC\_HSI\_IsReady}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1024 \{}
+\DoxyCodeLine{1025   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga9dbac3f2bc04f04ebafe1e66ae3fcf0d}{RCC\_CR\_HSIRDY}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga9dbac3f2bc04f04ebafe1e66ae3fcf0d}{RCC\_CR\_HSIRDY}})) ? 1UL : 0UL);}
+\DoxyCodeLine{1026 \}}
+\DoxyCodeLine{1027 }
+\DoxyCodeLine{1035 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_ga944e422d8e8429f77f68216f00017cd1}{LL\_RCC\_HSI\_GetCalibration}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1036 \{}
+\DoxyCodeLine{1037   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>ICSCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac98dfeb8365fd0b721394fc6a503b40b}{RCC\_ICSCR\_HSICAL}}) >> \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga709edde62af6d51899f6ee5b4d71fd92}{RCC\_ICSCR\_HSICAL\_Pos}});}
+\DoxyCodeLine{1038 \}}
+\DoxyCodeLine{1039 }
+\DoxyCodeLine{1049 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_gae8cfa820b4109a38cad940831419719d}{LL\_RCC\_HSI\_SetCalibTrimming}}(uint32\_t Value)}
+\DoxyCodeLine{1050 \{}
+\DoxyCodeLine{1051   MODIFY\_REG(RCC-\/>ICSCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab79c333962d5bd80636eca9997759804}{RCC\_ICSCR\_HSITRIM}}, Value << RCC\_ICSCR\_HSITRIM\_Pos);}
+\DoxyCodeLine{1052 \}}
+\DoxyCodeLine{1053 }
+\DoxyCodeLine{1059 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i_gaf5a3798ae9bf99631ec710e5e5978d4e}{LL\_RCC\_HSI\_GetCalibTrimming}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1060 \{}
+\DoxyCodeLine{1061   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>ICSCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab79c333962d5bd80636eca9997759804}{RCC\_ICSCR\_HSITRIM}}) >> RCC\_ICSCR\_HSITRIM\_Pos);}
+\DoxyCodeLine{1062 \}}
+\DoxyCodeLine{1063 }
+\DoxyCodeLine{1077 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i48_gae500243e0a9ac7fe177b6c72d03ee84f}{LL\_RCC\_HSI48\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1078 \{}
+\DoxyCodeLine{1079   SET\_BIT(RCC-\/>CRRCR, RCC\_CRRCR\_HSI48ON);}
+\DoxyCodeLine{1080 \}}
+\DoxyCodeLine{1081 }
+\DoxyCodeLine{1087 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i48_gad134aeb01e6a2f522027eee74861fee2}{LL\_RCC\_HSI48\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1088 \{}
+\DoxyCodeLine{1089   CLEAR\_BIT(RCC-\/>CRRCR, RCC\_CRRCR\_HSI48ON);}
+\DoxyCodeLine{1090 \}}
+\DoxyCodeLine{1091 }
+\DoxyCodeLine{1097 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i48_gad4fe802f294ffda3cc71d997f77b4e85}{LL\_RCC\_HSI48\_IsReady}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1098 \{}
+\DoxyCodeLine{1099   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CRRCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab72447408a3717dfabcde1f577d336f3}{RCC\_CRRCR\_HSI48RDY}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab72447408a3717dfabcde1f577d336f3}{RCC\_CRRCR\_HSI48RDY}})) ? 1UL : 0UL);}
+\DoxyCodeLine{1100 \}}
+\DoxyCodeLine{1101 }
+\DoxyCodeLine{1107 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___h_s_i48_gacdadc0acb74e9fe44000b0b9ffe89d25}{LL\_RCC\_HSI48\_GetCalibration}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1108 \{}
+\DoxyCodeLine{1109   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CRRCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7ded016a4d2c8fa1f96dcc4e353d8138}{RCC\_CRRCR\_HSI48CAL}}) >> RCC\_CRRCR\_HSI48CAL\_Pos);}
+\DoxyCodeLine{1110 \}}
+\DoxyCodeLine{1111 }
+\DoxyCodeLine{1125 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_ga936246430a6af1b5655b1b7c9173c36a}{LL\_RCC\_LSE\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1126 \{}
+\DoxyCodeLine{1127   SET\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSEON);}
+\DoxyCodeLine{1128 \}}
+\DoxyCodeLine{1129 }
+\DoxyCodeLine{1135 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_ga2d7d65f46d5f2a53e20aee053a20e432}{LL\_RCC\_LSE\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1136 \{}
+\DoxyCodeLine{1137   CLEAR\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSEON);}
+\DoxyCodeLine{1138 \}}
+\DoxyCodeLine{1139 }
+\DoxyCodeLine{1145 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_ga6549e6703b0b96fc154f7b014961f890}{LL\_RCC\_LSE\_EnableBypass}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1146 \{}
+\DoxyCodeLine{1147   SET\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSEBYP);}
+\DoxyCodeLine{1148 \}}
+\DoxyCodeLine{1149 }
+\DoxyCodeLine{1155 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_gae6dd89879b0a57f02d7fea00ed894844}{LL\_RCC\_LSE\_DisableBypass}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1156 \{}
+\DoxyCodeLine{1157   CLEAR\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSEBYP);}
+\DoxyCodeLine{1158 \}}
+\DoxyCodeLine{1159 }
+\DoxyCodeLine{1171 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_gaf7fa11426f1ecc40dfbe1b2b7b253876}{LL\_RCC\_LSE\_SetDriveCapability}}(uint32\_t LSEDrive)}
+\DoxyCodeLine{1172 \{}
+\DoxyCodeLine{1173   MODIFY\_REG(RCC-\/>BDCR, RCC\_BDCR\_LSEDRV, LSEDrive);}
+\DoxyCodeLine{1174 \}}
+\DoxyCodeLine{1175 }
+\DoxyCodeLine{1185 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_ga88c81420b7f4d8f799aeee46785511df}{LL\_RCC\_LSE\_GetDriveCapability}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1186 \{}
+\DoxyCodeLine{1187   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSEDRV));}
+\DoxyCodeLine{1188 \}}
+\DoxyCodeLine{1189 }
+\DoxyCodeLine{1195 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_gaf9fd67e99fb33e348169a8a79862e9ef}{LL\_RCC\_LSE\_EnableCSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1196 \{}
+\DoxyCodeLine{1197   SET\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSECSSON);}
+\DoxyCodeLine{1198 \}}
+\DoxyCodeLine{1199 }
+\DoxyCodeLine{1207 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_ga7a021c25347c18d772f9d2643897578b}{LL\_RCC\_LSE\_DisableCSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1208 \{}
+\DoxyCodeLine{1209   CLEAR\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSECSSON);}
+\DoxyCodeLine{1210 \}}
+\DoxyCodeLine{1211 }
+\DoxyCodeLine{1217 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_gae7753068082fb56a76c8dd718d8ab7c1}{LL\_RCC\_LSE\_IsReady}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1218 \{}
+\DoxyCodeLine{1219   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSERDY) == (RCC\_BDCR\_LSERDY)) ? 1UL : 0UL);}
+\DoxyCodeLine{1220 \}}
+\DoxyCodeLine{1221 }
+\DoxyCodeLine{1227 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_e_gaffd858ce9856a68d2d893cf75f37745f}{LL\_RCC\_LSE\_IsCSSDetected}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1228 \{}
+\DoxyCodeLine{1229   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSECSSD) == (RCC\_BDCR\_LSECSSD)) ? 1UL : 0UL);}
+\DoxyCodeLine{1230 \}}
+\DoxyCodeLine{1231 }
+\DoxyCodeLine{1245 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_i_ga4165b73b9d05a0b0ebf283acc6db2f35}{LL\_RCC\_LSI\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1246 \{}
+\DoxyCodeLine{1247   SET\_BIT(RCC-\/>CSR, RCC\_CSR\_LSION);}
+\DoxyCodeLine{1248 \}}
+\DoxyCodeLine{1249 }
+\DoxyCodeLine{1255 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_i_gaf5e7ebb7d4d7c88df0dbd9293e6a685b}{LL\_RCC\_LSI\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1256 \{}
+\DoxyCodeLine{1257   CLEAR\_BIT(RCC-\/>CSR, RCC\_CSR\_LSION);}
+\DoxyCodeLine{1258 \}}
+\DoxyCodeLine{1259 }
+\DoxyCodeLine{1265 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_i_gaa7661c6b0a8edd9d0f4466b22b11aae2}{LL\_RCC\_LSI\_IsReady}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1266 \{}
+\DoxyCodeLine{1267   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_LSIRDY) == (RCC\_CSR\_LSIRDY)) ? 1UL : 0UL);}
+\DoxyCodeLine{1268 \}}
+\DoxyCodeLine{1269 }
+\DoxyCodeLine{1283 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_c_o_ga2f1577e2f8d09be3181b65e0c05b9beb}{LL\_RCC\_LSCO\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1284 \{}
+\DoxyCodeLine{1285   SET\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSCOEN);}
+\DoxyCodeLine{1286 \}}
+\DoxyCodeLine{1287 }
+\DoxyCodeLine{1293 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_c_o_ga0c03ff9010071adf2196caa5b55e9d7b}{LL\_RCC\_LSCO\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1294 \{}
+\DoxyCodeLine{1295   CLEAR\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSCOEN);}
+\DoxyCodeLine{1296 \}}
+\DoxyCodeLine{1297 }
+\DoxyCodeLine{1306 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_c_o_ga4a5c131f74a18545e4cd993ac5ec2a37}{LL\_RCC\_LSCO\_SetSource}}(uint32\_t Source)}
+\DoxyCodeLine{1307 \{}
+\DoxyCodeLine{1308   MODIFY\_REG(RCC-\/>BDCR, RCC\_BDCR\_LSCOSEL, Source);}
+\DoxyCodeLine{1309 \}}
+\DoxyCodeLine{1310 }
+\DoxyCodeLine{1318 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___l_s_c_o_ga9012b6d17ca8d8993dd543c55bc3517a}{LL\_RCC\_LSCO\_GetSource}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1319 \{}
+\DoxyCodeLine{1320   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>BDCR, RCC\_BDCR\_LSCOSEL));}
+\DoxyCodeLine{1321 \}}
+\DoxyCodeLine{1322 }
+\DoxyCodeLine{1340 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_gade07cf0061a8196c45276d7d87caa74e}{LL\_RCC\_SetSysClkSource}}(uint32\_t Source)}
+\DoxyCodeLine{1341 \{}
+\DoxyCodeLine{1342   MODIFY\_REG(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga0eea5e5f7743a7e8995b8beeb18355c1}{RCC\_CFGR\_SW}}, Source);}
+\DoxyCodeLine{1343 \}}
+\DoxyCodeLine{1344 }
+\DoxyCodeLine{1353 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_ga46141696cad09a131c4a0d6d799269aa}{LL\_RCC\_GetSysClkSource}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1354 \{}
+\DoxyCodeLine{1355   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga15bf2269500dc97e137315f44aa015c9}{RCC\_CFGR\_SWS}}));}
+\DoxyCodeLine{1356 \}}
+\DoxyCodeLine{1357 }
+\DoxyCodeLine{1373 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_ga2e26a68b86dfe285aabaa5d6707086e4}{LL\_RCC\_SetAHBPrescaler}}(uint32\_t Prescaler)}
+\DoxyCodeLine{1374 \{}
+\DoxyCodeLine{1375   MODIFY\_REG(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafe10e66938644ee8054a2426ff23efea}{RCC\_CFGR\_HPRE}}, Prescaler);}
+\DoxyCodeLine{1376 \}}
+\DoxyCodeLine{1377 }
+\DoxyCodeLine{1389 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_ga7a644ead8a37cf74b0544d45db576285}{LL\_RCC\_SetAPB1Prescaler}}(uint32\_t Prescaler)}
+\DoxyCodeLine{1390 \{}
+\DoxyCodeLine{1391   MODIFY\_REG(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga50b2423a5fea74a47b9eb8ab51869412}{RCC\_CFGR\_PPRE1}}, Prescaler);}
+\DoxyCodeLine{1392 \}}
+\DoxyCodeLine{1393 }
+\DoxyCodeLine{1405 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_gaa1ff004532ea545d151b41b6820b7cf4}{LL\_RCC\_SetAPB2Prescaler}}(uint32\_t Prescaler)}
+\DoxyCodeLine{1406 \{}
+\DoxyCodeLine{1407   MODIFY\_REG(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad61bd4f9f345ba41806813b0bfff1311}{RCC\_CFGR\_PPRE2}}, Prescaler);}
+\DoxyCodeLine{1408 \}}
+\DoxyCodeLine{1409 }
+\DoxyCodeLine{1424 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_ga19c9cd16c74bf79bc08e75e1a182d98b}{LL\_RCC\_GetAHBPrescaler}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1425 \{}
+\DoxyCodeLine{1426   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafe10e66938644ee8054a2426ff23efea}{RCC\_CFGR\_HPRE}}));}
+\DoxyCodeLine{1427 \}}
+\DoxyCodeLine{1428 }
+\DoxyCodeLine{1439 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_ga0c3940f271ef48caf597abe88668ecf1}{LL\_RCC\_GetAPB1Prescaler}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1440 \{}
+\DoxyCodeLine{1441   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga50b2423a5fea74a47b9eb8ab51869412}{RCC\_CFGR\_PPRE1}}));}
+\DoxyCodeLine{1442 \}}
+\DoxyCodeLine{1443 }
+\DoxyCodeLine{1454 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___system_gae36073790d83b6245c874b3f61cca3f3}{LL\_RCC\_GetAPB2Prescaler}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1455 \{}
+\DoxyCodeLine{1456   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad61bd4f9f345ba41806813b0bfff1311}{RCC\_CFGR\_PPRE2}}));}
+\DoxyCodeLine{1457 \}}
+\DoxyCodeLine{1458 }
+\DoxyCodeLine{1490 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___m_c_o_ga531fbb087ed71e95a1c47c848fad6638}{LL\_RCC\_ConfigMCO}}(uint32\_t MCOxSource, uint32\_t MCOxPrescaler)}
+\DoxyCodeLine{1491 \{}
+\DoxyCodeLine{1492   MODIFY\_REG(RCC-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga76304e842d0244575776a28f82cafcfd}{RCC\_CFGR\_MCOSEL}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2c2055812655d6acfda9a73dd2e94e10}{RCC\_CFGR\_MCOPRE}}, MCOxSource | MCOxPrescaler);}
+\DoxyCodeLine{1493 \}}
+\DoxyCodeLine{1494 }
+\DoxyCodeLine{1521 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga288672391403904722b1f3dd2110aa02}{LL\_RCC\_SetUSARTClockSource}}(uint32\_t USARTxSource)}
+\DoxyCodeLine{1522 \{}
+\DoxyCodeLine{1523   MODIFY\_REG(RCC-\/>CCIPR, (USARTxSource >> 16U), (USARTxSource \& 0x0000FFFFU));}
+\DoxyCodeLine{1524 \}}
+\DoxyCodeLine{1525 }
+\DoxyCodeLine{1526 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{1543 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_RCC\_SetUARTClockSource(uint32\_t UARTxSource)}
+\DoxyCodeLine{1544 \{}
+\DoxyCodeLine{1545   MODIFY\_REG(RCC-\/>CCIPR, (UARTxSource >> 16U), (UARTxSource \& 0x0000FFFFU));}
+\DoxyCodeLine{1546 \}}
+\DoxyCodeLine{1547 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1548 }
+\DoxyCodeLine{1559 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gaa0908786ed2341af7205871be632d2f7}{LL\_RCC\_SetLPUARTClockSource}}(uint32\_t LPUARTxSource)}
+\DoxyCodeLine{1560 \{}
+\DoxyCodeLine{1561   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_LPUART1SEL, LPUARTxSource);}
+\DoxyCodeLine{1562 \}}
+\DoxyCodeLine{1563 }
+\DoxyCodeLine{1584 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga6fd46129fa862aeadf9d63a4c5af5804}{LL\_RCC\_SetI2CClockSource}}(uint32\_t I2CxSource)}
+\DoxyCodeLine{1585 \{}
+\DoxyCodeLine{1586   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *reg = (\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)(uint32\_t)(RCC\_BASE + 0x88U + (I2CxSource >> 24U));}
+\DoxyCodeLine{1587   MODIFY\_REG(*reg, 3UL << ((I2CxSource \& 0x001F0000U) >> 16U), ((I2CxSource \& 0x000000FFU) << ((I2CxSource \& 0x001F0000U) >> 16U)));}
+\DoxyCodeLine{1588 \}}
+\DoxyCodeLine{1589 }
+\DoxyCodeLine{1600 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga8b8c19ec0e2ef7490fa7f1894fa2ec29}{LL\_RCC\_SetLPTIMClockSource}}(uint32\_t LPTIMxSource)}
+\DoxyCodeLine{1601 \{}
+\DoxyCodeLine{1602   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_LPTIM1SEL, LPTIMxSource);}
+\DoxyCodeLine{1603 \}}
+\DoxyCodeLine{1604 }
+\DoxyCodeLine{1617 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga40076a8498dfb238311e64e035ebf352}{LL\_RCC\_SetSAIClockSource}}(uint32\_t SAIxSource)}
+\DoxyCodeLine{1618 \{}
+\DoxyCodeLine{1619   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_SAI1SEL, SAIxSource);}
+\DoxyCodeLine{1620 \}}
+\DoxyCodeLine{1621 }
+\DoxyCodeLine{1632 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gac7361e7d803625b5b5730d2fb62f1142}{LL\_RCC\_SetI2SClockSource}}(uint32\_t I2SxSource)}
+\DoxyCodeLine{1633 \{}
+\DoxyCodeLine{1634   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_I2S23SEL, I2SxSource);}
+\DoxyCodeLine{1635 \}}
+\DoxyCodeLine{1636 }
+\DoxyCodeLine{1637 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{1647 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_RCC\_SetFDCANClockSource(uint32\_t FDCANxSource)}
+\DoxyCodeLine{1648 \{}
+\DoxyCodeLine{1649   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_FDCANSEL, FDCANxSource);}
+\DoxyCodeLine{1650 \}}
+\DoxyCodeLine{1651 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1652 }
+\DoxyCodeLine{1661 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga84816623364baa5eedd967cc8a34cd97}{LL\_RCC\_SetRNGClockSource}}(uint32\_t RNGxSource)}
+\DoxyCodeLine{1662 \{}
+\DoxyCodeLine{1663   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_CLK48SEL, RNGxSource);}
+\DoxyCodeLine{1664 \}}
+\DoxyCodeLine{1665 }
+\DoxyCodeLine{1674 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gabc995cb54503060fa5ddd21ac2050f0f}{LL\_RCC\_SetUSBClockSource}}(uint32\_t USBxSource)}
+\DoxyCodeLine{1675 \{}
+\DoxyCodeLine{1676   MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_CLK48SEL, USBxSource);}
+\DoxyCodeLine{1677 \}}
+\DoxyCodeLine{1678 }
+\DoxyCodeLine{1694 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga805a723838574f6b0a0f7bfbf504c605}{LL\_RCC\_SetADCClockSource}}(uint32\_t ADCxSource)}
+\DoxyCodeLine{1695 \{}
+\DoxyCodeLine{1696   MODIFY\_REG(RCC-\/>CCIPR, 3U << ((ADCxSource \& 0x001F0000U) >> 16U), ((ADCxSource \& 0x000000FFU) << ((ADCxSource \& 0x001F0000U) >> 16U)));}
+\DoxyCodeLine{1697 \}}
+\DoxyCodeLine{1698 }
+\DoxyCodeLine{1699 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{1709 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_RCC\_SetQUADSPIClockSource(uint32\_t Source)}
+\DoxyCodeLine{1710 \{}
+\DoxyCodeLine{1711   MODIFY\_REG(RCC-\/>CCIPR2, RCC\_CCIPR2\_QSPISEL, Source);}
+\DoxyCodeLine{1712 \}}
+\DoxyCodeLine{1713 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1714 }
+\DoxyCodeLine{1736 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga75d659a6d7a98ef34b4444ddc57b5e7b}{LL\_RCC\_GetUSARTClockSource}}(uint32\_t USARTx)}
+\DoxyCodeLine{1737 \{}
+\DoxyCodeLine{1738   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, USARTx) | (USARTx << 16U));}
+\DoxyCodeLine{1739 \}}
+\DoxyCodeLine{1740 }
+\DoxyCodeLine{1741 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{1760 \_\_STATIC\_INLINE uint32\_t LL\_RCC\_GetUARTClockSource(uint32\_t UARTx)}
+\DoxyCodeLine{1761 \{}
+\DoxyCodeLine{1762   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, UARTx) | (UARTx << 16U));}
+\DoxyCodeLine{1763 \}}
+\DoxyCodeLine{1764 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1765 }
+\DoxyCodeLine{1777 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gaa0f41525892cbb58c7df0eaafd5596f7}{LL\_RCC\_GetLPUARTClockSource}}(uint32\_t LPUARTx)}
+\DoxyCodeLine{1778 \{}
+\DoxyCodeLine{1779   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, LPUARTx));}
+\DoxyCodeLine{1780 \}}
+\DoxyCodeLine{1781 }
+\DoxyCodeLine{1808 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gad758b03a0bc66710b19b02b2337024ec}{LL\_RCC\_GetI2CClockSource}}(uint32\_t I2Cx)}
+\DoxyCodeLine{1809 \{}
+\DoxyCodeLine{1810   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \textcolor{keyword}{const} uint32\_t *reg = (\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)(uint32\_t)(RCC\_BASE + 0x88U + (I2Cx >> 24U));}
+\DoxyCodeLine{1811   \textcolor{keywordflow}{return} (uint32\_t)((READ\_BIT(*reg, 3UL << ((I2Cx \& 0x001F0000U) >> 16U)) >> ((I2Cx \& 0x001F0000U) >> 16U)) | (I2Cx \& 0xFFFF0000U));}
+\DoxyCodeLine{1812 \}}
+\DoxyCodeLine{1813 }
+\DoxyCodeLine{1825 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gabc8d8c7f8d3660828000b0bbef9dacef}{LL\_RCC\_GetLPTIMClockSource}}(uint32\_t LPTIMx)}
+\DoxyCodeLine{1826 \{}
+\DoxyCodeLine{1827   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, LPTIMx));}
+\DoxyCodeLine{1828 \}}
+\DoxyCodeLine{1829 }
+\DoxyCodeLine{1845 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga885fc4f302fc2c94d362c6f430c1f409}{LL\_RCC\_GetSAIClockSource}}(uint32\_t SAIx)}
+\DoxyCodeLine{1846 \{}
+\DoxyCodeLine{1847   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, SAIx));}
+\DoxyCodeLine{1848 \}}
+\DoxyCodeLine{1849 }
+\DoxyCodeLine{1861 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga21a95ac87202467d9210b0cbdb3b1e96}{LL\_RCC\_GetI2SClockSource}}(uint32\_t I2Sx)}
+\DoxyCodeLine{1862 \{}
+\DoxyCodeLine{1863   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, I2Sx));}
+\DoxyCodeLine{1864 \}}
+\DoxyCodeLine{1865 }
+\DoxyCodeLine{1866 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{1878 \_\_STATIC\_INLINE uint32\_t LL\_RCC\_GetFDCANClockSource(uint32\_t FDCANx)}
+\DoxyCodeLine{1879 \{}
+\DoxyCodeLine{1880   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, FDCANx));}
+\DoxyCodeLine{1881 \}}
+\DoxyCodeLine{1882 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1883 }
+\DoxyCodeLine{1893 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga2d996455f1d3262334a768759c21dcb9}{LL\_RCC\_GetRNGClockSource}}(uint32\_t RNGx)}
+\DoxyCodeLine{1894 \{}
+\DoxyCodeLine{1895   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, RNGx));}
+\DoxyCodeLine{1896 \}}
+\DoxyCodeLine{1897 }
+\DoxyCodeLine{1907 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_gadd2971a16f3fb323324233cdc1c20f76}{LL\_RCC\_GetUSBClockSource}}(uint32\_t USBx)}
+\DoxyCodeLine{1908 \{}
+\DoxyCodeLine{1909   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR, USBx));}
+\DoxyCodeLine{1910 \}}
+\DoxyCodeLine{1911 }
+\DoxyCodeLine{1928 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___peripheral___clock___source_ga3cb85b3dbfb4a2dbf1d4954c5899af3d}{LL\_RCC\_GetADCClockSource}}(uint32\_t ADCx)}
+\DoxyCodeLine{1929 \{}
+\DoxyCodeLine{1930   \textcolor{keywordflow}{return} (uint32\_t)((READ\_BIT(RCC-\/>CCIPR, 3UL << ((ADCx \& 0x001F0000U) >> 16U)) >> ((ADCx \& 0x001F0000U) >> 16U)) | (ADCx \& 0xFFFF0000U));}
+\DoxyCodeLine{1931 \}}
+\DoxyCodeLine{1932 }
+\DoxyCodeLine{1933 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{1944 \_\_STATIC\_INLINE uint32\_t LL\_RCC\_GetQUADSPIClockSource(uint32\_t QUADSPIx)}
+\DoxyCodeLine{1945 \{}
+\DoxyCodeLine{1946   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>CCIPR2, QUADSPIx));}
+\DoxyCodeLine{1947 \}}
+\DoxyCodeLine{1948 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1970 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_ga5916910fa30029f1741fa6835d23db6b}{LL\_RCC\_SetRTCClockSource}}(uint32\_t Source)}
+\DoxyCodeLine{1971 \{}
+\DoxyCodeLine{1972   MODIFY\_REG(RCC-\/>BDCR, RCC\_BDCR\_RTCSEL, Source);}
+\DoxyCodeLine{1973 \}}
+\DoxyCodeLine{1974 }
+\DoxyCodeLine{1984 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_ga2a628a30073b69f94c6141ecd58295d6}{LL\_RCC\_GetRTCClockSource}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1985 \{}
+\DoxyCodeLine{1986   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>BDCR, RCC\_BDCR\_RTCSEL));}
+\DoxyCodeLine{1987 \}}
+\DoxyCodeLine{1988 }
+\DoxyCodeLine{1994 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_gafd55bc3513e4b60cf5341efb57d49789}{LL\_RCC\_EnableRTC}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1995 \{}
+\DoxyCodeLine{1996   SET\_BIT(RCC-\/>BDCR, RCC\_BDCR\_RTCEN);}
+\DoxyCodeLine{1997 \}}
+\DoxyCodeLine{1998 }
+\DoxyCodeLine{2004 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_gacb6141a9d0d986192babfb1b5b0849b5}{LL\_RCC\_DisableRTC}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2005 \{}
+\DoxyCodeLine{2006   CLEAR\_BIT(RCC-\/>BDCR, RCC\_BDCR\_RTCEN);}
+\DoxyCodeLine{2007 \}}
+\DoxyCodeLine{2008 }
+\DoxyCodeLine{2014 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_ga47fad22a32a0f7132868e28289b16f88}{LL\_RCC\_IsEnabledRTC}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2015 \{}
+\DoxyCodeLine{2016   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>BDCR, RCC\_BDCR\_RTCEN) == (RCC\_BDCR\_RTCEN)) ? 1UL : 0UL);}
+\DoxyCodeLine{2017 \}}
+\DoxyCodeLine{2018 }
+\DoxyCodeLine{2024 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_ga227a3b3aa0575d595313790175e76435}{LL\_RCC\_ForceBackupDomainReset}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2025 \{}
+\DoxyCodeLine{2026   SET\_BIT(RCC-\/>BDCR, RCC\_BDCR\_BDRST);}
+\DoxyCodeLine{2027 \}}
+\DoxyCodeLine{2028 }
+\DoxyCodeLine{2034 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___r_t_c_gac52a1db0154301559c493145c3e5a37d}{LL\_RCC\_ReleaseBackupDomainReset}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2035 \{}
+\DoxyCodeLine{2036   CLEAR\_BIT(RCC-\/>BDCR, RCC\_BDCR\_BDRST);}
+\DoxyCodeLine{2037 \}}
+\DoxyCodeLine{2038 }
+\DoxyCodeLine{2053 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga86d714579aac9b2f9b3216b6825c369b}{LL\_RCC\_PLL\_Enable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2054 \{}
+\DoxyCodeLine{2055   SET\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad0e73d5b0a4883e074d40029b49ee47e}{RCC\_CR\_PLLON}});}
+\DoxyCodeLine{2056 \}}
+\DoxyCodeLine{2057 }
+\DoxyCodeLine{2064 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga9e3b0e21f16147d992e0df9b87c410bd}{LL\_RCC\_PLL\_Disable}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2065 \{}
+\DoxyCodeLine{2066   CLEAR\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad0e73d5b0a4883e074d40029b49ee47e}{RCC\_CR\_PLLON}});}
+\DoxyCodeLine{2067 \}}
+\DoxyCodeLine{2068 }
+\DoxyCodeLine{2074 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga86334eeeb7d86032a1087bf1b0fb1860}{LL\_RCC\_PLL\_IsReady}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2075 \{}
+\DoxyCodeLine{2076   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa12d7ac6a7f0f91d066aeb2c6071888}{RCC\_CR\_PLLRDY}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa12d7ac6a7f0f91d066aeb2c6071888}{RCC\_CR\_PLLRDY}})) ? 1UL : 0UL);}
+\DoxyCodeLine{2077 \}}
+\DoxyCodeLine{2078 }
+\DoxyCodeLine{2117 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga2750df8ba57b39f426e73de366444bd2}{LL\_RCC\_PLL\_ConfigDomain\_SYS}}(uint32\_t Source, uint32\_t PLLM, uint32\_t PLLN, uint32\_t PLLR)}
+\DoxyCodeLine{2118 \{}
+\DoxyCodeLine{2119   MODIFY\_REG(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLSRC | RCC\_PLLCFGR\_PLLM | RCC\_PLLCFGR\_PLLN | RCC\_PLLCFGR\_PLLR,}
+\DoxyCodeLine{2120              Source | PLLM | (PLLN << RCC\_PLLCFGR\_PLLN\_Pos) | PLLR);}
+\DoxyCodeLine{2121 \}}
+\DoxyCodeLine{2122 }
+\DoxyCodeLine{2187 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga721b467fddb230113bfd9d78ea682483}{LL\_RCC\_PLL\_ConfigDomain\_ADC}}(uint32\_t Source, uint32\_t PLLM, uint32\_t PLLN, uint32\_t PLLP)}
+\DoxyCodeLine{2188 \{}
+\DoxyCodeLine{2189   MODIFY\_REG(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLSRC | RCC\_PLLCFGR\_PLLM | RCC\_PLLCFGR\_PLLN | RCC\_PLLCFGR\_PLLPDIV,}
+\DoxyCodeLine{2190              Source | PLLM | (PLLN << RCC\_PLLCFGR\_PLLN\_Pos) | PLLP);}
+\DoxyCodeLine{2191 \}}
+\DoxyCodeLine{2192 }
+\DoxyCodeLine{2232 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga5073ee320f5b0711bba681f9364f46ec}{LL\_RCC\_PLL\_ConfigDomain\_48M}}(uint32\_t Source, uint32\_t PLLM, uint32\_t PLLN, uint32\_t PLLQ)}
+\DoxyCodeLine{2233 \{}
+\DoxyCodeLine{2234   MODIFY\_REG(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLSRC | RCC\_PLLCFGR\_PLLM | RCC\_PLLCFGR\_PLLN | RCC\_PLLCFGR\_PLLQ,}
+\DoxyCodeLine{2235              Source | PLLM | (PLLN << RCC\_PLLCFGR\_PLLN\_Pos) | PLLQ);}
+\DoxyCodeLine{2236 \}}
+\DoxyCodeLine{2237 }
+\DoxyCodeLine{2247 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gab03a55b3dfe05c5901bbd9b6c6fee0a0}{LL\_RCC\_PLL\_SetMainSource}}(uint32\_t PLLSource)}
+\DoxyCodeLine{2248 \{}
+\DoxyCodeLine{2249   MODIFY\_REG(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLSRC, PLLSource);}
+\DoxyCodeLine{2250 \}}
+\DoxyCodeLine{2251 }
+\DoxyCodeLine{2260 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga9d9b3802b37694ec9290e80438637a85}{LL\_RCC\_PLL\_GetMainSource}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2261 \{}
+\DoxyCodeLine{2262   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLSRC));}
+\DoxyCodeLine{2263 \}}
+\DoxyCodeLine{2264 }
+\DoxyCodeLine{2270 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}{LL\_RCC\_PLL\_GetN}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2271 \{}
+\DoxyCodeLine{2272   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLN) >>  RCC\_PLLCFGR\_PLLN\_Pos);}
+\DoxyCodeLine{2273 \}}
+\DoxyCodeLine{2274 }
+\DoxyCodeLine{2312 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga99fe1b554c8f04d8fed520689c3ec3b8}{LL\_RCC\_PLL\_GetP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2313 \{}
+\DoxyCodeLine{2314   \textcolor{keywordflow}{return} (uint32\_t) ((READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLPDIV) != 0U) ? READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLPDIV) : ((READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLP) == RCC\_PLLCFGR\_PLLP) ? \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2f87bf6c3c509434b412a841f09142fc}{LL\_RCC\_PLLP\_DIV\_17}} : \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga756034d29371e52379a88565b84e7391}{LL\_RCC\_PLLP\_DIV\_7}}) );}
+\DoxyCodeLine{2315 \}}
+\DoxyCodeLine{2316 }
+\DoxyCodeLine{2327 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga2fa76fbe2c7f4db07eee43dc259c53fd}{LL\_RCC\_PLL\_GetQ}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2328 \{}
+\DoxyCodeLine{2329   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLQ));}
+\DoxyCodeLine{2330 \}}
+\DoxyCodeLine{2331 }
+\DoxyCodeLine{2342 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gab2eda08d7c23715c04620e5dfac0fd1d}{LL\_RCC\_PLL\_GetR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2343 \{}
+\DoxyCodeLine{2344   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLR));}
+\DoxyCodeLine{2345 \}}
+\DoxyCodeLine{2346 }
+\DoxyCodeLine{2368 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}{LL\_RCC\_PLL\_GetDivider}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2369 \{}
+\DoxyCodeLine{2370   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLM));}
+\DoxyCodeLine{2371 \}}
+\DoxyCodeLine{2372 }
+\DoxyCodeLine{2378 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gabcb759b1d1f25ffb7625a30cd5b9cafa}{LL\_RCC\_PLL\_EnableDomain\_ADC}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2379 \{}
+\DoxyCodeLine{2380   SET\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLPEN);}
+\DoxyCodeLine{2381 \}}
+\DoxyCodeLine{2382 }
+\DoxyCodeLine{2392 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga6d08058714eed86b99b64833dcfdc89d}{LL\_RCC\_PLL\_DisableDomain\_ADC}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2393 \{}
+\DoxyCodeLine{2394   CLEAR\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLPEN);}
+\DoxyCodeLine{2395 \}}
+\DoxyCodeLine{2396 }
+\DoxyCodeLine{2402 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga70f96967bb551a506fca31eb0840a1be}{LL\_RCC\_PLL\_IsEnabledDomain\_ADC}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2403 \{}
+\DoxyCodeLine{2404   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLPEN) == (RCC\_PLLCFGR\_PLLPEN)) ? 1UL : 0UL);}
+\DoxyCodeLine{2405 \}}
+\DoxyCodeLine{2406 }
+\DoxyCodeLine{2412 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gaf1ee48fdb4cfaf2d758b5e169b4f51e9}{LL\_RCC\_PLL\_EnableDomain\_48M}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2413 \{}
+\DoxyCodeLine{2414   SET\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLQEN);}
+\DoxyCodeLine{2415 \}}
+\DoxyCodeLine{2416 }
+\DoxyCodeLine{2426 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga4ded7a3fe19720a3818098b097a6d777}{LL\_RCC\_PLL\_DisableDomain\_48M}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2427 \{}
+\DoxyCodeLine{2428   CLEAR\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLQEN);}
+\DoxyCodeLine{2429 \}}
+\DoxyCodeLine{2430 }
+\DoxyCodeLine{2436 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga37de31cae3138fb9557f1f7a5c1d4097}{LL\_RCC\_PLL\_IsEnabledDomain\_48M}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2437 \{}
+\DoxyCodeLine{2438   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLQEN) == (RCC\_PLLCFGR\_PLLQEN)) ? 1UL : 0UL);}
+\DoxyCodeLine{2439 \}}
+\DoxyCodeLine{2440 }
+\DoxyCodeLine{2446 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gacaed1b53cb0a74900e6636eaa447e421}{LL\_RCC\_PLL\_EnableDomain\_SYS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2447 \{}
+\DoxyCodeLine{2448   SET\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLREN);}
+\DoxyCodeLine{2449 \}}
+\DoxyCodeLine{2450 }
+\DoxyCodeLine{2460 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga88b78c3e1c52643b0770e59fa6b27b30}{LL\_RCC\_PLL\_DisableDomain\_SYS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2461 \{}
+\DoxyCodeLine{2462   CLEAR\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLREN);}
+\DoxyCodeLine{2463 \}}
+\DoxyCodeLine{2464 }
+\DoxyCodeLine{2470 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gabcbd16f33a9493c356620b6fb1accc37}{LL\_RCC\_PLL\_IsEnabledDomain\_SYS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2471 \{}
+\DoxyCodeLine{2472   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>PLLCFGR, RCC\_PLLCFGR\_PLLREN) == (RCC\_PLLCFGR\_PLLREN)) ? 1UL : 0UL);}
+\DoxyCodeLine{2473 \}}
+\DoxyCodeLine{2474 }
+\DoxyCodeLine{2488 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga59419749c6b98cd0e35346cb0dd521ce}{LL\_RCC\_ClearFlag\_LSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2489 \{}
+\DoxyCodeLine{2490   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_LSIRDYC);}
+\DoxyCodeLine{2491 \}}
+\DoxyCodeLine{2492 }
+\DoxyCodeLine{2498 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga199e2bf0b316d313385cd7daab65150b}{LL\_RCC\_ClearFlag\_LSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2499 \{}
+\DoxyCodeLine{2500   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_LSERDYC);}
+\DoxyCodeLine{2501 \}}
+\DoxyCodeLine{2502 }
+\DoxyCodeLine{2508 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga864ca67fd541996b3698a26fce641fb6}{LL\_RCC\_ClearFlag\_HSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2509 \{}
+\DoxyCodeLine{2510   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_HSIRDYC);}
+\DoxyCodeLine{2511 \}}
+\DoxyCodeLine{2512 }
+\DoxyCodeLine{2518 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_gae05d5688ca8491724652ab6243685c65}{LL\_RCC\_ClearFlag\_HSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2519 \{}
+\DoxyCodeLine{2520   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_HSERDYC);}
+\DoxyCodeLine{2521 \}}
+\DoxyCodeLine{2522 }
+\DoxyCodeLine{2528 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_gac1b4e9e482781bd59f8ea7f573694fbc}{LL\_RCC\_ClearFlag\_PLLRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2529 \{}
+\DoxyCodeLine{2530   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_PLLRDYC);}
+\DoxyCodeLine{2531 \}}
+\DoxyCodeLine{2532 }
+\DoxyCodeLine{2538 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_gab720be8166a7f08639d8a0e5476a8078}{LL\_RCC\_ClearFlag\_HSI48RDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2539 \{}
+\DoxyCodeLine{2540   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_HSI48RDYC);}
+\DoxyCodeLine{2541 \}}
+\DoxyCodeLine{2542 }
+\DoxyCodeLine{2548 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_gaabc9f1f6f55e23c9a7c3d8f7dabca4df}{LL\_RCC\_ClearFlag\_HSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2549 \{}
+\DoxyCodeLine{2550   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_CSSC);}
+\DoxyCodeLine{2551 \}}
+\DoxyCodeLine{2552 }
+\DoxyCodeLine{2558 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga59e12ff611d18a1a937425f507b59955}{LL\_RCC\_ClearFlag\_LSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2559 \{}
+\DoxyCodeLine{2560   SET\_BIT(RCC-\/>CICR, RCC\_CICR\_LSECSSC);}
+\DoxyCodeLine{2561 \}}
+\DoxyCodeLine{2562 }
+\DoxyCodeLine{2568 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga40cc11ad218ea6afe9a357d2ba842db0}{LL\_RCC\_IsActiveFlag\_LSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2569 \{}
+\DoxyCodeLine{2570   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_LSIRDYF) == (RCC\_CIFR\_LSIRDYF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2571 \}}
+\DoxyCodeLine{2572 }
+\DoxyCodeLine{2578 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga2c57d5122b8aeac3a3743cec6abf00c0}{LL\_RCC\_IsActiveFlag\_LSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2579 \{}
+\DoxyCodeLine{2580   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_LSERDYF) == (RCC\_CIFR\_LSERDYF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2581 \}}
+\DoxyCodeLine{2582 }
+\DoxyCodeLine{2588 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga8adac88d2ed06a18eaecb7aeeb35fea5}{LL\_RCC\_IsActiveFlag\_HSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2589 \{}
+\DoxyCodeLine{2590   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_HSIRDYF) == (RCC\_CIFR\_HSIRDYF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2591 \}}
+\DoxyCodeLine{2592 }
+\DoxyCodeLine{2598 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga776f8f14237167c515e37ae8d4a4dc1c}{LL\_RCC\_IsActiveFlag\_HSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2599 \{}
+\DoxyCodeLine{2600   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_HSERDYF) == (RCC\_CIFR\_HSERDYF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2601 \}}
+\DoxyCodeLine{2602 }
+\DoxyCodeLine{2608 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_gaeffbf3feb91809ca66880737cb0043f0}{LL\_RCC\_IsActiveFlag\_PLLRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2609 \{}
+\DoxyCodeLine{2610   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_PLLRDYF) == (RCC\_CIFR\_PLLRDYF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2611 \}}
+\DoxyCodeLine{2612 }
+\DoxyCodeLine{2618 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga077ad7472f9bfdb96536f8617670c974}{LL\_RCC\_IsActiveFlag\_HSI48RDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2619 \{}
+\DoxyCodeLine{2620   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_HSI48RDYF) == (RCC\_CIFR\_HSI48RDYF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2621 \}}
+\DoxyCodeLine{2622 }
+\DoxyCodeLine{2628 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga28c7daaeb707dcf1a6e1487f37314e74}{LL\_RCC\_IsActiveFlag\_HSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2629 \{}
+\DoxyCodeLine{2630   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_CSSF) == (RCC\_CIFR\_CSSF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2631 \}}
+\DoxyCodeLine{2632 }
+\DoxyCodeLine{2638 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga75256a4edeb3869e15056b8b3975e92d}{LL\_RCC\_IsActiveFlag\_LSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2639 \{}
+\DoxyCodeLine{2640   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIFR, RCC\_CIFR\_LSECSSF) == (RCC\_CIFR\_LSECSSF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2641 \}}
+\DoxyCodeLine{2642 }
+\DoxyCodeLine{2648 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga1f59d03837414fda32efaf766a756a57}{LL\_RCC\_IsActiveFlag\_IWDGRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2649 \{}
+\DoxyCodeLine{2650   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_IWDGRSTF) == (RCC\_CSR\_IWDGRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2651 \}}
+\DoxyCodeLine{2652 }
+\DoxyCodeLine{2658 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga7b21463ff921d3c6df3260161d097f03}{LL\_RCC\_IsActiveFlag\_LPWRRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2659 \{}
+\DoxyCodeLine{2660   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_LPWRRSTF) == (RCC\_CSR\_LPWRRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2661 \}}
+\DoxyCodeLine{2662 }
+\DoxyCodeLine{2668 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga892f827893a8a11d8af24d561574c9a1}{LL\_RCC\_IsActiveFlag\_OBLRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2669 \{}
+\DoxyCodeLine{2670   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_OBLRSTF) == (RCC\_CSR\_OBLRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2671 \}}
+\DoxyCodeLine{2672 }
+\DoxyCodeLine{2678 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga2efd60d7f7935b86a4d3d380ac3b6298}{LL\_RCC\_IsActiveFlag\_PINRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2679 \{}
+\DoxyCodeLine{2680   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_PINRSTF) == (RCC\_CSR\_PINRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2681 \}}
+\DoxyCodeLine{2682 }
+\DoxyCodeLine{2688 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga3cc90ee97c37c0ab453b70fc429a840c}{LL\_RCC\_IsActiveFlag\_SFTRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2689 \{}
+\DoxyCodeLine{2690   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_SFTRSTF) == (RCC\_CSR\_SFTRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2691 \}}
+\DoxyCodeLine{2692 }
+\DoxyCodeLine{2698 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga77b73340c1ea5ce32f4e06b7af655ab1}{LL\_RCC\_IsActiveFlag\_WWDGRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2699 \{}
+\DoxyCodeLine{2700   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_WWDGRSTF) == (RCC\_CSR\_WWDGRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2701 \}}
+\DoxyCodeLine{2702 }
+\DoxyCodeLine{2708 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga0b1da3c3690c268b28f120bfd7c3857f}{LL\_RCC\_IsActiveFlag\_BORRST}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2709 \{}
+\DoxyCodeLine{2710   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CSR, RCC\_CSR\_BORRSTF) == (RCC\_CSR\_BORRSTF)) ? 1UL : 0UL);}
+\DoxyCodeLine{2711 \}}
+\DoxyCodeLine{2712 }
+\DoxyCodeLine{2718 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___f_l_a_g___management_ga5a420ff865f5aac33a3ab6956add866a}{LL\_RCC\_ClearResetFlags}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2719 \{}
+\DoxyCodeLine{2720   SET\_BIT(RCC-\/>CSR, RCC\_CSR\_RMVF);}
+\DoxyCodeLine{2721 \}}
+\DoxyCodeLine{2722 }
+\DoxyCodeLine{2736 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gaafe55dd64d4da300ce613afca3f7ba66}{LL\_RCC\_EnableIT\_LSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2737 \{}
+\DoxyCodeLine{2738   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_LSIRDYIE);}
+\DoxyCodeLine{2739 \}}
+\DoxyCodeLine{2740 }
+\DoxyCodeLine{2746 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga5623fca17b94ba2c0cb92257acff82be}{LL\_RCC\_EnableIT\_LSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2747 \{}
+\DoxyCodeLine{2748   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_LSERDYIE);}
+\DoxyCodeLine{2749 \}}
+\DoxyCodeLine{2750 }
+\DoxyCodeLine{2756 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga37bf674135c2aba7f1a4dc9e6eebbbe1}{LL\_RCC\_EnableIT\_HSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2757 \{}
+\DoxyCodeLine{2758   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_HSIRDYIE);}
+\DoxyCodeLine{2759 \}}
+\DoxyCodeLine{2760 }
+\DoxyCodeLine{2766 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga237dba6e7cfc2ce2db8293948b5955e0}{LL\_RCC\_EnableIT\_HSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2767 \{}
+\DoxyCodeLine{2768   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_HSERDYIE);}
+\DoxyCodeLine{2769 \}}
+\DoxyCodeLine{2770 }
+\DoxyCodeLine{2776 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gab4a5f02eec2dc17771b5a832c8f7cc20}{LL\_RCC\_EnableIT\_PLLRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2777 \{}
+\DoxyCodeLine{2778   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_PLLRDYIE);}
+\DoxyCodeLine{2779 \}}
+\DoxyCodeLine{2780 }
+\DoxyCodeLine{2786 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gac035d09727cf565eaf1a28edcac6f305}{LL\_RCC\_EnableIT\_HSI48RDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2787 \{}
+\DoxyCodeLine{2788   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_HSI48RDYIE);}
+\DoxyCodeLine{2789 \}}
+\DoxyCodeLine{2790 }
+\DoxyCodeLine{2796 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga5d00ac4b072e6e1422f67d7e3595d9de}{LL\_RCC\_EnableIT\_LSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2797 \{}
+\DoxyCodeLine{2798   SET\_BIT(RCC-\/>CIER, RCC\_CIER\_LSECSSIE);}
+\DoxyCodeLine{2799 \}}
+\DoxyCodeLine{2800 }
+\DoxyCodeLine{2806 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gad7ee6c86ab3c267e951d668d384c985f}{LL\_RCC\_DisableIT\_LSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2807 \{}
+\DoxyCodeLine{2808   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_LSIRDYIE);}
+\DoxyCodeLine{2809 \}}
+\DoxyCodeLine{2810 }
+\DoxyCodeLine{2816 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gad493f92dcecd124f9faaa76fd7710e9a}{LL\_RCC\_DisableIT\_LSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2817 \{}
+\DoxyCodeLine{2818   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_LSERDYIE);}
+\DoxyCodeLine{2819 \}}
+\DoxyCodeLine{2820 }
+\DoxyCodeLine{2826 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga81e030cb31b2e1cc5138b19bda80571e}{LL\_RCC\_DisableIT\_HSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2827 \{}
+\DoxyCodeLine{2828   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_HSIRDYIE);}
+\DoxyCodeLine{2829 \}}
+\DoxyCodeLine{2830 }
+\DoxyCodeLine{2836 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga65d995145544b397d216df77846883c8}{LL\_RCC\_DisableIT\_HSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2837 \{}
+\DoxyCodeLine{2838   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_HSERDYIE);}
+\DoxyCodeLine{2839 \}}
+\DoxyCodeLine{2840 }
+\DoxyCodeLine{2846 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gaf678409ed4633ae53cf2edf3e16995d6}{LL\_RCC\_DisableIT\_PLLRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2847 \{}
+\DoxyCodeLine{2848   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_PLLRDYIE);}
+\DoxyCodeLine{2849 \}}
+\DoxyCodeLine{2850 }
+\DoxyCodeLine{2856 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga3d8899de36e29c13f2031eb3ef9eb151}{LL\_RCC\_DisableIT\_HSI48RDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2857 \{}
+\DoxyCodeLine{2858   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_HSI48RDYIE);}
+\DoxyCodeLine{2859 \}}
+\DoxyCodeLine{2860 }
+\DoxyCodeLine{2866 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga94f56cf6e49b2c0b5c1ce4c7ee80294d}{LL\_RCC\_DisableIT\_LSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2867 \{}
+\DoxyCodeLine{2868   CLEAR\_BIT(RCC-\/>CIER, RCC\_CIER\_LSECSSIE);}
+\DoxyCodeLine{2869 \}}
+\DoxyCodeLine{2870 }
+\DoxyCodeLine{2876 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gaf4f804969488a06489ea8550088c541f}{LL\_RCC\_IsEnabledIT\_LSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2877 \{}
+\DoxyCodeLine{2878   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_LSIRDYIE) == (RCC\_CIER\_LSIRDYIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2879 \}}
+\DoxyCodeLine{2880 }
+\DoxyCodeLine{2886 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga0042575ccc553581464d7a3c9770c415}{LL\_RCC\_IsEnabledIT\_LSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2887 \{}
+\DoxyCodeLine{2888   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_LSERDYIE) == (RCC\_CIER\_LSERDYIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2889 \}}
+\DoxyCodeLine{2890 }
+\DoxyCodeLine{2896 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga0436c0ec61c028646dcf4b04c3b634c9}{LL\_RCC\_IsEnabledIT\_HSIRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2897 \{}
+\DoxyCodeLine{2898   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_HSIRDYIE) == (RCC\_CIER\_HSIRDYIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2899 \}}
+\DoxyCodeLine{2900 }
+\DoxyCodeLine{2906 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga6c8bf947fe00b2914a52a62664062420}{LL\_RCC\_IsEnabledIT\_HSERDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2907 \{}
+\DoxyCodeLine{2908   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_HSERDYIE) == (RCC\_CIER\_HSERDYIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2909 \}}
+\DoxyCodeLine{2910 }
+\DoxyCodeLine{2916 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga4b83ce2e0a1d86e22c36df9e05599f20}{LL\_RCC\_IsEnabledIT\_PLLRDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2917 \{}
+\DoxyCodeLine{2918   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_PLLRDYIE) == (RCC\_CIER\_PLLRDYIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2919 \}}
+\DoxyCodeLine{2920 }
+\DoxyCodeLine{2926 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_gafb9bd2161857a04a1b018118d24945e1}{LL\_RCC\_IsEnabledIT\_HSI48RDY}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2927 \{}
+\DoxyCodeLine{2928   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_HSI48RDYIE) == (RCC\_CIER\_HSI48RDYIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2929 \}}
+\DoxyCodeLine{2930 }
+\DoxyCodeLine{2936 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___r_c_c___l_l___e_f___i_t___management_ga47c995fe74c429c0323fa5be5518e5de}{LL\_RCC\_IsEnabledIT\_LSECSS}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2937 \{}
+\DoxyCodeLine{2938   \textcolor{keywordflow}{return} ((READ\_BIT(RCC-\/>CIER, RCC\_CIER\_LSECSSIE) == (RCC\_CIER\_LSECSSIE)) ? 1UL : 0UL);}
+\DoxyCodeLine{2939 \}}
+\DoxyCodeLine{2940 }
+\DoxyCodeLine{2945 \textcolor{preprocessor}{\#if defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{2949 ErrorStatus LL\_RCC\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{2957 \textcolor{keywordtype}{void}        LL\_RCC\_GetSystemClocksFreq(LL\_RCC\_ClocksTypeDef *RCC\_Clocks);}
+\DoxyCodeLine{2958 uint32\_t    LL\_RCC\_GetUSARTClockFreq(uint32\_t USARTxSource);}
+\DoxyCodeLine{2959 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{2960 uint32\_t    LL\_RCC\_GetUARTClockFreq(uint32\_t UARTxSource);}
+\DoxyCodeLine{2961 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2962 uint32\_t    LL\_RCC\_GetI2CClockFreq(uint32\_t I2CxSource);}
+\DoxyCodeLine{2963 uint32\_t    LL\_RCC\_GetLPUARTClockFreq(uint32\_t LPUARTxSource);}
+\DoxyCodeLine{2964 uint32\_t    LL\_RCC\_GetLPTIMClockFreq(uint32\_t LPTIMxSource);}
+\DoxyCodeLine{2965 uint32\_t    LL\_RCC\_GetSAIClockFreq(uint32\_t SAIxSource);}
+\DoxyCodeLine{2966 uint32\_t    LL\_RCC\_GetI2SClockFreq(uint32\_t I2SxSource);}
+\DoxyCodeLine{2967 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{2968 uint32\_t    LL\_RCC\_GetFDCANClockFreq(uint32\_t FDCANxSource);}
+\DoxyCodeLine{2969 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2970 uint32\_t    LL\_RCC\_GetRNGClockFreq(uint32\_t RNGxSource);}
+\DoxyCodeLine{2971 uint32\_t    LL\_RCC\_GetUSBClockFreq(uint32\_t USBxSource);}
+\DoxyCodeLine{2972 uint32\_t    LL\_RCC\_GetADCClockFreq(uint32\_t ADCxSource);}
+\DoxyCodeLine{2973 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{2974 uint32\_t    LL\_RCC\_GetQUADSPIClockFreq(uint32\_t QUADSPIxSource);}
+\DoxyCodeLine{2975 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2979 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_FULL\_LL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2980 }
+\DoxyCodeLine{2993 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{2994 \}}
+\DoxyCodeLine{2995 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{2996 }
+\DoxyCodeLine{2997 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_LL\_RCC\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2998 }
+
+\end{DoxyCode}

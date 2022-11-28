@@ -1,0 +1,181 @@
+\hypertarget{group___u_a_r_t_ex___private___macros}{}\doxysection{UARTEx Private Macros}
+\label{group___u_a_r_t_ex___private___macros}\index{UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ex___private___macros_ga2d8ffd4cb12754846ace609dff92e8df}{UART\+\_\+\+GETCLOCKSOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CLOCKSOURCE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Report the UART clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ex___private___macros_gad9330184a8bd9399a36bcc93215a50d1}{UART\+\_\+\+MASK\+\_\+\+COMPUTATION}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Report the UART mask to apply to retrieve the received data according to the word length and to the parity bits activation. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ex___private___macros_gaf856254e5a61d2ee81086918bffabde5}{IS\+\_\+\+UART\+\_\+\+WORD\+\_\+\+LENGTH}}(\+\_\+\+\_\+\+LENGTH\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that UART frame length is valid. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ex___private___macros_gaa4cf2a15ad7ae46e2905debeef35a908}{IS\+\_\+\+UART\+\_\+\+ADDRESSLENGTH\+\_\+\+DETECT}}(\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that UART wake-\/up address length is valid. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ex___private___macros_ga59f192f936bea1dac321a552ab3e662d}{IS\+\_\+\+UART\+\_\+\+TXFIFO\+\_\+\+THRESHOLD}}(\+\_\+\+\_\+\+THRESHOLD\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that UART TXFIFO threshold level is valid. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_a_r_t_ex___private___macros_gac6cc8376326d3982bda0685dbaaff687}{IS\+\_\+\+UART\+\_\+\+RXFIFO\+\_\+\+THRESHOLD}}(\+\_\+\+\_\+\+THRESHOLD\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Ensure that UART RXFIFO threshold level is valid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___u_a_r_t_ex___private___macros_gaa4cf2a15ad7ae46e2905debeef35a908}\label{group___u_a_r_t_ex___private___macros_gaa4cf2a15ad7ae46e2905debeef35a908}} 
+\index{UARTEx Private Macros@{UARTEx Private Macros}!IS\_UART\_ADDRESSLENGTH\_DETECT@{IS\_UART\_ADDRESSLENGTH\_DETECT}}
+\index{IS\_UART\_ADDRESSLENGTH\_DETECT@{IS\_UART\_ADDRESSLENGTH\_DETECT}!UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_ADDRESSLENGTH\_DETECT}{IS\_UART\_ADDRESSLENGTH\_DETECT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+ADDRESSLENGTH\+\_\+\+DETECT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   (((\_\_ADDRESS\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___wake_up___address___length_ga6599292020c484faeea894307d9dc6d5}{UART\_ADDRESS\_DETECT\_4B}}) || \(\backslash\)}
+\DoxyCodeLine{                                                   ((\_\_ADDRESS\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___wake_up___address___length_ga4dbd5995e0e4998cb1a312c183d7cbb0}{UART\_ADDRESS\_DETECT\_7B}}))}
+
+\end{DoxyCode}
+
+
+Ensure that UART wake-\/up address length is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+ADDRESS\+\_\+\+\_\+} & UART wake-\/up address length. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em SET} & ({\bfseries{ADDRESS}} is valid) or RESET ({\bfseries{ADDRESS}} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t_ex___private___macros_gac6cc8376326d3982bda0685dbaaff687}\label{group___u_a_r_t_ex___private___macros_gac6cc8376326d3982bda0685dbaaff687}} 
+\index{UARTEx Private Macros@{UARTEx Private Macros}!IS\_UART\_RXFIFO\_THRESHOLD@{IS\_UART\_RXFIFO\_THRESHOLD}}
+\index{IS\_UART\_RXFIFO\_THRESHOLD@{IS\_UART\_RXFIFO\_THRESHOLD}!UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_RXFIFO\_THRESHOLD}{IS\_UART\_RXFIFO\_THRESHOLD}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+RXFIFO\+\_\+\+THRESHOLD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+THRESHOLD\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                 (((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___r_x_f_i_f_o__threshold__level_ga9cabde9885fe477df3625fa8fdc7a99a}{UART\_RXFIFO\_THRESHOLD\_1\_8}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___r_x_f_i_f_o__threshold__level_ga46898e3dbaa13a52a62ae7dbddc90cd5}{UART\_RXFIFO\_THRESHOLD\_1\_4}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___r_x_f_i_f_o__threshold__level_ga032d8a09e993ca8938eb6fa5b97f4d16}{UART\_RXFIFO\_THRESHOLD\_1\_2}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___r_x_f_i_f_o__threshold__level_ga822019dbcf489602fe72d84700655e27}{UART\_RXFIFO\_THRESHOLD\_3\_4}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___r_x_f_i_f_o__threshold__level_gaba2b8f47d6b307a644ec4dcd6d8202e4}{UART\_RXFIFO\_THRESHOLD\_7\_8}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___r_x_f_i_f_o__threshold__level_gabc5dc474eeac764ab6e99435ace5ca21}{UART\_RXFIFO\_THRESHOLD\_8\_8}}))}
+
+\end{DoxyCode}
+
+
+Ensure that UART RXFIFO threshold level is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+THRESHOLD\+\_\+\+\_\+} & UART RXFIFO threshold level. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em SET} & ({\bfseries{THRESHOLD}} is valid) or RESET ({\bfseries{THRESHOLD}} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t_ex___private___macros_ga59f192f936bea1dac321a552ab3e662d}\label{group___u_a_r_t_ex___private___macros_ga59f192f936bea1dac321a552ab3e662d}} 
+\index{UARTEx Private Macros@{UARTEx Private Macros}!IS\_UART\_TXFIFO\_THRESHOLD@{IS\_UART\_TXFIFO\_THRESHOLD}}
+\index{IS\_UART\_TXFIFO\_THRESHOLD@{IS\_UART\_TXFIFO\_THRESHOLD}!UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_TXFIFO\_THRESHOLD}{IS\_UART\_TXFIFO\_THRESHOLD}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+TXFIFO\+\_\+\+THRESHOLD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+THRESHOLD\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                 (((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___t_x_f_i_f_o__threshold__level_gac0167b844b8cc2d183b55a0b296b2803}{UART\_TXFIFO\_THRESHOLD\_1\_8}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___t_x_f_i_f_o__threshold__level_ga7b6a3451b4d3677ba49f05228832edad}{UART\_TXFIFO\_THRESHOLD\_1\_4}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___t_x_f_i_f_o__threshold__level_ga3ded7de796281c47106eab832068534d}{UART\_TXFIFO\_THRESHOLD\_1\_2}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___t_x_f_i_f_o__threshold__level_ga0dd7780c824caddd1476cb59b9d5e5d0}{UART\_TXFIFO\_THRESHOLD\_3\_4}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___t_x_f_i_f_o__threshold__level_ga8e36c5786a037adae9a124a3094fc374}{UART\_TXFIFO\_THRESHOLD\_7\_8}}) || \(\backslash\)}
+\DoxyCodeLine{                                                 ((\_\_THRESHOLD\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___t_x_f_i_f_o__threshold__level_ga302d541c0419d26567cc0da09486e73d}{UART\_TXFIFO\_THRESHOLD\_8\_8}}))}
+
+\end{DoxyCode}
+
+
+Ensure that UART TXFIFO threshold level is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+THRESHOLD\+\_\+\+\_\+} & UART TXFIFO threshold level. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em SET} & ({\bfseries{THRESHOLD}} is valid) or RESET ({\bfseries{THRESHOLD}} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t_ex___private___macros_gaf856254e5a61d2ee81086918bffabde5}\label{group___u_a_r_t_ex___private___macros_gaf856254e5a61d2ee81086918bffabde5}} 
+\index{UARTEx Private Macros@{UARTEx Private Macros}!IS\_UART\_WORD\_LENGTH@{IS\_UART\_WORD\_LENGTH}}
+\index{IS\_UART\_WORD\_LENGTH@{IS\_UART\_WORD\_LENGTH}!UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_UART\_WORD\_LENGTH}{IS\_UART\_WORD\_LENGTH}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+UART\+\_\+\+WORD\+\_\+\+LENGTH(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+LENGTH\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((\_\_LENGTH\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___word___length_gadaec9a23646032a333a5327d66aae4fe}{UART\_WORDLENGTH\_7B}}) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_LENGTH\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___word___length_gaf394e9abaf17932ee89591f990fe6407}{UART\_WORDLENGTH\_8B}}) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_LENGTH\_\_) == \mbox{\hyperlink{group___u_a_r_t_ex___word___length_gaf867be43de35fd3c32fe0b4dd4058f7e}{UART\_WORDLENGTH\_9B}}))}
+
+\end{DoxyCode}
+
+
+Ensure that UART frame length is valid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+LENGTH\+\_\+\+\_\+} & UART frame length. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em SET} & ({\bfseries{LENGTH}} is valid) or RESET ({\bfseries{LENGTH}} is invalid) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t_ex___private___macros_ga2d8ffd4cb12754846ace609dff92e8df}\label{group___u_a_r_t_ex___private___macros_ga2d8ffd4cb12754846ace609dff92e8df}} 
+\index{UARTEx Private Macros@{UARTEx Private Macros}!UART\_GETCLOCKSOURCE@{UART\_GETCLOCKSOURCE}}
+\index{UART\_GETCLOCKSOURCE@{UART\_GETCLOCKSOURCE}!UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{UART\_GETCLOCKSOURCE}{UART\_GETCLOCKSOURCE}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+GETCLOCKSOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CLOCKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Report the UART clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the UART Handle. \\
+\hline
+{\em \+\_\+\+\_\+\+CLOCKSOURCE\+\_\+\+\_\+} & output variable. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em UART} & clocking source, written in {\bfseries{CLOCKSOURCE}}. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_a_r_t_ex___private___macros_gad9330184a8bd9399a36bcc93215a50d1}\label{group___u_a_r_t_ex___private___macros_gad9330184a8bd9399a36bcc93215a50d1}} 
+\index{UARTEx Private Macros@{UARTEx Private Macros}!UART\_MASK\_COMPUTATION@{UART\_MASK\_COMPUTATION}}
+\index{UART\_MASK\_COMPUTATION@{UART\_MASK\_COMPUTATION}!UARTEx Private Macros@{UARTEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{UART\_MASK\_COMPUTATION}{UART\_MASK\_COMPUTATION}}
+{\footnotesize\ttfamily \#define UART\+\_\+\+MASK\+\_\+\+COMPUTATION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+
+
+Report the UART mask to apply to retrieve the received data according to the word length and to the parity bits activation. 
+
+\begin{DoxyNote}{Note}
+If PCE = 1, the parity bit is not included in the data extracted by the reception API(). This masking operation is not carried out in the case of DMA transfers. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & specifies the UART Handle. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None,the} & mask to apply to UART RDR register is stored in ({\bfseries{HANDLE}})-\/\texorpdfstring{$>$}{>}Mask field. \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,47 @@
+\hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y}{}\doxysection{DELAY}
+\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y}\index{DELAY@{DELAY}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}{LL\+\_\+\+Init\+Tick}} (uint32\+\_\+t HCLKFrequency, uint32\+\_\+t Ticks)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source of the time base. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga485805c708e3aa0820454523782d4de4}} 
+void {\bfseries LL\+\_\+\+Init1ms\+Tick} (uint32\+\_\+t HCLKFrequency)
+\item 
+\mbox{\Hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga7b7ca6d9cbec320c3e9f326b203807aa}\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga7b7ca6d9cbec320c3e9f326b203807aa}} 
+void {\bfseries LL\+\_\+m\+Delay} (uint32\+\_\+t Delay)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}\label{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}} 
+\index{DELAY@{DELAY}!LL\_InitTick@{LL\_InitTick}}
+\index{LL\_InitTick@{LL\_InitTick}!DELAY@{DELAY}}
+\doxysubsubsection{\texorpdfstring{LL\_InitTick()}{LL\_InitTick()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{HCLKFrequency,  }\item[{uint32\+\_\+t}]{Ticks }\end{DoxyParamCaption})}
+
+
+
+This function configures the Cortex-\/M Sys\+Tick source of the time base. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em HCLKFrequency} & HCLK frequency in Hz (can be calculated thanks to RCC helper macro) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+When a RTOS is used, it is recommended to avoid changing the Sys\+Tick configuration by calling this function, for a delay use rather os\+Delay RTOS service. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Ticks} & Number of ticks \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

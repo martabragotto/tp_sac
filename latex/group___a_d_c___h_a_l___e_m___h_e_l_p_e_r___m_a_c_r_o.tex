@@ -1,0 +1,513 @@
+\hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o}{}\doxysection{HAL ADC helper macro}
+\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o}\index{HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga9bc3c95ac7d74b8a7ccfe259dc594b5f}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+TO\+\_\+\+DECIMAL\+\_\+\+NB}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+TO\+\_\+\+DECIMAL\+\_\+\+NB((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to get ADC channel number in decimal format from literals ADC\+\_\+\+CHANNEL\+\_\+x. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga957bf741f048d9971bd1a993e5845635}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+TO\+\_\+\+CHANNEL}}(\+\_\+\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+TO\+\_\+\+CHANNEL((\+\_\+\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to get ADC channel in literal format ADC\+\_\+\+CHANNEL\+\_\+x from number in decimal format. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga3ce4aa76d9cf6d51f1a22e147eeaf7e8}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to determine whether the selected channel corresponds to literal definitions of driver. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga0781a9a96878a6b095058f497e64b17b}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+TO\+\_\+\+EXTERNAL}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+TO\+\_\+\+EXTERNAL((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to convert a channel defined from parameter definition of a ADC internal channel (ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT, ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR, ...), to its equivalent parameter definition of a ADC external channel (ADC\+\_\+\+CHANNEL\+\_\+1, ADC\+\_\+\+CHANNEL\+\_\+2, ...). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga2a9e15b0d4157480c69e9e532fb08826}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+AVAILABLE}}(\+\_\+\+\_\+\+ADC\+\_\+\+INSTANCE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+AVAILABLE((\+\_\+\+\_\+\+ADC\+\_\+\+INSTANCE\+\_\+\+\_\+), (\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to determine whether the internal channel selected is available on the ADC instance selected. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gabeca24a27eeafd3fa327d7e52b9c5e05}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+COMMON\+\_\+\+INSTANCE}}(\+\_\+\+\_\+\+ADCx\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+COMMON\+\_\+\+INSTANCE((\+\_\+\+\_\+\+ADCx\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to select the ADC common instance to which is belonging the selected ADC instance. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gad184f60586116e4645960f493167ab68}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+ENABLED\+\_\+\+ALL\+\_\+\+COMMON\+\_\+\+INSTANCE}}(\+\_\+\+\_\+\+ADCXY\+\_\+\+COMMON\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+ENABLED\+\_\+\+ALL\+\_\+\+COMMON\+\_\+\+INSTANCE((\+\_\+\+\_\+\+ADCXY\+\_\+\+COMMON\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to check if all ADC instances sharing the same ADC common instance are disabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga5004ff914bbc4143a33071dc56990781}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DIGITAL\+\_\+\+SCALE}}(\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+)~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+DIGITAL\+\_\+\+SCALE((\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Helper macro to define the ADC conversion data full-\/scale digital value corresponding to the selected ADC resolution. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga3c05ed1500aac925c2b34feef84933f4}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CONVERT\+\_\+\+DATA\+\_\+\+RESOLUTION}}(\+\_\+\+\_\+\+DATA\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+CURRENT\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+TARGET\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to convert the ADC conversion data from a resolution to another resolution. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gad9667d1f8989f845b76ad67f79ca463b}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+DATA\+\_\+\+TO\+\_\+\+VOLTAGE}}(\+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the voltage (unit\+: m\+Volt) corresponding to a ADC conversion data (unit\+: digital value). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gabeaf403722579e8fc2a11f87e3b742e8}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE}}(\+\_\+\+\_\+\+VREFINT\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate analog reference voltage (Vref+) (unit\+: m\+Volt) from ADC conversion data of internal voltage reference Vref\+Int. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gace5999b5183189c1ca16f3e297a71e11}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE}}(\+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the temperature (unit\+: degree Celsius) from ADC conversion data of internal temperature sensor. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga807486b72afba510568f6a8f9bc70aab}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE\+\_\+\+TYP\+\_\+\+PARAMS}}(\+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+TYP\+\_\+\+AVGSLOPE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+TYP\+\_\+\+CALX\+\_\+\+V\+\_\+\+\_\+,  \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+CALX\+\_\+\+TEMP\+\_\+\+\_\+,  \+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+,  \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the temperature (unit\+: degree Celsius) from ADC conversion data of internal temperature sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gad9667d1f8989f845b76ad67f79ca463b}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gad9667d1f8989f845b76ad67f79ca463b}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CALC\_DATA\_TO\_VOLTAGE@{\_\_HAL\_ADC\_CALC\_DATA\_TO\_VOLTAGE}}
+\index{\_\_HAL\_ADC\_CALC\_DATA\_TO\_VOLTAGE@{\_\_HAL\_ADC\_CALC\_DATA\_TO\_VOLTAGE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CALC\_DATA\_TO\_VOLTAGE}{\_\_HAL\_ADC\_CALC\_DATA\_TO\_VOLTAGE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+DATA\+\_\+\+TO\+\_\+\+VOLTAGE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_LL\_ADC\_CALC\_DATA\_TO\_VOLTAGE((\_\_VREFANALOG\_VOLTAGE\_\_),\(\backslash\)}
+\DoxyCodeLine{                              (\_\_ADC\_DATA\_\_),\(\backslash\)}
+\DoxyCodeLine{                              (\_\_ADC\_RESOLUTION\_\_))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate the voltage (unit\+: m\+Volt) corresponding to a ADC conversion data (unit\+: digital value). 
+
+\begin{DoxyNote}{Note}
+Analog reference voltage (Vref+) must be either known from user board environment or can be calculated using ADC measurement and ADC helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+} & Analog reference voltage (unit\+: mV) \\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+} & ADC conversion data (resolution 12 bits) (unit\+: digital value). \\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em ADC} & conversion data equivalent voltage value (unit\+: m\+Volt) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gace5999b5183189c1ca16f3e297a71e11}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gace5999b5183189c1ca16f3e297a71e11}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CALC\_TEMPERATURE@{\_\_HAL\_ADC\_CALC\_TEMPERATURE}}
+\index{\_\_HAL\_ADC\_CALC\_TEMPERATURE@{\_\_HAL\_ADC\_CALC\_TEMPERATURE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CALC\_TEMPERATURE}{\_\_HAL\_ADC\_CALC\_TEMPERATURE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_LL\_ADC\_CALC\_TEMPERATURE((\_\_VREFANALOG\_VOLTAGE\_\_),\(\backslash\)}
+\DoxyCodeLine{                          (\_\_TEMPSENSOR\_ADC\_DATA\_\_),\(\backslash\)}
+\DoxyCodeLine{                          (\_\_ADC\_RESOLUTION\_\_))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate the temperature (unit\+: degree Celsius) from ADC conversion data of internal temperature sensor. 
+
+\begin{DoxyNote}{Note}
+Computation is using temperature sensor calibration values stored in system memory for each device during production. 
+
+Calculation formula\+: Temperature = ((TS\+\_\+\+ADC\+\_\+\+DATA -\/ TS\+\_\+\+CAL1)
+\begin{DoxyItemize}
+\item (TS\+\_\+\+CAL2\+\_\+\+TEMP -\/ TS\+\_\+\+CAL1\+\_\+\+TEMP)) / (TS\+\_\+\+CAL2 -\/ TS\+\_\+\+CAL1) + TS\+\_\+\+CAL1\+\_\+\+TEMP with TS\+\_\+\+ADC\+\_\+\+DATA = temperature sensor raw data measured by ADC Avg\+\_\+\+Slope = (TS\+\_\+\+CAL2 -\/ TS\+\_\+\+CAL1) / (TS\+\_\+\+CAL2\+\_\+\+TEMP -\/ TS\+\_\+\+CAL1\+\_\+\+TEMP) TS\+\_\+\+CAL1 = equivalent TS\+\_\+\+ADC\+\_\+\+DATA at temperature TEMP\+\_\+\+DEGC\+\_\+\+CAL1 (calibrated in factory) TS\+\_\+\+CAL2 = equivalent TS\+\_\+\+ADC\+\_\+\+DATA at temperature TEMP\+\_\+\+DEGC\+\_\+\+CAL2 (calibrated in factory) Caution\+: Calculation relevancy under reserve that calibration parameters are correct (address and data). To calculate temperature using temperature sensor datasheet typical values (generic values less, therefore less accurate than calibrated values), use helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE\+\_\+\+TYP\+\_\+\+PARAMS(). 
+\end{DoxyItemize}
+
+As calculation input, the analog reference voltage (Vref+) must be defined as it impacts the ADC LSB equivalent voltage. 
+
+Analog reference voltage (Vref+) must be either known from user board environment or can be calculated using ADC measurement and ADC helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE(). 
+
+On this STM32 series, calibration data of temperature sensor corresponds to a resolution of 12 bits, this is the recommended ADC resolution to convert voltage of temperature sensor. Otherwise, this macro performs the processing to scale ADC conversion data to 12 bits. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+} & Analog reference voltage (unit\+: mV) \\
+\hline
+{\em \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+} & ADC conversion data of internal temperature sensor (unit\+: digital value). \\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+} & ADC resolution at which internal temperature sensor voltage has been measured. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Temperature} & (unit\+: degree Celsius) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga807486b72afba510568f6a8f9bc70aab}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga807486b72afba510568f6a8f9bc70aab}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS@{\_\_HAL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS}}
+\index{\_\_HAL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS@{\_\_HAL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS}{\_\_HAL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE\+\_\+\+TYP\+\_\+\+PARAMS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+TYP\+\_\+\+AVGSLOPE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+TYP\+\_\+\+CALX\+\_\+\+V\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+CALX\+\_\+\+TEMP\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_LL\_ADC\_CALC\_TEMPERATURE\_TYP\_PARAMS((\_\_TEMPSENSOR\_TYP\_AVGSLOPE\_\_),\(\backslash\)}
+\DoxyCodeLine{                                     (\_\_TEMPSENSOR\_TYP\_CALX\_V\_\_),\(\backslash\)}
+\DoxyCodeLine{                                     (\_\_TEMPSENSOR\_CALX\_TEMP\_\_),\(\backslash\)}
+\DoxyCodeLine{                                     (\_\_VREFANALOG\_VOLTAGE\_\_),\(\backslash\)}
+\DoxyCodeLine{                                     (\_\_TEMPSENSOR\_ADC\_DATA\_\_),\(\backslash\)}
+\DoxyCodeLine{                                     (\_\_ADC\_RESOLUTION\_\_))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate the temperature (unit\+: degree Celsius) from ADC conversion data of internal temperature sensor. 
+
+\begin{DoxyNote}{Note}
+Computation is using temperature sensor typical values (refer to device datasheet). 
+
+Calculation formula\+: Temperature = (TS\+\_\+\+TYP\+\_\+\+CALx\+\_\+\+VOLT(u\+V) -\/ TS\+\_\+\+ADC\+\_\+\+DATA $\ast$ Conversion\+\_\+uV) / Avg\+\_\+\+Slope + CALx\+\_\+\+TEMP with TS\+\_\+\+ADC\+\_\+\+DATA = temperature sensor raw data measured by ADC (unit\+: digital value) Avg\+\_\+\+Slope = temperature sensor slope (unit\+: u\+V/\+Degree Celsius) TS\+\_\+\+TYP\+\_\+\+CALx\+\_\+\+VOLT = temperature sensor digital value at temperature CALx\+\_\+\+TEMP (unit\+: mV) Caution\+: Calculation relevancy under reserve the temperature sensor of the current device has characteristics in line with datasheet typical values. If temperature sensor calibration values are available on on this device (presence of macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE()), temperature calculation will be more accurate using helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+TEMPERATURE(). 
+
+As calculation input, the analog reference voltage (Vref+) must be defined as it impacts the ADC LSB equivalent voltage. 
+
+Analog reference voltage (Vref+) must be either known from user board environment or can be calculated using ADC measurement and ADC helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE(). 
+
+ADC measurement data must correspond to a resolution of 12bits (full scale digital value 4095). If not the case, the data must be preliminarily rescaled to an equivalent resolution of 12 bits. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+TYP\+\_\+\+AVGSLOPE\+\_\+\+\_\+} & Device datasheet data\+: Temperature sensor slope typical value (unit\+: u\+V/\+Deg\+Celsius). On STM32\+G4, refer to device datasheet parameter \char`\"{}\+Avg\+\_\+\+Slope\char`\"{}. \\
+\hline
+{\em \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+TYP\+\_\+\+CALX\+\_\+\+V\+\_\+\+\_\+} & Device datasheet data\+: Temperature sensor voltage typical value (at temperature and Vref+ defined in parameters below) (unit\+: mV). On STM32\+G4, refer to device datasheet parameter \char`\"{}\+V30\char`\"{} (corresponding to TS\+\_\+\+CAL1). \\
+\hline
+{\em \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+CALX\+\_\+\+TEMP\+\_\+\+\_\+} & Device datasheet data\+: Temperature at which temperature sensor voltage (see parameter above) is corresponding (unit\+: mV) \\
+\hline
+{\em \+\_\+\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE\+\_\+\+\_\+} & Analog voltage reference (Vref+) voltage (unit\+: mV) \\
+\hline
+{\em \+\_\+\+\_\+\+TEMPSENSOR\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+} & ADC conversion data of internal temperature sensor (unit\+: digital value). \\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+} & ADC resolution at which internal temperature sensor voltage has been measured. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Temperature} & (unit\+: degree Celsius) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gabeaf403722579e8fc2a11f87e3b742e8}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gabeaf403722579e8fc2a11f87e3b742e8}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CALC\_VREFANALOG\_VOLTAGE@{\_\_HAL\_ADC\_CALC\_VREFANALOG\_VOLTAGE}}
+\index{\_\_HAL\_ADC\_CALC\_VREFANALOG\_VOLTAGE@{\_\_HAL\_ADC\_CALC\_VREFANALOG\_VOLTAGE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CALC\_VREFANALOG\_VOLTAGE}{\_\_HAL\_ADC\_CALC\_VREFANALOG\_VOLTAGE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CALC\+\_\+\+VREFANALOG\+\_\+\+VOLTAGE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VREFINT\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_LL\_ADC\_CALC\_VREFANALOG\_VOLTAGE((\_\_VREFINT\_ADC\_DATA\_\_),\(\backslash\)}
+\DoxyCodeLine{                                 (\_\_ADC\_RESOLUTION\_\_))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate analog reference voltage (Vref+) (unit\+: m\+Volt) from ADC conversion data of internal voltage reference Vref\+Int. 
+
+\begin{DoxyNote}{Note}
+Computation is using Vref\+Int calibration value stored in system memory for each device during production. 
+
+This voltage depends on user board environment\+: voltage level connected to pin Vref+. On devices with small package, the pin Vref+ is not present and internally bonded to pin Vdda. 
+
+On this STM32 series, calibration data of internal voltage reference Vref\+Int corresponds to a resolution of 12 bits, this is the recommended ADC resolution to convert voltage of internal voltage reference Vref\+Int. Otherwise, this macro performs the processing to scale ADC conversion data to 12 bits. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+VREFINT\+\_\+\+ADC\+\_\+\+DATA\+\_\+\+\_\+} & ADC conversion data (resolution 12 bits) of internal voltage reference Vref\+Int (unit\+: digital value). \\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Analog} & reference voltage (unit\+: mV) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga0781a9a96878a6b095058f497e64b17b}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga0781a9a96878a6b095058f497e64b17b}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CHANNEL\_INTERNAL\_TO\_EXTERNAL@{\_\_HAL\_ADC\_CHANNEL\_INTERNAL\_TO\_EXTERNAL}}
+\index{\_\_HAL\_ADC\_CHANNEL\_INTERNAL\_TO\_EXTERNAL@{\_\_HAL\_ADC\_CHANNEL\_INTERNAL\_TO\_EXTERNAL}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CHANNEL\_INTERNAL\_TO\_EXTERNAL}{\_\_HAL\_ADC\_CHANNEL\_INTERNAL\_TO\_EXTERNAL}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+TO\+\_\+\+EXTERNAL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+TO\+\_\+\+EXTERNAL((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))}
+
+
+
+Helper macro to convert a channel defined from parameter definition of a ADC internal channel (ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT, ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR, ...), to its equivalent parameter definition of a ADC external channel (ADC\+\_\+\+CHANNEL\+\_\+1, ADC\+\_\+\+CHANNEL\+\_\+2, ...). 
+
+\begin{DoxyNote}{Note}
+The channel parameter can be, additionally to a value defined from parameter definition of a ADC internal channel (ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT, ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR, ...), a value defined from parameter definition of ADC external channel (ADC\+\_\+\+CHANNEL\+\_\+1, ADC\+\_\+\+CHANNEL\+\_\+2, ...) or a value from functions where a channel number is returned from ADC registers. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga3c5075aee5af4eae02f1a72d6216199c}{ADC\+\_\+\+CHANNEL\+\_\+0}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaeb119201733a871c94971c51843ffaac}{ADC\+\_\+\+CHANNEL\+\_\+1}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad576132ebd78a3429be34f44e474c914}{ADC\+\_\+\+CHANNEL\+\_\+2}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga56dba5d35f1f7bcad41e4f9a7da3b125}{ADC\+\_\+\+CHANNEL\+\_\+3}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f19737ad81a0a62eb97854d0e41a54}{ADC\+\_\+\+CHANNEL\+\_\+4}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga716f2836f655c753c629de439ce50ecf}{ADC\+\_\+\+CHANNEL\+\_\+5}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga418f0223ea88773157638097391716a5}{ADC\+\_\+\+CHANNEL\+\_\+6}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga03b8138c2d87274f94ba675a7e18e666}{ADC\+\_\+\+CHANNEL\+\_\+7}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gab0917f6b66213f33f2e2ea8781df5aa9}{ADC\+\_\+\+CHANNEL\+\_\+8}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga95f485ecc05187c3d475238a88beef1c}{ADC\+\_\+\+CHANNEL\+\_\+9}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa55df8c97225d32b495959896897567c}{ADC\+\_\+\+CHANNEL\+\_\+10}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf36361a33c07b04f8ab1d58d232bc434}{ADC\+\_\+\+CHANNEL\+\_\+11}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0}{ADC\+\_\+\+CHANNEL\+\_\+12}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad7550270d90a1a12b00cd9f8ad9f1fc2}{ADC\+\_\+\+CHANNEL\+\_\+13}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9caff32bcda5dd83f662bf398ab14d36}{ADC\+\_\+\+CHANNEL\+\_\+14}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f41aad197a6de160dd8958c90653a2}{ADC\+\_\+\+CHANNEL\+\_\+15}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga7892590f524e7356deb1e513bbc0cdaf}{ADC\+\_\+\+CHANNEL\+\_\+16}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf7760a480f79c62d19260291f8afb6e1}{ADC\+\_\+\+CHANNEL\+\_\+17}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga30fc8e77b4c89d3ea0609cfbc7fc90fd}{ADC\+\_\+\+CHANNEL\+\_\+18}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga2647a044275a295693e8fb01db3172f9}{ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT}} (7) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9c9b2522604b17bf85f847a836c52fd5}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9d47d6aaad34832f7f8657ce4c26e518}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga60210f1e9305301dea9e42afedd9093f}{ADC\+\_\+\+CHANNEL\+\_\+\+VBAT}} (6) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga422259b700e698f908d99600e93f6051}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gae87a1cd92752b78658ac7be6e12686a7}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaaa92004299506ea47eaf82c504c3685b}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa01e4b1b952c4937fac55819a99163a5}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC3}} (3) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66419bf87d65f19f8d6bafd9fc28bb1a}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP4}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga188076b53233fb4a39469ed9cf210056}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga5e59c6173eceef474621504524e1f1f8}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP6}} (4)\end{DoxyItemize}
+(1) On STM32\+G4, parameter available only on ADC instance\+: ADC1.~\newline
+ (2) On STM32\+G4, parameter available only on ADC instance\+: ADC2.~\newline
+ (3) On STM32\+G4, parameter available only on ADC instance\+: ADC3.~\newline
+ (4) On STM32\+G4, parameter available only on ADC instance\+: ADC4.~\newline
+ (5) On STM32\+G4, parameter available only on ADC instance\+: ADC5.~\newline
+ (6) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC5.~\newline
+ (7) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC4, ADC5.~\newline
+
+\begin{DoxyItemize}
+\item On this STM32 series, all ADCx are not available on all devices. Refer to device datasheet for more details. (8) On STM32\+G4, fast channel allows\+: 2.\+5 (sampling) + 12.\+5 (conversion) = 15 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution. Other channels are slow channels allows\+: 6.\+5 (sampling) + 12.\+5 (conversion) = 19 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution.~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga3c5075aee5af4eae02f1a72d6216199c}{ADC\+\_\+\+CHANNEL\+\_\+0}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaeb119201733a871c94971c51843ffaac}{ADC\+\_\+\+CHANNEL\+\_\+1}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad576132ebd78a3429be34f44e474c914}{ADC\+\_\+\+CHANNEL\+\_\+2}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga56dba5d35f1f7bcad41e4f9a7da3b125}{ADC\+\_\+\+CHANNEL\+\_\+3}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f19737ad81a0a62eb97854d0e41a54}{ADC\+\_\+\+CHANNEL\+\_\+4}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga716f2836f655c753c629de439ce50ecf}{ADC\+\_\+\+CHANNEL\+\_\+5}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga418f0223ea88773157638097391716a5}{ADC\+\_\+\+CHANNEL\+\_\+6}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga03b8138c2d87274f94ba675a7e18e666}{ADC\+\_\+\+CHANNEL\+\_\+7}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gab0917f6b66213f33f2e2ea8781df5aa9}{ADC\+\_\+\+CHANNEL\+\_\+8}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga95f485ecc05187c3d475238a88beef1c}{ADC\+\_\+\+CHANNEL\+\_\+9}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa55df8c97225d32b495959896897567c}{ADC\+\_\+\+CHANNEL\+\_\+10}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf36361a33c07b04f8ab1d58d232bc434}{ADC\+\_\+\+CHANNEL\+\_\+11}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0}{ADC\+\_\+\+CHANNEL\+\_\+12}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad7550270d90a1a12b00cd9f8ad9f1fc2}{ADC\+\_\+\+CHANNEL\+\_\+13}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9caff32bcda5dd83f662bf398ab14d36}{ADC\+\_\+\+CHANNEL\+\_\+14}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f41aad197a6de160dd8958c90653a2}{ADC\+\_\+\+CHANNEL\+\_\+15}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga7892590f524e7356deb1e513bbc0cdaf}{ADC\+\_\+\+CHANNEL\+\_\+16}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf7760a480f79c62d19260291f8afb6e1}{ADC\+\_\+\+CHANNEL\+\_\+17}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga30fc8e77b4c89d3ea0609cfbc7fc90fd}{ADC\+\_\+\+CHANNEL\+\_\+18}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga9bc3c95ac7d74b8a7ccfe259dc594b5f}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga9bc3c95ac7d74b8a7ccfe259dc594b5f}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CHANNEL\_TO\_DECIMAL\_NB@{\_\_HAL\_ADC\_CHANNEL\_TO\_DECIMAL\_NB}}
+\index{\_\_HAL\_ADC\_CHANNEL\_TO\_DECIMAL\_NB@{\_\_HAL\_ADC\_CHANNEL\_TO\_DECIMAL\_NB}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CHANNEL\_TO\_DECIMAL\_NB}{\_\_HAL\_ADC\_CHANNEL\_TO\_DECIMAL\_NB}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+TO\+\_\+\+DECIMAL\+\_\+\+NB(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+TO\+\_\+\+DECIMAL\+\_\+\+NB((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))}
+
+
+
+Helper macro to get ADC channel number in decimal format from literals ADC\+\_\+\+CHANNEL\+\_\+x. 
+
+\begin{DoxyNote}{Note}
+Example\+: \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga9bc3c95ac7d74b8a7ccfe259dc594b5f}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+TO\+\_\+\+DECIMAL\+\_\+\+NB(\+ADC\+\_\+\+CHANNEL\+\_\+4)}} will return decimal number \char`\"{}4\char`\"{}. 
+
+The input can be a value from functions where a channel number is returned, either defined with number or with bitfield (only one bit must be set). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga3c5075aee5af4eae02f1a72d6216199c}{ADC\+\_\+\+CHANNEL\+\_\+0}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaeb119201733a871c94971c51843ffaac}{ADC\+\_\+\+CHANNEL\+\_\+1}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad576132ebd78a3429be34f44e474c914}{ADC\+\_\+\+CHANNEL\+\_\+2}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga56dba5d35f1f7bcad41e4f9a7da3b125}{ADC\+\_\+\+CHANNEL\+\_\+3}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f19737ad81a0a62eb97854d0e41a54}{ADC\+\_\+\+CHANNEL\+\_\+4}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga716f2836f655c753c629de439ce50ecf}{ADC\+\_\+\+CHANNEL\+\_\+5}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga418f0223ea88773157638097391716a5}{ADC\+\_\+\+CHANNEL\+\_\+6}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga03b8138c2d87274f94ba675a7e18e666}{ADC\+\_\+\+CHANNEL\+\_\+7}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gab0917f6b66213f33f2e2ea8781df5aa9}{ADC\+\_\+\+CHANNEL\+\_\+8}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga95f485ecc05187c3d475238a88beef1c}{ADC\+\_\+\+CHANNEL\+\_\+9}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa55df8c97225d32b495959896897567c}{ADC\+\_\+\+CHANNEL\+\_\+10}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf36361a33c07b04f8ab1d58d232bc434}{ADC\+\_\+\+CHANNEL\+\_\+11}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0}{ADC\+\_\+\+CHANNEL\+\_\+12}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad7550270d90a1a12b00cd9f8ad9f1fc2}{ADC\+\_\+\+CHANNEL\+\_\+13}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9caff32bcda5dd83f662bf398ab14d36}{ADC\+\_\+\+CHANNEL\+\_\+14}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f41aad197a6de160dd8958c90653a2}{ADC\+\_\+\+CHANNEL\+\_\+15}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga7892590f524e7356deb1e513bbc0cdaf}{ADC\+\_\+\+CHANNEL\+\_\+16}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf7760a480f79c62d19260291f8afb6e1}{ADC\+\_\+\+CHANNEL\+\_\+17}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga30fc8e77b4c89d3ea0609cfbc7fc90fd}{ADC\+\_\+\+CHANNEL\+\_\+18}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga2647a044275a295693e8fb01db3172f9}{ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT}} (7) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9c9b2522604b17bf85f847a836c52fd5}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9d47d6aaad34832f7f8657ce4c26e518}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga60210f1e9305301dea9e42afedd9093f}{ADC\+\_\+\+CHANNEL\+\_\+\+VBAT}} (6) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga422259b700e698f908d99600e93f6051}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gae87a1cd92752b78658ac7be6e12686a7}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaaa92004299506ea47eaf82c504c3685b}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa01e4b1b952c4937fac55819a99163a5}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC3}} (3) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66419bf87d65f19f8d6bafd9fc28bb1a}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP4}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga188076b53233fb4a39469ed9cf210056}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga5e59c6173eceef474621504524e1f1f8}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP6}} (4)\end{DoxyItemize}
+(1) On STM32\+G4, parameter available only on ADC instance\+: ADC1.~\newline
+ (2) On STM32\+G4, parameter available only on ADC instance\+: ADC2.~\newline
+ (3) On STM32\+G4, parameter available only on ADC instance\+: ADC3.~\newline
+ (4) On STM32\+G4, parameter available only on ADC instance\+: ADC4.~\newline
+ (5) On STM32\+G4, parameter available only on ADC instance\+: ADC5.~\newline
+ (6) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC5.~\newline
+ (7) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC4, ADC5.~\newline
+
+\begin{DoxyItemize}
+\item On this STM32 series, all ADCx are not available on all devices. Refer to device datasheet for more details. (8) On STM32\+G4, fast channel allows\+: 2.\+5 (sampling) + 12.\+5 (conversion) = 15 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution. Other channels are slow channels allows\+: 6.\+5 (sampling) + 12.\+5 (conversion) = 19 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution.~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=18 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gabeca24a27eeafd3fa327d7e52b9c5e05}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gabeca24a27eeafd3fa327d7e52b9c5e05}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_COMMON\_INSTANCE@{\_\_HAL\_ADC\_COMMON\_INSTANCE}}
+\index{\_\_HAL\_ADC\_COMMON\_INSTANCE@{\_\_HAL\_ADC\_COMMON\_INSTANCE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_COMMON\_INSTANCE}{\_\_HAL\_ADC\_COMMON\_INSTANCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+COMMON\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADCx\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+COMMON\+\_\+\+INSTANCE((\+\_\+\+\_\+\+ADCx\+\_\+\+\_\+))}
+
+
+
+Helper macro to select the ADC common instance to which is belonging the selected ADC instance. 
+
+\begin{DoxyNote}{Note}
+ADC common register instance can be used for\+:
+\begin{DoxyItemize}
+\item Set parameters common to several ADC instances
+\item Multimode (for devices with several ADC instances) Refer to functions having argument \char`\"{}\+ADCxy\+\_\+\+COMMON\char`\"{} as parameter. 
+\end{DoxyItemize}
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+ADCx\+\_\+\+\_\+} & ADC instance \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em ADC} & common register instance \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga3c05ed1500aac925c2b34feef84933f4}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga3c05ed1500aac925c2b34feef84933f4}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_CONVERT\_DATA\_RESOLUTION@{\_\_HAL\_ADC\_CONVERT\_DATA\_RESOLUTION}}
+\index{\_\_HAL\_ADC\_CONVERT\_DATA\_RESOLUTION@{\_\_HAL\_ADC\_CONVERT\_DATA\_RESOLUTION}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CONVERT\_DATA\_RESOLUTION}{\_\_HAL\_ADC\_CONVERT\_DATA\_RESOLUTION}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CONVERT\+\_\+\+DATA\+\_\+\+RESOLUTION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+DATA\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+CURRENT\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+TARGET\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\_\_LL\_ADC\_CONVERT\_DATA\_RESOLUTION((\_\_DATA\_\_),\(\backslash\)}
+\DoxyCodeLine{                                 (\_\_ADC\_RESOLUTION\_CURRENT\_\_),\(\backslash\)}
+\DoxyCodeLine{                                 (\_\_ADC\_RESOLUTION\_TARGET\_\_))}
+
+\end{DoxyCode}
+
+
+Helper macro to convert the ADC conversion data from a resolution to another resolution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+DATA\+\_\+\+\_\+} & ADC conversion data to be converted \\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+CURRENT\+\_\+\+\_\+} & Resolution of to the data to be converted This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+TARGET\+\_\+\+\_\+} & Resolution of the data after conversion This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em ADC} & conversion data to the requested resolution \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga957bf741f048d9971bd1a993e5845635}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga957bf741f048d9971bd1a993e5845635}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_DECIMAL\_NB\_TO\_CHANNEL@{\_\_HAL\_ADC\_DECIMAL\_NB\_TO\_CHANNEL}}
+\index{\_\_HAL\_ADC\_DECIMAL\_NB\_TO\_CHANNEL@{\_\_HAL\_ADC\_DECIMAL\_NB\_TO\_CHANNEL}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_DECIMAL\_NB\_TO\_CHANNEL}{\_\_HAL\_ADC\_DECIMAL\_NB\_TO\_CHANNEL}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+TO\+\_\+\+CHANNEL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+TO\+\_\+\+CHANNEL((\+\_\+\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+\_\+))}
+
+
+
+Helper macro to get ADC channel in literal format ADC\+\_\+\+CHANNEL\+\_\+x from number in decimal format. 
+
+\begin{DoxyNote}{Note}
+Example\+: \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga957bf741f048d9971bd1a993e5845635}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+TO\+\_\+\+CHANNEL(4)}} will return a data equivalent to \char`\"{}\+ADC\+\_\+\+CHANNEL\+\_\+4\char`\"{}. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+DECIMAL\+\_\+\+NB\+\_\+\+\_\+} & Value between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=18 \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga3c5075aee5af4eae02f1a72d6216199c}{ADC\+\_\+\+CHANNEL\+\_\+0}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaeb119201733a871c94971c51843ffaac}{ADC\+\_\+\+CHANNEL\+\_\+1}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad576132ebd78a3429be34f44e474c914}{ADC\+\_\+\+CHANNEL\+\_\+2}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga56dba5d35f1f7bcad41e4f9a7da3b125}{ADC\+\_\+\+CHANNEL\+\_\+3}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f19737ad81a0a62eb97854d0e41a54}{ADC\+\_\+\+CHANNEL\+\_\+4}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga716f2836f655c753c629de439ce50ecf}{ADC\+\_\+\+CHANNEL\+\_\+5}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga418f0223ea88773157638097391716a5}{ADC\+\_\+\+CHANNEL\+\_\+6}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga03b8138c2d87274f94ba675a7e18e666}{ADC\+\_\+\+CHANNEL\+\_\+7}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gab0917f6b66213f33f2e2ea8781df5aa9}{ADC\+\_\+\+CHANNEL\+\_\+8}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga95f485ecc05187c3d475238a88beef1c}{ADC\+\_\+\+CHANNEL\+\_\+9}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa55df8c97225d32b495959896897567c}{ADC\+\_\+\+CHANNEL\+\_\+10}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf36361a33c07b04f8ab1d58d232bc434}{ADC\+\_\+\+CHANNEL\+\_\+11}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0}{ADC\+\_\+\+CHANNEL\+\_\+12}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad7550270d90a1a12b00cd9f8ad9f1fc2}{ADC\+\_\+\+CHANNEL\+\_\+13}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9caff32bcda5dd83f662bf398ab14d36}{ADC\+\_\+\+CHANNEL\+\_\+14}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f41aad197a6de160dd8958c90653a2}{ADC\+\_\+\+CHANNEL\+\_\+15}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga7892590f524e7356deb1e513bbc0cdaf}{ADC\+\_\+\+CHANNEL\+\_\+16}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf7760a480f79c62d19260291f8afb6e1}{ADC\+\_\+\+CHANNEL\+\_\+17}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga30fc8e77b4c89d3ea0609cfbc7fc90fd}{ADC\+\_\+\+CHANNEL\+\_\+18}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga2647a044275a295693e8fb01db3172f9}{ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT}} (7) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9c9b2522604b17bf85f847a836c52fd5}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9d47d6aaad34832f7f8657ce4c26e518}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga60210f1e9305301dea9e42afedd9093f}{ADC\+\_\+\+CHANNEL\+\_\+\+VBAT}} (6) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga422259b700e698f908d99600e93f6051}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gae87a1cd92752b78658ac7be6e12686a7}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaaa92004299506ea47eaf82c504c3685b}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa01e4b1b952c4937fac55819a99163a5}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC3}} (3) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66419bf87d65f19f8d6bafd9fc28bb1a}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP4}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga188076b53233fb4a39469ed9cf210056}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga5e59c6173eceef474621504524e1f1f8}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP6}} (4)\end{DoxyItemize}
+(1) On STM32\+G4, parameter available only on ADC instance\+: ADC1.~\newline
+ (2) On STM32\+G4, parameter available only on ADC instance\+: ADC2.~\newline
+ (3) On STM32\+G4, parameter available only on ADC instance\+: ADC3.~\newline
+ (4) On STM32\+G4, parameter available only on ADC instance\+: ADC4.~\newline
+ (5) On STM32\+G4, parameter available only on ADC instance\+: ADC5.~\newline
+ (6) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC5.~\newline
+ (7) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC4, ADC5.~\newline
+
+\begin{DoxyItemize}
+\item On this STM32 series, all ADCx are not available on all devices. Refer to device datasheet for more details. (8) On STM32\+G4, fast channel allows\+: 2.\+5 (sampling) + 12.\+5 (conversion) = 15 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution. Other channels are slow channels allows\+: 6.\+5 (sampling) + 12.\+5 (conversion) = 19 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution.~\newline
+ (1, 2, 3, 4, 5, 7) For ADC channel read back from ADC register, comparison with internal channel parameter to be done using helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+TO\+\_\+\+EXTERNAL(). 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga5004ff914bbc4143a33071dc56990781}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga5004ff914bbc4143a33071dc56990781}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_DIGITAL\_SCALE@{\_\_HAL\_ADC\_DIGITAL\_SCALE}}
+\index{\_\_HAL\_ADC\_DIGITAL\_SCALE@{\_\_HAL\_ADC\_DIGITAL\_SCALE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_DIGITAL\_SCALE}{\_\_HAL\_ADC\_DIGITAL\_SCALE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DIGITAL\+\_\+\+SCALE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+DIGITAL\+\_\+\+SCALE((\+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+))}
+
+
+
+Helper macro to define the ADC conversion data full-\/scale digital value corresponding to the selected ADC resolution. 
+
+\begin{DoxyNote}{Note}
+ADC conversion data full-\/scale corresponds to voltage range determined by analog voltage references Vref+ and Vref-\/ (refer to reference manual). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+RESOLUTION\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga49c8408a1cdbf97bbf29234c3770fa74}{ADC\+\_\+\+RESOLUTION\+\_\+12B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga91289e269eb3080d25301909c0f417e5}{ADC\+\_\+\+RESOLUTION\+\_\+10B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga39925af93719877bdcc5664e4b95e69a}{ADC\+\_\+\+RESOLUTION\+\_\+8B}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___r_e_s_o_l_u_t_i_o_n_ga24c5226e05db78b4065f2f187d497b04}{ADC\+\_\+\+RESOLUTION\+\_\+6B}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em ADC} & conversion data full-\/scale digital value \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga3ce4aa76d9cf6d51f1a22e147eeaf7e8}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga3ce4aa76d9cf6d51f1a22e147eeaf7e8}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL@{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL}}
+\index{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL@{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL}{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL((\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))}
+
+
+
+Helper macro to determine whether the selected channel corresponds to literal definitions of driver. 
+
+\begin{DoxyNote}{Note}
+The different literal definitions of ADC channels are\+:
+\begin{DoxyItemize}
+\item ADC internal channel\+: ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT, ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR, ...
+\item ADC external channel (channel connected to a GPIO pin)\+: ADC\+\_\+\+CHANNEL\+\_\+1, ADC\+\_\+\+CHANNEL\+\_\+2, ... 
+\end{DoxyItemize}
+
+The channel parameter must be a value defined from literal definition of a ADC internal channel (ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT, ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR, ...), ADC external channel (ADC\+\_\+\+CHANNEL\+\_\+1, ADC\+\_\+\+CHANNEL\+\_\+2, ...), must not be a value from functions where a channel number is returned from ADC registers, because internal and external channels share the same channel number in ADC registers. The differentiation is made only with parameters definitions of driver. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga3c5075aee5af4eae02f1a72d6216199c}{ADC\+\_\+\+CHANNEL\+\_\+0}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaeb119201733a871c94971c51843ffaac}{ADC\+\_\+\+CHANNEL\+\_\+1}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad576132ebd78a3429be34f44e474c914}{ADC\+\_\+\+CHANNEL\+\_\+2}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga56dba5d35f1f7bcad41e4f9a7da3b125}{ADC\+\_\+\+CHANNEL\+\_\+3}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f19737ad81a0a62eb97854d0e41a54}{ADC\+\_\+\+CHANNEL\+\_\+4}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga716f2836f655c753c629de439ce50ecf}{ADC\+\_\+\+CHANNEL\+\_\+5}} (8) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga418f0223ea88773157638097391716a5}{ADC\+\_\+\+CHANNEL\+\_\+6}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga03b8138c2d87274f94ba675a7e18e666}{ADC\+\_\+\+CHANNEL\+\_\+7}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gab0917f6b66213f33f2e2ea8781df5aa9}{ADC\+\_\+\+CHANNEL\+\_\+8}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga95f485ecc05187c3d475238a88beef1c}{ADC\+\_\+\+CHANNEL\+\_\+9}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa55df8c97225d32b495959896897567c}{ADC\+\_\+\+CHANNEL\+\_\+10}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf36361a33c07b04f8ab1d58d232bc434}{ADC\+\_\+\+CHANNEL\+\_\+11}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad5ff4f4f0e5f6f9ffbdfb6f4cbc3a6e0}{ADC\+\_\+\+CHANNEL\+\_\+12}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gad7550270d90a1a12b00cd9f8ad9f1fc2}{ADC\+\_\+\+CHANNEL\+\_\+13}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9caff32bcda5dd83f662bf398ab14d36}{ADC\+\_\+\+CHANNEL\+\_\+14}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66f41aad197a6de160dd8958c90653a2}{ADC\+\_\+\+CHANNEL\+\_\+15}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga7892590f524e7356deb1e513bbc0cdaf}{ADC\+\_\+\+CHANNEL\+\_\+16}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaf7760a480f79c62d19260291f8afb6e1}{ADC\+\_\+\+CHANNEL\+\_\+17}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga30fc8e77b4c89d3ea0609cfbc7fc90fd}{ADC\+\_\+\+CHANNEL\+\_\+18}} \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga2647a044275a295693e8fb01db3172f9}{ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT}} (7) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9c9b2522604b17bf85f847a836c52fd5}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9d47d6aaad34832f7f8657ce4c26e518}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga60210f1e9305301dea9e42afedd9093f}{ADC\+\_\+\+CHANNEL\+\_\+\+VBAT}} (6) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga422259b700e698f908d99600e93f6051}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gae87a1cd92752b78658ac7be6e12686a7}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaaa92004299506ea47eaf82c504c3685b}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa01e4b1b952c4937fac55819a99163a5}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC3}} (3) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66419bf87d65f19f8d6bafd9fc28bb1a}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP4}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga188076b53233fb4a39469ed9cf210056}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga5e59c6173eceef474621504524e1f1f8}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP6}} (4)\end{DoxyItemize}
+(1) On STM32\+G4, parameter available only on ADC instance\+: ADC1.~\newline
+ (2) On STM32\+G4, parameter available only on ADC instance\+: ADC2.~\newline
+ (3) On STM32\+G4, parameter available only on ADC instance\+: ADC3.~\newline
+ (4) On STM32\+G4, parameter available only on ADC instance\+: ADC4.~\newline
+ (5) On STM32\+G4, parameter available only on ADC instance\+: ADC5.~\newline
+ (6) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC5.~\newline
+ (7) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC4, ADC5.~\newline
+
+\begin{DoxyItemize}
+\item On this STM32 series, all ADCx are not available on all devices. Refer to device datasheet for more details. (8) On STM32\+G4, fast channel allows\+: 2.\+5 (sampling) + 12.\+5 (conversion) = 15 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution. Other channels are slow channels allows\+: 6.\+5 (sampling) + 12.\+5 (conversion) = 19 ADC clock cycles (f\+ADC) to convert in 12-\/bit resolution.~\newline
+
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & \char`\"{}0\char`\"{} if the channel corresponds to a parameter definition of a ADC external channel (channel connected to a GPIO pin). Value \char`\"{}1\char`\"{} if the channel corresponds to a parameter definition of a ADC internal channel. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga2a9e15b0d4157480c69e9e532fb08826}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_ga2a9e15b0d4157480c69e9e532fb08826}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL\_AVAILABLE@{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL\_AVAILABLE}}
+\index{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL\_AVAILABLE@{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL\_AVAILABLE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL\_AVAILABLE}{\_\_HAL\_ADC\_IS\_CHANNEL\_INTERNAL\_AVAILABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+AVAILABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADC\+\_\+\+INSTANCE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+CHANNEL\+\_\+\+INTERNAL\+\_\+\+AVAILABLE((\+\_\+\+\_\+\+ADC\+\_\+\+INSTANCE\+\_\+\+\_\+), (\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+))}
+
+
+
+Helper macro to determine whether the internal channel selected is available on the ADC instance selected. 
+
+\begin{DoxyNote}{Note}
+The channel parameter must be a value defined from parameter definition of a ADC internal channel (ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT, ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR, ...), must not be a value defined from parameter definition of ADC external channel (ADC\+\_\+\+CHANNEL\+\_\+1, ADC\+\_\+\+CHANNEL\+\_\+2, ...) or a value from functions where a channel number is returned from ADC registers, because internal and external channels share the same channel number in ADC registers. The differentiation is made only with parameters definitions of driver. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+ADC\+\_\+\+INSTANCE\+\_\+\+\_\+} & ADC instance \\
+\hline
+{\em \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga2647a044275a295693e8fb01db3172f9}{ADC\+\_\+\+CHANNEL\+\_\+\+VREFINT}} (7) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9c9b2522604b17bf85f847a836c52fd5}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga9d47d6aaad34832f7f8657ce4c26e518}{ADC\+\_\+\+CHANNEL\+\_\+\+TEMPSENSOR\+\_\+\+ADC5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga60210f1e9305301dea9e42afedd9093f}{ADC\+\_\+\+CHANNEL\+\_\+\+VBAT}} (6) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga422259b700e698f908d99600e93f6051}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP1}} (1) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gae87a1cd92752b78658ac7be6e12686a7}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaaa92004299506ea47eaf82c504c3685b}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC2}} (2) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_gaa01e4b1b952c4937fac55819a99163a5}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP3\+\_\+\+ADC3}} (3) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga66419bf87d65f19f8d6bafd9fc28bb1a}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP4}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga188076b53233fb4a39469ed9cf210056}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP5}} (5) \item \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l_ga5e59c6173eceef474621504524e1f1f8}{ADC\+\_\+\+CHANNEL\+\_\+\+VOPAMP6}} (4)\end{DoxyItemize}
+(1) On STM32\+G4, parameter available only on ADC instance\+: ADC1.~\newline
+ (2) On STM32\+G4, parameter available only on ADC instance\+: ADC2.~\newline
+ (3) On STM32\+G4, parameter available only on ADC instance\+: ADC3.~\newline
+ (4) On STM32\+G4, parameter available only on ADC instance\+: ADC4.~\newline
+ (5) On STM32\+G4, parameter available only on ADC instance\+: ADC5.~\newline
+ (6) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC5.~\newline
+ (7) On STM32\+G4, parameter available only on ADC instances\+: ADC1, ADC3, ADC4, ADC5.~\newline
+
+\begin{DoxyItemize}
+\item On this STM32 series, all ADCx are not available on all devices. Refer to device datasheet for more details. 
+\end{DoxyItemize}\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & \char`\"{}0\char`\"{} if the internal channel selected is not available on the ADC instance selected. Value \char`\"{}1\char`\"{} if the internal channel selected is available on the ADC instance selected. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gad184f60586116e4645960f493167ab68}\label{group___a_d_c___h_a_l___e_m___h_e_l_p_e_r___m_a_c_r_o_gad184f60586116e4645960f493167ab68}} 
+\index{HAL ADC helper macro@{HAL ADC helper macro}!\_\_HAL\_ADC\_IS\_ENABLED\_ALL\_COMMON\_INSTANCE@{\_\_HAL\_ADC\_IS\_ENABLED\_ALL\_COMMON\_INSTANCE}}
+\index{\_\_HAL\_ADC\_IS\_ENABLED\_ALL\_COMMON\_INSTANCE@{\_\_HAL\_ADC\_IS\_ENABLED\_ALL\_COMMON\_INSTANCE}!HAL ADC helper macro@{HAL ADC helper macro}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_IS\_ENABLED\_ALL\_COMMON\_INSTANCE}{\_\_HAL\_ADC\_IS\_ENABLED\_ALL\_COMMON\_INSTANCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+ENABLED\+\_\+\+ALL\+\_\+\+COMMON\+\_\+\+INSTANCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADCXY\+\_\+\+COMMON\+\_\+\+\_\+ }\end{DoxyParamCaption})~  \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+IS\+\_\+\+ENABLED\+\_\+\+ALL\+\_\+\+COMMON\+\_\+\+INSTANCE((\+\_\+\+\_\+\+ADCXY\+\_\+\+COMMON\+\_\+\+\_\+))}
+
+
+
+Helper macro to check if all ADC instances sharing the same ADC common instance are disabled. 
+
+\begin{DoxyNote}{Note}
+This check is required by functions with setting conditioned to ADC state\+: All ADC instances of the ADC common group must be disabled. Refer to functions having argument \char`\"{}\+ADCxy\+\_\+\+COMMON\char`\"{} as parameter. 
+
+On devices with only 1 ADC common instance, parameter of this macro is useless and can be ignored (parameter kept for compatibility with devices featuring several ADC common instances). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+ADCXY\+\_\+\+COMMON\+\_\+\+\_\+} & ADC common instance (can be set directly from CMSIS definition or by using helper macro \+\_\+\+\_\+\+LL\+\_\+\+ADC\+\_\+\+COMMON\+\_\+\+INSTANCE() ) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & \char`\"{}0\char`\"{} if all ADC instances sharing the same ADC common instance are disabled. Value \char`\"{}1\char`\"{} if at least one ADC instance sharing the same ADC common instance is enabled. \\
+\hline
+\end{DoxyRetVals}

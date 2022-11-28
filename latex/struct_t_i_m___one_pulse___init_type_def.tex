@@ -1,0 +1,106 @@
+\hypertarget{struct_t_i_m___one_pulse___init_type_def}{}\doxysection{TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def Struct Reference}
+\label{struct_t_i_m___one_pulse___init_type_def}\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+
+
+TIM One Pulse Mode Configuration Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+tim.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_af127f01162853e39ae616b43cc52b674}{OCMode}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a4f1fbf6d60812c3194e9ee8a05f5cfa6}{Pulse}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a3028787ad41698072cbf70ddf1b6c984}{OCPolarity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a00deac6c3347b0482955d936351c6388}{OCNPolarity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_aef11bcea1dbf3e3ddf2a4bbc2846bb1e}{OCIdle\+State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a37bc0a680d53458bf4c42ebb277b0c2c}{OCNIdle\+State}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a8589cf95218ea62604b845054b36b772}{ICPolarity}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a9e8853f17e85393a869aa2ecb315f030}{ICSelection}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a883e69dec14d8bde9914906be1b04ad7}{ICFilter}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+TIM One Pulse Mode Configuration Structure definition. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a883e69dec14d8bde9914906be1b04ad7}\label{struct_t_i_m___one_pulse___init_type_def_a883e69dec14d8bde9914906be1b04ad7}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!ICFilter@{ICFilter}}
+\index{ICFilter@{ICFilter}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{ICFilter}{ICFilter}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+ICFilter}
+
+Specifies the input capture filter. This parameter can be a number between Min\+\_\+\+Data = 0x0 and Max\+\_\+\+Data = 0xF \mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a8589cf95218ea62604b845054b36b772}\label{struct_t_i_m___one_pulse___init_type_def_a8589cf95218ea62604b845054b36b772}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!ICPolarity@{ICPolarity}}
+\index{ICPolarity@{ICPolarity}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{ICPolarity}{ICPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+ICPolarity}
+
+Specifies the active edge of the input signal. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___input___capture___polarity}{TIM Input Capture Polarity}} \mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a9e8853f17e85393a869aa2ecb315f030}\label{struct_t_i_m___one_pulse___init_type_def_a9e8853f17e85393a869aa2ecb315f030}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!ICSelection@{ICSelection}}
+\index{ICSelection@{ICSelection}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{ICSelection}{ICSelection}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+ICSelection}
+
+Specifies the input. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___input___capture___selection}{TIM Input Capture Selection}} \mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_aef11bcea1dbf3e3ddf2a4bbc2846bb1e}\label{struct_t_i_m___one_pulse___init_type_def_aef11bcea1dbf3e3ddf2a4bbc2846bb1e}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!OCIdleState@{OCIdleState}}
+\index{OCIdleState@{OCIdleState}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OCIdleState}{OCIdleState}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+OCIdle\+State}
+
+Specifies the TIM Output Compare pin state during Idle state. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___output___compare___idle___state}{TIM Output Compare Idle State}} \begin{DoxyNote}{Note}
+This parameter is valid only for timer instances supporting break feature. 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_af127f01162853e39ae616b43cc52b674}\label{struct_t_i_m___one_pulse___init_type_def_af127f01162853e39ae616b43cc52b674}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!OCMode@{OCMode}}
+\index{OCMode@{OCMode}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OCMode}{OCMode}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+OCMode}
+
+Specifies the TIM mode. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___output___compare__and___p_w_m__modes}{TIM Output Compare and PWM Modes}} \mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a37bc0a680d53458bf4c42ebb277b0c2c}\label{struct_t_i_m___one_pulse___init_type_def_a37bc0a680d53458bf4c42ebb277b0c2c}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!OCNIdleState@{OCNIdleState}}
+\index{OCNIdleState@{OCNIdleState}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OCNIdleState}{OCNIdleState}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+OCNIdle\+State}
+
+Specifies the TIM Output Compare pin state during Idle state. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___output___compare___n___idle___state}{TIM Complementary Output Compare Idle State}} \begin{DoxyNote}{Note}
+This parameter is valid only for timer instances supporting break feature. 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a00deac6c3347b0482955d936351c6388}\label{struct_t_i_m___one_pulse___init_type_def_a00deac6c3347b0482955d936351c6388}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!OCNPolarity@{OCNPolarity}}
+\index{OCNPolarity@{OCNPolarity}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OCNPolarity}{OCNPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+OCNPolarity}
+
+Specifies the complementary output polarity. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___output___compare___n___polarity}{TIM Complementary Output Compare Polarity}} \begin{DoxyNote}{Note}
+This parameter is valid only for timer instances supporting break feature. 
+\end{DoxyNote}
+\mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a3028787ad41698072cbf70ddf1b6c984}\label{struct_t_i_m___one_pulse___init_type_def_a3028787ad41698072cbf70ddf1b6c984}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!OCPolarity@{OCPolarity}}
+\index{OCPolarity@{OCPolarity}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{OCPolarity}{OCPolarity}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+OCPolarity}
+
+Specifies the output polarity. This parameter can be a value of \mbox{\hyperlink{group___t_i_m___output___compare___polarity}{TIM Output Compare Polarity}} \mbox{\Hypertarget{struct_t_i_m___one_pulse___init_type_def_a4f1fbf6d60812c3194e9ee8a05f5cfa6}\label{struct_t_i_m___one_pulse___init_type_def_a4f1fbf6d60812c3194e9ee8a05f5cfa6}} 
+\index{TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}!Pulse@{Pulse}}
+\index{Pulse@{Pulse}!TIM\_OnePulse\_InitTypeDef@{TIM\_OnePulse\_InitTypeDef}}
+\doxysubsubsection{\texorpdfstring{Pulse}{Pulse}}
+{\footnotesize\ttfamily uint32\+\_\+t TIM\+\_\+\+One\+Pulse\+\_\+\+Init\+Type\+Def\+::\+Pulse}
+
+Specifies the pulse value to be loaded into the Capture Compare Register. This parameter can be a number between Min\+\_\+\+Data = 0x0000 and Max\+\_\+\+Data = 0x\+FFFF (or 0x\+FFEF if dithering is activated) Macros \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE()}}, \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE\+\_\+\+DITHER()}} can be used to calculate Pulse value 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32g4xx__hal__tim_8h}{stm32g4xx\+\_\+hal\+\_\+tim.\+h}}\end{DoxyCompactItemize}

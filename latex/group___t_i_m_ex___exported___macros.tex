@@ -1,0 +1,252 @@
+\hypertarget{group___t_i_m_ex___exported___macros}{}\doxysection{TIM Extended Exported Macros}
+\label{group___t_i_m_ex___exported___macros}\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga387fd2a264748c993642c9e819d7680c}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PSC}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+)~  ((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+) $>$= (\+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+)) ? (uint32\+\_\+t)((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+)/(\+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+) -\/ 1U) \+: 0U
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the prescaler value to achieve the required counter clock frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaae4a0aa35725e4f8837987452730f4b6}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  \+\_\+\+\_\+\+FREQ\+\_\+\+\_\+)~  (((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+)/((\+\_\+\+\_\+\+PSC\+\_\+\+\_\+) + 1U)) $>$= (\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+)) ? ((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+)/((\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+) $\ast$ ((\+\_\+\+\_\+\+PSC\+\_\+\+\_\+) + 1U)) -\/ 1U) \+: 0U
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the auto-\/reload value to achieve the required output signal frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga82ac43175c1c810736565f73b82c8f81}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+DITHER}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  \+\_\+\+\_\+\+FREQ\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the auto-\/reload value, with dithering feature enabled, to achieve the required output signal frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the compare value required to achieve the required timer output compare active/inactive delay. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE\+\_\+\+DITHER}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the compare value, with dithering feature enabled, to achieve the required timer output compare active/inactive delay. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gadc665862694b5df8289bc64e393a3e96}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+BY\+\_\+\+DELAY}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+,  \+\_\+\+\_\+\+PULSE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the auto-\/reload value to achieve the required pulse duration (when the timer operates in one pulse mode). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga363488c0614ff2a86a0eb75287bcfa0b}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+DITHER\+\_\+\+BY\+\_\+\+DELAY}}(\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  \+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+,  \+\_\+\+\_\+\+PULSE\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em HELPER macro calculating the auto-\/reload value, with dithering feature enabled, to achieve the required pulse duration (when the timer operates in one pulse mode). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_gaae4a0aa35725e4f8837987452730f4b6}\label{group___t_i_m_ex___exported___macros_gaae4a0aa35725e4f8837987452730f4b6}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PERIOD@{\_\_HAL\_TIM\_CALC\_PERIOD}}
+\index{\_\_HAL\_TIM\_CALC\_PERIOD@{\_\_HAL\_TIM\_CALC\_PERIOD}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PERIOD}{\_\_HAL\_TIM\_CALC\_PERIOD}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+ }\end{DoxyParamCaption})~  (((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+)/((\+\_\+\+\_\+\+PSC\+\_\+\+\_\+) + 1U)) $>$= (\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+)) ? ((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+)/((\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+) $\ast$ ((\+\_\+\+\_\+\+PSC\+\_\+\+\_\+) + 1U)) -\/ 1U) \+: 0U}
+
+
+
+HELPER macro calculating the auto-\/reload value to achieve the required output signal frequency. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaae4a0aa35725e4f8837987452730f4b6}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD(1000000, 0, 10000)}}; 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+PSC\+\_\+\+\_\+} & prescaler \\
+\hline
+{\em \+\_\+\+\_\+\+FREQ\+\_\+\+\_\+} & output signal frequency (in Hz) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Auto-\/reload} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65535) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_gadc665862694b5df8289bc64e393a3e96}\label{group___t_i_m_ex___exported___macros_gadc665862694b5df8289bc64e393a3e96}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PERIOD\_BY\_DELAY@{\_\_HAL\_TIM\_CALC\_PERIOD\_BY\_DELAY}}
+\index{\_\_HAL\_TIM\_CALC\_PERIOD\_BY\_DELAY@{\_\_HAL\_TIM\_CALC\_PERIOD\_BY\_DELAY}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PERIOD\_BY\_DELAY}{\_\_HAL\_TIM\_CALC\_PERIOD\_BY\_DELAY}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+BY\+\_\+\+DELAY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DELAY\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PULSE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((uint32\_t)(\mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}{\_\_HAL\_TIM\_CALC\_PULSE}}((\_\_TIMCLK\_\_), (\_\_PSC\_\_), (\_\_PULSE\_\_)) \(\backslash\)}
+\DoxyCodeLine{              + \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}{\_\_HAL\_TIM\_CALC\_PULSE}}((\_\_TIMCLK\_\_), (\_\_PSC\_\_), (\_\_DELAY\_\_))))}
+
+\end{DoxyCode}
+
+
+HELPER macro calculating the auto-\/reload value to achieve the required pulse duration (when the timer operates in one pulse mode). 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gadc665862694b5df8289bc64e393a3e96}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+BY\+\_\+\+DELAY(1000000, 0, 10, 20)}}; 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+PSC\+\_\+\+\_\+} & prescaler \\
+\hline
+{\em \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+} & timer output compare active/inactive delay (in us) \\
+\hline
+{\em \+\_\+\+\_\+\+PULSE\+\_\+\+\_\+} & pulse duration (in us) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Auto-\/reload} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65535) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_ga82ac43175c1c810736565f73b82c8f81}\label{group___t_i_m_ex___exported___macros_ga82ac43175c1c810736565f73b82c8f81}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER@{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER}}
+\index{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER@{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER}{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+DITHER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FREQ\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((\_\_TIMCLK\_\_)/((\_\_PSC\_\_) + 1U)) >= (\_\_FREQ\_\_)) ? \(\backslash\)}
+\DoxyCodeLine{  (uint32\_t)(((uint64\_t)(\_\_TIMCLK\_\_)*16/((\_\_FREQ\_\_) * ((\_\_PSC\_\_) + 1U)) -\/ 16U)) : 0U}
+
+\end{DoxyCode}
+
+
+HELPER macro calculating the auto-\/reload value, with dithering feature enabled, to achieve the required output signal frequency. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga82ac43175c1c810736565f73b82c8f81}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+DITHER(1000000, 0, 10000)}}; 
+
+This macro should be used only if dithering is already enabled 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+PSC\+\_\+\+\_\+} & prescaler \\
+\hline
+{\em \+\_\+\+\_\+\+FREQ\+\_\+\+\_\+} & output signal frequency (in Hz) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Auto-\/reload} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65519) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_ga363488c0614ff2a86a0eb75287bcfa0b}\label{group___t_i_m_ex___exported___macros_ga363488c0614ff2a86a0eb75287bcfa0b}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER\_BY\_DELAY@{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER\_BY\_DELAY}}
+\index{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER\_BY\_DELAY@{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER\_BY\_DELAY}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER\_BY\_DELAY}{\_\_HAL\_TIM\_CALC\_PERIOD\_DITHER\_BY\_DELAY}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+DITHER\+\_\+\+BY\+\_\+\+DELAY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DELAY\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PULSE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((uint32\_t)(\mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER}}((\_\_TIMCLK\_\_), (\_\_PSC\_\_), (\_\_PULSE\_\_)) \(\backslash\)}
+\DoxyCodeLine{              + \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER}}((\_\_TIMCLK\_\_), (\_\_PSC\_\_), (\_\_DELAY\_\_))))}
+
+\end{DoxyCode}
+
+
+HELPER macro calculating the auto-\/reload value, with dithering feature enabled, to achieve the required pulse duration (when the timer operates in one pulse mode). 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga363488c0614ff2a86a0eb75287bcfa0b}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PERIOD\+\_\+\+DITHER\+\_\+\+BY\+\_\+\+DELAY(1000000, 0, 10, 20)}}; 
+
+This macro should be used only if dithering is already enabled 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+PSC\+\_\+\+\_\+} & prescaler \\
+\hline
+{\em \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+} & timer output compare active/inactive delay (in us) \\
+\hline
+{\em \+\_\+\+\_\+\+PULSE\+\_\+\+\_\+} & pulse duration (in us) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Auto-\/reload} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65519) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_ga387fd2a264748c993642c9e819d7680c}\label{group___t_i_m_ex___exported___macros_ga387fd2a264748c993642c9e819d7680c}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PSC@{\_\_HAL\_TIM\_CALC\_PSC}}
+\index{\_\_HAL\_TIM\_CALC\_PSC@{\_\_HAL\_TIM\_CALC\_PSC}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PSC}{\_\_HAL\_TIM\_CALC\_PSC}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PSC(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+ }\end{DoxyParamCaption})~  ((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+) $>$= (\+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+)) ? (uint32\+\_\+t)((\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+)/(\+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+) -\/ 1U) \+: 0U}
+
+
+
+HELPER macro calculating the prescaler value to achieve the required counter clock frequency. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga387fd2a264748c993642c9e819d7680c}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PSC(80000000, 1000000)}}; 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+CNTCLK\+\_\+\+\_\+} & counter clock frequency (in Hz) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Prescaler} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65535) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}\label{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PULSE@{\_\_HAL\_TIM\_CALC\_PULSE}}
+\index{\_\_HAL\_TIM\_CALC\_PULSE@{\_\_HAL\_TIM\_CALC\_PULSE}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PULSE}{\_\_HAL\_TIM\_CALC\_PULSE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DELAY\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((uint32\_t)(((uint64\_t)(\_\_TIMCLK\_\_) * (uint64\_t)(\_\_DELAY\_\_)) \(\backslash\)}
+\DoxyCodeLine{              / ((uint64\_t)1000000U * (uint64\_t)((\_\_PSC\_\_) + 1U))))}
+
+\end{DoxyCode}
+
+
+HELPER macro calculating the compare value required to achieve the required timer output compare active/inactive delay. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_gaf98bdecd200a44292a5860e718f00e0d}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE(1000000, 0, 10)}}; 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+PSC\+\_\+\+\_\+} & prescaler \\
+\hline
+{\em \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+} & timer output compare active/inactive delay (in us) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Compare} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65535) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}\label{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}} 
+\index{TIM Extended Exported Macros@{TIM Extended Exported Macros}!\_\_HAL\_TIM\_CALC\_PULSE\_DITHER@{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER}}
+\index{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER@{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER}!TIM Extended Exported Macros@{TIM Extended Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER}{\_\_HAL\_TIM\_CALC\_PULSE\_DITHER}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE\+\_\+\+DITHER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PSC\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+DELAY\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  ((uint32\_t)(((uint64\_t)(\_\_TIMCLK\_\_) * (uint64\_t)(\_\_DELAY\_\_) * 16U) \(\backslash\)}
+\DoxyCodeLine{              / ((uint64\_t)1000000U * (uint64\_t)((\_\_PSC\_\_) + 1U))))}
+
+\end{DoxyCode}
+
+
+HELPER macro calculating the compare value, with dithering feature enabled, to achieve the required timer output compare active/inactive delay. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___t_i_m_ex___exported___macros_ga9e90ab95ebb90c1a474513a2746e8f35}{\+\_\+\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+CALC\+\_\+\+PULSE\+\_\+\+DITHER(1000000, 0, 10)}}; 
+
+This macro should be used only if dithering is already enabled 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+TIMCLK\+\_\+\+\_\+} & timer input clock frequency (in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+PSC\+\_\+\+\_\+} & prescaler \\
+\hline
+{\em \+\_\+\+\_\+\+DELAY\+\_\+\+\_\+} & timer output compare active/inactive delay (in us) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em Compare} & value (between Min\+\_\+\+Data=0 and Max\+\_\+\+Data=65519) \\
+\hline
+\end{DoxyRetVals}

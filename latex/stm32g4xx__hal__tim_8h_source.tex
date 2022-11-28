@@ -1,0 +1,1478 @@
+\hypertarget{stm32g4xx__hal__tim_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+tim.\+h}
+\label{stm32g4xx__hal__tim_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_tim.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_tim.h}}
+\mbox{\hyperlink{stm32g4xx__hal__tim_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_TIM\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_TIM\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   uint32\_t \mbox{\hyperlink{struct_t_i_m___base___init_type_def_afc886119e6709bb576d25b5cf8d12d92}{Prescaler}};         }
+\DoxyCodeLine{52   uint32\_t \mbox{\hyperlink{struct_t_i_m___base___init_type_def_a16d0c02a8f35426360a64c0706656e35}{CounterMode}};       }
+\DoxyCodeLine{55   uint32\_t \mbox{\hyperlink{struct_t_i_m___base___init_type_def_a8fab2bc184bb756763ff59c729b5be55}{Period}};            }
+\DoxyCodeLine{62   uint32\_t \mbox{\hyperlink{struct_t_i_m___base___init_type_def_ade59c3a547a5409da845592f30596d17}{ClockDivision}};     }
+\DoxyCodeLine{65   uint32\_t \mbox{\hyperlink{struct_t_i_m___base___init_type_def_aa949328175500fd1d112f64a4db5ae79}{RepetitionCounter}};  }
+\DoxyCodeLine{76   uint32\_t \mbox{\hyperlink{struct_t_i_m___base___init_type_def_a29e7b91a384f12e6be0f3ffb62ea1ea7}{AutoReloadPreload}};  }
+\DoxyCodeLine{78 \} \mbox{\hyperlink{struct_t_i_m___base___init_type_def}{TIM\_Base\_InitTypeDef}};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{83 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{84 \{}
+\DoxyCodeLine{85   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_ae5faa1cba0b3f1ab6179cc54e1015ee8}{OCMode}};        }
+\DoxyCodeLine{88   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_a61fb5b9ef4154de67620ac81085a0e39}{Pulse}};         }
+\DoxyCodeLine{94   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_a556b7137d041aceed3e45c87cbfb39cd}{OCPolarity}};    }
+\DoxyCodeLine{97   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_a21922d8e2fee659d081c4be4c500d1d4}{OCNPolarity}};   }
+\DoxyCodeLine{101   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_a4c4203c5ed779ac86fb793bb9d628e55}{OCFastMode}};    }
+\DoxyCodeLine{106   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_ace3e2b76ca2fca0f4961585ed9ebecf5}{OCIdleState}};   }
+\DoxyCodeLine{110   uint32\_t \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def_a0d70cc51990d7433fd76cc6ed1d06237}{OCNIdleState}};  }
+\DoxyCodeLine{113 \} \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\_OC\_InitTypeDef}};}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{118 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_af127f01162853e39ae616b43cc52b674}{OCMode}};        }
+\DoxyCodeLine{123   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a4f1fbf6d60812c3194e9ee8a05f5cfa6}{Pulse}};         }
+\DoxyCodeLine{129   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a3028787ad41698072cbf70ddf1b6c984}{OCPolarity}};    }
+\DoxyCodeLine{132   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a00deac6c3347b0482955d936351c6388}{OCNPolarity}};   }
+\DoxyCodeLine{136   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_aef11bcea1dbf3e3ddf2a4bbc2846bb1e}{OCIdleState}};   }
+\DoxyCodeLine{140   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a37bc0a680d53458bf4c42ebb277b0c2c}{OCNIdleState}};  }
+\DoxyCodeLine{144   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a8589cf95218ea62604b845054b36b772}{ICPolarity}};    }
+\DoxyCodeLine{147   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a9e8853f17e85393a869aa2ecb315f030}{ICSelection}};   }
+\DoxyCodeLine{150   uint32\_t \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def_a883e69dec14d8bde9914906be1b04ad7}{ICFilter}};      }
+\DoxyCodeLine{152 \} \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def}{TIM\_OnePulse\_InitTypeDef}};}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{157 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{158 \{}
+\DoxyCodeLine{159   uint32\_t  \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def_ab122383ebc0926c49a814546471da9b3}{ICPolarity}};  }
+\DoxyCodeLine{162   uint32\_t \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def_aad80556490de79727ba1269c851e9724}{ICSelection}};  }
+\DoxyCodeLine{165   uint32\_t \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def_a452a4a459b6f7b7c478db032de9b0d72}{ICPrescaler}};  }
+\DoxyCodeLine{168   uint32\_t \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def_ae8432aa11b5495b252ac7ae299eabb32}{ICFilter}};     }
+\DoxyCodeLine{170 \} \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def}{TIM\_IC\_InitTypeDef}};}
+\DoxyCodeLine{171 }
+\DoxyCodeLine{175 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{176 \{}
+\DoxyCodeLine{177   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_ab1e4b0752d88c04081e3ff2fea6aa52e}{EncoderMode}};   }
+\DoxyCodeLine{180   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_a3e27323d593e4f3b95ebaa3772e79618}{IC1Polarity}};   }
+\DoxyCodeLine{183   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_a85fbdebacff594ff1ad0d16eddfdc179}{IC1Selection}};  }
+\DoxyCodeLine{186   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_a56307eb4766e3f0e1cd1cd3c4fc2157e}{IC1Prescaler}};  }
+\DoxyCodeLine{189   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_a50f3051c1b568b9dcde146199f97f3fb}{IC1Filter}};     }
+\DoxyCodeLine{192   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_abb7968a8ba34e13da1fb8f5916a754ce}{IC2Polarity}};   }
+\DoxyCodeLine{195   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_a84a39a8667f296b4b3fbe1a0add58396}{IC2Selection}};  }
+\DoxyCodeLine{198   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_ac80972d0e157508ff075815da58070cb}{IC2Prescaler}};  }
+\DoxyCodeLine{201   uint32\_t \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def_a30cdb580735007aa9735b2f5cc133049}{IC2Filter}};     }
+\DoxyCodeLine{203 \} \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def}{TIM\_Encoder\_InitTypeDef}};}
+\DoxyCodeLine{204 }
+\DoxyCodeLine{208 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{209 \{}
+\DoxyCodeLine{210   uint32\_t \mbox{\hyperlink{struct_t_i_m___clock_config_type_def_a54c329013b5f6f87d1c3d2495fca84d2}{ClockSource}};     }
+\DoxyCodeLine{212   uint32\_t \mbox{\hyperlink{struct_t_i_m___clock_config_type_def_a66453fa8dc8a300267ff5aba08eff5c4}{ClockPolarity}};   }
+\DoxyCodeLine{214   uint32\_t \mbox{\hyperlink{struct_t_i_m___clock_config_type_def_ae4c0cb6f58da0ec7b99f1c6411d2fee1}{ClockPrescaler}};  }
+\DoxyCodeLine{216   uint32\_t \mbox{\hyperlink{struct_t_i_m___clock_config_type_def_adaf66568c766f75c4c661a872ca399e3}{ClockFilter}};     }
+\DoxyCodeLine{218 \} \mbox{\hyperlink{struct_t_i_m___clock_config_type_def}{TIM\_ClockConfigTypeDef}};}
+\DoxyCodeLine{219 }
+\DoxyCodeLine{223 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{224 \{}
+\DoxyCodeLine{225   uint32\_t \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def_a01d4b91dd297c4f0582a4d9179abf32f}{ClearInputState}};      }
+\DoxyCodeLine{227   uint32\_t \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def_a776d2f14021a82e022468fd46594b8a0}{ClearInputSource}};     }
+\DoxyCodeLine{229   uint32\_t \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def_a49dbc65edc5316822fcabd61cc8409de}{ClearInputPolarity}};   }
+\DoxyCodeLine{231   uint32\_t \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def_a509cecb64fec71391ddc8b4703e09cfe}{ClearInputPrescaler}};  }
+\DoxyCodeLine{234   uint32\_t \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def_a6d2e06a970e30aaf4f8a6091e443eecf}{ClearInputFilter}};     }
+\DoxyCodeLine{236 \} \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def}{TIM\_ClearInputConfigTypeDef}};}
+\DoxyCodeLine{237 }
+\DoxyCodeLine{243 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{244 \{}
+\DoxyCodeLine{245   uint32\_t  \mbox{\hyperlink{struct_t_i_m___master_config_type_def_a908a6c1b46cb203c0b8b59b490e1114e}{MasterOutputTrigger}};   }
+\DoxyCodeLine{247   uint32\_t  \mbox{\hyperlink{struct_t_i_m___master_config_type_def_a5c9db1837051b5b2927bc4d726e980fe}{MasterOutputTrigger2}};  }
+\DoxyCodeLine{249   uint32\_t  \mbox{\hyperlink{struct_t_i_m___master_config_type_def_a45ddfca310a1180e19fc24b36f8e9585}{MasterSlaveMode}};       }
+\DoxyCodeLine{256 \} \mbox{\hyperlink{struct_t_i_m___master_config_type_def}{TIM\_MasterConfigTypeDef}};}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{261 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{262 \{}
+\DoxyCodeLine{263   uint32\_t  \mbox{\hyperlink{struct_t_i_m___slave_config_type_def_a2792de155698128ade1e505618c1bc43}{SlaveMode}};         }
+\DoxyCodeLine{265   uint32\_t  \mbox{\hyperlink{struct_t_i_m___slave_config_type_def_a82efdad1e2ed9edbd4c895987ebfe0f7}{InputTrigger}};      }
+\DoxyCodeLine{267   uint32\_t  \mbox{\hyperlink{struct_t_i_m___slave_config_type_def_afa8fa1801ef5e13115732a495ef11165}{TriggerPolarity}};   }
+\DoxyCodeLine{269   uint32\_t  \mbox{\hyperlink{struct_t_i_m___slave_config_type_def_a57be6d41d77a968f1daeac7b65b1ab4c}{TriggerPrescaler}};  }
+\DoxyCodeLine{271   uint32\_t  \mbox{\hyperlink{struct_t_i_m___slave_config_type_def_a07d28f704576a41e37bbb7412e0fba60}{TriggerFilter}};     }
+\DoxyCodeLine{274 \} \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\_SlaveConfigTypeDef}};}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{281 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{282 \{}
+\DoxyCodeLine{283   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a5e97751b5e397414e2a5120eb5cef7c6}{OffStateRunMode}};      }
+\DoxyCodeLine{285   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a49f39e31ac019b9b7a20751bfd01c6c4}{OffStateIDLEMode}};     }
+\DoxyCodeLine{287   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_ab00ae9fa5c6daa6319883863dee6e40a}{LockLevel}};            }
+\DoxyCodeLine{289   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a4bdc5aec84be4b728b55028491f261d4}{DeadTime}};             }
+\DoxyCodeLine{291   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a8962430194b43ac28a14c96dd9cc44e6}{BreakState}};           }
+\DoxyCodeLine{293   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_ae15ddbf3087f9a2129a52a1317339ea7}{BreakPolarity}};        }
+\DoxyCodeLine{295   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_aad8158e694a62f6c071975ee4c2e5b6a}{BreakFilter}};          }
+\DoxyCodeLine{297   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a97d4e42d92532e0f11b66838713d096f}{BreakAFMode}};          }
+\DoxyCodeLine{299   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_ab9a983671c730c9b33852c9aa60846fb}{Break2State}};          }
+\DoxyCodeLine{301   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_af492d4b9f5e974abb51abe58d413cd17}{Break2Polarity}};       }
+\DoxyCodeLine{303   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a3c90aabc31a34864525dad4bd3547c86}{Break2Filter}};         }
+\DoxyCodeLine{305   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_a7677d3ff44faa97ba3372b501ad09cef}{Break2AFMode}};         }
+\DoxyCodeLine{307   uint32\_t \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def_ae591f2368d0be5b77d8a746e73eabe71}{AutomaticOutput}};      }
+\DoxyCodeLine{309 \} \mbox{\hyperlink{struct_t_i_m___break_dead_time_config_type_def}{TIM\_BreakDeadTimeConfigTypeDef}};}
+\DoxyCodeLine{310 }
+\DoxyCodeLine{314 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{315 \{}
+\DoxyCodeLine{316   \mbox{\hyperlink{group___t_i_m___exported___types_ggae0994cf5970e56ca4903e9151f40010ca28011b79e60b74a6c55947c505c51cbc}{HAL\_TIM\_STATE\_RESET}}             = 0x00U,    }
+\DoxyCodeLine{317   \mbox{\hyperlink{group___t_i_m___exported___types_ggae0994cf5970e56ca4903e9151f40010ca4545554d7fa04d17e78d69d17cb7e4b3}{HAL\_TIM\_STATE\_READY}}             = 0x01U,    }
+\DoxyCodeLine{318   \mbox{\hyperlink{group___t_i_m___exported___types_ggae0994cf5970e56ca4903e9151f40010ca1ddbfef19ad0562eb8143919b710cc12}{HAL\_TIM\_STATE\_BUSY}}              = 0x02U,    }
+\DoxyCodeLine{319   \mbox{\hyperlink{group___t_i_m___exported___types_ggae0994cf5970e56ca4903e9151f40010ca03e3339df71a74ac37820f72c2989371}{HAL\_TIM\_STATE\_TIMEOUT}}           = 0x03U,    }
+\DoxyCodeLine{320   \mbox{\hyperlink{group___t_i_m___exported___types_ggae0994cf5970e56ca4903e9151f40010ca318cceb243cb9ca9e01833913e4f90ea}{HAL\_TIM\_STATE\_ERROR}}             = 0x04U     }
+\DoxyCodeLine{321 \} \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}};}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{326 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{327 \{}
+\DoxyCodeLine{328   \mbox{\hyperlink{group___t_i_m___exported___types_gga1a70fcbe9952e18af5c890e216a15f34a430f7e41a278868bc1a7c5de6a08dc94}{HAL\_TIM\_CHANNEL\_STATE\_RESET}}             = 0x00U,    }
+\DoxyCodeLine{329   \mbox{\hyperlink{group___t_i_m___exported___types_gga1a70fcbe9952e18af5c890e216a15f34a38f4c5665247f7c997d0b200ed7ccc0e}{HAL\_TIM\_CHANNEL\_STATE\_READY}}             = 0x01U,    }
+\DoxyCodeLine{330   \mbox{\hyperlink{group___t_i_m___exported___types_gga1a70fcbe9952e18af5c890e216a15f34ad5dca7086716ee2cde9aaccaefd838ff}{HAL\_TIM\_CHANNEL\_STATE\_BUSY}}              = 0x02U,    }
+\DoxyCodeLine{331 \} \mbox{\hyperlink{group___t_i_m___exported___types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\_TIM\_ChannelStateTypeDef}};}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{336 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{337 \{}
+\DoxyCodeLine{338   \mbox{\hyperlink{group___t_i_m___exported___types_gga9b87df539778a60ea940a9d5ba793f7ca98c26cb59bb0c07b7f020d7ff8678bb8}{HAL\_DMA\_BURST\_STATE\_RESET}}             = 0x00U,    }
+\DoxyCodeLine{339   \mbox{\hyperlink{group___t_i_m___exported___types_gga9b87df539778a60ea940a9d5ba793f7ca44e8b59c22cd2b17d449b120e03e4952}{HAL\_DMA\_BURST\_STATE\_READY}}             = 0x01U,    }
+\DoxyCodeLine{340   \mbox{\hyperlink{group___t_i_m___exported___types_gga9b87df539778a60ea940a9d5ba793f7ca2de45462aabea1ed8b0d249441404e82}{HAL\_DMA\_BURST\_STATE\_BUSY}}              = 0x02U,    }
+\DoxyCodeLine{341 \} \mbox{\hyperlink{group___t_i_m___exported___types_ga9b87df539778a60ea940a9d5ba793f7c}{HAL\_TIM\_DMABurstStateTypeDef}};}
+\DoxyCodeLine{342 }
+\DoxyCodeLine{346 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{347 \{}
+\DoxyCodeLine{348   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706a2024e95c48b58ec9b2115faa276e3fad}{HAL\_TIM\_ACTIVE\_CHANNEL\_1}}        = 0x01U,    }
+\DoxyCodeLine{349   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706ae80e6a1dd1c479f504219c0fec2f3322}{HAL\_TIM\_ACTIVE\_CHANNEL\_2}}        = 0x02U,    }
+\DoxyCodeLine{350   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706acc3fcf4ee6d91744c4bc6a5eccde2601}{HAL\_TIM\_ACTIVE\_CHANNEL\_3}}        = 0x04U,    }
+\DoxyCodeLine{351   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706a7d98ec7e385cacb3aaa6cec601fa6ab6}{HAL\_TIM\_ACTIVE\_CHANNEL\_4}}        = 0x08U,    }
+\DoxyCodeLine{352   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706a50b9b4be055407e9f566d8da0a7e07cc}{HAL\_TIM\_ACTIVE\_CHANNEL\_5}}        = 0x10U,    }
+\DoxyCodeLine{353   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706a368a574b486286c87f763957a0ef9d93}{HAL\_TIM\_ACTIVE\_CHANNEL\_6}}        = 0x20U,    }
+\DoxyCodeLine{354   \mbox{\hyperlink{group___t_i_m___exported___types_ggaa3fa7bcbb4707f1151ccfc90a8cf9706a574f72ac3bb41fe660318aa42dfdc98d}{HAL\_TIM\_ACTIVE\_CHANNEL\_CLEARED}}  = 0x00U     }
+\DoxyCodeLine{355 \} \mbox{\hyperlink{group___t_i_m___exported___types_gaa3fa7bcbb4707f1151ccfc90a8cf9706}{HAL\_TIM\_ActiveChannel}};}
+\DoxyCodeLine{356 }
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#if (USE\_HAL\_TIM\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{361 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef}
+\DoxyCodeLine{362 \#else}
+\DoxyCodeLine{363 typedef struct}
+\DoxyCodeLine{364 \#endif \textcolor{comment}{/* USE\_HAL\_TIM\_REGISTER\_CALLBACKS */}}
+\DoxyCodeLine{365 \{}
+\DoxyCodeLine{366   \mbox{\hyperlink{struct_t_i_m___type_def}{TIM\_TypeDef}}                        *\mbox{\hyperlink{struct_t_i_m___handle_type_def_ad0c5f736a15f6d8d14724854c8133bcc}{Instance}};         }
+\DoxyCodeLine{367   \mbox{\hyperlink{struct_t_i_m___base___init_type_def}{TIM\_Base\_InitTypeDef}}               \mbox{\hyperlink{struct_t_i_m___handle_type_def_a8b2e61c3c4128e62cb7be7d35048152e}{Init}};              }
+\DoxyCodeLine{368   \mbox{\hyperlink{group___t_i_m___exported___types_gaa3fa7bcbb4707f1151ccfc90a8cf9706}{HAL\_TIM\_ActiveChannel}}              \mbox{\hyperlink{struct_t_i_m___handle_type_def_ae9c5a11c1f5b27c808c0aca453e63870}{Channel}};           }
+\DoxyCodeLine{369   \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}}                  *hdma[7];          }
+\DoxyCodeLine{371   \mbox{\hyperlink{stm32g4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}                    \mbox{\hyperlink{struct_t_i_m___handle_type_def_a2a24b963b57150ed2fb0f051cd87b65a}{Lock}};              }
+\DoxyCodeLine{372   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}}          \mbox{\hyperlink{struct_t_i_m___handle_type_def_a6b6eeaf94f2e6e3d0a5bdac44adf21d6}{State}};             }
+\DoxyCodeLine{373   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___t_i_m___exported___types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\_TIM\_ChannelStateTypeDef}}   ChannelState[6];   }
+\DoxyCodeLine{374   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___t_i_m___exported___types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\_TIM\_ChannelStateTypeDef}}   ChannelNState[4];  }
+\DoxyCodeLine{375   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___t_i_m___exported___types_ga9b87df539778a60ea940a9d5ba793f7c}{HAL\_TIM\_DMABurstStateTypeDef}}  \mbox{\hyperlink{struct_t_i_m___handle_type_def_a985e3a4b24617ab917ed20e089e4ce83}{DMABurstState}};     }
+\DoxyCodeLine{377 \textcolor{preprocessor}{\#if (USE\_HAL\_TIM\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{378   void (* Base\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);              }
+\DoxyCodeLine{379   void (* Base\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);            }
+\DoxyCodeLine{380   void (* IC\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                }
+\DoxyCodeLine{381   void (* IC\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);              }
+\DoxyCodeLine{382   void (* OC\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                }
+\DoxyCodeLine{383   void (* OC\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);              }
+\DoxyCodeLine{384   void (* PWM\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);               }
+\DoxyCodeLine{385   void (* PWM\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);             }
+\DoxyCodeLine{386   void (* OnePulse\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);          }
+\DoxyCodeLine{387   void (* OnePulse\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);        }
+\DoxyCodeLine{388   void (* Encoder\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);           }
+\DoxyCodeLine{389   void (* Encoder\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);         }
+\DoxyCodeLine{390   void (* HallSensor\_MspInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);        }
+\DoxyCodeLine{391   void (* HallSensor\_MspDeInitCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);      }
+\DoxyCodeLine{392   void (* PeriodElapsedCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);             }
+\DoxyCodeLine{393   void (* PeriodElapsedHalfCpltCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);     }
+\DoxyCodeLine{394   void (* TriggerCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                   }
+\DoxyCodeLine{395   void (* TriggerHalfCpltCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);           }
+\DoxyCodeLine{396   void (* IC\_CaptureCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                }
+\DoxyCodeLine{397   void (* IC\_CaptureHalfCpltCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);        }
+\DoxyCodeLine{398   void (* OC\_DelayElapsedCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);           }
+\DoxyCodeLine{399   void (* PWM\_PulseFinishedCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);         }
+\DoxyCodeLine{400   void (* PWM\_PulseFinishedHalfCpltCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim); }
+\DoxyCodeLine{401   void (* ErrorCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                     }
+\DoxyCodeLine{402   void (* CommutationCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);               }
+\DoxyCodeLine{403   void (* CommutationHalfCpltCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);       }
+\DoxyCodeLine{404   void (* BreakCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                     }
+\DoxyCodeLine{405   void (* Break2Callback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                    }
+\DoxyCodeLine{406   void (* EncoderIndexCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);              }
+\DoxyCodeLine{407   void (* DirectionChangeCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);           }
+\DoxyCodeLine{408   void (* IndexErrorCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);                }
+\DoxyCodeLine{409   void (* TransitionErrorCallback)(\textcolor{keyword}{struct }\_\_TIM\_HandleTypeDef *htim);           }
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_TIM\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{411 \} \mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}};}
+\DoxyCodeLine{412 }
+\DoxyCodeLine{413 \textcolor{preprocessor}{\#if (USE\_HAL\_TIM\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{417 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{418 \{}
+\DoxyCodeLine{419   HAL\_TIM\_BASE\_MSPINIT\_CB\_ID              = 0x00U   }
+\DoxyCodeLine{420   , HAL\_TIM\_BASE\_MSPDEINIT\_CB\_ID          = 0x01U   }
+\DoxyCodeLine{421   , HAL\_TIM\_IC\_MSPINIT\_CB\_ID              = 0x02U   }
+\DoxyCodeLine{422   , HAL\_TIM\_IC\_MSPDEINIT\_CB\_ID            = 0x03U   }
+\DoxyCodeLine{423   , HAL\_TIM\_OC\_MSPINIT\_CB\_ID              = 0x04U   }
+\DoxyCodeLine{424   , HAL\_TIM\_OC\_MSPDEINIT\_CB\_ID            = 0x05U   }
+\DoxyCodeLine{425   , HAL\_TIM\_PWM\_MSPINIT\_CB\_ID             = 0x06U   }
+\DoxyCodeLine{426   , HAL\_TIM\_PWM\_MSPDEINIT\_CB\_ID           = 0x07U   }
+\DoxyCodeLine{427   , HAL\_TIM\_ONE\_PULSE\_MSPINIT\_CB\_ID       = 0x08U   }
+\DoxyCodeLine{428   , HAL\_TIM\_ONE\_PULSE\_MSPDEINIT\_CB\_ID     = 0x09U   }
+\DoxyCodeLine{429   , HAL\_TIM\_ENCODER\_MSPINIT\_CB\_ID         = 0x0AU   }
+\DoxyCodeLine{430   , HAL\_TIM\_ENCODER\_MSPDEINIT\_CB\_ID       = 0x0BU   }
+\DoxyCodeLine{431   , HAL\_TIM\_HALL\_SENSOR\_MSPINIT\_CB\_ID     = 0x0CU   }
+\DoxyCodeLine{432   , HAL\_TIM\_HALL\_SENSOR\_MSPDEINIT\_CB\_ID   = 0x0DU   }
+\DoxyCodeLine{433   , HAL\_TIM\_PERIOD\_ELAPSED\_CB\_ID          = 0x0EU   }
+\DoxyCodeLine{434   , HAL\_TIM\_PERIOD\_ELAPSED\_HALF\_CB\_ID     = 0x0FU   }
+\DoxyCodeLine{435   , HAL\_TIM\_TRIGGER\_CB\_ID                 = 0x10U   }
+\DoxyCodeLine{436   , HAL\_TIM\_TRIGGER\_HALF\_CB\_ID            = 0x11U   }
+\DoxyCodeLine{438   , HAL\_TIM\_IC\_CAPTURE\_CB\_ID              = 0x12U   }
+\DoxyCodeLine{439   , HAL\_TIM\_IC\_CAPTURE\_HALF\_CB\_ID         = 0x13U   }
+\DoxyCodeLine{440   , HAL\_TIM\_OC\_DELAY\_ELAPSED\_CB\_ID        = 0x14U   }
+\DoxyCodeLine{441   , HAL\_TIM\_PWM\_PULSE\_FINISHED\_CB\_ID      = 0x15U   }
+\DoxyCodeLine{442   , HAL\_TIM\_PWM\_PULSE\_FINISHED\_HALF\_CB\_ID = 0x16U   }
+\DoxyCodeLine{443   , HAL\_TIM\_ERROR\_CB\_ID                   = 0x17U   }
+\DoxyCodeLine{444   , HAL\_TIM\_COMMUTATION\_CB\_ID             = 0x18U   }
+\DoxyCodeLine{445   , HAL\_TIM\_COMMUTATION\_HALF\_CB\_ID        = 0x19U   }
+\DoxyCodeLine{446   , HAL\_TIM\_BREAK\_CB\_ID                   = 0x1AU   }
+\DoxyCodeLine{447   , HAL\_TIM\_BREAK2\_CB\_ID                  = 0x1BU   }
+\DoxyCodeLine{448   , HAL\_TIM\_ENCODER\_INDEX\_CB\_ID           = 0x1CU   }
+\DoxyCodeLine{449   , HAL\_TIM\_DIRECTION\_CHANGE\_CB\_ID        = 0x1DU   }
+\DoxyCodeLine{450   , HAL\_TIM\_INDEX\_ERROR\_CB\_ID             = 0x1EU   }
+\DoxyCodeLine{451   , HAL\_TIM\_TRANSITION\_ERROR\_CB\_ID        = 0x1FU   }
+\DoxyCodeLine{452 \} HAL\_TIM\_CallbackIDTypeDef;}
+\DoxyCodeLine{453 }
+\DoxyCodeLine{457 \textcolor{keyword}{typedef}  void (*pTIM\_CallbackTypeDef)(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);  }
+\DoxyCodeLine{459 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_TIM\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{464 \textcolor{comment}{/* End of exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{465 }
+\DoxyCodeLine{466 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_NONE     0xFFFFFFFFU                               }}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_ETR      0x00000001U                               }}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP1    0x00000000U                               }}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP2    TIM1\_AF2\_OCRSEL\_0                         }}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP3    TIM1\_AF2\_OCRSEL\_1                         }}
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP4    (TIM1\_AF2\_OCRSEL\_1 | TIM1\_AF2\_OCRSEL\_0)   }}
+\DoxyCodeLine{480 \textcolor{preprocessor}{\#if defined (COMP5)}}
+\DoxyCodeLine{481 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP5    TIM1\_AF2\_OCRSEL\_2                         }}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#if defined (COMP6)}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP6    (TIM1\_AF2\_OCRSEL\_2 | TIM1\_AF2\_OCRSEL\_0)   }}
+\DoxyCodeLine{485 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP6 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{486 \textcolor{preprocessor}{\#if defined (COMP7)}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTSOURCE\_COMP7    (TIM1\_AF2\_OCRSEL\_2 | TIM1\_AF2\_OCRSEL\_1)   }}
+\DoxyCodeLine{488 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP7 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{496 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CR1                    0x00000000U}}
+\DoxyCodeLine{497 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CR2                    0x00000001U}}
+\DoxyCodeLine{498 \textcolor{preprocessor}{\#define TIM\_DMABASE\_SMCR                   0x00000002U}}
+\DoxyCodeLine{499 \textcolor{preprocessor}{\#define TIM\_DMABASE\_DIER                   0x00000003U}}
+\DoxyCodeLine{500 \textcolor{preprocessor}{\#define TIM\_DMABASE\_SR                     0x00000004U}}
+\DoxyCodeLine{501 \textcolor{preprocessor}{\#define TIM\_DMABASE\_EGR                    0x00000005U}}
+\DoxyCodeLine{502 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCMR1                  0x00000006U}}
+\DoxyCodeLine{503 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCMR2                  0x00000007U}}
+\DoxyCodeLine{504 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCER                   0x00000008U}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CNT                    0x00000009U}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define TIM\_DMABASE\_PSC                    0x0000000AU}}
+\DoxyCodeLine{507 \textcolor{preprocessor}{\#define TIM\_DMABASE\_ARR                    0x0000000BU}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{\#define TIM\_DMABASE\_RCR                    0x0000000CU}}
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCR1                   0x0000000DU}}
+\DoxyCodeLine{510 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCR2                   0x0000000EU}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCR3                   0x0000000FU}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCR4                   0x00000010U}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{\#define TIM\_DMABASE\_BDTR                   0x00000011U}}
+\DoxyCodeLine{514 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCR5                   0x00000012U}}
+\DoxyCodeLine{515 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCR6                   0x00000013U}}
+\DoxyCodeLine{516 \textcolor{preprocessor}{\#define TIM\_DMABASE\_CCMR3                  0x00000014U}}
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define TIM\_DMABASE\_DTR2                   0x00000015U}}
+\DoxyCodeLine{518 \textcolor{preprocessor}{\#define TIM\_DMABASE\_ECR                    0x00000016U}}
+\DoxyCodeLine{519 \textcolor{preprocessor}{\#define TIM\_DMABASE\_TISEL                  0x00000017U}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{\#define TIM\_DMABASE\_AF1                    0x00000018U}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define TIM\_DMABASE\_AF2                    0x00000019U}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define TIM\_DMABASE\_OR                     0x0000001AU}}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_UPDATE              TIM\_EGR\_UG     }}
+\DoxyCodeLine{531 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_CC1                 TIM\_EGR\_CC1G   }}
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_CC2                 TIM\_EGR\_CC2G   }}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_CC3                 TIM\_EGR\_CC3G   }}
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_CC4                 TIM\_EGR\_CC4G   }}
+\DoxyCodeLine{535 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_COM                 TIM\_EGR\_COMG   }}
+\DoxyCodeLine{536 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_TRIGGER             TIM\_EGR\_TG     }}
+\DoxyCodeLine{537 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_BREAK               TIM\_EGR\_BG     }}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#define TIM\_EVENTSOURCE\_BREAK2              TIM\_EGR\_B2G    }}
+\DoxyCodeLine{546 \textcolor{preprocessor}{\#define  TIM\_INPUTCHANNELPOLARITY\_RISING      0x00000000U                       }}
+\DoxyCodeLine{547 \textcolor{preprocessor}{\#define  TIM\_INPUTCHANNELPOLARITY\_FALLING     TIM\_CCER\_CC1P                     }}
+\DoxyCodeLine{548 \textcolor{preprocessor}{\#define  TIM\_INPUTCHANNELPOLARITY\_BOTHEDGE    (TIM\_CCER\_CC1P | TIM\_CCER\_CC1NP)  }}
+\DoxyCodeLine{556 \textcolor{preprocessor}{\#define TIM\_ETRPOLARITY\_INVERTED              TIM\_SMCR\_ETP                      }}
+\DoxyCodeLine{557 \textcolor{preprocessor}{\#define TIM\_ETRPOLARITY\_NONINVERTED           0x00000000U                       }}
+\DoxyCodeLine{565 \textcolor{preprocessor}{\#define TIM\_ETRPRESCALER\_DIV1                 0x00000000U                       }}
+\DoxyCodeLine{566 \textcolor{preprocessor}{\#define TIM\_ETRPRESCALER\_DIV2                 TIM\_SMCR\_ETPS\_0                   }}
+\DoxyCodeLine{567 \textcolor{preprocessor}{\#define TIM\_ETRPRESCALER\_DIV4                 TIM\_SMCR\_ETPS\_1                   }}
+\DoxyCodeLine{568 \textcolor{preprocessor}{\#define TIM\_ETRPRESCALER\_DIV8                 TIM\_SMCR\_ETPS                     }}
+\DoxyCodeLine{576 \textcolor{preprocessor}{\#define TIM\_COUNTERMODE\_UP                 0x00000000U                          }}
+\DoxyCodeLine{577 \textcolor{preprocessor}{\#define TIM\_COUNTERMODE\_DOWN               TIM\_CR1\_DIR                          }}
+\DoxyCodeLine{578 \textcolor{preprocessor}{\#define TIM\_COUNTERMODE\_CENTERALIGNED1     TIM\_CR1\_CMS\_0                        }}
+\DoxyCodeLine{579 \textcolor{preprocessor}{\#define TIM\_COUNTERMODE\_CENTERALIGNED2     TIM\_CR1\_CMS\_1                        }}
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define TIM\_COUNTERMODE\_CENTERALIGNED3     TIM\_CR1\_CMS                          }}
+\DoxyCodeLine{588 \textcolor{preprocessor}{\#define TIM\_UIFREMAP\_DISABLE               0x00000000U                          }}
+\DoxyCodeLine{589 \textcolor{preprocessor}{\#define TIM\_UIFREMAP\_ENABLE                TIM\_CR1\_UIFREMAP                     }}
+\DoxyCodeLine{597 \textcolor{preprocessor}{\#define TIM\_CLOCKDIVISION\_DIV1             0x00000000U                          }}
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#define TIM\_CLOCKDIVISION\_DIV2             TIM\_CR1\_CKD\_0                        }}
+\DoxyCodeLine{599 \textcolor{preprocessor}{\#define TIM\_CLOCKDIVISION\_DIV4             TIM\_CR1\_CKD\_1                        }}
+\DoxyCodeLine{607 \textcolor{preprocessor}{\#define TIM\_OUTPUTSTATE\_DISABLE            0x00000000U                          }}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#define TIM\_OUTPUTSTATE\_ENABLE             TIM\_CCER\_CC1E                        }}
+\DoxyCodeLine{616 \textcolor{preprocessor}{\#define TIM\_AUTORELOAD\_PRELOAD\_DISABLE                0x00000000U               }}
+\DoxyCodeLine{617 \textcolor{preprocessor}{\#define TIM\_AUTORELOAD\_PRELOAD\_ENABLE                 TIM\_CR1\_ARPE              }}
+\DoxyCodeLine{626 \textcolor{preprocessor}{\#define TIM\_OCFAST\_DISABLE                 0x00000000U                          }}
+\DoxyCodeLine{627 \textcolor{preprocessor}{\#define TIM\_OCFAST\_ENABLE                  TIM\_CCMR1\_OC1FE                      }}
+\DoxyCodeLine{635 \textcolor{preprocessor}{\#define TIM\_OUTPUTNSTATE\_DISABLE           0x00000000U                          }}
+\DoxyCodeLine{636 \textcolor{preprocessor}{\#define TIM\_OUTPUTNSTATE\_ENABLE            TIM\_CCER\_CC1NE                       }}
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define TIM\_OCPOLARITY\_HIGH                0x00000000U                          }}
+\DoxyCodeLine{645 \textcolor{preprocessor}{\#define TIM\_OCPOLARITY\_LOW                 TIM\_CCER\_CC1P                        }}
+\DoxyCodeLine{653 \textcolor{preprocessor}{\#define TIM\_OCNPOLARITY\_HIGH               0x00000000U                          }}
+\DoxyCodeLine{654 \textcolor{preprocessor}{\#define TIM\_OCNPOLARITY\_LOW                TIM\_CCER\_CC1NP                       }}
+\DoxyCodeLine{662 \textcolor{preprocessor}{\#define TIM\_OCIDLESTATE\_SET                TIM\_CR2\_OIS1                         }}
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#define TIM\_OCIDLESTATE\_RESET              0x00000000U                          }}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define TIM\_OCNIDLESTATE\_SET               TIM\_CR2\_OIS1N                        }}
+\DoxyCodeLine{672 \textcolor{preprocessor}{\#define TIM\_OCNIDLESTATE\_RESET             0x00000000U                          }}
+\DoxyCodeLine{680 \textcolor{preprocessor}{\#define  TIM\_ICPOLARITY\_RISING             TIM\_INPUTCHANNELPOLARITY\_RISING      }}
+\DoxyCodeLine{681 \textcolor{preprocessor}{\#define  TIM\_ICPOLARITY\_FALLING            TIM\_INPUTCHANNELPOLARITY\_FALLING     }}
+\DoxyCodeLine{682 \textcolor{preprocessor}{\#define  TIM\_ICPOLARITY\_BOTHEDGE           TIM\_INPUTCHANNELPOLARITY\_BOTHEDGE    }}
+\DoxyCodeLine{690 \textcolor{preprocessor}{\#define  TIM\_ENCODERINPUTPOLARITY\_RISING   TIM\_INPUTCHANNELPOLARITY\_RISING      }}
+\DoxyCodeLine{691 \textcolor{preprocessor}{\#define  TIM\_ENCODERINPUTPOLARITY\_FALLING  TIM\_INPUTCHANNELPOLARITY\_FALLING     }}
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#define TIM\_ICSELECTION\_DIRECTTI           TIM\_CCMR1\_CC1S\_0                     }}
+\DoxyCodeLine{700 \textcolor{preprocessor}{\#define TIM\_ICSELECTION\_INDIRECTTI         TIM\_CCMR1\_CC1S\_1                     }}
+\DoxyCodeLine{701 \textcolor{preprocessor}{\#define TIM\_ICSELECTION\_TRC                TIM\_CCMR1\_CC1S                       }}
+\DoxyCodeLine{709 \textcolor{preprocessor}{\#define TIM\_ICPSC\_DIV1                     0x00000000U                          }}
+\DoxyCodeLine{710 \textcolor{preprocessor}{\#define TIM\_ICPSC\_DIV2                     TIM\_CCMR1\_IC1PSC\_0                   }}
+\DoxyCodeLine{711 \textcolor{preprocessor}{\#define TIM\_ICPSC\_DIV4                     TIM\_CCMR1\_IC1PSC\_1                   }}
+\DoxyCodeLine{712 \textcolor{preprocessor}{\#define TIM\_ICPSC\_DIV8                     TIM\_CCMR1\_IC1PSC                     }}
+\DoxyCodeLine{720 \textcolor{preprocessor}{\#define TIM\_OPMODE\_SINGLE                  TIM\_CR1\_OPM                          }}
+\DoxyCodeLine{721 \textcolor{preprocessor}{\#define TIM\_OPMODE\_REPETITIVE              0x00000000U                          }}
+\DoxyCodeLine{729 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_TI1                      TIM\_SMCR\_SMS\_0                                                      }}
+\DoxyCodeLine{730 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_TI2                      TIM\_SMCR\_SMS\_1                                                      }}
+\DoxyCodeLine{731 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_TI12                     (TIM\_SMCR\_SMS\_1 | TIM\_SMCR\_SMS\_0)                                   }}
+\DoxyCodeLine{732 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_CLOCKPLUSDIRECTION\_X2    (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_1)                                   }}
+\DoxyCodeLine{733 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_CLOCKPLUSDIRECTION\_X1    (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_1 | TIM\_SMCR\_SMS\_0)                  }}
+\DoxyCodeLine{734 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_DIRECTIONALCLOCK\_X2      (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_2)                                   }}
+\DoxyCodeLine{735 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_DIRECTIONALCLOCK\_X1\_TI12 (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_2 | TIM\_SMCR\_SMS\_0)                  }}
+\DoxyCodeLine{736 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_X1\_TI1                   (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_2 | TIM\_SMCR\_SMS\_1)                  }}
+\DoxyCodeLine{737 \textcolor{preprocessor}{\#define TIM\_ENCODERMODE\_X1\_TI2                   (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_2 | TIM\_SMCR\_SMS\_1 | TIM\_SMCR\_SMS\_0) }}
+\DoxyCodeLine{745 \textcolor{preprocessor}{\#define TIM\_IT\_UPDATE                      TIM\_DIER\_UIE                         }}
+\DoxyCodeLine{746 \textcolor{preprocessor}{\#define TIM\_IT\_CC1                         TIM\_DIER\_CC1IE                       }}
+\DoxyCodeLine{747 \textcolor{preprocessor}{\#define TIM\_IT\_CC2                         TIM\_DIER\_CC2IE                       }}
+\DoxyCodeLine{748 \textcolor{preprocessor}{\#define TIM\_IT\_CC3                         TIM\_DIER\_CC3IE                       }}
+\DoxyCodeLine{749 \textcolor{preprocessor}{\#define TIM\_IT\_CC4                         TIM\_DIER\_CC4IE                       }}
+\DoxyCodeLine{750 \textcolor{preprocessor}{\#define TIM\_IT\_COM                         TIM\_DIER\_COMIE                       }}
+\DoxyCodeLine{751 \textcolor{preprocessor}{\#define TIM\_IT\_TRIGGER                     TIM\_DIER\_TIE                         }}
+\DoxyCodeLine{752 \textcolor{preprocessor}{\#define TIM\_IT\_BREAK                       TIM\_DIER\_BIE                         }}
+\DoxyCodeLine{753 \textcolor{preprocessor}{\#define TIM\_IT\_IDX                         TIM\_DIER\_IDXIE                       }}
+\DoxyCodeLine{754 \textcolor{preprocessor}{\#define TIM\_IT\_DIR                         TIM\_DIER\_DIRIE                       }}
+\DoxyCodeLine{755 \textcolor{preprocessor}{\#define TIM\_IT\_IERR                        TIM\_DIER\_IERRIE                      }}
+\DoxyCodeLine{756 \textcolor{preprocessor}{\#define TIM\_IT\_TERR                        TIM\_DIER\_TERRIE                      }}
+\DoxyCodeLine{764 \textcolor{preprocessor}{\#define TIM\_COMMUTATION\_TRGI              TIM\_CR2\_CCUS                          }}
+\DoxyCodeLine{765 \textcolor{preprocessor}{\#define TIM\_COMMUTATION\_SOFTWARE          0x00000000U                           }}
+\DoxyCodeLine{773 \textcolor{preprocessor}{\#define TIM\_DMA\_UPDATE                     TIM\_DIER\_UDE                         }}
+\DoxyCodeLine{774 \textcolor{preprocessor}{\#define TIM\_DMA\_CC1                        TIM\_DIER\_CC1DE                       }}
+\DoxyCodeLine{775 \textcolor{preprocessor}{\#define TIM\_DMA\_CC2                        TIM\_DIER\_CC2DE                       }}
+\DoxyCodeLine{776 \textcolor{preprocessor}{\#define TIM\_DMA\_CC3                        TIM\_DIER\_CC3DE                       }}
+\DoxyCodeLine{777 \textcolor{preprocessor}{\#define TIM\_DMA\_CC4                        TIM\_DIER\_CC4DE                       }}
+\DoxyCodeLine{778 \textcolor{preprocessor}{\#define TIM\_DMA\_COM                        TIM\_DIER\_COMDE                       }}
+\DoxyCodeLine{779 \textcolor{preprocessor}{\#define TIM\_DMA\_TRIGGER                    TIM\_DIER\_TDE                         }}
+\DoxyCodeLine{787 \textcolor{preprocessor}{\#define TIM\_FLAG\_UPDATE                    TIM\_SR\_UIF                           }}
+\DoxyCodeLine{788 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC1                       TIM\_SR\_CC1IF                         }}
+\DoxyCodeLine{789 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC2                       TIM\_SR\_CC2IF                         }}
+\DoxyCodeLine{790 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC3                       TIM\_SR\_CC3IF                         }}
+\DoxyCodeLine{791 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC4                       TIM\_SR\_CC4IF                         }}
+\DoxyCodeLine{792 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC5                       TIM\_SR\_CC5IF                         }}
+\DoxyCodeLine{793 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC6                       TIM\_SR\_CC6IF                         }}
+\DoxyCodeLine{794 \textcolor{preprocessor}{\#define TIM\_FLAG\_COM                       TIM\_SR\_COMIF                         }}
+\DoxyCodeLine{795 \textcolor{preprocessor}{\#define TIM\_FLAG\_TRIGGER                   TIM\_SR\_TIF                           }}
+\DoxyCodeLine{796 \textcolor{preprocessor}{\#define TIM\_FLAG\_BREAK                     TIM\_SR\_BIF                           }}
+\DoxyCodeLine{797 \textcolor{preprocessor}{\#define TIM\_FLAG\_BREAK2                    TIM\_SR\_B2IF                          }}
+\DoxyCodeLine{798 \textcolor{preprocessor}{\#define TIM\_FLAG\_SYSTEM\_BREAK              TIM\_SR\_SBIF                          }}
+\DoxyCodeLine{799 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC1OF                     TIM\_SR\_CC1OF                         }}
+\DoxyCodeLine{800 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC2OF                     TIM\_SR\_CC2OF                         }}
+\DoxyCodeLine{801 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC3OF                     TIM\_SR\_CC3OF                         }}
+\DoxyCodeLine{802 \textcolor{preprocessor}{\#define TIM\_FLAG\_CC4OF                     TIM\_SR\_CC4OF                         }}
+\DoxyCodeLine{803 \textcolor{preprocessor}{\#define TIM\_FLAG\_IDX                       TIM\_SR\_IDXF                          }}
+\DoxyCodeLine{804 \textcolor{preprocessor}{\#define TIM\_FLAG\_DIR                       TIM\_SR\_DIRF                          }}
+\DoxyCodeLine{805 \textcolor{preprocessor}{\#define TIM\_FLAG\_IERR                      TIM\_SR\_IERRF                         }}
+\DoxyCodeLine{806 \textcolor{preprocessor}{\#define TIM\_FLAG\_TERR                      TIM\_SR\_TERRF                         }}
+\DoxyCodeLine{814 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_1                      0x00000000U                          }}
+\DoxyCodeLine{815 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_2                      0x00000004U                          }}
+\DoxyCodeLine{816 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_3                      0x00000008U                          }}
+\DoxyCodeLine{817 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_4                      0x0000000CU                          }}
+\DoxyCodeLine{818 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_5                      0x00000010U                          }}
+\DoxyCodeLine{819 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_6                      0x00000014U                          }}
+\DoxyCodeLine{820 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_ALL                    0x0000003CU                          }}
+\DoxyCodeLine{828 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ETRMODE2    TIM\_SMCR\_ETPS\_1      }}
+\DoxyCodeLine{829 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_INTERNAL    TIM\_SMCR\_ETPS\_0      }}
+\DoxyCodeLine{830 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR0        TIM\_TS\_ITR0          }}
+\DoxyCodeLine{831 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR1        TIM\_TS\_ITR1          }}
+\DoxyCodeLine{832 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR2        TIM\_TS\_ITR2          }}
+\DoxyCodeLine{833 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR3        TIM\_TS\_ITR3          }}
+\DoxyCodeLine{834 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_TI1ED       TIM\_TS\_TI1F\_ED       }}
+\DoxyCodeLine{835 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_TI1         TIM\_TS\_TI1FP1        }}
+\DoxyCodeLine{836 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_TI2         TIM\_TS\_TI2FP2        }}
+\DoxyCodeLine{837 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ETRMODE1    TIM\_TS\_ETRF          }}
+\DoxyCodeLine{838 \textcolor{preprocessor}{\#if defined (TIM5)}}
+\DoxyCodeLine{839 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR4        TIM\_TS\_ITR4          }}
+\DoxyCodeLine{840 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{841 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR5        TIM\_TS\_ITR5          }}
+\DoxyCodeLine{842 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR6        TIM\_TS\_ITR6          }}
+\DoxyCodeLine{843 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR7        TIM\_TS\_ITR7          }}
+\DoxyCodeLine{844 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR8        TIM\_TS\_ITR8          }}
+\DoxyCodeLine{845 \textcolor{preprocessor}{\#if defined (TIM20)}}
+\DoxyCodeLine{846 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR9        TIM\_TS\_ITR9          }}
+\DoxyCodeLine{847 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{848 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR10       TIM\_TS\_ITR10         }}
+\DoxyCodeLine{849 \textcolor{preprocessor}{\#define TIM\_CLOCKSOURCE\_ITR11       TIM\_TS\_ITR11         }}
+\DoxyCodeLine{857 \textcolor{preprocessor}{\#define TIM\_CLOCKPOLARITY\_INVERTED           TIM\_ETRPOLARITY\_INVERTED           }}
+\DoxyCodeLine{858 \textcolor{preprocessor}{\#define TIM\_CLOCKPOLARITY\_NONINVERTED        TIM\_ETRPOLARITY\_NONINVERTED        }}
+\DoxyCodeLine{859 \textcolor{preprocessor}{\#define TIM\_CLOCKPOLARITY\_RISING             TIM\_INPUTCHANNELPOLARITY\_RISING    }}
+\DoxyCodeLine{860 \textcolor{preprocessor}{\#define TIM\_CLOCKPOLARITY\_FALLING            TIM\_INPUTCHANNELPOLARITY\_FALLING   }}
+\DoxyCodeLine{861 \textcolor{preprocessor}{\#define TIM\_CLOCKPOLARITY\_BOTHEDGE           TIM\_INPUTCHANNELPOLARITY\_BOTHEDGE  }}
+\DoxyCodeLine{869 \textcolor{preprocessor}{\#define TIM\_CLOCKPRESCALER\_DIV1                 TIM\_ETRPRESCALER\_DIV1           }}
+\DoxyCodeLine{870 \textcolor{preprocessor}{\#define TIM\_CLOCKPRESCALER\_DIV2                 TIM\_ETRPRESCALER\_DIV2           }}
+\DoxyCodeLine{871 \textcolor{preprocessor}{\#define TIM\_CLOCKPRESCALER\_DIV4                 TIM\_ETRPRESCALER\_DIV4           }}
+\DoxyCodeLine{872 \textcolor{preprocessor}{\#define TIM\_CLOCKPRESCALER\_DIV8                 TIM\_ETRPRESCALER\_DIV8           }}
+\DoxyCodeLine{880 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTPOLARITY\_INVERTED           TIM\_ETRPOLARITY\_INVERTED      }}
+\DoxyCodeLine{881 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTPOLARITY\_NONINVERTED        TIM\_ETRPOLARITY\_NONINVERTED   }}
+\DoxyCodeLine{889 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTPRESCALER\_DIV1              TIM\_ETRPRESCALER\_DIV1         }}
+\DoxyCodeLine{890 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTPRESCALER\_DIV2              TIM\_ETRPRESCALER\_DIV2         }}
+\DoxyCodeLine{891 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTPRESCALER\_DIV4              TIM\_ETRPRESCALER\_DIV4         }}
+\DoxyCodeLine{892 \textcolor{preprocessor}{\#define TIM\_CLEARINPUTPRESCALER\_DIV8              TIM\_ETRPRESCALER\_DIV8         }}
+\DoxyCodeLine{900 \textcolor{preprocessor}{\#define TIM\_OSSR\_ENABLE                          TIM\_BDTR\_OSSR                  }}
+\DoxyCodeLine{901 \textcolor{preprocessor}{\#define TIM\_OSSR\_DISABLE                         0x00000000U                    }}
+\DoxyCodeLine{909 \textcolor{preprocessor}{\#define TIM\_OSSI\_ENABLE                          TIM\_BDTR\_OSSI                  }}
+\DoxyCodeLine{910 \textcolor{preprocessor}{\#define TIM\_OSSI\_DISABLE                         0x00000000U                    }}
+\DoxyCodeLine{917 \textcolor{preprocessor}{\#define TIM\_LOCKLEVEL\_OFF                  0x00000000U                          }}
+\DoxyCodeLine{918 \textcolor{preprocessor}{\#define TIM\_LOCKLEVEL\_1                    TIM\_BDTR\_LOCK\_0                      }}
+\DoxyCodeLine{919 \textcolor{preprocessor}{\#define TIM\_LOCKLEVEL\_2                    TIM\_BDTR\_LOCK\_1                      }}
+\DoxyCodeLine{920 \textcolor{preprocessor}{\#define TIM\_LOCKLEVEL\_3                    TIM\_BDTR\_LOCK                        }}
+\DoxyCodeLine{928 \textcolor{preprocessor}{\#define TIM\_BREAK\_ENABLE                   TIM\_BDTR\_BKE                         }}
+\DoxyCodeLine{929 \textcolor{preprocessor}{\#define TIM\_BREAK\_DISABLE                  0x00000000U                          }}
+\DoxyCodeLine{937 \textcolor{preprocessor}{\#define TIM\_BREAKPOLARITY\_LOW              0x00000000U                          }}
+\DoxyCodeLine{938 \textcolor{preprocessor}{\#define TIM\_BREAKPOLARITY\_HIGH             TIM\_BDTR\_BKP                         }}
+\DoxyCodeLine{946 \textcolor{preprocessor}{\#define TIM\_BREAK\_AFMODE\_INPUT             0x00000000U                          }}
+\DoxyCodeLine{947 \textcolor{preprocessor}{\#define TIM\_BREAK\_AFMODE\_BIDIRECTIONAL     TIM\_BDTR\_BKBID                       }}
+\DoxyCodeLine{955 \textcolor{preprocessor}{\#define TIM\_BREAK2\_DISABLE                 0x00000000U                          }}
+\DoxyCodeLine{956 \textcolor{preprocessor}{\#define TIM\_BREAK2\_ENABLE                  TIM\_BDTR\_BK2E                        }}
+\DoxyCodeLine{964 \textcolor{preprocessor}{\#define TIM\_BREAK2POLARITY\_LOW             0x00000000U                          }}
+\DoxyCodeLine{965 \textcolor{preprocessor}{\#define TIM\_BREAK2POLARITY\_HIGH            TIM\_BDTR\_BK2P                        }}
+\DoxyCodeLine{973 \textcolor{preprocessor}{\#define TIM\_BREAK2\_AFMODE\_INPUT            0x00000000U                          }}
+\DoxyCodeLine{974 \textcolor{preprocessor}{\#define TIM\_BREAK2\_AFMODE\_BIDIRECTIONAL    TIM\_BDTR\_BK2BID                      }}
+\DoxyCodeLine{982 \textcolor{preprocessor}{\#define TIM\_AUTOMATICOUTPUT\_DISABLE        0x00000000U                          }}
+\DoxyCodeLine{983 \textcolor{preprocessor}{\#define TIM\_AUTOMATICOUTPUT\_ENABLE         TIM\_BDTR\_AOE                         }}
+\DoxyCodeLine{991 \textcolor{preprocessor}{\#define TIM\_GROUPCH5\_NONE                  0x00000000U                          }}
+\DoxyCodeLine{992 \textcolor{preprocessor}{\#define TIM\_GROUPCH5\_OC1REFC               TIM\_CCR5\_GC5C1                       }}
+\DoxyCodeLine{993 \textcolor{preprocessor}{\#define TIM\_GROUPCH5\_OC2REFC               TIM\_CCR5\_GC5C2                       }}
+\DoxyCodeLine{994 \textcolor{preprocessor}{\#define TIM\_GROUPCH5\_OC3REFC               TIM\_CCR5\_GC5C3                       }}
+\DoxyCodeLine{1002 \textcolor{preprocessor}{\#define TIM\_TRGO\_RESET            0x00000000U                                      }}
+\DoxyCodeLine{1003 \textcolor{preprocessor}{\#define TIM\_TRGO\_ENABLE           TIM\_CR2\_MMS\_0                                    }}
+\DoxyCodeLine{1004 \textcolor{preprocessor}{\#define TIM\_TRGO\_UPDATE           TIM\_CR2\_MMS\_1                                    }}
+\DoxyCodeLine{1005 \textcolor{preprocessor}{\#define TIM\_TRGO\_OC1              (TIM\_CR2\_MMS\_1 | TIM\_CR2\_MMS\_0)                  }}
+\DoxyCodeLine{1006 \textcolor{preprocessor}{\#define TIM\_TRGO\_OC1REF           TIM\_CR2\_MMS\_2                                    }}
+\DoxyCodeLine{1007 \textcolor{preprocessor}{\#define TIM\_TRGO\_OC2REF           (TIM\_CR2\_MMS\_2 | TIM\_CR2\_MMS\_0)                  }}
+\DoxyCodeLine{1008 \textcolor{preprocessor}{\#define TIM\_TRGO\_OC3REF           (TIM\_CR2\_MMS\_2 | TIM\_CR2\_MMS\_1)                  }}
+\DoxyCodeLine{1009 \textcolor{preprocessor}{\#define TIM\_TRGO\_OC4REF           (TIM\_CR2\_MMS\_2 | TIM\_CR2\_MMS\_1 | TIM\_CR2\_MMS\_0)  }}
+\DoxyCodeLine{1010 \textcolor{preprocessor}{\#define TIM\_TRGO\_ENCODER\_CLK      TIM\_CR2\_MMS\_3                                    }}
+\DoxyCodeLine{1018 \textcolor{preprocessor}{\#define TIM\_TRGO2\_RESET                          0x00000000U                                                         }}
+\DoxyCodeLine{1019 \textcolor{preprocessor}{\#define TIM\_TRGO2\_ENABLE                         TIM\_CR2\_MMS2\_0                                                      }}
+\DoxyCodeLine{1020 \textcolor{preprocessor}{\#define TIM\_TRGO2\_UPDATE                         TIM\_CR2\_MMS2\_1                                                      }}
+\DoxyCodeLine{1021 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC1                            (TIM\_CR2\_MMS2\_1 | TIM\_CR2\_MMS2\_0)                                   }}
+\DoxyCodeLine{1022 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC1REF                         TIM\_CR2\_MMS2\_2                                                      }}
+\DoxyCodeLine{1023 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC2REF                         (TIM\_CR2\_MMS2\_2 | TIM\_CR2\_MMS2\_0)                                   }}
+\DoxyCodeLine{1024 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC3REF                         (TIM\_CR2\_MMS2\_2 | TIM\_CR2\_MMS2\_1)                                   }}
+\DoxyCodeLine{1025 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC4REF                         (TIM\_CR2\_MMS2\_2 | TIM\_CR2\_MMS2\_1 | TIM\_CR2\_MMS2\_0)                  }}
+\DoxyCodeLine{1026 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC5REF                         TIM\_CR2\_MMS2\_3                                                      }}
+\DoxyCodeLine{1027 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC6REF                         (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_0)                                   }}
+\DoxyCodeLine{1028 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC4REF\_RISINGFALLING           (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_1)                                   }}
+\DoxyCodeLine{1029 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC6REF\_RISINGFALLING           (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_1 | TIM\_CR2\_MMS2\_0)                  }}
+\DoxyCodeLine{1030 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC4REF\_RISING\_OC6REF\_RISING    (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_2)                                   }}
+\DoxyCodeLine{1031 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC4REF\_RISING\_OC6REF\_FALLING   (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_2 | TIM\_CR2\_MMS2\_0)                  }}
+\DoxyCodeLine{1032 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC5REF\_RISING\_OC6REF\_RISING    (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_2 |TIM\_CR2\_MMS2\_1)                   }}
+\DoxyCodeLine{1033 \textcolor{preprocessor}{\#define TIM\_TRGO2\_OC5REF\_RISING\_OC6REF\_FALLING   (TIM\_CR2\_MMS2\_3 | TIM\_CR2\_MMS2\_2 | TIM\_CR2\_MMS2\_1 | TIM\_CR2\_MMS2\_0) }}
+\DoxyCodeLine{1041 \textcolor{preprocessor}{\#define TIM\_MASTERSLAVEMODE\_ENABLE         TIM\_SMCR\_MSM                         }}
+\DoxyCodeLine{1042 \textcolor{preprocessor}{\#define TIM\_MASTERSLAVEMODE\_DISABLE        0x00000000U                          }}
+\DoxyCodeLine{1050 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_DISABLE                0x00000000U                                        }}
+\DoxyCodeLine{1051 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_RESET                  TIM\_SMCR\_SMS\_2                                     }}
+\DoxyCodeLine{1052 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_GATED                  (TIM\_SMCR\_SMS\_2 | TIM\_SMCR\_SMS\_0)                  }}
+\DoxyCodeLine{1053 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_TRIGGER                (TIM\_SMCR\_SMS\_2 | TIM\_SMCR\_SMS\_1)                  }}
+\DoxyCodeLine{1054 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_EXTERNAL1              (TIM\_SMCR\_SMS\_2 | TIM\_SMCR\_SMS\_1 | TIM\_SMCR\_SMS\_0) }}
+\DoxyCodeLine{1055 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_COMBINED\_RESETTRIGGER  TIM\_SMCR\_SMS\_3                                     }}
+\DoxyCodeLine{1056 \textcolor{preprocessor}{\#define TIM\_SLAVEMODE\_COMBINED\_GATEDRESET    (TIM\_SMCR\_SMS\_3 | TIM\_SMCR\_SMS\_0)                  }}
+\DoxyCodeLine{1064 \textcolor{preprocessor}{\#define TIM\_OCMODE\_TIMING                   0x00000000U                                              }}
+\DoxyCodeLine{1065 \textcolor{preprocessor}{\#define TIM\_OCMODE\_ACTIVE                   TIM\_CCMR1\_OC1M\_0                                         }}
+\DoxyCodeLine{1066 \textcolor{preprocessor}{\#define TIM\_OCMODE\_INACTIVE                 TIM\_CCMR1\_OC1M\_1                                         }}
+\DoxyCodeLine{1067 \textcolor{preprocessor}{\#define TIM\_OCMODE\_TOGGLE                   (TIM\_CCMR1\_OC1M\_1 | TIM\_CCMR1\_OC1M\_0)                    }}
+\DoxyCodeLine{1068 \textcolor{preprocessor}{\#define TIM\_OCMODE\_PWM1                     (TIM\_CCMR1\_OC1M\_2 | TIM\_CCMR1\_OC1M\_1)                    }}
+\DoxyCodeLine{1069 \textcolor{preprocessor}{\#define TIM\_OCMODE\_PWM2                     (TIM\_CCMR1\_OC1M\_2 | TIM\_CCMR1\_OC1M\_1 | TIM\_CCMR1\_OC1M\_0) }}
+\DoxyCodeLine{1070 \textcolor{preprocessor}{\#define TIM\_OCMODE\_FORCED\_ACTIVE            (TIM\_CCMR1\_OC1M\_2 | TIM\_CCMR1\_OC1M\_0)                    }}
+\DoxyCodeLine{1071 \textcolor{preprocessor}{\#define TIM\_OCMODE\_FORCED\_INACTIVE          TIM\_CCMR1\_OC1M\_2                                         }}
+\DoxyCodeLine{1072 \textcolor{preprocessor}{\#define TIM\_OCMODE\_RETRIGERRABLE\_OPM1      TIM\_CCMR1\_OC1M\_3                                          }}
+\DoxyCodeLine{1073 \textcolor{preprocessor}{\#define TIM\_OCMODE\_RETRIGERRABLE\_OPM2      (TIM\_CCMR1\_OC1M\_3 | TIM\_CCMR1\_OC1M\_0)                     }}
+\DoxyCodeLine{1074 \textcolor{preprocessor}{\#define TIM\_OCMODE\_COMBINED\_PWM1           (TIM\_CCMR1\_OC1M\_3 | TIM\_CCMR1\_OC1M\_2)                     }}
+\DoxyCodeLine{1075 \textcolor{preprocessor}{\#define TIM\_OCMODE\_COMBINED\_PWM2           (TIM\_CCMR1\_OC1M\_3 | TIM\_CCMR1\_OC1M\_0 | TIM\_CCMR1\_OC1M\_2)  }}
+\DoxyCodeLine{1076 \textcolor{preprocessor}{\#define TIM\_OCMODE\_ASSYMETRIC\_PWM1         (TIM\_CCMR1\_OC1M\_3 | TIM\_CCMR1\_OC1M\_1 | TIM\_CCMR1\_OC1M\_2)  }}
+\DoxyCodeLine{1077 \textcolor{preprocessor}{\#define TIM\_OCMODE\_ASSYMETRIC\_PWM2         TIM\_CCMR1\_OC1M                                            }}
+\DoxyCodeLine{1078 \textcolor{preprocessor}{\#define TIM\_OCMODE\_PULSE\_ON\_COMPARE        (TIM\_CCMR2\_OC3M\_3 | TIM\_CCMR2\_OC3M\_1)                     }}
+\DoxyCodeLine{1079 \textcolor{preprocessor}{\#define TIM\_OCMODE\_DIRECTION\_OUTPUT        (TIM\_CCMR2\_OC3M\_3 | TIM\_CCMR2\_OC3M\_1 | TIM\_CCMR2\_OC3M\_0)  }}
+\DoxyCodeLine{1087 \textcolor{preprocessor}{\#define TIM\_TS\_ITR0          0x00000000U                                                       }}
+\DoxyCodeLine{1088 \textcolor{preprocessor}{\#define TIM\_TS\_ITR1          TIM\_SMCR\_TS\_0                                                     }}
+\DoxyCodeLine{1089 \textcolor{preprocessor}{\#define TIM\_TS\_ITR2          TIM\_SMCR\_TS\_1                                                     }}
+\DoxyCodeLine{1090 \textcolor{preprocessor}{\#define TIM\_TS\_ITR3          (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_1)                                   }}
+\DoxyCodeLine{1091 \textcolor{preprocessor}{\#define TIM\_TS\_TI1F\_ED       TIM\_SMCR\_TS\_2                                                     }}
+\DoxyCodeLine{1092 \textcolor{preprocessor}{\#define TIM\_TS\_TI1FP1        (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_2)                                   }}
+\DoxyCodeLine{1093 \textcolor{preprocessor}{\#define TIM\_TS\_TI2FP2        (TIM\_SMCR\_TS\_1 | TIM\_SMCR\_TS\_2)                                   }}
+\DoxyCodeLine{1094 \textcolor{preprocessor}{\#define TIM\_TS\_ETRF          (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_1 | TIM\_SMCR\_TS\_2)                   }}
+\DoxyCodeLine{1095 \textcolor{preprocessor}{\#if defined (TIM5)}}
+\DoxyCodeLine{1096 \textcolor{preprocessor}{\#define TIM\_TS\_ITR4          TIM\_SMCR\_TS\_3                                                     }}
+\DoxyCodeLine{1097 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1098 \textcolor{preprocessor}{\#define TIM\_TS\_ITR5          (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_3)                                   }}
+\DoxyCodeLine{1099 \textcolor{preprocessor}{\#define TIM\_TS\_ITR6          (TIM\_SMCR\_TS\_1 | TIM\_SMCR\_TS\_3)                                   }}
+\DoxyCodeLine{1100 \textcolor{preprocessor}{\#define TIM\_TS\_ITR7          (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_1 | TIM\_SMCR\_TS\_3)                   }}
+\DoxyCodeLine{1101 \textcolor{preprocessor}{\#define TIM\_TS\_ITR8          (TIM\_SMCR\_TS\_2 | TIM\_SMCR\_TS\_3)                                   }}
+\DoxyCodeLine{1102 \textcolor{preprocessor}{\#if defined (TIM20)}}
+\DoxyCodeLine{1103 \textcolor{preprocessor}{\#define TIM\_TS\_ITR9          (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_2 | TIM\_SMCR\_TS\_3)                   }}
+\DoxyCodeLine{1104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1105 \textcolor{preprocessor}{\#define TIM\_TS\_ITR10         (TIM\_SMCR\_TS\_1 | TIM\_SMCR\_TS\_2 | TIM\_SMCR\_TS\_3)                   }}
+\DoxyCodeLine{1106 \textcolor{preprocessor}{\#define TIM\_TS\_ITR11         (TIM\_SMCR\_TS\_0 | TIM\_SMCR\_TS\_1 | TIM\_SMCR\_TS\_2 | TIM\_SMCR\_TS\_3)   }}
+\DoxyCodeLine{1107 \textcolor{preprocessor}{\#define TIM\_TS\_NONE          0xFFFFFFFFU                                                       }}
+\DoxyCodeLine{1115 \textcolor{preprocessor}{\#define TIM\_TRIGGERPOLARITY\_INVERTED           TIM\_ETRPOLARITY\_INVERTED               }}
+\DoxyCodeLine{1116 \textcolor{preprocessor}{\#define TIM\_TRIGGERPOLARITY\_NONINVERTED        TIM\_ETRPOLARITY\_NONINVERTED            }}
+\DoxyCodeLine{1117 \textcolor{preprocessor}{\#define TIM\_TRIGGERPOLARITY\_RISING             TIM\_INPUTCHANNELPOLARITY\_RISING        }}
+\DoxyCodeLine{1118 \textcolor{preprocessor}{\#define TIM\_TRIGGERPOLARITY\_FALLING            TIM\_INPUTCHANNELPOLARITY\_FALLING       }}
+\DoxyCodeLine{1119 \textcolor{preprocessor}{\#define TIM\_TRIGGERPOLARITY\_BOTHEDGE           TIM\_INPUTCHANNELPOLARITY\_BOTHEDGE      }}
+\DoxyCodeLine{1127 \textcolor{preprocessor}{\#define TIM\_TRIGGERPRESCALER\_DIV1             TIM\_ETRPRESCALER\_DIV1             }}
+\DoxyCodeLine{1128 \textcolor{preprocessor}{\#define TIM\_TRIGGERPRESCALER\_DIV2             TIM\_ETRPRESCALER\_DIV2             }}
+\DoxyCodeLine{1129 \textcolor{preprocessor}{\#define TIM\_TRIGGERPRESCALER\_DIV4             TIM\_ETRPRESCALER\_DIV4             }}
+\DoxyCodeLine{1130 \textcolor{preprocessor}{\#define TIM\_TRIGGERPRESCALER\_DIV8             TIM\_ETRPRESCALER\_DIV8             }}
+\DoxyCodeLine{1138 \textcolor{preprocessor}{\#define TIM\_TI1SELECTION\_CH1               0x00000000U                          }}
+\DoxyCodeLine{1139 \textcolor{preprocessor}{\#define TIM\_TI1SELECTION\_XORCOMBINATION    TIM\_CR2\_TI1S                         }}
+\DoxyCodeLine{1147 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_1TRANSFER       0x00000000U                          }}
+\DoxyCodeLine{1148 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_2TRANSFERS      0x00000100U                          }}
+\DoxyCodeLine{1149 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_3TRANSFERS      0x00000200U                          }}
+\DoxyCodeLine{1150 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_4TRANSFERS      0x00000300U                          }}
+\DoxyCodeLine{1151 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_5TRANSFERS      0x00000400U                          }}
+\DoxyCodeLine{1152 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_6TRANSFERS      0x00000500U                          }}
+\DoxyCodeLine{1153 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_7TRANSFERS      0x00000600U                          }}
+\DoxyCodeLine{1154 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_8TRANSFERS      0x00000700U                          }}
+\DoxyCodeLine{1155 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_9TRANSFERS      0x00000800U                          }}
+\DoxyCodeLine{1156 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_10TRANSFERS     0x00000900U                          }}
+\DoxyCodeLine{1157 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_11TRANSFERS     0x00000A00U                          }}
+\DoxyCodeLine{1158 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_12TRANSFERS     0x00000B00U                          }}
+\DoxyCodeLine{1159 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_13TRANSFERS     0x00000C00U                          }}
+\DoxyCodeLine{1160 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_14TRANSFERS     0x00000D00U                          }}
+\DoxyCodeLine{1161 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_15TRANSFERS     0x00000E00U                          }}
+\DoxyCodeLine{1162 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_16TRANSFERS     0x00000F00U                          }}
+\DoxyCodeLine{1163 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_17TRANSFERS     0x00001000U                          }}
+\DoxyCodeLine{1164 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_18TRANSFERS     0x00001100U                          }}
+\DoxyCodeLine{1165 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_19TRANSFERS     0x00001200U                          }}
+\DoxyCodeLine{1166 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_20TRANSFERS     0x00001300U                          }}
+\DoxyCodeLine{1167 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_21TRANSFERS     0x00001400U                          }}
+\DoxyCodeLine{1168 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_22TRANSFERS     0x00001500U                          }}
+\DoxyCodeLine{1169 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_23TRANSFERS     0x00001600U                          }}
+\DoxyCodeLine{1170 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_24TRANSFERS     0x00001700U                          }}
+\DoxyCodeLine{1171 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_25TRANSFERS     0x00001800U                          }}
+\DoxyCodeLine{1172 \textcolor{preprocessor}{\#define TIM\_DMABURSTLENGTH\_26TRANSFERS     0x00001900U                          }}
+\DoxyCodeLine{1180 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_UPDATE                ((uint16\_t) 0x0000)       }}
+\DoxyCodeLine{1181 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_CC1                   ((uint16\_t) 0x0001)       }}
+\DoxyCodeLine{1182 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_CC2                   ((uint16\_t) 0x0002)       }}
+\DoxyCodeLine{1183 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_CC3                   ((uint16\_t) 0x0003)       }}
+\DoxyCodeLine{1184 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_CC4                   ((uint16\_t) 0x0004)       }}
+\DoxyCodeLine{1185 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_COMMUTATION           ((uint16\_t) 0x0005)       }}
+\DoxyCodeLine{1186 \textcolor{preprocessor}{\#define TIM\_DMA\_ID\_TRIGGER               ((uint16\_t) 0x0006)       }}
+\DoxyCodeLine{1194 \textcolor{preprocessor}{\#define TIM\_CCx\_ENABLE                   0x00000001U                            }}
+\DoxyCodeLine{1195 \textcolor{preprocessor}{\#define TIM\_CCx\_DISABLE                  0x00000000U                            }}
+\DoxyCodeLine{1196 \textcolor{preprocessor}{\#define TIM\_CCxN\_ENABLE                  0x00000004U                            }}
+\DoxyCodeLine{1197 \textcolor{preprocessor}{\#define TIM\_CCxN\_DISABLE                 0x00000000U                            }}
+\DoxyCodeLine{1205 \textcolor{preprocessor}{\#define TIM\_BREAK\_SYSTEM\_ECC                 SYSCFG\_CFGR2\_ECCL   }}
+\DoxyCodeLine{1206 \textcolor{preprocessor}{\#define TIM\_BREAK\_SYSTEM\_PVD                 SYSCFG\_CFGR2\_PVDL   }}
+\DoxyCodeLine{1207 \textcolor{preprocessor}{\#define TIM\_BREAK\_SYSTEM\_SRAM\_PARITY\_ERROR   SYSCFG\_CFGR2\_SPL    }}
+\DoxyCodeLine{1208 \textcolor{preprocessor}{\#define TIM\_BREAK\_SYSTEM\_LOCKUP              SYSCFG\_CFGR2\_CLL    }}
+\DoxyCodeLine{1216 \textcolor{comment}{/* End of exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1217 }
+\DoxyCodeLine{1218 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1227 \textcolor{preprocessor}{\#if (USE\_HAL\_TIM\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{1228 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) do \{                                                               \(\backslash\)}}
+\DoxyCodeLine{1229 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>State            = HAL\_TIM\_STATE\_RESET;         \(\backslash\)}}
+\DoxyCodeLine{1230 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[0]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1231 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[1]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1232 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[2]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1233 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[3]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1234 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[4]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1235 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[5]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1236 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[0] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1237 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[1] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1238 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[2] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1239 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[3] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1240 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>DMABurstState    = HAL\_DMA\_BURST\_STATE\_RESET;   \(\backslash\)}}
+\DoxyCodeLine{1241 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>Base\_MspInitCallback         = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1242 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>Base\_MspDeInitCallback       = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1243 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>IC\_MspInitCallback           = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1244 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>IC\_MspDeInitCallback         = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1245 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>OC\_MspInitCallback           = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1246 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>OC\_MspDeInitCallback         = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1247 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>PWM\_MspInitCallback          = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1248 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>PWM\_MspDeInitCallback        = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1249 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>OnePulse\_MspInitCallback     = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1250 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>OnePulse\_MspDeInitCallback   = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1251 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>Encoder\_MspInitCallback      = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1252 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>Encoder\_MspDeInitCallback    = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1253 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>HallSensor\_MspInitCallback   = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1254 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>HallSensor\_MspDeInitCallback = NULL;            \(\backslash\)}}
+\DoxyCodeLine{1255 \textcolor{preprocessor}{                                                     \} while(0)}}
+\DoxyCodeLine{1256 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{1257 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_RESET\_HANDLE\_STATE(\_\_HANDLE\_\_) do \{                                                               \(\backslash\)}}
+\DoxyCodeLine{1258 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>State            = HAL\_TIM\_STATE\_RESET;         \(\backslash\)}}
+\DoxyCodeLine{1259 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[0]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1260 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[1]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1261 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[2]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1262 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[3]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1263 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[4]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1264 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelState[5]  = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1265 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[0] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1266 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[1] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1267 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[2] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1268 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>ChannelNState[3] = HAL\_TIM\_CHANNEL\_STATE\_RESET; \(\backslash\)}}
+\DoxyCodeLine{1269 \textcolor{preprocessor}{                                                      (\_\_HANDLE\_\_)-\/>DMABurstState    = HAL\_DMA\_BURST\_STATE\_RESET;   \(\backslash\)}}
+\DoxyCodeLine{1270 \textcolor{preprocessor}{                                                     \} while(0)}}
+\DoxyCodeLine{1271 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_TIM\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1272 }
+\DoxyCodeLine{1278 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_ENABLE(\_\_HANDLE\_\_)                 ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1|=(TIM\_CR1\_CEN))}}
+\DoxyCodeLine{1279 }
+\DoxyCodeLine{1285 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_MOE\_ENABLE(\_\_HANDLE\_\_)             ((\_\_HANDLE\_\_)-\/>Instance-\/>BDTR|=(TIM\_BDTR\_MOE))}}
+\DoxyCodeLine{1286 }
+\DoxyCodeLine{1292 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_DISABLE(\_\_HANDLE\_\_) \(\backslash\)}}
+\DoxyCodeLine{1293 \textcolor{preprocessor}{  do \{ \(\backslash\)}}
+\DoxyCodeLine{1294 \textcolor{preprocessor}{    if (((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxE\_MASK) == 0UL) \(\backslash\)}}
+\DoxyCodeLine{1295 \textcolor{preprocessor}{    \{ \(\backslash\)}}
+\DoxyCodeLine{1296 \textcolor{preprocessor}{      if(((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxNE\_MASK) == 0UL) \(\backslash\)}}
+\DoxyCodeLine{1297 \textcolor{preprocessor}{      \{ \(\backslash\)}}
+\DoxyCodeLine{1298 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~(TIM\_CR1\_CEN); \(\backslash\)}}
+\DoxyCodeLine{1299 \textcolor{preprocessor}{      \} \(\backslash\)}}
+\DoxyCodeLine{1300 \textcolor{preprocessor}{    \} \(\backslash\)}}
+\DoxyCodeLine{1301 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1302 }
+\DoxyCodeLine{1310 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_MOE\_DISABLE(\_\_HANDLE\_\_) \(\backslash\)}}
+\DoxyCodeLine{1311 \textcolor{preprocessor}{  do \{ \(\backslash\)}}
+\DoxyCodeLine{1312 \textcolor{preprocessor}{    if (((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxE\_MASK) == 0UL) \(\backslash\)}}
+\DoxyCodeLine{1313 \textcolor{preprocessor}{    \{ \(\backslash\)}}
+\DoxyCodeLine{1314 \textcolor{preprocessor}{      if(((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \& TIM\_CCER\_CCxNE\_MASK) == 0UL) \(\backslash\)}}
+\DoxyCodeLine{1315 \textcolor{preprocessor}{      \{ \(\backslash\)}}
+\DoxyCodeLine{1316 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Instance-\/>BDTR \&= \string~(TIM\_BDTR\_MOE); \(\backslash\)}}
+\DoxyCodeLine{1317 \textcolor{preprocessor}{      \} \(\backslash\)}}
+\DoxyCodeLine{1318 \textcolor{preprocessor}{    \} \(\backslash\)}}
+\DoxyCodeLine{1319 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1320 }
+\DoxyCodeLine{1327 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_MOE\_DISABLE\_UNCONDITIONALLY(\_\_HANDLE\_\_)  (\_\_HANDLE\_\_)-\/>Instance-\/>BDTR \&= \string~(TIM\_BDTR\_MOE)}}
+\DoxyCodeLine{1328 }
+\DoxyCodeLine{1347 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_ENABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)    ((\_\_HANDLE\_\_)-\/>Instance-\/>DIER |= (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1348 }
+\DoxyCodeLine{1367 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_DISABLE\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)   ((\_\_HANDLE\_\_)-\/>Instance-\/>DIER \&= \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1368 }
+\DoxyCodeLine{1382 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_ENABLE\_DMA(\_\_HANDLE\_\_, \_\_DMA\_\_)         ((\_\_HANDLE\_\_)-\/>Instance-\/>DIER |= (\_\_DMA\_\_))}}
+\DoxyCodeLine{1383 }
+\DoxyCodeLine{1397 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_DISABLE\_DMA(\_\_HANDLE\_\_, \_\_DMA\_\_)        ((\_\_HANDLE\_\_)-\/>Instance-\/>DIER \&= \string~(\_\_DMA\_\_))}}
+\DoxyCodeLine{1398 }
+\DoxyCodeLine{1425 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)          (((\_\_HANDLE\_\_)-\/>Instance-\/>SR \&(\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{1426 }
+\DoxyCodeLine{1453 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_CLEAR\_FLAG(\_\_HANDLE\_\_, \_\_FLAG\_\_)        ((\_\_HANDLE\_\_)-\/>Instance-\/>SR = \string~(\_\_FLAG\_\_))}}
+\DoxyCodeLine{1454 }
+\DoxyCodeLine{1474 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_IT\_SOURCE(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_) ((((\_\_HANDLE\_\_)-\/>Instance-\/>DIER \& (\_\_INTERRUPT\_\_)) \(\backslash\)}}
+\DoxyCodeLine{1475 \textcolor{preprocessor}{                                                             == (\_\_INTERRUPT\_\_)) ? SET : RESET)}}
+\DoxyCodeLine{1476 }
+\DoxyCodeLine{1495 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_CLEAR\_IT(\_\_HANDLE\_\_, \_\_INTERRUPT\_\_)      ((\_\_HANDLE\_\_)-\/>Instance-\/>SR = \string~(\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1496 }
+\DoxyCodeLine{1505 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_UIFREMAP\_ENABLE(\_\_HANDLE\_\_)    (((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= TIM\_CR1\_UIFREMAP))}}
+\DoxyCodeLine{1506 }
+\DoxyCodeLine{1513 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_UIFREMAP\_DISABLE(\_\_HANDLE\_\_)    (((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= \string~TIM\_CR1\_UIFREMAP))}}
+\DoxyCodeLine{1514 }
+\DoxyCodeLine{1521 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_UIFCPY(\_\_COUNTER\_\_)    (((\_\_COUNTER\_\_) \& (TIM\_CNT\_UIFCPY)) == (TIM\_CNT\_UIFCPY))}}
+\DoxyCodeLine{1522 }
+\DoxyCodeLine{1530 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_IS\_TIM\_COUNTING\_DOWN(\_\_HANDLE\_\_)    (((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&(TIM\_CR1\_DIR)) == (TIM\_CR1\_DIR))}}
+\DoxyCodeLine{1531 }
+\DoxyCodeLine{1538 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_PRESCALER(\_\_HANDLE\_\_, \_\_PRESC\_\_)       ((\_\_HANDLE\_\_)-\/>Instance-\/>PSC = (\_\_PRESC\_\_))}}
+\DoxyCodeLine{1539 }
+\DoxyCodeLine{1549 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_COUNTER(\_\_HANDLE\_\_, \_\_COUNTER\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>CNT = (\_\_COUNTER\_\_))}}
+\DoxyCodeLine{1550 }
+\DoxyCodeLine{1556 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_COUNTER(\_\_HANDLE\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>CNT)}}
+\DoxyCodeLine{1557 }
+\DoxyCodeLine{1564 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_AUTORELOAD(\_\_HANDLE\_\_, \_\_AUTORELOAD\_\_) \(\backslash\)}}
+\DoxyCodeLine{1565 \textcolor{preprocessor}{  do\{                                                    \(\backslash\)}}
+\DoxyCodeLine{1566 \textcolor{preprocessor}{    (\_\_HANDLE\_\_)-\/>Instance-\/>ARR = (\_\_AUTORELOAD\_\_);  \(\backslash\)}}
+\DoxyCodeLine{1567 \textcolor{preprocessor}{    (\_\_HANDLE\_\_)-\/>Init.Period = (\_\_AUTORELOAD\_\_);    \(\backslash\)}}
+\DoxyCodeLine{1568 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1569 }
+\DoxyCodeLine{1575 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_AUTORELOAD(\_\_HANDLE\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>ARR)}}
+\DoxyCodeLine{1576 }
+\DoxyCodeLine{1587 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_CLOCKDIVISION(\_\_HANDLE\_\_, \_\_CKD\_\_) \(\backslash\)}}
+\DoxyCodeLine{1588 \textcolor{preprocessor}{  do\{                                                   \(\backslash\)}}
+\DoxyCodeLine{1589 \textcolor{preprocessor}{    (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \&= (\string~TIM\_CR1\_CKD);  \(\backslash\)}}
+\DoxyCodeLine{1590 \textcolor{preprocessor}{    (\_\_HANDLE\_\_)-\/>Instance-\/>CR1 |= (\_\_CKD\_\_);       \(\backslash\)}}
+\DoxyCodeLine{1591 \textcolor{preprocessor}{    (\_\_HANDLE\_\_)-\/>Init.ClockDivision = (\_\_CKD\_\_);   \(\backslash\)}}
+\DoxyCodeLine{1592 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1593 }
+\DoxyCodeLine{1602 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_CLOCKDIVISION(\_\_HANDLE\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1 \& TIM\_CR1\_CKD)}}
+\DoxyCodeLine{1603 }
+\DoxyCodeLine{1622 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_ICPRESCALER(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_ICPSC\_\_) \(\backslash\)}}
+\DoxyCodeLine{1623 \textcolor{preprocessor}{  do\{                                                    \(\backslash\)}}
+\DoxyCodeLine{1624 \textcolor{preprocessor}{    TIM\_RESET\_ICPRESCALERVALUE((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_));  \(\backslash\)}}
+\DoxyCodeLine{1625 \textcolor{preprocessor}{    TIM\_SET\_ICPRESCALERVALUE((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_), (\_\_ICPSC\_\_)); \(\backslash\)}}
+\DoxyCodeLine{1626 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1627 }
+\DoxyCodeLine{1643 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_ICPRESCALER(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1644 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \& TIM\_CCMR1\_IC1PSC) :\(\backslash\)}}
+\DoxyCodeLine{1645 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? (((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \& TIM\_CCMR1\_IC2PSC) >> 8U) :\(\backslash\)}}
+\DoxyCodeLine{1646 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \& TIM\_CCMR2\_IC3PSC) :\(\backslash\)}}
+\DoxyCodeLine{1647 \textcolor{preprocessor}{   (((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \& TIM\_CCMR2\_IC4PSC)) >> 8U)}}
+\DoxyCodeLine{1648 }
+\DoxyCodeLine{1663 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_COMPARE(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_COMPARE\_\_) \(\backslash\)}}
+\DoxyCodeLine{1664 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR1 = (\_\_COMPARE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{1665 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR2 = (\_\_COMPARE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{1666 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR3 = (\_\_COMPARE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{1667 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR4 = (\_\_COMPARE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{1668 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR5 = (\_\_COMPARE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{1669 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR6 = (\_\_COMPARE\_\_)))}}
+\DoxyCodeLine{1670 }
+\DoxyCodeLine{1684 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_GET\_COMPARE(\_\_HANDLE\_\_, \_\_CHANNEL\_\_) \(\backslash\)}}
+\DoxyCodeLine{1685 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR1) :\(\backslash\)}}
+\DoxyCodeLine{1686 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR2) :\(\backslash\)}}
+\DoxyCodeLine{1687 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR3) :\(\backslash\)}}
+\DoxyCodeLine{1688 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR4) :\(\backslash\)}}
+\DoxyCodeLine{1689 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR5) :\(\backslash\)}}
+\DoxyCodeLine{1690 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCR6))}}
+\DoxyCodeLine{1691 }
+\DoxyCodeLine{1705 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_ENABLE\_OCxPRELOAD(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)    \(\backslash\)}}
+\DoxyCodeLine{1706 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= TIM\_CCMR1\_OC1PE) :\(\backslash\)}}
+\DoxyCodeLine{1707 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= TIM\_CCMR1\_OC2PE) :\(\backslash\)}}
+\DoxyCodeLine{1708 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= TIM\_CCMR2\_OC3PE) :\(\backslash\)}}
+\DoxyCodeLine{1709 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= TIM\_CCMR2\_OC4PE) :\(\backslash\)}}
+\DoxyCodeLine{1710 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 |= TIM\_CCMR3\_OC5PE) :\(\backslash\)}}
+\DoxyCodeLine{1711 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 |= TIM\_CCMR3\_OC6PE))}}
+\DoxyCodeLine{1712 }
+\DoxyCodeLine{1726 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_DISABLE\_OCxPRELOAD(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)    \(\backslash\)}}
+\DoxyCodeLine{1727 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= \string~TIM\_CCMR1\_OC1PE) :\(\backslash\)}}
+\DoxyCodeLine{1728 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= \string~TIM\_CCMR1\_OC2PE) :\(\backslash\)}}
+\DoxyCodeLine{1729 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= \string~TIM\_CCMR2\_OC3PE) :\(\backslash\)}}
+\DoxyCodeLine{1730 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= \string~TIM\_CCMR2\_OC4PE) :\(\backslash\)}}
+\DoxyCodeLine{1731 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 \&= \string~TIM\_CCMR3\_OC5PE) :\(\backslash\)}}
+\DoxyCodeLine{1732 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 \&= \string~TIM\_CCMR3\_OC6PE))}}
+\DoxyCodeLine{1733 }
+\DoxyCodeLine{1751 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_ENABLE\_OCxFAST(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)    \(\backslash\)}}
+\DoxyCodeLine{1752 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= TIM\_CCMR1\_OC1FE) :\(\backslash\)}}
+\DoxyCodeLine{1753 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= TIM\_CCMR1\_OC2FE) :\(\backslash\)}}
+\DoxyCodeLine{1754 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= TIM\_CCMR2\_OC3FE) :\(\backslash\)}}
+\DoxyCodeLine{1755 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= TIM\_CCMR2\_OC4FE) :\(\backslash\)}}
+\DoxyCodeLine{1756 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 |= TIM\_CCMR3\_OC5FE) :\(\backslash\)}}
+\DoxyCodeLine{1757 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 |= TIM\_CCMR3\_OC6FE))}}
+\DoxyCodeLine{1758 }
+\DoxyCodeLine{1776 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_DISABLE\_OCxFAST(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)    \(\backslash\)}}
+\DoxyCodeLine{1777 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= \string~TIM\_CCMR1\_OC1FE) :\(\backslash\)}}
+\DoxyCodeLine{1778 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= \string~TIM\_CCMR1\_OC2FE) :\(\backslash\)}}
+\DoxyCodeLine{1779 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= \string~TIM\_CCMR2\_OC3FE) :\(\backslash\)}}
+\DoxyCodeLine{1780 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= \string~TIM\_CCMR2\_OC4FE) :\(\backslash\)}}
+\DoxyCodeLine{1781 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 \&= \string~TIM\_CCMR3\_OC5FE) :\(\backslash\)}}
+\DoxyCodeLine{1782 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR3 \&= \string~TIM\_CCMR3\_OC6FE))}}
+\DoxyCodeLine{1783 }
+\DoxyCodeLine{1792 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_URS\_ENABLE(\_\_HANDLE\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1|= TIM\_CR1\_URS)}}
+\DoxyCodeLine{1793 }
+\DoxyCodeLine{1805 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_URS\_DISABLE(\_\_HANDLE\_\_)  ((\_\_HANDLE\_\_)-\/>Instance-\/>CR1\&=\string~TIM\_CR1\_URS)}}
+\DoxyCodeLine{1806 }
+\DoxyCodeLine{1822 \textcolor{preprocessor}{\#define \_\_HAL\_TIM\_SET\_CAPTUREPOLARITY(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_POLARITY\_\_)    \(\backslash\)}}
+\DoxyCodeLine{1823 \textcolor{preprocessor}{  do\{                                                                     \(\backslash\)}}
+\DoxyCodeLine{1824 \textcolor{preprocessor}{    TIM\_RESET\_CAPTUREPOLARITY((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_));               \(\backslash\)}}
+\DoxyCodeLine{1825 \textcolor{preprocessor}{    TIM\_SET\_CAPTUREPOLARITY((\_\_HANDLE\_\_), (\_\_CHANNEL\_\_), (\_\_POLARITY\_\_)); \(\backslash\)}}
+\DoxyCodeLine{1826 \textcolor{preprocessor}{  \}while(0)}}
+\DoxyCodeLine{1827 }
+\DoxyCodeLine{1831 \textcolor{comment}{/* End of exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1832 }
+\DoxyCodeLine{1833 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1837 \textcolor{comment}{/* The counter of a timer instance is disabled only if all the CCx and CCxN}}
+\DoxyCodeLine{1838 \textcolor{comment}{   channels have been disabled */}}
+\DoxyCodeLine{1839 \textcolor{preprocessor}{\#define TIM\_CCER\_CCxE\_MASK  ((uint32\_t)(TIM\_CCER\_CC1E | TIM\_CCER\_CC2E | TIM\_CCER\_CC3E | TIM\_CCER\_CC4E))}}
+\DoxyCodeLine{1840 \textcolor{preprocessor}{\#define TIM\_CCER\_CCxNE\_MASK ((uint32\_t)(TIM\_CCER\_CC1NE | TIM\_CCER\_CC2NE | TIM\_CCER\_CC3NE | TIM\_CCER\_CC4NE))}}
+\DoxyCodeLine{1844 \textcolor{comment}{/* End of private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1845 }
+\DoxyCodeLine{1846 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1850 \textcolor{preprocessor}{\#if defined(COMP5) \&\& defined(COMP6) \&\& defined(COMP7)}}
+\DoxyCodeLine{1851 \textcolor{preprocessor}{\#define IS\_TIM\_CLEARINPUT\_SOURCE(\_\_MODE\_\_)  (((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_ETR)      || \(\backslash\)}}
+\DoxyCodeLine{1852 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP1)    || \(\backslash\)}}
+\DoxyCodeLine{1853 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP2)    || \(\backslash\)}}
+\DoxyCodeLine{1854 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP3)    || \(\backslash\)}}
+\DoxyCodeLine{1855 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP4)    || \(\backslash\)}}
+\DoxyCodeLine{1856 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP5)    || \(\backslash\)}}
+\DoxyCodeLine{1857 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP6)    || \(\backslash\)}}
+\DoxyCodeLine{1858 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP7)    || \(\backslash\)}}
+\DoxyCodeLine{1859 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_NONE))}}
+\DoxyCodeLine{1860 \textcolor{preprocessor}{\#else }\textcolor{comment}{/* COMP5 \&\& COMP6 \&\& COMP7 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1861 \textcolor{preprocessor}{\#define IS\_TIM\_CLEARINPUT\_SOURCE(\_\_MODE\_\_)  (((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_ETR)      || \(\backslash\)}}
+\DoxyCodeLine{1862 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP1)    || \(\backslash\)}}
+\DoxyCodeLine{1863 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP2)    || \(\backslash\)}}
+\DoxyCodeLine{1864 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP3)    || \(\backslash\)}}
+\DoxyCodeLine{1865 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_COMP4)    || \(\backslash\)}}
+\DoxyCodeLine{1866 \textcolor{preprocessor}{                                             ((\_\_MODE\_\_) == TIM\_CLEARINPUTSOURCE\_NONE))}}
+\DoxyCodeLine{1867 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP5 \&\& COMP6 \&\& COMP7 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1868 }
+\DoxyCodeLine{1869 \textcolor{preprocessor}{\#define IS\_TIM\_DMA\_BASE(\_\_BASE\_\_) (((\_\_BASE\_\_) == TIM\_DMABASE\_CR1)   || \(\backslash\)}}
+\DoxyCodeLine{1870 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CR2)   || \(\backslash\)}}
+\DoxyCodeLine{1871 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_SMCR)  || \(\backslash\)}}
+\DoxyCodeLine{1872 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_DIER)  || \(\backslash\)}}
+\DoxyCodeLine{1873 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_SR)    || \(\backslash\)}}
+\DoxyCodeLine{1874 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_EGR)   || \(\backslash\)}}
+\DoxyCodeLine{1875 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCMR1) || \(\backslash\)}}
+\DoxyCodeLine{1876 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCMR2) || \(\backslash\)}}
+\DoxyCodeLine{1877 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCER)  || \(\backslash\)}}
+\DoxyCodeLine{1878 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CNT)   || \(\backslash\)}}
+\DoxyCodeLine{1879 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_PSC)   || \(\backslash\)}}
+\DoxyCodeLine{1880 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_ARR)   || \(\backslash\)}}
+\DoxyCodeLine{1881 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_RCR)   || \(\backslash\)}}
+\DoxyCodeLine{1882 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCR1)  || \(\backslash\)}}
+\DoxyCodeLine{1883 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCR2)  || \(\backslash\)}}
+\DoxyCodeLine{1884 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCR3)  || \(\backslash\)}}
+\DoxyCodeLine{1885 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCR4)  || \(\backslash\)}}
+\DoxyCodeLine{1886 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_BDTR)  || \(\backslash\)}}
+\DoxyCodeLine{1887 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCMR3) || \(\backslash\)}}
+\DoxyCodeLine{1888 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCR5)  || \(\backslash\)}}
+\DoxyCodeLine{1889 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_CCR6)  || \(\backslash\)}}
+\DoxyCodeLine{1890 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_AF1)   || \(\backslash\)}}
+\DoxyCodeLine{1891 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_AF2)   || \(\backslash\)}}
+\DoxyCodeLine{1892 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_TISEL) || \(\backslash\)}}
+\DoxyCodeLine{1893 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_DTR2)  || \(\backslash\)}}
+\DoxyCodeLine{1894 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_ECR)  || \(\backslash\)}}
+\DoxyCodeLine{1895 \textcolor{preprocessor}{                                   ((\_\_BASE\_\_) == TIM\_DMABASE\_OR))}}
+\DoxyCodeLine{1896 }
+\DoxyCodeLine{1897 \textcolor{preprocessor}{\#define IS\_TIM\_EVENT\_SOURCE(\_\_SOURCE\_\_) ((((\_\_SOURCE\_\_) \& 0xFFFFFE00U) == 0x00000000U) \&\& ((\_\_SOURCE\_\_) != 0x00000000U))}}
+\DoxyCodeLine{1898 }
+\DoxyCodeLine{1899 \textcolor{preprocessor}{\#define IS\_TIM\_COUNTER\_MODE(\_\_MODE\_\_)      (((\_\_MODE\_\_) == TIM\_COUNTERMODE\_UP)              || \(\backslash\)}}
+\DoxyCodeLine{1900 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_COUNTERMODE\_DOWN)            || \(\backslash\)}}
+\DoxyCodeLine{1901 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_COUNTERMODE\_CENTERALIGNED1)  || \(\backslash\)}}
+\DoxyCodeLine{1902 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_COUNTERMODE\_CENTERALIGNED2)  || \(\backslash\)}}
+\DoxyCodeLine{1903 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_COUNTERMODE\_CENTERALIGNED3))}}
+\DoxyCodeLine{1904 }
+\DoxyCodeLine{1905 \textcolor{preprocessor}{\#define IS\_TIM\_UIFREMAP\_MODE(\_\_MODE\_\_)     (((\_\_MODE\_\_) == TIM\_UIFREMAP\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{1906 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_UIFREMAP\_ENALE))}}
+\DoxyCodeLine{1907 }
+\DoxyCodeLine{1908 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKDIVISION\_DIV(\_\_DIV\_\_)  (((\_\_DIV\_\_) == TIM\_CLOCKDIVISION\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{1909 \textcolor{preprocessor}{                                            ((\_\_DIV\_\_) == TIM\_CLOCKDIVISION\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{1910 \textcolor{preprocessor}{                                            ((\_\_DIV\_\_) == TIM\_CLOCKDIVISION\_DIV4))}}
+\DoxyCodeLine{1911 }
+\DoxyCodeLine{1912 \textcolor{preprocessor}{\#define IS\_TIM\_AUTORELOAD\_PRELOAD(PRELOAD) (((PRELOAD) == TIM\_AUTORELOAD\_PRELOAD\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{1913 \textcolor{preprocessor}{                                            ((PRELOAD) == TIM\_AUTORELOAD\_PRELOAD\_ENABLE))}}
+\DoxyCodeLine{1914 }
+\DoxyCodeLine{1915 \textcolor{preprocessor}{\#define IS\_TIM\_FAST\_STATE(\_\_STATE\_\_)       (((\_\_STATE\_\_) == TIM\_OCFAST\_DISABLE) || \(\backslash\)}}
+\DoxyCodeLine{1916 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_OCFAST\_ENABLE))}}
+\DoxyCodeLine{1917 }
+\DoxyCodeLine{1918 \textcolor{preprocessor}{\#define IS\_TIM\_OC\_POLARITY(\_\_POLARITY\_\_)   (((\_\_POLARITY\_\_) == TIM\_OCPOLARITY\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{1919 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_OCPOLARITY\_LOW))}}
+\DoxyCodeLine{1920 }
+\DoxyCodeLine{1921 \textcolor{preprocessor}{\#define IS\_TIM\_OCN\_POLARITY(\_\_POLARITY\_\_)  (((\_\_POLARITY\_\_) == TIM\_OCNPOLARITY\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{1922 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_OCNPOLARITY\_LOW))}}
+\DoxyCodeLine{1923 }
+\DoxyCodeLine{1924 \textcolor{preprocessor}{\#define IS\_TIM\_OCIDLE\_STATE(\_\_STATE\_\_)     (((\_\_STATE\_\_) == TIM\_OCIDLESTATE\_SET) || \(\backslash\)}}
+\DoxyCodeLine{1925 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_OCIDLESTATE\_RESET))}}
+\DoxyCodeLine{1926 }
+\DoxyCodeLine{1927 \textcolor{preprocessor}{\#define IS\_TIM\_OCNIDLE\_STATE(\_\_STATE\_\_)    (((\_\_STATE\_\_) == TIM\_OCNIDLESTATE\_SET) || \(\backslash\)}}
+\DoxyCodeLine{1928 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_OCNIDLESTATE\_RESET))}}
+\DoxyCodeLine{1929 }
+\DoxyCodeLine{1930 \textcolor{preprocessor}{\#define IS\_TIM\_ENCODERINPUT\_POLARITY(\_\_POLARITY\_\_)   (((\_\_POLARITY\_\_) == TIM\_ENCODERINPUTPOLARITY\_RISING)   || \(\backslash\)}}
+\DoxyCodeLine{1931 \textcolor{preprocessor}{                                                      ((\_\_POLARITY\_\_) == TIM\_ENCODERINPUTPOLARITY\_FALLING))}}
+\DoxyCodeLine{1932 }
+\DoxyCodeLine{1933 \textcolor{preprocessor}{\#define IS\_TIM\_IC\_POLARITY(\_\_POLARITY\_\_)   (((\_\_POLARITY\_\_) == TIM\_ICPOLARITY\_RISING)   || \(\backslash\)}}
+\DoxyCodeLine{1934 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_ICPOLARITY\_FALLING)  || \(\backslash\)}}
+\DoxyCodeLine{1935 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_ICPOLARITY\_BOTHEDGE))}}
+\DoxyCodeLine{1936 }
+\DoxyCodeLine{1937 \textcolor{preprocessor}{\#define IS\_TIM\_IC\_SELECTION(\_\_SELECTION\_\_) (((\_\_SELECTION\_\_) == TIM\_ICSELECTION\_DIRECTTI) || \(\backslash\)}}
+\DoxyCodeLine{1938 \textcolor{preprocessor}{                                            ((\_\_SELECTION\_\_) == TIM\_ICSELECTION\_INDIRECTTI) || \(\backslash\)}}
+\DoxyCodeLine{1939 \textcolor{preprocessor}{                                            ((\_\_SELECTION\_\_) == TIM\_ICSELECTION\_TRC))}}
+\DoxyCodeLine{1940 }
+\DoxyCodeLine{1941 \textcolor{preprocessor}{\#define IS\_TIM\_IC\_PRESCALER(\_\_PRESCALER\_\_) (((\_\_PRESCALER\_\_) == TIM\_ICPSC\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{1942 \textcolor{preprocessor}{                                            ((\_\_PRESCALER\_\_) == TIM\_ICPSC\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{1943 \textcolor{preprocessor}{                                            ((\_\_PRESCALER\_\_) == TIM\_ICPSC\_DIV4) || \(\backslash\)}}
+\DoxyCodeLine{1944 \textcolor{preprocessor}{                                            ((\_\_PRESCALER\_\_) == TIM\_ICPSC\_DIV8))}}
+\DoxyCodeLine{1945 }
+\DoxyCodeLine{1946 \textcolor{preprocessor}{\#define IS\_TIM\_OPM\_MODE(\_\_MODE\_\_)          (((\_\_MODE\_\_) == TIM\_OPMODE\_SINGLE) || \(\backslash\)}}
+\DoxyCodeLine{1947 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_OPMODE\_REPETITIVE))}}
+\DoxyCodeLine{1948 }
+\DoxyCodeLine{1949 \textcolor{preprocessor}{\#define IS\_TIM\_ENCODER\_MODE(\_\_MODE\_\_)      (((\_\_MODE\_\_) == TIM\_ENCODERMODE\_TI1)                      || \(\backslash\)}}
+\DoxyCodeLine{1950 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_TI2)                      || \(\backslash\)}}
+\DoxyCodeLine{1951 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_TI12)                     || \(\backslash\)}}
+\DoxyCodeLine{1952 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_CLOCKPLUSDIRECTION\_X2)    || \(\backslash\)}}
+\DoxyCodeLine{1953 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_CLOCKPLUSDIRECTION\_X1)    || \(\backslash\)}}
+\DoxyCodeLine{1954 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_DIRECTIONALCLOCK\_X2)      || \(\backslash\)}}
+\DoxyCodeLine{1955 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_DIRECTIONALCLOCK\_X1\_TI12) || \(\backslash\)}}
+\DoxyCodeLine{1956 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_X1\_TI1)                   || \(\backslash\)}}
+\DoxyCodeLine{1957 \textcolor{preprocessor}{                                            ((\_\_MODE\_\_) == TIM\_ENCODERMODE\_X1\_TI2))}}
+\DoxyCodeLine{1958 }
+\DoxyCodeLine{1959 \textcolor{preprocessor}{\#define IS\_TIM\_DMA\_SOURCE(\_\_SOURCE\_\_) ((((\_\_SOURCE\_\_) \& 0xFFFF80FFU) == 0x00000000U) \&\& ((\_\_SOURCE\_\_) != 0x00000000U))}}
+\DoxyCodeLine{1960 }
+\DoxyCodeLine{1961 \textcolor{preprocessor}{\#define IS\_TIM\_CHANNELS(\_\_CHANNEL\_\_)       (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) || \(\backslash\)}}
+\DoxyCodeLine{1962 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) || \(\backslash\)}}
+\DoxyCodeLine{1963 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) || \(\backslash\)}}
+\DoxyCodeLine{1964 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) || \(\backslash\)}}
+\DoxyCodeLine{1965 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) || \(\backslash\)}}
+\DoxyCodeLine{1966 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_6) || \(\backslash\)}}
+\DoxyCodeLine{1967 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_ALL))}}
+\DoxyCodeLine{1968 }
+\DoxyCodeLine{1969 \textcolor{preprocessor}{\#define IS\_TIM\_OPM\_CHANNELS(\_\_CHANNEL\_\_)   (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) || \(\backslash\)}}
+\DoxyCodeLine{1970 \textcolor{preprocessor}{                                            ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2))}}
+\DoxyCodeLine{1971 }
+\DoxyCodeLine{1972 \textcolor{preprocessor}{\#define IS\_TIM\_COMPLEMENTARY\_CHANNELS(\_\_CHANNEL\_\_) (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) || \(\backslash\)}}
+\DoxyCodeLine{1973 \textcolor{preprocessor}{                                                    ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) || \(\backslash\)}}
+\DoxyCodeLine{1974 \textcolor{preprocessor}{                                                    ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) || \(\backslash\)}}
+\DoxyCodeLine{1975 \textcolor{preprocessor}{                                                    ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4))}}
+\DoxyCodeLine{1976 }
+\DoxyCodeLine{1977 \textcolor{preprocessor}{\#if defined(TIM5) \&\& defined(TIM20)}}
+\DoxyCodeLine{1978 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKSOURCE(\_\_CLOCK\_\_) (((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_INTERNAL) || \(\backslash\)}}
+\DoxyCodeLine{1979 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE2) || \(\backslash\)}}
+\DoxyCodeLine{1980 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR0)     || \(\backslash\)}}
+\DoxyCodeLine{1981 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR1)     || \(\backslash\)}}
+\DoxyCodeLine{1982 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR2)     || \(\backslash\)}}
+\DoxyCodeLine{1983 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR3)     || \(\backslash\)}}
+\DoxyCodeLine{1984 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1ED)    || \(\backslash\)}}
+\DoxyCodeLine{1985 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1)      || \(\backslash\)}}
+\DoxyCodeLine{1986 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI2)      || \(\backslash\)}}
+\DoxyCodeLine{1987 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE1) || \(\backslash\)}}
+\DoxyCodeLine{1988 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR4)     || \(\backslash\)}}
+\DoxyCodeLine{1989 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR5)     || \(\backslash\)}}
+\DoxyCodeLine{1990 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR6)     || \(\backslash\)}}
+\DoxyCodeLine{1991 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR7)     || \(\backslash\)}}
+\DoxyCodeLine{1992 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR8)     || \(\backslash\)}}
+\DoxyCodeLine{1993 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR9)     || \(\backslash\)}}
+\DoxyCodeLine{1994 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR10)    || \(\backslash\)}}
+\DoxyCodeLine{1995 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR11))}}
+\DoxyCodeLine{1996 \textcolor{preprocessor}{\#elif defined(TIM5)}}
+\DoxyCodeLine{1997 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKSOURCE(\_\_CLOCK\_\_) (((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_INTERNAL) || \(\backslash\)}}
+\DoxyCodeLine{1998 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE2) || \(\backslash\)}}
+\DoxyCodeLine{1999 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR0)     || \(\backslash\)}}
+\DoxyCodeLine{2000 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR1)     || \(\backslash\)}}
+\DoxyCodeLine{2001 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR2)     || \(\backslash\)}}
+\DoxyCodeLine{2002 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR3)     || \(\backslash\)}}
+\DoxyCodeLine{2003 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1ED)    || \(\backslash\)}}
+\DoxyCodeLine{2004 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1)      || \(\backslash\)}}
+\DoxyCodeLine{2005 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI2)      || \(\backslash\)}}
+\DoxyCodeLine{2006 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE1) || \(\backslash\)}}
+\DoxyCodeLine{2007 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR4)     || \(\backslash\)}}
+\DoxyCodeLine{2008 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR5)     || \(\backslash\)}}
+\DoxyCodeLine{2009 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR6)     || \(\backslash\)}}
+\DoxyCodeLine{2010 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR7)     || \(\backslash\)}}
+\DoxyCodeLine{2011 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR8)     || \(\backslash\)}}
+\DoxyCodeLine{2012 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR11))}}
+\DoxyCodeLine{2013 \textcolor{preprocessor}{\#elif defined(TIM20)}}
+\DoxyCodeLine{2014 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKSOURCE(\_\_CLOCK\_\_) (((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_INTERNAL) || \(\backslash\)}}
+\DoxyCodeLine{2015 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE2) || \(\backslash\)}}
+\DoxyCodeLine{2016 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR0)     || \(\backslash\)}}
+\DoxyCodeLine{2017 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR1)     || \(\backslash\)}}
+\DoxyCodeLine{2018 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR2)     || \(\backslash\)}}
+\DoxyCodeLine{2019 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR3)     || \(\backslash\)}}
+\DoxyCodeLine{2020 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1ED)    || \(\backslash\)}}
+\DoxyCodeLine{2021 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1)      || \(\backslash\)}}
+\DoxyCodeLine{2022 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI2)      || \(\backslash\)}}
+\DoxyCodeLine{2023 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE1) || \(\backslash\)}}
+\DoxyCodeLine{2024 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR5)     || \(\backslash\)}}
+\DoxyCodeLine{2025 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR6)     || \(\backslash\)}}
+\DoxyCodeLine{2026 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR7)     || \(\backslash\)}}
+\DoxyCodeLine{2027 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR8)     || \(\backslash\)}}
+\DoxyCodeLine{2028 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR9)     || \(\backslash\)}}
+\DoxyCodeLine{2029 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR11))}}
+\DoxyCodeLine{2030 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{2031 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKSOURCE(\_\_CLOCK\_\_) (((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_INTERNAL) || \(\backslash\)}}
+\DoxyCodeLine{2032 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE2) || \(\backslash\)}}
+\DoxyCodeLine{2033 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR0)     || \(\backslash\)}}
+\DoxyCodeLine{2034 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR1)     || \(\backslash\)}}
+\DoxyCodeLine{2035 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR2)     || \(\backslash\)}}
+\DoxyCodeLine{2036 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR3)     || \(\backslash\)}}
+\DoxyCodeLine{2037 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1ED)    || \(\backslash\)}}
+\DoxyCodeLine{2038 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI1)      || \(\backslash\)}}
+\DoxyCodeLine{2039 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_TI2)      || \(\backslash\)}}
+\DoxyCodeLine{2040 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ETRMODE1) || \(\backslash\)}}
+\DoxyCodeLine{2041 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR5)     || \(\backslash\)}}
+\DoxyCodeLine{2042 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR6)     || \(\backslash\)}}
+\DoxyCodeLine{2043 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR7)     || \(\backslash\)}}
+\DoxyCodeLine{2044 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR8)     || \(\backslash\)}}
+\DoxyCodeLine{2045 \textcolor{preprocessor}{                                       ((\_\_CLOCK\_\_) == TIM\_CLOCKSOURCE\_ITR11))}}
+\DoxyCodeLine{2046 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 \&\& TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2047 }
+\DoxyCodeLine{2048 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKPOLARITY(\_\_POLARITY\_\_) (((\_\_POLARITY\_\_) == TIM\_CLOCKPOLARITY\_INVERTED)    || \(\backslash\)}}
+\DoxyCodeLine{2049 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_CLOCKPOLARITY\_NONINVERTED) || \(\backslash\)}}
+\DoxyCodeLine{2050 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_CLOCKPOLARITY\_RISING)      || \(\backslash\)}}
+\DoxyCodeLine{2051 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_CLOCKPOLARITY\_FALLING)     || \(\backslash\)}}
+\DoxyCodeLine{2052 \textcolor{preprocessor}{                                            ((\_\_POLARITY\_\_) == TIM\_CLOCKPOLARITY\_BOTHEDGE))}}
+\DoxyCodeLine{2053 }
+\DoxyCodeLine{2054 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKPRESCALER(\_\_PRESCALER\_\_) (((\_\_PRESCALER\_\_) == TIM\_CLOCKPRESCALER\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{2055 \textcolor{preprocessor}{                                              ((\_\_PRESCALER\_\_) == TIM\_CLOCKPRESCALER\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{2056 \textcolor{preprocessor}{                                              ((\_\_PRESCALER\_\_) == TIM\_CLOCKPRESCALER\_DIV4) || \(\backslash\)}}
+\DoxyCodeLine{2057 \textcolor{preprocessor}{                                              ((\_\_PRESCALER\_\_) == TIM\_CLOCKPRESCALER\_DIV8))}}
+\DoxyCodeLine{2058 }
+\DoxyCodeLine{2059 \textcolor{preprocessor}{\#define IS\_TIM\_CLOCKFILTER(\_\_ICFILTER\_\_)      ((\_\_ICFILTER\_\_) <= 0xFU)}}
+\DoxyCodeLine{2060 }
+\DoxyCodeLine{2061 \textcolor{preprocessor}{\#define IS\_TIM\_CLEARINPUT\_POLARITY(\_\_POLARITY\_\_) (((\_\_POLARITY\_\_) == TIM\_CLEARINPUTPOLARITY\_INVERTED) || \(\backslash\)}}
+\DoxyCodeLine{2062 \textcolor{preprocessor}{                                                  ((\_\_POLARITY\_\_) == TIM\_CLEARINPUTPOLARITY\_NONINVERTED))}}
+\DoxyCodeLine{2063 }
+\DoxyCodeLine{2064 \textcolor{preprocessor}{\#define IS\_TIM\_CLEARINPUT\_PRESCALER(\_\_PRESCALER\_\_) (((\_\_PRESCALER\_\_) == TIM\_CLEARINPUTPRESCALER\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{2065 \textcolor{preprocessor}{                                                    ((\_\_PRESCALER\_\_) == TIM\_CLEARINPUTPRESCALER\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{2066 \textcolor{preprocessor}{                                                    ((\_\_PRESCALER\_\_) == TIM\_CLEARINPUTPRESCALER\_DIV4) || \(\backslash\)}}
+\DoxyCodeLine{2067 \textcolor{preprocessor}{                                                    ((\_\_PRESCALER\_\_) == TIM\_CLEARINPUTPRESCALER\_DIV8))}}
+\DoxyCodeLine{2068 }
+\DoxyCodeLine{2069 \textcolor{preprocessor}{\#define IS\_TIM\_CLEARINPUT\_FILTER(\_\_ICFILTER\_\_) ((\_\_ICFILTER\_\_) <= 0xFU)}}
+\DoxyCodeLine{2070 }
+\DoxyCodeLine{2071 \textcolor{preprocessor}{\#define IS\_TIM\_OSSR\_STATE(\_\_STATE\_\_)       (((\_\_STATE\_\_) == TIM\_OSSR\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2072 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_OSSR\_DISABLE))}}
+\DoxyCodeLine{2073 }
+\DoxyCodeLine{2074 \textcolor{preprocessor}{\#define IS\_TIM\_OSSI\_STATE(\_\_STATE\_\_)       (((\_\_STATE\_\_) == TIM\_OSSI\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2075 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_OSSI\_DISABLE))}}
+\DoxyCodeLine{2076 }
+\DoxyCodeLine{2077 \textcolor{preprocessor}{\#define IS\_TIM\_LOCK\_LEVEL(\_\_LEVEL\_\_)       (((\_\_LEVEL\_\_) == TIM\_LOCKLEVEL\_OFF) || \(\backslash\)}}
+\DoxyCodeLine{2078 \textcolor{preprocessor}{                                            ((\_\_LEVEL\_\_) == TIM\_LOCKLEVEL\_1)   || \(\backslash\)}}
+\DoxyCodeLine{2079 \textcolor{preprocessor}{                                            ((\_\_LEVEL\_\_) == TIM\_LOCKLEVEL\_2)   || \(\backslash\)}}
+\DoxyCodeLine{2080 \textcolor{preprocessor}{                                            ((\_\_LEVEL\_\_) == TIM\_LOCKLEVEL\_3))}}
+\DoxyCodeLine{2081 }
+\DoxyCodeLine{2082 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK\_FILTER(\_\_BRKFILTER\_\_) ((\_\_BRKFILTER\_\_) <= 0xFUL)}}
+\DoxyCodeLine{2083 }
+\DoxyCodeLine{2084 }
+\DoxyCodeLine{2085 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK\_STATE(\_\_STATE\_\_)      (((\_\_STATE\_\_) == TIM\_BREAK\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2086 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_BREAK\_DISABLE))}}
+\DoxyCodeLine{2087 }
+\DoxyCodeLine{2088 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK\_POLARITY(\_\_POLARITY\_\_) (((\_\_POLARITY\_\_) == TIM\_BREAKPOLARITY\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{2089 \textcolor{preprocessor}{                                             ((\_\_POLARITY\_\_) == TIM\_BREAKPOLARITY\_HIGH))}}
+\DoxyCodeLine{2090 }
+\DoxyCodeLine{2091 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK\_AFMODE(\_\_AFMODE\_\_) (((\_\_AFMODE\_\_) == TIM\_BREAK\_AFMODE\_INPUT) || \(\backslash\)}}
+\DoxyCodeLine{2092 \textcolor{preprocessor}{                                         ((\_\_AFMODE\_\_) == TIM\_BREAK\_AFMODE\_BIDIRECTIONAL))}}
+\DoxyCodeLine{2093 }
+\DoxyCodeLine{2094 }
+\DoxyCodeLine{2095 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK2\_STATE(\_\_STATE\_\_)     (((\_\_STATE\_\_) == TIM\_BREAK2\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2096 \textcolor{preprocessor}{                                            ((\_\_STATE\_\_) == TIM\_BREAK2\_DISABLE))}}
+\DoxyCodeLine{2097 }
+\DoxyCodeLine{2098 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK2\_POLARITY(\_\_POLARITY\_\_) (((\_\_POLARITY\_\_) == TIM\_BREAK2POLARITY\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{2099 \textcolor{preprocessor}{                                              ((\_\_POLARITY\_\_) == TIM\_BREAK2POLARITY\_HIGH))}}
+\DoxyCodeLine{2100 }
+\DoxyCodeLine{2101 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK2\_AFMODE(\_\_AFMODE\_\_) (((\_\_AFMODE\_\_) == TIM\_BREAK2\_AFMODE\_INPUT) || \(\backslash\)}}
+\DoxyCodeLine{2102 \textcolor{preprocessor}{                                          ((\_\_AFMODE\_\_) == TIM\_BREAK2\_AFMODE\_BIDIRECTIONAL))}}
+\DoxyCodeLine{2103 }
+\DoxyCodeLine{2104 }
+\DoxyCodeLine{2105 \textcolor{preprocessor}{\#define IS\_TIM\_AUTOMATIC\_OUTPUT\_STATE(\_\_STATE\_\_) (((\_\_STATE\_\_) == TIM\_AUTOMATICOUTPUT\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2106 \textcolor{preprocessor}{                                                  ((\_\_STATE\_\_) == TIM\_AUTOMATICOUTPUT\_DISABLE))}}
+\DoxyCodeLine{2107 }
+\DoxyCodeLine{2108 \textcolor{preprocessor}{\#define IS\_TIM\_GROUPCH5(\_\_OCREF\_\_) ((((\_\_OCREF\_\_) \& 0x1FFFFFFFU) == 0x00000000U))}}
+\DoxyCodeLine{2109 }
+\DoxyCodeLine{2110 \textcolor{preprocessor}{\#define IS\_TIM\_TRGO\_SOURCE(\_\_SOURCE\_\_) (((\_\_SOURCE\_\_) == TIM\_TRGO\_RESET)  || \(\backslash\)}}
+\DoxyCodeLine{2111 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2112 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_UPDATE) || \(\backslash\)}}
+\DoxyCodeLine{2113 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_OC1)    || \(\backslash\)}}
+\DoxyCodeLine{2114 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_OC1REF) || \(\backslash\)}}
+\DoxyCodeLine{2115 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_OC2REF) || \(\backslash\)}}
+\DoxyCodeLine{2116 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_OC3REF) || \(\backslash\)}}
+\DoxyCodeLine{2117 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_OC4REF) || \(\backslash\)}}
+\DoxyCodeLine{2118 \textcolor{preprocessor}{                                        ((\_\_SOURCE\_\_) == TIM\_TRGO\_ENCODER\_CLK))}}
+\DoxyCodeLine{2119 }
+\DoxyCodeLine{2120 \textcolor{preprocessor}{\#define IS\_TIM\_TRGO2\_SOURCE(\_\_SOURCE\_\_) (((\_\_SOURCE\_\_) == TIM\_TRGO2\_RESET)                        || \(\backslash\)}}
+\DoxyCodeLine{2121 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_ENABLE)                       || \(\backslash\)}}
+\DoxyCodeLine{2122 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_UPDATE)                       || \(\backslash\)}}
+\DoxyCodeLine{2123 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC1)                          || \(\backslash\)}}
+\DoxyCodeLine{2124 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC1REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2125 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC2REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2126 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC3REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2127 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC3REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2128 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC4REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2129 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC5REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2130 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC6REF)                       || \(\backslash\)}}
+\DoxyCodeLine{2131 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC4REF\_RISINGFALLING)         || \(\backslash\)}}
+\DoxyCodeLine{2132 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC6REF\_RISINGFALLING)         || \(\backslash\)}}
+\DoxyCodeLine{2133 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC4REF\_RISING\_OC6REF\_RISING)  || \(\backslash\)}}
+\DoxyCodeLine{2134 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC4REF\_RISING\_OC6REF\_FALLING) || \(\backslash\)}}
+\DoxyCodeLine{2135 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC5REF\_RISING\_OC6REF\_RISING)  || \(\backslash\)}}
+\DoxyCodeLine{2136 \textcolor{preprocessor}{                                         ((\_\_SOURCE\_\_) == TIM\_TRGO2\_OC5REF\_RISING\_OC6REF\_FALLING))}}
+\DoxyCodeLine{2137 }
+\DoxyCodeLine{2138 \textcolor{preprocessor}{\#define IS\_TIM\_MSM\_STATE(\_\_STATE\_\_)      (((\_\_STATE\_\_) == TIM\_MASTERSLAVEMODE\_ENABLE) || \(\backslash\)}}
+\DoxyCodeLine{2139 \textcolor{preprocessor}{                                          ((\_\_STATE\_\_) == TIM\_MASTERSLAVEMODE\_DISABLE))}}
+\DoxyCodeLine{2140 }
+\DoxyCodeLine{2141 \textcolor{preprocessor}{\#define IS\_TIM\_SLAVE\_MODE(\_\_MODE\_\_) (((\_\_MODE\_\_) == TIM\_SLAVEMODE\_DISABLE)               || \(\backslash\)}}
+\DoxyCodeLine{2142 \textcolor{preprocessor}{                                     ((\_\_MODE\_\_) == TIM\_SLAVEMODE\_RESET)                 || \(\backslash\)}}
+\DoxyCodeLine{2143 \textcolor{preprocessor}{                                     ((\_\_MODE\_\_) == TIM\_SLAVEMODE\_GATED)                 || \(\backslash\)}}
+\DoxyCodeLine{2144 \textcolor{preprocessor}{                                     ((\_\_MODE\_\_) == TIM\_SLAVEMODE\_TRIGGER)               || \(\backslash\)}}
+\DoxyCodeLine{2145 \textcolor{preprocessor}{                                     ((\_\_MODE\_\_) == TIM\_SLAVEMODE\_EXTERNAL1)             || \(\backslash\)}}
+\DoxyCodeLine{2146 \textcolor{preprocessor}{                                     ((\_\_MODE\_\_) == TIM\_SLAVEMODE\_COMBINED\_RESETTRIGGER) || \(\backslash\)}}
+\DoxyCodeLine{2147 \textcolor{preprocessor}{                                     ((\_\_MODE\_\_) == TIM\_SLAVEMODE\_COMBINED\_GATEDRESET))}}
+\DoxyCodeLine{2148 }
+\DoxyCodeLine{2149 \textcolor{preprocessor}{\#define IS\_TIM\_PWM\_MODE(\_\_MODE\_\_) (((\_\_MODE\_\_) == TIM\_OCMODE\_PWM1)               || \(\backslash\)}}
+\DoxyCodeLine{2150 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_PWM2)               || \(\backslash\)}}
+\DoxyCodeLine{2151 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_COMBINED\_PWM1)      || \(\backslash\)}}
+\DoxyCodeLine{2152 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_COMBINED\_PWM2)      || \(\backslash\)}}
+\DoxyCodeLine{2153 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_ASSYMETRIC\_PWM1)    || \(\backslash\)}}
+\DoxyCodeLine{2154 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_ASSYMETRIC\_PWM2))}}
+\DoxyCodeLine{2155 }
+\DoxyCodeLine{2156 \textcolor{preprocessor}{\#define IS\_TIM\_OC\_MODE(\_\_MODE\_\_)  (((\_\_MODE\_\_) == TIM\_OCMODE\_TIMING)             || \(\backslash\)}}
+\DoxyCodeLine{2157 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_ACTIVE)             || \(\backslash\)}}
+\DoxyCodeLine{2158 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_INACTIVE)           || \(\backslash\)}}
+\DoxyCodeLine{2159 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_TOGGLE)             || \(\backslash\)}}
+\DoxyCodeLine{2160 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_FORCED\_ACTIVE)      || \(\backslash\)}}
+\DoxyCodeLine{2161 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_FORCED\_INACTIVE)    || \(\backslash\)}}
+\DoxyCodeLine{2162 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_RETRIGERRABLE\_OPM1) || \(\backslash\)}}
+\DoxyCodeLine{2163 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_RETRIGERRABLE\_OPM2) || \(\backslash\)}}
+\DoxyCodeLine{2164 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_DIRECTION\_OUTPUT)   || \(\backslash\)}}
+\DoxyCodeLine{2165 \textcolor{preprocessor}{                                   ((\_\_MODE\_\_) == TIM\_OCMODE\_PULSE\_ON\_COMPARE))}}
+\DoxyCodeLine{2166 }
+\DoxyCodeLine{2167 \textcolor{preprocessor}{\#if defined (TIM5) \&\& defined(TIM20)}}
+\DoxyCodeLine{2168 }
+\DoxyCodeLine{2169 \textcolor{preprocessor}{\#define IS\_TIM\_INTERNAL\_TRIGGEREVENT\_SELECTION(\_\_SELECTION\_\_) (((\_\_SELECTION\_\_) == TIM\_TS\_ITR0) || \(\backslash\)}}
+\DoxyCodeLine{2170 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR1) || \(\backslash\)}}
+\DoxyCodeLine{2171 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR2) || \(\backslash\)}}
+\DoxyCodeLine{2172 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR3) || \(\backslash\)}}
+\DoxyCodeLine{2173 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR4) || \(\backslash\)}}
+\DoxyCodeLine{2174 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR5) || \(\backslash\)}}
+\DoxyCodeLine{2175 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR6) || \(\backslash\)}}
+\DoxyCodeLine{2176 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR7) || \(\backslash\)}}
+\DoxyCodeLine{2177 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR8) || \(\backslash\)}}
+\DoxyCodeLine{2178 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR9) || \(\backslash\)}}
+\DoxyCodeLine{2179 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR10)|| \(\backslash\)}}
+\DoxyCodeLine{2180 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR11)|| \(\backslash\)}}
+\DoxyCodeLine{2181 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_NONE))}}
+\DoxyCodeLine{2182 \textcolor{preprocessor}{\#elif defined (TIM5)}}
+\DoxyCodeLine{2183 \textcolor{preprocessor}{\#define IS\_TIM\_INTERNAL\_TRIGGEREVENT\_SELECTION(\_\_SELECTION\_\_) (((\_\_SELECTION\_\_) == TIM\_TS\_ITR0) || \(\backslash\)}}
+\DoxyCodeLine{2184 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR1) || \(\backslash\)}}
+\DoxyCodeLine{2185 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR2) || \(\backslash\)}}
+\DoxyCodeLine{2186 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR3) || \(\backslash\)}}
+\DoxyCodeLine{2187 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR4) || \(\backslash\)}}
+\DoxyCodeLine{2188 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR5) || \(\backslash\)}}
+\DoxyCodeLine{2189 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR6) || \(\backslash\)}}
+\DoxyCodeLine{2190 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR7) || \(\backslash\)}}
+\DoxyCodeLine{2191 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR8) || \(\backslash\)}}
+\DoxyCodeLine{2192 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR10)|| \(\backslash\)}}
+\DoxyCodeLine{2193 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR11)|| \(\backslash\)}}
+\DoxyCodeLine{2194 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_NONE))}}
+\DoxyCodeLine{2195 \textcolor{preprocessor}{\#elif defined (TIM20)}}
+\DoxyCodeLine{2196 \textcolor{preprocessor}{\#define IS\_TIM\_INTERNAL\_TRIGGEREVENT\_SELECTION(\_\_SELECTION\_\_) (((\_\_SELECTION\_\_) == TIM\_TS\_ITR0) || \(\backslash\)}}
+\DoxyCodeLine{2197 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR1) || \(\backslash\)}}
+\DoxyCodeLine{2198 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR2) || \(\backslash\)}}
+\DoxyCodeLine{2199 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR3) || \(\backslash\)}}
+\DoxyCodeLine{2200 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR5) || \(\backslash\)}}
+\DoxyCodeLine{2201 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR6) || \(\backslash\)}}
+\DoxyCodeLine{2202 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR7) || \(\backslash\)}}
+\DoxyCodeLine{2203 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR8) || \(\backslash\)}}
+\DoxyCodeLine{2204 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR9) || \(\backslash\)}}
+\DoxyCodeLine{2205 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR11)|| \(\backslash\)}}
+\DoxyCodeLine{2206 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_NONE))}}
+\DoxyCodeLine{2207 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{2208 \textcolor{preprocessor}{\#define IS\_TIM\_INTERNAL\_TRIGGEREVENT\_SELECTION(\_\_SELECTION\_\_) (((\_\_SELECTION\_\_) == TIM\_TS\_ITR0) || \(\backslash\)}}
+\DoxyCodeLine{2209 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR1) || \(\backslash\)}}
+\DoxyCodeLine{2210 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR2) || \(\backslash\)}}
+\DoxyCodeLine{2211 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR3) || \(\backslash\)}}
+\DoxyCodeLine{2212 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR5) || \(\backslash\)}}
+\DoxyCodeLine{2213 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR6) || \(\backslash\)}}
+\DoxyCodeLine{2214 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR7) || \(\backslash\)}}
+\DoxyCodeLine{2215 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR8) || \(\backslash\)}}
+\DoxyCodeLine{2216 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_ITR11)|| \(\backslash\)}}
+\DoxyCodeLine{2217 \textcolor{preprocessor}{                                                               ((\_\_SELECTION\_\_) == TIM\_TS\_NONE))}}
+\DoxyCodeLine{2218 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 \&\& TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2219 }
+\DoxyCodeLine{2220 \textcolor{preprocessor}{\#define IS\_TIM\_TRIGGERPOLARITY(\_\_POLARITY\_\_)   (((\_\_POLARITY\_\_) == TIM\_TRIGGERPOLARITY\_INVERTED   ) || \(\backslash\)}}
+\DoxyCodeLine{2221 \textcolor{preprocessor}{                                                ((\_\_POLARITY\_\_) == TIM\_TRIGGERPOLARITY\_NONINVERTED) || \(\backslash\)}}
+\DoxyCodeLine{2222 \textcolor{preprocessor}{                                                ((\_\_POLARITY\_\_) == TIM\_TRIGGERPOLARITY\_RISING     ) || \(\backslash\)}}
+\DoxyCodeLine{2223 \textcolor{preprocessor}{                                                ((\_\_POLARITY\_\_) == TIM\_TRIGGERPOLARITY\_FALLING    ) || \(\backslash\)}}
+\DoxyCodeLine{2224 \textcolor{preprocessor}{                                                ((\_\_POLARITY\_\_) == TIM\_TRIGGERPOLARITY\_BOTHEDGE   ))}}
+\DoxyCodeLine{2225 }
+\DoxyCodeLine{2226 \textcolor{preprocessor}{\#define IS\_TIM\_TRIGGERPRESCALER(\_\_PRESCALER\_\_) (((\_\_PRESCALER\_\_) == TIM\_TRIGGERPRESCALER\_DIV1) || \(\backslash\)}}
+\DoxyCodeLine{2227 \textcolor{preprocessor}{                                                ((\_\_PRESCALER\_\_) == TIM\_TRIGGERPRESCALER\_DIV2) || \(\backslash\)}}
+\DoxyCodeLine{2228 \textcolor{preprocessor}{                                                ((\_\_PRESCALER\_\_) == TIM\_TRIGGERPRESCALER\_DIV4) || \(\backslash\)}}
+\DoxyCodeLine{2229 \textcolor{preprocessor}{                                                ((\_\_PRESCALER\_\_) == TIM\_TRIGGERPRESCALER\_DIV8))}}
+\DoxyCodeLine{2230 }
+\DoxyCodeLine{2231 \textcolor{preprocessor}{\#define IS\_TIM\_TRIGGERFILTER(\_\_ICFILTER\_\_) ((\_\_ICFILTER\_\_) <= 0xFU)}}
+\DoxyCodeLine{2232 }
+\DoxyCodeLine{2233 \textcolor{preprocessor}{\#define IS\_TIM\_TI1SELECTION(\_\_TI1SELECTION\_\_)  (((\_\_TI1SELECTION\_\_) == TIM\_TI1SELECTION\_CH1) || \(\backslash\)}}
+\DoxyCodeLine{2234 \textcolor{preprocessor}{                                                ((\_\_TI1SELECTION\_\_) == TIM\_TI1SELECTION\_XORCOMBINATION))}}
+\DoxyCodeLine{2235 }
+\DoxyCodeLine{2236 \textcolor{preprocessor}{\#define IS\_TIM\_DMA\_LENGTH(\_\_LENGTH\_\_)      (((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_1TRANSFER)   || \(\backslash\)}}
+\DoxyCodeLine{2237 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_2TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2238 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_3TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2239 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_4TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2240 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_5TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2241 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_6TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2242 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_7TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2243 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_8TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2244 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_9TRANSFERS)  || \(\backslash\)}}
+\DoxyCodeLine{2245 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_10TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2246 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_11TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2247 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_12TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2248 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_13TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2249 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_14TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2250 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_15TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2251 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_16TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2252 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_17TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2253 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_18TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2254 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_19TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2255 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_20TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2256 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_21TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2257 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_22TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2258 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_23TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2259 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_24TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2260 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_25TRANSFERS) || \(\backslash\)}}
+\DoxyCodeLine{2261 \textcolor{preprocessor}{                                            ((\_\_LENGTH\_\_) == TIM\_DMABURSTLENGTH\_26TRANSFERS))}}
+\DoxyCodeLine{2262 }
+\DoxyCodeLine{2263 \textcolor{preprocessor}{\#define IS\_TIM\_DMA\_DATA\_LENGTH(LENGTH) (((LENGTH) >= 0x1U) \&\& ((LENGTH) < 0x10000U))}}
+\DoxyCodeLine{2264 }
+\DoxyCodeLine{2265 \textcolor{preprocessor}{\#define IS\_TIM\_IC\_FILTER(\_\_ICFILTER\_\_)   ((\_\_ICFILTER\_\_) <= 0xFU)}}
+\DoxyCodeLine{2266 }
+\DoxyCodeLine{2267 \textcolor{preprocessor}{\#define IS\_TIM\_DEADTIME(\_\_DEADTIME\_\_)    ((\_\_DEADTIME\_\_) <= 0xFFU)}}
+\DoxyCodeLine{2268 }
+\DoxyCodeLine{2269 \textcolor{preprocessor}{\#define IS\_TIM\_BREAK\_SYSTEM(\_\_CONFIG\_\_)    (((\_\_CONFIG\_\_) == TIM\_BREAK\_SYSTEM\_ECC)                  || \(\backslash\)}}
+\DoxyCodeLine{2270 \textcolor{preprocessor}{                                            ((\_\_CONFIG\_\_) == TIM\_BREAK\_SYSTEM\_PVD)                  || \(\backslash\)}}
+\DoxyCodeLine{2271 \textcolor{preprocessor}{                                            ((\_\_CONFIG\_\_) == TIM\_BREAK\_SYSTEM\_SRAM\_PARITY\_ERROR)    || \(\backslash\)}}
+\DoxyCodeLine{2272 \textcolor{preprocessor}{                                            ((\_\_CONFIG\_\_) == TIM\_BREAK\_SYSTEM\_LOCKUP))}}
+\DoxyCodeLine{2273 }
+\DoxyCodeLine{2274 \textcolor{preprocessor}{\#define IS\_TIM\_SLAVEMODE\_TRIGGER\_ENABLED(\_\_TRIGGER\_\_) (((\_\_TRIGGER\_\_) == TIM\_SLAVEMODE\_TRIGGER) || \(\backslash\)}}
+\DoxyCodeLine{2275 \textcolor{preprocessor}{                                                       ((\_\_TRIGGER\_\_) == TIM\_SLAVEMODE\_COMBINED\_RESETTRIGGER))}}
+\DoxyCodeLine{2276 }
+\DoxyCodeLine{2277 \textcolor{preprocessor}{\#define TIM\_SET\_ICPRESCALERVALUE(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_ICPSC\_\_) \(\backslash\)}}
+\DoxyCodeLine{2278 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= (\_\_ICPSC\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2279 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 |= ((\_\_ICPSC\_\_) << 8U)) :\(\backslash\)}}
+\DoxyCodeLine{2280 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= (\_\_ICPSC\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2281 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 |= ((\_\_ICPSC\_\_) << 8U)))}}
+\DoxyCodeLine{2282 }
+\DoxyCodeLine{2283 \textcolor{preprocessor}{\#define TIM\_RESET\_ICPRESCALERVALUE(\_\_HANDLE\_\_, \_\_CHANNEL\_\_) \(\backslash\)}}
+\DoxyCodeLine{2284 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= \string~TIM\_CCMR1\_IC1PSC) :\(\backslash\)}}
+\DoxyCodeLine{2285 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR1 \&= \string~TIM\_CCMR1\_IC2PSC) :\(\backslash\)}}
+\DoxyCodeLine{2286 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= \string~TIM\_CCMR2\_IC3PSC) :\(\backslash\)}}
+\DoxyCodeLine{2287 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCMR2 \&= \string~TIM\_CCMR2\_IC4PSC))}}
+\DoxyCodeLine{2288 }
+\DoxyCodeLine{2289 \textcolor{preprocessor}{\#define TIM\_SET\_CAPTUREPOLARITY(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_POLARITY\_\_) \(\backslash\)}}
+\DoxyCodeLine{2290 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= (\_\_POLARITY\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2291 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= ((\_\_POLARITY\_\_) << 4U)) :\(\backslash\)}}
+\DoxyCodeLine{2292 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= ((\_\_POLARITY\_\_) << 8U)) :\(\backslash\)}}
+\DoxyCodeLine{2293 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER |= (((\_\_POLARITY\_\_) << 12U))))}}
+\DoxyCodeLine{2294 }
+\DoxyCodeLine{2295 \textcolor{preprocessor}{\#define TIM\_RESET\_CAPTUREPOLARITY(\_\_HANDLE\_\_, \_\_CHANNEL\_\_) \(\backslash\)}}
+\DoxyCodeLine{2296 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= \string~(TIM\_CCER\_CC1P | TIM\_CCER\_CC1NP)) :\(\backslash\)}}
+\DoxyCodeLine{2297 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= \string~(TIM\_CCER\_CC2P | TIM\_CCER\_CC2NP)) :\(\backslash\)}}
+\DoxyCodeLine{2298 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= \string~(TIM\_CCER\_CC3P | TIM\_CCER\_CC3NP)) :\(\backslash\)}}
+\DoxyCodeLine{2299 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>Instance-\/>CCER \&= \string~(TIM\_CCER\_CC4P | TIM\_CCER\_CC4NP)))}}
+\DoxyCodeLine{2300 }
+\DoxyCodeLine{2301 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_STATE\_GET(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)\(\backslash\)}}
+\DoxyCodeLine{2302 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? (\_\_HANDLE\_\_)-\/>ChannelState[0] :\(\backslash\)}}
+\DoxyCodeLine{2303 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? (\_\_HANDLE\_\_)-\/>ChannelState[1] :\(\backslash\)}}
+\DoxyCodeLine{2304 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? (\_\_HANDLE\_\_)-\/>ChannelState[2] :\(\backslash\)}}
+\DoxyCodeLine{2305 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? (\_\_HANDLE\_\_)-\/>ChannelState[3] :\(\backslash\)}}
+\DoxyCodeLine{2306 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? (\_\_HANDLE\_\_)-\/>ChannelState[4] :\(\backslash\)}}
+\DoxyCodeLine{2307 \textcolor{preprocessor}{   (\_\_HANDLE\_\_)-\/>ChannelState[5])}}
+\DoxyCodeLine{2308 }
+\DoxyCodeLine{2309 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_STATE\_SET(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_CHANNEL\_STATE\_\_) \(\backslash\)}}
+\DoxyCodeLine{2310 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>ChannelState[0] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2311 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>ChannelState[1] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2312 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>ChannelState[2] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2313 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_4) ? ((\_\_HANDLE\_\_)-\/>ChannelState[3] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2314 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_5) ? ((\_\_HANDLE\_\_)-\/>ChannelState[4] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2315 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>ChannelState[5] = (\_\_CHANNEL\_STATE\_\_)))}}
+\DoxyCodeLine{2316 }
+\DoxyCodeLine{2317 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_STATE\_SET\_ALL(\_\_HANDLE\_\_,  \_\_CHANNEL\_STATE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{2318 \textcolor{preprocessor}{                                                                       (\_\_HANDLE\_\_)-\/>ChannelState[0]  = \(\backslash\)}}
+\DoxyCodeLine{2319 \textcolor{preprocessor}{                                                                       (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2320 \textcolor{preprocessor}{                                                                       (\_\_HANDLE\_\_)-\/>ChannelState[1]  = \(\backslash\)}}
+\DoxyCodeLine{2321 \textcolor{preprocessor}{                                                                       (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2322 \textcolor{preprocessor}{                                                                       (\_\_HANDLE\_\_)-\/>ChannelState[2]  = \(\backslash\)}}
+\DoxyCodeLine{2323 \textcolor{preprocessor}{                                                                       (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2324 \textcolor{preprocessor}{                                                                       (\_\_HANDLE\_\_)-\/>ChannelState[3]  = \(\backslash\)}}
+\DoxyCodeLine{2325 \textcolor{preprocessor}{                                                                       (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2326 \textcolor{preprocessor}{                                                                       (\_\_HANDLE\_\_)-\/>ChannelState[4]  = \(\backslash\)}}
+\DoxyCodeLine{2327 \textcolor{preprocessor}{                                                                       (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2328 \textcolor{preprocessor}{                                                                       (\_\_HANDLE\_\_)-\/>ChannelState[5]  = \(\backslash\)}}
+\DoxyCodeLine{2329 \textcolor{preprocessor}{                                                                       (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2330 \textcolor{preprocessor}{                                                                     \} while(0)}}
+\DoxyCodeLine{2331 }
+\DoxyCodeLine{2332 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_N\_STATE\_GET(\_\_HANDLE\_\_, \_\_CHANNEL\_\_)\(\backslash\)}}
+\DoxyCodeLine{2333 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? (\_\_HANDLE\_\_)-\/>ChannelNState[0] :\(\backslash\)}}
+\DoxyCodeLine{2334 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? (\_\_HANDLE\_\_)-\/>ChannelNState[1] :\(\backslash\)}}
+\DoxyCodeLine{2335 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? (\_\_HANDLE\_\_)-\/>ChannelNState[2] :\(\backslash\)}}
+\DoxyCodeLine{2336 \textcolor{preprocessor}{   (\_\_HANDLE\_\_)-\/>ChannelNState[3])}}
+\DoxyCodeLine{2337 }
+\DoxyCodeLine{2338 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_N\_STATE\_SET(\_\_HANDLE\_\_, \_\_CHANNEL\_\_, \_\_CHANNEL\_STATE\_\_) \(\backslash\)}}
+\DoxyCodeLine{2339 \textcolor{preprocessor}{  (((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_1) ? ((\_\_HANDLE\_\_)-\/>ChannelNState[0] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2340 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_2) ? ((\_\_HANDLE\_\_)-\/>ChannelNState[1] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2341 \textcolor{preprocessor}{   ((\_\_CHANNEL\_\_) == TIM\_CHANNEL\_3) ? ((\_\_HANDLE\_\_)-\/>ChannelNState[2] = (\_\_CHANNEL\_STATE\_\_)) :\(\backslash\)}}
+\DoxyCodeLine{2342 \textcolor{preprocessor}{   ((\_\_HANDLE\_\_)-\/>ChannelNState[3] = (\_\_CHANNEL\_STATE\_\_)))}}
+\DoxyCodeLine{2343 }
+\DoxyCodeLine{2344 \textcolor{preprocessor}{\#define TIM\_CHANNEL\_N\_STATE\_SET\_ALL(\_\_HANDLE\_\_,  \_\_CHANNEL\_STATE\_\_) do \{ \(\backslash\)}}
+\DoxyCodeLine{2345 \textcolor{preprocessor}{                                                                         (\_\_HANDLE\_\_)-\/>ChannelNState[0] = \(\backslash\)}}
+\DoxyCodeLine{2346 \textcolor{preprocessor}{                                                                         (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2347 \textcolor{preprocessor}{                                                                         (\_\_HANDLE\_\_)-\/>ChannelNState[1] = \(\backslash\)}}
+\DoxyCodeLine{2348 \textcolor{preprocessor}{                                                                         (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2349 \textcolor{preprocessor}{                                                                         (\_\_HANDLE\_\_)-\/>ChannelNState[2] = \(\backslash\)}}
+\DoxyCodeLine{2350 \textcolor{preprocessor}{                                                                         (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2351 \textcolor{preprocessor}{                                                                         (\_\_HANDLE\_\_)-\/>ChannelNState[3] = \(\backslash\)}}
+\DoxyCodeLine{2352 \textcolor{preprocessor}{                                                                         (\_\_CHANNEL\_STATE\_\_);  \(\backslash\)}}
+\DoxyCodeLine{2353 \textcolor{preprocessor}{                                                                       \} while(0)}}
+\DoxyCodeLine{2354 }
+\DoxyCodeLine{2358 \textcolor{comment}{/* End of private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{2359 }
+\DoxyCodeLine{2360 \textcolor{comment}{/* Include TIM HAL Extended module */}}
+\DoxyCodeLine{2361 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__tim__ex_8h}{stm32g4xx\_hal\_tim\_ex.h}}"{}}}
+\DoxyCodeLine{2362 }
+\DoxyCodeLine{2363 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{2372 \textcolor{comment}{/* Time Base functions ********************************************************/}}
+\DoxyCodeLine{2373 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Init(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2374 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_DeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2375 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___t_i_m___exported___functions___group1_ga818f4d5d1e2f417438d281b4ac9efb9c}{HAL\_TIM\_Base\_MspInit}}(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2376 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___t_i_m___exported___functions___group1_ga13352a6c9cb3225511e5f29dbb894e84}{HAL\_TIM\_Base\_MspDeInit}}(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2377 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{2378 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Start(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2379 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Stop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2380 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2381 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Start\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2382 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Stop\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2383 \textcolor{comment}{/* Non-\/Blocking mode: DMA */}}
+\DoxyCodeLine{2384 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Start\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t *pData, uint16\_t Length);}
+\DoxyCodeLine{2385 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Base\_Stop\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2394 \textcolor{comment}{/* Timer Output Compare functions *********************************************/}}
+\DoxyCodeLine{2395 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Init(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2396 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_DeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2397 \textcolor{keywordtype}{void} HAL\_TIM\_OC\_MspInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2398 \textcolor{keywordtype}{void} HAL\_TIM\_OC\_MspDeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2399 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{2400 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Start(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2401 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Stop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2402 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2403 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Start\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2404 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Stop\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2405 \textcolor{comment}{/* Non-\/Blocking mode: DMA */}}
+\DoxyCodeLine{2406 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Start\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel, uint32\_t *pData, uint16\_t Length);}
+\DoxyCodeLine{2407 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_Stop\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2416 \textcolor{comment}{/* Timer PWM functions ********************************************************/}}
+\DoxyCodeLine{2417 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Init(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2418 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_DeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2419 \textcolor{keywordtype}{void} HAL\_TIM\_PWM\_MspInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2420 \textcolor{keywordtype}{void} HAL\_TIM\_PWM\_MspDeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2421 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{2422 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Start(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2423 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Stop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2424 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2425 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Start\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2426 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Stop\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2427 \textcolor{comment}{/* Non-\/Blocking mode: DMA */}}
+\DoxyCodeLine{2428 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Start\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel, uint32\_t *pData, uint16\_t Length);}
+\DoxyCodeLine{2429 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_Stop\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2438 \textcolor{comment}{/* Timer Input Capture functions **********************************************/}}
+\DoxyCodeLine{2439 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Init(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2440 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_DeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2441 \textcolor{keywordtype}{void} HAL\_TIM\_IC\_MspInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2442 \textcolor{keywordtype}{void} HAL\_TIM\_IC\_MspDeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2443 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{2444 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Start(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2445 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Stop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2446 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2447 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Start\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2448 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Stop\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2449 \textcolor{comment}{/* Non-\/Blocking mode: DMA */}}
+\DoxyCodeLine{2450 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Start\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel, uint32\_t *pData, uint16\_t Length);}
+\DoxyCodeLine{2451 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_Stop\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2460 \textcolor{comment}{/* Timer One Pulse functions **************************************************/}}
+\DoxyCodeLine{2461 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_Init(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t OnePulseMode);}
+\DoxyCodeLine{2462 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_DeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2463 \textcolor{keywordtype}{void} HAL\_TIM\_OnePulse\_MspInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2464 \textcolor{keywordtype}{void} HAL\_TIM\_OnePulse\_MspDeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2465 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{2466 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_Start(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t OutputChannel);}
+\DoxyCodeLine{2467 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_Stop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t OutputChannel);}
+\DoxyCodeLine{2468 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2469 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_Start\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t OutputChannel);}
+\DoxyCodeLine{2470 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_Stop\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t OutputChannel);}
+\DoxyCodeLine{2479 \textcolor{comment}{/* Timer Encoder functions ****************************************************/}}
+\DoxyCodeLine{2480 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Init(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim,  \mbox{\hyperlink{struct_t_i_m___encoder___init_type_def}{TIM\_Encoder\_InitTypeDef}} *sConfig);}
+\DoxyCodeLine{2481 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_DeInit(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2482 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___t_i_m___exported___functions___group6_ga1a8e1103bfcc56c2626ed5cf546391d1}{HAL\_TIM\_Encoder\_MspInit}}(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2483 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___t_i_m___exported___functions___group6_ga77c8216735a5b1374ea948737eed8a18}{HAL\_TIM\_Encoder\_MspDeInit}}(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2484 \textcolor{comment}{/* Blocking mode: Polling */}}
+\DoxyCodeLine{2485 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Start(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2486 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Stop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2487 \textcolor{comment}{/* Non-\/Blocking mode: Interrupt */}}
+\DoxyCodeLine{2488 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Start\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2489 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Stop\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2490 \textcolor{comment}{/* Non-\/Blocking mode: DMA */}}
+\DoxyCodeLine{2491 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Start\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel, uint32\_t *pData1,}
+\DoxyCodeLine{2492                                             uint32\_t *pData2, uint16\_t Length);}
+\DoxyCodeLine{2493 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_Encoder\_Stop\_DMA(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2502 \textcolor{comment}{/* Interrupt Handler functions  ***********************************************/}}
+\DoxyCodeLine{2503 \textcolor{keywordtype}{void} HAL\_TIM\_IRQHandler(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2512 \textcolor{comment}{/* Control functions  *********************************************************/}}
+\DoxyCodeLine{2513 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OC\_ConfigChannel(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\_OC\_InitTypeDef}} *sConfig, uint32\_t Channel);}
+\DoxyCodeLine{2514 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_PWM\_ConfigChannel(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\_OC\_InitTypeDef}} *sConfig, uint32\_t Channel);}
+\DoxyCodeLine{2515 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_IC\_ConfigChannel(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___i_c___init_type_def}{TIM\_IC\_InitTypeDef}} *sConfig, uint32\_t Channel);}
+\DoxyCodeLine{2516 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_OnePulse\_ConfigChannel(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___one_pulse___init_type_def}{TIM\_OnePulse\_InitTypeDef}} *sConfig,}
+\DoxyCodeLine{2517                                                  uint32\_t OutputChannel,  uint32\_t InputChannel);}
+\DoxyCodeLine{2518 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_ConfigOCrefClear(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___clear_input_config_type_def}{TIM\_ClearInputConfigTypeDef}} *sClearInputConfig,}
+\DoxyCodeLine{2519                                            uint32\_t Channel);}
+\DoxyCodeLine{2520 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_ConfigClockSource(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___clock_config_type_def}{TIM\_ClockConfigTypeDef}} *sClockSourceConfig);}
+\DoxyCodeLine{2521 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_ConfigTI1Input(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t TI1\_Selection);}
+\DoxyCodeLine{2522 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_SlaveConfigSynchro(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\_SlaveConfigTypeDef}} *sSlaveConfig);}
+\DoxyCodeLine{2523 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_SlaveConfigSynchro\_IT(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, \mbox{\hyperlink{struct_t_i_m___slave_config_type_def}{TIM\_SlaveConfigTypeDef}} *sSlaveConfig);}
+\DoxyCodeLine{2524 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_DMABurst\_WriteStart(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t BurstBaseAddress,}
+\DoxyCodeLine{2525                                               uint32\_t BurstRequestSrc, uint32\_t  *BurstBuffer, uint32\_t  BurstLength);}
+\DoxyCodeLine{2526 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_DMABurst\_MultiWriteStart(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t BurstBaseAddress,}
+\DoxyCodeLine{2527                                                    uint32\_t BurstRequestSrc, uint32\_t *BurstBuffer,}
+\DoxyCodeLine{2528                                                    uint32\_t BurstLength,  uint32\_t DataLength);}
+\DoxyCodeLine{2529 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_DMABurst\_WriteStop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t BurstRequestSrc);}
+\DoxyCodeLine{2530 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_DMABurst\_ReadStart(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t BurstBaseAddress,}
+\DoxyCodeLine{2531                                              uint32\_t BurstRequestSrc, uint32\_t  *BurstBuffer, uint32\_t  BurstLength);}
+\DoxyCodeLine{2532 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_DMABurst\_MultiReadStart(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t BurstBaseAddress,}
+\DoxyCodeLine{2533                                                   uint32\_t BurstRequestSrc, uint32\_t  *BurstBuffer,}
+\DoxyCodeLine{2534                                                   uint32\_t  BurstLength, uint32\_t  DataLength);}
+\DoxyCodeLine{2535 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_DMABurst\_ReadStop(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t BurstRequestSrc);}
+\DoxyCodeLine{2536 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_GenerateEvent(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t EventSource);}
+\DoxyCodeLine{2537 uint32\_t HAL\_TIM\_ReadCapturedValue(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, uint32\_t Channel);}
+\DoxyCodeLine{2546 \textcolor{comment}{/* Callback in non blocking modes (Interrupt and DMA) *************************/}}
+\DoxyCodeLine{2547 \textcolor{keywordtype}{void} \mbox{\hyperlink{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}{HAL\_TIM\_PeriodElapsedCallback}}(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2548 \textcolor{keywordtype}{void} HAL\_TIM\_PeriodElapsedHalfCpltCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2549 \textcolor{keywordtype}{void} HAL\_TIM\_OC\_DelayElapsedCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2550 \textcolor{keywordtype}{void} HAL\_TIM\_IC\_CaptureCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2551 \textcolor{keywordtype}{void} HAL\_TIM\_IC\_CaptureHalfCpltCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2552 \textcolor{keywordtype}{void} HAL\_TIM\_PWM\_PulseFinishedCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2553 \textcolor{keywordtype}{void} HAL\_TIM\_PWM\_PulseFinishedHalfCpltCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2554 \textcolor{keywordtype}{void} HAL\_TIM\_TriggerCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2555 \textcolor{keywordtype}{void} HAL\_TIM\_TriggerHalfCpltCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2556 \textcolor{keywordtype}{void} HAL\_TIM\_ErrorCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2557 }
+\DoxyCodeLine{2558 \textcolor{comment}{/* Callbacks Register/UnRegister functions  ***********************************/}}
+\DoxyCodeLine{2559 \textcolor{preprocessor}{\#if (USE\_HAL\_TIM\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{2560 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_RegisterCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, HAL\_TIM\_CallbackIDTypeDef CallbackID,}
+\DoxyCodeLine{2561                                            pTIM\_CallbackTypeDef pCallback);}
+\DoxyCodeLine{2562 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_TIM\_UnRegisterCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim, HAL\_TIM\_CallbackIDTypeDef CallbackID);}
+\DoxyCodeLine{2563 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_TIM\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2564 }
+\DoxyCodeLine{2573 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{2574 \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}} HAL\_TIM\_Base\_GetState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2575 \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}} HAL\_TIM\_OC\_GetState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2576 \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}} HAL\_TIM\_PWM\_GetState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2577 \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}} HAL\_TIM\_IC\_GetState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2578 \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}} HAL\_TIM\_OnePulse\_GetState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2579 \mbox{\hyperlink{group___t_i_m___exported___types_gae0994cf5970e56ca4903e9151f40010c}{HAL\_TIM\_StateTypeDef}} HAL\_TIM\_Encoder\_GetState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2580 }
+\DoxyCodeLine{2581 \textcolor{comment}{/* Peripheral Channel state functions  ************************************************/}}
+\DoxyCodeLine{2582 \mbox{\hyperlink{group___t_i_m___exported___types_gaa3fa7bcbb4707f1151ccfc90a8cf9706}{HAL\_TIM\_ActiveChannel}} HAL\_TIM\_GetActiveChannel(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2583 \mbox{\hyperlink{group___t_i_m___exported___types_ga1a70fcbe9952e18af5c890e216a15f34}{HAL\_TIM\_ChannelStateTypeDef}} HAL\_TIM\_GetChannelState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim,  uint32\_t Channel);}
+\DoxyCodeLine{2584 \mbox{\hyperlink{group___t_i_m___exported___types_ga9b87df539778a60ea940a9d5ba793f7c}{HAL\_TIM\_DMABurstStateTypeDef}} HAL\_TIM\_DMABurstState(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2592 \textcolor{comment}{/* End of exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{2593 }
+\DoxyCodeLine{2594 \textcolor{comment}{/* Private functions-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{2598 \textcolor{keywordtype}{void} TIM\_Base\_SetConfig(\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\_TypeDef}} *TIMx, \mbox{\hyperlink{struct_t_i_m___base___init_type_def}{TIM\_Base\_InitTypeDef}} *Structure);}
+\DoxyCodeLine{2599 \textcolor{keywordtype}{void} TIM\_TI1\_SetConfig(\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\_TypeDef}} *TIMx, uint32\_t TIM\_ICPolarity, uint32\_t TIM\_ICSelection, uint32\_t TIM\_ICFilter);}
+\DoxyCodeLine{2600 \textcolor{keywordtype}{void} TIM\_OC2\_SetConfig(\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\_TypeDef}} *TIMx, \mbox{\hyperlink{struct_t_i_m___o_c___init_type_def}{TIM\_OC\_InitTypeDef}} *OC\_Config);}
+\DoxyCodeLine{2601 \textcolor{keywordtype}{void} TIM\_ETR\_SetConfig(\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\_TypeDef}} *TIMx, uint32\_t TIM\_ExtTRGPrescaler,}
+\DoxyCodeLine{2602                        uint32\_t TIM\_ExtTRGPolarity, uint32\_t ExtTRGFilter);}
+\DoxyCodeLine{2603 }
+\DoxyCodeLine{2604 \textcolor{keywordtype}{void} TIM\_DMADelayPulseHalfCplt(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{2605 \textcolor{keywordtype}{void} TIM\_DMAError(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{2606 \textcolor{keywordtype}{void} TIM\_DMACaptureCplt(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{2607 \textcolor{keywordtype}{void} TIM\_DMACaptureHalfCplt(\mbox{\hyperlink{struct_____d_m_a___handle_type_def}{DMA\_HandleTypeDef}} *hdma);}
+\DoxyCodeLine{2608 \textcolor{keywordtype}{void} TIM\_CCxChannelCmd(\mbox{\hyperlink{struct_t_i_m___type_def}{TIM\_TypeDef}} *TIMx, uint32\_t Channel, uint32\_t ChannelState);}
+\DoxyCodeLine{2609 }
+\DoxyCodeLine{2610 \textcolor{preprocessor}{\#if (USE\_HAL\_TIM\_REGISTER\_CALLBACKS == 1)}}
+\DoxyCodeLine{2611 \textcolor{keywordtype}{void} TIM\_ResetCallback(\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\_HandleTypeDef}} *htim);}
+\DoxyCodeLine{2612 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_HAL\_TIM\_REGISTER\_CALLBACKS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2613 }
+\DoxyCodeLine{2617 \textcolor{comment}{/* End of private functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{2618 }
+\DoxyCodeLine{2627 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{2628 \}}
+\DoxyCodeLine{2629 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{2630 }
+\DoxyCodeLine{2631 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_TIM\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

@@ -1,0 +1,88 @@
+\hypertarget{group___h_a_l___exported___functions___group2}{}\doxysection{HAL Control functions}
+\label{group___h_a_l___exported___functions___group2}\index{HAL Control functions@{HAL Control functions}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gaa8361d44d76b7f6256834f828165837a}\label{group___h_a_l___exported___functions___group2_gaa8361d44d76b7f6256834f828165837a}} 
+void {\bfseries HAL\+\_\+\+Inc\+Tick} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gae63b34eea12780ca2e1100c2402da18e}\label{group___h_a_l___exported___functions___group2_gae63b34eea12780ca2e1100c2402da18e}} 
+void {\bfseries HAL\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gaf2c4f03d53e997a54e1fd5e80daa55c4}\label{group___h_a_l___exported___functions___group2_gaf2c4f03d53e997a54e1fd5e80daa55c4}} 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gacdcc8b5d33b9f97fe1b0abd6a86a3d4b}\label{group___h_a_l___exported___functions___group2_gacdcc8b5d33b9f97fe1b0abd6a86a3d4b}} 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick\+Prio} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gaa6152a3f0e3a9521b743e19512692332}\label{group___h_a_l___exported___functions___group2_gaa6152a3f0e3a9521b743e19512692332}} 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Set\+Tick\+Freq} (uint32\+\_\+t Freq)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_ga6868e5035393dc7af7608226c34f6693}\label{group___h_a_l___exported___functions___group2_ga6868e5035393dc7af7608226c34f6693}} 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick\+Freq} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}{HAL\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{HAL\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gafb139b375512ad2a234e4619b129b966}\label{group___h_a_l___exported___functions___group2_gafb139b375512ad2a234e4619b129b966}} 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Hal\+Version} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gae051ef9e932404b21f5877c7186406b8}\label{group___h_a_l___exported___functions___group2_gae051ef9e932404b21f5877c7186406b8}} 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+REVID} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gaff785f069ed650de77ff82ac407f7c84}\label{group___h_a_l___exported___functions___group2_gaff785f069ed650de77ff82ac407f7c84}} 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+DEVID} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}\label{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_ResumeTick@{HAL\_ResumeTick}}
+\index{HAL\_ResumeTick@{HAL\_ResumeTick}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_ResumeTick()}{HAL\_ResumeTick()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+Resume\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Resume Tick increment. 
+
+\begin{DoxyNote}{Note}
+Enable the tick increment by Enabling TIM6 update interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}\label{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}} 
+\index{HAL Control functions@{HAL Control functions}!HAL\_SuspendTick@{HAL\_SuspendTick}}
+\index{HAL\_SuspendTick@{HAL\_SuspendTick}!HAL Control functions@{HAL Control functions}}
+\doxysubsubsection{\texorpdfstring{HAL\_SuspendTick()}{HAL\_SuspendTick()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+Suspend\+Tick (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Suspend Tick increment. 
+
+\begin{DoxyNote}{Note}
+Disable the tick increment by disabling TIM6 update interrupt. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

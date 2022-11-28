@@ -1,0 +1,398 @@
+\hypertarget{main_8c}{}\doxysection{Core/\+Src/main.c File Reference}
+\label{main_8c}\index{Core/Src/main.c@{Core/Src/main.c}}
+
+
+\+: Main program body  
+
+
+{\ttfamily \#include \char`\"{}main.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a05f5d709605c6317c97e4974bec3402a}\label{main_8c_a05f5d709605c6317c97e4974bec3402a}} 
+\#define {\bfseries UART\+\_\+\+TX\+\_\+\+BUFFER\+\_\+\+SIZE}~64
+\item 
+\mbox{\Hypertarget{main_8c_a5bdd6772c246436bb14377095de79b31}\label{main_8c_a5bdd6772c246436bb14377095de79b31}} 
+\#define {\bfseries UART\+\_\+\+RX\+\_\+\+BUFFER\+\_\+\+SIZE}~1
+\item 
+\mbox{\Hypertarget{main_8c_a8a0465f8e8bbe71e4d6e8011e975bf75}\label{main_8c_a8a0465f8e8bbe71e4d6e8011e975bf75}} 
+\#define {\bfseries CMD\+\_\+\+BUFFER\+\_\+\+SIZE}~64
+\item 
+\mbox{\Hypertarget{main_8c_a29b7451465deac204c5f7cb1f9c6e1fc}\label{main_8c_a29b7451465deac204c5f7cb1f9c6e1fc}} 
+\#define {\bfseries MAX\+\_\+\+ARGS}~9
+\item 
+\mbox{\Hypertarget{main_8c_a4de08020d60dad9bd7f6d5270ae5dbc7}\label{main_8c_a4de08020d60dad9bd7f6d5270ae5dbc7}} 
+\#define {\bfseries ADC\+\_\+\+BUFF\+\_\+\+SIZE}~10
+\item 
+\mbox{\Hypertarget{main_8c_aca3b498f5936dbe4f3076a47c3e1810d}\label{main_8c_aca3b498f5936dbe4f3076a47c3e1810d}} 
+\#define {\bfseries ASCII\+\_\+\+LF}~0x0A
+\item 
+\mbox{\Hypertarget{main_8c_a089ed4925403ab02a05e603967c74579}\label{main_8c_a089ed4925403ab02a05e603967c74579}} 
+\#define {\bfseries ASCII\+\_\+\+CR}~0x0D
+\item 
+\mbox{\Hypertarget{main_8c_a3bb28e223b7c203113dc8c0387d43b36}\label{main_8c_a3bb28e223b7c203113dc8c0387d43b36}} 
+\#define {\bfseries ASCII\+\_\+\+DEL}~0x7F
+\item 
+\mbox{\Hypertarget{main_8c_ab2571aab4a6b067e3495ea706b516394}\label{main_8c_ab2571aab4a6b067e3495ea706b516394}} 
+\#define {\bfseries TIM1\+\_\+\+ARR}~5312
+\item 
+\mbox{\Hypertarget{main_8c_af58f5cd494d5aa25df318845c300b73c}\label{main_8c_af58f5cd494d5aa25df318845c300b73c}} 
+\#define {\bfseries ISO\+\_\+\+RESET\+\_\+\+TIME}~70
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_ae929be4b1a66809fbee7ae61a8fd1ee5}{ISO\+\_\+\+RESET}} ()
+\begin{DoxyCompactList}\small\item\em ISO\+\_\+\+RESET signal function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_aa311b2a3989643c1921082b0f1129011}{Start\+PWM}} ()
+\begin{DoxyCompactList}\small\item\em PWM timers start function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a55d46d35989b6322d554ad828c28c0a8}{Stop\+PWM}} ()
+\begin{DoxyCompactList}\small\item\em PWM timers stop function. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8c_acfcac2c6e0767adc997aefa7967c6820}{Current\+Conversion}} ()
+\begin{DoxyCompactList}\small\item\em current conversion function \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_aedd0d594bb64967c4fa126558749e5ae}{Duty\+Cycle\+Func\+Def}} (int dutycycle\+IN)
+\begin{DoxyCompactList}\small\item\em duty cycle function definition \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void {\bfseries HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} $\ast$huart)
+\item 
+void \mbox{\hyperlink{group___a_d_c___exported___functions___group2_gaf20a88180db1113be1e89266917d148b}{HAL\+\_\+\+ADC\+\_\+\+Conv\+Cplt\+Callback}} (\mbox{\hyperlink{struct_a_d_c___handle_type_def}{ADC\+\_\+\+Handle\+Type\+Def}} $\ast$hadc)
+\begin{DoxyCompactList}\small\item\em ADC callback function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___t_i_m___exported___functions___group9_ga8a3b0ad512a6e6c6157440b68d395eac}{HAL\+\_\+\+TIM\+\_\+\+Period\+Elapsed\+Callback}} (\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} $\ast$htim)
+\begin{DoxyCompactList}\small\item\em TIM4 callback function. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8c_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a22b804736f5648d52f639b2647d4ed13}\label{main_8c_a22b804736f5648d52f639b2647d4ed13}} 
+\mbox{\hyperlink{struct_a_d_c___handle_type_def}{ADC\+\_\+\+Handle\+Type\+Def}} {\bfseries hadc1}
+\item 
+\mbox{\Hypertarget{main_8c_a1c126854bb1813d31ab4776b21dcc51f}\label{main_8c_a1c126854bb1813d31ab4776b21dcc51f}} 
+\mbox{\hyperlink{group___d_m_a___exported___types_ga41b754a906b86bce54dc79938970138b}{DMA\+\_\+\+Handle\+Type\+Def}} {\bfseries hdma\+\_\+adc1}
+\item 
+\mbox{\Hypertarget{main_8c_a25fc663547539bc49fecc0011bd76ab5}\label{main_8c_a25fc663547539bc49fecc0011bd76ab5}} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim1}
+\item 
+\mbox{\Hypertarget{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}\label{main_8c_aac3d2c59ee0e3bbae1b99529a154eb62}} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim3}
+\item 
+\mbox{\Hypertarget{main_8c_a85788cec5a97ee377e4ee2e74f026484}\label{main_8c_a85788cec5a97ee377e4ee2e74f026484}} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim4}
+\item 
+\mbox{\Hypertarget{main_8c_a5faa27108379f799afb6984010bf0384}\label{main_8c_a5faa27108379f799afb6984010bf0384}} 
+\mbox{\hyperlink{struct_t_i_m___handle_type_def}{TIM\+\_\+\+Handle\+Type\+Def}} {\bfseries htim8}
+\item 
+\mbox{\Hypertarget{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}\label{main_8c_aa9479c261d65eecedd3d9582f7f0f89c}} 
+\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} {\bfseries huart2}
+\item 
+\mbox{\Hypertarget{main_8c_a8b893859891afe33d4bba72ba06fd381}\label{main_8c_a8b893859891afe33d4bba72ba06fd381}} 
+uint8\+\_\+t {\bfseries prompt} \mbox{[}$\,$\mbox{]} =\char`\"{}user@Nucleo-\/STM32\+G431$>$$>$\char`\"{}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{main_8c_a835573497a60b314a9bf5a6fcac9602a}{started}} \mbox{[}$\,$\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a98a2c452a5e7053154e9f49a4cad4e98}\label{main_8c_a98a2c452a5e7053154e9f49a4cad4e98}} 
+uint8\+\_\+t {\bfseries newline} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_a25205e7c6d817620c1d9f7351a817a04}\label{main_8c_a25205e7c6d817620c1d9f7351a817a04}} 
+uint8\+\_\+t {\bfseries cmd\+Not\+Found} \mbox{[}$\,$\mbox{]} =\char`\"{}Command not found\textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_aad594d8cb92082da3ee0ede1e1161b9b}\label{main_8c_aad594d8cb92082da3ee0ede1e1161b9b}} 
+uint8\+\_\+t {\bfseries help\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n set \textbackslash{}r\textbackslash{}n get \textbackslash{}r\textbackslash{}n pinout \textbackslash{}r\textbackslash{}n start \textbackslash{}r\textbackslash{}n stop \textbackslash{}r\textbackslash{}n dutycycle\textbackslash{}r\textbackslash{}n \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_a88cdec764d4f983cfad9858c6ef0eb47}\label{main_8c_a88cdec764d4f983cfad9858c6ef0eb47}} 
+uint8\+\_\+t {\bfseries pinout\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n PA2\+: USART TX \textbackslash{}r\textbackslash{}n PA3\+: USART RX \textbackslash{}r\textbackslash{}n PA5\+: LED \textbackslash{}r\textbackslash{}n PA8\+: TIM1\+\_\+\+CH1 \textbackslash{}r\textbackslash{}n PA9\+: TIM1\+\_\+\+CH2 \textbackslash{}r\textbackslash{}n PA11\+: TIM1\+\_\+\+CH1N \textbackslash{}r\textbackslash{}n PA12\+: TIM1\+\_\+\+CH2N \textbackslash{}r\textbackslash{}n PC13\+: BUTTON \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_ad5c234a0cb821775b388d91a50623110}\label{main_8c_ad5c234a0cb821775b388d91a50623110}} 
+uint8\+\_\+t {\bfseries start\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n power on \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_ad1f6712d4575f784f52f732e73175e74}\label{main_8c_ad1f6712d4575f784f52f732e73175e74}} 
+uint8\+\_\+t {\bfseries stop\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n power off \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_a851649d562ce3474ce8aed38ada4252f}\label{main_8c_a851649d562ce3474ce8aed38ada4252f}} 
+uint8\+\_\+t {\bfseries duty\+Cycle\+Choice\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n duty cycle value chosen \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+int \mbox{\hyperlink{main_8c_aad387ea7ef87850d0f52146fd98ae08d}{dutycycle}}
+\item 
+\mbox{\Hypertarget{main_8c_a5e27658eb9ef5c6a03de9270c1d193da}\label{main_8c_a5e27658eb9ef5c6a03de9270c1d193da}} 
+int {\bfseries pulse}
+\item 
+\mbox{\Hypertarget{main_8c_a9d8a518124b90c249458a5b30ab36c52}\label{main_8c_a9d8a518124b90c249458a5b30ab36c52}} 
+uint32\+\_\+t {\bfseries uart\+Rx\+Received}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}{DMA\+\_\+\+Received}}
+\item 
+\mbox{\Hypertarget{main_8c_a2542ac6d4440b9e1c4a6435c55c79df3}\label{main_8c_a2542ac6d4440b9e1c4a6435c55c79df3}} 
+uint8\+\_\+t {\bfseries uart\+Rx\+Buffer} \mbox{[}UART\+\_\+\+RX\+\_\+\+BUFFER\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a3f98e2db2fa0d8f0cfd87b887576207f}\label{main_8c_a3f98e2db2fa0d8f0cfd87b887576207f}} 
+uint8\+\_\+t {\bfseries uart\+Tx\+Buffer} \mbox{[}UART\+\_\+\+TX\+\_\+\+BUFFER\+\_\+\+SIZE\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a2f170243e3223842596077720e0bb7cc}\label{main_8c_a2f170243e3223842596077720e0bb7cc}} 
+uint16\+\_\+t {\bfseries ADC\+\_\+buffer} \mbox{[}ADC\+\_\+\+BUFF\+\_\+\+SIZE\mbox{]}
+\item 
+int \mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}} =0
+\item 
+uint16\+\_\+t \mbox{\hyperlink{main_8c_af3122c916cbc41bed80c6f811cd2dc23}{Raw\+\_\+\+Data\+\_\+\+Sum}} =0
+\item 
+float \mbox{\hyperlink{main_8c_aacc036bac39053bd95f63cd00661d683}{Average\+\_\+\+Voltage}}
+\item 
+float \mbox{\hyperlink{main_8c_ae1bfa6f9f62ab5a631d50a6044d92ed3}{Converted\+\_\+\+Average\+\_\+\+Voltage}}
+\item 
+float \mbox{\hyperlink{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}{Sensed\+\_\+\+Current\+\_\+\+Value}}
+\item 
+\mbox{\Hypertarget{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}\label{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}} 
+float {\bfseries Current\+Value\+Float}
+\item 
+\mbox{\Hypertarget{main_8c_a4b6011269ed77855ed19c6eb0b4b2fde}\label{main_8c_a4b6011269ed77855ed19c6eb0b4b2fde}} 
+char {\bfseries Current\+\_\+\+Sensed} \mbox{[}30\mbox{]}
+\item 
+int \mbox{\hyperlink{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}} =0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main program body 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2022 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_acfcac2c6e0767adc997aefa7967c6820}\label{main_8c_acfcac2c6e0767adc997aefa7967c6820}} 
+\index{main.c@{main.c}!CurrentConversion@{CurrentConversion}}
+\index{CurrentConversion@{CurrentConversion}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CurrentConversion()}{CurrentConversion()}}
+{\footnotesize\ttfamily float Current\+Conversion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+current conversion function 
+
+\begin{DoxyNote}{Note}
+This function converts raw voltage data from ADC to current value to be used in the controller 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em float} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_aedd0d594bb64967c4fa126558749e5ae}\label{main_8c_aedd0d594bb64967c4fa126558749e5ae}} 
+\index{main.c@{main.c}!DutyCycleFuncDef@{DutyCycleFuncDef}}
+\index{DutyCycleFuncDef@{DutyCycleFuncDef}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DutyCycleFuncDef()}{DutyCycleFuncDef()}}
+{\footnotesize\ttfamily void Duty\+Cycle\+Func\+Def (\begin{DoxyParamCaption}\item[{int}]{dutycycle\+IN }\end{DoxyParamCaption})}
+
+
+
+duty cycle function definition 
+
+\begin{DoxyNote}{Note}
+This function converts raw voltage data from ADC to current value to be used in the controller 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a1730ffe1e560465665eb47d9264826f9}\label{main_8c_a1730ffe1e560465665eb47d9264826f9}} 
+\index{main.c@{main.c}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_ae929be4b1a66809fbee7ae61a8fd1ee5}\label{main_8c_ae929be4b1a66809fbee7ae61a8fd1ee5}} 
+\index{main.c@{main.c}!ISO\_RESET@{ISO\_RESET}}
+\index{ISO\_RESET@{ISO\_RESET}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ISO\_RESET()}{ISO\_RESET()}}
+{\footnotesize\ttfamily void ISO\+\_\+\+RESET (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ISO\+\_\+\+RESET signal function. 
+
+\begin{DoxyNote}{Note}
+This function is called when command \char`\"{}start\char`\"{} is written in the terminal ISO\+\_\+\+RESET pin is set to high level for at least 20 microseconds and then reset to low using a for cycle to delay the operation 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_aa311b2a3989643c1921082b0f1129011}\label{main_8c_aa311b2a3989643c1921082b0f1129011}} 
+\index{main.c@{main.c}!StartPWM@{StartPWM}}
+\index{StartPWM@{StartPWM}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{StartPWM()}{StartPWM()}}
+{\footnotesize\ttfamily void Start\+PWM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PWM timers start function. 
+
+\begin{DoxyNote}{Note}
+This function is called when command \char`\"{}start\char`\"{} is written in the terminal after ISO\+\_\+\+RESET command the PWM timers are started to command the power supply and then the motor 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a55d46d35989b6322d554ad828c28c0a8}\label{main_8c_a55d46d35989b6322d554ad828c28c0a8}} 
+\index{main.c@{main.c}!StopPWM@{StopPWM}}
+\index{StopPWM@{StopPWM}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{StopPWM()}{StopPWM()}}
+{\footnotesize\ttfamily void Stop\+PWM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+PWM timers stop function. 
+
+\begin{DoxyNote}{Note}
+This function is called when command \char`\"{}stop\char`\"{} is written in the terminal PWM timers are stopped and then the motor is stopped 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a70af21c671abfcc773614a9a4f63d920}\label{main_8c_a70af21c671abfcc773614a9a4f63d920}} 
+\index{main.c@{main.c}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the \mbox{\hyperlink{struct_r_c_c___osc_init_type_def}{RCC\+\_\+\+Osc\+Init\+Type\+Def}} structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{main_8c_aacc036bac39053bd95f63cd00661d683}\label{main_8c_aacc036bac39053bd95f63cd00661d683}} 
+\index{main.c@{main.c}!Average\_Voltage@{Average\_Voltage}}
+\index{Average\_Voltage@{Average\_Voltage}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Average\_Voltage}{Average\_Voltage}}
+{\footnotesize\ttfamily float Average\+\_\+\+Voltage}
+
+raw sensed value on average \mbox{\Hypertarget{main_8c_ae1bfa6f9f62ab5a631d50a6044d92ed3}\label{main_8c_ae1bfa6f9f62ab5a631d50a6044d92ed3}} 
+\index{main.c@{main.c}!Converted\_Average\_Voltage@{Converted\_Average\_Voltage}}
+\index{Converted\_Average\_Voltage@{Converted\_Average\_Voltage}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Converted\_Average\_Voltage}{Converted\_Average\_Voltage}}
+{\footnotesize\ttfamily float Converted\+\_\+\+Average\+\_\+\+Voltage}
+
+actual voltage value in output, converted ad follows\+: Converted\+\_\+\+Average\+\_\+\+Voltage=(Average\+\_\+\+Voltage/4095.\+0)$\ast$3.3 \mbox{\Hypertarget{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}\label{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}} 
+\index{main.c@{main.c}!DMA\_Received@{DMA\_Received}}
+\index{DMA\_Received@{DMA\_Received}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{DMA\_Received}{DMA\_Received}}
+{\footnotesize\ttfamily uint32\+\_\+t DMA\+\_\+\+Received}
+
+variable used as a flag. If it is 1 the DMA buffer is full and the current average calculation process can be performed, if it is 0 DMA is not full yet \mbox{\Hypertarget{main_8c_aad387ea7ef87850d0f52146fd98ae08d}\label{main_8c_aad387ea7ef87850d0f52146fd98ae08d}} 
+\index{main.c@{main.c}!dutycycle@{dutycycle}}
+\index{dutycycle@{dutycycle}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{dutycycle}{dutycycle}}
+{\footnotesize\ttfamily int dutycycle}
+
+value between 1 and 0 \mbox{\Hypertarget{main_8c_acb559820d9ca11295b4500f179ef6392}\label{main_8c_acb559820d9ca11295b4500f179ef6392}} 
+\index{main.c@{main.c}!i@{i}}
+\index{i@{i}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{i}{i}}
+{\footnotesize\ttfamily int i =0}
+
+used for ISO\+\_\+\+RESET time counter and to sum elements in DMA buffer \mbox{\Hypertarget{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}\label{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}} 
+\index{main.c@{main.c}!k@{k}}
+\index{k@{k}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{k}{k}}
+{\footnotesize\ttfamily int k =0}
+
+used in the for to print the sensed current value with a delay (only for debug) \mbox{\Hypertarget{main_8c_af3122c916cbc41bed80c6f811cd2dc23}\label{main_8c_af3122c916cbc41bed80c6f811cd2dc23}} 
+\index{main.c@{main.c}!Raw\_Data\_Sum@{Raw\_Data\_Sum}}
+\index{Raw\_Data\_Sum@{Raw\_Data\_Sum}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Raw\_Data\_Sum}{Raw\_Data\_Sum}}
+{\footnotesize\ttfamily uint16\+\_\+t Raw\+\_\+\+Data\+\_\+\+Sum =0}
+
+variable in which is stored the sum of all the raw values from the sensor \mbox{\Hypertarget{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}\label{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}} 
+\index{main.c@{main.c}!Sensed\_Current\_Value@{Sensed\_Current\_Value}}
+\index{Sensed\_Current\_Value@{Sensed\_Current\_Value}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{Sensed\_Current\_Value}{Sensed\_Current\_Value}}
+{\footnotesize\ttfamily float Sensed\+\_\+\+Current\+\_\+\+Value}
+
+average current value in output, converted ad follows\+: Sensed\+\_\+\+Current\+\_\+\+Value=12$\ast$(Converted\+\_\+\+Average\+\_\+\+Voltage -\/2.\+5); values for the conversion are take by datasheet \mbox{\Hypertarget{main_8c_a835573497a60b314a9bf5a6fcac9602a}\label{main_8c_a835573497a60b314a9bf5a6fcac9602a}} 
+\index{main.c@{main.c}!started@{started}}
+\index{started@{started}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{started}{started}}
+{\footnotesize\ttfamily uint8\+\_\+t started\mbox{[}$\,$\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*"{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n| Welcome on Nucleo-\/STM32G431 |"{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*"{}}}
+\DoxyCodeLine{        \textcolor{stringliteral}{"{}\(\backslash\)r\(\backslash\)n"{}}}
+
+\end{DoxyCode}

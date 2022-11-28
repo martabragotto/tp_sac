@@ -1,0 +1,537 @@
+\hypertarget{group___r_c_c_ex___exported___macros}{}\doxysection{RCCEx Exported Macros}
+\label{group___r_c_c_ex___exported___macros}\index{RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___r_c_c_ex___flags___interrupts___management}{Flags Interrupts Management}}
+\begin{DoxyCompactList}\small\item\em macros to manage the specified RCC Flags and interrupts. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{group___r_c_c_ex___c_r_s___extended___features}{RCCEx CRS Extended Features}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga4a383ccb3cc3caaea1f4226e3e61f3e0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART1\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+USART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART1\+SEL, (\+\_\+\+\_\+\+USART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the USART1 clock (USART1\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gaf6ff545446befd6af48cd5108e8fbc2e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+USART1\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART1\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the USART1 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gaa413643f4a106ca54111e8ff510290ca}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+USART2\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART2\+SEL, (\+\_\+\+\_\+\+USART2\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the USART2 clock (USART2\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga7f2fecdd9f75bb71677602f9b2c22dd7}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+USART2\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART2\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the USART2 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga732383844537c59f16d5882a8fa1670d}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART3\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+USART3\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART3\+SEL, (\+\_\+\+\_\+\+USART3\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the USART3 clock (USART3\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gab52c0cea73126e6f71f7ea7cb9d37378}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+USART3\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART3\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the USART3 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gac85728cc36ce921048d46f6f9be3bf39}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+LPUART1\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+LPUART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPUART1\+SEL, (\+\_\+\+\_\+\+LPUART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the LPUART1 clock (LPUART1\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga193015f4df5fb541bd4fbbc20d1e20ae}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+LPUART1\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPUART1\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the LPUART1 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga90e36ab9a2478f1c6066432e230845a2}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+I2\+C1\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C1\+SEL, (\+\_\+\+\_\+\+I2\+C1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the I2\+C1 clock (I2\+C1\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gab9372aa811e622a602d2b3657790c8e7}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+C1\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C1\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the I2\+C1 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga49280a374f55802d8063a083350572ab}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C2\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+I2\+C2\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C2\+SEL, (\+\_\+\+\_\+\+I2\+C2\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the I2\+C2 clock (I2\+C2\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga374d6807df83720c548fdea1d86d3852}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+C2\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C2\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the I2\+C2 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga2ca9240d0a7d79ca5f72b298255e73ee}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C3\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+I2\+C3\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C3\+SEL, (\+\_\+\+\_\+\+I2\+C3\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the I2\+C3 clock (I2\+C3\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gac1a897c77611227b305f8dde521c0d9e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+C3\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C3\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the I2\+C3 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga2a59d733248c7e8f36c2c6abd1dd2bb4}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+LPTIM1\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+LPTIM1\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPTIM1\+SEL, (\+\_\+\+\_\+\+LPTIM1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the LPTIM1 clock (LPTIM1\+CLK). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gad6688c07a2a8c314df547de8caf378bb}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+LPTIM1\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPTIM1\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the LPTIM1 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gad07478b1f46ceb538cf11afe64e3319f}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SAI1\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+SAI1\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+SAI1\+SEL, (\+\_\+\+\_\+\+SAI1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the SAI1 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga9af45dae7c2f2f1c8848be68d7bded7e}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+SAI1\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+SAI1\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the SAI1 clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga209481fd3ab814db3aaa99174e414704}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+S\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+I2\+S\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+S23\+SEL, (\+\_\+\+\_\+\+I2\+S\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the I2S clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gad6a15f6428cdb7c430d2171e7c317cc7}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+S\+\_\+\+SOURCE}}()~((uint32\+\_\+t)(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+S23\+SEL)))
+\begin{DoxyCompactList}\small\item\em Macro to get the I2S clock source. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gae4028fc77f79b25d655d43c5e0cd9b75}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RNG\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+RNG\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+CLK48\+SEL, (\+\_\+\+\_\+\+RNG\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the RNG clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gad8f27c485f7252991877f8e423b73d46}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+RNG\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+CLK48\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the RNG clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_gad95d285bfa53cbad467c15724c31b36b}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+ADC12\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+ADC12\+\_\+\+CLKSOURCE\+\_\+\+\_\+)~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+ADC12\+SEL, (\+\_\+\+\_\+\+ADC12\+\_\+\+CLKSOURCE\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Macro to configure the ADC12 interface clock. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___exported___macros_ga9121a3d4947df923549edb5c123d3265}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+ADC12\+\_\+\+SOURCE}}()~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+ADC12\+SEL))
+\begin{DoxyCompactList}\small\item\em Macro to get the ADC12 clock source. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gad95d285bfa53cbad467c15724c31b36b}\label{group___r_c_c_ex___exported___macros_gad95d285bfa53cbad467c15724c31b36b}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_ADC12\_CONFIG@{\_\_HAL\_RCC\_ADC12\_CONFIG}}
+\index{\_\_HAL\_RCC\_ADC12\_CONFIG@{\_\_HAL\_RCC\_ADC12\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_ADC12\_CONFIG}{\_\_HAL\_RCC\_ADC12\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+ADC12\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+ADC12\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+ADC12\+SEL, (\+\_\+\+\_\+\+ADC12\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the ADC12 interface clock. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+ADC12\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the ADC12 digital interface clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+ADC12\+CLKSOURCE\+\_\+\+NONE No clock selected as ADC12 clock \item RCC\+\_\+\+ADC12\+CLKSOURCE\+\_\+\+PLL PLL Clock selected as ADC12 clock \item RCC\+\_\+\+ADC12\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as ADC12 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga9121a3d4947df923549edb5c123d3265}\label{group___r_c_c_ex___exported___macros_ga9121a3d4947df923549edb5c123d3265}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_ADC12\_SOURCE@{\_\_HAL\_RCC\_GET\_ADC12\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_ADC12\_SOURCE@{\_\_HAL\_RCC\_GET\_ADC12\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_ADC12\_SOURCE}{\_\_HAL\_RCC\_GET\_ADC12\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+ADC12\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+ADC12\+SEL))}
+
+
+
+Macro to get the ADC12 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+ADC12\+CLKSOURCE\+\_\+\+NONE No clock selected as ADC12 clock \item RCC\+\_\+\+ADC12\+CLKSOURCE\+\_\+\+PLL PLL Clock selected as ADC12 clock \item RCC\+\_\+\+ADC12\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as ADC12 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gab9372aa811e622a602d2b3657790c8e7}\label{group___r_c_c_ex___exported___macros_gab9372aa811e622a602d2b3657790c8e7}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_I2C1\_SOURCE@{\_\_HAL\_RCC\_GET\_I2C1\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_I2C1\_SOURCE@{\_\_HAL\_RCC\_GET\_I2C1\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_I2C1\_SOURCE}{\_\_HAL\_RCC\_GET\_I2C1\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+C1\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C1\+SEL))}
+
+
+
+Macro to get the I2\+C1 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+C1\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as I2\+C1 clock \item RCC\+\_\+\+I2\+C1\+CLKSOURCE\+\_\+\+HSI HSI selected as I2\+C1 clock \item RCC\+\_\+\+I2\+C1\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as I2\+C1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga374d6807df83720c548fdea1d86d3852}\label{group___r_c_c_ex___exported___macros_ga374d6807df83720c548fdea1d86d3852}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_I2C2\_SOURCE@{\_\_HAL\_RCC\_GET\_I2C2\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_I2C2\_SOURCE@{\_\_HAL\_RCC\_GET\_I2C2\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_I2C2\_SOURCE}{\_\_HAL\_RCC\_GET\_I2C2\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+C2\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C2\+SEL))}
+
+
+
+Macro to get the I2\+C2 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+C2\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as I2\+C2 clock \item RCC\+\_\+\+I2\+C2\+CLKSOURCE\+\_\+\+HSI HSI selected as I2\+C2 clock \item RCC\+\_\+\+I2\+C2\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as I2\+C2 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gac1a897c77611227b305f8dde521c0d9e}\label{group___r_c_c_ex___exported___macros_gac1a897c77611227b305f8dde521c0d9e}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_I2C3\_SOURCE@{\_\_HAL\_RCC\_GET\_I2C3\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_I2C3\_SOURCE@{\_\_HAL\_RCC\_GET\_I2C3\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_I2C3\_SOURCE}{\_\_HAL\_RCC\_GET\_I2C3\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+C3\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C3\+SEL))}
+
+
+
+Macro to get the I2\+C3 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+C3\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as I2\+C3 clock \item RCC\+\_\+\+I2\+C3\+CLKSOURCE\+\_\+\+HSI HSI selected as I2\+C3 clock \item RCC\+\_\+\+I2\+C3\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as I2\+C3 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gad6a15f6428cdb7c430d2171e7c317cc7}\label{group___r_c_c_ex___exported___macros_gad6a15f6428cdb7c430d2171e7c317cc7}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_I2S\_SOURCE@{\_\_HAL\_RCC\_GET\_I2S\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_I2S\_SOURCE@{\_\_HAL\_RCC\_GET\_I2S\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_I2S\_SOURCE}{\_\_HAL\_RCC\_GET\_I2S\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+I2\+S\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~((uint32\+\_\+t)(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+S23\+SEL)))}
+
+
+
+Macro to get the I2S clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+SYSCLK I2S clock = System Clock \item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+PLL I2S clock = PLL \char`\"{}\+Q\char`\"{} clock \item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+EXT I2S clock = EXT \item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+HSI I2S clock = HSI \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gad6688c07a2a8c314df547de8caf378bb}\label{group___r_c_c_ex___exported___macros_gad6688c07a2a8c314df547de8caf378bb}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE@{\_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE@{\_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE}{\_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+LPTIM1\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPTIM1\+SEL))}
+
+
+
+Macro to get the LPTIM1 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as LPUART1 clock \item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+LSI HSI selected as LPUART1 clock \item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+HSI System Clock selected as LPUART1 clock \item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+LSE LSE selected as LPUART1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga193015f4df5fb541bd4fbbc20d1e20ae}\label{group___r_c_c_ex___exported___macros_ga193015f4df5fb541bd4fbbc20d1e20ae}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE@{\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE@{\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE}{\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+LPUART1\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPUART1\+SEL))}
+
+
+
+Macro to get the LPUART1 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as LPUART1 clock \item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+HSI HSI selected as LPUART1 clock \item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as LPUART1 clock \item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+LSE LSE selected as LPUART1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gad8f27c485f7252991877f8e423b73d46}\label{group___r_c_c_ex___exported___macros_gad8f27c485f7252991877f8e423b73d46}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_RNG\_SOURCE@{\_\_HAL\_RCC\_GET\_RNG\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_RNG\_SOURCE@{\_\_HAL\_RCC\_GET\_RNG\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_RNG\_SOURCE}{\_\_HAL\_RCC\_GET\_RNG\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+RNG\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+CLK48\+SEL))}
+
+
+
+Macro to get the RNG clock. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+RNGCLKSOURCE\+\_\+\+HSI48 HSI48 selected as RNG clock for devices with HSI48 \item RCC\+\_\+\+RNGCLKSOURCE\+\_\+\+PLL PLL \char`\"{}\+Q\char`\"{} clock selected as RNG clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga9af45dae7c2f2f1c8848be68d7bded7e}\label{group___r_c_c_ex___exported___macros_ga9af45dae7c2f2f1c8848be68d7bded7e}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_SAI1\_SOURCE@{\_\_HAL\_RCC\_GET\_SAI1\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_SAI1\_SOURCE@{\_\_HAL\_RCC\_GET\_SAI1\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_SAI1\_SOURCE}{\_\_HAL\_RCC\_GET\_SAI1\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+SAI1\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+SAI1\+SEL))}
+
+
+
+Macro to get the SAI1 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+SYSCLK SAI1 clock = System Clock \item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+PLL SAI1 clock = PLL \char`\"{}\+Q\char`\"{} clock \item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+EXT SAI1 clock = EXT \item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+HSI SAI1 clock = HSI \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gaf6ff545446befd6af48cd5108e8fbc2e}\label{group___r_c_c_ex___exported___macros_gaf6ff545446befd6af48cd5108e8fbc2e}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_USART1\_SOURCE@{\_\_HAL\_RCC\_GET\_USART1\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_USART1\_SOURCE@{\_\_HAL\_RCC\_GET\_USART1\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_USART1\_SOURCE}{\_\_HAL\_RCC\_GET\_USART1\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+USART1\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART1\+SEL))}
+
+
+
+Macro to get the USART1 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+PCLK2 PCLK2 selected as USART1 clock \item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+HSI HSI selected as USART1 clock \item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as USART1 clock \item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+LSE LSE selected as USART1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga7f2fecdd9f75bb71677602f9b2c22dd7}\label{group___r_c_c_ex___exported___macros_ga7f2fecdd9f75bb71677602f9b2c22dd7}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_USART2\_SOURCE@{\_\_HAL\_RCC\_GET\_USART2\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_USART2\_SOURCE@{\_\_HAL\_RCC\_GET\_USART2\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_USART2\_SOURCE}{\_\_HAL\_RCC\_GET\_USART2\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+USART2\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART2\+SEL))}
+
+
+
+Macro to get the USART2 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as USART2 clock \item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+HSI HSI selected as USART2 clock \item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as USART2 clock \item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+LSE LSE selected as USART2 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gab52c0cea73126e6f71f7ea7cb9d37378}\label{group___r_c_c_ex___exported___macros_gab52c0cea73126e6f71f7ea7cb9d37378}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_GET\_USART3\_SOURCE@{\_\_HAL\_RCC\_GET\_USART3\_SOURCE}}
+\index{\_\_HAL\_RCC\_GET\_USART3\_SOURCE@{\_\_HAL\_RCC\_GET\_USART3\_SOURCE}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_GET\_USART3\_SOURCE}{\_\_HAL\_RCC\_GET\_USART3\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+GET\+\_\+\+USART3\+\_\+\+SOURCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~(READ\+\_\+\+BIT(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART3\+SEL))}
+
+
+
+Macro to get the USART3 clock source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & clock source can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as USART3 clock \item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+HSI HSI selected as USART3 clock \item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as USART3 clock \item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+LSE LSE selected as USART3 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga90e36ab9a2478f1c6066432e230845a2}\label{group___r_c_c_ex___exported___macros_ga90e36ab9a2478f1c6066432e230845a2}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_I2C1\_CONFIG@{\_\_HAL\_RCC\_I2C1\_CONFIG}}
+\index{\_\_HAL\_RCC\_I2C1\_CONFIG@{\_\_HAL\_RCC\_I2C1\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_I2C1\_CONFIG}{\_\_HAL\_RCC\_I2C1\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C1\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I2\+C1\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C1\+SEL, (\+\_\+\+\_\+\+I2\+C1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the I2\+C1 clock (I2\+C1\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+I2\+C1\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the I2\+C1 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+C1\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as I2\+C1 clock \item RCC\+\_\+\+I2\+C1\+CLKSOURCE\+\_\+\+HSI HSI selected as I2\+C1 clock \item RCC\+\_\+\+I2\+C1\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as I2\+C1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga49280a374f55802d8063a083350572ab}\label{group___r_c_c_ex___exported___macros_ga49280a374f55802d8063a083350572ab}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_I2C2\_CONFIG@{\_\_HAL\_RCC\_I2C2\_CONFIG}}
+\index{\_\_HAL\_RCC\_I2C2\_CONFIG@{\_\_HAL\_RCC\_I2C2\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_I2C2\_CONFIG}{\_\_HAL\_RCC\_I2C2\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C2\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I2\+C2\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C2\+SEL, (\+\_\+\+\_\+\+I2\+C2\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the I2\+C2 clock (I2\+C2\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+I2\+C2\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the I2\+C2 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+C2\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as I2\+C2 clock \item RCC\+\_\+\+I2\+C2\+CLKSOURCE\+\_\+\+HSI HSI selected as I2\+C2 clock \item RCC\+\_\+\+I2\+C2\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as I2\+C2 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga2ca9240d0a7d79ca5f72b298255e73ee}\label{group___r_c_c_ex___exported___macros_ga2ca9240d0a7d79ca5f72b298255e73ee}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_I2C3\_CONFIG@{\_\_HAL\_RCC\_I2C3\_CONFIG}}
+\index{\_\_HAL\_RCC\_I2C3\_CONFIG@{\_\_HAL\_RCC\_I2C3\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_I2C3\_CONFIG}{\_\_HAL\_RCC\_I2C3\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+C3\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I2\+C3\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+C3\+SEL, (\+\_\+\+\_\+\+I2\+C3\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the I2\+C3 clock (I2\+C3\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+I2\+C3\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the I2\+C3 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+C3\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as I2\+C3 clock \item RCC\+\_\+\+I2\+C3\+CLKSOURCE\+\_\+\+HSI HSI selected as I2\+C3 clock \item RCC\+\_\+\+I2\+C3\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as I2\+C3 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga209481fd3ab814db3aaa99174e414704}\label{group___r_c_c_ex___exported___macros_ga209481fd3ab814db3aaa99174e414704}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_I2S\_CONFIG@{\_\_HAL\_RCC\_I2S\_CONFIG}}
+\index{\_\_HAL\_RCC\_I2S\_CONFIG@{\_\_HAL\_RCC\_I2S\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_I2S\_CONFIG}{\_\_HAL\_RCC\_I2S\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+I2\+S\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+I2\+S\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+I2\+S23\+SEL, (\+\_\+\+\_\+\+I2\+S\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the I2S clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+I2\+S\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & defines the I2S clock source. This clock is derived from the HSI, system PLL, System Clock or external clock. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+SYSCLK I2S clock = System Clock \item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+PLL I2S clock = PLL \char`\"{}\+Q\char`\"{} clock \item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+EXT I2S clock = EXT \item RCC\+\_\+\+I2\+SCLKSOURCE\+\_\+\+HSI I2S clock = HSI\end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga2a59d733248c7e8f36c2c6abd1dd2bb4}\label{group___r_c_c_ex___exported___macros_ga2a59d733248c7e8f36c2c6abd1dd2bb4}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_LPTIM1\_CONFIG@{\_\_HAL\_RCC\_LPTIM1\_CONFIG}}
+\index{\_\_HAL\_RCC\_LPTIM1\_CONFIG@{\_\_HAL\_RCC\_LPTIM1\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_LPTIM1\_CONFIG}{\_\_HAL\_RCC\_LPTIM1\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+LPTIM1\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+LPTIM1\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPTIM1\+SEL, (\+\_\+\+\_\+\+LPTIM1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the LPTIM1 clock (LPTIM1\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+LPTIM1\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the LPTIM1 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as LPTIM1 clock \item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+LSI HSI selected as LPTIM1 clock \item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+HSI LSI selected as LPTIM1 clock \item RCC\+\_\+\+LPTIM1\+CLKSOURCE\+\_\+\+LSE LSE selected as LPTIM1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gac85728cc36ce921048d46f6f9be3bf39}\label{group___r_c_c_ex___exported___macros_gac85728cc36ce921048d46f6f9be3bf39}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_LPUART1\_CONFIG@{\_\_HAL\_RCC\_LPUART1\_CONFIG}}
+\index{\_\_HAL\_RCC\_LPUART1\_CONFIG@{\_\_HAL\_RCC\_LPUART1\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_LPUART1\_CONFIG}{\_\_HAL\_RCC\_LPUART1\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+LPUART1\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+LPUART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+LPUART1\+SEL, (\+\_\+\+\_\+\+LPUART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the LPUART1 clock (LPUART1\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+LPUART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the LPUART1 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as LPUART1 clock \item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+HSI HSI selected as LPUART1 clock \item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as LPUART1 clock \item RCC\+\_\+\+LPUART1\+CLKSOURCE\+\_\+\+LSE LSE selected as LPUART1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gae4028fc77f79b25d655d43c5e0cd9b75}\label{group___r_c_c_ex___exported___macros_gae4028fc77f79b25d655d43c5e0cd9b75}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_RNG\_CONFIG@{\_\_HAL\_RCC\_RNG\_CONFIG}}
+\index{\_\_HAL\_RCC\_RNG\_CONFIG@{\_\_HAL\_RCC\_RNG\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RNG\_CONFIG}{\_\_HAL\_RCC\_RNG\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RNG\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+RNG\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+CLK48\+SEL, (\+\_\+\+\_\+\+RNG\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the RNG clock. 
+
+\begin{DoxyNote}{Note}
+USB and RNG peripherals share the same 48MHz clock source.
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+RNG\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the RNG clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+RNGCLKSOURCE\+\_\+\+HSI48 HSI48 selected as RNG clock for devices with HSI48 \item RCC\+\_\+\+RNGCLKSOURCE\+\_\+\+PLL PLL Clock selected as RNG clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gad07478b1f46ceb538cf11afe64e3319f}\label{group___r_c_c_ex___exported___macros_gad07478b1f46ceb538cf11afe64e3319f}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_SAI1\_CONFIG@{\_\_HAL\_RCC\_SAI1\_CONFIG}}
+\index{\_\_HAL\_RCC\_SAI1\_CONFIG@{\_\_HAL\_RCC\_SAI1\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_SAI1\_CONFIG}{\_\_HAL\_RCC\_SAI1\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SAI1\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SAI1\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+SAI1\+SEL, (\+\_\+\+\_\+\+SAI1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the SAI1 clock source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+SAI1\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & defines the SAI1 clock source. This clock is derived from the HSI, system PLL, System Clock or external clock. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+SYSCLK SAI1 clock = System Clock \item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+PLL SAI1 clock = PLL \char`\"{}\+Q\char`\"{} clock \item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+EXT SAI1 clock = EXT \item RCC\+\_\+\+SAI1\+CLKSOURCE\+\_\+\+HSI SAI1 clock = HSI\end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga4a383ccb3cc3caaea1f4226e3e61f3e0}\label{group___r_c_c_ex___exported___macros_ga4a383ccb3cc3caaea1f4226e3e61f3e0}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_USART1\_CONFIG@{\_\_HAL\_RCC\_USART1\_CONFIG}}
+\index{\_\_HAL\_RCC\_USART1\_CONFIG@{\_\_HAL\_RCC\_USART1\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_USART1\_CONFIG}{\_\_HAL\_RCC\_USART1\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART1\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+USART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART1\+SEL, (\+\_\+\+\_\+\+USART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the USART1 clock (USART1\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+USART1\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the USART1 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+PCLK2 PCLK2 selected as USART1 clock \item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+HSI HSI selected as USART1 clock \item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as USART1 clock \item RCC\+\_\+\+USART1\+CLKSOURCE\+\_\+\+LSE LSE selected as USART1 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_gaa413643f4a106ca54111e8ff510290ca}\label{group___r_c_c_ex___exported___macros_gaa413643f4a106ca54111e8ff510290ca}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_USART2\_CONFIG@{\_\_HAL\_RCC\_USART2\_CONFIG}}
+\index{\_\_HAL\_RCC\_USART2\_CONFIG@{\_\_HAL\_RCC\_USART2\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_USART2\_CONFIG}{\_\_HAL\_RCC\_USART2\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART2\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+USART2\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART2\+SEL, (\+\_\+\+\_\+\+USART2\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the USART2 clock (USART2\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+USART2\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the USART2 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as USART2 clock \item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+HSI HSI selected as USART2 clock \item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as USART2 clock \item RCC\+\_\+\+USART2\+CLKSOURCE\+\_\+\+LSE LSE selected as USART2 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___exported___macros_ga732383844537c59f16d5882a8fa1670d}\label{group___r_c_c_ex___exported___macros_ga732383844537c59f16d5882a8fa1670d}} 
+\index{RCCEx Exported Macros@{RCCEx Exported Macros}!\_\_HAL\_RCC\_USART3\_CONFIG@{\_\_HAL\_RCC\_USART3\_CONFIG}}
+\index{\_\_HAL\_RCC\_USART3\_CONFIG@{\_\_HAL\_RCC\_USART3\_CONFIG}!RCCEx Exported Macros@{RCCEx Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_USART3\_CONFIG}{\_\_HAL\_RCC\_USART3\_CONFIG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART3\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+USART3\+\_\+\+CLKSOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})~                  MODIFY\+\_\+\+REG(RCC-\/$>$CCIPR, RCC\+\_\+\+CCIPR\+\_\+\+USART3\+SEL, (\+\_\+\+\_\+\+USART3\+\_\+\+CLKSOURCE\+\_\+\+\_\+))}
+
+
+
+Macro to configure the USART3 clock (USART3\+CLK). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+USART3\+\_\+\+CLKSOURCE\+\_\+\+\_\+} & specifies the USART3 clock source. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+PCLK1 PCLK1 selected as USART3 clock \item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+HSI HSI selected as USART3 clock \item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+SYSCLK System Clock selected as USART3 clock \item RCC\+\_\+\+USART3\+CLKSOURCE\+\_\+\+LSE LSE selected as USART3 clock \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

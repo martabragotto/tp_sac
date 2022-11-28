@@ -1,0 +1,36 @@
+\hypertarget{group___r_c_c___backup___domain___reset}{}\doxysection{RCC Backup Domain Reset}
+\label{group___r_c_c___backup___domain___reset}\index{RCC Backup Domain Reset@{RCC Backup Domain Reset}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___backup___domain___reset_ga3bf7da608ff985873ca8e248fb1dc4f0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+FORCE}}()~SET\+\_\+\+BIT(RCC-\/$>$BDCR, RCC\+\_\+\+BDCR\+\_\+\+BDRST)
+\begin{DoxyCompactList}\small\item\em Macros to force or release the Backup domain reset. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_c_c___backup___domain___reset_ga14f32622c65f4ae239ba8cb00d510321}\label{group___r_c_c___backup___domain___reset_ga14f32622c65f4ae239ba8cb00d510321}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+RELEASE}()~CLEAR\+\_\+\+BIT(RCC-\/$>$BDCR, RCC\+\_\+\+BDCR\+\_\+\+BDRST)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___backup___domain___reset_ga3bf7da608ff985873ca8e248fb1dc4f0}\label{group___r_c_c___backup___domain___reset_ga3bf7da608ff985873ca8e248fb1dc4f0}} 
+\index{RCC Backup Domain Reset@{RCC Backup Domain Reset}!\_\_HAL\_RCC\_BACKUPRESET\_FORCE@{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}}
+\index{\_\_HAL\_RCC\_BACKUPRESET\_FORCE@{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}!RCC Backup Domain Reset@{RCC Backup Domain Reset}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}{\_\_HAL\_RCC\_BACKUPRESET\_FORCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+BACKUPRESET\+\_\+\+FORCE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~SET\+\_\+\+BIT(RCC-\/$>$BDCR, RCC\+\_\+\+BDCR\+\_\+\+BDRST)}
+
+
+
+Macros to force or release the Backup domain reset. 
+
+\begin{DoxyNote}{Note}
+This function resets the RTC peripheral (including the backup registers) and the RTC clock source selection in RCC\+\_\+\+CSR register. 
+
+The BKPSRAM is not affected by this reset. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

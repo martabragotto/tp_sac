@@ -1,0 +1,568 @@
+\hypertarget{cmsis__armcc_8h_source}{}\doxysection{cmsis\+\_\+armcc.\+h}
+\label{cmsis__armcc_8h_source}\index{Drivers/CMSIS/Include/cmsis\_armcc.h@{Drivers/CMSIS/Include/cmsis\_armcc.h}}
+\mbox{\hyperlink{cmsis__armcc_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{7 \textcolor{comment}{/*}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Copyright (c) 2009-\/2019 Arm Limited. All rights reserved.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * SPDX-\/License-\/Identifier: Apache-\/2.0}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the License); you may}}
+\DoxyCodeLine{13 \textcolor{comment}{ * not use this file except in compliance with the License.}}
+\DoxyCodeLine{14 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ * www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{17 \textcolor{comment}{ *}}
+\DoxyCodeLine{18 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{19 \textcolor{comment}{ * distributed under the License is distributed on an AS IS BASIS, WITHOUT}}
+\DoxyCodeLine{20 \textcolor{comment}{ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{21 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{22 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{23 \textcolor{comment}{ */}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#ifndef \_\_CMSIS\_ARMCC\_H}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define \_\_CMSIS\_ARMCC\_H}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 400677)}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{  \#error "{}Please use Arm Compiler Toolchain V4.0.677 or later!"{}}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{comment}{/* CMSIS compiler control architecture macros */}}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#if ((defined (\_\_TARGET\_ARCH\_6\_M  ) \&\& (\_\_TARGET\_ARCH\_6\_M   == 1)) || \(\backslash\)}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{     (defined (\_\_TARGET\_ARCH\_6S\_M ) \&\& (\_\_TARGET\_ARCH\_6S\_M  == 1))   )}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{  \#define \_\_ARM\_ARCH\_6M\_\_           1}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#if (defined (\_\_TARGET\_ARCH\_7\_M ) \&\& (\_\_TARGET\_ARCH\_7\_M  == 1))}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{  \#define \_\_ARM\_ARCH\_7M\_\_           1}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#if (defined (\_\_TARGET\_ARCH\_7E\_M) \&\& (\_\_TARGET\_ARCH\_7E\_M == 1))}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{  \#define \_\_ARM\_ARCH\_7EM\_\_          1}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47   \textcolor{comment}{/* \_\_ARM\_ARCH\_8M\_BASE\_\_  not applicable */}}
+\DoxyCodeLine{48   \textcolor{comment}{/* \_\_ARM\_ARCH\_8M\_MAIN\_\_  not applicable */}}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \textcolor{comment}{/* CMSIS compiler control DSP macros */}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#if ((defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     )}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{  \#define \_\_ARM\_FEATURE\_DSP         1}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 \textcolor{comment}{/* CMSIS compiler specific defines */}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#ifndef   \_\_ASM}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{  \#define \_\_ASM                                  \_\_asm}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#ifndef   \_\_INLINE}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{  \#define \_\_INLINE                               \_\_inline}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#ifndef   \_\_STATIC\_INLINE}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{  \#define \_\_STATIC\_INLINE                        static \_\_inline}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#ifndef   \_\_STATIC\_FORCEINLINE                 }}
+\DoxyCodeLine{66 \textcolor{preprocessor}{  \#define \_\_STATIC\_FORCEINLINE                   static \_\_forceinline}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#endif           }}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#ifndef   \_\_NO\_RETURN}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{  \#define \_\_NO\_RETURN                            \_\_declspec(noreturn)}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#ifndef   \_\_USED}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{  \#define \_\_USED                                 \_\_attribute\_\_((used))}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#ifndef   \_\_WEAK}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{  \#define \_\_WEAK                                 \_\_attribute\_\_((weak))}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#ifndef   \_\_PACKED}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{  \#define \_\_PACKED                               \_\_attribute\_\_((packed))}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#ifndef   \_\_PACKED\_STRUCT}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{  \#define \_\_PACKED\_STRUCT                        \_\_packed struct}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#ifndef   \_\_PACKED\_UNION}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{  \#define \_\_PACKED\_UNION                         \_\_packed union}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#ifndef   \_\_UNALIGNED\_UINT32        }\textcolor{comment}{/* deprecated */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{  \#define \_\_UNALIGNED\_UINT32(x)                  (*((\_\_packed uint32\_t *)(x)))}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#ifndef   \_\_UNALIGNED\_UINT16\_WRITE}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{  \#define \_\_UNALIGNED\_UINT16\_WRITE(addr, val)    ((*((\_\_packed uint16\_t *)(addr))) = (val))}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#ifndef   \_\_UNALIGNED\_UINT16\_READ}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{  \#define \_\_UNALIGNED\_UINT16\_READ(addr)          (*((const \_\_packed uint16\_t *)(addr)))}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#ifndef   \_\_UNALIGNED\_UINT32\_WRITE}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{  \#define \_\_UNALIGNED\_UINT32\_WRITE(addr, val)    ((*((\_\_packed uint32\_t *)(addr))) = (val))}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#ifndef   \_\_UNALIGNED\_UINT32\_READ}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{  \#define \_\_UNALIGNED\_UINT32\_READ(addr)          (*((const \_\_packed uint32\_t *)(addr)))}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#ifndef   \_\_ALIGNED}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{  \#define \_\_ALIGNED(x)                           \_\_attribute\_\_((aligned(x)))}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#ifndef   \_\_RESTRICT}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{  \#define \_\_RESTRICT                             \_\_restrict}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#ifndef   \_\_COMPILER\_BARRIER}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{  \#define \_\_COMPILER\_BARRIER()                   \_\_memory\_changed()}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Startup and Lowlevel Init  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#ifndef \_\_PROGRAM\_START}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define \_\_PROGRAM\_START           \_\_main}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#ifndef \_\_INITIAL\_SP}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define \_\_INITIAL\_SP              Image\$\$ARM\_LIB\_STACK\$\$ZI\$\$Limit}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#ifndef \_\_STACK\_LIMIT}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define \_\_STACK\_LIMIT             Image\$\$ARM\_LIB\_STACK\$\$ZI\$\$Base}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#ifndef \_\_VECTOR\_TABLE}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define \_\_VECTOR\_TABLE            \_\_Vectors}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{128 }
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#ifndef \_\_VECTOR\_TABLE\_ATTRIBUTE}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define \_\_VECTOR\_TABLE\_ATTRIBUTE  \_\_attribute((used, section("{}RESET"{}})))}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Core Function Access  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{144 \textcolor{comment}{/* intrinsic void \_\_enable\_irq();     */}}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{146 }
+\DoxyCodeLine{152 \textcolor{comment}{/* intrinsic void \_\_disable\_irq();    */}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{159 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga7dd5c942bee32f055b90153feb950f59}{\_\_get\_CONTROL}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{160 \{}
+\DoxyCodeLine{161   \textcolor{keyword}{register} uint32\_t \_\_regControl         \_\_ASM(\textcolor{stringliteral}{"{}control"{}});}
+\DoxyCodeLine{162   \textcolor{keywordflow}{return}(\_\_regControl);}
+\DoxyCodeLine{163 \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 }
+\DoxyCodeLine{171 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga0102d0939d9b26c5c792be6bf5fd550f}{\_\_set\_CONTROL}}(uint32\_t control)}
+\DoxyCodeLine{172 \{}
+\DoxyCodeLine{173   \textcolor{keyword}{register} uint32\_t \_\_regControl         \_\_ASM(\textcolor{stringliteral}{"{}control"{}});}
+\DoxyCodeLine{174   \_\_regControl = control;}
+\DoxyCodeLine{175 \}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{177 }
+\DoxyCodeLine{183 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_gaf15a71855b9d731d11de92704c82bd18}{\_\_get\_IPSR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{184 \{}
+\DoxyCodeLine{185   \textcolor{keyword}{register} uint32\_t \_\_regIPSR          \_\_ASM(\textcolor{stringliteral}{"{}ipsr"{}});}
+\DoxyCodeLine{186   \textcolor{keywordflow}{return}(\_\_regIPSR);}
+\DoxyCodeLine{187 \}}
+\DoxyCodeLine{188 }
+\DoxyCodeLine{189 }
+\DoxyCodeLine{195 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_gadff4f1e599946e8ae96fba17b5245f04}{\_\_get\_APSR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{196 \{}
+\DoxyCodeLine{197   \textcolor{keyword}{register} uint32\_t \_\_regAPSR          \_\_ASM(\textcolor{stringliteral}{"{}apsr"{}});}
+\DoxyCodeLine{198   \textcolor{keywordflow}{return}(\_\_regAPSR);}
+\DoxyCodeLine{199 \}}
+\DoxyCodeLine{200 }
+\DoxyCodeLine{201 }
+\DoxyCodeLine{207 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga94c675a736d4754a5f73d8748b24aa11}{\_\_get\_xPSR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{208 \{}
+\DoxyCodeLine{209   \textcolor{keyword}{register} uint32\_t \_\_regXPSR          \_\_ASM(\textcolor{stringliteral}{"{}xpsr"{}});}
+\DoxyCodeLine{210   \textcolor{keywordflow}{return}(\_\_regXPSR);}
+\DoxyCodeLine{211 \}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 }
+\DoxyCodeLine{219 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga826c53e30812e350c77f58aac9f42bcb}{\_\_get\_PSP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221   \textcolor{keyword}{register} uint32\_t \_\_regProcessStackPointer  \_\_ASM(\textcolor{stringliteral}{"{}psp"{}});}
+\DoxyCodeLine{222   \textcolor{keywordflow}{return}(\_\_regProcessStackPointer);}
+\DoxyCodeLine{223 \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{225 }
+\DoxyCodeLine{231 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga21f50fc02c3927a8ebf0bc3678c06862}{\_\_set\_PSP}}(uint32\_t topOfProcStack)}
+\DoxyCodeLine{232 \{}
+\DoxyCodeLine{233   \textcolor{keyword}{register} uint32\_t \_\_regProcessStackPointer  \_\_ASM(\textcolor{stringliteral}{"{}psp"{}});}
+\DoxyCodeLine{234   \_\_regProcessStackPointer = topOfProcStack;}
+\DoxyCodeLine{235 \}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 }
+\DoxyCodeLine{243 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga667e7b8b97b4a30f445ae45d37588e45}{\_\_get\_MSP}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{244 \{}
+\DoxyCodeLine{245   \textcolor{keyword}{register} uint32\_t \_\_regMainStackPointer     \_\_ASM(\textcolor{stringliteral}{"{}msp"{}});}
+\DoxyCodeLine{246   \textcolor{keywordflow}{return}(\_\_regMainStackPointer);}
+\DoxyCodeLine{247 \}}
+\DoxyCodeLine{248 }
+\DoxyCodeLine{249 }
+\DoxyCodeLine{255 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga08b66e2b60a46fada36d90d2bc1e7c9b}{\_\_set\_MSP}}(uint32\_t topOfMainStack)}
+\DoxyCodeLine{256 \{}
+\DoxyCodeLine{257   \textcolor{keyword}{register} uint32\_t \_\_regMainStackPointer     \_\_ASM(\textcolor{stringliteral}{"{}msp"{}});}
+\DoxyCodeLine{258   \_\_regMainStackPointer = topOfMainStack;}
+\DoxyCodeLine{259 \}}
+\DoxyCodeLine{260 }
+\DoxyCodeLine{261 }
+\DoxyCodeLine{267 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga4ff59fb9e280d19e79e6875863a65f0a}{\_\_get\_PRIMASK}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{268 \{}
+\DoxyCodeLine{269   \textcolor{keyword}{register} uint32\_t \_\_regPriMask         \_\_ASM(\textcolor{stringliteral}{"{}primask"{}});}
+\DoxyCodeLine{270   \textcolor{keywordflow}{return}(\_\_regPriMask);}
+\DoxyCodeLine{271 \}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{273 }
+\DoxyCodeLine{279 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_gaf4a17d3be7dbb066489836d849930d92}{\_\_set\_PRIMASK}}(uint32\_t priMask)}
+\DoxyCodeLine{280 \{}
+\DoxyCodeLine{281   \textcolor{keyword}{register} uint32\_t \_\_regPriMask         \_\_ASM(\textcolor{stringliteral}{"{}primask"{}});}
+\DoxyCodeLine{282   \_\_regPriMask = (priMask);}
+\DoxyCodeLine{283 \}}
+\DoxyCodeLine{284 }
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#if ((defined (\_\_ARM\_ARCH\_7M\_\_ ) \&\& (\_\_ARM\_ARCH\_7M\_\_  == 1)) || \(\backslash\)}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{     (defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     )}}
+\DoxyCodeLine{288 }
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define \_\_enable\_fault\_irq                \_\_enable\_fiq}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{296 }
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#define \_\_disable\_fault\_irq               \_\_disable\_fiq}}
+\DoxyCodeLine{303 }
+\DoxyCodeLine{304 }
+\DoxyCodeLine{310 \_\_STATIC\_INLINE uint32\_t  \_\_get\_BASEPRI(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{311 \{}
+\DoxyCodeLine{312   \textcolor{keyword}{register} uint32\_t \_\_regBasePri         \_\_ASM(\textcolor{stringliteral}{"{}basepri"{}});}
+\DoxyCodeLine{313   \textcolor{keywordflow}{return}(\_\_regBasePri);}
+\DoxyCodeLine{314 \}}
+\DoxyCodeLine{315 }
+\DoxyCodeLine{316 }
+\DoxyCodeLine{322 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_BASEPRI(uint32\_t basePri)}
+\DoxyCodeLine{323 \{}
+\DoxyCodeLine{324   \textcolor{keyword}{register} uint32\_t \_\_regBasePri         \_\_ASM(\textcolor{stringliteral}{"{}basepri"{}});}
+\DoxyCodeLine{325   \_\_regBasePri = (basePri \& 0xFFU);}
+\DoxyCodeLine{326 \}}
+\DoxyCodeLine{327 }
+\DoxyCodeLine{328 }
+\DoxyCodeLine{335 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_BASEPRI\_MAX(uint32\_t basePri)}
+\DoxyCodeLine{336 \{}
+\DoxyCodeLine{337   \textcolor{keyword}{register} uint32\_t \_\_regBasePriMax      \_\_ASM(\textcolor{stringliteral}{"{}basepri\_max"{}});}
+\DoxyCodeLine{338   \_\_regBasePriMax = (basePri \& 0xFFU);}
+\DoxyCodeLine{339 \}}
+\DoxyCodeLine{340 }
+\DoxyCodeLine{341 }
+\DoxyCodeLine{347 \_\_STATIC\_INLINE uint32\_t \_\_get\_FAULTMASK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{348 \{}
+\DoxyCodeLine{349   \textcolor{keyword}{register} uint32\_t \_\_regFaultMask       \_\_ASM(\textcolor{stringliteral}{"{}faultmask"{}});}
+\DoxyCodeLine{350   \textcolor{keywordflow}{return}(\_\_regFaultMask);}
+\DoxyCodeLine{351 \}}
+\DoxyCodeLine{352 }
+\DoxyCodeLine{353 }
+\DoxyCodeLine{359 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_set\_FAULTMASK(uint32\_t faultMask)}
+\DoxyCodeLine{360 \{}
+\DoxyCodeLine{361   \textcolor{keyword}{register} uint32\_t \_\_regFaultMask       \_\_ASM(\textcolor{stringliteral}{"{}faultmask"{}});}
+\DoxyCodeLine{362   \_\_regFaultMask = (faultMask \& (uint32\_t)1U);}
+\DoxyCodeLine{363 \}}
+\DoxyCodeLine{364 }
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ((defined (\_\_ARM\_ARCH\_7M\_\_ ) \&\& (\_\_ARM\_ARCH\_7M\_\_  == 1)) || \(\backslash\)}}
+\DoxyCodeLine{366 \textcolor{comment}{           (defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     ) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{367 }
+\DoxyCodeLine{368 }
+\DoxyCodeLine{374 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga6a275172e274ea7ce6c22030d07c6c64}{\_\_get\_FPSCR}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{375 \{}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#if ((defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)) \&\& \(\backslash\)}}
+\DoxyCodeLine{377 \textcolor{preprocessor}{     (defined (\_\_FPU\_USED   ) \&\& (\_\_FPU\_USED    == 1U))     )}}
+\DoxyCodeLine{378   \textcolor{keyword}{register} uint32\_t \_\_regfpscr         \_\_ASM(\textcolor{stringliteral}{"{}fpscr"{}});}
+\DoxyCodeLine{379   \textcolor{keywordflow}{return}(\_\_regfpscr);}
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{381    \textcolor{keywordflow}{return}(0U);}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{383 \}}
+\DoxyCodeLine{384 }
+\DoxyCodeLine{385 }
+\DoxyCodeLine{391 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___reg_acc_functions_ga3cd91c42ad2793c3f3ae553a1b975512}{\_\_set\_FPSCR}}(uint32\_t fpscr)}
+\DoxyCodeLine{392 \{}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#if ((defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)) \&\& \(\backslash\)}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{     (defined (\_\_FPU\_USED   ) \&\& (\_\_FPU\_USED    == 1U))     )}}
+\DoxyCodeLine{395   \textcolor{keyword}{register} uint32\_t \_\_regfpscr         \_\_ASM(\textcolor{stringliteral}{"{}fpscr"{}});}
+\DoxyCodeLine{396   \_\_regfpscr = (fpscr);}
+\DoxyCodeLine{397 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{398   (void)fpscr;}
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{400 \}}
+\DoxyCodeLine{401 }
+\DoxyCodeLine{402 }
+\DoxyCodeLine{406 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Core Instruction Access  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#define \_\_NOP                             \_\_nop}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418 }
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define \_\_WFI                             \_\_wfi}}
+\DoxyCodeLine{424 }
+\DoxyCodeLine{425 }
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#define \_\_WFE                             \_\_wfe}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433 }
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#define \_\_SEV                             \_\_sev}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{440 }
+\DoxyCodeLine{447 \textcolor{preprocessor}{\#define \_\_ISB() do \{\(\backslash\)}}
+\DoxyCodeLine{448 \textcolor{preprocessor}{                   \_\_schedule\_barrier();\(\backslash\)}}
+\DoxyCodeLine{449 \textcolor{preprocessor}{                   \_\_isb(0xF);\(\backslash\)}}
+\DoxyCodeLine{450 \textcolor{preprocessor}{                   \_\_schedule\_barrier();\(\backslash\)}}
+\DoxyCodeLine{451 \textcolor{preprocessor}{                \} while (0U)}}
+\DoxyCodeLine{452 }
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#define \_\_DSB() do \{\(\backslash\)}}
+\DoxyCodeLine{459 \textcolor{preprocessor}{                   \_\_schedule\_barrier();\(\backslash\)}}
+\DoxyCodeLine{460 \textcolor{preprocessor}{                   \_\_dsb(0xF);\(\backslash\)}}
+\DoxyCodeLine{461 \textcolor{preprocessor}{                   \_\_schedule\_barrier();\(\backslash\)}}
+\DoxyCodeLine{462 \textcolor{preprocessor}{                \} while (0U)}}
+\DoxyCodeLine{463 }
+\DoxyCodeLine{469 \textcolor{preprocessor}{\#define \_\_DMB() do \{\(\backslash\)}}
+\DoxyCodeLine{470 \textcolor{preprocessor}{                   \_\_schedule\_barrier();\(\backslash\)}}
+\DoxyCodeLine{471 \textcolor{preprocessor}{                   \_\_dmb(0xF);\(\backslash\)}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{                   \_\_schedule\_barrier();\(\backslash\)}}
+\DoxyCodeLine{473 \textcolor{preprocessor}{                \} while (0U)}}
+\DoxyCodeLine{474 }
+\DoxyCodeLine{475                   }
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define \_\_REV                             \_\_rev}}
+\DoxyCodeLine{483 }
+\DoxyCodeLine{484 }
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#ifndef \_\_NO\_EMBEDDED\_ASM}}
+\DoxyCodeLine{492 \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae84a2733711339c5eefeb0d899506b96}{\_\_attribute\_\_}}((section(\textcolor{stringliteral}{"{}.rev16\_text"{}}))) \_\_STATIC\_INLINE \_\_ASM uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gad35497777af37e7809271b5e6f9510ba}{\_\_REV16}}(uint32\_t value)}
+\DoxyCodeLine{493 \{}
+\DoxyCodeLine{494   rev16 r0, r0}
+\DoxyCodeLine{495   bx lr}
+\DoxyCodeLine{496 \}}
+\DoxyCodeLine{497 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{499 }
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#ifndef \_\_NO\_EMBEDDED\_ASM}}
+\DoxyCodeLine{507 \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae84a2733711339c5eefeb0d899506b96}{\_\_attribute\_\_}}((section(\textcolor{stringliteral}{"{}.revsh\_text"{}}))) \_\_STATIC\_INLINE \_\_ASM int16\_t \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae580812686119c9c5cf3c11a7519a404}{\_\_REVSH}}(int16\_t value)}
+\DoxyCodeLine{508 \{}
+\DoxyCodeLine{509   revsh r0, r0}
+\DoxyCodeLine{510   bx lr}
+\DoxyCodeLine{511 \}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{513 }
+\DoxyCodeLine{514 }
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define \_\_ROR                             \_\_ror}}
+\DoxyCodeLine{523 }
+\DoxyCodeLine{524 }
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#define \_\_BKPT(value)                       \_\_breakpoint(value)}}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534 }
+\DoxyCodeLine{541 \textcolor{preprocessor}{\#if ((defined (\_\_ARM\_ARCH\_7M\_\_ ) \&\& (\_\_ARM\_ARCH\_7M\_\_  == 1)) || \(\backslash\)}}
+\DoxyCodeLine{542 \textcolor{preprocessor}{     (defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     )}}
+\DoxyCodeLine{543 \textcolor{preprocessor}{  \#define \_\_RBIT                          \_\_rbit}}
+\DoxyCodeLine{544 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{545 \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae84a2733711339c5eefeb0d899506b96}{\_\_attribute\_\_}}((always\_inline)) \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gab83768933a612816fad669db5488366f}{\_\_RBIT}}(uint32\_t value)}
+\DoxyCodeLine{546 \{}
+\DoxyCodeLine{547   uint32\_t result;}
+\DoxyCodeLine{548   uint32\_t s = (4U \textcolor{comment}{/*sizeof(v)*/} * 8U) -\/ 1U; \textcolor{comment}{/* extra shift needed at end */}}
+\DoxyCodeLine{549 }
+\DoxyCodeLine{550   result = value;                      \textcolor{comment}{/* r will be reversed bits of v; first get LSB of v */}}
+\DoxyCodeLine{551   \textcolor{keywordflow}{for} (value >>= 1U; value != 0U; value >>= 1U)}
+\DoxyCodeLine{552   \{}
+\DoxyCodeLine{553     result <<= 1U;}
+\DoxyCodeLine{554     result |= value \& 1U;}
+\DoxyCodeLine{555     s-\/-\/;}
+\DoxyCodeLine{556   \}}
+\DoxyCodeLine{557   result <<= s;                        \textcolor{comment}{/* shift when v's highest bits are zero */}}
+\DoxyCodeLine{558   \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{559 \}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{561 }
+\DoxyCodeLine{562 }
+\DoxyCodeLine{569 \textcolor{preprocessor}{\#define \_\_CLZ                             \_\_clz}}
+\DoxyCodeLine{570 }
+\DoxyCodeLine{571 }
+\DoxyCodeLine{572 \textcolor{preprocessor}{\#if ((defined (\_\_ARM\_ARCH\_7M\_\_ ) \&\& (\_\_ARM\_ARCH\_7M\_\_  == 1)) || \(\backslash\)}}
+\DoxyCodeLine{573 \textcolor{preprocessor}{     (defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     )}}
+\DoxyCodeLine{574 }
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 5060020)}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{  \#define \_\_LDREXB(ptr)                                                        ((uint8\_t ) \_\_ldrex(ptr))}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{  \#define \_\_LDREXB(ptr)          \_Pragma("{}push"{}}) \_Pragma("{}diag\_suppress 3731"{}) ((uint8\_t ) \_\_ldrex(ptr))  \_Pragma("{}pop"{})}
+\DoxyCodeLine{585 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{586 }
+\DoxyCodeLine{587 }
+\DoxyCodeLine{594 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 5060020)}}
+\DoxyCodeLine{595 \textcolor{preprocessor}{  \#define \_\_LDREXH(ptr)                                                        ((uint16\_t) \_\_ldrex(ptr))}}
+\DoxyCodeLine{596 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{597 \textcolor{preprocessor}{  \#define \_\_LDREXH(ptr)          \_Pragma("{}push"{}}) \_Pragma("{}diag\_suppress 3731"{}) ((uint16\_t) \_\_ldrex(ptr))  \_Pragma("{}pop"{})}
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{599 }
+\DoxyCodeLine{600 }
+\DoxyCodeLine{607 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 5060020)}}
+\DoxyCodeLine{608 \textcolor{preprocessor}{  \#define \_\_LDREXW(ptr)                                                        ((uint32\_t ) \_\_ldrex(ptr))}}
+\DoxyCodeLine{609 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{610 \textcolor{preprocessor}{  \#define \_\_LDREXW(ptr)          \_Pragma("{}push"{}}) \_Pragma("{}diag\_suppress 3731"{}) ((uint32\_t ) \_\_ldrex(ptr))  \_Pragma("{}pop"{})}
+\DoxyCodeLine{611 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{612 }
+\DoxyCodeLine{613 }
+\DoxyCodeLine{622 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 5060020)}}
+\DoxyCodeLine{623 \textcolor{preprocessor}{  \#define \_\_STREXB(value, ptr)                                                 \_\_strex(value, ptr)}}
+\DoxyCodeLine{624 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{625 \textcolor{preprocessor}{  \#define \_\_STREXB(value, ptr)   \_Pragma("{}push"{}}) \_Pragma("{}diag\_suppress 3731"{}) \_\_strex(value, ptr)        \_Pragma("{}pop"{})}
+\DoxyCodeLine{626 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{627 }
+\DoxyCodeLine{628 }
+\DoxyCodeLine{637 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 5060020)}}
+\DoxyCodeLine{638 \textcolor{preprocessor}{  \#define \_\_STREXH(value, ptr)                                                 \_\_strex(value, ptr)}}
+\DoxyCodeLine{639 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{640 \textcolor{preprocessor}{  \#define \_\_STREXH(value, ptr)   \_Pragma("{}push"{}}) \_Pragma("{}diag\_suppress 3731"{}) \_\_strex(value, ptr)        \_Pragma("{}pop"{})}
+\DoxyCodeLine{641 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{642 }
+\DoxyCodeLine{643 }
+\DoxyCodeLine{652 \textcolor{preprocessor}{\#if defined(\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION < 5060020)}}
+\DoxyCodeLine{653 \textcolor{preprocessor}{  \#define \_\_STREXW(value, ptr)                                                 \_\_strex(value, ptr)}}
+\DoxyCodeLine{654 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{655 \textcolor{preprocessor}{  \#define \_\_STREXW(value, ptr)   \_Pragma("{}push"{}}) \_Pragma("{}diag\_suppress 3731"{}) \_\_strex(value, ptr)        \_Pragma("{}pop"{})}
+\DoxyCodeLine{656 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{657 }
+\DoxyCodeLine{658 }
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#define \_\_CLREX                           \_\_clrex}}
+\DoxyCodeLine{664 }
+\DoxyCodeLine{665 }
+\DoxyCodeLine{673 \textcolor{preprocessor}{\#define \_\_SSAT                            \_\_ssat}}
+\DoxyCodeLine{674 }
+\DoxyCodeLine{675 }
+\DoxyCodeLine{683 \textcolor{preprocessor}{\#define \_\_USAT                            \_\_usat}}
+\DoxyCodeLine{684 }
+\DoxyCodeLine{685 }
+\DoxyCodeLine{693 \textcolor{preprocessor}{\#ifndef \_\_NO\_EMBEDDED\_ASM}}
+\DoxyCodeLine{694 \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae84a2733711339c5eefeb0d899506b96}{\_\_attribute\_\_}}((section(\textcolor{stringliteral}{"{}.rrx\_text"{}}))) \_\_STATIC\_INLINE \_\_ASM uint32\_t \_\_RRX(uint32\_t value)}
+\DoxyCodeLine{695 \{}
+\DoxyCodeLine{696   rrx r0, r0}
+\DoxyCodeLine{697   bx lr}
+\DoxyCodeLine{698 \}}
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{700 }
+\DoxyCodeLine{701 }
+\DoxyCodeLine{708 \textcolor{preprocessor}{\#define \_\_LDRBT(ptr)                      ((uint8\_t )  \_\_ldrt(ptr))}}
+\DoxyCodeLine{709 }
+\DoxyCodeLine{710 }
+\DoxyCodeLine{717 \textcolor{preprocessor}{\#define \_\_LDRHT(ptr)                      ((uint16\_t)  \_\_ldrt(ptr))}}
+\DoxyCodeLine{718 }
+\DoxyCodeLine{719 }
+\DoxyCodeLine{726 \textcolor{preprocessor}{\#define \_\_LDRT(ptr)                       ((uint32\_t ) \_\_ldrt(ptr))}}
+\DoxyCodeLine{727 }
+\DoxyCodeLine{728 }
+\DoxyCodeLine{735 \textcolor{preprocessor}{\#define \_\_STRBT(value, ptr)               \_\_strt(value, ptr)}}
+\DoxyCodeLine{736 }
+\DoxyCodeLine{737 }
+\DoxyCodeLine{744 \textcolor{preprocessor}{\#define \_\_STRHT(value, ptr)               \_\_strt(value, ptr)}}
+\DoxyCodeLine{745 }
+\DoxyCodeLine{746 }
+\DoxyCodeLine{753 \textcolor{preprocessor}{\#define \_\_STRT(value, ptr)                \_\_strt(value, ptr)}}
+\DoxyCodeLine{754 }
+\DoxyCodeLine{755 \textcolor{preprocessor}{\#else  }\textcolor{comment}{/* ((defined (\_\_ARM\_ARCH\_7M\_\_ ) \&\& (\_\_ARM\_ARCH\_7M\_\_  == 1)) || \(\backslash\)}}
+\DoxyCodeLine{756 \textcolor{comment}{           (defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     ) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{757 }
+\DoxyCodeLine{765 \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae84a2733711339c5eefeb0d899506b96}{\_\_attribute\_\_}}((always\_inline)) \_\_STATIC\_INLINE int32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga372c0535573dde3e37f0f08c774a3487}{\_\_SSAT}}(int32\_t val, uint32\_t sat)}
+\DoxyCodeLine{766 \{}
+\DoxyCodeLine{767   \textcolor{keywordflow}{if} ((sat >= 1U) \&\& (sat <= 32U))}
+\DoxyCodeLine{768   \{}
+\DoxyCodeLine{769     \textcolor{keyword}{const} int32\_t max = (int32\_t)((1U << (sat -\/ 1U)) -\/ 1U);}
+\DoxyCodeLine{770     \textcolor{keyword}{const} int32\_t min = -\/1 -\/ max ;}
+\DoxyCodeLine{771     \textcolor{keywordflow}{if} (val > max)}
+\DoxyCodeLine{772     \{}
+\DoxyCodeLine{773       \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{774     \}}
+\DoxyCodeLine{775     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (val < min)}
+\DoxyCodeLine{776     \{}
+\DoxyCodeLine{777       \textcolor{keywordflow}{return} min;}
+\DoxyCodeLine{778     \}}
+\DoxyCodeLine{779   \}}
+\DoxyCodeLine{780   \textcolor{keywordflow}{return} val;}
+\DoxyCodeLine{781 \}}
+\DoxyCodeLine{782 }
+\DoxyCodeLine{790 \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gae84a2733711339c5eefeb0d899506b96}{\_\_attribute\_\_}}((always\_inline)) \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga6562dbd8182d1571e22dbca7ebdfa9bc}{\_\_USAT}}(int32\_t val, uint32\_t sat)}
+\DoxyCodeLine{791 \{}
+\DoxyCodeLine{792   \textcolor{keywordflow}{if} (sat <= 31U)}
+\DoxyCodeLine{793   \{}
+\DoxyCodeLine{794     \textcolor{keyword}{const} uint32\_t max = ((1U << sat) -\/ 1U);}
+\DoxyCodeLine{795     \textcolor{keywordflow}{if} (val > (int32\_t)max)}
+\DoxyCodeLine{796     \{}
+\DoxyCodeLine{797       \textcolor{keywordflow}{return} max;}
+\DoxyCodeLine{798     \}}
+\DoxyCodeLine{799     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (val < 0)}
+\DoxyCodeLine{800     \{}
+\DoxyCodeLine{801       \textcolor{keywordflow}{return} 0U;}
+\DoxyCodeLine{802     \}}
+\DoxyCodeLine{803   \}}
+\DoxyCodeLine{804   \textcolor{keywordflow}{return} (uint32\_t)val;}
+\DoxyCodeLine{805 \}}
+\DoxyCodeLine{806 }
+\DoxyCodeLine{807 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ((defined (\_\_ARM\_ARCH\_7M\_\_ ) \&\& (\_\_ARM\_ARCH\_7M\_\_  == 1)) || \(\backslash\)}}
+\DoxyCodeLine{808 \textcolor{comment}{           (defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     ) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{809  \textcolor{comment}{/* end of group CMSIS\_Core\_InstructionInterface */}}
+\DoxyCodeLine{811 }
+\DoxyCodeLine{812 }
+\DoxyCodeLine{813 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  Compiler specific Intrinsics  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{819 \textcolor{preprocessor}{\#if ((defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     )}}
+\DoxyCodeLine{820 }
+\DoxyCodeLine{821 \textcolor{preprocessor}{\#define \_\_SADD8                           \_\_sadd8}}
+\DoxyCodeLine{822 \textcolor{preprocessor}{\#define \_\_QADD8                           \_\_qadd8}}
+\DoxyCodeLine{823 \textcolor{preprocessor}{\#define \_\_SHADD8                          \_\_shadd8}}
+\DoxyCodeLine{824 \textcolor{preprocessor}{\#define \_\_UADD8                           \_\_uadd8}}
+\DoxyCodeLine{825 \textcolor{preprocessor}{\#define \_\_UQADD8                          \_\_uqadd8}}
+\DoxyCodeLine{826 \textcolor{preprocessor}{\#define \_\_UHADD8                          \_\_uhadd8}}
+\DoxyCodeLine{827 \textcolor{preprocessor}{\#define \_\_SSUB8                           \_\_ssub8}}
+\DoxyCodeLine{828 \textcolor{preprocessor}{\#define \_\_QSUB8                           \_\_qsub8}}
+\DoxyCodeLine{829 \textcolor{preprocessor}{\#define \_\_SHSUB8                          \_\_shsub8}}
+\DoxyCodeLine{830 \textcolor{preprocessor}{\#define \_\_USUB8                           \_\_usub8}}
+\DoxyCodeLine{831 \textcolor{preprocessor}{\#define \_\_UQSUB8                          \_\_uqsub8}}
+\DoxyCodeLine{832 \textcolor{preprocessor}{\#define \_\_UHSUB8                          \_\_uhsub8}}
+\DoxyCodeLine{833 \textcolor{preprocessor}{\#define \_\_SADD16                          \_\_sadd16}}
+\DoxyCodeLine{834 \textcolor{preprocessor}{\#define \_\_QADD16                          \_\_qadd16}}
+\DoxyCodeLine{835 \textcolor{preprocessor}{\#define \_\_SHADD16                         \_\_shadd16}}
+\DoxyCodeLine{836 \textcolor{preprocessor}{\#define \_\_UADD16                          \_\_uadd16}}
+\DoxyCodeLine{837 \textcolor{preprocessor}{\#define \_\_UQADD16                         \_\_uqadd16}}
+\DoxyCodeLine{838 \textcolor{preprocessor}{\#define \_\_UHADD16                         \_\_uhadd16}}
+\DoxyCodeLine{839 \textcolor{preprocessor}{\#define \_\_SSUB16                          \_\_ssub16}}
+\DoxyCodeLine{840 \textcolor{preprocessor}{\#define \_\_QSUB16                          \_\_qsub16}}
+\DoxyCodeLine{841 \textcolor{preprocessor}{\#define \_\_SHSUB16                         \_\_shsub16}}
+\DoxyCodeLine{842 \textcolor{preprocessor}{\#define \_\_USUB16                          \_\_usub16}}
+\DoxyCodeLine{843 \textcolor{preprocessor}{\#define \_\_UQSUB16                         \_\_uqsub16}}
+\DoxyCodeLine{844 \textcolor{preprocessor}{\#define \_\_UHSUB16                         \_\_uhsub16}}
+\DoxyCodeLine{845 \textcolor{preprocessor}{\#define \_\_SASX                            \_\_sasx}}
+\DoxyCodeLine{846 \textcolor{preprocessor}{\#define \_\_QASX                            \_\_qasx}}
+\DoxyCodeLine{847 \textcolor{preprocessor}{\#define \_\_SHASX                           \_\_shasx}}
+\DoxyCodeLine{848 \textcolor{preprocessor}{\#define \_\_UASX                            \_\_uasx}}
+\DoxyCodeLine{849 \textcolor{preprocessor}{\#define \_\_UQASX                           \_\_uqasx}}
+\DoxyCodeLine{850 \textcolor{preprocessor}{\#define \_\_UHASX                           \_\_uhasx}}
+\DoxyCodeLine{851 \textcolor{preprocessor}{\#define \_\_SSAX                            \_\_ssax}}
+\DoxyCodeLine{852 \textcolor{preprocessor}{\#define \_\_QSAX                            \_\_qsax}}
+\DoxyCodeLine{853 \textcolor{preprocessor}{\#define \_\_SHSAX                           \_\_shsax}}
+\DoxyCodeLine{854 \textcolor{preprocessor}{\#define \_\_USAX                            \_\_usax}}
+\DoxyCodeLine{855 \textcolor{preprocessor}{\#define \_\_UQSAX                           \_\_uqsax}}
+\DoxyCodeLine{856 \textcolor{preprocessor}{\#define \_\_UHSAX                           \_\_uhsax}}
+\DoxyCodeLine{857 \textcolor{preprocessor}{\#define \_\_USAD8                           \_\_usad8}}
+\DoxyCodeLine{858 \textcolor{preprocessor}{\#define \_\_USADA8                          \_\_usada8}}
+\DoxyCodeLine{859 \textcolor{preprocessor}{\#define \_\_SSAT16                          \_\_ssat16}}
+\DoxyCodeLine{860 \textcolor{preprocessor}{\#define \_\_USAT16                          \_\_usat16}}
+\DoxyCodeLine{861 \textcolor{preprocessor}{\#define \_\_UXTB16                          \_\_uxtb16}}
+\DoxyCodeLine{862 \textcolor{preprocessor}{\#define \_\_UXTAB16                         \_\_uxtab16}}
+\DoxyCodeLine{863 \textcolor{preprocessor}{\#define \_\_SXTB16                          \_\_sxtb16}}
+\DoxyCodeLine{864 \textcolor{preprocessor}{\#define \_\_SXTAB16                         \_\_sxtab16}}
+\DoxyCodeLine{865 \textcolor{preprocessor}{\#define \_\_SMUAD                           \_\_smuad}}
+\DoxyCodeLine{866 \textcolor{preprocessor}{\#define \_\_SMUADX                          \_\_smuadx}}
+\DoxyCodeLine{867 \textcolor{preprocessor}{\#define \_\_SMLAD                           \_\_smlad}}
+\DoxyCodeLine{868 \textcolor{preprocessor}{\#define \_\_SMLADX                          \_\_smladx}}
+\DoxyCodeLine{869 \textcolor{preprocessor}{\#define \_\_SMLALD                          \_\_smlald}}
+\DoxyCodeLine{870 \textcolor{preprocessor}{\#define \_\_SMLALDX                         \_\_smlaldx}}
+\DoxyCodeLine{871 \textcolor{preprocessor}{\#define \_\_SMUSD                           \_\_smusd}}
+\DoxyCodeLine{872 \textcolor{preprocessor}{\#define \_\_SMUSDX                          \_\_smusdx}}
+\DoxyCodeLine{873 \textcolor{preprocessor}{\#define \_\_SMLSD                           \_\_smlsd}}
+\DoxyCodeLine{874 \textcolor{preprocessor}{\#define \_\_SMLSDX                          \_\_smlsdx}}
+\DoxyCodeLine{875 \textcolor{preprocessor}{\#define \_\_SMLSLD                          \_\_smlsld}}
+\DoxyCodeLine{876 \textcolor{preprocessor}{\#define \_\_SMLSLDX                         \_\_smlsldx}}
+\DoxyCodeLine{877 \textcolor{preprocessor}{\#define \_\_SEL                             \_\_sel}}
+\DoxyCodeLine{878 \textcolor{preprocessor}{\#define \_\_QADD                            \_\_qadd}}
+\DoxyCodeLine{879 \textcolor{preprocessor}{\#define \_\_QSUB                            \_\_qsub}}
+\DoxyCodeLine{880 }
+\DoxyCodeLine{881 \textcolor{preprocessor}{\#define \_\_PKHBT(ARG1,ARG2,ARG3)          ( ((((uint32\_t)(ARG1))          ) \& 0x0000FFFFUL) |  \(\backslash\)}}
+\DoxyCodeLine{882 \textcolor{preprocessor}{                                           ((((uint32\_t)(ARG2)) << (ARG3)) \& 0xFFFF0000UL)  )}}
+\DoxyCodeLine{883 }
+\DoxyCodeLine{884 \textcolor{preprocessor}{\#define \_\_PKHTB(ARG1,ARG2,ARG3)          ( ((((uint32\_t)(ARG1))          ) \& 0xFFFF0000UL) |  \(\backslash\)}}
+\DoxyCodeLine{885 \textcolor{preprocessor}{                                           ((((uint32\_t)(ARG2)) >> (ARG3)) \& 0x0000FFFFUL)  )}}
+\DoxyCodeLine{886 }
+\DoxyCodeLine{887 \textcolor{preprocessor}{\#define \_\_SMMLA(ARG1,ARG2,ARG3)          ( (int32\_t)((((int64\_t)(ARG1) * (ARG2)) + \(\backslash\)}}
+\DoxyCodeLine{888 \textcolor{preprocessor}{                                                      ((int64\_t)(ARG3) << 32U)     ) >> 32U))}}
+\DoxyCodeLine{889 }
+\DoxyCodeLine{890 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ((defined (\_\_ARM\_ARCH\_7EM\_\_) \&\& (\_\_ARM\_ARCH\_7EM\_\_ == 1))     ) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{894 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CMSIS\_ARMCC\_H */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

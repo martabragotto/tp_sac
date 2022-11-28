@@ -1,0 +1,217 @@
+\hypertarget{stm32g4xx__hal__gpio__ex_8h}{}\doxysection{Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32g4xx\+\_\+hal\+\_\+gpio\+\_\+ex.h File Reference}
+\label{stm32g4xx__hal__gpio__ex_8h}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_gpio\_ex.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_gpio\_ex.h}}
+
+
+Header file of GPIO HAL Extended module.  
+
+
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+def.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF0\+\_\+\+RTC\+\_\+50\+Hz}~((uint8\+\_\+t)0x00)  /$\ast$ RTC\+\_\+50\+Hz Alternate Function mapping                       $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 0 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF0\+\_\+\+MCO}~((uint8\+\_\+t)0x00)  /$\ast$ MCO (MCO1 and MCO2) Alternate Function mapping            $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF0\+\_\+\+SWJ}~((uint8\+\_\+t)0x00)  /$\ast$ SWJ (SWD and JTAG) Alternate Function mapping             $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF0\+\_\+\+TRACE}~((uint8\+\_\+t)0x00)  /$\ast$ TRACE Alternate Function mapping                          $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+TIM2}~((uint8\+\_\+t)0x01)  /$\ast$ TIM2 Alternate Function mapping   $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 1 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+TIM16}~((uint8\+\_\+t)0x01)  /$\ast$ TIM16 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+TIM17}~((uint8\+\_\+t)0x01)  /$\ast$ TIM17 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+TIM17\+\_\+\+COMP1}~((uint8\+\_\+t)0x01)  /$\ast$ TIM17/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+TIM15}~((uint8\+\_\+t)0x01)  /$\ast$ TIM15 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+LPTIM1}~((uint8\+\_\+t)0x01)  /$\ast$ LPTIM1 Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF1\+\_\+\+IR}~((uint8\+\_\+t)0x01)  /$\ast$ IR Alternate Function mapping     $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM1}~((uint8\+\_\+t)0x02)  /$\ast$ TIM1 Alternate Function mapping  $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 2 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM2}~((uint8\+\_\+t)0x02)  /$\ast$ TIM2 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM3}~((uint8\+\_\+t)0x02)  /$\ast$ TIM3 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM4}~((uint8\+\_\+t)0x02)  /$\ast$ TIM4 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM8}~((uint8\+\_\+t)0x02)  /$\ast$ TIM8 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM15}~((uint8\+\_\+t)0x02)  /$\ast$ TIM15 Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM16}~((uint8\+\_\+t)0x02)  /$\ast$ TIM16 Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM1\+\_\+\+COMP1}~((uint8\+\_\+t)0x02)  /$\ast$ TIM1/COMP1 Break in Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM15\+\_\+\+COMP1}~((uint8\+\_\+t)0x02)  /$\ast$ TIM15/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+TIM16\+\_\+\+COMP1}~((uint8\+\_\+t)0x02)  /$\ast$ TIM16/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+I2\+C3}~((uint8\+\_\+t)0x02)  /$\ast$ I2\+C3 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF2\+\_\+\+COMP1}~((uint8\+\_\+t)0x02)  /$\ast$ COMP1 Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF3\+\_\+\+TIM15}~((uint8\+\_\+t)0x03)  /$\ast$ TIM15 Alternate Function mapping   $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 3 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF3\+\_\+\+UCPD1}~((uint8\+\_\+t)0x03)  /$\ast$ UCPD1 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF3\+\_\+\+I2\+C3}~((uint8\+\_\+t)0x03)  /$\ast$ I2\+C3 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF3\+\_\+\+TIM8}~((uint8\+\_\+t)0x03)  /$\ast$ TIM8 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF3\+\_\+\+SAI1}~((uint8\+\_\+t)0x03)  /$\ast$ SAI1 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF3\+\_\+\+COMP3}~((uint8\+\_\+t)0x03)  /$\ast$ COMP3 Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+TIM1}~((uint8\+\_\+t)0x04)  /$\ast$ TIM1 Alternate Function mapping    $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 4 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+TIM8}~((uint8\+\_\+t)0x04)  /$\ast$ TIM8 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+TIM16}~((uint8\+\_\+t)0x04)  /$\ast$ TIM16 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+TIM17}~((uint8\+\_\+t)0x04)  /$\ast$ TIM17 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+TIM8\+\_\+\+COMP1}~((uint8\+\_\+t)0x04)  /$\ast$ TIM8/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+I2\+C1}~((uint8\+\_\+t)0x04)  /$\ast$ I2\+C1 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+I2\+C2}~((uint8\+\_\+t)0x04)  /$\ast$ I2\+C2 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF4\+\_\+\+I2\+C3}~((uint8\+\_\+t)0x04)  /$\ast$ I2\+C3 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+SPI1}~((uint8\+\_\+t)0x05)  /$\ast$ SPI1 Alternate Function mapping       $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 5 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+SPI2}~((uint8\+\_\+t)0x05)  /$\ast$ SPI2 Alternate Function mapping       $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+IR}~((uint8\+\_\+t)0x05)  /$\ast$ IR Alternate Function mapping         $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+TIM8}~((uint8\+\_\+t)0x05)  /$\ast$ TIM8 Alternate Function mapping       $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+TIM8\+\_\+\+COMP1}~((uint8\+\_\+t)0x05)  /$\ast$ TIM8/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+UART4}~((uint8\+\_\+t)0x05)  /$\ast$ UART4 Alternate Function mapping      $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF5\+\_\+\+I2\+S2ext}~((uint8\+\_\+t)0x05)  /$\ast$ I2\+S2ext\+\_\+\+SD Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+SPI2}~((uint8\+\_\+t)0x06)  /$\ast$ SPI2 Alternate Function mapping       $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 6 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+SPI3}~((uint8\+\_\+t)0x06)  /$\ast$ SPI3 Alternate Function mapping       $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+TIM1}~((uint8\+\_\+t)0x06)  /$\ast$ TIM1 Alternate Function mapping       $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+TIM8}~((uint8\+\_\+t)0x06)  /$\ast$ TIM8 Alternate Function mapping       $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+TIM1\+\_\+\+COMP1}~((uint8\+\_\+t)0x06)  /$\ast$ TIM1/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+TIM1\+\_\+\+COMP2}~((uint8\+\_\+t)0x06)  /$\ast$ TIM1/COMP2 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+TIM8\+\_\+\+COMP2}~((uint8\+\_\+t)0x06)  /$\ast$ TIM8/COMP2 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+IR}~((uint8\+\_\+t)0x06)  /$\ast$ IR Alternate Function mapping         $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF6\+\_\+\+I2\+S3ext}~((uint8\+\_\+t)0x06)  /$\ast$ I2\+S3ext\+\_\+\+SD Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF7\+\_\+\+USART1}~((uint8\+\_\+t)0x07)  /$\ast$ USART1 Alternate Function mapping  $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 7 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF7\+\_\+\+USART2}~((uint8\+\_\+t)0x07)  /$\ast$ USART2 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF7\+\_\+\+USART3}~((uint8\+\_\+t)0x07)  /$\ast$ USART3 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+COMP1}~((uint8\+\_\+t)0x08)  /$\ast$ COMP1 Alternate Function mapping   $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 8 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+COMP2}~((uint8\+\_\+t)0x08)  /$\ast$ COMP2 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+COMP3}~((uint8\+\_\+t)0x08)  /$\ast$ COMP3 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+COMP4}~((uint8\+\_\+t)0x08)  /$\ast$ COMP4 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+I2\+C3}~((uint8\+\_\+t)0x08)  /$\ast$ I2\+C3 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+LPUART1}~((uint8\+\_\+t)0x08)  /$\ast$ LPUART1 Alternate Function mapping $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF8\+\_\+\+UART4}~((uint8\+\_\+t)0x08)  /$\ast$ UART4 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+TIM1}~((uint8\+\_\+t)0x09)  /$\ast$ TIM1 Alternate Function mapping    $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 9 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+TIM8}~((uint8\+\_\+t)0x09)  /$\ast$ TIM8 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+TIM15}~((uint8\+\_\+t)0x09)  /$\ast$ TIM15 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+TIM1\+\_\+\+COMP1}~((uint8\+\_\+t)0x09)  /$\ast$ TIM1/COMP1 Break in Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+TIM8\+\_\+\+COMP1}~((uint8\+\_\+t)0x09)  /$\ast$ TIM8/COMP1 Break in Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+TIM15\+\_\+\+COMP1}~((uint8\+\_\+t)0x09)  /$\ast$ TIM15/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF9\+\_\+\+FDCAN1}~((uint8\+\_\+t)0x09)  /$\ast$ FDCAN1 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM2}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM2 Alternate Function mapping    $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 10 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM3}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM3 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM4}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM4 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM8}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM8 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM17}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM17 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM8\+\_\+\+COMP2}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM8/COMP2 Break in Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF10\+\_\+\+TIM17\+\_\+\+COMP1}~((uint8\+\_\+t)0x0A)  /$\ast$ TIM17/COMP1 Break in Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF11\+\_\+\+FDCAN1}~((uint8\+\_\+t)0x0B)  /$\ast$ FDCAN1 Alternate Function mapping  $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 11 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF11\+\_\+\+TIM1}~((uint8\+\_\+t)0x0B)  /$\ast$ TIM1 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF11\+\_\+\+TIM8}~((uint8\+\_\+t)0x0B)  /$\ast$ TIM8 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF11\+\_\+\+TIM8\+\_\+\+COMP1}~((uint8\+\_\+t)0x0B)  /$\ast$ TIM8/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF11\+\_\+\+LPTIM1}~((uint8\+\_\+t)0x0B)  /$\ast$ LPTIM1 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF12\+\_\+\+LPUART1}~((uint8\+\_\+t)0x0C)  /$\ast$ LPUART1 Alternate Function mapping $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 12 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF12\+\_\+\+TIM1}~((uint8\+\_\+t)0x0C)  /$\ast$ TIM1 Alternate Function mapping    $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF12\+\_\+\+TIM1\+\_\+\+COMP1}~((uint8\+\_\+t)0x0C)  /$\ast$ TIM1/COMP1 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF12\+\_\+\+TIM1\+\_\+\+COMP2}~((uint8\+\_\+t)0x0C)  /$\ast$ TIM1/COMP2 Break in Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF12\+\_\+\+SAI1}~((uint8\+\_\+t)0x0C)  /$\ast$ SAI1 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF13\+\_\+\+SAI1}~((uint8\+\_\+t)0x0D)  /$\ast$ SAI1 Alternate Function mapping  $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 13 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF14\+\_\+\+TIM2}~((uint8\+\_\+t)0x0E)  /$\ast$ TIM2 Alternate Function mapping   $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 14 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries GPIO\+\_\+\+AF14\+\_\+\+TIM15}~((uint8\+\_\+t)0x0E)  /$\ast$ TIM15 Alternate Function mapping   $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF14\+\_\+\+UCPD1}~((uint8\+\_\+t)0x0E)  /$\ast$ UCPD1 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF14\+\_\+\+SAI1}~((uint8\+\_\+t)0x0E)  /$\ast$ SAI1 Alternate Function mapping  $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF14\+\_\+\+UART4}~((uint8\+\_\+t)0x0E)  /$\ast$ UART4 Alternate Function mapping      $\ast$/
+\item 
+\#define {\bfseries GPIO\+\_\+\+AF15\+\_\+\+EVENTOUT}~((uint8\+\_\+t)0x0F)  /$\ast$ EVENTOUT Alternate Function mapping $\ast$/
+\begin{DoxyCompactList}\small\item\em AF 15 selection. \end{DoxyCompactList}\item 
+\#define {\bfseries IS\+\_\+\+GPIO\+\_\+\+AF}(AF)~((AF) $<$= (uint8\+\_\+t)0x0F)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o_ex___get___port___index_ga3830db89326a2268d296a6498fd31384}{GPIO\+\_\+\+GET\+\_\+\+INDEX}}(\+\_\+\+\_\+\+GPIOx\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of GPIO HAL Extended module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

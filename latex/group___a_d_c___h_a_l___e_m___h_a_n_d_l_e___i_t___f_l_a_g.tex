@@ -1,0 +1,163 @@
+\hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g}{}\doxysection{HAL ADC macro to manage HAL ADC handle, IT and flags.}
+\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g}\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gacb290bae25b972942021331122a3600f}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~  ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___a_d_c___states_ga3f995b6dedd7366d0663f852511b9104}{HAL\+\_\+\+ADC\+\_\+\+STATE\+\_\+\+RESET}})
+\begin{DoxyCompactList}\small\item\em Reset ADC handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_ga650073de508d335d0a1c7bf9b4d07afe}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$IER) $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable ADC interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gadcec48b44a2133effd20f41ab227edb9}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$IER) \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable ADC interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gaf29cd943cb451e4ed1f07bd7d4854fb0}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$IER \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Checks if the specified ADC interrupt source is enabled or disabled. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gaff951862689bb92173f803577cf2d447}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~  ((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Check whether the specified ADC flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gafe44e1e66141bca3665bb82981a81a17}{\+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Clear the specified ADC flag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gafe44e1e66141bca3665bb82981a81a17}\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gafe44e1e66141bca3665bb82981a81a17}} 
+\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}!\_\_HAL\_ADC\_CLEAR\_FLAG@{\_\_HAL\_ADC\_CLEAR\_FLAG}}
+\index{\_\_HAL\_ADC\_CLEAR\_FLAG@{\_\_HAL\_ADC\_CLEAR\_FLAG}!HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_CLEAR\_FLAG}{\_\_HAL\_ADC\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) = (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Clear the specified ADC flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & ADC handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & ADC flag This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c__flags__definition_gaf1a4a140115121cc0ec1f821d2c8c199}{ADC\+\_\+\+FLAG\+\_\+\+RDY}} ADC Ready flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gacf79acb4682b5c104fe38f9dff035656}{ADC\+\_\+\+FLAG\+\_\+\+EOSMP}} ADC End of Sampling flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gaf2c6fdf7e9ab63b778149e5fb56413d4}{ADC\+\_\+\+FLAG\+\_\+\+EOC}} ADC End of Regular Conversion flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gac3acbfd08e72d33bc520dac5998f7e52}{ADC\+\_\+\+FLAG\+\_\+\+EOS}} ADC End of Regular sequence of Conversions flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga6e8f399d2af342bd18b9f5803cb986e7}{ADC\+\_\+\+FLAG\+\_\+\+OVR}} ADC overrun flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga4df8eea8ab83d98104ee15a339743a4e}{ADC\+\_\+\+FLAG\+\_\+\+JEOC}} ADC End of Injected Conversion flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gadecc793b0a121e763d373454cf23d6e4}{ADC\+\_\+\+FLAG\+\_\+\+JEOS}} ADC End of Injected sequence of Conversions flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga93c3537ba0c71001d07e40df4fdb3e35}{ADC\+\_\+\+FLAG\+\_\+\+AWD1}} ADC Analog watchdog 1 flag (main analog watchdog) \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga15447535e0916abe29a370578d4266e7}{ADC\+\_\+\+FLAG\+\_\+\+AWD2}} ADC Analog watchdog 2 flag (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__flags__definition_gae75b7f1aeae23999d37023cd8970b68e}{ADC\+\_\+\+FLAG\+\_\+\+AWD3}} ADC Analog watchdog 3 flag (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga69a66d3b5476bbea4c7481b63523583c}{ADC\+\_\+\+FLAG\+\_\+\+JQOVF}} ADC Injected Context Queue Overflow flag. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gadcec48b44a2133effd20f41ab227edb9}\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gadcec48b44a2133effd20f41ab227edb9}} 
+\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}!\_\_HAL\_ADC\_DISABLE\_IT@{\_\_HAL\_ADC\_DISABLE\_IT}}
+\index{\_\_HAL\_ADC\_DISABLE\_IT@{\_\_HAL\_ADC\_DISABLE\_IT}!HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_DISABLE\_IT}{\_\_HAL\_ADC\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$IER) \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable ADC interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & ADC handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & ADC Interrupt This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad46aa18aeb55285ecda24956c9811936}{ADC\+\_\+\+IT\+\_\+\+RDY}} ADC Ready interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_ga955e4c06483055cade95fc849ff3af29}{ADC\+\_\+\+IT\+\_\+\+EOSMP}} ADC End of Sampling interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_ga0ad335d835f54415194d448019569e00}{ADC\+\_\+\+IT\+\_\+\+EOC}} ADC End of Regular Conversion interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaefebf69110054387451593d4d52ce197}{ADC\+\_\+\+IT\+\_\+\+EOS}} ADC End of Regular sequence of Conversions interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gac3852b7789860e0ea79b82115ab877a0}{ADC\+\_\+\+IT\+\_\+\+OVR}} ADC overrun interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad439fc0cd69706704d47aeabfeddb631}{ADC\+\_\+\+IT\+\_\+\+JEOC}} ADC End of Injected Conversion interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaa4a17b2f33af88b894f54e68e4f9148b}{ADC\+\_\+\+IT\+\_\+\+JEOS}} ADC End of Injected sequence of Conversions interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaaed0d609d1e547913724a13cb000fc31}{ADC\+\_\+\+IT\+\_\+\+AWD1}} ADC Analog watchdog 1 interrupt source (main analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gacacb81c883fcee6f00f993300fff6461}{ADC\+\_\+\+IT\+\_\+\+AWD2}} ADC Analog watchdog 2 interrupt source (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gae843883bdd162d68cc36c3735bdd8a12}{ADC\+\_\+\+IT\+\_\+\+AWD3}} ADC Analog watchdog 3 interrupt source (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad12ccf04090f488ec0dfa92d96a51dd9}{ADC\+\_\+\+IT\+\_\+\+JQOVF}} ADC Injected Context Queue Overflow interrupt source. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_ga650073de508d335d0a1c7bf9b4d07afe}\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_ga650073de508d335d0a1c7bf9b4d07afe}} 
+\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}!\_\_HAL\_ADC\_ENABLE\_IT@{\_\_HAL\_ADC\_ENABLE\_IT}}
+\index{\_\_HAL\_ADC\_ENABLE\_IT@{\_\_HAL\_ADC\_ENABLE\_IT}!HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_ENABLE\_IT}{\_\_HAL\_ADC\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$IER) $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable ADC interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & ADC handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & ADC Interrupt This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad46aa18aeb55285ecda24956c9811936}{ADC\+\_\+\+IT\+\_\+\+RDY}} ADC Ready interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_ga955e4c06483055cade95fc849ff3af29}{ADC\+\_\+\+IT\+\_\+\+EOSMP}} ADC End of Sampling interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_ga0ad335d835f54415194d448019569e00}{ADC\+\_\+\+IT\+\_\+\+EOC}} ADC End of Regular Conversion interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaefebf69110054387451593d4d52ce197}{ADC\+\_\+\+IT\+\_\+\+EOS}} ADC End of Regular sequence of Conversions interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gac3852b7789860e0ea79b82115ab877a0}{ADC\+\_\+\+IT\+\_\+\+OVR}} ADC overrun interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad439fc0cd69706704d47aeabfeddb631}{ADC\+\_\+\+IT\+\_\+\+JEOC}} ADC End of Injected Conversion interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaa4a17b2f33af88b894f54e68e4f9148b}{ADC\+\_\+\+IT\+\_\+\+JEOS}} ADC End of Injected sequence of Conversions interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaaed0d609d1e547913724a13cb000fc31}{ADC\+\_\+\+IT\+\_\+\+AWD1}} ADC Analog watchdog 1 interrupt source (main analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gacacb81c883fcee6f00f993300fff6461}{ADC\+\_\+\+IT\+\_\+\+AWD2}} ADC Analog watchdog 2 interrupt source (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gae843883bdd162d68cc36c3735bdd8a12}{ADC\+\_\+\+IT\+\_\+\+AWD3}} ADC Analog watchdog 3 interrupt source (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad12ccf04090f488ec0dfa92d96a51dd9}{ADC\+\_\+\+IT\+\_\+\+JQOVF}} ADC Injected Context Queue Overflow interrupt source. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gaff951862689bb92173f803577cf2d447}\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gaff951862689bb92173f803577cf2d447}} 
+\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}!\_\_HAL\_ADC\_GET\_FLAG@{\_\_HAL\_ADC\_GET\_FLAG}}
+\index{\_\_HAL\_ADC\_GET\_FLAG@{\_\_HAL\_ADC\_GET\_FLAG}!HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_GET\_FLAG}{\_\_HAL\_ADC\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})~  ((((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$ISR) \& (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+))}
+
+
+
+Check whether the specified ADC flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & ADC handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & ADC flag This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c__flags__definition_gaf1a4a140115121cc0ec1f821d2c8c199}{ADC\+\_\+\+FLAG\+\_\+\+RDY}} ADC Ready flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gacf79acb4682b5c104fe38f9dff035656}{ADC\+\_\+\+FLAG\+\_\+\+EOSMP}} ADC End of Sampling flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gaf2c6fdf7e9ab63b778149e5fb56413d4}{ADC\+\_\+\+FLAG\+\_\+\+EOC}} ADC End of Regular Conversion flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gac3acbfd08e72d33bc520dac5998f7e52}{ADC\+\_\+\+FLAG\+\_\+\+EOS}} ADC End of Regular sequence of Conversions flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga6e8f399d2af342bd18b9f5803cb986e7}{ADC\+\_\+\+FLAG\+\_\+\+OVR}} ADC overrun flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga4df8eea8ab83d98104ee15a339743a4e}{ADC\+\_\+\+FLAG\+\_\+\+JEOC}} ADC End of Injected Conversion flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_gadecc793b0a121e763d373454cf23d6e4}{ADC\+\_\+\+FLAG\+\_\+\+JEOS}} ADC End of Injected sequence of Conversions flag \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga93c3537ba0c71001d07e40df4fdb3e35}{ADC\+\_\+\+FLAG\+\_\+\+AWD1}} ADC Analog watchdog 1 flag (main analog watchdog) \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga15447535e0916abe29a370578d4266e7}{ADC\+\_\+\+FLAG\+\_\+\+AWD2}} ADC Analog watchdog 2 flag (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__flags__definition_gae75b7f1aeae23999d37023cd8970b68e}{ADC\+\_\+\+FLAG\+\_\+\+AWD3}} ADC Analog watchdog 3 flag (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__flags__definition_ga69a66d3b5476bbea4c7481b63523583c}{ADC\+\_\+\+FLAG\+\_\+\+JQOVF}} ADC Injected Context Queue Overflow flag. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of flag (TRUE or FALSE). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gaf29cd943cb451e4ed1f07bd7d4854fb0}\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gaf29cd943cb451e4ed1f07bd7d4854fb0}} 
+\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}!\_\_HAL\_ADC\_GET\_IT\_SOURCE@{\_\_HAL\_ADC\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_ADC\_GET\_IT\_SOURCE@{\_\_HAL\_ADC\_GET\_IT\_SOURCE}!HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_GET\_IT\_SOURCE}{\_\_HAL\_ADC\_GET\_IT\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~  (((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$IER \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)) == (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Checks if the specified ADC interrupt source is enabled or disabled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & ADC handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & ADC interrupt source to check This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad46aa18aeb55285ecda24956c9811936}{ADC\+\_\+\+IT\+\_\+\+RDY}} ADC Ready interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_ga955e4c06483055cade95fc849ff3af29}{ADC\+\_\+\+IT\+\_\+\+EOSMP}} ADC End of Sampling interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_ga0ad335d835f54415194d448019569e00}{ADC\+\_\+\+IT\+\_\+\+EOC}} ADC End of Regular Conversion interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaefebf69110054387451593d4d52ce197}{ADC\+\_\+\+IT\+\_\+\+EOS}} ADC End of Regular sequence of Conversions interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gac3852b7789860e0ea79b82115ab877a0}{ADC\+\_\+\+IT\+\_\+\+OVR}} ADC overrun interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad439fc0cd69706704d47aeabfeddb631}{ADC\+\_\+\+IT\+\_\+\+JEOC}} ADC End of Injected Conversion interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaa4a17b2f33af88b894f54e68e4f9148b}{ADC\+\_\+\+IT\+\_\+\+JEOS}} ADC End of Injected sequence of Conversions interrupt source \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gaaed0d609d1e547913724a13cb000fc31}{ADC\+\_\+\+IT\+\_\+\+AWD1}} ADC Analog watchdog 1 interrupt source (main analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gacacb81c883fcee6f00f993300fff6461}{ADC\+\_\+\+IT\+\_\+\+AWD2}} ADC Analog watchdog 2 interrupt source (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gae843883bdd162d68cc36c3735bdd8a12}{ADC\+\_\+\+IT\+\_\+\+AWD3}} ADC Analog watchdog 3 interrupt source (additional analog watchdog) \item \mbox{\hyperlink{group___a_d_c__interrupts__definition_gad12ccf04090f488ec0dfa92d96a51dd9}{ADC\+\_\+\+IT\+\_\+\+JQOVF}} ADC Injected Context Queue Overflow interrupt source. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of interruption (SET or RESET) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gacb290bae25b972942021331122a3600f}\label{group___a_d_c___h_a_l___e_m___h_a_n_d_l_e___i_t___f_l_a_g_gacb290bae25b972942021331122a3600f}} 
+\index{HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}!\_\_HAL\_ADC\_RESET\_HANDLE\_STATE@{\_\_HAL\_ADC\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_ADC\_RESET\_HANDLE\_STATE@{\_\_HAL\_ADC\_RESET\_HANDLE\_STATE}!HAL ADC macro to manage HAL ADC handle, IT and flags.@{HAL ADC macro to manage HAL ADC handle, IT and flags.}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_ADC\_RESET\_HANDLE\_STATE}{\_\_HAL\_ADC\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~  ((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___a_d_c___states_ga3f995b6dedd7366d0663f852511b9104}{HAL\+\_\+\+ADC\+\_\+\+STATE\+\_\+\+RESET}})}
+
+
+
+Reset ADC handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & ADC handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

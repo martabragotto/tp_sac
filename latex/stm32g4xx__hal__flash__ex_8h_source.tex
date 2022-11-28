@@ -1,0 +1,41 @@
+\hypertarget{stm32g4xx__hal__flash__ex_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+flash\+\_\+ex.\+h}
+\label{stm32g4xx__hal__flash__ex_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_flash\_ex.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_flash\_ex.h}}
+\mbox{\hyperlink{stm32g4xx__hal__flash__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{18 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_FLASH\_EX\_H}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_FLASH\_EX\_H}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{23 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{comment}{/* Extended Program operation functions  *************************************/}}
+\DoxyCodeLine{52 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_FLASHEx\_Erase(\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}} *pEraseInit, uint32\_t *PageError);}
+\DoxyCodeLine{53 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_FLASHEx\_Erase\_IT(\mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}} *pEraseInit);}
+\DoxyCodeLine{54 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_FLASHEx\_OBProgram(\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}} *pOBInit);}
+\DoxyCodeLine{55 \textcolor{keywordtype}{void}              HAL\_FLASHEx\_OBGetConfig(\mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}} *pOBInit);}
+\DoxyCodeLine{56 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_FLASHEx\_EnableSecMemProtection(uint32\_t Bank);}
+\DoxyCodeLine{57 \textcolor{keywordtype}{void}              HAL\_FLASHEx\_EnableDebugger(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{58 \textcolor{keywordtype}{void}              HAL\_FLASHEx\_DisableDebugger(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{70 \textcolor{keywordtype}{void}              FLASH\_PageErase(uint32\_t Page, uint32\_t Banks);}
+\DoxyCodeLine{71 \textcolor{keywordtype}{void}              FLASH\_FlushCaches(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{85 \}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_FLASH\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 }
+
+\end{DoxyCode}

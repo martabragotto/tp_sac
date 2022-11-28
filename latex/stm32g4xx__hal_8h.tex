@@ -1,0 +1,239 @@
+\hypertarget{stm32g4xx__hal_8h}{}\doxysection{Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32g4xx\+\_\+hal.h File Reference}
+\label{stm32g4xx__hal_8h}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal.h}}
+
+
+This file contains all the functions prototypes for the HAL module driver.  
+
+
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+conf.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+10\+HZ}~100U
+\item 
+\#define {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+100\+HZ}~10U
+\item 
+\#define {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ}~1U
+\item 
+\#define {\bfseries HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+\+DEFAULT}~HAL\+\_\+\+TICK\+\_\+\+FREQ\+\_\+1\+KHZ
+\item 
+\#define {\bfseries SYSCFG\+\_\+\+BOOT\+\_\+\+MAINFLASH}~0x00000000U
+\item 
+\#define {\bfseries SYSCFG\+\_\+\+BOOT\+\_\+\+SYSTEMFLASH}~SYSCFG\+\_\+\+MEMMEMRMP\+\_\+\+MODE\+\_\+0
+\item 
+\#define {\bfseries SYSCFG\+\_\+\+BOOT\+\_\+\+SRAM}~(SYSCFG\+\_\+\+MEMMEMRMP\+\_\+\+MODE\+\_\+1 $\vert$ SYSCFG\+\_\+\+MEMMEMRMP\+\_\+\+MODE\+\_\+0)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga097dd569bd638ce8ad517b385d2e5b76}{SYSCFG\+\_\+\+IT\+\_\+\+FPU\+\_\+\+IOC}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gabed60c67f0551da302b2fcbf7a45d56c}{SYSCFG\+\_\+\+CFGR1\+\_\+\+FPU\+\_\+\+IE\+\_\+0}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gafff2d9114aabc6cad60ee19f909ea92e}{SYSCFG\+\_\+\+IT\+\_\+\+FPU\+\_\+\+DZC}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga35f8d70bddd719864e4ee1cfa871217a}{SYSCFG\+\_\+\+CFGR1\+\_\+\+FPU\+\_\+\+IE\+\_\+1}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gaa395020cb096a915c6fe6dfc3c09ea3e}{SYSCFG\+\_\+\+IT\+\_\+\+FPU\+\_\+\+UFC}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7707762bd4192fee7875ec7d5f1f27a1}{SYSCFG\+\_\+\+CFGR1\+\_\+\+FPU\+\_\+\+IE\+\_\+2}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gaa5c5389d31cec41bcc571f2b830075f1}{SYSCFG\+\_\+\+IT\+\_\+\+FPU\+\_\+\+OFC}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf085379d759b80ce28d1672eb4a8a69f}{SYSCFG\+\_\+\+CFGR1\+\_\+\+FPU\+\_\+\+IE\+\_\+3}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga24571405ea5d07e185e4accea693cf1d}{SYSCFG\+\_\+\+IT\+\_\+\+FPU\+\_\+\+IDC}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8838d130a5c7a34402c789f98d812828}{SYSCFG\+\_\+\+CFGR1\+\_\+\+FPU\+\_\+\+IE\+\_\+4}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga77b9b95b0728e9190cbe4ea23b5e5445}{SYSCFG\+\_\+\+IT\+\_\+\+FPU\+\_\+\+IXC}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8ebd31d4d65b65a38f34b7dd2915679f}{SYSCFG\+\_\+\+CFGR1\+\_\+\+FPU\+\_\+\+IE\+\_\+5}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga61d912ddbb71f6688acf8f048534f531}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE0}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga02e369a9d753a147d6edbc6561847bab}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE0}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gac1e6ac0675f44ce9b39a6468087d798d}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE1}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga65f465abe61aeb9d54f96f61a26dbcba}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE1}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga300091c3bc4266bbb53f7dd921592378}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE2}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab1ab048295a0b4ee0900e91a41dc68fa}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE2}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaee936a0a21cef163c04ad6b5aadf88e3}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE3}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga978517b95be487a0b51c54cb04a5e1e4}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE3}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga43dd6ff05855d07301b7457ca765d6d3}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE4}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2436f2c3268b8cc74c1f92c8130fb6a7}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE4}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga5065608af3fbb64b47737686adc87356}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE5}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gabd9ab12f7ddde4d8932a2581ffac341f}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE5}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gac82ee5a9445bdc098bac391b467e3979}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE6}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga63c45b97c76927de3be62599c6057d5c}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE6}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga0e015ba59a64f707213e8117a044ed18}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE7}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga910f8ca93c564c395a4292ef88b0cfc3}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE7}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gae8c5d40415ef5a035ac095c34ded5de7}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE8}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga81415c135dbdf0e231976ea32e46c9ab}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE8}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga8fde12ee87d5f29068723ba762216095}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE9}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e3b118edf79214c51c85b761ee65b8e}{SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE9}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga933a1319fde2aa91d166d076169d491d}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE10}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE10
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga3db6cb669c7340649442e9fe3369a525}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE11}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE11
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga6ff92630c0f60597c997b03c70c9755a}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE12}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE12
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaf1eaa1e9e13624cddbca103b8810b729}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE13}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE13
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaf6d17c79485338a35c5a1c96648ba3ae}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE14}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE14
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga974932bfa2d1f1df6cd566ff82fa0d14}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE15}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE15
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gab2d49f819127adbad5629c49b439ce46}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE16}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE16
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaf3596ec21f3820eaeb874064602e75a1}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE17}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE17
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga68fd48046782aa4fb667f236f78aad70}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE18}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE18
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gac80396debf544ee7d0ca13b21e81b8e3}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE19}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE19
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gab3c664ac6b88420854765be61640884f}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE20}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE20
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga058ac351798d0541e057c64cc19691cf}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE21}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE21
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gad5846e3a4a45e93998285cd3cfffa281}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE22}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE22
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaa5092b758317d1fb8838f35ecf9483c9}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE23}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE23
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga89f944917f722196aac2423fe479db78}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE24}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE24
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gac1901cddc1c026e7d53eff4bd3a97f91}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE25}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE25
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga49e64f4dd2fe1a069ffa93e3450d1ffc}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE26}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE26
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaff997f356ac87bc251f0217cc44f984d}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE27}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE27
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_ga48cad2142460234182f0aad09119f3ca}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE28}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE28
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gab199363cd1d14a749a18babd4f2712d4}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE29}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE29
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gad9c0d1363b24f12b376eb628bcc4beab}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE30}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE30
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___c_c_m_s_r_a_m_w_r_p_gaff5f8246ae07705d4552f0947ac3610f}{SYSCFG\+\_\+\+CCMSRAMWRP\+\_\+\+PAGE31}}~SYSCFG\+\_\+\+SWPR\+\_\+\+PAGE31
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g__flags__definition_ga95cd78b8b82881eab72cc27368a4088c}{SYSCFG\+\_\+\+FLAG\+\_\+\+SRAM\+\_\+\+PE}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga155014fba33b6dc281892ec1ff27e4da}{SYSCFG\+\_\+\+CFGR2\+\_\+\+SPF}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g__flags__definition_ga4f3e54cc4e2b955bc2f621562c0f15a4}{SYSCFG\+\_\+\+FLAG\+\_\+\+CCMSRAM\+\_\+\+BUSY}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gadbbcb571cb43923c7237d3bceb4043d9}{SYSCFG\+\_\+\+SCSR\+\_\+\+CCMBSY}}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___fast_mode_plus___g_p_i_o_ga1f9beaf68b00ae5598cb8d930da05704}{SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+PB6}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaee5a1ca3b0408d359907fdc8ae1e44ae}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB6\+\_\+\+FMP}}
+\begin{DoxyCompactList}\small\item\em Fast-\/mode Plus driving capability on a specific GPIO. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___fast_mode_plus___g_p_i_o_ga4b939ef5ec69e81277ef2323d5917eb5}{SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+PB7}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga218ec7f8116e53121ba41a9a57f2ab9c}{SYSCFG\+\_\+\+CFGR1\+\_\+\+I2\+C\+\_\+\+PB7\+\_\+\+FMP}}
+\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+FLASH}()~CLEAR\+\_\+\+BIT(SYSCFG-\/$>$MEMRMP, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE}})
+\begin{DoxyCompactList}\small\item\em Main Flash memory mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+SYSTEMFLASH}()~MODIFY\+\_\+\+REG(SYSCFG-\/$>$MEMRMP, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE}}, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga30d5f406535f94faea2e7f924d50201b}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE\+\_\+0}})
+\begin{DoxyCompactList}\small\item\em System Flash memory mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+REMAPMEMORY\+\_\+\+SRAM}()~MODIFY\+\_\+\+REG(SYSCFG-\/$>$MEMRMP, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE}}, (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab5d76e8b4d801b35c31ef352b33407be}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE\+\_\+1}}$\vert$\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga30d5f406535f94faea2e7f924d50201b}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE\+\_\+0}}))
+\begin{DoxyCompactList}\small\item\em Embedded SRAM mapped at 0x00000000. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga0e71eb2b553f1a7b8172710184a89caa}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+GET\+\_\+\+BOOT\+\_\+\+MODE}}()~READ\+\_\+\+BIT(SYSCFG-\/$>$MEMRMP, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3c05039ec67573c00da29f58b914f258}{SYSCFG\+\_\+\+MEMRMP\+\_\+\+MEM\+\_\+\+MODE}})
+\begin{DoxyCompactList}\small\item\em Return the boot mode as configured by user. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gaa48378a5ce8fae1d6bbf5735fb01578a}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAM\+\_\+\+WRP\+\_\+1\+\_\+31\+\_\+\+ENABLE}}~\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAM\+\_\+\+WRP\+\_\+0\+\_\+31\+\_\+\+ENABLE
+\begin{DoxyCompactList}\small\item\em CCMSRAM page write protection enable macro. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gadfb9764986e7cdd49658525fcde98774}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAM\+\_\+\+WRP\+\_\+0\+\_\+31\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+CCMSRAMWRP\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga3d8767462a43643e6245be3bdd943028}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAM\+\_\+\+WRP\+\_\+\+UNLOCK}}()
+\begin{DoxyCompactList}\small\item\em CCMSRAM page write protection unlock prior to erase. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gaaf839e193b6eb1f0f6f9d846f550bd09}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAM\+\_\+\+ERASE}}()~SET\+\_\+\+BIT(SYSCFG-\/$>$SCSR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae03ce77d50b0a70c5436ccdaac83a75d}{SYSCFG\+\_\+\+SCSR\+\_\+\+CCMER}})
+\begin{DoxyCompactList}\small\item\em CCMSRAM erase. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga5eb3af3fdab913ed132afd9db241e6b9}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+FPU\+\_\+\+INTERRUPT\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Floating Point Unit interrupt enable/disable macros. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga324c2649ac0c3758a4d037546da558ab}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+FPU\+\_\+\+INTERRUPT\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gab24317e13f473c7c93771ac11ad893c3}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+ECC\+\_\+\+LOCK}}()~SET\+\_\+\+BIT(SYSCFG-\/$>$CFGR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae75e85c4c032560b4db88cd8fcb3aaf9}{SYSCFG\+\_\+\+CFGR2\+\_\+\+ECCL}})
+\begin{DoxyCompactList}\small\item\em SYSCFG Break ECC lock. Enable and lock the connection of Flash ECC error connection to TIM1/8/15/16/17 Break input. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gaf8339b79c4009bcc95d2582b990d56ec}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+LOCKUP\+\_\+\+LOCK}}()~SET\+\_\+\+BIT(SYSCFG-\/$>$CFGR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga37867c85a6455883bf60424879a281f4}{SYSCFG\+\_\+\+CFGR2\+\_\+\+CLL}})
+\begin{DoxyCompactList}\small\item\em SYSCFG Break Cortex-\/\+M4 Lockup lock. Enable and lock the connection of Cortex-\/\+M4 LOCKUP (Hardfault) output to TIM1/8/15/16/17 Break input. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gadfaca1cb2ee6df46e27aead12fe01e0c}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+PVD\+\_\+\+LOCK}}()~SET\+\_\+\+BIT(SYSCFG-\/$>$CFGR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac8ca8fa7bb3ae856eb5fc3102cc0ff21}{SYSCFG\+\_\+\+CFGR2\+\_\+\+PVDL}})
+\begin{DoxyCompactList}\small\item\em SYSCFG Break PVD lock. Enable and lock the PVD connection to Timer1/8/15/16/17 Break input, as well as the PVDE and PLS\mbox{[}2\+:0\mbox{]} in the PWR\+\_\+\+CR2 register. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_gac689c750434ae295da2e2d620a399262}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+SRAMPARITY\+\_\+\+LOCK}}()~SET\+\_\+\+BIT(SYSCFG-\/$>$CFGR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gacbf387c6e12d90c012dd85636c5dc31b}{SYSCFG\+\_\+\+CFGR2\+\_\+\+SPL}})
+\begin{DoxyCompactList}\small\item\em SYSCFG Break SRAM parity lock. Enable and lock the SRAM parity error (first 32kB of SRAM1 + CCM SRAM) signal connection to TIM1/8/15/16/17 Break input. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga558077cbd3fbb7ed10ff16f58eaebf77}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check SYSCFG flag is set or not. \end{DoxyCompactList}\item 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+CLEAR\+\_\+\+FLAG}()~SET\+\_\+\+BIT(SYSCFG-\/$>$CFGR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga155014fba33b6dc281892ec1ff27e4da}{SYSCFG\+\_\+\+CFGR2\+\_\+\+SPF}})
+\begin{DoxyCompactList}\small\item\em Set the SPF bit to clear the SRAM Parity Error Flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga61181f4b4955f17858475485f8cd366c}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+FASTMODEPLUS\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Fast-\/mode Plus driving capability enable/disable macros. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___exported___macros_ga5f20cbc8ad78101d527209003dc014f2}{\+\_\+\+\_\+\+HAL\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+FASTMODEPLUS\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___private___macros_gae83d9d982572786717aea190c25c1767}{IS\+\_\+\+SYSCFG\+\_\+\+FPU\+\_\+\+INTERRUPT}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___private___macros_ga123b29e8d38b29577a004e3b0f97d624}{IS\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+CONFIG\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___private___macros_ga2d44c67961ec9f4feecec777364c13a0}{IS\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS}}(\+\_\+\+\_\+\+PIN\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___h_a_l___private___macros_ga2a86bf8a89ad75716cd92e932a8ae71e}{IS\+\_\+\+TICKFREQ}}(FREQ)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Init} (void)
+\item 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+De\+Init} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
+\item 
+void {\bfseries HAL\+\_\+\+Msp\+De\+Init} (void)
+\item 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{HAL\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the TIM6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\item 
+void {\bfseries HAL\+\_\+\+Inc\+Tick} (void)
+\item 
+void {\bfseries HAL\+\_\+\+Delay} (uint32\+\_\+t Delay)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick\+Prio} (void)
+\item 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Set\+Tick\+Freq} (uint32\+\_\+t Freq)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Tick\+Freq} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_gaaf651af2afe688a991c657f64f8fa5f9}{HAL\+\_\+\+Suspend\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Suspend Tick increment. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group2_ga24e0ee9dae1ec0f9d19200f5575ff790}{HAL\+\_\+\+Resume\+Tick}} (void)
+\begin{DoxyCompactList}\small\item\em Resume Tick increment. \end{DoxyCompactList}\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+Hal\+Version} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+REVID} (void)
+\item 
+uint32\+\_\+t {\bfseries HAL\+\_\+\+Get\+DEVID} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAMErase} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+Memory\+Swapping\+Bank} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+Memory\+Swapping\+Bank} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+IOSwitch\+Booster} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+IOSwitch\+Booster} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+IOSwitch\+VDD} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+IOSwitch\+VDD} (void)
+\item 
+void {\bfseries HAL\+\_\+\+SYSCFG\+\_\+\+CCMSRAM\+\_\+\+Write\+Protection\+Enable} (uint32\+\_\+t Page)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t {\bfseries uw\+Tick}
+\item 
+uint32\+\_\+t {\bfseries uw\+Tick\+Prio}
+\item 
+uint32\+\_\+t {\bfseries uw\+Tick\+Freq}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This file contains all the functions prototypes for the HAL module driver. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

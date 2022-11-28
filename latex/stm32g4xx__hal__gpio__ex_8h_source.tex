@@ -1,0 +1,232 @@
+\hypertarget{stm32g4xx__hal__gpio__ex_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+gpio\+\_\+ex.\+h}
+\label{stm32g4xx__hal__gpio__ex_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_gpio\_ex.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_gpio\_ex.h}}
+\mbox{\hyperlink{stm32g4xx__hal__gpio__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{20 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_GPIO\_EX\_H}}
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_GPIO\_EX\_H}}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{25 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{40 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{41 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define GPIO\_AF0\_RTC\_50Hz      ((uint8\_t)0x00)  }\textcolor{comment}{/* RTC\_50Hz Alternate Function mapping                       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define GPIO\_AF0\_MCO           ((uint8\_t)0x00)  }\textcolor{comment}{/* MCO (MCO1 and MCO2) Alternate Function mapping            */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define GPIO\_AF0\_SWJ           ((uint8\_t)0x00)  }\textcolor{comment}{/* SWJ (SWD and JTAG) Alternate Function mapping             */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define GPIO\_AF0\_TRACE         ((uint8\_t)0x00)  }\textcolor{comment}{/* TRACE Alternate Function mapping                          */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define GPIO\_AF1\_TIM2          ((uint8\_t)0x01)  }\textcolor{comment}{/* TIM2 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#if defined(TIM5)}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define GPIO\_AF1\_TIM5          ((uint8\_t)0x01)  }\textcolor{comment}{/* TIM5 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define GPIO\_AF1\_TIM16         ((uint8\_t)0x01)  }\textcolor{comment}{/* TIM16 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define GPIO\_AF1\_TIM17         ((uint8\_t)0x01)  }\textcolor{comment}{/* TIM17 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define GPIO\_AF1\_TIM17\_COMP1   ((uint8\_t)0x01)  }\textcolor{comment}{/* TIM17/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define GPIO\_AF1\_TIM15         ((uint8\_t)0x01)  }\textcolor{comment}{/* TIM15 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define GPIO\_AF1\_LPTIM1        ((uint8\_t)0x01)  }\textcolor{comment}{/* LPTIM1 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define GPIO\_AF1\_IR            ((uint8\_t)0x01)  }\textcolor{comment}{/* IR Alternate Function mapping     */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{71 }
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM1          ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM2          ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM2 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM3          ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM3 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM4          ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM4 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#if defined(TIM5)}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM5          ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM5 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM8          ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM8 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM15         ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM15 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM16         ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM16 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#if defined(TIM20)}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM20         ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM20 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM1\_COMP1    ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM1/COMP1 Break in Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM15\_COMP1   ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM15/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM16\_COMP1   ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM16/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#if defined(TIM20)}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM20\_COMP1   ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM20/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define GPIO\_AF2\_TIM20\_COMP2   ((uint8\_t)0x02)  }\textcolor{comment}{/* TIM20/COMP2 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define GPIO\_AF2\_I2C3          ((uint8\_t)0x02)  }\textcolor{comment}{/* I2C3 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define GPIO\_AF2\_COMP1         ((uint8\_t)0x02)  }\textcolor{comment}{/* COMP1 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define GPIO\_AF3\_TIM15         ((uint8\_t)0x03)  }\textcolor{comment}{/* TIM15 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#if defined(TIM20)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define GPIO\_AF3\_TIM20         ((uint8\_t)0x03)  }\textcolor{comment}{/* TIM20 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define GPIO\_AF3\_UCPD1         ((uint8\_t)0x03)  }\textcolor{comment}{/* UCPD1 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define GPIO\_AF3\_I2C3          ((uint8\_t)0x03)  }\textcolor{comment}{/* I2C3 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define GPIO\_AF3\_I2C4          ((uint8\_t)0x03)  }\textcolor{comment}{/* I2C4 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#if defined(HRTIM1)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define GPIO\_AF3\_HRTIM1        ((uint8\_t)0x03)  }\textcolor{comment}{/* HRTIM1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HRTIM1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define GPIO\_AF3\_QUADSPI       ((uint8\_t)0x03)  }\textcolor{comment}{/* QUADSPI Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define GPIO\_AF3\_TIM8          ((uint8\_t)0x03)  }\textcolor{comment}{/* TIM8 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define GPIO\_AF3\_SAI1          ((uint8\_t)0x03)  }\textcolor{comment}{/* SAI1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define GPIO\_AF3\_COMP3         ((uint8\_t)0x03)  }\textcolor{comment}{/* COMP3 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define GPIO\_AF4\_TIM1          ((uint8\_t)0x04)  }\textcolor{comment}{/* TIM1 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define GPIO\_AF4\_TIM8          ((uint8\_t)0x04)  }\textcolor{comment}{/* TIM8 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define GPIO\_AF4\_TIM16         ((uint8\_t)0x04)  }\textcolor{comment}{/* TIM16 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define GPIO\_AF4\_TIM17         ((uint8\_t)0x04)  }\textcolor{comment}{/* TIM17 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define GPIO\_AF4\_TIM8\_COMP1    ((uint8\_t)0x04)  }\textcolor{comment}{/* TIM8/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define GPIO\_AF4\_I2C1          ((uint8\_t)0x04)  }\textcolor{comment}{/* I2C1 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define GPIO\_AF4\_I2C2          ((uint8\_t)0x04)  }\textcolor{comment}{/* I2C2 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define GPIO\_AF4\_I2C3          ((uint8\_t)0x04)  }\textcolor{comment}{/* I2C3 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define GPIO\_AF4\_I2C4          ((uint8\_t)0x04)  }\textcolor{comment}{/* I2C4 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{134 }
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define GPIO\_AF5\_SPI1          ((uint8\_t)0x05)  }\textcolor{comment}{/* SPI1 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define GPIO\_AF5\_SPI2          ((uint8\_t)0x05)  }\textcolor{comment}{/* SPI2 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#if defined(SPI4)}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define GPIO\_AF5\_SPI4          ((uint8\_t)0x05)  }\textcolor{comment}{/* SPI4 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* SPI4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define GPIO\_AF5\_IR            ((uint8\_t)0x05)  }\textcolor{comment}{/* IR Alternate Function mapping         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define GPIO\_AF5\_TIM8          ((uint8\_t)0x05)  }\textcolor{comment}{/* TIM8 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define GPIO\_AF5\_TIM8\_COMP1    ((uint8\_t)0x05)  }\textcolor{comment}{/* TIM8/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define GPIO\_AF5\_UART4         ((uint8\_t)0x05)  }\textcolor{comment}{/* UART4 Alternate Function mapping      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define GPIO\_AF5\_UART5         ((uint8\_t)0x05)  }\textcolor{comment}{/* UART5 Alternate Function mapping      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define GPIO\_AF5\_I2S2ext       ((uint8\_t)0x05)  }\textcolor{comment}{/* I2S2ext\_SD Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{151 }
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define GPIO\_AF6\_SPI2          ((uint8\_t)0x06)  }\textcolor{comment}{/* SPI2 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define GPIO\_AF6\_SPI3          ((uint8\_t)0x06)  }\textcolor{comment}{/* SPI3 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM1          ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM1 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#if defined(TIM5)}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM5          ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM5 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM8          ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM8 Alternate Function mapping       */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#if defined(TIM20)}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM20         ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM20 Alternate Function mapping      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* TIM20 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM1\_COMP1    ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM1/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM1\_COMP2    ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM1/COMP2 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define GPIO\_AF6\_TIM8\_COMP2    ((uint8\_t)0x06)  }\textcolor{comment}{/* TIM8/COMP2 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define GPIO\_AF6\_IR            ((uint8\_t)0x06)  }\textcolor{comment}{/* IR Alternate Function mapping         */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define GPIO\_AF6\_I2S3ext       ((uint8\_t)0x06)  }\textcolor{comment}{/* I2S3ext\_SD Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define GPIO\_AF7\_USART1        ((uint8\_t)0x07)  }\textcolor{comment}{/* USART1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define GPIO\_AF7\_USART2        ((uint8\_t)0x07)  }\textcolor{comment}{/* USART2 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define GPIO\_AF7\_USART3        ((uint8\_t)0x07)  }\textcolor{comment}{/* USART3 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#if defined(COMP5)}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define GPIO\_AF7\_COMP5         ((uint8\_t)0x07)  }\textcolor{comment}{/* COMP5 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#if defined(COMP6)}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define GPIO\_AF7\_COMP6         ((uint8\_t)0x07)  }\textcolor{comment}{/* COMP6 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP6 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#if defined(COMP7)}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{\#define GPIO\_AF7\_COMP7         ((uint8\_t)0x07)  }\textcolor{comment}{/* COMP7 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP7 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP1         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP1 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP2         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP2 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP3         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP3 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP4         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP4 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#if defined(COMP5)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP5         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP5 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#if defined(COMP6)}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP6         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP6 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP6 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#if defined(COMP7)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define GPIO\_AF8\_COMP7         ((uint8\_t)0x08)  }\textcolor{comment}{/* COMP7 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* COMP7 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define GPIO\_AF8\_I2C3          ((uint8\_t)0x08)  }\textcolor{comment}{/* I2C3 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define GPIO\_AF8\_I2C4          ((uint8\_t)0x08)  }\textcolor{comment}{/* I2C4 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define GPIO\_AF8\_LPUART1       ((uint8\_t)0x08)  }\textcolor{comment}{/* LPUART1 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define GPIO\_AF8\_UART4         ((uint8\_t)0x08)  }\textcolor{comment}{/* UART4 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define GPIO\_AF8\_UART5         ((uint8\_t)0x08)  }\textcolor{comment}{/* UART5 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define GPIO\_AF9\_TIM1          ((uint8\_t)0x09)  }\textcolor{comment}{/* TIM1 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define GPIO\_AF9\_TIM8          ((uint8\_t)0x09)  }\textcolor{comment}{/* TIM8 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define GPIO\_AF9\_TIM15         ((uint8\_t)0x09)  }\textcolor{comment}{/* TIM15 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define GPIO\_AF9\_TIM1\_COMP1    ((uint8\_t)0x09)  }\textcolor{comment}{/* TIM1/COMP1 Break in Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define GPIO\_AF9\_TIM8\_COMP1    ((uint8\_t)0x09)  }\textcolor{comment}{/* TIM8/COMP1 Break in Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define GPIO\_AF9\_TIM15\_COMP1   ((uint8\_t)0x09)  }\textcolor{comment}{/* TIM15/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define GPIO\_AF9\_FDCAN1        ((uint8\_t)0x09)  }\textcolor{comment}{/* FDCAN1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#if defined(FDCAN2)}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#define GPIO\_AF9\_FDCAN2        ((uint8\_t)0x09)  }\textcolor{comment}{/* FDCAN2 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{226 }
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM2         ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM2 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM3         ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM3 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM4         ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM4 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM8         ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM8 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM17        ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM17 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM8\_COMP2   ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM8/COMP2 Break in Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define GPIO\_AF10\_TIM17\_COMP1  ((uint8\_t)0x0A)  }\textcolor{comment}{/* TIM17/COMP1 Break in Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define GPIO\_AF10\_QUADSPI      ((uint8\_t)0x0A)  }\textcolor{comment}{/* OctoSPI Manager Port 1 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define GPIO\_AF11\_FDCAN1       ((uint8\_t)0x0B)  }\textcolor{comment}{/* FDCAN1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#if defined(FDCAN3)}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define GPIO\_AF11\_FDCAN3       ((uint8\_t)0x0B)  }\textcolor{comment}{/* FDCAN3 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define GPIO\_AF11\_TIM1         ((uint8\_t)0x0B)  }\textcolor{comment}{/* TIM1 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define GPIO\_AF11\_TIM8         ((uint8\_t)0x0B)  }\textcolor{comment}{/* TIM8 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define GPIO\_AF11\_TIM8\_COMP1   ((uint8\_t)0x0B)  }\textcolor{comment}{/* TIM8/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define GPIO\_AF11\_LPTIM1       ((uint8\_t)0x0B)  }\textcolor{comment}{/* LPTIM1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{252 }
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define GPIO\_AF12\_LPUART1      ((uint8\_t)0x0C)  }\textcolor{comment}{/* LPUART1 Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define GPIO\_AF12\_TIM1         ((uint8\_t)0x0C)  }\textcolor{comment}{/* TIM1 Alternate Function mapping    */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define GPIO\_AF12\_TIM1\_COMP1   ((uint8\_t)0x0C)  }\textcolor{comment}{/* TIM1/COMP1 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define GPIO\_AF12\_TIM1\_COMP2   ((uint8\_t)0x0C)  }\textcolor{comment}{/* TIM1/COMP2 Break in Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#if defined(HRTIM1)}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define GPIO\_AF12\_HRTIM1       ((uint8\_t)0x0C)  }\textcolor{comment}{/* HRTIM1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HRTIM1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#if defined(FMC\_BANK1)}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define GPIO\_AF12\_FMC          ((uint8\_t)0x0C)  }\textcolor{comment}{/* FMC Alternate Function mapping     */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FMC\_BANK1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define GPIO\_AF12\_SAI1         ((uint8\_t)0x0C)  }\textcolor{comment}{/* SAI1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{267 }
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#if defined(HRTIM1)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#define GPIO\_AF13\_HRTIM1       ((uint8\_t)0x0D)  }\textcolor{comment}{/* HRTIM1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* HRTIM1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define GPIO\_AF13\_SAI1         ((uint8\_t)0x0D)  }\textcolor{comment}{/* SAI1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define GPIO\_AF14\_TIM2         ((uint8\_t)0x0E)  }\textcolor{comment}{/* TIM2 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define GPIO\_AF14\_TIM15        ((uint8\_t)0x0E)  }\textcolor{comment}{/* TIM15 Alternate Function mapping   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#define GPIO\_AF14\_UCPD1        ((uint8\_t)0x0E)  }\textcolor{comment}{/* UCPD1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define GPIO\_AF14\_SAI1         ((uint8\_t)0x0E)  }\textcolor{comment}{/* SAI1 Alternate Function mapping  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define GPIO\_AF14\_UART4        ((uint8\_t)0x0E)  }\textcolor{comment}{/* UART4 Alternate Function mapping      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define GPIO\_AF14\_UART5        ((uint8\_t)0x0E)  }\textcolor{comment}{/* UART5 Alternate Function mapping      */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define GPIO\_AF15\_EVENTOUT     ((uint8\_t)0x0F)  }\textcolor{comment}{/* EVENTOUT Alternate Function mapping */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define IS\_GPIO\_AF(AF)   ((AF) <= (uint8\_t)0x0F)}}
+\DoxyCodeLine{294 }
+\DoxyCodeLine{303 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{\#define GPIO\_GET\_INDEX(\_\_GPIOx\_\_)    (((\_\_GPIOx\_\_) == (GPIOA))? 0UL :\(\backslash\)}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{                                      ((\_\_GPIOx\_\_) == (GPIOB))? 1UL :\(\backslash\)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{                                      ((\_\_GPIOx\_\_) == (GPIOC))? 2UL :\(\backslash\)}}
+\DoxyCodeLine{314 \textcolor{preprocessor}{                                      ((\_\_GPIOx\_\_) == (GPIOD))? 3UL :\(\backslash\)}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{                                      ((\_\_GPIOx\_\_) == (GPIOE))? 4UL :\(\backslash\)}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{                                      ((\_\_GPIOx\_\_) == (GPIOF))? 5UL : 6UL)}}
+\DoxyCodeLine{317 }
+\DoxyCodeLine{326 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{336 \}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{338 }
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_GPIO\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{340 }
+
+\end{DoxyCode}

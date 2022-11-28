@@ -1,0 +1,106 @@
+\hypertarget{stm32g4xx__ll__utils_8h}{}\doxysection{Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/stm32g4xx\+\_\+ll\+\_\+utils.h File Reference}
+\label{stm32g4xx__ll__utils_8h}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_utils.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_utils.h}}
+
+
+Header file of UTILS LL module.  
+
+
+{\ttfamily \#include \char`\"{}stm32g4xx.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{LL\+\_\+\+UTILS\+\_\+\+PLLInit\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em UTILS PLL structure definition. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{LL\+\_\+\+UTILS\+\_\+\+Clk\+Init\+Type\+Def}}
+\begin{DoxyCompactList}\small\item\em UTILS System, AHB and APB buses clock configuration structure definition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LL\+\_\+\+MAX\+\_\+\+DELAY}~0x\+FFFFFFFFU
+\item 
+\#define {\bfseries UID\+\_\+\+BASE\+\_\+\+ADDRESS}~\mbox{\hyperlink{group___peripheral__memory__map_ga664eda42b83c919b153b07b23348be67}{UID\+\_\+\+BASE}}
+\begin{DoxyCompactList}\small\item\em Unique device ID register base address. \end{DoxyCompactList}\item 
+\#define {\bfseries FLASHSIZE\+\_\+\+BASE\+\_\+\+ADDRESS}~\mbox{\hyperlink{group___peripheral__memory__map_ga776d985f2d4d40b588ef6ca9d573af78}{FLASHSIZE\+\_\+\+BASE}}
+\begin{DoxyCompactList}\small\item\em Flash size data register base address. \end{DoxyCompactList}\item 
+\#define {\bfseries PACKAGE\+\_\+\+BASE\+\_\+\+ADDRESS}~\mbox{\hyperlink{group___peripheral__memory__map_ga88fc8a2912bd1ac72c6eddb456f0b096}{PACKAGE\+\_\+\+BASE}}
+\begin{DoxyCompactList}\small\item\em Package data register base address. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___h_s_e___b_y_p_a_s_s_ga4aab0968739934c6560805bcf222e1fe}{LL\+\_\+\+UTILS\+\_\+\+HSEBYPASS\+\_\+\+OFF}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___h_s_e___b_y_p_a_s_s_ga2053b398a3829ad616af6f1a732dbdd4}{LL\+\_\+\+UTILS\+\_\+\+HSEBYPASS\+\_\+\+ON}}~0x00000001U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga38042cafe8d211a2807c485fbcf84644}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP64}}~0x00000000U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga020e7c1e82f91902bf4093deb831d003}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP100}}~0x00000002U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_gada223f2d3004d1ecb60ccf07e2036fe6}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+WLCSP81}}~0x00000005U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga3c16d4dcbfaccefbd5fbfcc27c6aa47a}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP128}}~0x00000007U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga16d82a00fd32a2c9c01c72e5c317eee8}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFQFPN32}}~0x00000008U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga0af4ad6f590f9edc18ceea814aaec6c5}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP32}}~0x00000009U
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga51af7680248107e329d4d938e1f49b95}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFQFPN48}}~0x0000000\+AU
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_gaa16a15f4a202ade3965c491bc29545d2}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP48}}~0x0000000\+BU
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga7278d66c2b9051357da6a1a769c460ae}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+WLCSP49}}~0x0000000\+CU
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_gab96d13b626286095261274af2cc90626}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFBGA64}}~0x0000000\+DU
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga2b15523f3f1952044581025116a5c271}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFBGA100}}~0x0000000\+EU
+\item 
+\#define \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga1cb187c017a118996420336c1106024a}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP48\+\_\+\+EBIKE}}~0x00000010U
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga3a0b557447143f41b93a7fa45270b5b8}{LL\+\_\+\+Get\+UID\+\_\+\+Word0}} (void)
+\begin{DoxyCompactList}\small\item\em Get Word0 of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga67007778e77a6fafc8a1fc440dc208b2}{LL\+\_\+\+Get\+UID\+\_\+\+Word1}} (void)
+\begin{DoxyCompactList}\small\item\em Get Word1 of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gaa15df2bc902d392f67ee9873943d4904}{LL\+\_\+\+Get\+UID\+\_\+\+Word2}} (void)
+\begin{DoxyCompactList}\small\item\em Get Word2 of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga0e8379766a1799f3c5fedadaa2b0c47e}{LL\+\_\+\+Get\+Flash\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em Get Flash memory size. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gadac3ab6581c114d1ce31034f80b49249}{LL\+\_\+\+Get\+Package\+Type}} (void)
+\begin{DoxyCompactList}\small\item\em Get Package type. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___u_t_i_l_s___l_l___e_f___d_e_l_a_y_ga170d1d651b46544daf571fb6b4e3b850}{LL\+\_\+\+Init\+Tick}} (uint32\+\_\+t HCLKFrequency, uint32\+\_\+t Ticks)
+\begin{DoxyCompactList}\small\item\em This function configures the Cortex-\/M Sys\+Tick source of the time base. \end{DoxyCompactList}\item 
+void {\bfseries LL\+\_\+\+Init1ms\+Tick} (uint32\+\_\+t HCLKFrequency)
+\item 
+void {\bfseries LL\+\_\+m\+Delay} (uint32\+\_\+t Delay)
+\item 
+void {\bfseries LL\+\_\+\+Set\+System\+Core\+Clock} (uint32\+\_\+t HCLKFrequency)
+\item 
+Error\+Status {\bfseries LL\+\_\+\+Set\+Flash\+Latency} (uint32\+\_\+t HCLKFrequency)
+\item 
+Error\+Status {\bfseries LL\+\_\+\+PLL\+\_\+\+Config\+System\+Clock\+\_\+\+HSI} (\mbox{\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{LL\+\_\+\+UTILS\+\_\+\+PLLInit\+Type\+Def}} $\ast$UTILS\+\_\+\+PLLInit\+Struct, \mbox{\hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{LL\+\_\+\+UTILS\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$UTILS\+\_\+\+Clk\+Init\+Struct)
+\item 
+Error\+Status {\bfseries LL\+\_\+\+PLL\+\_\+\+Config\+System\+Clock\+\_\+\+HSE} (uint32\+\_\+t HSEFrequency, uint32\+\_\+t HSEBypass, \mbox{\hyperlink{struct_l_l___u_t_i_l_s___p_l_l_init_type_def}{LL\+\_\+\+UTILS\+\_\+\+PLLInit\+Type\+Def}} $\ast$UTILS\+\_\+\+PLLInit\+Struct, \mbox{\hyperlink{struct_l_l___u_t_i_l_s___clk_init_type_def}{LL\+\_\+\+UTILS\+\_\+\+Clk\+Init\+Type\+Def}} $\ast$UTILS\+\_\+\+Clk\+Init\+Struct)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file of UTILS LL module. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS.
+
+\begin{DoxyVerb}==============================================================================
+                   ##### How to use this driver #####
+==============================================================================
+  [..]
+  The LL UTILS driver contains a set of generic APIs that can be
+  used by user:
+    (+) Device electronic signature
+    (+) Timing functions
+    (+) PLL configuration functions\end{DoxyVerb}
+ 

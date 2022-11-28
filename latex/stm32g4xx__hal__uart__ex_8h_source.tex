@@ -1,0 +1,487 @@
+\hypertarget{stm32g4xx__hal__uart__ex_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+uart\+\_\+ex.\+h}
+\label{stm32g4xx__hal__uart__ex_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_uart\_ex.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_uart\_ex.h}}
+\mbox{\hyperlink{stm32g4xx__hal__uart__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_UART\_EX\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_UART\_EX\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{38 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   uint32\_t \mbox{\hyperlink{struct_u_a_r_t___wake_up_type_def_ab7e089ac9d69e5ed7b5e8b8313a0b156}{WakeUpEvent}};        }
+\DoxyCodeLine{53   uint16\_t \mbox{\hyperlink{struct_u_a_r_t___wake_up_type_def_afe40f631bfda42d05bcfd6b0fedda5ee}{AddressLength}};      }
+\DoxyCodeLine{56   uint8\_t \mbox{\hyperlink{struct_u_a_r_t___wake_up_type_def_a333f9f0794b455f5a4b55cd9bbe69cfd}{Address}};             }
+\DoxyCodeLine{57 \} \mbox{\hyperlink{struct_u_a_r_t___wake_up_type_def}{UART\_WakeUpTypeDef}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{63 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define UART\_WORDLENGTH\_7B          USART\_CR1\_M1   }}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define UART\_WORDLENGTH\_8B          0x00000000U    }}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define UART\_WORDLENGTH\_9B          USART\_CR1\_M0   }}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define UART\_ADDRESS\_DETECT\_4B      0x00000000U      }}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define UART\_ADDRESS\_DETECT\_7B      USART\_CR2\_ADDM7  }}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define UART\_FIFOMODE\_DISABLE       0x00000000U       }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define UART\_FIFOMODE\_ENABLE        USART\_CR1\_FIFOEN  }}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define UART\_TXFIFO\_THRESHOLD\_1\_8   0x00000000U                               }}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define UART\_TXFIFO\_THRESHOLD\_1\_4   USART\_CR3\_TXFTCFG\_0                       }}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define UART\_TXFIFO\_THRESHOLD\_1\_2   USART\_CR3\_TXFTCFG\_1                       }}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define UART\_TXFIFO\_THRESHOLD\_3\_4   (USART\_CR3\_TXFTCFG\_0|USART\_CR3\_TXFTCFG\_1) }}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define UART\_TXFIFO\_THRESHOLD\_7\_8   USART\_CR3\_TXFTCFG\_2                       }}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define UART\_TXFIFO\_THRESHOLD\_8\_8   (USART\_CR3\_TXFTCFG\_2|USART\_CR3\_TXFTCFG\_0) }}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define UART\_RXFIFO\_THRESHOLD\_1\_8   0x00000000U                               }}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define UART\_RXFIFO\_THRESHOLD\_1\_4   USART\_CR3\_RXFTCFG\_0                       }}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define UART\_RXFIFO\_THRESHOLD\_1\_2   USART\_CR3\_RXFTCFG\_1                       }}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define UART\_RXFIFO\_THRESHOLD\_3\_4   (USART\_CR3\_RXFTCFG\_0|USART\_CR3\_RXFTCFG\_1) }}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define UART\_RXFIFO\_THRESHOLD\_7\_8   USART\_CR3\_RXFTCFG\_2                       }}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define UART\_RXFIFO\_THRESHOLD\_8\_8   (USART\_CR3\_RXFTCFG\_2|USART\_CR3\_RXFTCFG\_0) }}
+\DoxyCodeLine{129 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{130 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{139 \textcolor{comment}{/* Initialization and de-\/initialization functions  ****************************/}}
+\DoxyCodeLine{140 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RS485Ex\_Init(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint32\_t Polarity, uint32\_t AssertionTime,}
+\DoxyCodeLine{141                                    uint32\_t DeassertionTime);}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{151 \textcolor{keywordtype}{void} HAL\_UARTEx\_WakeupCallback(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153 \textcolor{keywordtype}{void} HAL\_UARTEx\_RxFifoFullCallback(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{154 \textcolor{keywordtype}{void} HAL\_UARTEx\_TxFifoEmptyCallback(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{155 }
+\DoxyCodeLine{164 \textcolor{comment}{/* Peripheral Control functions  **********************************************/}}
+\DoxyCodeLine{165 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_StopModeWakeUpSourceConfig(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, \mbox{\hyperlink{struct_u_a_r_t___wake_up_type_def}{UART\_WakeUpTypeDef}} WakeUpSelection);}
+\DoxyCodeLine{166 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_EnableStopMode(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{167 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_DisableStopMode(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_MultiProcessorEx\_AddressLength\_Set(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint32\_t AddressLength);}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_EnableFifoMode(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{172 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_DisableFifoMode(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart);}
+\DoxyCodeLine{173 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_SetTxFifoThreshold(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint32\_t Threshold);}
+\DoxyCodeLine{174 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_SetRxFifoThreshold(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint32\_t Threshold);}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_ReceiveToIdle(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size, uint16\_t *RxLen,}
+\DoxyCodeLine{177                                            uint32\_t Timeout);}
+\DoxyCodeLine{178 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_ReceiveToIdle\_IT(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{179 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_UARTEx\_ReceiveToIdle\_DMA(\mbox{\hyperlink{struct_____u_a_r_t___handle_type_def}{UART\_HandleTypeDef}} *huart, uint8\_t *pData, uint16\_t Size);}
+\DoxyCodeLine{180 }
+\DoxyCodeLine{181 }
+\DoxyCodeLine{190 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define UART\_GETCLOCKSOURCE(\_\_HANDLE\_\_,\_\_CLOCKSOURCE\_\_)       \(\backslash\)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{  do \{                                                        \(\backslash\)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{    if((\_\_HANDLE\_\_)-\/>Instance == USART1)                      \(\backslash\)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART1\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_PCLK2:                       \(\backslash\)}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK2;         \(\backslash\)}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == USART2)                 \(\backslash\)}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART2\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_PCLK1:                       \(\backslash\)}}
+\DoxyCodeLine{229 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{242 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == USART3)                 \(\backslash\)}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART3\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_PCLK1:                       \(\backslash\)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{252 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{257 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{258 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == UART4)                  \(\backslash\)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_UART4\_SOURCE())                    \(\backslash\)}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_PCLK1:                        \(\backslash\)}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_HSI:                          \(\backslash\)}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_SYSCLK:                       \(\backslash\)}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{279 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_LSE:                          \(\backslash\)}}
+\DoxyCodeLine{280 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{281 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{282 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == UART5)                  \(\backslash\)}}
+\DoxyCodeLine{288 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{289 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_UART5\_SOURCE())                    \(\backslash\)}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{        case RCC\_UART5CLKSOURCE\_PCLK1:                        \(\backslash\)}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{        case RCC\_UART5CLKSOURCE\_HSI:                          \(\backslash\)}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{        case RCC\_UART5CLKSOURCE\_SYSCLK:                       \(\backslash\)}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{300 \textcolor{preprocessor}{        case RCC\_UART5CLKSOURCE\_LSE:                          \(\backslash\)}}
+\DoxyCodeLine{301 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{302 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{303 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{304 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{305 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{306 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == LPUART1)                \(\backslash\)}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{310 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE())                  \(\backslash\)}}
+\DoxyCodeLine{311 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_PCLK1:                      \(\backslash\)}}
+\DoxyCodeLine{313 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{314 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_HSI:                        \(\backslash\)}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_SYSCLK:                     \(\backslash\)}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{320 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{321 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_LSE:                        \(\backslash\)}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{325 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{326 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{    else                                                      \(\backslash\)}}
+\DoxyCodeLine{330 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{331 \textcolor{preprocessor}{      (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;         \(\backslash\)}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{  \} while(0U)}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#elif defined(UART4)}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define UART\_GETCLOCKSOURCE(\_\_HANDLE\_\_,\_\_CLOCKSOURCE\_\_)       \(\backslash\)}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{  do \{                                                        \(\backslash\)}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{    if((\_\_HANDLE\_\_)-\/>Instance == USART1)                      \(\backslash\)}}
+\DoxyCodeLine{338 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART1\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{341 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_PCLK2:                       \(\backslash\)}}
+\DoxyCodeLine{342 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK2;         \(\backslash\)}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{344 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{352 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{353 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{354 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{355 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{356 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{357 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{358 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == USART2)                 \(\backslash\)}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART2\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{361 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_PCLK1:                       \(\backslash\)}}
+\DoxyCodeLine{363 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{364 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{365 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{370 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{375 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{377 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{378 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{379 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == USART3)                 \(\backslash\)}}
+\DoxyCodeLine{380 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{381 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART3\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_PCLK1:                       \(\backslash\)}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{394 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{395 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{396 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{397 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{398 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{400 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == UART4)                  \(\backslash\)}}
+\DoxyCodeLine{401 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_UART4\_SOURCE())                    \(\backslash\)}}
+\DoxyCodeLine{403 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{404 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_PCLK1:                        \(\backslash\)}}
+\DoxyCodeLine{405 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{407 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_HSI:                          \(\backslash\)}}
+\DoxyCodeLine{408 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{409 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_SYSCLK:                       \(\backslash\)}}
+\DoxyCodeLine{411 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{413 \textcolor{preprocessor}{        case RCC\_UART4CLKSOURCE\_LSE:                          \(\backslash\)}}
+\DoxyCodeLine{414 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{415 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{417 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{420 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{421 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == LPUART1)                \(\backslash\)}}
+\DoxyCodeLine{422 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{423 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE())                  \(\backslash\)}}
+\DoxyCodeLine{424 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{425 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_PCLK1:                      \(\backslash\)}}
+\DoxyCodeLine{426 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{427 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{428 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_HSI:                        \(\backslash\)}}
+\DoxyCodeLine{429 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_SYSCLK:                     \(\backslash\)}}
+\DoxyCodeLine{432 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{433 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{434 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_LSE:                        \(\backslash\)}}
+\DoxyCodeLine{435 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{436 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{437 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{438 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{439 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{440 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{441 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{442 \textcolor{preprocessor}{    else                                                      \(\backslash\)}}
+\DoxyCodeLine{443 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{444 \textcolor{preprocessor}{      (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;         \(\backslash\)}}
+\DoxyCodeLine{445 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{446 \textcolor{preprocessor}{  \} while(0U)}}
+\DoxyCodeLine{447 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{448 \textcolor{preprocessor}{\#define UART\_GETCLOCKSOURCE(\_\_HANDLE\_\_,\_\_CLOCKSOURCE\_\_)       \(\backslash\)}}
+\DoxyCodeLine{449 \textcolor{preprocessor}{  do \{                                                        \(\backslash\)}}
+\DoxyCodeLine{450 \textcolor{preprocessor}{    if((\_\_HANDLE\_\_)-\/>Instance == USART1)                      \(\backslash\)}}
+\DoxyCodeLine{451 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{452 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART1\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{453 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{454 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_PCLK2:                       \(\backslash\)}}
+\DoxyCodeLine{455 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK2;         \(\backslash\)}}
+\DoxyCodeLine{456 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{457 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{458 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{459 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{460 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{461 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{462 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{463 \textcolor{preprocessor}{        case RCC\_USART1CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{464 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{465 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{466 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{467 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{468 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{469 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{470 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{471 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == USART2)                 \(\backslash\)}}
+\DoxyCodeLine{472 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{473 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART2\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{474 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{475 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_PCLK1:                       \(\backslash\)}}
+\DoxyCodeLine{476 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{477 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{478 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{479 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{480 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{481 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{482 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{483 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{484 \textcolor{preprocessor}{        case RCC\_USART2CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{485 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{486 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{487 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{488 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{489 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{490 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{491 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{492 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == USART3)                 \(\backslash\)}}
+\DoxyCodeLine{493 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{494 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_USART3\_SOURCE())                   \(\backslash\)}}
+\DoxyCodeLine{495 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{496 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_PCLK1:                       \(\backslash\)}}
+\DoxyCodeLine{497 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{498 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{499 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_HSI:                         \(\backslash\)}}
+\DoxyCodeLine{500 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{501 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{502 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_SYSCLK:                      \(\backslash\)}}
+\DoxyCodeLine{503 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{504 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{505 \textcolor{preprocessor}{        case RCC\_USART3CLKSOURCE\_LSE:                         \(\backslash\)}}
+\DoxyCodeLine{506 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{507 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{508 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{509 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{510 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{    else if((\_\_HANDLE\_\_)-\/>Instance == LPUART1)                \(\backslash\)}}
+\DoxyCodeLine{514 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{515 \textcolor{preprocessor}{      switch(\_\_HAL\_RCC\_GET\_LPUART1\_SOURCE())                  \(\backslash\)}}
+\DoxyCodeLine{516 \textcolor{preprocessor}{      \{                                                       \(\backslash\)}}
+\DoxyCodeLine{517 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_PCLK1:                      \(\backslash\)}}
+\DoxyCodeLine{518 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_PCLK1;         \(\backslash\)}}
+\DoxyCodeLine{519 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_HSI:                        \(\backslash\)}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_HSI;           \(\backslash\)}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{523 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_SYSCLK:                     \(\backslash\)}}
+\DoxyCodeLine{524 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_SYSCLK;        \(\backslash\)}}
+\DoxyCodeLine{525 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{526 \textcolor{preprocessor}{        case RCC\_LPUART1CLKSOURCE\_LSE:                        \(\backslash\)}}
+\DoxyCodeLine{527 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_LSE;           \(\backslash\)}}
+\DoxyCodeLine{528 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{529 \textcolor{preprocessor}{        default:                                              \(\backslash\)}}
+\DoxyCodeLine{530 \textcolor{preprocessor}{          (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;     \(\backslash\)}}
+\DoxyCodeLine{531 \textcolor{preprocessor}{          break;                                              \(\backslash\)}}
+\DoxyCodeLine{532 \textcolor{preprocessor}{      \}                                                       \(\backslash\)}}
+\DoxyCodeLine{533 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{534 \textcolor{preprocessor}{    else                                                      \(\backslash\)}}
+\DoxyCodeLine{535 \textcolor{preprocessor}{    \{                                                         \(\backslash\)}}
+\DoxyCodeLine{536 \textcolor{preprocessor}{      (\_\_CLOCKSOURCE\_\_) = UART\_CLOCKSOURCE\_UNDEFINED;         \(\backslash\)}}
+\DoxyCodeLine{537 \textcolor{preprocessor}{    \}                                                         \(\backslash\)}}
+\DoxyCodeLine{538 \textcolor{preprocessor}{  \} while(0U)}}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{540 }
+\DoxyCodeLine{550 \textcolor{preprocessor}{\#define UART\_MASK\_COMPUTATION(\_\_HANDLE\_\_)                             \(\backslash\)}}
+\DoxyCodeLine{551 \textcolor{preprocessor}{  do \{                                                                \(\backslash\)}}
+\DoxyCodeLine{552 \textcolor{preprocessor}{    if ((\_\_HANDLE\_\_)-\/>Init.WordLength == UART\_WORDLENGTH\_9B)          \(\backslash\)}}
+\DoxyCodeLine{553 \textcolor{preprocessor}{    \{                                                                 \(\backslash\)}}
+\DoxyCodeLine{554 \textcolor{preprocessor}{      if ((\_\_HANDLE\_\_)-\/>Init.Parity == UART\_PARITY\_NONE)              \(\backslash\)}}
+\DoxyCodeLine{555 \textcolor{preprocessor}{      \{                                                               \(\backslash\)}}
+\DoxyCodeLine{556 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Mask = 0x01FFU ;                                \(\backslash\)}}
+\DoxyCodeLine{557 \textcolor{preprocessor}{      \}                                                               \(\backslash\)}}
+\DoxyCodeLine{558 \textcolor{preprocessor}{      else                                                            \(\backslash\)}}
+\DoxyCodeLine{559 \textcolor{preprocessor}{      \{                                                               \(\backslash\)}}
+\DoxyCodeLine{560 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Mask = 0x00FFU ;                                \(\backslash\)}}
+\DoxyCodeLine{561 \textcolor{preprocessor}{      \}                                                               \(\backslash\)}}
+\DoxyCodeLine{562 \textcolor{preprocessor}{    \}                                                                 \(\backslash\)}}
+\DoxyCodeLine{563 \textcolor{preprocessor}{    else if ((\_\_HANDLE\_\_)-\/>Init.WordLength == UART\_WORDLENGTH\_8B)     \(\backslash\)}}
+\DoxyCodeLine{564 \textcolor{preprocessor}{    \{                                                                 \(\backslash\)}}
+\DoxyCodeLine{565 \textcolor{preprocessor}{      if ((\_\_HANDLE\_\_)-\/>Init.Parity == UART\_PARITY\_NONE)              \(\backslash\)}}
+\DoxyCodeLine{566 \textcolor{preprocessor}{      \{                                                               \(\backslash\)}}
+\DoxyCodeLine{567 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Mask = 0x00FFU ;                                \(\backslash\)}}
+\DoxyCodeLine{568 \textcolor{preprocessor}{      \}                                                               \(\backslash\)}}
+\DoxyCodeLine{569 \textcolor{preprocessor}{      else                                                            \(\backslash\)}}
+\DoxyCodeLine{570 \textcolor{preprocessor}{      \{                                                               \(\backslash\)}}
+\DoxyCodeLine{571 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Mask = 0x007FU ;                                \(\backslash\)}}
+\DoxyCodeLine{572 \textcolor{preprocessor}{      \}                                                               \(\backslash\)}}
+\DoxyCodeLine{573 \textcolor{preprocessor}{    \}                                                                 \(\backslash\)}}
+\DoxyCodeLine{574 \textcolor{preprocessor}{    else if ((\_\_HANDLE\_\_)-\/>Init.WordLength == UART\_WORDLENGTH\_7B)     \(\backslash\)}}
+\DoxyCodeLine{575 \textcolor{preprocessor}{    \{                                                                 \(\backslash\)}}
+\DoxyCodeLine{576 \textcolor{preprocessor}{      if ((\_\_HANDLE\_\_)-\/>Init.Parity == UART\_PARITY\_NONE)              \(\backslash\)}}
+\DoxyCodeLine{577 \textcolor{preprocessor}{      \{                                                               \(\backslash\)}}
+\DoxyCodeLine{578 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Mask = 0x007FU ;                                \(\backslash\)}}
+\DoxyCodeLine{579 \textcolor{preprocessor}{      \}                                                               \(\backslash\)}}
+\DoxyCodeLine{580 \textcolor{preprocessor}{      else                                                            \(\backslash\)}}
+\DoxyCodeLine{581 \textcolor{preprocessor}{      \{                                                               \(\backslash\)}}
+\DoxyCodeLine{582 \textcolor{preprocessor}{        (\_\_HANDLE\_\_)-\/>Mask = 0x003FU ;                                \(\backslash\)}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{      \}                                                               \(\backslash\)}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{    \}                                                                 \(\backslash\)}}
+\DoxyCodeLine{585 \textcolor{preprocessor}{    else                                                              \(\backslash\)}}
+\DoxyCodeLine{586 \textcolor{preprocessor}{    \{                                                                 \(\backslash\)}}
+\DoxyCodeLine{587 \textcolor{preprocessor}{      (\_\_HANDLE\_\_)-\/>Mask = 0x0000U;                                   \(\backslash\)}}
+\DoxyCodeLine{588 \textcolor{preprocessor}{    \}                                                                 \(\backslash\)}}
+\DoxyCodeLine{589 \textcolor{preprocessor}{  \} while(0U)}}
+\DoxyCodeLine{590 }
+\DoxyCodeLine{596 \textcolor{preprocessor}{\#define IS\_UART\_WORD\_LENGTH(\_\_LENGTH\_\_) (((\_\_LENGTH\_\_) == UART\_WORDLENGTH\_7B) || \(\backslash\)}}
+\DoxyCodeLine{597 \textcolor{preprocessor}{                                         ((\_\_LENGTH\_\_) == UART\_WORDLENGTH\_8B) || \(\backslash\)}}
+\DoxyCodeLine{598 \textcolor{preprocessor}{                                         ((\_\_LENGTH\_\_) == UART\_WORDLENGTH\_9B))}}
+\DoxyCodeLine{599 }
+\DoxyCodeLine{605 \textcolor{preprocessor}{\#define IS\_UART\_ADDRESSLENGTH\_DETECT(\_\_ADDRESS\_\_) (((\_\_ADDRESS\_\_) == UART\_ADDRESS\_DETECT\_4B) || \(\backslash\)}}
+\DoxyCodeLine{606 \textcolor{preprocessor}{                                                   ((\_\_ADDRESS\_\_) == UART\_ADDRESS\_DETECT\_7B))}}
+\DoxyCodeLine{607 }
+\DoxyCodeLine{613 \textcolor{preprocessor}{\#define IS\_UART\_TXFIFO\_THRESHOLD(\_\_THRESHOLD\_\_) (((\_\_THRESHOLD\_\_) == UART\_TXFIFO\_THRESHOLD\_1\_8) || \(\backslash\)}}
+\DoxyCodeLine{614 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_TXFIFO\_THRESHOLD\_1\_4) || \(\backslash\)}}
+\DoxyCodeLine{615 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_TXFIFO\_THRESHOLD\_1\_2) || \(\backslash\)}}
+\DoxyCodeLine{616 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_TXFIFO\_THRESHOLD\_3\_4) || \(\backslash\)}}
+\DoxyCodeLine{617 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_TXFIFO\_THRESHOLD\_7\_8) || \(\backslash\)}}
+\DoxyCodeLine{618 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_TXFIFO\_THRESHOLD\_8\_8))}}
+\DoxyCodeLine{619 }
+\DoxyCodeLine{625 \textcolor{preprocessor}{\#define IS\_UART\_RXFIFO\_THRESHOLD(\_\_THRESHOLD\_\_) (((\_\_THRESHOLD\_\_) == UART\_RXFIFO\_THRESHOLD\_1\_8) || \(\backslash\)}}
+\DoxyCodeLine{626 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_RXFIFO\_THRESHOLD\_1\_4) || \(\backslash\)}}
+\DoxyCodeLine{627 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_RXFIFO\_THRESHOLD\_1\_2) || \(\backslash\)}}
+\DoxyCodeLine{628 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_RXFIFO\_THRESHOLD\_3\_4) || \(\backslash\)}}
+\DoxyCodeLine{629 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_RXFIFO\_THRESHOLD\_7\_8) || \(\backslash\)}}
+\DoxyCodeLine{630 \textcolor{preprocessor}{                                                 ((\_\_THRESHOLD\_\_) == UART\_RXFIFO\_THRESHOLD\_8\_8))}}
+\DoxyCodeLine{631 }
+\DoxyCodeLine{636 \textcolor{comment}{/* Private functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{637 }
+\DoxyCodeLine{646 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{647 \}}
+\DoxyCodeLine{648 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{649 }
+\DoxyCodeLine{650 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_UART\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{651 }
+
+\end{DoxyCode}

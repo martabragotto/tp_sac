@@ -1,0 +1,240 @@
+\hypertarget{mpu__armv8_8h_source}{}\doxysection{mpu\+\_\+armv8.\+h}
+\label{mpu__armv8_8h_source}\index{Drivers/CMSIS/Include/mpu\_armv8.h@{Drivers/CMSIS/Include/mpu\_armv8.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/******************************************************************************}}
+\DoxyCodeLine{2 \textcolor{comment}{ * @file     mpu\_armv8.h}}
+\DoxyCodeLine{3 \textcolor{comment}{ * @brief    CMSIS MPU API for Armv8-\/M and Armv8.1-\/M MPU}}
+\DoxyCodeLine{4 \textcolor{comment}{ * @version  V5.1.0}}
+\DoxyCodeLine{5 \textcolor{comment}{ * @date     08. March 2019}}
+\DoxyCodeLine{6 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{7 \textcolor{comment}{/*}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Copyright (c) 2017-\/2019 Arm Limited. All rights reserved.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * SPDX-\/License-\/Identifier: Apache-\/2.0}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the License); you may}}
+\DoxyCodeLine{13 \textcolor{comment}{ * not use this file except in compliance with the License.}}
+\DoxyCodeLine{14 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ * www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{17 \textcolor{comment}{ *}}
+\DoxyCodeLine{18 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{19 \textcolor{comment}{ * distributed under the License is distributed on an AS IS BASIS, WITHOUT}}
+\DoxyCodeLine{20 \textcolor{comment}{ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{21 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{22 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{23 \textcolor{comment}{ */}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#if   defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{  \#pragma system\_include         }\textcolor{comment}{/* treat file as system include file for MISRA check */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#elif defined (\_\_clang\_\_)}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{  \#pragma clang system\_header    }\textcolor{comment}{/* treat file as system include file */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#ifndef ARM\_MPU\_ARMV8\_H}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define ARM\_MPU\_ARMV8\_H}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_DEVICE                           ( 0U )}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_NON\_CACHEABLE                    ( 4U )}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_MEMORY\_(NT, WB, RA, WA) \(\backslash\)}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{  (((NT \& 1U) << 3U) | ((WB \& 1U) << 2U) | ((RA \& 1U) << 1U) | (WA \& 1U))}}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_DEVICE\_nGnRnE (0U)}}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_DEVICE\_nGnRE  (1U)}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_DEVICE\_nGRE   (2U)}}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR\_DEVICE\_GRE    (3U)}}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define ARM\_MPU\_ATTR(O, I) (((O \& 0xFU) << 4U) | (((O \& 0xFU) != 0U) ? (I \& 0xFU) : ((I \& 0x3U) << 2U)))}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define ARM\_MPU\_SH\_NON   (0U)}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define ARM\_MPU\_SH\_OUTER (2U)}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define ARM\_MPU\_SH\_INNER (3U)}}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define ARM\_MPU\_AP\_(RO, NP) (((RO \& 1U) << 1U) | (NP \& 1U))}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define ARM\_MPU\_RBAR(BASE, SH, RO, NP, XN) \(\backslash\)}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{  ((BASE \& MPU\_RBAR\_BASE\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{  ((SH << MPU\_RBAR\_SH\_Pos) \& MPU\_RBAR\_SH\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{  ((ARM\_MPU\_AP\_(RO, NP) << MPU\_RBAR\_AP\_Pos) \& MPU\_RBAR\_AP\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{  ((XN << MPU\_RBAR\_XN\_Pos) \& MPU\_RBAR\_XN\_Msk))}}
+\DoxyCodeLine{94 }
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define ARM\_MPU\_RLAR(LIMIT, IDX) \(\backslash\)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{  ((LIMIT \& MPU\_RLAR\_LIMIT\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{  ((IDX << MPU\_RLAR\_AttrIndx\_Pos) \& MPU\_RLAR\_AttrIndx\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{  (MPU\_RLAR\_EN\_Msk))}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#if defined(MPU\_RLAR\_PXN\_Pos)}}
+\DoxyCodeLine{105   }
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define ARM\_MPU\_RLAR\_PXN(LIMIT, PXN, IDX) \(\backslash\)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{  ((LIMIT \& MPU\_RLAR\_LIMIT\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{  ((PXN << MPU\_RLAR\_PXN\_Pos) \& MPU\_RLAR\_PXN\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{  ((IDX << MPU\_RLAR\_AttrIndx\_Pos) \& MPU\_RLAR\_AttrIndx\_Msk) | \(\backslash\)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{  (MPU\_RLAR\_EN\_Msk))}}
+\DoxyCodeLine{116   }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{122 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{123   uint32\_t RBAR;                   }
+\DoxyCodeLine{124   uint32\_t \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_ab5d3a650dbffd0b272bf7df5b140e8a8}{RLAR}};                   }
+\DoxyCodeLine{125 \} \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}};}
+\DoxyCodeLine{126     }
+\DoxyCodeLine{130 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Enable(uint32\_t MPU\_Control)}
+\DoxyCodeLine{131 \{}
+\DoxyCodeLine{132   MPU-\/>CTRL = MPU\_Control | MPU\_CTRL\_ENABLE\_Msk;}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#ifdef SCB\_SHCSR\_MEMFAULTENA\_Msk}}
+\DoxyCodeLine{134   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHCSR |= \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaf084424fa1f69bea36a1c44899d83d17}{SCB\_SHCSR\_MEMFAULTENA\_Msk}};}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{136   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{137   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{138 \}}
+\DoxyCodeLine{139 }
+\DoxyCodeLine{142 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Disable(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{143 \{}
+\DoxyCodeLine{144   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga671101179b5943990785f36f8c1e2269}{\_\_DMB}}();}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#ifdef SCB\_SHCSR\_MEMFAULTENA\_Msk}}
+\DoxyCodeLine{146   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHCSR \&= \string~SCB\_SHCSR\_MEMFAULTENA\_Msk;}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{148   MPU-\/>CTRL  \&= \string~MPU\_CTRL\_ENABLE\_Msk;}
+\DoxyCodeLine{149 \}}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#ifdef MPU\_NS}}
+\DoxyCodeLine{155 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Enable\_NS(uint32\_t MPU\_Control)}
+\DoxyCodeLine{156 \{}
+\DoxyCodeLine{157   MPU\_NS-\/>CTRL = MPU\_Control | MPU\_CTRL\_ENABLE\_Msk;}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#ifdef SCB\_SHCSR\_MEMFAULTENA\_Msk}}
+\DoxyCodeLine{159   SCB\_NS-\/>SHCSR |= \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaf084424fa1f69bea36a1c44899d83d17}{SCB\_SHCSR\_MEMFAULTENA\_Msk}};}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{161   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{162   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{163 \}}
+\DoxyCodeLine{164 }
+\DoxyCodeLine{167 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Disable\_NS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{168 \{}
+\DoxyCodeLine{169   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga671101179b5943990785f36f8c1e2269}{\_\_DMB}}();}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#ifdef SCB\_SHCSR\_MEMFAULTENA\_Msk}}
+\DoxyCodeLine{171   SCB\_NS-\/>SHCSR \&= \string~SCB\_SHCSR\_MEMFAULTENA\_Msk;}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{173   MPU\_NS-\/>CTRL  \&= \string~MPU\_CTRL\_ENABLE\_Msk;}
+\DoxyCodeLine{174 \}}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{176 }
+\DoxyCodeLine{182 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_SetMemAttrEx(MPU\_Type* mpu, uint8\_t idx, uint8\_t attr)}
+\DoxyCodeLine{183 \{}
+\DoxyCodeLine{184   \textcolor{keyword}{const} uint8\_t reg = idx / 4U;}
+\DoxyCodeLine{185   \textcolor{keyword}{const} uint32\_t pos = ((idx \% 4U) * 8U);}
+\DoxyCodeLine{186   \textcolor{keyword}{const} uint32\_t mask = 0xFFU << pos;}
+\DoxyCodeLine{187   }
+\DoxyCodeLine{188   \textcolor{keywordflow}{if} (reg >= (\textcolor{keyword}{sizeof}(mpu-\/>MAIR) / \textcolor{keyword}{sizeof}(mpu-\/>MAIR[0]))) \{}
+\DoxyCodeLine{189     \textcolor{keywordflow}{return}; \textcolor{comment}{// invalid index}}
+\DoxyCodeLine{190   \}}
+\DoxyCodeLine{191   }
+\DoxyCodeLine{192   mpu-\/>MAIR[reg] = ((mpu-\/>MAIR[reg] \& \string~mask) | ((attr << pos) \& mask));}
+\DoxyCodeLine{193 \}}
+\DoxyCodeLine{194 }
+\DoxyCodeLine{199 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_SetMemAttr(uint8\_t idx, uint8\_t attr)}
+\DoxyCodeLine{200 \{}
+\DoxyCodeLine{201   ARM\_MPU\_SetMemAttrEx(MPU, idx, attr);}
+\DoxyCodeLine{202 \}}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#ifdef MPU\_NS}}
+\DoxyCodeLine{209 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_SetMemAttr\_NS(uint8\_t idx, uint8\_t attr)}
+\DoxyCodeLine{210 \{}
+\DoxyCodeLine{211   ARM\_MPU\_SetMemAttrEx(MPU\_NS, idx, attr);}
+\DoxyCodeLine{212 \}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{219 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_ClrRegionEx(MPU\_Type* mpu, uint32\_t rnr)}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221   mpu-\/>RNR = rnr;}
+\DoxyCodeLine{222   mpu-\/>RLAR = 0U;}
+\DoxyCodeLine{223 \}}
+\DoxyCodeLine{224 }
+\DoxyCodeLine{228 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_ClrRegion(uint32\_t rnr)}
+\DoxyCodeLine{229 \{}
+\DoxyCodeLine{230   ARM\_MPU\_ClrRegionEx(MPU, rnr);}
+\DoxyCodeLine{231 \}}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#ifdef MPU\_NS}}
+\DoxyCodeLine{237 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_ClrRegion\_NS(uint32\_t rnr)}
+\DoxyCodeLine{238 \{  }
+\DoxyCodeLine{239   ARM\_MPU\_ClrRegionEx(MPU\_NS, rnr);}
+\DoxyCodeLine{240 \}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{242 }
+\DoxyCodeLine{249 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_SetRegionEx(MPU\_Type* mpu, uint32\_t rnr, uint32\_t rbar, uint32\_t rlar)}
+\DoxyCodeLine{250 \{}
+\DoxyCodeLine{251   mpu-\/>RNR = rnr;}
+\DoxyCodeLine{252   mpu-\/>RBAR = rbar;}
+\DoxyCodeLine{253   mpu-\/>RLAR = rlar;}
+\DoxyCodeLine{254 \}}
+\DoxyCodeLine{255 }
+\DoxyCodeLine{261 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_SetRegion(uint32\_t rnr, uint32\_t rbar, uint32\_t rlar)}
+\DoxyCodeLine{262 \{}
+\DoxyCodeLine{263   ARM\_MPU\_SetRegionEx(MPU, rnr, rbar, rlar);}
+\DoxyCodeLine{264 \}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#ifdef MPU\_NS}}
+\DoxyCodeLine{272 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_SetRegion\_NS(uint32\_t rnr, uint32\_t rbar, uint32\_t rlar)}
+\DoxyCodeLine{273 \{}
+\DoxyCodeLine{274   ARM\_MPU\_SetRegionEx(MPU\_NS, rnr, rbar, rlar);  }
+\DoxyCodeLine{275 \}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{283 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_OrderedMemcpy(\textcolor{keyword}{volatile} uint32\_t* dst, \textcolor{keyword}{const} uint32\_t* \_\_RESTRICT src, uint32\_t len)}
+\DoxyCodeLine{284 \{}
+\DoxyCodeLine{285   uint32\_t \mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}};}
+\DoxyCodeLine{286   \textcolor{keywordflow}{for} (\mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}} = 0U; \mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}} < len; ++\mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}}) }
+\DoxyCodeLine{287   \{}
+\DoxyCodeLine{288     dst[\mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}}] = src[\mbox{\hyperlink{main_8c_acb559820d9ca11295b4500f179ef6392}{i}}];}
+\DoxyCodeLine{289   \}}
+\DoxyCodeLine{290 \}}
+\DoxyCodeLine{291 }
+\DoxyCodeLine{298 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_LoadEx(MPU\_Type* mpu, uint32\_t rnr, \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}} \textcolor{keyword}{const}* table, uint32\_t cnt) }
+\DoxyCodeLine{299 \{}
+\DoxyCodeLine{300   \textcolor{keyword}{const} uint32\_t rowWordSize = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}})/4U;}
+\DoxyCodeLine{301   \textcolor{keywordflow}{if} (cnt == 1U) \{}
+\DoxyCodeLine{302     mpu-\/>RNR = rnr;}
+\DoxyCodeLine{303     ARM\_MPU\_OrderedMemcpy(\&(mpu-\/>RBAR), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_afe7a7721aa08988d915670efa432cdd2}{RBAR}}), rowWordSize);}
+\DoxyCodeLine{304   \} \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{305     uint32\_t rnrBase   = rnr \& \string~(MPU\_TYPE\_RALIASES-\/1U);}
+\DoxyCodeLine{306     uint32\_t rnrOffset = rnr \% MPU\_TYPE\_RALIASES;}
+\DoxyCodeLine{307     }
+\DoxyCodeLine{308     mpu-\/>RNR = rnrBase;}
+\DoxyCodeLine{309     \textcolor{keywordflow}{while} ((rnrOffset + cnt) > MPU\_TYPE\_RALIASES) \{}
+\DoxyCodeLine{310       uint32\_t c = MPU\_TYPE\_RALIASES -\/ rnrOffset;}
+\DoxyCodeLine{311       ARM\_MPU\_OrderedMemcpy(\&(mpu-\/>RBAR)+(rnrOffset*2U), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_afe7a7721aa08988d915670efa432cdd2}{RBAR}}), c*rowWordSize);}
+\DoxyCodeLine{312       table += c;}
+\DoxyCodeLine{313       cnt -\/= c;}
+\DoxyCodeLine{314       rnrOffset = 0U;}
+\DoxyCodeLine{315       rnrBase += MPU\_TYPE\_RALIASES;}
+\DoxyCodeLine{316       mpu-\/>RNR = rnrBase;}
+\DoxyCodeLine{317     \}}
+\DoxyCodeLine{318     }
+\DoxyCodeLine{319     ARM\_MPU\_OrderedMemcpy(\&(mpu-\/>RBAR)+(rnrOffset*2U), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_afe7a7721aa08988d915670efa432cdd2}{RBAR}}), cnt*rowWordSize);}
+\DoxyCodeLine{320   \}}
+\DoxyCodeLine{321 \}}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{328 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Load(uint32\_t rnr, \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}} \textcolor{keyword}{const}* table, uint32\_t cnt) }
+\DoxyCodeLine{329 \{}
+\DoxyCodeLine{330   ARM\_MPU\_LoadEx(MPU, rnr, table, cnt);}
+\DoxyCodeLine{331 \}}
+\DoxyCodeLine{332 }
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#ifdef MPU\_NS}}
+\DoxyCodeLine{339 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Load\_NS(uint32\_t rnr, \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}} \textcolor{keyword}{const}* table, uint32\_t cnt) }
+\DoxyCodeLine{340 \{}
+\DoxyCodeLine{341   ARM\_MPU\_LoadEx(MPU\_NS, rnr, table, cnt);}
+\DoxyCodeLine{342 \}}
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{344 }
+\DoxyCodeLine{345 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{346 }
+
+\end{DoxyCode}

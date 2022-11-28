@@ -1,0 +1,116 @@
+\hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e}{}\doxysection{LOW POWER MODE}
+\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e}\index{LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gab55eabc37e5abe00df558c0ba1c37508}{LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep}} (void)
+\begin{DoxyCompactList}\small\item\em Processor uses sleep as its low power mode @rmtoll SCB\+\_\+\+SCR SLEEPDEEP LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga37d70238e98ca1214e3fe4113b119474}{LL\+\_\+\+LPM\+\_\+\+Enable\+Deep\+Sleep}} (void)
+\begin{DoxyCompactList}\small\item\em Processor uses deep sleep as its low power mode @rmtoll SCB\+\_\+\+SCR SLEEPDEEP LL\+\_\+\+LPM\+\_\+\+Enable\+Deep\+Sleep. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gabb2b2648dff19d88209af8761fc34c30}{LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Configures sleep-\/on-\/exit when returning from Handler mode to Thread mode. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga88768c6c5f53de30a647123241451eb9}{LL\+\_\+\+LPM\+\_\+\+Disable\+Sleep\+On\+Exit}} (void)
+\begin{DoxyCompactList}\small\item\em Do not sleep when returning to Thread mode. @rmtoll SCB\+\_\+\+SCR SLEEPONEXIT LL\+\_\+\+LPM\+\_\+\+Disable\+Sleep\+On\+Exit. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf1c01ae00b4a13c5b6531f82a9677b90}{LL\+\_\+\+LPM\+\_\+\+Enable\+Event\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Enabled events and all interrupts, including disabled interrupts, can wakeup the processor. @rmtoll SCB\+\_\+\+SCR SEVEONPEND LL\+\_\+\+LPM\+\_\+\+Enable\+Event\+On\+Pend. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf4ebb8351f09676067aa0ce1fe08321b}{LL\+\_\+\+LPM\+\_\+\+Disable\+Event\+On\+Pend}} (void)
+\begin{DoxyCompactList}\small\item\em Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded @rmtoll SCB\+\_\+\+SCR SEVEONPEND LL\+\_\+\+LPM\+\_\+\+Disable\+Event\+On\+Pend. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf4ebb8351f09676067aa0ce1fe08321b}\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf4ebb8351f09676067aa0ce1fe08321b}} 
+\index{LOW POWER MODE@{LOW POWER MODE}!LL\_LPM\_DisableEventOnPend@{LL\_LPM\_DisableEventOnPend}}
+\index{LL\_LPM\_DisableEventOnPend@{LL\_LPM\_DisableEventOnPend}!LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsubsection{\texorpdfstring{LL\_LPM\_DisableEventOnPend()}{LL\_LPM\_DisableEventOnPend()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+LPM\+\_\+\+Disable\+Event\+On\+Pend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded @rmtoll SCB\+\_\+\+SCR SEVEONPEND LL\+\_\+\+LPM\+\_\+\+Disable\+Event\+On\+Pend. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga88768c6c5f53de30a647123241451eb9}\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga88768c6c5f53de30a647123241451eb9}} 
+\index{LOW POWER MODE@{LOW POWER MODE}!LL\_LPM\_DisableSleepOnExit@{LL\_LPM\_DisableSleepOnExit}}
+\index{LL\_LPM\_DisableSleepOnExit@{LL\_LPM\_DisableSleepOnExit}!LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsubsection{\texorpdfstring{LL\_LPM\_DisableSleepOnExit()}{LL\_LPM\_DisableSleepOnExit()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+LPM\+\_\+\+Disable\+Sleep\+On\+Exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Do not sleep when returning to Thread mode. @rmtoll SCB\+\_\+\+SCR SLEEPONEXIT LL\+\_\+\+LPM\+\_\+\+Disable\+Sleep\+On\+Exit. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga37d70238e98ca1214e3fe4113b119474}\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_ga37d70238e98ca1214e3fe4113b119474}} 
+\index{LOW POWER MODE@{LOW POWER MODE}!LL\_LPM\_EnableDeepSleep@{LL\_LPM\_EnableDeepSleep}}
+\index{LL\_LPM\_EnableDeepSleep@{LL\_LPM\_EnableDeepSleep}!LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsubsection{\texorpdfstring{LL\_LPM\_EnableDeepSleep()}{LL\_LPM\_EnableDeepSleep()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+LPM\+\_\+\+Enable\+Deep\+Sleep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Processor uses deep sleep as its low power mode @rmtoll SCB\+\_\+\+SCR SLEEPDEEP LL\+\_\+\+LPM\+\_\+\+Enable\+Deep\+Sleep. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf1c01ae00b4a13c5b6531f82a9677b90}\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gaf1c01ae00b4a13c5b6531f82a9677b90}} 
+\index{LOW POWER MODE@{LOW POWER MODE}!LL\_LPM\_EnableEventOnPend@{LL\_LPM\_EnableEventOnPend}}
+\index{LL\_LPM\_EnableEventOnPend@{LL\_LPM\_EnableEventOnPend}!LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsubsection{\texorpdfstring{LL\_LPM\_EnableEventOnPend()}{LL\_LPM\_EnableEventOnPend()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+LPM\+\_\+\+Enable\+Event\+On\+Pend (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enabled events and all interrupts, including disabled interrupts, can wakeup the processor. @rmtoll SCB\+\_\+\+SCR SEVEONPEND LL\+\_\+\+LPM\+\_\+\+Enable\+Event\+On\+Pend. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gab55eabc37e5abe00df558c0ba1c37508}\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gab55eabc37e5abe00df558c0ba1c37508}} 
+\index{LOW POWER MODE@{LOW POWER MODE}!LL\_LPM\_EnableSleep@{LL\_LPM\_EnableSleep}}
+\index{LL\_LPM\_EnableSleep@{LL\_LPM\_EnableSleep}!LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsubsection{\texorpdfstring{LL\_LPM\_EnableSleep()}{LL\_LPM\_EnableSleep()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Processor uses sleep as its low power mode @rmtoll SCB\+\_\+\+SCR SLEEPDEEP LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gabb2b2648dff19d88209af8761fc34c30}\label{group___c_o_r_t_e_x___l_l___e_f___l_o_w___p_o_w_e_r___m_o_d_e_gabb2b2648dff19d88209af8761fc34c30}} 
+\index{LOW POWER MODE@{LOW POWER MODE}!LL\_LPM\_EnableSleepOnExit@{LL\_LPM\_EnableSleepOnExit}}
+\index{LL\_LPM\_EnableSleepOnExit@{LL\_LPM\_EnableSleepOnExit}!LOW POWER MODE@{LOW POWER MODE}}
+\doxysubsubsection{\texorpdfstring{LL\_LPM\_EnableSleepOnExit()}{LL\_LPM\_EnableSleepOnExit()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep\+On\+Exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Configures sleep-\/on-\/exit when returning from Handler mode to Thread mode. 
+
+\begin{DoxyNote}{Note}
+Setting this bit to 1 enables an interrupt-\/driven application to avoid returning to an empty main application. @rmtoll SCB\+\_\+\+SCR SLEEPONEXIT LL\+\_\+\+LPM\+\_\+\+Enable\+Sleep\+On\+Exit 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

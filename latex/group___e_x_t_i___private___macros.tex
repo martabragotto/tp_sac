@@ -1,0 +1,89 @@
+\hypertarget{group___e_x_t_i___private___macros}{}\doxysection{EXTI Private Macros}
+\label{group___e_x_t_i___private___macros}\index{EXTI Private Macros@{EXTI Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___e_x_t_i___private___macros_gad1612a68c70ca4cdd0cbd3554e359af5}{IS\+\_\+\+EXTI\+\_\+\+LINE}}(\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___e_x_t_i___private___macros_gaa19d2fffcd305b75bf037aaf8f071ba7}{IS\+\_\+\+EXTI\+\_\+\+MODE}}(\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_gaba684e88699639398fb59c361c13c113}\label{group___e_x_t_i___private___macros_gaba684e88699639398fb59c361c13c113}} 
+\#define {\bfseries IS\+\_\+\+EXTI\+\_\+\+TRIGGER}(\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+) \& $\sim$\mbox{\hyperlink{group___e_x_t_i___private___constants_ga3e14df666414849fd5a3907a96a2a892}{EXTI\+\_\+\+TRIGGER\+\_\+\+MASK}}) == 0x00U)
+\item 
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_ga1ec20cce9b1da8e1bd3de992511ccc1e}\label{group___e_x_t_i___private___macros_ga1ec20cce9b1da8e1bd3de992511ccc1e}} 
+\#define {\bfseries IS\+\_\+\+EXTI\+\_\+\+CONFIG\+\_\+\+LINE}(\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+) \& EXTI\+\_\+\+CONFIG) != 0x00U)
+\item 
+\#define \mbox{\hyperlink{group___e_x_t_i___private___macros_ga839c895e37f0e74052194d91ad68a3ae}{IS\+\_\+\+EXTI\+\_\+\+GPIO\+\_\+\+PORT}}(\+\_\+\+\_\+\+PORT\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_ga82f191b2ea96948f302dc6c2108ea534}\label{group___e_x_t_i___private___macros_ga82f191b2ea96948f302dc6c2108ea534}} 
+\#define {\bfseries IS\+\_\+\+EXTI\+\_\+\+GPIO\+\_\+\+PIN}(\+\_\+\+\_\+\+PIN\+\_\+\+\_\+)~((\+\_\+\+\_\+\+PIN\+\_\+\+\_\+) $<$ 16u)
+\item 
+\#define \mbox{\hyperlink{group___e_x_t_i___private___macros_gafdfb17f277b045f6eadaac8975aa8d44}{IS\+\_\+\+EXTI\+\_\+\+PENDING\+\_\+\+EDGE}}(\+\_\+\+\_\+\+EDGE\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_ga84a12607cac40f8e055476540894008c}\label{group___e_x_t_i___private___macros_ga84a12607cac40f8e055476540894008c}} 
+\#define {\bfseries IS\+\_\+\+EXTI\+\_\+\+CB}(\+\_\+\+\_\+\+CB\+\_\+\+\_\+)~((\+\_\+\+\_\+\+CB\+\_\+\+\_\+) == HAL\+\_\+\+EXTI\+\_\+\+COMMON\+\_\+\+CB\+\_\+\+ID)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_ga839c895e37f0e74052194d91ad68a3ae}\label{group___e_x_t_i___private___macros_ga839c895e37f0e74052194d91ad68a3ae}} 
+\index{EXTI Private Macros@{EXTI Private Macros}!IS\_EXTI\_GPIO\_PORT@{IS\_EXTI\_GPIO\_PORT}}
+\index{IS\_EXTI\_GPIO\_PORT@{IS\_EXTI\_GPIO\_PORT}!EXTI Private Macros@{EXTI Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_EXTI\_GPIO\_PORT}{IS\_EXTI\_GPIO\_PORT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+EXTI\+\_\+\+GPIO\+\_\+\+PORT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PORT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((\_\_PORT\_\_) == EXTI\_GPIOA) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_PORT\_\_) == EXTI\_GPIOB) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_PORT\_\_) == EXTI\_GPIOC) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_PORT\_\_) == EXTI\_GPIOD) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_PORT\_\_) == EXTI\_GPIOE) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_PORT\_\_) == EXTI\_GPIOF) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_PORT\_\_) == EXTI\_GPIOG))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_gad1612a68c70ca4cdd0cbd3554e359af5}\label{group___e_x_t_i___private___macros_gad1612a68c70ca4cdd0cbd3554e359af5}} 
+\index{EXTI Private Macros@{EXTI Private Macros}!IS\_EXTI\_LINE@{IS\_EXTI\_LINE}}
+\index{IS\_EXTI\_LINE@{IS\_EXTI\_LINE}!EXTI Private Macros@{EXTI Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_EXTI\_LINE}{IS\_EXTI\_LINE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+EXTI\+\_\+\+LINE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              ((((\_\_EXTI\_LINE\_\_) \& \string~(EXTI\_PROPERTY\_MASK | EXTI\_REG\_MASK | EXTI\_PIN\_MASK)) == 0x00U) \&\& \(\backslash\)}
+\DoxyCodeLine{                                              ((((\_\_EXTI\_LINE\_\_) \& EXTI\_PROPERTY\_MASK) == EXTI\_DIRECT)   || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_EXTI\_LINE\_\_) \& EXTI\_PROPERTY\_MASK) == EXTI\_CONFIG)   || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_EXTI\_LINE\_\_) \& EXTI\_PROPERTY\_MASK) == EXTI\_GPIO))    \&\& \(\backslash\)}
+\DoxyCodeLine{                                              (((\_\_EXTI\_LINE\_\_) \& (EXTI\_REG\_MASK | EXTI\_PIN\_MASK))      < \(\backslash\)}
+\DoxyCodeLine{                                               (((\mbox{\hyperlink{group___e_x_t_i___private___constants_ga577c4d3186ba6dd303761b23510595ef}{EXTI\_LINE\_NB}} / 32u) << \mbox{\hyperlink{group___e_x_t_i___private___constants_ga187f8b65fedba7cc4a5662552dd0eb40}{EXTI\_REG\_SHIFT}}) | (\mbox{\hyperlink{group___e_x_t_i___private___constants_ga577c4d3186ba6dd303761b23510595ef}{EXTI\_LINE\_NB}} \% 32u))))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_gaa19d2fffcd305b75bf037aaf8f071ba7}\label{group___e_x_t_i___private___macros_gaa19d2fffcd305b75bf037aaf8f071ba7}} 
+\index{EXTI Private Macros@{EXTI Private Macros}!IS\_EXTI\_MODE@{IS\_EXTI\_MODE}}
+\index{IS\_EXTI\_MODE@{IS\_EXTI\_MODE}!EXTI Private Macros@{EXTI Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_EXTI\_MODE}{IS\_EXTI\_MODE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+EXTI\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+EXTI\+\_\+\+LINE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              ((((\_\_EXTI\_LINE\_\_) \& \mbox{\hyperlink{group___e_x_t_i___private___constants_ga657f081646b552ee10bdfc7af94b5cdf}{EXTI\_MODE\_MASK}}) != 0x00U) \&\& \(\backslash\)}
+\DoxyCodeLine{                                              (((\_\_EXTI\_LINE\_\_) \& \string~EXTI\_MODE\_MASK) == 0x00U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___e_x_t_i___private___macros_gafdfb17f277b045f6eadaac8975aa8d44}\label{group___e_x_t_i___private___macros_gafdfb17f277b045f6eadaac8975aa8d44}} 
+\index{EXTI Private Macros@{EXTI Private Macros}!IS\_EXTI\_PENDING\_EDGE@{IS\_EXTI\_PENDING\_EDGE}}
+\index{IS\_EXTI\_PENDING\_EDGE@{IS\_EXTI\_PENDING\_EDGE}!EXTI Private Macros@{EXTI Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_EXTI\_PENDING\_EDGE}{IS\_EXTI\_PENDING\_EDGE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+EXTI\+\_\+\+PENDING\+\_\+\+EDGE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+EDGE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                          (((\_\_EDGE\_\_) == EXTI\_TRIGGER\_RISING)   || \(\backslash\)}
+\DoxyCodeLine{                                          ((\_\_EDGE\_\_) == EXTI\_TRIGGER\_FALLING)|| \(\backslash\)}
+\DoxyCodeLine{                                          ((\_\_EDGE\_\_) == EXTI\_TRIGGER\_RISING\_FALLING))}
+
+\end{DoxyCode}

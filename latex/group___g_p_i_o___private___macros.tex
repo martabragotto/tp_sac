@@ -1,0 +1,83 @@
+\hypertarget{group___g_p_i_o___private___macros}{}\doxysection{GPIO Private Macros}
+\label{group___g_p_i_o___private___macros}\index{GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___g_p_i_o___private___macros_ga6da646a4924c5cfae3024c660476f26f}\label{group___g_p_i_o___private___macros_ga6da646a4924c5cfae3024c660476f26f}} 
+\#define {\bfseries IS\+\_\+\+GPIO\+\_\+\+PIN\+\_\+\+ACTION}(ACTION)~(((ACTION) == GPIO\+\_\+\+PIN\+\_\+\+RESET) $\vert$$\vert$ ((ACTION) == GPIO\+\_\+\+PIN\+\_\+\+SET))
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___private___macros_ga4911823233fa2bf64a4f04c6dbfa5485}{IS\+\_\+\+GPIO\+\_\+\+PIN}}(\+\_\+\+\_\+\+PIN\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___private___macros_ga7e5d84d697017fb4f1cd820fb0a6ac83}{IS\+\_\+\+GPIO\+\_\+\+MODE}}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___private___macros_gaa0f47c8ac2940a95613fbf60795c81c5}{IS\+\_\+\+GPIO\+\_\+\+SPEED}}(\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___g_p_i_o___private___macros_ga6424c3fc83173de0f9f9374ed6633dc8}{IS\+\_\+\+GPIO\+\_\+\+PULL}}(\+\_\+\+\_\+\+PULL\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___g_p_i_o___private___macros_ga7e5d84d697017fb4f1cd820fb0a6ac83}\label{group___g_p_i_o___private___macros_ga7e5d84d697017fb4f1cd820fb0a6ac83}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_MODE@{IS\_GPIO\_MODE}}
+\index{IS\_GPIO\_MODE@{IS\_GPIO\_MODE}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_GPIO\_MODE}{IS\_GPIO\_MODE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MODE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_gaf40bec3146810028a84b628d37d3b391}{GPIO\_MODE\_INPUT}})              ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga1013838a64cec2f8c88f079c449d1982}{GPIO\_MODE\_OUTPUT\_PP}})          ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga2f91757829f6e9505ec386b840941929}{GPIO\_MODE\_OUTPUT\_OD}})          ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga526c72c5264316fc05c775b6cad4aa6a}{GPIO\_MODE\_AF\_PP}})              ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga282b9fd37c8ef31daba314ffae6bf023}{GPIO\_MODE\_AF\_OD}})              ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga088659562e68426d9a72821ea4fd8d50}{GPIO\_MODE\_IT\_RISING}})          ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_gaa166210a6da3ac7e8d7504702520e522}{GPIO\_MODE\_IT\_FALLING}})         ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga0678e61090ed61e91a6496f22ddfb3d1}{GPIO\_MODE\_IT\_RISING\_FALLING}})  ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga97d78b82ea178ff7a4c35aa60b4e9338}{GPIO\_MODE\_EVT\_RISING}})         ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_gadbfa532b3566783ac6c0e07c2e0ffe5e}{GPIO\_MODE\_EVT\_FALLING}})        ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga1b760771297ed2fc55a6b13071188491}{GPIO\_MODE\_EVT\_RISING\_FALLING}}) ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_MODE\_\_) == \mbox{\hyperlink{group___g_p_i_o__mode_ga7a04f9ab65ad572ad20791a35009220c}{GPIO\_MODE\_ANALOG}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___g_p_i_o___private___macros_ga4911823233fa2bf64a4f04c6dbfa5485}\label{group___g_p_i_o___private___macros_ga4911823233fa2bf64a4f04c6dbfa5485}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_PIN@{IS\_GPIO\_PIN}}
+\index{IS\_GPIO\_PIN@{IS\_GPIO\_PIN}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_GPIO\_PIN}{IS\_GPIO\_PIN}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+PIN(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PIN\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     ((((uint32\_t)(\_\_PIN\_\_) \& GPIO\_PIN\_MASK) != 0x00U) \&\&\(\backslash\)}
+\DoxyCodeLine{                                     (((uint32\_t)(\_\_PIN\_\_) \& \string~GPIO\_PIN\_MASK) == 0x00U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___g_p_i_o___private___macros_ga6424c3fc83173de0f9f9374ed6633dc8}\label{group___g_p_i_o___private___macros_ga6424c3fc83173de0f9f9374ed6633dc8}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_PULL@{IS\_GPIO\_PULL}}
+\index{IS\_GPIO\_PULL@{IS\_GPIO\_PULL}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_GPIO\_PULL}{IS\_GPIO\_PULL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+PULL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PULL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((\_\_PULL\_\_) == \mbox{\hyperlink{group___g_p_i_o__pull_ga5c2862579882c1cc64e36d38fbd07a4c}{GPIO\_NOPULL}})   ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_PULL\_\_) == \mbox{\hyperlink{group___g_p_i_o__pull_gae689bc8f5c42d6df7bd54a8dd372e072}{GPIO\_PULLUP}})   || \(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_PULL\_\_) == \mbox{\hyperlink{group___g_p_i_o__pull_ga75d958d0410c36da7f27d1f4f5c36c14}{GPIO\_PULLDOWN}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___g_p_i_o___private___macros_gaa0f47c8ac2940a95613fbf60795c81c5}\label{group___g_p_i_o___private___macros_gaa0f47c8ac2940a95613fbf60795c81c5}} 
+\index{GPIO Private Macros@{GPIO Private Macros}!IS\_GPIO\_SPEED@{IS\_GPIO\_SPEED}}
+\index{IS\_GPIO\_SPEED@{IS\_GPIO\_SPEED}!GPIO Private Macros@{GPIO Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_GPIO\_SPEED}{IS\_GPIO\_SPEED}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+GPIO\+\_\+\+SPEED(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SPEED\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((\_\_SPEED\_\_) == \mbox{\hyperlink{group___g_p_i_o__speed_gab7916c4265bfa1b26a5205ea9c1caa4e}{GPIO\_SPEED\_FREQ\_LOW}})       ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_SPEED\_\_) == \mbox{\hyperlink{group___g_p_i_o__speed_ga1724a25a9cf00ebf485daeb09cfa1e25}{GPIO\_SPEED\_FREQ\_MEDIUM}})    ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_SPEED\_\_) == \mbox{\hyperlink{group___g_p_i_o__speed_gaef5898db71cdb957cd41f940b0087af8}{GPIO\_SPEED\_FREQ\_HIGH}})      ||\(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_SPEED\_\_) == \mbox{\hyperlink{group___g_p_i_o__speed_ga1944cf10e2ab172810d38b681d40b771}{GPIO\_SPEED\_FREQ\_VERY\_HIGH}}))}
+
+\end{DoxyCode}

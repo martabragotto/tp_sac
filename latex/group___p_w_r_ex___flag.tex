@@ -1,0 +1,132 @@
+\hypertarget{group___p_w_r_ex___flag}{}\doxysection{PWR Status Flags}
+\label{group___p_w_r_ex___flag}\index{PWR Status Flags@{PWR Status Flags}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_gaa3527e755c08ac2b2d95edd7adc4ee70}{PWR\+\_\+\+FLAG\+\_\+\+WUF1}}~0x0020U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga6be7514eb20788bbd92e78eed13c551c}{PWR\+\_\+\+FLAG\+\_\+\+WUF2}}~0x0021U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga76716079ff7849bddcbbe8f429d70db3}{PWR\+\_\+\+FLAG\+\_\+\+WUF3}}~0x0022U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_gad406114253e536be4850a82229988d9c}{PWR\+\_\+\+FLAG\+\_\+\+WUF4}}~0x0023U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_gafc27b8a8062b22eb570af0cbce49c452}{PWR\+\_\+\+FLAG\+\_\+\+WUF5}}~0x0024U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga2d06760a5769e729b06d41e37036d58e}{PWR\+\_\+\+FLAG\+\_\+\+WU}}~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3cee25727108665face0ac2f709fcb72}{PWR\+\_\+\+SR1\+\_\+\+WUF}}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}{PWR\+\_\+\+FLAG\+\_\+\+SB}}~0x0028U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga6be01d28369a777d1d372baa9ed5b488}{PWR\+\_\+\+FLAG\+\_\+\+WUFI}}~0x002\+FU
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga83a0e30086ec21630b8a175ae48a2672}{PWR\+\_\+\+FLAG\+\_\+\+REGLPS}}~0x0048U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga8ed9097fdb76809257ecc0e398a2904f}{PWR\+\_\+\+FLAG\+\_\+\+REGLPF}}~0x0049U
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_gadad469c6c3a277918f869cd20613b3a9}{PWR\+\_\+\+FLAG\+\_\+\+VOSF}}~0x004\+AU
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_gaefd05d58cc050eeef83a1b5c520b2c2a}{PWR\+\_\+\+FLAG\+\_\+\+PVDO}}~0x004\+BU
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga383cf87db3c18c7e15cf048ecc4a329e}{PWR\+\_\+\+FLAG\+\_\+\+PVMO3}}~0x004\+EU
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___flag_ga9f34874ebc6cb71933e0b845f0c001e3}{PWR\+\_\+\+FLAG\+\_\+\+PVMO4}}~0x004\+FU
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Elements values convention\+: 0000 0000 0XXY YYYYb
+\begin{DoxyItemize}
+\item Y YYYY \+: Flag position in the XX register (5 bits)
+\item XX \+: Status register (2 bits)
+\begin{DoxyItemize}
+\item 01\+: SR1 register
+\item 10\+: SR2 register The only exception is PWR\+\_\+\+FLAG\+\_\+\+WU, encompassing all wake-\/up flags and set to PWR\+\_\+\+SR1\+\_\+\+WUF. 
+\end{DoxyItemize}
+\end{DoxyItemize}
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___p_w_r_ex___flag_gaefd05d58cc050eeef83a1b5c520b2c2a}\label{group___p_w_r_ex___flag_gaefd05d58cc050eeef83a1b5c520b2c2a}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_PVDO@{PWR\_FLAG\_PVDO}}
+\index{PWR\_FLAG\_PVDO@{PWR\_FLAG\_PVDO}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_PVDO}{PWR\_FLAG\_PVDO}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+PVDO~0x004\+BU}
+
+Power Voltage Detector output flag \mbox{\Hypertarget{group___p_w_r_ex___flag_ga383cf87db3c18c7e15cf048ecc4a329e}\label{group___p_w_r_ex___flag_ga383cf87db3c18c7e15cf048ecc4a329e}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_PVMO3@{PWR\_FLAG\_PVMO3}}
+\index{PWR\_FLAG\_PVMO3@{PWR\_FLAG\_PVMO3}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_PVMO3}{PWR\_FLAG\_PVMO3}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+PVMO3~0x004\+EU}
+
+Power Voltage Monitoring 3 output flag \mbox{\Hypertarget{group___p_w_r_ex___flag_ga9f34874ebc6cb71933e0b845f0c001e3}\label{group___p_w_r_ex___flag_ga9f34874ebc6cb71933e0b845f0c001e3}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_PVMO4@{PWR\_FLAG\_PVMO4}}
+\index{PWR\_FLAG\_PVMO4@{PWR\_FLAG\_PVMO4}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_PVMO4}{PWR\_FLAG\_PVMO4}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+PVMO4~0x004\+FU}
+
+Power Voltage Monitoring 4 output flag \mbox{\Hypertarget{group___p_w_r_ex___flag_ga8ed9097fdb76809257ecc0e398a2904f}\label{group___p_w_r_ex___flag_ga8ed9097fdb76809257ecc0e398a2904f}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_REGLPF@{PWR\_FLAG\_REGLPF}}
+\index{PWR\_FLAG\_REGLPF@{PWR\_FLAG\_REGLPF}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_REGLPF}{PWR\_FLAG\_REGLPF}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+REGLPF~0x0049U}
+
+Low-\/power regulator flag \mbox{\Hypertarget{group___p_w_r_ex___flag_ga83a0e30086ec21630b8a175ae48a2672}\label{group___p_w_r_ex___flag_ga83a0e30086ec21630b8a175ae48a2672}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_REGLPS@{PWR\_FLAG\_REGLPS}}
+\index{PWR\_FLAG\_REGLPS@{PWR\_FLAG\_REGLPS}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_REGLPS}{PWR\_FLAG\_REGLPS}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+REGLPS~0x0048U}
+
+Low-\/power regulator start flag \mbox{\Hypertarget{group___p_w_r_ex___flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}\label{group___p_w_r_ex___flag_ga9e55f0b5dec2346d5c8dee3ab3c0c2df}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_SB@{PWR\_FLAG\_SB}}
+\index{PWR\_FLAG\_SB@{PWR\_FLAG\_SB}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_SB}{PWR\_FLAG\_SB}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+SB~0x0028U}
+
+Standby flag \mbox{\Hypertarget{group___p_w_r_ex___flag_gadad469c6c3a277918f869cd20613b3a9}\label{group___p_w_r_ex___flag_gadad469c6c3a277918f869cd20613b3a9}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_VOSF@{PWR\_FLAG\_VOSF}}
+\index{PWR\_FLAG\_VOSF@{PWR\_FLAG\_VOSF}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_VOSF}{PWR\_FLAG\_VOSF}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+VOSF~0x004\+AU}
+
+Voltage scaling flag \mbox{\Hypertarget{group___p_w_r_ex___flag_ga2d06760a5769e729b06d41e37036d58e}\label{group___p_w_r_ex___flag_ga2d06760a5769e729b06d41e37036d58e}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WU@{PWR\_FLAG\_WU}}
+\index{PWR\_FLAG\_WU@{PWR\_FLAG\_WU}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WU}{PWR\_FLAG\_WU}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WU~\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3cee25727108665face0ac2f709fcb72}{PWR\+\_\+\+SR1\+\_\+\+WUF}}}
+
+Encompass wakeup event on all wakeup pins \mbox{\Hypertarget{group___p_w_r_ex___flag_gaa3527e755c08ac2b2d95edd7adc4ee70}\label{group___p_w_r_ex___flag_gaa3527e755c08ac2b2d95edd7adc4ee70}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WUF1@{PWR\_FLAG\_WUF1}}
+\index{PWR\_FLAG\_WUF1@{PWR\_FLAG\_WUF1}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WUF1}{PWR\_FLAG\_WUF1}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WUF1~0x0020U}
+
+Wakeup event on wakeup pin 1 \mbox{\Hypertarget{group___p_w_r_ex___flag_ga6be7514eb20788bbd92e78eed13c551c}\label{group___p_w_r_ex___flag_ga6be7514eb20788bbd92e78eed13c551c}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WUF2@{PWR\_FLAG\_WUF2}}
+\index{PWR\_FLAG\_WUF2@{PWR\_FLAG\_WUF2}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WUF2}{PWR\_FLAG\_WUF2}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WUF2~0x0021U}
+
+Wakeup event on wakeup pin 2 \mbox{\Hypertarget{group___p_w_r_ex___flag_ga76716079ff7849bddcbbe8f429d70db3}\label{group___p_w_r_ex___flag_ga76716079ff7849bddcbbe8f429d70db3}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WUF3@{PWR\_FLAG\_WUF3}}
+\index{PWR\_FLAG\_WUF3@{PWR\_FLAG\_WUF3}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WUF3}{PWR\_FLAG\_WUF3}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WUF3~0x0022U}
+
+Wakeup event on wakeup pin 3 \mbox{\Hypertarget{group___p_w_r_ex___flag_gad406114253e536be4850a82229988d9c}\label{group___p_w_r_ex___flag_gad406114253e536be4850a82229988d9c}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WUF4@{PWR\_FLAG\_WUF4}}
+\index{PWR\_FLAG\_WUF4@{PWR\_FLAG\_WUF4}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WUF4}{PWR\_FLAG\_WUF4}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WUF4~0x0023U}
+
+Wakeup event on wakeup pin 4 \mbox{\Hypertarget{group___p_w_r_ex___flag_gafc27b8a8062b22eb570af0cbce49c452}\label{group___p_w_r_ex___flag_gafc27b8a8062b22eb570af0cbce49c452}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WUF5@{PWR\_FLAG\_WUF5}}
+\index{PWR\_FLAG\_WUF5@{PWR\_FLAG\_WUF5}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WUF5}{PWR\_FLAG\_WUF5}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WUF5~0x0024U}
+
+Wakeup event on wakeup pin 5 \mbox{\Hypertarget{group___p_w_r_ex___flag_ga6be01d28369a777d1d372baa9ed5b488}\label{group___p_w_r_ex___flag_ga6be01d28369a777d1d372baa9ed5b488}} 
+\index{PWR Status Flags@{PWR Status Flags}!PWR\_FLAG\_WUFI@{PWR\_FLAG\_WUFI}}
+\index{PWR\_FLAG\_WUFI@{PWR\_FLAG\_WUFI}!PWR Status Flags@{PWR Status Flags}}
+\doxysubsubsection{\texorpdfstring{PWR\_FLAG\_WUFI}{PWR\_FLAG\_WUFI}}
+{\footnotesize\ttfamily \#define PWR\+\_\+\+FLAG\+\_\+\+WUFI~0x002\+FU}
+
+Wakeup on internal wakeup line 

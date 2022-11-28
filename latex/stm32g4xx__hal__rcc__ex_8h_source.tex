@@ -1,0 +1,753 @@
+\hypertarget{stm32g4xx__hal__rcc__ex_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h}
+\label{stm32g4xx__hal__rcc__ex_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_rcc\_ex.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_rcc\_ex.h}}
+\mbox{\hyperlink{stm32g4xx__hal__rcc__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{18 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_RCC\_EX\_H}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_RCC\_EX\_H}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{23  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{46 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a1fe6e3d75864d85b911eef15dfc35925}{PeriphClockSelection}};   }
+\DoxyCodeLine{51   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_ab226e7c9c672d98516c16f96ca7473f6}{Usart1ClockSelection}};   }
+\DoxyCodeLine{54   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a105ffb9ec6b544d1faae281484d9a98a}{Usart2ClockSelection}};   }
+\DoxyCodeLine{57   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_acb2709b2b2bede8c2399a4f2030fe86a}{Usart3ClockSelection}};   }
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{61   uint32\_t Uart4ClockSelection;    }
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{66   uint32\_t Uart5ClockSelection;    }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{71   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_aedf7d9667b60b41d77913dd78c5e0228}{Lpuart1ClockSelection}};  }
+\DoxyCodeLine{74   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_ac5531272c0509cb646c4ddac15392dbf}{I2c1ClockSelection}};     }
+\DoxyCodeLine{77   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a08536f08136780e6566a68f1e33be4fb}{I2c2ClockSelection}};     }
+\DoxyCodeLine{80   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a8497daa4d66fdc5f0033e798559f65a2}{I2c3ClockSelection}};     }
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85   uint32\_t I2c4ClockSelection;     }
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a1a290839542d3836d0cfe98142b5f219}{Lptim1ClockSelection}};   }
+\DoxyCodeLine{92   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_adc2a83ae9e108a3f7afb01c58f3a4f1a}{Sai1ClockSelection}};     }
+\DoxyCodeLine{95   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a52cf8098ab8dc8d9b5e56ed6c3702b89}{I2sClockSelection}};     }
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99   uint32\_t FdcanClockSelection;     }
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#if defined(USB)}}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104   uint32\_t UsbClockSelection;      }
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USB */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{108   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_af813ee3fd2dde6869cb4a293f7b4cc99}{RngClockSelection}};      }
+\DoxyCodeLine{111   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_a59dc5d9530cae4b13c7b71db48888d6a}{Adc12ClockSelection}};    }
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#if defined(ADC345\_COMMON)}}
+\DoxyCodeLine{115   uint32\_t Adc345ClockSelection;   }
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ADC345\_COMMON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{118 }
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{120   uint32\_t QspiClockSelection;     }
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124   uint32\_t \mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def_ad2c422d62b056a61d7bbb599c89dbc1e}{RTCClockSelection}};      }
+\DoxyCodeLine{126 \}\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}};}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{131 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{132 \{}
+\DoxyCodeLine{133   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def_a9bbb4a0ff6d8bbf68bc01b566b946fd8}{Prescaler}};             }
+\DoxyCodeLine{136   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def_aea4064c542d29150a92632119b8e214d}{Source}};                }
+\DoxyCodeLine{139   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def_a1c7e141417a1115913ff856031f81a32}{Polarity}};              }
+\DoxyCodeLine{142   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def_ab8dd9da2b1da68ae09c30c7da19355a1}{ReloadValue}};           }
+\DoxyCodeLine{146   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def_af7b100cc0c3331c736f9f9d1fca37119}{ErrorLimitValue}};       }
+\DoxyCodeLine{149   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def_a99f5012ef8ca6a5bcc882f9a5070699e}{HSI48CalibrationValue}}; }
+\DoxyCodeLine{152 \}\mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def}{RCC\_CRSInitTypeDef}};}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{157 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{158 \{}
+\DoxyCodeLine{159   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a90a25bed84151a9a8c0a1d960a3e02a6}{ReloadValue}};           }
+\DoxyCodeLine{162   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a79058ce364a2cf1f488a4aefd121f4b0}{HSI48CalibrationValue}}; }
+\DoxyCodeLine{165   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_af659c26e117a160f4dd21274745e3576}{FreqErrorCapture}};      }
+\DoxyCodeLine{169   uint32\_t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a949ae83235d75bd091e6cce031e5e57d}{FreqErrorDirection}};    }
+\DoxyCodeLine{174 \}\mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def}{RCC\_CRSSynchroInfoTypeDef}};}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{180 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define RCC\_LSCOSOURCE\_LSI             0x00000000U           }}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define RCC\_LSCOSOURCE\_LSE             RCC\_BDCR\_LSCOSEL      }}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_USART1           0x00000001U}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_USART2           0x00000002U}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_USART3           0x00000004U}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_UART4            0x00000008U}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_UART5            0x00000010U}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_LPUART1          0x00000020U}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2C1             0x00000040U}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2C2             0x00000080U}}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2C3             0x00000100U}}
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_LPTIM1           0x00000200U}}
+\DoxyCodeLine{211 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_SAI1             0x00000400U}}
+\DoxyCodeLine{212 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2S              0x00000800U}}
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_FDCAN            0x00001000U}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_USB              0x00002000U}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_RNG              0x00004000U}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_ADC12            0x00008000U}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#if defined(ADC345\_COMMON)}}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_ADC345           0x00010000U}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ADC345\_COMMON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_I2C4             0x00020000U}}
+\DoxyCodeLine{224 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_QSPI             0x00040000U}}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define RCC\_PERIPHCLK\_RTC              0x00080000U}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define RCC\_USART1CLKSOURCE\_PCLK2      0x00000000U}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define RCC\_USART1CLKSOURCE\_SYSCLK     RCC\_CCIPR\_USART1SEL\_0}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define RCC\_USART1CLKSOURCE\_HSI        RCC\_CCIPR\_USART1SEL\_1}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define RCC\_USART1CLKSOURCE\_LSE        (RCC\_CCIPR\_USART1SEL\_0 | RCC\_CCIPR\_USART1SEL\_1)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define RCC\_USART2CLKSOURCE\_PCLK1      0x00000000U}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define RCC\_USART2CLKSOURCE\_SYSCLK     RCC\_CCIPR\_USART2SEL\_0}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define RCC\_USART2CLKSOURCE\_HSI        RCC\_CCIPR\_USART2SEL\_1}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define RCC\_USART2CLKSOURCE\_LSE        (RCC\_CCIPR\_USART2SEL\_0 | RCC\_CCIPR\_USART2SEL\_1)}}
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define RCC\_USART3CLKSOURCE\_PCLK1      0x00000000U}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#define RCC\_USART3CLKSOURCE\_SYSCLK     RCC\_CCIPR\_USART3SEL\_0}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define RCC\_USART3CLKSOURCE\_HSI        RCC\_CCIPR\_USART3SEL\_1}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define RCC\_USART3CLKSOURCE\_LSE        (RCC\_CCIPR\_USART3SEL\_0 | RCC\_CCIPR\_USART3SEL\_1)}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#define RCC\_UART4CLKSOURCE\_PCLK1       0x00000000U}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#define RCC\_UART4CLKSOURCE\_SYSCLK      RCC\_CCIPR\_UART4SEL\_0}}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define RCC\_UART4CLKSOURCE\_HSI         RCC\_CCIPR\_UART4SEL\_1}}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#define RCC\_UART4CLKSOURCE\_LSE         (RCC\_CCIPR\_UART4SEL\_0 | RCC\_CCIPR\_UART4SEL\_1)}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define RCC\_UART5CLKSOURCE\_PCLK1       0x00000000U}}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define RCC\_UART5CLKSOURCE\_SYSCLK      RCC\_CCIPR\_UART5SEL\_0}}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#define RCC\_UART5CLKSOURCE\_HSI         RCC\_CCIPR\_UART5SEL\_1}}
+\DoxyCodeLine{287 \textcolor{preprocessor}{\#define RCC\_UART5CLKSOURCE\_LSE         (RCC\_CCIPR\_UART5SEL\_0 | RCC\_CCIPR\_UART5SEL\_1)}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{292 }
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define RCC\_LPUART1CLKSOURCE\_PCLK1     0x00000000U}}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define RCC\_LPUART1CLKSOURCE\_SYSCLK    RCC\_CCIPR\_LPUART1SEL\_0}}
+\DoxyCodeLine{298 \textcolor{preprocessor}{\#define RCC\_LPUART1CLKSOURCE\_HSI       RCC\_CCIPR\_LPUART1SEL\_1}}
+\DoxyCodeLine{299 \textcolor{preprocessor}{\#define RCC\_LPUART1CLKSOURCE\_LSE       (RCC\_CCIPR\_LPUART1SEL\_0 | RCC\_CCIPR\_LPUART1SEL\_1)}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#define RCC\_I2C1CLKSOURCE\_PCLK1        0x00000000U}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define RCC\_I2C1CLKSOURCE\_SYSCLK       RCC\_CCIPR\_I2C1SEL\_0}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define RCC\_I2C1CLKSOURCE\_HSI          RCC\_CCIPR\_I2C1SEL\_1}}
+\DoxyCodeLine{317 \textcolor{preprocessor}{\#define RCC\_I2C2CLKSOURCE\_PCLK1        0x00000000U}}
+\DoxyCodeLine{318 \textcolor{preprocessor}{\#define RCC\_I2C2CLKSOURCE\_SYSCLK       RCC\_CCIPR\_I2C2SEL\_0}}
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define RCC\_I2C2CLKSOURCE\_HSI          RCC\_CCIPR\_I2C2SEL\_1}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{\#define RCC\_I2C3CLKSOURCE\_PCLK1        0x00000000U}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{\#define RCC\_I2C3CLKSOURCE\_SYSCLK       RCC\_CCIPR\_I2C3SEL\_0}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{\#define RCC\_I2C3CLKSOURCE\_HSI          RCC\_CCIPR\_I2C3SEL\_1}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define RCC\_LPTIM1CLKSOURCE\_PCLK1      0x00000000U}}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define RCC\_LPTIM1CLKSOURCE\_LSI        RCC\_CCIPR\_LPTIM1SEL\_0}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#define RCC\_LPTIM1CLKSOURCE\_HSI        RCC\_CCIPR\_LPTIM1SEL\_1}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{\#define RCC\_LPTIM1CLKSOURCE\_LSE        RCC\_CCIPR\_LPTIM1SEL}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#define RCC\_SAI1CLKSOURCE\_SYSCLK       0x00000000U}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define RCC\_SAI1CLKSOURCE\_PLL          RCC\_CCIPR\_SAI1SEL\_0}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define RCC\_SAI1CLKSOURCE\_EXT          RCC\_CCIPR\_SAI1SEL\_1}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define RCC\_SAI1CLKSOURCE\_HSI          (RCC\_CCIPR\_SAI1SEL\_1 | RCC\_CCIPR\_SAI1SEL\_0)}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define RCC\_I2SCLKSOURCE\_SYSCLK       0x00000000U}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define RCC\_I2SCLKSOURCE\_PLL          RCC\_CCIPR\_I2S23SEL\_0}}
+\DoxyCodeLine{361 \textcolor{preprocessor}{\#define RCC\_I2SCLKSOURCE\_EXT          RCC\_CCIPR\_I2S23SEL\_1}}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define RCC\_I2SCLKSOURCE\_HSI          (RCC\_CCIPR\_I2S23SEL\_1 | RCC\_CCIPR\_I2S23SEL\_0)}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define RCC\_FDCANCLKSOURCE\_HSE          0x00000000U}}
+\DoxyCodeLine{371 \textcolor{preprocessor}{\#define RCC\_FDCANCLKSOURCE\_PLL          RCC\_CCIPR\_FDCANSEL\_0}}
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define RCC\_FDCANCLKSOURCE\_PCLK1        RCC\_CCIPR\_FDCANSEL\_1}}
+\DoxyCodeLine{376 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{377 }
+\DoxyCodeLine{381 \textcolor{preprocessor}{\#define RCC\_RNGCLKSOURCE\_HSI48         0x00000000U}}
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define RCC\_RNGCLKSOURCE\_PLL           RCC\_CCIPR\_CLK48SEL\_1}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define RCC\_USBCLKSOURCE\_HSI48         0x00000000U}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define RCC\_USBCLKSOURCE\_PLL           RCC\_CCIPR\_CLK48SEL\_1}}
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#define RCC\_ADC12CLKSOURCE\_NONE        0x00000000U}}
+\DoxyCodeLine{400 \textcolor{preprocessor}{\#define RCC\_ADC12CLKSOURCE\_PLL         RCC\_CCIPR\_ADC12SEL\_0}}
+\DoxyCodeLine{401 \textcolor{preprocessor}{\#define RCC\_ADC12CLKSOURCE\_SYSCLK      RCC\_CCIPR\_ADC12SEL\_1}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#if defined(ADC345\_COMMON)}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#define RCC\_ADC345CLKSOURCE\_NONE     0x00000000U}}
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define RCC\_ADC345CLKSOURCE\_PLL      RCC\_CCIPR\_ADC345SEL\_0}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define RCC\_ADC345CLKSOURCE\_SYSCLK   RCC\_CCIPR\_ADC345SEL\_1}}
+\DoxyCodeLine{416 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ADC345\_COMMON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{417 }
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{422 \textcolor{preprocessor}{\#define RCC\_I2C4CLKSOURCE\_PCLK1        0x00000000U}}
+\DoxyCodeLine{423 \textcolor{preprocessor}{\#define RCC\_I2C4CLKSOURCE\_SYSCLK       RCC\_CCIPR2\_I2C4SEL\_0}}
+\DoxyCodeLine{424 \textcolor{preprocessor}{\#define RCC\_I2C4CLKSOURCE\_HSI          RCC\_CCIPR2\_I2C4SEL\_1}}
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{429 }
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{434 \textcolor{preprocessor}{\#define RCC\_QSPICLKSOURCE\_SYSCLK    0x00000000U}}
+\DoxyCodeLine{435 \textcolor{preprocessor}{\#define RCC\_QSPICLKSOURCE\_HSI       RCC\_CCIPR2\_QSPISEL\_0}}
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define RCC\_QSPICLKSOURCE\_PLL       RCC\_CCIPR2\_QSPISEL\_1}}
+\DoxyCodeLine{440 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{441 }
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define RCC\_EXTI\_LINE\_LSECSS           EXTI\_IMR1\_IM19        }}
+\DoxyCodeLine{453 \textcolor{preprocessor}{\#define RCC\_CRS\_NONE                   0x00000000U}}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define RCC\_CRS\_TIMEOUT                0x00000001U}}
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNCOK                 0x00000002U}}
+\DoxyCodeLine{456 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNCWARN               0x00000004U}}
+\DoxyCodeLine{457 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNCERR                0x00000008U}}
+\DoxyCodeLine{458 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNCMISS               0x00000010U}}
+\DoxyCodeLine{459 \textcolor{preprocessor}{\#define RCC\_CRS\_TRIMOVF                0x00000020U}}
+\DoxyCodeLine{467 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_SOURCE\_GPIO       0x00000000U             }}
+\DoxyCodeLine{468 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_SOURCE\_LSE        CRS\_CFGR\_SYNCSRC\_0      }}
+\DoxyCodeLine{469 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_SOURCE\_USB        CRS\_CFGR\_SYNCSRC\_1      }}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV1        0x00000000U                               }}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV2        CRS\_CFGR\_SYNCDIV\_0                        }}
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV4        CRS\_CFGR\_SYNCDIV\_1                        }}
+\DoxyCodeLine{480 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV8        (CRS\_CFGR\_SYNCDIV\_1 | CRS\_CFGR\_SYNCDIV\_0) }}
+\DoxyCodeLine{481 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV16       CRS\_CFGR\_SYNCDIV\_2                        }}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV32       (CRS\_CFGR\_SYNCDIV\_2 | CRS\_CFGR\_SYNCDIV\_0) }}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV64       (CRS\_CFGR\_SYNCDIV\_2 | CRS\_CFGR\_SYNCDIV\_1) }}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_DIV128      CRS\_CFGR\_SYNCDIV                          }}
+\DoxyCodeLine{492 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_POLARITY\_RISING   0x00000000U             }}
+\DoxyCodeLine{493 \textcolor{preprocessor}{\#define RCC\_CRS\_SYNC\_POLARITY\_FALLING  CRS\_CFGR\_SYNCPOL        }}
+\DoxyCodeLine{501 \textcolor{preprocessor}{\#define RCC\_CRS\_RELOADVALUE\_DEFAULT    0x0000BB7FU             }}
+\DoxyCodeLine{510 \textcolor{preprocessor}{\#define RCC\_CRS\_ERRORLIMIT\_DEFAULT     0x00000022U             }}
+\DoxyCodeLine{518 \textcolor{preprocessor}{\#define RCC\_CRS\_HSI48CALIBRATION\_DEFAULT 0x00000020U             }}
+\DoxyCodeLine{528 \textcolor{preprocessor}{\#define RCC\_CRS\_FREQERRORDIR\_UP        0x00000000U               }}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define RCC\_CRS\_FREQERRORDIR\_DOWN      CRS\_ISR\_FEDIR             }}
+\DoxyCodeLine{537 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_SYNCOK              CRS\_CR\_SYNCOKIE       }}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_SYNCWARN            CRS\_CR\_SYNCWARNIE     }}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_ERR                 CRS\_CR\_ERRIE          }}
+\DoxyCodeLine{540 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_ESYNC               CRS\_CR\_ESYNCIE        }}
+\DoxyCodeLine{541 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_SYNCERR             CRS\_CR\_ERRIE          }}
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_SYNCMISS            CRS\_CR\_ERRIE          }}
+\DoxyCodeLine{543 \textcolor{preprocessor}{\#define RCC\_CRS\_IT\_TRIMOVF             CRS\_CR\_ERRIE           }}
+\DoxyCodeLine{552 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_SYNCOK            CRS\_ISR\_SYNCOKF       }}
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_SYNCWARN          CRS\_ISR\_SYNCWARNF     }}
+\DoxyCodeLine{554 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_ERR               CRS\_ISR\_ERRF          }}
+\DoxyCodeLine{555 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_ESYNC             CRS\_ISR\_ESYNCF        }}
+\DoxyCodeLine{556 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_SYNCERR           CRS\_ISR\_SYNCERR       }}
+\DoxyCodeLine{557 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_SYNCMISS          CRS\_ISR\_SYNCMISS      }}
+\DoxyCodeLine{558 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_TRIMOVF           CRS\_ISR\_TRIMOVF       }}
+\DoxyCodeLine{568 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{583 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_USART1\_CONFIG(\_\_USART1\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{584 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_USART1SEL, (\_\_USART1\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{593 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_USART1\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_USART1SEL))}}
+\DoxyCodeLine{594 }
+\DoxyCodeLine{605 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_USART2\_CONFIG(\_\_USART2\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{606 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_USART2SEL, (\_\_USART2\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{607 }
+\DoxyCodeLine{615 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_USART2\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_USART2SEL))}}
+\DoxyCodeLine{616 }
+\DoxyCodeLine{627 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_USART3\_CONFIG(\_\_USART3\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{628 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_USART3SEL, (\_\_USART3\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{629 }
+\DoxyCodeLine{637 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_USART3\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_USART3SEL))}}
+\DoxyCodeLine{638 }
+\DoxyCodeLine{639 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{650 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_UART4\_CONFIG(\_\_UART4\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{651 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_UART4SEL, (\_\_UART4\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{660 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_UART4\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_UART4SEL))}}
+\DoxyCodeLine{661 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{662 }
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{664 }
+\DoxyCodeLine{675 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_UART5\_CONFIG(\_\_UART5\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{676 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_UART5SEL, (\_\_UART5\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{677 }
+\DoxyCodeLine{685 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_UART5\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_UART5SEL))}}
+\DoxyCodeLine{686 }
+\DoxyCodeLine{687 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{688 }
+\DoxyCodeLine{699 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LPUART1\_CONFIG(\_\_LPUART1\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{700 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_LPUART1SEL, (\_\_LPUART1\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{701 }
+\DoxyCodeLine{709 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_LPUART1\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_LPUART1SEL))}}
+\DoxyCodeLine{710 }
+\DoxyCodeLine{720 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_I2C1\_CONFIG(\_\_I2C1\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{721 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_I2C1SEL, (\_\_I2C1\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{722 }
+\DoxyCodeLine{729 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_I2C1\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_I2C1SEL))}}
+\DoxyCodeLine{730 }
+\DoxyCodeLine{731 }
+\DoxyCodeLine{741 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_I2C2\_CONFIG(\_\_I2C2\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{742 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_I2C2SEL, (\_\_I2C2\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{743 }
+\DoxyCodeLine{750 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_I2C2\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_I2C2SEL))}}
+\DoxyCodeLine{751 }
+\DoxyCodeLine{761 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_I2C3\_CONFIG(\_\_I2C3\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{762 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_I2C3SEL, (\_\_I2C3\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{763 }
+\DoxyCodeLine{770 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_I2C3\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_I2C3SEL))}}
+\DoxyCodeLine{771 }
+\DoxyCodeLine{772 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{773 }
+\DoxyCodeLine{783 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_I2C4\_CONFIG(\_\_I2C4\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{784 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR2, RCC\_CCIPR2\_I2C4SEL, (\_\_I2C4\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{785 }
+\DoxyCodeLine{792 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_I2C4\_SOURCE() (READ\_BIT(RCC-\/>CCIPR2, RCC\_CCIPR2\_I2C4SEL))}}
+\DoxyCodeLine{793 }
+\DoxyCodeLine{794 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{795 }
+\DoxyCodeLine{806 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LPTIM1\_CONFIG(\_\_LPTIM1\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{807 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_LPTIM1SEL, (\_\_LPTIM1\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{808 }
+\DoxyCodeLine{816 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_LPTIM1\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_LPTIM1SEL))}}
+\DoxyCodeLine{817 }
+\DoxyCodeLine{830 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_SAI1\_CONFIG(\_\_SAI1\_CLKSOURCE\_\_)\(\backslash\)}}
+\DoxyCodeLine{831 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_SAI1SEL, (\_\_SAI1\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{832 }
+\DoxyCodeLine{841 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_SAI1\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_SAI1SEL))}}
+\DoxyCodeLine{842 }
+\DoxyCodeLine{855 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_I2S\_CONFIG(\_\_I2S\_CLKSOURCE\_\_)\(\backslash\)}}
+\DoxyCodeLine{856 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_I2S23SEL, (\_\_I2S\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{857 }
+\DoxyCodeLine{866 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_I2S\_SOURCE() ((uint32\_t)(READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_I2S23SEL)))}}
+\DoxyCodeLine{867 }
+\DoxyCodeLine{868 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{880 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_FDCAN\_CONFIG(\_\_FDCAN\_CLKSOURCE\_\_)\(\backslash\)}}
+\DoxyCodeLine{881 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_FDCANSEL, (uint32\_t)(\_\_FDCAN\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{882 }
+\DoxyCodeLine{890 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_FDCAN\_SOURCE() ((uint32\_t)(READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_FDCANSEL)))}}
+\DoxyCodeLine{891 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{892 }
+\DoxyCodeLine{903 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_RNG\_CONFIG(\_\_RNG\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{904 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_CLK48SEL, (\_\_RNG\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{905 }
+\DoxyCodeLine{911 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_RNG\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_CLK48SEL))}}
+\DoxyCodeLine{912 }
+\DoxyCodeLine{913 \textcolor{preprocessor}{\#if defined(USB)}}
+\DoxyCodeLine{914 }
+\DoxyCodeLine{925 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_USB\_CONFIG(\_\_USB\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{926 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_CLK48SEL, (\_\_USB\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{927 }
+\DoxyCodeLine{933 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_USB\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_CLK48SEL))}}
+\DoxyCodeLine{934 }
+\DoxyCodeLine{935 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USB */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{936 }
+\DoxyCodeLine{945 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_ADC12\_CONFIG(\_\_ADC12\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{946 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_ADC12SEL, (\_\_ADC12\_CLKSOURCE\_\_))}}
+\DoxyCodeLine{947 }
+\DoxyCodeLine{954 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_ADC12\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_ADC12SEL))}}
+\DoxyCodeLine{955 }
+\DoxyCodeLine{956 \textcolor{preprocessor}{\#if defined(ADC345\_COMMON)}}
+\DoxyCodeLine{965 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_ADC345\_CONFIG(\_\_ADC345\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{966 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR, RCC\_CCIPR\_ADC345SEL, \_\_ADC345\_CLKSOURCE\_\_)}}
+\DoxyCodeLine{967 }
+\DoxyCodeLine{974 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_ADC345\_SOURCE() (READ\_BIT(RCC-\/>CCIPR, RCC\_CCIPR\_ADC345SEL))}}
+\DoxyCodeLine{975 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ADC345\_COMMON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{976 }
+\DoxyCodeLine{977 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{978 }
+\DoxyCodeLine{987 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_QSPI\_CONFIG(\_\_QSPI\_CLKSOURCE\_\_) \(\backslash\)}}
+\DoxyCodeLine{988 \textcolor{preprocessor}{                  MODIFY\_REG(RCC-\/>CCIPR2, RCC\_CCIPR2\_QSPISEL, \_\_QSPI\_CLKSOURCE\_\_)}}
+\DoxyCodeLine{989 }
+\DoxyCodeLine{996 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_GET\_QSPI\_SOURCE() (READ\_BIT(RCC-\/>CCIPR2, RCC\_CCIPR2\_QSPISEL))}}
+\DoxyCodeLine{997 }
+\DoxyCodeLine{998 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{999 }
+\DoxyCodeLine{1009 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_IT()      SET\_BIT(EXTI-\/>IMR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1010 }
+\DoxyCodeLine{1015 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_IT()     CLEAR\_BIT(EXTI-\/>IMR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1016 }
+\DoxyCodeLine{1021 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_EVENT()   SET\_BIT(EXTI-\/>EMR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1022 }
+\DoxyCodeLine{1027 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_EVENT()  CLEAR\_BIT(EXTI-\/>EMR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1028 }
+\DoxyCodeLine{1029 }
+\DoxyCodeLine{1034 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_FALLING\_EDGE()  SET\_BIT(EXTI-\/>FTSR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1035 }
+\DoxyCodeLine{1036 }
+\DoxyCodeLine{1041 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_FALLING\_EDGE()  CLEAR\_BIT(EXTI-\/>FTSR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1042 }
+\DoxyCodeLine{1043 }
+\DoxyCodeLine{1048 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_RISING\_EDGE()   SET\_BIT(EXTI-\/>RTSR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1049 }
+\DoxyCodeLine{1054 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_RISING\_EDGE()  CLEAR\_BIT(EXTI-\/>RTSR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1055 }
+\DoxyCodeLine{1060 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{1061 \textcolor{preprocessor}{  do \{                                                      \(\backslash\)}}
+\DoxyCodeLine{1062 \textcolor{preprocessor}{    \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{1063 \textcolor{preprocessor}{    \_\_HAL\_RCC\_LSECSS\_EXTI\_ENABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{1064 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1065 }
+\DoxyCodeLine{1070 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{1071 \textcolor{preprocessor}{  do \{                                                       \(\backslash\)}}
+\DoxyCodeLine{1072 \textcolor{preprocessor}{    \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{1073 \textcolor{preprocessor}{    \_\_HAL\_RCC\_LSECSS\_EXTI\_DISABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{1074 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{1075 }
+\DoxyCodeLine{1080 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_GET\_FLAG()       (READ\_BIT(EXTI-\/>PR1, RCC\_EXTI\_LINE\_LSECSS) == RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1081 }
+\DoxyCodeLine{1086 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_CLEAR\_FLAG()     WRITE\_REG(EXTI-\/>PR1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1087 }
+\DoxyCodeLine{1092 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_LSECSS\_EXTI\_GENERATE\_SWIT()  SET\_BIT(EXTI-\/>SWIER1, RCC\_EXTI\_LINE\_LSECSS)}}
+\DoxyCodeLine{1093 }
+\DoxyCodeLine{1094 }
+\DoxyCodeLine{1105 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_ENABLE\_IT(\_\_INTERRUPT\_\_)   SET\_BIT(CRS-\/>CR, (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1106 }
+\DoxyCodeLine{1117 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_DISABLE\_IT(\_\_INTERRUPT\_\_)  CLEAR\_BIT(CRS-\/>CR, (\_\_INTERRUPT\_\_))}}
+\DoxyCodeLine{1118 }
+\DoxyCodeLine{1128 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_GET\_IT\_SOURCE(\_\_INTERRUPT\_\_)  ((READ\_BIT(CRS-\/>CR, (\_\_INTERRUPT\_\_)) != 0U) ? SET : RESET)}}
+\DoxyCodeLine{1129 }
+\DoxyCodeLine{1141 \textcolor{comment}{/* CRS IT Error Mask */}}
+\DoxyCodeLine{1142 \textcolor{preprocessor}{\#define  RCC\_CRS\_IT\_ERROR\_MASK                 (RCC\_CRS\_IT\_TRIMOVF | RCC\_CRS\_IT\_SYNCERR | RCC\_CRS\_IT\_SYNCMISS)}}
+\DoxyCodeLine{1143 }
+\DoxyCodeLine{1144 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_CLEAR\_IT(\_\_INTERRUPT\_\_)  do \{ \(\backslash\)}}
+\DoxyCodeLine{1145 \textcolor{preprocessor}{                                                 if(((\_\_INTERRUPT\_\_) \& RCC\_CRS\_IT\_ERROR\_MASK) != 0U) \(\backslash\)}}
+\DoxyCodeLine{1146 \textcolor{preprocessor}{                                                 \{ \(\backslash\)}}
+\DoxyCodeLine{1147 \textcolor{preprocessor}{                                                   WRITE\_REG(CRS-\/>ICR, CRS\_ICR\_ERRC | ((\_\_INTERRUPT\_\_) \& \string~RCC\_CRS\_IT\_ERROR\_MASK)); \(\backslash\)}}
+\DoxyCodeLine{1148 \textcolor{preprocessor}{                                                 \} \(\backslash\)}}
+\DoxyCodeLine{1149 \textcolor{preprocessor}{                                                 else \(\backslash\)}}
+\DoxyCodeLine{1150 \textcolor{preprocessor}{                                                 \{ \(\backslash\)}}
+\DoxyCodeLine{1151 \textcolor{preprocessor}{                                                   WRITE\_REG(CRS-\/>ICR, (\_\_INTERRUPT\_\_)); \(\backslash\)}}
+\DoxyCodeLine{1152 \textcolor{preprocessor}{                                                 \} \(\backslash\)}}
+\DoxyCodeLine{1153 \textcolor{preprocessor}{                                               \} while(0)}}
+\DoxyCodeLine{1154 }
+\DoxyCodeLine{1168 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_GET\_FLAG(\_\_FLAG\_\_)  (READ\_BIT(CRS-\/>ISR, (\_\_FLAG\_\_)) == (\_\_FLAG\_\_))}}
+\DoxyCodeLine{1169 }
+\DoxyCodeLine{1185 \textcolor{comment}{/* CRS Flag Error Mask */}}
+\DoxyCodeLine{1186 \textcolor{preprocessor}{\#define RCC\_CRS\_FLAG\_ERROR\_MASK                (RCC\_CRS\_FLAG\_TRIMOVF | RCC\_CRS\_FLAG\_SYNCERR | RCC\_CRS\_FLAG\_SYNCMISS)}}
+\DoxyCodeLine{1187 }
+\DoxyCodeLine{1188 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_CLEAR\_FLAG(\_\_FLAG\_\_)     do \{ \(\backslash\)}}
+\DoxyCodeLine{1189 \textcolor{preprocessor}{                                                 if(((\_\_FLAG\_\_) \& RCC\_CRS\_FLAG\_ERROR\_MASK) != 0U) \(\backslash\)}}
+\DoxyCodeLine{1190 \textcolor{preprocessor}{                                                 \{ \(\backslash\)}}
+\DoxyCodeLine{1191 \textcolor{preprocessor}{                                                   WRITE\_REG(CRS-\/>ICR, CRS\_ICR\_ERRC | ((\_\_FLAG\_\_) \& \string~RCC\_CRS\_FLAG\_ERROR\_MASK)); \(\backslash\)}}
+\DoxyCodeLine{1192 \textcolor{preprocessor}{                                                 \} \(\backslash\)}}
+\DoxyCodeLine{1193 \textcolor{preprocessor}{                                                 else \(\backslash\)}}
+\DoxyCodeLine{1194 \textcolor{preprocessor}{                                                 \{ \(\backslash\)}}
+\DoxyCodeLine{1195 \textcolor{preprocessor}{                                                   WRITE\_REG(CRS-\/>ICR, (\_\_FLAG\_\_)); \(\backslash\)}}
+\DoxyCodeLine{1196 \textcolor{preprocessor}{                                                 \} \(\backslash\)}}
+\DoxyCodeLine{1197 \textcolor{preprocessor}{                                               \} while(0)}}
+\DoxyCodeLine{1198 }
+\DoxyCodeLine{1199 }
+\DoxyCodeLine{1212 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE()  SET\_BIT(CRS-\/>CR, CRS\_CR\_CEN)}}
+\DoxyCodeLine{1213 }
+\DoxyCodeLine{1218 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE() CLEAR\_BIT(CRS-\/>CR, CRS\_CR\_CEN)}}
+\DoxyCodeLine{1219 }
+\DoxyCodeLine{1225 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE()     SET\_BIT(CRS-\/>CR, CRS\_CR\_AUTOTRIMEN)}}
+\DoxyCodeLine{1226 }
+\DoxyCodeLine{1231 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE()    CLEAR\_BIT(CRS-\/>CR, CRS\_CR\_AUTOTRIMEN)}}
+\DoxyCodeLine{1232 }
+\DoxyCodeLine{1243 \textcolor{preprocessor}{\#define \_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE(\_\_FTARGET\_\_, \_\_FSYNC\_\_)  (((\_\_FTARGET\_\_) / (\_\_FSYNC\_\_)) -\/ 1U)}}
+\DoxyCodeLine{1244 }
+\DoxyCodeLine{1253 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1262 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_RCCEx\_PeriphCLKConfig(\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}}  *PeriphClkInit);}
+\DoxyCodeLine{1263 \textcolor{keywordtype}{void}              HAL\_RCCEx\_GetPeriphCLKConfig(\mbox{\hyperlink{struct_r_c_c___periph_c_l_k_init_type_def}{RCC\_PeriphCLKInitTypeDef}}  *PeriphClkInit);}
+\DoxyCodeLine{1264 uint32\_t          HAL\_RCCEx\_GetPeriphCLKFreq(uint32\_t PeriphClk);}
+\DoxyCodeLine{1265 }
+\DoxyCodeLine{1274 \textcolor{keywordtype}{void}              HAL\_RCCEx\_EnableLSECSS(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1275 \textcolor{keywordtype}{void}              HAL\_RCCEx\_DisableLSECSS(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1276 \textcolor{keywordtype}{void}              HAL\_RCCEx\_EnableLSECSS\_IT(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1277 \textcolor{keywordtype}{void}              HAL\_RCCEx\_LSECSS\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1278 \textcolor{keywordtype}{void}              HAL\_RCCEx\_LSECSS\_Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1279 \textcolor{keywordtype}{void}              HAL\_RCCEx\_EnableLSCO(uint32\_t LSCOSource);}
+\DoxyCodeLine{1280 \textcolor{keywordtype}{void}              HAL\_RCCEx\_DisableLSCO(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1281 }
+\DoxyCodeLine{1290 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRSConfig(\mbox{\hyperlink{struct_r_c_c___c_r_s_init_type_def}{RCC\_CRSInitTypeDef}} *pInit);}
+\DoxyCodeLine{1291 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRSSoftwareSynchronizationGenerate(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1292 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRSGetSynchronizationInfo(\mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def}{RCC\_CRSSynchroInfoTypeDef}} *pSynchroInfo);}
+\DoxyCodeLine{1293 uint32\_t          HAL\_RCCEx\_CRSWaitSynchronization(uint32\_t Timeout);}
+\DoxyCodeLine{1294 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRS\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1295 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRS\_SyncOkCallback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1296 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRS\_SyncWarnCallback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1297 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRS\_ExpectedSyncCallback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1298 \textcolor{keywordtype}{void}              HAL\_RCCEx\_CRS\_ErrorCallback(uint32\_t Error);}
+\DoxyCodeLine{1299 }
+\DoxyCodeLine{1308 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{1313 \textcolor{preprocessor}{\#define IS\_RCC\_LSCOSOURCE(\_\_SOURCE\_\_) (((\_\_SOURCE\_\_) == RCC\_LSCOSOURCE\_LSI) || \(\backslash\)}}
+\DoxyCodeLine{1314 \textcolor{preprocessor}{                                       ((\_\_SOURCE\_\_) == RCC\_LSCOSOURCE\_LSE))}}
+\DoxyCodeLine{1315 }
+\DoxyCodeLine{1316 \textcolor{preprocessor}{\#if defined(STM32G474xx) || defined(STM32G484xx)}}
+\DoxyCodeLine{1317 }
+\DoxyCodeLine{1318 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(\_\_SELECTION\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1319 \textcolor{preprocessor}{               ((((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART1)      == RCC\_PERIPHCLK\_USART1)  || \(\backslash\)}}
+\DoxyCodeLine{1320 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART2)      == RCC\_PERIPHCLK\_USART2)  || \(\backslash\)}}
+\DoxyCodeLine{1321 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART3)      == RCC\_PERIPHCLK\_USART3)  || \(\backslash\)}}
+\DoxyCodeLine{1322 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART4)       == RCC\_PERIPHCLK\_UART4)   || \(\backslash\)}}
+\DoxyCodeLine{1323 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART5)       == RCC\_PERIPHCLK\_UART5)   || \(\backslash\)}}
+\DoxyCodeLine{1324 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPUART1)     == RCC\_PERIPHCLK\_LPUART1) || \(\backslash\)}}
+\DoxyCodeLine{1325 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C1)        == RCC\_PERIPHCLK\_I2C1)    || \(\backslash\)}}
+\DoxyCodeLine{1326 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C2)        == RCC\_PERIPHCLK\_I2C2)    || \(\backslash\)}}
+\DoxyCodeLine{1327 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C3)        == RCC\_PERIPHCLK\_I2C3)    || \(\backslash\)}}
+\DoxyCodeLine{1328 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C4)        == RCC\_PERIPHCLK\_I2C4)    || \(\backslash\)}}
+\DoxyCodeLine{1329 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPTIM1)      == RCC\_PERIPHCLK\_LPTIM1)  || \(\backslash\)}}
+\DoxyCodeLine{1330 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_SAI1)        == RCC\_PERIPHCLK\_SAI1)    || \(\backslash\)}}
+\DoxyCodeLine{1331 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2S)         == RCC\_PERIPHCLK\_I2S)     || \(\backslash\)}}
+\DoxyCodeLine{1332 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_FDCAN)       == RCC\_PERIPHCLK\_FDCAN)   || \(\backslash\)}}
+\DoxyCodeLine{1333 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USB)         == RCC\_PERIPHCLK\_USB)     || \(\backslash\)}}
+\DoxyCodeLine{1334 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RNG)         == RCC\_PERIPHCLK\_RNG)     || \(\backslash\)}}
+\DoxyCodeLine{1335 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC12)       == RCC\_PERIPHCLK\_ADC12)   || \(\backslash\)}}
+\DoxyCodeLine{1336 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC345)      == RCC\_PERIPHCLK\_ADC345)  || \(\backslash\)}}
+\DoxyCodeLine{1337 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_QSPI)        == RCC\_PERIPHCLK\_QSPI)    || \(\backslash\)}}
+\DoxyCodeLine{1338 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RTC)         == RCC\_PERIPHCLK\_RTC))}}
+\DoxyCodeLine{1339 \textcolor{preprocessor}{\#elif defined(STM32G491xx) || defined(STM32G4A1xx)}}
+\DoxyCodeLine{1340 }
+\DoxyCodeLine{1341 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(\_\_SELECTION\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1342 \textcolor{preprocessor}{               ((((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART1)      == RCC\_PERIPHCLK\_USART1)  || \(\backslash\)}}
+\DoxyCodeLine{1343 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART2)      == RCC\_PERIPHCLK\_USART2)  || \(\backslash\)}}
+\DoxyCodeLine{1344 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART3)      == RCC\_PERIPHCLK\_USART3)  || \(\backslash\)}}
+\DoxyCodeLine{1345 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART4)       == RCC\_PERIPHCLK\_UART4)   || \(\backslash\)}}
+\DoxyCodeLine{1346 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART5)       == RCC\_PERIPHCLK\_UART5)   || \(\backslash\)}}
+\DoxyCodeLine{1347 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPUART1)     == RCC\_PERIPHCLK\_LPUART1) || \(\backslash\)}}
+\DoxyCodeLine{1348 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C1)        == RCC\_PERIPHCLK\_I2C1)    || \(\backslash\)}}
+\DoxyCodeLine{1349 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C2)        == RCC\_PERIPHCLK\_I2C2)    || \(\backslash\)}}
+\DoxyCodeLine{1350 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C3)        == RCC\_PERIPHCLK\_I2C3)    || \(\backslash\)}}
+\DoxyCodeLine{1351 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPTIM1)      == RCC\_PERIPHCLK\_LPTIM1)  || \(\backslash\)}}
+\DoxyCodeLine{1352 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_SAI1)        == RCC\_PERIPHCLK\_SAI1)    || \(\backslash\)}}
+\DoxyCodeLine{1353 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2S)         == RCC\_PERIPHCLK\_I2S)     || \(\backslash\)}}
+\DoxyCodeLine{1354 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_FDCAN)       == RCC\_PERIPHCLK\_FDCAN)   || \(\backslash\)}}
+\DoxyCodeLine{1355 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USB)         == RCC\_PERIPHCLK\_USB)     || \(\backslash\)}}
+\DoxyCodeLine{1356 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RNG)         == RCC\_PERIPHCLK\_RNG)     || \(\backslash\)}}
+\DoxyCodeLine{1357 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC12)       == RCC\_PERIPHCLK\_ADC12)   || \(\backslash\)}}
+\DoxyCodeLine{1358 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC345)      == RCC\_PERIPHCLK\_ADC345)  || \(\backslash\)}}
+\DoxyCodeLine{1359 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_QSPI)        == RCC\_PERIPHCLK\_QSPI)    || \(\backslash\)}}
+\DoxyCodeLine{1360 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RTC)         == RCC\_PERIPHCLK\_RTC))}}
+\DoxyCodeLine{1361 \textcolor{preprocessor}{\#elif defined(STM32G473xx) || defined(STM32G483xx)}}
+\DoxyCodeLine{1362 }
+\DoxyCodeLine{1363 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(\_\_SELECTION\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1364 \textcolor{preprocessor}{               ((((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART1)      == RCC\_PERIPHCLK\_USART1)  || \(\backslash\)}}
+\DoxyCodeLine{1365 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART2)      == RCC\_PERIPHCLK\_USART2)  || \(\backslash\)}}
+\DoxyCodeLine{1366 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART3)      == RCC\_PERIPHCLK\_USART3)  || \(\backslash\)}}
+\DoxyCodeLine{1367 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART4)       == RCC\_PERIPHCLK\_UART4)   || \(\backslash\)}}
+\DoxyCodeLine{1368 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART5)       == RCC\_PERIPHCLK\_UART5)   || \(\backslash\)}}
+\DoxyCodeLine{1369 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPUART1)     == RCC\_PERIPHCLK\_LPUART1) || \(\backslash\)}}
+\DoxyCodeLine{1370 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C1)        == RCC\_PERIPHCLK\_I2C1)    || \(\backslash\)}}
+\DoxyCodeLine{1371 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C2)        == RCC\_PERIPHCLK\_I2C2)    || \(\backslash\)}}
+\DoxyCodeLine{1372 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C3)        == RCC\_PERIPHCLK\_I2C3)    || \(\backslash\)}}
+\DoxyCodeLine{1373 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C4)        == RCC\_PERIPHCLK\_I2C4)    || \(\backslash\)}}
+\DoxyCodeLine{1374 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPTIM1)      == RCC\_PERIPHCLK\_LPTIM1)  || \(\backslash\)}}
+\DoxyCodeLine{1375 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_SAI1)        == RCC\_PERIPHCLK\_SAI1)    || \(\backslash\)}}
+\DoxyCodeLine{1376 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2S)         == RCC\_PERIPHCLK\_I2S)     || \(\backslash\)}}
+\DoxyCodeLine{1377 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_FDCAN)       == RCC\_PERIPHCLK\_FDCAN)   || \(\backslash\)}}
+\DoxyCodeLine{1378 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USB)         == RCC\_PERIPHCLK\_USB)     || \(\backslash\)}}
+\DoxyCodeLine{1379 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RNG)         == RCC\_PERIPHCLK\_RNG)     || \(\backslash\)}}
+\DoxyCodeLine{1380 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC12)       == RCC\_PERIPHCLK\_ADC12)   || \(\backslash\)}}
+\DoxyCodeLine{1381 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC345)      == RCC\_PERIPHCLK\_ADC345)  || \(\backslash\)}}
+\DoxyCodeLine{1382 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_QSPI)        == RCC\_PERIPHCLK\_QSPI)    || \(\backslash\)}}
+\DoxyCodeLine{1383 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RTC)         == RCC\_PERIPHCLK\_RTC))}}
+\DoxyCodeLine{1384 }
+\DoxyCodeLine{1385 \textcolor{preprocessor}{\#elif defined(STM32G471xx)}}
+\DoxyCodeLine{1386 }
+\DoxyCodeLine{1387 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(\_\_SELECTION\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1388 \textcolor{preprocessor}{               ((((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART1)      == RCC\_PERIPHCLK\_USART1)  || \(\backslash\)}}
+\DoxyCodeLine{1389 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART2)      == RCC\_PERIPHCLK\_USART2)  || \(\backslash\)}}
+\DoxyCodeLine{1390 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART3)      == RCC\_PERIPHCLK\_USART3)  || \(\backslash\)}}
+\DoxyCodeLine{1391 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART4)       == RCC\_PERIPHCLK\_UART4)   || \(\backslash\)}}
+\DoxyCodeLine{1392 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART5)       == RCC\_PERIPHCLK\_UART5)   || \(\backslash\)}}
+\DoxyCodeLine{1393 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPUART1)     == RCC\_PERIPHCLK\_LPUART1) || \(\backslash\)}}
+\DoxyCodeLine{1394 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C1)        == RCC\_PERIPHCLK\_I2C1)    || \(\backslash\)}}
+\DoxyCodeLine{1395 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C2)        == RCC\_PERIPHCLK\_I2C2)    || \(\backslash\)}}
+\DoxyCodeLine{1396 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C3)        == RCC\_PERIPHCLK\_I2C3)    || \(\backslash\)}}
+\DoxyCodeLine{1397 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C4)        == RCC\_PERIPHCLK\_I2C4)    || \(\backslash\)}}
+\DoxyCodeLine{1398 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPTIM1)      == RCC\_PERIPHCLK\_LPTIM1)  || \(\backslash\)}}
+\DoxyCodeLine{1399 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_SAI1)        == RCC\_PERIPHCLK\_SAI1)    || \(\backslash\)}}
+\DoxyCodeLine{1400 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2S)         == RCC\_PERIPHCLK\_I2S)     || \(\backslash\)}}
+\DoxyCodeLine{1401 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USB)         == RCC\_PERIPHCLK\_USB)     || \(\backslash\)}}
+\DoxyCodeLine{1402 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RNG)         == RCC\_PERIPHCLK\_RNG)     || \(\backslash\)}}
+\DoxyCodeLine{1403 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC12)       == RCC\_PERIPHCLK\_ADC12)   || \(\backslash\)}}
+\DoxyCodeLine{1404 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RTC)         == RCC\_PERIPHCLK\_RTC))}}
+\DoxyCodeLine{1405 }
+\DoxyCodeLine{1406 \textcolor{preprocessor}{\#elif defined(STM32G431xx) || defined(STM32G441xx)}}
+\DoxyCodeLine{1407 }
+\DoxyCodeLine{1408 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(\_\_SELECTION\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1409 \textcolor{preprocessor}{               ((((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART1)      == RCC\_PERIPHCLK\_USART1)  || \(\backslash\)}}
+\DoxyCodeLine{1410 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART2)      == RCC\_PERIPHCLK\_USART2)  || \(\backslash\)}}
+\DoxyCodeLine{1411 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART3)      == RCC\_PERIPHCLK\_USART3)  || \(\backslash\)}}
+\DoxyCodeLine{1412 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_UART4)       == RCC\_PERIPHCLK\_UART4)   || \(\backslash\)}}
+\DoxyCodeLine{1413 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPUART1)     == RCC\_PERIPHCLK\_LPUART1) || \(\backslash\)}}
+\DoxyCodeLine{1414 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C1)        == RCC\_PERIPHCLK\_I2C1)    || \(\backslash\)}}
+\DoxyCodeLine{1415 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C2)        == RCC\_PERIPHCLK\_I2C2)    || \(\backslash\)}}
+\DoxyCodeLine{1416 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C3)        == RCC\_PERIPHCLK\_I2C3)    || \(\backslash\)}}
+\DoxyCodeLine{1417 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPTIM1)      == RCC\_PERIPHCLK\_LPTIM1)  || \(\backslash\)}}
+\DoxyCodeLine{1418 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_SAI1)        == RCC\_PERIPHCLK\_SAI1)    || \(\backslash\)}}
+\DoxyCodeLine{1419 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2S)         == RCC\_PERIPHCLK\_I2S)     || \(\backslash\)}}
+\DoxyCodeLine{1420 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_FDCAN)       == RCC\_PERIPHCLK\_FDCAN)   || \(\backslash\)}}
+\DoxyCodeLine{1421 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USB)         == RCC\_PERIPHCLK\_USB)     || \(\backslash\)}}
+\DoxyCodeLine{1422 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RNG)         == RCC\_PERIPHCLK\_RNG)     || \(\backslash\)}}
+\DoxyCodeLine{1423 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC12)       == RCC\_PERIPHCLK\_ADC12)   || \(\backslash\)}}
+\DoxyCodeLine{1424 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RTC)         == RCC\_PERIPHCLK\_RTC))}}
+\DoxyCodeLine{1425 }
+\DoxyCodeLine{1426 \textcolor{preprocessor}{\#elif defined(STM32GBK1CB)}}
+\DoxyCodeLine{1427 \textcolor{preprocessor}{\#define IS\_RCC\_PERIPHCLOCK(\_\_SELECTION\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1428 \textcolor{preprocessor}{               ((((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART1)      == RCC\_PERIPHCLK\_USART1)  || \(\backslash\)}}
+\DoxyCodeLine{1429 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART2)      == RCC\_PERIPHCLK\_USART2)  || \(\backslash\)}}
+\DoxyCodeLine{1430 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USART3)      == RCC\_PERIPHCLK\_USART3)  || \(\backslash\)}}
+\DoxyCodeLine{1431 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPUART1)     == RCC\_PERIPHCLK\_LPUART1) || \(\backslash\)}}
+\DoxyCodeLine{1432 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C1)        == RCC\_PERIPHCLK\_I2C1)    || \(\backslash\)}}
+\DoxyCodeLine{1433 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C2)        == RCC\_PERIPHCLK\_I2C2)    || \(\backslash\)}}
+\DoxyCodeLine{1434 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2C3)        == RCC\_PERIPHCLK\_I2C3)    || \(\backslash\)}}
+\DoxyCodeLine{1435 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_LPTIM1)      == RCC\_PERIPHCLK\_LPTIM1)  || \(\backslash\)}}
+\DoxyCodeLine{1436 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_SAI1)        == RCC\_PERIPHCLK\_SAI1)    || \(\backslash\)}}
+\DoxyCodeLine{1437 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_I2S)         == RCC\_PERIPHCLK\_I2S)     || \(\backslash\)}}
+\DoxyCodeLine{1438 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_FDCAN)       == RCC\_PERIPHCLK\_FDCAN)   || \(\backslash\)}}
+\DoxyCodeLine{1439 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_USB)         == RCC\_PERIPHCLK\_USB)     || \(\backslash\)}}
+\DoxyCodeLine{1440 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RNG)         == RCC\_PERIPHCLK\_RNG)     || \(\backslash\)}}
+\DoxyCodeLine{1441 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_ADC12)       == RCC\_PERIPHCLK\_ADC12)   || \(\backslash\)}}
+\DoxyCodeLine{1442 \textcolor{preprocessor}{                (((\_\_SELECTION\_\_) \& RCC\_PERIPHCLK\_RTC)         == RCC\_PERIPHCLK\_RTC))}}
+\DoxyCodeLine{1443 }
+\DoxyCodeLine{1444 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G474xx || STM32G484xx */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1445 }
+\DoxyCodeLine{1446 \textcolor{preprocessor}{\#define IS\_RCC\_USART1CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1447 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_USART1CLKSOURCE\_PCLK2)  || \(\backslash\)}}
+\DoxyCodeLine{1448 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART1CLKSOURCE\_SYSCLK) || \(\backslash\)}}
+\DoxyCodeLine{1449 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART1CLKSOURCE\_LSE)    || \(\backslash\)}}
+\DoxyCodeLine{1450 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART1CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1451 }
+\DoxyCodeLine{1452 \textcolor{preprocessor}{\#define IS\_RCC\_USART2CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1453 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_USART2CLKSOURCE\_PCLK1)  || \(\backslash\)}}
+\DoxyCodeLine{1454 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART2CLKSOURCE\_SYSCLK) || \(\backslash\)}}
+\DoxyCodeLine{1455 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART2CLKSOURCE\_LSE)    || \(\backslash\)}}
+\DoxyCodeLine{1456 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART2CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1457 }
+\DoxyCodeLine{1458 \textcolor{preprocessor}{\#define IS\_RCC\_USART3CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1459 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_USART3CLKSOURCE\_PCLK1)  || \(\backslash\)}}
+\DoxyCodeLine{1460 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART3CLKSOURCE\_SYSCLK) || \(\backslash\)}}
+\DoxyCodeLine{1461 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART3CLKSOURCE\_LSE)    || \(\backslash\)}}
+\DoxyCodeLine{1462 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USART3CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1463 }
+\DoxyCodeLine{1464 \textcolor{preprocessor}{\#if defined(UART4)}}
+\DoxyCodeLine{1465 \textcolor{preprocessor}{\#define IS\_RCC\_UART4CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1466 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_UART4CLKSOURCE\_PCLK1)  || \(\backslash\)}}
+\DoxyCodeLine{1467 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_UART4CLKSOURCE\_SYSCLK) || \(\backslash\)}}
+\DoxyCodeLine{1468 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_UART4CLKSOURCE\_LSE)    || \(\backslash\)}}
+\DoxyCodeLine{1469 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_UART4CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1470 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1471 }
+\DoxyCodeLine{1472 \textcolor{preprocessor}{\#if defined(UART5)}}
+\DoxyCodeLine{1473 \textcolor{preprocessor}{\#define IS\_RCC\_UART5CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1474 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_UART5CLKSOURCE\_PCLK1)  || \(\backslash\)}}
+\DoxyCodeLine{1475 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_UART5CLKSOURCE\_SYSCLK) || \(\backslash\)}}
+\DoxyCodeLine{1476 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_UART5CLKSOURCE\_LSE)    || \(\backslash\)}}
+\DoxyCodeLine{1477 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_UART5CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1478 }
+\DoxyCodeLine{1479 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* UART5 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1480 }
+\DoxyCodeLine{1481 \textcolor{preprocessor}{\#define IS\_RCC\_LPUART1CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1482 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_LPUART1CLKSOURCE\_PCLK1)  || \(\backslash\)}}
+\DoxyCodeLine{1483 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_LPUART1CLKSOURCE\_SYSCLK) || \(\backslash\)}}
+\DoxyCodeLine{1484 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_LPUART1CLKSOURCE\_LSE)    || \(\backslash\)}}
+\DoxyCodeLine{1485 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_LPUART1CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1486 }
+\DoxyCodeLine{1487 \textcolor{preprocessor}{\#define IS\_RCC\_I2C1CLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1488 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_I2C1CLKSOURCE\_PCLK1) || \(\backslash\)}}
+\DoxyCodeLine{1489 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C1CLKSOURCE\_SYSCLK)|| \(\backslash\)}}
+\DoxyCodeLine{1490 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C1CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1491 }
+\DoxyCodeLine{1492 \textcolor{preprocessor}{\#define IS\_RCC\_I2C2CLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1493 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_I2C2CLKSOURCE\_PCLK1) || \(\backslash\)}}
+\DoxyCodeLine{1494 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C2CLKSOURCE\_SYSCLK)|| \(\backslash\)}}
+\DoxyCodeLine{1495 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C2CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1496 }
+\DoxyCodeLine{1497 \textcolor{preprocessor}{\#define IS\_RCC\_I2C3CLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1498 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_I2C3CLKSOURCE\_PCLK1) || \(\backslash\)}}
+\DoxyCodeLine{1499 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C3CLKSOURCE\_SYSCLK)|| \(\backslash\)}}
+\DoxyCodeLine{1500 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C3CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1501 }
+\DoxyCodeLine{1502 \textcolor{preprocessor}{\#if defined(I2C4)}}
+\DoxyCodeLine{1503 }
+\DoxyCodeLine{1504 \textcolor{preprocessor}{\#define IS\_RCC\_I2C4CLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1505 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_I2C4CLKSOURCE\_PCLK1) || \(\backslash\)}}
+\DoxyCodeLine{1506 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C4CLKSOURCE\_SYSCLK)|| \(\backslash\)}}
+\DoxyCodeLine{1507 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2C4CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1508 }
+\DoxyCodeLine{1509 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* I2C4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1510 }
+\DoxyCodeLine{1511 \textcolor{preprocessor}{\#define IS\_RCC\_LPTIM1CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1512 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_LPTIM1CLKSOURCE\_PCLK1) || \(\backslash\)}}
+\DoxyCodeLine{1513 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_LPTIM1CLKSOURCE\_LSI)   || \(\backslash\)}}
+\DoxyCodeLine{1514 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_LPTIM1CLKSOURCE\_HSI)   || \(\backslash\)}}
+\DoxyCodeLine{1515 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_LPTIM1CLKSOURCE\_LSE))}}
+\DoxyCodeLine{1516 }
+\DoxyCodeLine{1517 \textcolor{preprocessor}{\#define IS\_RCC\_SAI1CLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1518 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_SAI1CLKSOURCE\_SYSCLK)  || \(\backslash\)}}
+\DoxyCodeLine{1519 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_SAI1CLKSOURCE\_PLL)     || \(\backslash\)}}
+\DoxyCodeLine{1520 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_SAI1CLKSOURCE\_EXT)     || \(\backslash\)}}
+\DoxyCodeLine{1521 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_SAI1CLKSOURCE\_HSI))}}
+\DoxyCodeLine{1522 }
+\DoxyCodeLine{1523 \textcolor{preprocessor}{\#define IS\_RCC\_I2SCLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1524 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_I2SCLKSOURCE\_SYSCLK)  || \(\backslash\)}}
+\DoxyCodeLine{1525 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2SCLKSOURCE\_PLL)     || \(\backslash\)}}
+\DoxyCodeLine{1526 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2SCLKSOURCE\_EXT)     || \(\backslash\)}}
+\DoxyCodeLine{1527 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_I2SCLKSOURCE\_HSI))}}
+\DoxyCodeLine{1528 }
+\DoxyCodeLine{1529 \textcolor{preprocessor}{\#if defined(FDCAN1)}}
+\DoxyCodeLine{1530 \textcolor{preprocessor}{\#define IS\_RCC\_FDCANCLKSOURCE(\_\_SOURCE\_\_)   \(\backslash\)}}
+\DoxyCodeLine{1531 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_FDCANCLKSOURCE\_HSE) || \(\backslash\)}}
+\DoxyCodeLine{1532 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_FDCANCLKSOURCE\_PLL) || \(\backslash\)}}
+\DoxyCodeLine{1533 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_FDCANCLKSOURCE\_PCLK1))}}
+\DoxyCodeLine{1534 }
+\DoxyCodeLine{1535 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* FDCAN1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1536 \textcolor{preprocessor}{\#define IS\_RCC\_RNGCLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1537 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_RNGCLKSOURCE\_HSI48)   || \(\backslash\)}}
+\DoxyCodeLine{1538 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_RNGCLKSOURCE\_PLL))}}
+\DoxyCodeLine{1539 }
+\DoxyCodeLine{1540 \textcolor{preprocessor}{\#if defined(USB)}}
+\DoxyCodeLine{1541 \textcolor{preprocessor}{\#define IS\_RCC\_USBCLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1542 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_USBCLKSOURCE\_HSI48)   || \(\backslash\)}}
+\DoxyCodeLine{1543 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_USBCLKSOURCE\_PLL))}}
+\DoxyCodeLine{1544 }
+\DoxyCodeLine{1545 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USB */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1546 }
+\DoxyCodeLine{1547 \textcolor{preprocessor}{\#define IS\_RCC\_ADC12CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1548 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_ADC12CLKSOURCE\_NONE)    || \(\backslash\)}}
+\DoxyCodeLine{1549 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_ADC12CLKSOURCE\_PLL)     || \(\backslash\)}}
+\DoxyCodeLine{1550 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_ADC12CLKSOURCE\_SYSCLK))}}
+\DoxyCodeLine{1551 }
+\DoxyCodeLine{1552 \textcolor{preprocessor}{\#if defined(ADC345\_COMMON)}}
+\DoxyCodeLine{1553 \textcolor{preprocessor}{\#define IS\_RCC\_ADC345CLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1554 \textcolor{preprocessor}{               (((\_\_SOURCE\_\_) == RCC\_ADC345CLKSOURCE\_NONE)    || \(\backslash\)}}
+\DoxyCodeLine{1555 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_ADC345CLKSOURCE\_PLL)     || \(\backslash\)}}
+\DoxyCodeLine{1556 \textcolor{preprocessor}{                ((\_\_SOURCE\_\_) == RCC\_ADC345CLKSOURCE\_SYSCLK))}}
+\DoxyCodeLine{1557 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* ADC345\_COMMON */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1558 }
+\DoxyCodeLine{1559 \textcolor{preprocessor}{\#if defined(QUADSPI)}}
+\DoxyCodeLine{1560 }
+\DoxyCodeLine{1561 \textcolor{preprocessor}{\#define IS\_RCC\_QSPICLKSOURCE(\_\_SOURCE\_\_)  \(\backslash\)}}
+\DoxyCodeLine{1562 \textcolor{preprocessor}{                (((\_\_SOURCE\_\_) == RCC\_QSPICLKSOURCE\_HSI)   || \(\backslash\)}}
+\DoxyCodeLine{1563 \textcolor{preprocessor}{                 ((\_\_SOURCE\_\_) == RCC\_QSPICLKSOURCE\_SYSCLK)|| \(\backslash\)}}
+\DoxyCodeLine{1564 \textcolor{preprocessor}{                 ((\_\_SOURCE\_\_) == RCC\_QSPICLKSOURCE\_PLL))}}
+\DoxyCodeLine{1565 }
+\DoxyCodeLine{1566 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* QUADSPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1567 }
+\DoxyCodeLine{1568 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_SYNC\_SOURCE(\_\_SOURCE\_\_) (((\_\_SOURCE\_\_) == RCC\_CRS\_SYNC\_SOURCE\_GPIO) || \(\backslash\)}}
+\DoxyCodeLine{1569 \textcolor{preprocessor}{                                            ((\_\_SOURCE\_\_) == RCC\_CRS\_SYNC\_SOURCE\_LSE)  || \(\backslash\)}}
+\DoxyCodeLine{1570 \textcolor{preprocessor}{                                            ((\_\_SOURCE\_\_) == RCC\_CRS\_SYNC\_SOURCE\_USB))}}
+\DoxyCodeLine{1571 }
+\DoxyCodeLine{1572 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_SYNC\_DIV(\_\_DIV\_\_)       (((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV1)  || ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV2)  || \(\backslash\)}}
+\DoxyCodeLine{1573 \textcolor{preprocessor}{                                            ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV4)  || ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV8)  || \(\backslash\)}}
+\DoxyCodeLine{1574 \textcolor{preprocessor}{                                            ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV16) || ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV32) || \(\backslash\)}}
+\DoxyCodeLine{1575 \textcolor{preprocessor}{                                            ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV64) || ((\_\_DIV\_\_) == RCC\_CRS\_SYNC\_DIV128))}}
+\DoxyCodeLine{1576 }
+\DoxyCodeLine{1577 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_SYNC\_POLARITY(\_\_POLARITY\_\_) (((\_\_POLARITY\_\_) == RCC\_CRS\_SYNC\_POLARITY\_RISING) || \(\backslash\)}}
+\DoxyCodeLine{1578 \textcolor{preprocessor}{                                                ((\_\_POLARITY\_\_) == RCC\_CRS\_SYNC\_POLARITY\_FALLING))}}
+\DoxyCodeLine{1579 }
+\DoxyCodeLine{1580 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_RELOADVALUE(\_\_VALUE\_\_)  (((\_\_VALUE\_\_) <= 0xFFFFU))}}
+\DoxyCodeLine{1581 }
+\DoxyCodeLine{1582 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_ERRORLIMIT(\_\_VALUE\_\_)   (((\_\_VALUE\_\_) <= 0xFFU))}}
+\DoxyCodeLine{1583 }
+\DoxyCodeLine{1584 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_HSI48CALIBRATION(\_\_VALUE\_\_) (((\_\_VALUE\_\_) <= 0x3FU))}}
+\DoxyCodeLine{1585 }
+\DoxyCodeLine{1586 \textcolor{preprocessor}{\#define IS\_RCC\_CRS\_FREQERRORDIR(\_\_DIR\_\_)   (((\_\_DIR\_\_) == RCC\_CRS\_FREQERRORDIR\_UP) || \(\backslash\)}}
+\DoxyCodeLine{1587 \textcolor{preprocessor}{                                            ((\_\_DIR\_\_) == RCC\_CRS\_FREQERRORDIR\_DOWN))}}
+\DoxyCodeLine{1588 }
+\DoxyCodeLine{1601 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{1602 \}}
+\DoxyCodeLine{1603 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1604 }
+\DoxyCodeLine{1605 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_RCC\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1606 }
+
+\end{DoxyCode}

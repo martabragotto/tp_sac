@@ -1,0 +1,59 @@
+\hypertarget{group___s_y_s_c_f_g___private___macros}{}\doxysection{SYSCFG Private Macros}
+\label{group___s_y_s_c_f_g___private___macros}\index{SYSCFG Private Macros@{SYSCFG Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___private___macros_gae83d9d982572786717aea190c25c1767}{IS\+\_\+\+SYSCFG\+\_\+\+FPU\+\_\+\+INTERRUPT}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___private___macros_ga123b29e8d38b29577a004e3b0f97d624}{IS\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+CONFIG}}(\+\_\+\+\_\+\+CONFIG\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___s_y_s_c_f_g___private___macros_ga2d44c67961ec9f4feecec777364c13a0}{IS\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS}}(\+\_\+\+\_\+\+PIN\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___s_y_s_c_f_g___private___macros_ga123b29e8d38b29577a004e3b0f97d624}\label{group___s_y_s_c_f_g___private___macros_ga123b29e8d38b29577a004e3b0f97d624}} 
+\index{SYSCFG Private Macros@{SYSCFG Private Macros}!IS\_SYSCFG\_BREAK\_CONFIG@{IS\_SYSCFG\_BREAK\_CONFIG}}
+\index{IS\_SYSCFG\_BREAK\_CONFIG@{IS\_SYSCFG\_BREAK\_CONFIG}!SYSCFG Private Macros@{SYSCFG Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_SYSCFG\_BREAK\_CONFIG}{IS\_SYSCFG\_BREAK\_CONFIG}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SYSCFG\+\_\+\+BREAK\+\_\+\+CONFIG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+CONFIG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            (((\_\_CONFIG\_\_) == SYSCFG\_BREAK\_ECC)           || \(\backslash\)}
+\DoxyCodeLine{                                            ((\_\_CONFIG\_\_) == SYSCFG\_BREAK\_PVD)           || \(\backslash\)}
+\DoxyCodeLine{                                            ((\_\_CONFIG\_\_) == SYSCFG\_BREAK\_SRAMPARITY)    || \(\backslash\)}
+\DoxyCodeLine{                                            ((\_\_CONFIG\_\_) == SYSCFG\_BREAK\_LOCKUP))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_y_s_c_f_g___private___macros_ga2d44c67961ec9f4feecec777364c13a0}\label{group___s_y_s_c_f_g___private___macros_ga2d44c67961ec9f4feecec777364c13a0}} 
+\index{SYSCFG Private Macros@{SYSCFG Private Macros}!IS\_SYSCFG\_FASTMODEPLUS@{IS\_SYSCFG\_FASTMODEPLUS}}
+\index{IS\_SYSCFG\_FASTMODEPLUS@{IS\_SYSCFG\_FASTMODEPLUS}!SYSCFG Private Macros@{SYSCFG Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_SYSCFG\_FASTMODEPLUS}{IS\_SYSCFG\_FASTMODEPLUS}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SYSCFG\+\_\+\+FASTMODEPLUS(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PIN\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         ((((\_\_PIN\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___fast_mode_plus___g_p_i_o_ga1f9beaf68b00ae5598cb8d930da05704}{SYSCFG\_FASTMODEPLUS\_PB6}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___fast_mode_plus___g_p_i_o_ga1f9beaf68b00ae5598cb8d930da05704}{SYSCFG\_FASTMODEPLUS\_PB6}}) || \(\backslash\)}
+\DoxyCodeLine{                                         (((\_\_PIN\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___fast_mode_plus___g_p_i_o_ga4b939ef5ec69e81277ef2323d5917eb5}{SYSCFG\_FASTMODEPLUS\_PB7}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___fast_mode_plus___g_p_i_o_ga4b939ef5ec69e81277ef2323d5917eb5}{SYSCFG\_FASTMODEPLUS\_PB7}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___s_y_s_c_f_g___private___macros_gae83d9d982572786717aea190c25c1767}\label{group___s_y_s_c_f_g___private___macros_gae83d9d982572786717aea190c25c1767}} 
+\index{SYSCFG Private Macros@{SYSCFG Private Macros}!IS\_SYSCFG\_FPU\_INTERRUPT@{IS\_SYSCFG\_FPU\_INTERRUPT}}
+\index{IS\_SYSCFG\_FPU\_INTERRUPT@{IS\_SYSCFG\_FPU\_INTERRUPT}!SYSCFG Private Macros@{SYSCFG Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_SYSCFG\_FPU\_INTERRUPT}{IS\_SYSCFG\_FPU\_INTERRUPT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SYSCFG\+\_\+\+FPU\+\_\+\+INTERRUPT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                ((((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga097dd569bd638ce8ad517b385d2e5b76}{SYSCFG\_IT\_FPU\_IOC}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga097dd569bd638ce8ad517b385d2e5b76}{SYSCFG\_IT\_FPU\_IOC}}) || \(\backslash\)}
+\DoxyCodeLine{                                                (((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gafff2d9114aabc6cad60ee19f909ea92e}{SYSCFG\_IT\_FPU\_DZC}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gafff2d9114aabc6cad60ee19f909ea92e}{SYSCFG\_IT\_FPU\_DZC}}) || \(\backslash\)}
+\DoxyCodeLine{                                                (((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gaa395020cb096a915c6fe6dfc3c09ea3e}{SYSCFG\_IT\_FPU\_UFC}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gaa395020cb096a915c6fe6dfc3c09ea3e}{SYSCFG\_IT\_FPU\_UFC}}) || \(\backslash\)}
+\DoxyCodeLine{                                                (((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gaa5c5389d31cec41bcc571f2b830075f1}{SYSCFG\_IT\_FPU\_OFC}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_gaa5c5389d31cec41bcc571f2b830075f1}{SYSCFG\_IT\_FPU\_OFC}}) || \(\backslash\)}
+\DoxyCodeLine{                                                (((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga24571405ea5d07e185e4accea693cf1d}{SYSCFG\_IT\_FPU\_IDC}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga24571405ea5d07e185e4accea693cf1d}{SYSCFG\_IT\_FPU\_IDC}}) || \(\backslash\)}
+\DoxyCodeLine{                                                (((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga77b9b95b0728e9190cbe4ea23b5e5445}{SYSCFG\_IT\_FPU\_IXC}}) == \mbox{\hyperlink{group___s_y_s_c_f_g___f_p_u___interrupts_ga77b9b95b0728e9190cbe4ea23b5e5445}{SYSCFG\_IT\_FPU\_IXC}}))}
+
+\end{DoxyCode}

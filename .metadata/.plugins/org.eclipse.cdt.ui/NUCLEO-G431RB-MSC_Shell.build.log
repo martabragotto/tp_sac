@@ -1,10 +1,10 @@
-16:40:06 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
+17:26:57 **** Incremental Build of configuration Debug for project NUCLEO-G431RB-MSC_Shell ****
 make -j8 all 
 arm-none-eabi-size   NUCLEO-G431RB-MSC_Shell.elf 
    text	   data	    bss	    dec	    hex	filename
-  36820	    536	   2072	  39428	   9a04	NUCLEO-G431RB-MSC_Shell.elf
+  60144	    904	   2480	  63528	   f828	NUCLEO-G431RB-MSC_Shell.elf
 Finished building: default.size.stdout
  
 
-16:40:07 Build Finished. 0 errors, 0 warnings. (took 502ms)
+17:26:57 Build Finished. 0 errors, 0 warnings. (took 476ms)
 

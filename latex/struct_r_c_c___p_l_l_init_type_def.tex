@@ -1,0 +1,88 @@
+\hypertarget{struct_r_c_c___p_l_l_init_type_def}{}\doxysection{RCC\+\_\+\+PLLInit\+Type\+Def Struct Reference}
+\label{struct_r_c_c___p_l_l_init_type_def}\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+
+
+RCC PLL configuration structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+rcc.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_a6cbaf84f6566af15e6e4f97a339d5759}{PLLState}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_a72806832a179af8756b9330de7f7c6a8}{PLLSource}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_af8ae37696b35fd358c1ec1f6391158a4}{PLLM}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_a2482608639ebfffc51a41135c979369b}{PLLN}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_a4ecedf3ef401fa564aa636824fc3ded0}{PLLP}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_a2b69dfec4b8ab52d649a71d141892691}{PLLQ}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___p_l_l_init_type_def_a41208d1f84fc268f14fed2c825d07fbc}{PLLR}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+RCC PLL configuration structure definition. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_af8ae37696b35fd358c1ec1f6391158a4}\label{struct_r_c_c___p_l_l_init_type_def_af8ae37696b35fd358c1ec1f6391158a4}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLM@{PLLM}}
+\index{PLLM@{PLLM}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLM}{PLLM}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLM}
+
+PLLM\+: Division factor for PLL VCO input clock. This parameter must be a value of \mbox{\hyperlink{group___r_c_c___p_l_l_m___clock___divider}{PLLM Clock Divider}} ~\newline
+ \mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_a2482608639ebfffc51a41135c979369b}\label{struct_r_c_c___p_l_l_init_type_def_a2482608639ebfffc51a41135c979369b}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLN@{PLLN}}
+\index{PLLN@{PLLN}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLN}{PLLN}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLN}
+
+PLLN\+: Multiplication factor for PLL VCO output clock. This parameter must be a number between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 ~\newline
+ \mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_a4ecedf3ef401fa564aa636824fc3ded0}\label{struct_r_c_c___p_l_l_init_type_def_a4ecedf3ef401fa564aa636824fc3ded0}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLP@{PLLP}}
+\index{PLLP@{PLLP}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLP}{PLLP}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLP}
+
+PLLP\+: Division factor for ADC clock. This parameter must be a value of \mbox{\hyperlink{group___r_c_c___p_l_l_p___clock___divider}{PLLP Clock Divider}} ~\newline
+ \mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_a2b69dfec4b8ab52d649a71d141892691}\label{struct_r_c_c___p_l_l_init_type_def_a2b69dfec4b8ab52d649a71d141892691}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLQ@{PLLQ}}
+\index{PLLQ@{PLLQ}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLQ}{PLLQ}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLQ}
+
+PLLQ\+: Division factor for SAI, I2S, USB, FDCAN and QUADSPI clocks. This parameter must be a value of \mbox{\hyperlink{group___r_c_c___p_l_l_q___clock___divider}{PLLQ Clock Divider}} ~\newline
+ \mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_a41208d1f84fc268f14fed2c825d07fbc}\label{struct_r_c_c___p_l_l_init_type_def_a41208d1f84fc268f14fed2c825d07fbc}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLR@{PLLR}}
+\index{PLLR@{PLLR}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLR}{PLLR}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLR}
+
+PLLR\+: Division for the main system clock. User have to set the PLLR parameter correctly to not exceed max frequency 170MHZ. This parameter must be a value of \mbox{\hyperlink{group___r_c_c___p_l_l_r___clock___divider}{PLLR Clock Divider}} ~\newline
+ \mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_a72806832a179af8756b9330de7f7c6a8}\label{struct_r_c_c___p_l_l_init_type_def_a72806832a179af8756b9330de7f7c6a8}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLSource@{PLLSource}}
+\index{PLLSource@{PLLSource}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLSource}{PLLSource}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLSource}
+
+RCC\+\_\+\+PLLSource\+: PLL entry clock source. This parameter must be a value of \mbox{\hyperlink{group___r_c_c___p_l_l___clock___source}{PLL Clock Source}} ~\newline
+ \mbox{\Hypertarget{struct_r_c_c___p_l_l_init_type_def_a6cbaf84f6566af15e6e4f97a339d5759}\label{struct_r_c_c___p_l_l_init_type_def_a6cbaf84f6566af15e6e4f97a339d5759}} 
+\index{RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}!PLLState@{PLLState}}
+\index{PLLState@{PLLState}!RCC\_PLLInitTypeDef@{RCC\_PLLInitTypeDef}}
+\doxysubsubsection{\texorpdfstring{PLLState}{PLLState}}
+{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+PLLInit\+Type\+Def\+::\+PLLState}
+
+The new state of the PLL. This parameter can be a value of \mbox{\hyperlink{group___r_c_c___p_l_l___config}{PLL Config}} ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32g4xx__hal__rcc_8h}{stm32g4xx\+\_\+hal\+\_\+rcc.\+h}}\end{DoxyCompactItemize}

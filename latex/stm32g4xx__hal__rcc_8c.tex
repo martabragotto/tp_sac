@@ -1,0 +1,53 @@
+\hypertarget{stm32g4xx__hal__rcc_8c}{}\doxysection{Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Src/stm32g4xx\+\_\+hal\+\_\+rcc.c File Reference}
+\label{stm32g4xx__hal__rcc_8c}\index{Drivers/STM32G4xx\_HAL\_Driver/Src/stm32g4xx\_hal\_rcc.c@{Drivers/STM32G4xx\_HAL\_Driver/Src/stm32g4xx\_hal\_rcc.c}}
+
+
+RCC HAL module driver. This file provides firmware functions to manage the following functionalities of the Reset and Clock Control (RCC) peripheral\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal.\+h\char`\"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+RCC HAL module driver. This file provides firmware functions to manage the following functionalities of the Reset and Clock Control (RCC) peripheral\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\begin{DoxyItemize}
+\item Initialization and de-\/initialization functions
+\item Peripheral Control functions
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyVerb}==============================================================================
+                    ##### RCC specific features #####
+==============================================================================
+  [..]
+    After reset the device is running from High Speed Internal oscillator
+    (16 MHz) with Flash 0 wait state. Flash prefetch buffer, D-Cache
+    and I-Cache are disabled, and all peripherals are off except internal
+    SRAM, Flash and JTAG.
+
+    (+) There is no prescaler on High speed (AHBs) and Low speed (APBs) buses:
+        all peripherals mapped on these buses are running at HSI speed.
+    (+) The clock for all peripherals is switched off, except the SRAM and FLASH.
+    (+) All GPIOs are in analog mode, except the JTAG pins which
+        are assigned to be used for debug purpose.
+
+  [..]
+    Once the device started from reset, the user application has to:
+    (+) Configure the clock source to be used to drive the System clock
+        (if the application needs higher frequency/performance)
+    (+) Configure the System clock frequency and Flash settings
+    (+) Configure the AHB and APB buses prescalers
+    (+) Enable the clock for the peripheral(s) to be used
+    (+) Configure the clock source(s) for peripherals which clocks are not
+        derived from the System clock (USB, RNG, USART, LPUART, FDCAN, some TIMERs,
+        UCPD, I2S, I2C, LPTIM, ADC, QSPI)\end{DoxyVerb}
+
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 

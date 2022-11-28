@@ -1,0 +1,54 @@
+\hypertarget{group___h_a_l___exported___functions___group1}{}\doxysection{HAL\+\_\+\+Exported\+\_\+\+Functions\+\_\+\+Group1}
+\label{group___h_a_l___exported___functions___group1}\index{HAL\_Exported\_Functions\_Group1@{HAL\_Exported\_Functions\_Group1}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}\label{group___h_a_l___exported___functions___group1_gaecac54d350c3730e6831eb404e557dc4}} 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+Init} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}\label{group___h_a_l___exported___functions___group1_ga95911129a26afb05232caaaefa31956f}} 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} {\bfseries HAL\+\_\+\+De\+Init} (void)
+\item 
+void \mbox{\hyperlink{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
+\item 
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}\label{group___h_a_l___exported___functions___group1_gadd10d026ef02d00e32e80c9eab9db830}} 
+void {\bfseries HAL\+\_\+\+Msp\+De\+Init} (void)
+\item 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} \mbox{\hyperlink{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}{HAL\+\_\+\+Init\+Tick}} (uint32\+\_\+t Tick\+Priority)
+\begin{DoxyCompactList}\small\item\em This function configures the TIM6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}\label{group___h_a_l___exported___functions___group1_ga879cdb21ef051eb81ec51c18147397d5}} 
+\index{HAL\_Exported\_Functions\_Group1@{HAL\_Exported\_Functions\_Group1}!HAL\_InitTick@{HAL\_InitTick}}
+\index{HAL\_InitTick@{HAL\_InitTick}!HAL\_Exported\_Functions\_Group1@{HAL\_Exported\_Functions\_Group1}}
+\doxysubsubsection{\texorpdfstring{HAL\_InitTick()}{HAL\_InitTick()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\+\_\+\+Status\+Type\+Def}} HAL\+\_\+\+Init\+Tick (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Tick\+Priority }\end{DoxyParamCaption})}
+
+
+
+This function configures the TIM6 as a time base source. The time source is configured to have 1ms time base with a dedicated Tick interrupt priority. 
+
+\begin{DoxyNote}{Note}
+This function is called automatically at the beginning of program after reset by HAL\+\_\+\+Init() or at any time when clock is configured, by HAL\+\_\+\+RCC\+\_\+\+Clock\+Config(). 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Tick\+Priority} & Tick interrupt priority. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HAL} & status \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}\label{group___h_a_l___exported___functions___group1_gae4fb8e66865c87d0ebab74a726a6891f}} 
+\index{HAL\_Exported\_Functions\_Group1@{HAL\_Exported\_Functions\_Group1}!HAL\_MspInit@{HAL\_MspInit}}
+\index{HAL\_MspInit@{HAL\_MspInit}!HAL\_Exported\_Functions\_Group1@{HAL\_Exported\_Functions\_Group1}}
+\doxysubsubsection{\texorpdfstring{HAL\_MspInit()}{HAL\_MspInit()}}
+{\footnotesize\ttfamily void HAL\+\_\+\+Msp\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Initializes the Global MSP. 

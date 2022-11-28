@@ -1,0 +1,266 @@
+\hypertarget{group___r_c_c___private___macros}{}\doxysection{RCC\+\_\+\+Private\+\_\+\+Macros}
+\label{group___r_c_c___private___macros}\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga68584e3b585c1c1770d504a030d0dd34}{IS\+\_\+\+RCC\+\_\+\+OSCILLATORTYPE}}(\+\_\+\+\_\+\+OSCILLATOR\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga3c9bb7f31e4cd8436a41ae33c8908226}{IS\+\_\+\+RCC\+\_\+\+HSE}}(\+\_\+\+\_\+\+HSE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga6c766af016cdc1d63f1ed64c5082737c}{IS\+\_\+\+RCC\+\_\+\+LSE}}(\+\_\+\+\_\+\+LSE\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga230f351a740560f6b51cdc4b7051606e}\label{group___r_c_c___private___macros_ga230f351a740560f6b51cdc4b7051606e}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+HSI}(\+\_\+\+\_\+\+HSI\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HSI\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c___h_s_i___config_ga1b34d37d3b51afec0758b3ddc7a7e665}{RCC\+\_\+\+HSI\+\_\+\+OFF}}) $\vert$$\vert$ ((\+\_\+\+\_\+\+HSI\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c___h_s_i___config_ga0bf09ef9e46d5da25cced7b3122f92f5}{RCC\+\_\+\+HSI\+\_\+\+ON}}))
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga1715cf2ee55db0d5b63b242ed63dab5b}\label{group___r_c_c___private___macros_ga1715cf2ee55db0d5b63b242ed63dab5b}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+HSI\+\_\+\+CALIBRATION\+\_\+\+VALUE}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab79c333962d5bd80636eca9997759804}{RCC\+\_\+\+ICSCR\+\_\+\+HSITRIM}} $>$$>$ RCC\+\_\+\+ICSCR\+\_\+\+HSITRIM\+\_\+\+Pos))
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga2961f77a4ee7870f36d9f7f6729a0608}\label{group___r_c_c___private___macros_ga2961f77a4ee7870f36d9f7f6729a0608}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+LSI}(\+\_\+\+\_\+\+LSI\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+LSI\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c___l_s_i___config_gaa1710927d79a2032f87f039c4a27356a}{RCC\+\_\+\+LSI\+\_\+\+OFF}}) $\vert$$\vert$ ((\+\_\+\+\_\+\+LSI\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c___l_s_i___config_ga6b364ac3500e60b6bff695ee518c87d6}{RCC\+\_\+\+LSI\+\_\+\+ON}}))
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga341de353db843f9de1ab2ff250ec9d5e}\label{group___r_c_c___private___macros_ga341de353db843f9de1ab2ff250ec9d5e}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+HSI48}(\+\_\+\+\_\+\+HSI48\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HSI48\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c___h_s_i48___config_ga5a653d6f271d56c96b63e02468ed3b65}{RCC\+\_\+\+HSI48\+\_\+\+OFF}}) $\vert$$\vert$ ((\+\_\+\+\_\+\+HSI48\+\_\+\+\_\+) == \mbox{\hyperlink{group___r_c_c___h_s_i48___config_gabfc9b19a84e1ac8bee6ff607afc10b0d}{RCC\+\_\+\+HSI48\+\_\+\+ON}}))
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga4e8a1f3a151c3011e915df4da312dd73}{IS\+\_\+\+RCC\+\_\+\+PLL}}(\+\_\+\+\_\+\+PLL\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga13202f72c93b28705bd35aab3cbd951f}{IS\+\_\+\+RCC\+\_\+\+PLLSOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_gaefa3c5466a7e3c5adb779ce18f788a3c}\label{group___r_c_c___private___macros_gaefa3c5466a7e3c5adb779ce18f788a3c}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+VALUE}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~((1U $<$= (\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= 16U))
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga9384dbb3bd0ec1c24093a9ecf075ce8b}\label{group___r_c_c___private___macros_ga9384dbb3bd0ec1c24093a9ecf075ce8b}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLN\+\_\+\+VALUE}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~((8U $<$= (\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= 127U))
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga0e08547541611b4964de8ac95159365f}\label{group___r_c_c___private___macros_ga0e08547541611b4964de8ac95159365f}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+VALUE}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $>$= 2U) \&\& ((\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+) $<$= 31U))
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga6d4a925c5ed1cd0deec4f390d290477b}{IS\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+VALUE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga276557dff8cad401f08c524ff17c4e12}{IS\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+VALUE}}(\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga5639cc7f37f0cb7ce1e5d0f3918a48ba}\label{group___r_c_c___private___macros_ga5639cc7f37f0cb7ce1e5d0f3918a48ba}} 
+\#define {\bfseries IS\+\_\+\+RCC\+\_\+\+CLOCKTYPE}(\+\_\+\+\_\+\+CLK\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+CLK\+\_\+\+\_\+) \& \mbox{\hyperlink{group___r_c_c___private___constants_ga3817129a019f0bb1575a57f5f6a29e02}{RCC\+\_\+\+CLOCKTYPE\+\_\+\+ALL}}) != 0x00\+UL) \&\& (((\+\_\+\+\_\+\+CLK\+\_\+\+\_\+) \& $\sim$\mbox{\hyperlink{group___r_c_c___private___constants_ga3817129a019f0bb1575a57f5f6a29e02}{RCC\+\_\+\+CLOCKTYPE\+\_\+\+ALL}}) == 0x00\+UL))
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga7dc6fce00c2191e691fb2b17dd176d65}{IS\+\_\+\+RCC\+\_\+\+SYSCLKSOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga0f01b4d9e55bcb7fcbd2c08f6d7bb5b3}{IS\+\_\+\+RCC\+\_\+\+HCLK}}(\+\_\+\+\_\+\+HCLK\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga378b8fcc2e64326f6f98b30cb3fc22d9}{IS\+\_\+\+RCC\+\_\+\+PCLK}}(\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_gacd1d98013cd9a28e8b1544adf931e7b3}{IS\+\_\+\+RCC\+\_\+\+RTCCLKSOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga5368a0b11fbade7ce74f2903dd39b46a}{IS\+\_\+\+RCC\+\_\+\+MCO}}(\+\_\+\+\_\+\+MCOX\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_ga17690472f266a032db5324907a0ddc31}{IS\+\_\+\+RCC\+\_\+\+MCO1\+SOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_gab281379d2f6361a20a082259be63af0f}{IS\+\_\+\+RCC\+\_\+\+MCODIV}}(\+\_\+\+\_\+\+DIV\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___private___macros_gad52778efb019c0bae5ac6dfb3592c290}{IS\+\_\+\+RCC\+\_\+\+LSE\+\_\+\+DRIVE}}(\+\_\+\+\_\+\+DRIVE\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga0f01b4d9e55bcb7fcbd2c08f6d7bb5b3}\label{group___r_c_c___private___macros_ga0f01b4d9e55bcb7fcbd2c08f6d7bb5b3}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_HCLK@{IS\_RCC\_HCLK}}
+\index{IS\_RCC\_HCLK@{IS\_RCC\_HCLK}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_HCLK}{IS\_RCC\_HCLK}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+HCLK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HCLK\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga226f5bf675015ea677868132b6b83494}{RCC\_SYSCLK\_DIV1}})   || ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_gac37c0610458a92e3cb32ec81014625c3}{RCC\_SYSCLK\_DIV2}})   || \(\backslash\)}
+\DoxyCodeLine{                               ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga6fd3652d6853563cdf388a4386b9d22f}{RCC\_SYSCLK\_DIV4}})   || ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga7def31373854ba9c72bb76b1d13e3aad}{RCC\_SYSCLK\_DIV8}})   || \(\backslash\)}
+\DoxyCodeLine{                               ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga895462b261e03eade3d0139cc1327a51}{RCC\_SYSCLK\_DIV16}})  || ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga73814b5a7ee000687ec8334637ca5b14}{RCC\_SYSCLK\_DIV64}})  || \(\backslash\)}
+\DoxyCodeLine{                               ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga43eddf4d4160df30548a714dce102ad8}{RCC\_SYSCLK\_DIV128}}) || ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_ga94956d6e9c3a78230bf660b838f987e2}{RCC\_SYSCLK\_DIV256}}) || \(\backslash\)}
+\DoxyCodeLine{                               ((\_\_HCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_h_b___clock___source_gabe18a9d55c0858bbfe3db657fb64c76d}{RCC\_SYSCLK\_DIV512}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga3c9bb7f31e4cd8436a41ae33c8908226}\label{group___r_c_c___private___macros_ga3c9bb7f31e4cd8436a41ae33c8908226}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_HSE@{IS\_RCC\_HSE}}
+\index{IS\_RCC\_HSE@{IS\_RCC\_HSE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_HSE}{IS\_RCC\_HSE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+HSE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HSE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              (((\_\_HSE\_\_) == \mbox{\hyperlink{group___r_c_c___h_s_e___config_ga1616626d23fbce440398578855df6f97}{RCC\_HSE\_OFF}}) || ((\_\_HSE\_\_) == \mbox{\hyperlink{group___r_c_c___h_s_e___config_gabc4f70a44776c557af20496b04d9a9db}{RCC\_HSE\_ON}}) || \(\backslash\)}
+\DoxyCodeLine{                              ((\_\_HSE\_\_) == \mbox{\hyperlink{group___r_c_c___h_s_e___config_ga5ca515db2d5c4d5bdb9ee3d154df2704}{RCC\_HSE\_BYPASS}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga6c766af016cdc1d63f1ed64c5082737c}\label{group___r_c_c___private___macros_ga6c766af016cdc1d63f1ed64c5082737c}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_LSE@{IS\_RCC\_LSE}}
+\index{IS\_RCC\_LSE@{IS\_RCC\_LSE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_LSE}{IS\_RCC\_LSE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+LSE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+LSE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              (((\_\_LSE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e___config_ga6645c27708d0cad1a4ab61d2abb24c77}{RCC\_LSE\_OFF}}) || ((\_\_LSE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e___config_gac981ea636c2f215e4473901e0912f55a}{RCC\_LSE\_ON}}) || \(\backslash\)}
+\DoxyCodeLine{                              ((\_\_LSE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e___config_gaad580157edbae878edbcc83c5a68e767}{RCC\_LSE\_BYPASS}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_gad52778efb019c0bae5ac6dfb3592c290}\label{group___r_c_c___private___macros_gad52778efb019c0bae5ac6dfb3592c290}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_LSE\_DRIVE@{IS\_RCC\_LSE\_DRIVE}}
+\index{IS\_RCC\_LSE\_DRIVE@{IS\_RCC\_LSE\_DRIVE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_LSE\_DRIVE}{IS\_RCC\_LSE\_DRIVE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+LSE\+\_\+\+DRIVE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+DRIVE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((\_\_DRIVE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e_drive___config_gab5fa5b50304710db2d7f6d583a225da3}{RCC\_LSEDRIVE\_LOW}})        || \(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_DRIVE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e_drive___config_ga1151beb7f9869e91fe7617936ad0efff}{RCC\_LSEDRIVE\_MEDIUMLOW}})  || \(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_DRIVE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e_drive___config_ga295eed1e1368d526fa0f6356ceecbc48}{RCC\_LSEDRIVE\_MEDIUMHIGH}}) || \(\backslash\)}
+\DoxyCodeLine{                                     ((\_\_DRIVE\_\_) == \mbox{\hyperlink{group___r_c_c___l_s_e_drive___config_ga90b0854f3813d7ab2781519bfa58fd95}{RCC\_LSEDRIVE\_HIGH}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga5368a0b11fbade7ce74f2903dd39b46a}\label{group___r_c_c___private___macros_ga5368a0b11fbade7ce74f2903dd39b46a}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_MCO@{IS\_RCC\_MCO}}
+\index{IS\_RCC\_MCO@{IS\_RCC\_MCO}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_MCO}{IS\_RCC\_MCO}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+MCO(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MCOX\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                              (((\_\_MCOX\_\_) == RCC\_MCO\_PA8) || \(\backslash\)}
+\DoxyCodeLine{                              ((\_\_MCOX\_\_) == RCC\_MCO\_PG10))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga17690472f266a032db5324907a0ddc31}\label{group___r_c_c___private___macros_ga17690472f266a032db5324907a0ddc31}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_MCO1SOURCE@{IS\_RCC\_MCO1SOURCE}}
+\index{IS\_RCC\_MCO1SOURCE@{IS\_RCC\_MCO1SOURCE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_MCO1SOURCE}{IS\_RCC\_MCO1SOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+MCO1\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_ga725a16362f3324ef5866dc5a1ff07cf5}{RCC\_MCO1SOURCE\_NOCLOCK}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_gae8ca2959a1252ecd319843da02c79526}{RCC\_MCO1SOURCE\_SYSCLK}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_gad99c388c455852143220397db3730635}{RCC\_MCO1SOURCE\_HSI}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_ga5582d2ab152eb440a6cc3ae4833b043f}{RCC\_MCO1SOURCE\_HSE}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_ga79d888f2238eaa4e4b8d02b3900ea18b}{RCC\_MCO1SOURCE\_PLLCLK}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_ga4ada18d28374df66c1b6da16606c23d8}{RCC\_MCO1SOURCE\_LSI}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_gaa01b6cb196df3a4ad690f8bcaa4d0621}{RCC\_MCO1SOURCE\_LSE}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_o1___clock___source_ga488078873284a8d9cbb85bd867b83b75}{RCC\_MCO1SOURCE\_HSI48}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_gab281379d2f6361a20a082259be63af0f}\label{group___r_c_c___private___macros_gab281379d2f6361a20a082259be63af0f}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_MCODIV@{IS\_RCC\_MCODIV}}
+\index{IS\_RCC\_MCODIV@{IS\_RCC\_MCODIV}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_MCODIV}{IS\_RCC\_MCODIV}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+MCODIV(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+DIV\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((\_\_DIV\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_ox___clock___prescaler_ga438d8c3bead4e1ec5dd5757cb0313d53}{RCC\_MCODIV\_1}}) || ((\_\_DIV\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_ox___clock___prescaler_ga6198330847077f4da351915518140bfc}{RCC\_MCODIV\_2}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((\_\_DIV\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_ox___clock___prescaler_ga1bdc2eb56aaeb53dc3ca5cd72f22d4c8}{RCC\_MCODIV\_4}}) || ((\_\_DIV\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_ox___clock___prescaler_gadb84d9a10db2c49376be8fada619fe08}{RCC\_MCODIV\_8}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((\_\_DIV\_\_) == \mbox{\hyperlink{group___r_c_c___m_c_ox___clock___prescaler_ga3ab3ab9547ef8800355111517b547882}{RCC\_MCODIV\_16}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga68584e3b585c1c1770d504a030d0dd34}\label{group___r_c_c___private___macros_ga68584e3b585c1c1770d504a030d0dd34}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_OSCILLATORTYPE@{IS\_RCC\_OSCILLATORTYPE}}
+\index{IS\_RCC\_OSCILLATORTYPE@{IS\_RCC\_OSCILLATORTYPE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_OSCILLATORTYPE}{IS\_RCC\_OSCILLATORTYPE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+OSCILLATORTYPE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+OSCILLATOR\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                               (((\_\_OSCILLATOR\_\_) == \mbox{\hyperlink{group___r_c_c___oscillator___type_ga5a790362c5d7c4263f0f75a7367dd6b9}{RCC\_OSCILLATORTYPE\_NONE}})                               || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_OSCILLATOR\_\_) \& \mbox{\hyperlink{group___r_c_c___oscillator___type_ga28cacd402dec84e548c9e4ba86d4603f}{RCC\_OSCILLATORTYPE\_HSE}})   == \mbox{\hyperlink{group___r_c_c___oscillator___type_ga28cacd402dec84e548c9e4ba86d4603f}{RCC\_OSCILLATORTYPE\_HSE}})   || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_OSCILLATOR\_\_) \& \mbox{\hyperlink{group___r_c_c___oscillator___type_gaa7ff7cbe9b0c2c511b0d0555e2a32a23}{RCC\_OSCILLATORTYPE\_HSI}})   == \mbox{\hyperlink{group___r_c_c___oscillator___type_gaa7ff7cbe9b0c2c511b0d0555e2a32a23}{RCC\_OSCILLATORTYPE\_HSI}})   || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_OSCILLATOR\_\_) \& \mbox{\hyperlink{group___r_c_c___oscillator___type_ga0dd3e581c81f5044ff0865a5e20eb77b}{RCC\_OSCILLATORTYPE\_HSI48}}) == \mbox{\hyperlink{group___r_c_c___oscillator___type_ga0dd3e581c81f5044ff0865a5e20eb77b}{RCC\_OSCILLATORTYPE\_HSI48}}) || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_OSCILLATOR\_\_) \& \mbox{\hyperlink{group___r_c_c___oscillator___type_ga3b7abb8ce0544cca0aa4550540194ce2}{RCC\_OSCILLATORTYPE\_LSI}})   == \mbox{\hyperlink{group___r_c_c___oscillator___type_ga3b7abb8ce0544cca0aa4550540194ce2}{RCC\_OSCILLATORTYPE\_LSI}})   || \(\backslash\)}
+\DoxyCodeLine{                                               (((\_\_OSCILLATOR\_\_) \& \mbox{\hyperlink{group___r_c_c___oscillator___type_ga7036aec5659343c695d795e04d9152ba}{RCC\_OSCILLATORTYPE\_LSE}})   == \mbox{\hyperlink{group___r_c_c___oscillator___type_ga7036aec5659343c695d795e04d9152ba}{RCC\_OSCILLATORTYPE\_LSE}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga378b8fcc2e64326f6f98b30cb3fc22d9}\label{group___r_c_c___private___macros_ga378b8fcc2e64326f6f98b30cb3fc22d9}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_PCLK@{IS\_RCC\_PCLK}}
+\index{IS\_RCC\_PCLK@{IS\_RCC\_PCLK}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_PCLK}{IS\_RCC\_PCLK}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+PCLK(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PCLK\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((\_\_PCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_p_b1___a_p_b2___clock___source_ga8e3fcdef0e5d77bb61a52420fe1e9fbc}{RCC\_HCLK\_DIV1}}) || ((\_\_PCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_p_b1___a_p_b2___clock___source_ga4d2ebcf280d85e8449a5fb7b994b5169}{RCC\_HCLK\_DIV2}}) || \(\backslash\)}
+\DoxyCodeLine{                               ((\_\_PCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_p_b1___a_p_b2___clock___source_ga85b5f4fd936e22a3f4df5ed756f6e083}{RCC\_HCLK\_DIV4}}) || ((\_\_PCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_p_b1___a_p_b2___clock___source_gadb18bc60e2c639cb59244bedb54f7bb3}{RCC\_HCLK\_DIV8}}) || \(\backslash\)}
+\DoxyCodeLine{                               ((\_\_PCLK\_\_) == \mbox{\hyperlink{group___r_c_c___a_p_b1___a_p_b2___clock___source_ga27ac27d48360121bc2dc68b99dc8845d}{RCC\_HCLK\_DIV16}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga4e8a1f3a151c3011e915df4da312dd73}\label{group___r_c_c___private___macros_ga4e8a1f3a151c3011e915df4da312dd73}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_PLL@{IS\_RCC\_PLL}}
+\index{IS\_RCC\_PLL@{IS\_RCC\_PLL}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_PLL}{IS\_RCC\_PLL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+PLL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PLL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                             (((\_\_PLL\_\_) == \mbox{\hyperlink{group___r_c_c___p_l_l___config_gae47a612f8e15c32917ee2181362d88f3}{RCC\_PLL\_NONE}}) ||((\_\_PLL\_\_) == \mbox{\hyperlink{group___r_c_c___p_l_l___config_ga3a8d5c8bcb101c6ca1a574729acfa903}{RCC\_PLL\_OFF}}) || \(\backslash\)}
+\DoxyCodeLine{                             ((\_\_PLL\_\_) == \mbox{\hyperlink{group___r_c_c___p_l_l___config_gaf86dbee130304ba5760818f56d34ec91}{RCC\_PLL\_ON}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga6d4a925c5ed1cd0deec4f390d290477b}\label{group___r_c_c___private___macros_ga6d4a925c5ed1cd0deec4f390d290477b}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_PLLQ\_VALUE@{IS\_RCC\_PLLQ\_VALUE}}
+\index{IS\_RCC\_PLLQ\_VALUE@{IS\_RCC\_PLLQ\_VALUE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_PLLQ\_VALUE}{IS\_RCC\_PLLQ\_VALUE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((\_\_VALUE\_\_) == 2U) || ((\_\_VALUE\_\_) == 4U) || \(\backslash\)}
+\DoxyCodeLine{                                      ((\_\_VALUE\_\_) == 6U) || ((\_\_VALUE\_\_) == 8U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga276557dff8cad401f08c524ff17c4e12}\label{group___r_c_c___private___macros_ga276557dff8cad401f08c524ff17c4e12}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_PLLR\_VALUE@{IS\_RCC\_PLLR\_VALUE}}
+\index{IS\_RCC\_PLLR\_VALUE@{IS\_RCC\_PLLR\_VALUE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_PLLR\_VALUE}{IS\_RCC\_PLLR\_VALUE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+VALUE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+VALUE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((\_\_VALUE\_\_) == 2U) || ((\_\_VALUE\_\_) == 4U) || \(\backslash\)}
+\DoxyCodeLine{                                      ((\_\_VALUE\_\_) == 6U) || ((\_\_VALUE\_\_) == 8U))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga13202f72c93b28705bd35aab3cbd951f}\label{group___r_c_c___private___macros_ga13202f72c93b28705bd35aab3cbd951f}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_PLLSOURCE@{IS\_RCC\_PLLSOURCE}}
+\index{IS\_RCC\_PLLSOURCE@{IS\_RCC\_PLLSOURCE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_PLLSOURCE}{IS\_RCC\_PLLSOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+PLLSOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                      (((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___p_l_l___clock___source_ga2a440b01eaeb8f3a6282598fc748ef1f}{RCC\_PLLSOURCE\_NONE}}) || \(\backslash\)}
+\DoxyCodeLine{                                      ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___p_l_l___clock___source_ga0e07703f1ccb3d60f8a47a2dc631c218}{RCC\_PLLSOURCE\_HSI}})  || \(\backslash\)}
+\DoxyCodeLine{                                      ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___p_l_l___clock___source_ga197cea7fe5c2db26fe7fcdb0f99dd4d7}{RCC\_PLLSOURCE\_HSE}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_gacd1d98013cd9a28e8b1544adf931e7b3}\label{group___r_c_c___private___macros_gacd1d98013cd9a28e8b1544adf931e7b3}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_RTCCLKSOURCE@{IS\_RCC\_RTCCLKSOURCE}}
+\index{IS\_RCC\_RTCCLKSOURCE@{IS\_RCC\_RTCCLKSOURCE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_RTCCLKSOURCE}{IS\_RCC\_RTCCLKSOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+RTCCLKSOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga7ac4762e5f4ebe4a04aea58edc9c46a9}{RCC\_RTCCLKSOURCE\_NONE}})   || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga5dca8d63f250a20bd6bc005670d0c150}{RCC\_RTCCLKSOURCE\_LSE}})    || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_gab47a1afb8b5eef9f20f4772961d0a5f4}{RCC\_RTCCLKSOURCE\_LSI}})    || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___r_t_c___clock___source_ga070b819c6eca00d4b89cbf35216c3a92}{RCC\_RTCCLKSOURCE\_HSE\_DIV32}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___r_c_c___private___macros_ga7dc6fce00c2191e691fb2b17dd176d65}\label{group___r_c_c___private___macros_ga7dc6fce00c2191e691fb2b17dd176d65}} 
+\index{RCC\_Private\_Macros@{RCC\_Private\_Macros}!IS\_RCC\_SYSCLKSOURCE@{IS\_RCC\_SYSCLKSOURCE}}
+\index{IS\_RCC\_SYSCLKSOURCE@{IS\_RCC\_SYSCLKSOURCE}!RCC\_Private\_Macros@{RCC\_Private\_Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_RCC\_SYSCLKSOURCE}{IS\_RCC\_SYSCLKSOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+RCC\+\_\+\+SYSCLKSOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                         (((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___system___clock___source_gaaeeb699502e7d7a9f1b5d57fcf1f5095}{RCC\_SYSCLKSOURCE\_HSI}}) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___system___clock___source_ga9116d0627e1e7f33c48e1357b9a35a1c}{RCC\_SYSCLKSOURCE\_HSE}}) || \(\backslash\)}
+\DoxyCodeLine{                                         ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___r_c_c___system___clock___source_ga5caf08ac71d7dd7e7b2e3e421606aca7}{RCC\_SYSCLKSOURCE\_PLLCLK}}))}
+
+\end{DoxyCode}

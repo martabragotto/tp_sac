@@ -1,0 +1,672 @@
+\hypertarget{stm32g4xx__ll__pwr_8h_source}{}\doxysection{stm32g4xx\+\_\+ll\+\_\+pwr.\+h}
+\label{stm32g4xx__ll__pwr_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_pwr.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_pwr.h}}
+\mbox{\hyperlink{stm32g4xx__ll__pwr_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef STM32G4xx\_LL\_PWR\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define STM32G4xx\_LL\_PWR\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx_8h}{stm32g4xx.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#if defined(PWR)}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{41 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{48 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CSBF                    PWR\_SCR\_CSBF}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CWUF                    PWR\_SCR\_CWUF}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CWUF5                   PWR\_SCR\_CWUF5}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CWUF4                   PWR\_SCR\_CWUF4}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CWUF3                   PWR\_SCR\_CWUF3}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CWUF2                   PWR\_SCR\_CWUF2}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#define LL\_PWR\_SCR\_CWUF1                   PWR\_SCR\_CWUF1}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_WUFI                    PWR\_SR1\_WUFI}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_SBF                     PWR\_SR1\_SBF}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_WUF5                    PWR\_SR1\_WUF5}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_WUF4                    PWR\_SR1\_WUF4}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_WUF3                    PWR\_SR1\_WUF3}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_WUF2                    PWR\_SR1\_WUF2}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define LL\_PWR\_SR1\_WUF1                    PWR\_SR1\_WUF1}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#if defined(PWR\_SR2\_PVMO4)}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_PVMO4                   PWR\_SR2\_PVMO4}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_SR2\_PVMO4 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#if defined(PWR\_SR2\_PVMO3)}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_PVMO3                   PWR\_SR2\_PVMO3}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_SR2\_PVMO3 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#if defined(PWR\_SR2\_PVMO2)}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_PVMO2                   PWR\_SR2\_PVMO2}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_SR2\_PVMO2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#if defined(PWR\_SR2\_PVMO1)}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_PVMO1                   PWR\_SR2\_PVMO1}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_SR2\_PVMO1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_PVDO                    PWR\_SR2\_PVDO}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_VOSF                    PWR\_SR2\_VOSF}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_REGLPF                  PWR\_SR2\_REGLPF}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define LL\_PWR\_SR2\_REGLPS                  PWR\_SR2\_REGLPS}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define LL\_PWR\_REGU\_VOLTAGE\_SCALE1         (PWR\_CR1\_VOS\_0)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define LL\_PWR\_REGU\_VOLTAGE\_SCALE2         (PWR\_CR1\_VOS\_1)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define LL\_PWR\_MODE\_STOP0                  (PWR\_CR1\_LPMS\_STOP0)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define LL\_PWR\_MODE\_STOP1                  (PWR\_CR1\_LPMS\_STOP1)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define LL\_PWR\_MODE\_STANDBY                (PWR\_CR1\_LPMS\_STANDBY)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define LL\_PWR\_MODE\_SHUTDOWN               (PWR\_CR1\_LPMS\_SHUTDOWN)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define LL\_PWR\_PVM\_VDDA\_COMP               (PWR\_CR2\_PVME1)     }\textcolor{comment}{/* Monitoring VDDA vs. x.xV */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define LL\_PWR\_PVM\_VDDA\_FASTDAC            (PWR\_CR2\_PVME2)     }\textcolor{comment}{/* Monitoring VDDA vs. x.xV */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME3)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define LL\_PWR\_PVM\_VDDA\_ADC                (PWR\_CR2\_PVME3)     }\textcolor{comment}{/* Monitoring VDDA vs. 1.62V  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME4)}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define LL\_PWR\_PVM\_VDDA\_OPAMP\_DAC          (PWR\_CR2\_PVME4)     }\textcolor{comment}{/* Monitoring VDDA vs. 1x.xV   */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_0                  (PWR\_CR2\_PLS\_LEV0)  }\textcolor{comment}{/* VPVD0 around 2.0 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_1                  (PWR\_CR2\_PLS\_LEV1)  }\textcolor{comment}{/* VPVD1 around 2.2 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_2                  (PWR\_CR2\_PLS\_LEV2)  }\textcolor{comment}{/* VPVD2 around 2.4 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_3                  (PWR\_CR2\_PLS\_LEV3)  }\textcolor{comment}{/* VPVD3 around 2.5 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_4                  (PWR\_CR2\_PLS\_LEV4)  }\textcolor{comment}{/* VPVD4 around 2.6 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_5                  (PWR\_CR2\_PLS\_LEV5)  }\textcolor{comment}{/* VPVD5 around 2.8 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_6                  (PWR\_CR2\_PLS\_LEV6)  }\textcolor{comment}{/* VPVD6 around 2.9 V */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define LL\_PWR\_PVDLEVEL\_7                  (PWR\_CR2\_PLS\_LEV7)  }\textcolor{comment}{/* External input analog voltage   (Compare internally to VREFINT) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define LL\_PWR\_WAKEUP\_PIN1                 (PWR\_CR3\_EWUP1)}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define LL\_PWR\_WAKEUP\_PIN2                 (PWR\_CR3\_EWUP2)}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define LL\_PWR\_WAKEUP\_PIN3                 (PWR\_CR3\_EWUP3)}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define LL\_PWR\_WAKEUP\_PIN4                 (PWR\_CR3\_EWUP4)}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define LL\_PWR\_WAKEUP\_PIN5                 (PWR\_CR3\_EWUP5)}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define LL\_PWR\_BATT\_CHARG\_RESISTOR\_5K      ((uint32\_t)0x00000000)}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define LL\_PWR\_BATT\_CHARGRESISTOR\_1\_5K     (PWR\_CR4\_VBRS)}}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_A                      ((uint32\_t)(\&(PWR-\/>PUCRA)))}}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_B                      ((uint32\_t)(\&(PWR-\/>PUCRB)))}}
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_C                      ((uint32\_t)(\&(PWR-\/>PUCRC)))}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_D                      ((uint32\_t)(\&(PWR-\/>PUCRD)))}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_E                      ((uint32\_t)(\&(PWR-\/>PUCRE)))}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_F                      ((uint32\_t)(\&(PWR-\/>PUCRF)))}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_G                      ((uint32\_t)(\&(PWR-\/>PUCRG)))}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_0                  ((uint32\_t)0x00000001)}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_1                  ((uint32\_t)0x00000002)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_2                  ((uint32\_t)0x00000004)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_3                  ((uint32\_t)0x00000008)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_4                  ((uint32\_t)0x00000010)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_5                  ((uint32\_t)0x00000020)}}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_6                  ((uint32\_t)0x00000040)}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_7                  ((uint32\_t)0x00000080)}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_8                  ((uint32\_t)0x00000100)}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_9                  ((uint32\_t)0x00000200)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_10                 ((uint32\_t)0x00000400)}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_11                 ((uint32\_t)0x00000800)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_12                 ((uint32\_t)0x00001000)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_13                 ((uint32\_t)0x00002000)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_14                 ((uint32\_t)0x00004000)}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define LL\_PWR\_GPIO\_BIT\_15                 ((uint32\_t)0x00008000)}}
+\DoxyCodeLine{215 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define LL\_PWR\_WriteReg(\_\_REG\_\_, \_\_VALUE\_\_) WRITE\_REG(PWR-\/>\_\_REG\_\_, (\_\_VALUE\_\_))}}
+\DoxyCodeLine{231 }
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define LL\_PWR\_ReadReg(\_\_REG\_\_) READ\_REG(PWR-\/>\_\_REG\_\_)}}
+\DoxyCodeLine{247 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{261 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableLowPowerRunMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{262 \{}
+\DoxyCodeLine{263   SET\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\_CR1\_LPR}});}
+\DoxyCodeLine{264 \}}
+\DoxyCodeLine{265 }
+\DoxyCodeLine{271 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableLowPowerRunMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{272 \{}
+\DoxyCodeLine{273   CLEAR\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\_CR1\_LPR}});}
+\DoxyCodeLine{274 \}}
+\DoxyCodeLine{275 }
+\DoxyCodeLine{281 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledLowPowerRunMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{282 \{}
+\DoxyCodeLine{283   uint32\_t temp;}
+\DoxyCodeLine{284   temp = READ\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\_CR1\_LPR}});}
+\DoxyCodeLine{285 }
+\DoxyCodeLine{286   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa4f44f2d21d09b8200203851c6b7bac5}{PWR\_CR1\_LPR}}))?1U:0U);}
+\DoxyCodeLine{287 }
+\DoxyCodeLine{288 \}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{295 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnterLowPowerRunMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{296 \{}
+\DoxyCodeLine{297   LL\_PWR\_EnableLowPowerRunMode();}
+\DoxyCodeLine{298 \}}
+\DoxyCodeLine{299 }
+\DoxyCodeLine{305 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ExitLowPowerRunMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{306 \{}
+\DoxyCodeLine{307   LL\_PWR\_DisableLowPowerRunMode();}
+\DoxyCodeLine{308 \}}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{318 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_SetRegulVoltageScaling(uint32\_t VoltageScaling)}
+\DoxyCodeLine{319 \{}
+\DoxyCodeLine{320   MODIFY\_REG(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}}, VoltageScaling);}
+\DoxyCodeLine{321 \}}
+\DoxyCodeLine{322 }
+\DoxyCodeLine{330 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_GetRegulVoltageScaling(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{331 \{}
+\DoxyCodeLine{332   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac0de060b7b7fbbb12926c28cf5252c61}{PWR\_CR1\_VOS}}));}
+\DoxyCodeLine{333 \}}
+\DoxyCodeLine{334 }
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#if defined(PWR\_CR5\_R1MODE)}}
+\DoxyCodeLine{341 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableRange1BoostMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{342 \{}
+\DoxyCodeLine{343   CLEAR\_BIT(PWR-\/>CR5, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga08a835eda70047190bcb4cb52d59a56a}{PWR\_CR5\_R1MODE}});}
+\DoxyCodeLine{344 \}}
+\DoxyCodeLine{345 }
+\DoxyCodeLine{351 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableRange1BoostMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{352 \{}
+\DoxyCodeLine{353   SET\_BIT(PWR-\/>CR5, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga08a835eda70047190bcb4cb52d59a56a}{PWR\_CR5\_R1MODE}});}
+\DoxyCodeLine{354 \}}
+\DoxyCodeLine{355 }
+\DoxyCodeLine{361 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledRange1BoostMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{362 \{}
+\DoxyCodeLine{363   uint32\_t temp;}
+\DoxyCodeLine{364   temp = READ\_BIT(PWR-\/>CR5, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga08a835eda70047190bcb4cb52d59a56a}{PWR\_CR5\_R1MODE}});}
+\DoxyCodeLine{365 }
+\DoxyCodeLine{366   \textcolor{keywordflow}{return} ((temp == (0U))?1U:0U);}
+\DoxyCodeLine{367 \}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR5\_R1MODE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{375 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableBkUpAccess(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{376 \{}
+\DoxyCodeLine{377   SET\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga09950f76d292eb9d01f72dd825082f1b}{PWR\_CR1\_DBP}});}
+\DoxyCodeLine{378 \}}
+\DoxyCodeLine{379 }
+\DoxyCodeLine{385 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableBkUpAccess(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{386 \{}
+\DoxyCodeLine{387   CLEAR\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga09950f76d292eb9d01f72dd825082f1b}{PWR\_CR1\_DBP}});}
+\DoxyCodeLine{388 \}}
+\DoxyCodeLine{389 }
+\DoxyCodeLine{395 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledBkUpAccess(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{396 \{}
+\DoxyCodeLine{397   uint32\_t temp;}
+\DoxyCodeLine{398   temp = READ\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga09950f76d292eb9d01f72dd825082f1b}{PWR\_CR1\_DBP}});}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{400   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga09950f76d292eb9d01f72dd825082f1b}{PWR\_CR1\_DBP}}))?1U:0U);}
+\DoxyCodeLine{401 }
+\DoxyCodeLine{402 \}}
+\DoxyCodeLine{403 }
+\DoxyCodeLine{414 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_SetPowerMode(uint32\_t LowPowerMode)}
+\DoxyCodeLine{415 \{}
+\DoxyCodeLine{416   MODIFY\_REG(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf533ae177088e3bea24206d65fdb8989}{PWR\_CR1\_LPMS}}, LowPowerMode);}
+\DoxyCodeLine{417 \}}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{428 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_GetPowerMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{429 \{}
+\DoxyCodeLine{430   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(PWR-\/>CR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf533ae177088e3bea24206d65fdb8989}{PWR\_CR1\_LPMS}}));}
+\DoxyCodeLine{431 \}}
+\DoxyCodeLine{432 }
+\DoxyCodeLine{433 \textcolor{preprocessor}{\#if defined(PWR\_CR3\_UCPD\_STDBY)}}
+\DoxyCodeLine{440 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableUCPDStandbyMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{441 \{}
+\DoxyCodeLine{442   SET\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga820b125bd752f00d85092e639dfb8f27}{PWR\_CR3\_UCPD\_STDBY}});}
+\DoxyCodeLine{443 \}}
+\DoxyCodeLine{444 }
+\DoxyCodeLine{452 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableUCPDStandbyMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{453 \{}
+\DoxyCodeLine{454   CLEAR\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga820b125bd752f00d85092e639dfb8f27}{PWR\_CR3\_UCPD\_STDBY}});}
+\DoxyCodeLine{455 \}}
+\DoxyCodeLine{456 }
+\DoxyCodeLine{462 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledUCPDStandbyMode(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{463 \{}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465   \textcolor{keywordflow}{return} ((READ\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga820b125bd752f00d85092e639dfb8f27}{PWR\_CR3\_UCPD\_STDBY}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga820b125bd752f00d85092e639dfb8f27}{PWR\_CR3\_UCPD\_STDBY}})) ? 1UL : 0UL);}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{467 \}}
+\DoxyCodeLine{468 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR3\_UCPD\_STDBY */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{469 }
+\DoxyCodeLine{470 \textcolor{preprocessor}{\#if defined(PWR\_CR3\_UCPD\_DBDIS)}}
+\DoxyCodeLine{481 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableUCPDDeadBattery(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{482 \{}
+\DoxyCodeLine{483   CLEAR\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa424f4b2486bb48f4174b137cd1384ef}{PWR\_CR3\_UCPD\_DBDIS}});}
+\DoxyCodeLine{484 \}}
+\DoxyCodeLine{485 }
+\DoxyCodeLine{496 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableUCPDDeadBattery(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{497 \{}
+\DoxyCodeLine{498   SET\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa424f4b2486bb48f4174b137cd1384ef}{PWR\_CR3\_UCPD\_DBDIS}});}
+\DoxyCodeLine{499 \}}
+\DoxyCodeLine{500 }
+\DoxyCodeLine{511 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledUCPDDeadBattery(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{512 \{}
+\DoxyCodeLine{513   \textcolor{keywordflow}{return} ((READ\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa424f4b2486bb48f4174b137cd1384ef}{PWR\_CR3\_UCPD\_DBDIS}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa424f4b2486bb48f4174b137cd1384ef}{PWR\_CR3\_UCPD\_DBDIS}})) ? 0UL : 1UL);}
+\DoxyCodeLine{514 \}}
+\DoxyCodeLine{515 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR3\_UCPD\_DBDIS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{516 }
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_USV)}}
+\DoxyCodeLine{523 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableVddUSB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{524 \{}
+\DoxyCodeLine{525   SET\_BIT(PWR-\/>CR2, PWR\_CR2\_USV);}
+\DoxyCodeLine{526 \}}
+\DoxyCodeLine{527 }
+\DoxyCodeLine{533 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableVddUSB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{534 \{}
+\DoxyCodeLine{535   CLEAR\_BIT(PWR-\/>CR2, PWR\_CR2\_USV);}
+\DoxyCodeLine{536 \}}
+\DoxyCodeLine{537 }
+\DoxyCodeLine{543 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledVddUSB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{544 \{}
+\DoxyCodeLine{545   uint32\_t temp;}
+\DoxyCodeLine{546   temp = READ\_BIT(PWR-\/>CR2, PWR\_CR2\_USV);}
+\DoxyCodeLine{547 }
+\DoxyCodeLine{548   \textcolor{keywordflow}{return} ((temp == (PWR\_CR2\_USV))?1U:0U);}
+\DoxyCodeLine{549 }
+\DoxyCodeLine{550 \}}
+\DoxyCodeLine{551 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{552 }
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_IOSV)}}
+\DoxyCodeLine{559 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableVddIO2(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{560 \{}
+\DoxyCodeLine{561   SET\_BIT(PWR-\/>CR2, PWR\_CR2\_IOSV);}
+\DoxyCodeLine{562 \}}
+\DoxyCodeLine{563 }
+\DoxyCodeLine{569 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableVddIO2(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{570 \{}
+\DoxyCodeLine{571   CLEAR\_BIT(PWR-\/>CR2, PWR\_CR2\_IOSV);}
+\DoxyCodeLine{572 \}}
+\DoxyCodeLine{573 }
+\DoxyCodeLine{579 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledVddIO2(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{580 \{}
+\DoxyCodeLine{581   uint32\_t temp;}
+\DoxyCodeLine{582   temp = READ\_BIT(PWR-\/>CR2, PWR\_CR2\_IOSV);}
+\DoxyCodeLine{583 }
+\DoxyCodeLine{584   \textcolor{keywordflow}{return} ((temp == (PWR\_CR2\_IOSV))?1U:0U);}
+\DoxyCodeLine{585 }
+\DoxyCodeLine{586 \}}
+\DoxyCodeLine{587 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{588 }
+\DoxyCodeLine{604 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnablePVM(uint32\_t PeriphVoltage)}
+\DoxyCodeLine{605 \{}
+\DoxyCodeLine{606   SET\_BIT(PWR-\/>CR2, PeriphVoltage);}
+\DoxyCodeLine{607 \}}
+\DoxyCodeLine{608 }
+\DoxyCodeLine{624 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisablePVM(uint32\_t PeriphVoltage)}
+\DoxyCodeLine{625 \{}
+\DoxyCodeLine{626   CLEAR\_BIT(PWR-\/>CR2, PeriphVoltage);}
+\DoxyCodeLine{627 \}}
+\DoxyCodeLine{628 }
+\DoxyCodeLine{644 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledPVM(uint32\_t PeriphVoltage)}
+\DoxyCodeLine{645 \{}
+\DoxyCodeLine{646   uint32\_t temp;}
+\DoxyCodeLine{647   temp = READ\_BIT(PWR-\/>CR2, PeriphVoltage);}
+\DoxyCodeLine{648 }
+\DoxyCodeLine{649   \textcolor{keywordflow}{return} ((temp == (PeriphVoltage))?1U:0U);}
+\DoxyCodeLine{650 }
+\DoxyCodeLine{651 \}}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{667 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_SetPVDLevel(uint32\_t PVDLevel)}
+\DoxyCodeLine{668 \{}
+\DoxyCodeLine{669   MODIFY\_REG(PWR-\/>CR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf4b697d94b29f811dca702a8dfcd8266}{PWR\_CR2\_PLS}}, PVDLevel);}
+\DoxyCodeLine{670 \}}
+\DoxyCodeLine{671 }
+\DoxyCodeLine{685 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_GetPVDLevel(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{686 \{}
+\DoxyCodeLine{687   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(PWR-\/>CR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf4b697d94b29f811dca702a8dfcd8266}{PWR\_CR2\_PLS}}));}
+\DoxyCodeLine{688 \}}
+\DoxyCodeLine{689 }
+\DoxyCodeLine{695 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnablePVD(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{696 \{}
+\DoxyCodeLine{697   SET\_BIT(PWR-\/>CR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaabd4b7fcf83841d5063a413eb6557bd8}{PWR\_CR2\_PVDE}});}
+\DoxyCodeLine{698 \}}
+\DoxyCodeLine{699 }
+\DoxyCodeLine{705 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisablePVD(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{706 \{}
+\DoxyCodeLine{707   CLEAR\_BIT(PWR-\/>CR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaabd4b7fcf83841d5063a413eb6557bd8}{PWR\_CR2\_PVDE}});}
+\DoxyCodeLine{708 \}}
+\DoxyCodeLine{709 }
+\DoxyCodeLine{715 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledPVD(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{716 \{}
+\DoxyCodeLine{717   uint32\_t temp;}
+\DoxyCodeLine{718   temp = READ\_BIT(PWR-\/>CR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaabd4b7fcf83841d5063a413eb6557bd8}{PWR\_CR2\_PVDE}});}
+\DoxyCodeLine{719 }
+\DoxyCodeLine{720   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaabd4b7fcf83841d5063a413eb6557bd8}{PWR\_CR2\_PVDE}}))?1U:0U);}
+\DoxyCodeLine{721 \}}
+\DoxyCodeLine{722 }
+\DoxyCodeLine{728 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableInternWU(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{729 \{}
+\DoxyCodeLine{730   SET\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga662537dfa859680dd19df44abd902017}{PWR\_CR3\_EIWF}});}
+\DoxyCodeLine{731 \}}
+\DoxyCodeLine{732 }
+\DoxyCodeLine{738 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableInternWU(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{739 \{}
+\DoxyCodeLine{740   CLEAR\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga662537dfa859680dd19df44abd902017}{PWR\_CR3\_EIWF}});}
+\DoxyCodeLine{741 \}}
+\DoxyCodeLine{742 }
+\DoxyCodeLine{748 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledInternWU(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{749 \{}
+\DoxyCodeLine{750   \textcolor{keywordflow}{return} ((READ\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga662537dfa859680dd19df44abd902017}{PWR\_CR3\_EIWF}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga662537dfa859680dd19df44abd902017}{PWR\_CR3\_EIWF}}))?1UL:0UL);}
+\DoxyCodeLine{751 \}}
+\DoxyCodeLine{752 }
+\DoxyCodeLine{758 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnablePUPDCfg(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{759 \{}
+\DoxyCodeLine{760   SET\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae2217dfc0235df242e58c074f5f3f4de}{PWR\_CR3\_APC}});}
+\DoxyCodeLine{761 \}}
+\DoxyCodeLine{762 }
+\DoxyCodeLine{768 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisablePUPDCfg(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{769 \{}
+\DoxyCodeLine{770   CLEAR\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae2217dfc0235df242e58c074f5f3f4de}{PWR\_CR3\_APC}});}
+\DoxyCodeLine{771 \}}
+\DoxyCodeLine{772 }
+\DoxyCodeLine{778 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledPUPDCfg(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{779 \{}
+\DoxyCodeLine{780   uint32\_t temp;}
+\DoxyCodeLine{781   temp = READ\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae2217dfc0235df242e58c074f5f3f4de}{PWR\_CR3\_APC}});}
+\DoxyCodeLine{782 }
+\DoxyCodeLine{783   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gae2217dfc0235df242e58c074f5f3f4de}{PWR\_CR3\_APC}}))?1U:0U);}
+\DoxyCodeLine{784 \}}
+\DoxyCodeLine{785 }
+\DoxyCodeLine{791 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableSRAM2Retention(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{792 \{}
+\DoxyCodeLine{793   SET\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5cd066e703bf15c5cde88b673f99686f}{PWR\_CR3\_RRS}});}
+\DoxyCodeLine{794 \}}
+\DoxyCodeLine{795 }
+\DoxyCodeLine{801 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableSRAM2Retention(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{802 \{}
+\DoxyCodeLine{803   CLEAR\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5cd066e703bf15c5cde88b673f99686f}{PWR\_CR3\_RRS}});}
+\DoxyCodeLine{804 \}}
+\DoxyCodeLine{805 }
+\DoxyCodeLine{811 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledSRAM2Retention(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{812 \{}
+\DoxyCodeLine{813   uint32\_t temp;}
+\DoxyCodeLine{814   temp = READ\_BIT(PWR-\/>CR3, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5cd066e703bf15c5cde88b673f99686f}{PWR\_CR3\_RRS}});}
+\DoxyCodeLine{815 }
+\DoxyCodeLine{816   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga5cd066e703bf15c5cde88b673f99686f}{PWR\_CR3\_RRS}}))?1U:0U);}
+\DoxyCodeLine{817 \}}
+\DoxyCodeLine{818 }
+\DoxyCodeLine{834 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableWakeUpPin(uint32\_t WakeUpPin)}
+\DoxyCodeLine{835 \{}
+\DoxyCodeLine{836   SET\_BIT(PWR-\/>CR3, WakeUpPin);}
+\DoxyCodeLine{837 \}}
+\DoxyCodeLine{838 }
+\DoxyCodeLine{854 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableWakeUpPin(uint32\_t WakeUpPin)}
+\DoxyCodeLine{855 \{}
+\DoxyCodeLine{856   CLEAR\_BIT(PWR-\/>CR3, WakeUpPin);}
+\DoxyCodeLine{857 \}}
+\DoxyCodeLine{858 }
+\DoxyCodeLine{874 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledWakeUpPin(uint32\_t WakeUpPin)}
+\DoxyCodeLine{875 \{}
+\DoxyCodeLine{876   uint32\_t temp;}
+\DoxyCodeLine{877   temp = READ\_BIT(PWR-\/>CR3, WakeUpPin);}
+\DoxyCodeLine{878 }
+\DoxyCodeLine{879   \textcolor{keywordflow}{return} ((temp == (WakeUpPin))?1U:0U);}
+\DoxyCodeLine{880 \}}
+\DoxyCodeLine{881 }
+\DoxyCodeLine{890 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_SetBattChargResistor(uint32\_t Resistor)}
+\DoxyCodeLine{891 \{}
+\DoxyCodeLine{892   MODIFY\_REG(PWR-\/>CR4, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6932c5d73145f26e380271c73ac97a8f}{PWR\_CR4\_VBRS}}, Resistor);}
+\DoxyCodeLine{893 \}}
+\DoxyCodeLine{894 }
+\DoxyCodeLine{902 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_GetBattChargResistor(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{903 \{}
+\DoxyCodeLine{904   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(PWR-\/>CR4, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6932c5d73145f26e380271c73ac97a8f}{PWR\_CR4\_VBRS}}));}
+\DoxyCodeLine{905 \}}
+\DoxyCodeLine{906 }
+\DoxyCodeLine{912 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableBatteryCharging(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{913 \{}
+\DoxyCodeLine{914   SET\_BIT(PWR-\/>CR4, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7cb65a447514614845b72f00250728cb}{PWR\_CR4\_VBE}});}
+\DoxyCodeLine{915 \}}
+\DoxyCodeLine{916 }
+\DoxyCodeLine{922 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableBatteryCharging(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{923 \{}
+\DoxyCodeLine{924   CLEAR\_BIT(PWR-\/>CR4, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7cb65a447514614845b72f00250728cb}{PWR\_CR4\_VBE}});}
+\DoxyCodeLine{925 \}}
+\DoxyCodeLine{926 }
+\DoxyCodeLine{932 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledBatteryCharging(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{933 \{}
+\DoxyCodeLine{934   uint32\_t temp;}
+\DoxyCodeLine{935   temp = READ\_BIT(PWR-\/>CR4, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7cb65a447514614845b72f00250728cb}{PWR\_CR4\_VBE}});}
+\DoxyCodeLine{936 }
+\DoxyCodeLine{937   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7cb65a447514614845b72f00250728cb}{PWR\_CR4\_VBE}}))?1U:0U);}
+\DoxyCodeLine{938 \}}
+\DoxyCodeLine{939 }
+\DoxyCodeLine{955 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_SetWakeUpPinPolarityLow(uint32\_t WakeUpPin)}
+\DoxyCodeLine{956 \{}
+\DoxyCodeLine{957   SET\_BIT(PWR-\/>CR4, WakeUpPin);}
+\DoxyCodeLine{958 \}}
+\DoxyCodeLine{959 }
+\DoxyCodeLine{975 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_SetWakeUpPinPolarityHigh(uint32\_t WakeUpPin)}
+\DoxyCodeLine{976 \{}
+\DoxyCodeLine{977   CLEAR\_BIT(PWR-\/>CR4, WakeUpPin);}
+\DoxyCodeLine{978 \}}
+\DoxyCodeLine{979 }
+\DoxyCodeLine{995 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsWakeUpPinPolarityLow(uint32\_t WakeUpPin)}
+\DoxyCodeLine{996 \{}
+\DoxyCodeLine{997   uint32\_t temp;}
+\DoxyCodeLine{998   temp = READ\_BIT(PWR-\/>CR4, WakeUpPin);}
+\DoxyCodeLine{999 }
+\DoxyCodeLine{1000   \textcolor{keywordflow}{return} ((temp == (WakeUpPin))?1U:0U);}
+\DoxyCodeLine{1001 \}}
+\DoxyCodeLine{1002 }
+\DoxyCodeLine{1041 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableGPIOPullUp(uint32\_t GPIO, uint32\_t GPIONumber)}
+\DoxyCodeLine{1042 \{}
+\DoxyCodeLine{1043   SET\_BIT(*((\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)GPIO), GPIONumber);}
+\DoxyCodeLine{1044 \}}
+\DoxyCodeLine{1045 }
+\DoxyCodeLine{1084 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableGPIOPullUp(uint32\_t GPIO, uint32\_t GPIONumber)}
+\DoxyCodeLine{1085 \{}
+\DoxyCodeLine{1086   CLEAR\_BIT(*((\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)GPIO), GPIONumber);}
+\DoxyCodeLine{1087 \}}
+\DoxyCodeLine{1088 }
+\DoxyCodeLine{1127 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledGPIOPullUp(uint32\_t GPIO, uint32\_t GPIONumber)}
+\DoxyCodeLine{1128 \{}
+\DoxyCodeLine{1129   \textcolor{keywordflow}{return} ((READ\_BIT(*((\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)GPIO), GPIONumber) == (GPIONumber)) ? 1UL : 0UL);}
+\DoxyCodeLine{1130 \}}
+\DoxyCodeLine{1131 }
+\DoxyCodeLine{1170 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_EnableGPIOPullDown(uint32\_t GPIO, uint32\_t GPIONumber)}
+\DoxyCodeLine{1171 \{}
+\DoxyCodeLine{1172   SET\_BIT(*((\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)(GPIO + 4U)), GPIONumber);}
+\DoxyCodeLine{1173 \}}
+\DoxyCodeLine{1174 }
+\DoxyCodeLine{1213 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_DisableGPIOPullDown(uint32\_t GPIO, uint32\_t GPIONumber)}
+\DoxyCodeLine{1214 \{}
+\DoxyCodeLine{1215   CLEAR\_BIT(*((\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)(GPIO + 4U)), GPIONumber);}
+\DoxyCodeLine{1216 \}}
+\DoxyCodeLine{1217 }
+\DoxyCodeLine{1256 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsEnabledGPIOPullDown(uint32\_t GPIO, uint32\_t GPIONumber)}
+\DoxyCodeLine{1257 \{}
+\DoxyCodeLine{1258   \textcolor{keywordflow}{return} ((READ\_BIT(*((\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t *)(GPIO + 4U)), GPIONumber) == (GPIONumber)) ? 1UL : 0UL);}
+\DoxyCodeLine{1259 \}}
+\DoxyCodeLine{1260 }
+\DoxyCodeLine{1274 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_InternWU(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1275 \{}
+\DoxyCodeLine{1276   uint32\_t temp;}
+\DoxyCodeLine{1277   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab9bcd91a779fee2f98a91b1ac734b6c9}{PWR\_SR1\_WUFI}});}
+\DoxyCodeLine{1278 }
+\DoxyCodeLine{1279   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gab9bcd91a779fee2f98a91b1ac734b6c9}{PWR\_SR1\_WUFI}}))?1U:0U);}
+\DoxyCodeLine{1280 }
+\DoxyCodeLine{1281 \}}
+\DoxyCodeLine{1282 }
+\DoxyCodeLine{1288 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_SB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1289 \{}
+\DoxyCodeLine{1290   uint32\_t temp;}
+\DoxyCodeLine{1291   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga52067a339f2800cca29e0373f1b7d5f1}{PWR\_SR1\_SBF}});}
+\DoxyCodeLine{1292 }
+\DoxyCodeLine{1293   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga52067a339f2800cca29e0373f1b7d5f1}{PWR\_SR1\_SBF}}))?1U:0U);}
+\DoxyCodeLine{1294 }
+\DoxyCodeLine{1295 \}}
+\DoxyCodeLine{1296 }
+\DoxyCodeLine{1302 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_WU5(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1303 \{}
+\DoxyCodeLine{1304   uint32\_t temp;}
+\DoxyCodeLine{1305   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac119a7732cd690d01870ee0fa72b4d20}{PWR\_SR1\_WUF5}});}
+\DoxyCodeLine{1306 }
+\DoxyCodeLine{1307   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gac119a7732cd690d01870ee0fa72b4d20}{PWR\_SR1\_WUF5}}))?1U:0U);}
+\DoxyCodeLine{1308 \}}
+\DoxyCodeLine{1309 }
+\DoxyCodeLine{1315 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_WU4(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1316 \{}
+\DoxyCodeLine{1317   uint32\_t temp;}
+\DoxyCodeLine{1318   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga92613bf31b9b2a8d63c24a0a1e8c5516}{PWR\_SR1\_WUF4}});}
+\DoxyCodeLine{1319 }
+\DoxyCodeLine{1320   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga92613bf31b9b2a8d63c24a0a1e8c5516}{PWR\_SR1\_WUF4}}))?1U:0U);}
+\DoxyCodeLine{1321 \}}
+\DoxyCodeLine{1322 }
+\DoxyCodeLine{1328 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_WU3(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1329 \{}
+\DoxyCodeLine{1330   uint32\_t temp;}
+\DoxyCodeLine{1331   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga1ff45092647d089b93361f5cbaf6b1a1}{PWR\_SR1\_WUF3}});}
+\DoxyCodeLine{1332 }
+\DoxyCodeLine{1333   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga1ff45092647d089b93361f5cbaf6b1a1}{PWR\_SR1\_WUF3}}))?1U:0U);}
+\DoxyCodeLine{1334 \}}
+\DoxyCodeLine{1335 }
+\DoxyCodeLine{1341 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_WU2(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1342 \{}
+\DoxyCodeLine{1343   uint32\_t temp;}
+\DoxyCodeLine{1344   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga0cb2045f5b3571c37bba90051c2b5ea6}{PWR\_SR1\_WUF2}});}
+\DoxyCodeLine{1345 }
+\DoxyCodeLine{1346   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga0cb2045f5b3571c37bba90051c2b5ea6}{PWR\_SR1\_WUF2}}))?1U:0U);}
+\DoxyCodeLine{1347 \}}
+\DoxyCodeLine{1348 }
+\DoxyCodeLine{1354 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_WU1(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1355 \{}
+\DoxyCodeLine{1356   uint32\_t temp;}
+\DoxyCodeLine{1357   temp = READ\_BIT(PWR-\/>SR1, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e5ea0407844efe67f89d52468199bf9}{PWR\_SR1\_WUF1}});}
+\DoxyCodeLine{1358 }
+\DoxyCodeLine{1359   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2e5ea0407844efe67f89d52468199bf9}{PWR\_SR1\_WUF1}}))?1U:0U);}
+\DoxyCodeLine{1360 \}}
+\DoxyCodeLine{1361 }
+\DoxyCodeLine{1367 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_SB(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1368 \{}
+\DoxyCodeLine{1369   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gabdddfe059abe4fdb479d6f77d41f5bc5}{PWR\_SCR\_CSBF}});}
+\DoxyCodeLine{1370 \}}
+\DoxyCodeLine{1371 }
+\DoxyCodeLine{1377 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_WU(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1378 \{}
+\DoxyCodeLine{1379   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab617e1bb3dca54f12c80d4c5b3a0ee3c}{PWR\_SCR\_CWUF}});}
+\DoxyCodeLine{1380 \}}
+\DoxyCodeLine{1381 }
+\DoxyCodeLine{1387 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_WU5(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1388 \{}
+\DoxyCodeLine{1389   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf1cc08299b937e0c1c87e24aa153c005}{PWR\_SCR\_CWUF5}});}
+\DoxyCodeLine{1390 \}}
+\DoxyCodeLine{1391 }
+\DoxyCodeLine{1397 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_WU4(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1398 \{}
+\DoxyCodeLine{1399   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga032b297a06e80628d63eb25dd1388268}{PWR\_SCR\_CWUF4}});}
+\DoxyCodeLine{1400 \}}
+\DoxyCodeLine{1401 }
+\DoxyCodeLine{1407 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_WU3(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1408 \{}
+\DoxyCodeLine{1409   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2b435bfeeeb80cd6e640fa6f9210649a}{PWR\_SCR\_CWUF3}});}
+\DoxyCodeLine{1410 \}}
+\DoxyCodeLine{1411 }
+\DoxyCodeLine{1417 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_WU2(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1418 \{}
+\DoxyCodeLine{1419   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga4128b0b9a09d2443ce0e4eef81177a8d}{PWR\_SCR\_CWUF2}});}
+\DoxyCodeLine{1420 \}}
+\DoxyCodeLine{1421 }
+\DoxyCodeLine{1427 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_PWR\_ClearFlag\_WU1(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1428 \{}
+\DoxyCodeLine{1429   WRITE\_REG(PWR-\/>SCR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga2a12f5af4994abe5b34cf7eae3dacf70}{PWR\_SCR\_CWUF1}});}
+\DoxyCodeLine{1430 \}}
+\DoxyCodeLine{1431 }
+\DoxyCodeLine{1437 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_PVMO4(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1438 \{}
+\DoxyCodeLine{1439   uint32\_t temp;}
+\DoxyCodeLine{1440   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gacb35ad6cec90fea4a2a2770204bfa618}{PWR\_SR2\_PVMO4}});}
+\DoxyCodeLine{1441 }
+\DoxyCodeLine{1442   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gacb35ad6cec90fea4a2a2770204bfa618}{PWR\_SR2\_PVMO4}}))?1U:0U);}
+\DoxyCodeLine{1443 }
+\DoxyCodeLine{1444 \}}
+\DoxyCodeLine{1445 }
+\DoxyCodeLine{1451 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_PVMO3(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1452 \{}
+\DoxyCodeLine{1453   uint32\_t temp;}
+\DoxyCodeLine{1454   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaed2a4928dc037f410049cf67cde12a52}{PWR\_SR2\_PVMO3}});}
+\DoxyCodeLine{1455 }
+\DoxyCodeLine{1456   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaed2a4928dc037f410049cf67cde12a52}{PWR\_SR2\_PVMO3}}))?1U:0U);}
+\DoxyCodeLine{1457 }
+\DoxyCodeLine{1458 \}}
+\DoxyCodeLine{1459 }
+\DoxyCodeLine{1460 \textcolor{preprocessor}{\#if defined(PWR\_SR2\_PVMO2)}}
+\DoxyCodeLine{1466 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_PVMO2(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1467 \{}
+\DoxyCodeLine{1468   uint32\_t temp;}
+\DoxyCodeLine{1469   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae475738960817bd81d391791d494a13c}{PWR\_SR2\_PVMO2}});}
+\DoxyCodeLine{1470 }
+\DoxyCodeLine{1471   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gae475738960817bd81d391791d494a13c}{PWR\_SR2\_PVMO2}}))?1U:0U);}
+\DoxyCodeLine{1472 }
+\DoxyCodeLine{1473 \}}
+\DoxyCodeLine{1474 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_SR2\_PVMO2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1475 }
+\DoxyCodeLine{1476 \textcolor{preprocessor}{\#if defined(PWR\_SR2\_PVMO1)}}
+\DoxyCodeLine{1482 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_PVMO1(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1483 \{}
+\DoxyCodeLine{1484   uint32\_t temp;}
+\DoxyCodeLine{1485   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga24326eb66176060b4fbfbf9648b149f8}{PWR\_SR2\_PVMO1}});}
+\DoxyCodeLine{1486 }
+\DoxyCodeLine{1487   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga24326eb66176060b4fbfbf9648b149f8}{PWR\_SR2\_PVMO1}}))?1U:0U);}
+\DoxyCodeLine{1488 }
+\DoxyCodeLine{1489 \}}
+\DoxyCodeLine{1490 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_SR2\_PVMO1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1491 }
+\DoxyCodeLine{1497 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_PVDO(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1498 \{}
+\DoxyCodeLine{1499  uint32\_t temp;}
+\DoxyCodeLine{1500  temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6fea15ae013036a5a24db22a52ca3147}{PWR\_SR2\_PVDO}});}
+\DoxyCodeLine{1501 }
+\DoxyCodeLine{1502  \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga6fea15ae013036a5a24db22a52ca3147}{PWR\_SR2\_PVDO}}))?1U:0U);}
+\DoxyCodeLine{1503 }
+\DoxyCodeLine{1504 \}}
+\DoxyCodeLine{1505 }
+\DoxyCodeLine{1511 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_VOS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1512 \{}
+\DoxyCodeLine{1513   uint32\_t temp;}
+\DoxyCodeLine{1514   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa16cbf806601b43cdbcba10b444c7f81}{PWR\_SR2\_VOSF}});}
+\DoxyCodeLine{1515 }
+\DoxyCodeLine{1516   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa16cbf806601b43cdbcba10b444c7f81}{PWR\_SR2\_VOSF}}))?1U:0U);}
+\DoxyCodeLine{1517 }
+\DoxyCodeLine{1518 \}}
+\DoxyCodeLine{1519 }
+\DoxyCodeLine{1526 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_REGLPF(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1527 \{}
+\DoxyCodeLine{1528   uint32\_t temp;}
+\DoxyCodeLine{1529   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8b4c0d31f1dbb17ccb85a6e582a00b9d}{PWR\_SR2\_REGLPF}});}
+\DoxyCodeLine{1530 }
+\DoxyCodeLine{1531   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga8b4c0d31f1dbb17ccb85a6e582a00b9d}{PWR\_SR2\_REGLPF}}))?1U:0U);}
+\DoxyCodeLine{1532 }
+\DoxyCodeLine{1533 \}}
+\DoxyCodeLine{1534 }
+\DoxyCodeLine{1540 \_\_STATIC\_INLINE uint32\_t LL\_PWR\_IsActiveFlag\_REGLPS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1541 \{}
+\DoxyCodeLine{1542   uint32\_t temp;}
+\DoxyCodeLine{1543   temp = READ\_BIT(PWR-\/>SR2, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga911a8a399671b6dc3fca4948f1ad6872}{PWR\_SR2\_REGLPS}});}
+\DoxyCodeLine{1544 }
+\DoxyCodeLine{1545   \textcolor{keywordflow}{return} ((temp == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga911a8a399671b6dc3fca4948f1ad6872}{PWR\_SR2\_REGLPS}}))?1U:0U);}
+\DoxyCodeLine{1546 }
+\DoxyCodeLine{1547 \}}
+\DoxyCodeLine{1548 }
+\DoxyCodeLine{1553 \textcolor{preprocessor}{\#if defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{1557 ErrorStatus LL\_PWR\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{1561 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_FULL\_LL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1562 }
+\DoxyCodeLine{1566 \textcolor{comment}{/* Old functions name kept for legacy purpose, to be replaced by the          */}}
+\DoxyCodeLine{1567 \textcolor{comment}{/* current functions name.                                                    */}}
+\DoxyCodeLine{1568 \textcolor{preprocessor}{\#define LL\_PWR\_IsActiveFlag\_VOSF  LL\_PWR\_IsActiveFlag\_VOS}}
+\DoxyCodeLine{1569 \textcolor{preprocessor}{\#define LL\_PWR\_EnableUSBDeadBattery            LL\_PWR\_EnableUCPDDeadBattery}}
+\DoxyCodeLine{1570 \textcolor{preprocessor}{\#define LL\_PWR\_DisableUSBDeadBattery           LL\_PWR\_DisableUCPDDeadBattery}}
+\DoxyCodeLine{1571 \textcolor{preprocessor}{\#define LL\_PWR\_IsEnabledUSBDeadBattery         LL\_PWR\_IsEnabledUCPDDeadBattery}}
+\DoxyCodeLine{1572 \textcolor{preprocessor}{\#define LL\_PWR\_EnableDeadBatteryPD             LL\_PWR\_EnableUCPDDeadBattery}}
+\DoxyCodeLine{1573 \textcolor{preprocessor}{\#define LL\_PWR\_DisableDeadBatteryPD            LL\_PWR\_DisableUCPDDeadBattery}}
+\DoxyCodeLine{1574 \textcolor{preprocessor}{\#define LL\_PWR\_EnableUSBStandByModePD          LL\_PWR\_EnableUCPDStandbyMode}}
+\DoxyCodeLine{1575 \textcolor{preprocessor}{\#define LL\_PWR\_EnableStandByModePD             LL\_PWR\_EnableUCPDStandbyMode}}
+\DoxyCodeLine{1576 \textcolor{preprocessor}{\#define LL\_PWR\_DisableUSBStandByModePD         LL\_PWR\_DisableUCPDStandbyMode}}
+\DoxyCodeLine{1577 \textcolor{preprocessor}{\#define LL\_PWR\_DisableStandByModePD            LL\_PWR\_DisableUCPDStandbyMode}}
+\DoxyCodeLine{1578 \textcolor{preprocessor}{\#define LL\_PWR\_IsEnabledUSBStandByModePD       LL\_PWR\_IsEnabledUCPDStandbyMode}}
+\DoxyCodeLine{1591 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* defined(PWR) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1592 }
+\DoxyCodeLine{1597 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{1598 \}}
+\DoxyCodeLine{1599 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1600 }
+\DoxyCodeLine{1601 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_LL\_PWR\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1602 }
+
+\end{DoxyCode}

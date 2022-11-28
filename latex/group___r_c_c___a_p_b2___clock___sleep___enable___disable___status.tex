@@ -1,0 +1,76 @@
+\hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status}{}\doxysection{APB2 Peripheral Clock Sleep Enabled or Disabled Status}
+\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status}\index{APB2 Peripheral Clock Sleep Enabled or Disabled Status@{APB2 Peripheral Clock Sleep Enabled or Disabled Status}}
+
+
+Check whether the APB2 peripheral clock during Low Power (Sleep) mode is enabled or not.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga0e518b9a088d789d700d121db458403a}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga0e518b9a088d789d700d121db458403a}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SYSCFG\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+SYSCFGSMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga0b265851c7557da6b372ff462819caa9}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga0b265851c7557da6b372ff462819caa9}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM1\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga2db4e1edb831584a39e791c16edfea28}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga2db4e1edb831584a39e791c16edfea28}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SPI1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+SPI1\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga9a9f2ce9884285efd81f5fa66242cc9f}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga9a9f2ce9884285efd81f5fa66242cc9f}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM8\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM8\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga1059a391a514543547809a524b4cdf0d}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga1059a391a514543547809a524b4cdf0d}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+USART1\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga44817c5edd50805a6a4a101c463e2578}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga44817c5edd50805a6a4a101c463e2578}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM15\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM15\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_gacb9f81eb8d1fe44a89ac57c1fc3a5b2f}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_gacb9f81eb8d1fe44a89ac57c1fc3a5b2f}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM16\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM16\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga29de4124122709afb5d1497b9de3926b}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga29de4124122709afb5d1497b9de3926b}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM17\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM17\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga9104ce5c4edc990dbea591e10e221d76}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga9104ce5c4edc990dbea591e10e221d76}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SAI1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+ENABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+SAI1\+SMEN) != 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga564fe78887dba5a7da7da1b9f2ffb372}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga564fe78887dba5a7da7da1b9f2ffb372}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SYSCFG\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+SYSCFGSMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga78a957797ebffd3e539bb4c833c29a3d}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga78a957797ebffd3e539bb4c833c29a3d}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM1\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_gab9a82b96c7950398956ee6f58c3d5dda}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_gab9a82b96c7950398956ee6f58c3d5dda}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SPI1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+SPI1\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga605970ce7bf7802eba14e5edf27973f6}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga605970ce7bf7802eba14e5edf27973f6}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM8\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM8\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga2123ed8a27c8cf060899c1e7a923b8c8}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga2123ed8a27c8cf060899c1e7a923b8c8}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+USART1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+USART1\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga0dd995c3eeef42487d978242fcc9327b}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga0dd995c3eeef42487d978242fcc9327b}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM15\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM15\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga9b203fb1b015bc48bd3a707654d501ba}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga9b203fb1b015bc48bd3a707654d501ba}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM16\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM16\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga6907183c65e23c16e829a0a9cbeda1fb}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga6907183c65e23c16e829a0a9cbeda1fb}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+TIM17\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+TIM17\+SMEN) == 0U)
+\item 
+\mbox{\Hypertarget{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga260939535e89c796b23f9c79a23967e6}\label{group___r_c_c___a_p_b2___clock___sleep___enable___disable___status_ga260939535e89c796b23f9c79a23967e6}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+SAI1\+\_\+\+IS\+\_\+\+CLK\+\_\+\+SLEEP\+\_\+\+DISABLED}()~(READ\+\_\+\+BIT(RCC-\/$>$APB2\+SMENR, RCC\+\_\+\+APB2\+SMENR\+\_\+\+SAI1\+SMEN) == 0U)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Check whether the APB2 peripheral clock during Low Power (Sleep) mode is enabled or not. 
+
+\begin{DoxyNote}{Note}
+Peripheral clock gating in SLEEP mode can be used to further reduce power consumption. 
+
+After wakeup from SLEEP mode, the peripheral clock is enabled again. 
+
+By default, all peripheral clocks are enabled during SLEEP mode. 
+\end{DoxyNote}

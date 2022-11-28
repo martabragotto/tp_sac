@@ -1,0 +1,410 @@
+\hypertarget{stm32g4xx__hal__pwr__ex_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+pwr\+\_\+ex.\+h}
+\label{stm32g4xx__hal__pwr__ex_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_pwr\_ex.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_pwr\_ex.h}}
+\mbox{\hyperlink{stm32g4xx__hal__pwr__ex_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_PWR\_EX\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_PWR\_EX\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{49 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{50 \{}
+\DoxyCodeLine{51   uint32\_t \mbox{\hyperlink{struct_p_w_r___p_v_m_type_def_a98d709038c4fc3d39818980d2acecc3f}{PVMType}};   }
+\DoxyCodeLine{53   uint32\_t \mbox{\hyperlink{struct_p_w_r___p_v_m_type_def_aba69d24ee12884f6826495260928e1bc}{Mode}};      }
+\DoxyCodeLine{55 \}\mbox{\hyperlink{struct_p_w_r___p_v_m_type_def}{PWR\_PVMTypeDef}};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define PWR\_WUP\_POLARITY\_SHIFT                  0x05U   }}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN1                 PWR\_CR3\_EWUP1  }}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN2                 PWR\_CR3\_EWUP2  }}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN3                 PWR\_CR3\_EWUP3  }}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN4                 PWR\_CR3\_EWUP4  }}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN5                 PWR\_CR3\_EWUP5  }}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN1\_HIGH            PWR\_CR3\_EWUP1  }}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN2\_HIGH            PWR\_CR3\_EWUP2  }}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN3\_HIGH            PWR\_CR3\_EWUP3  }}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN4\_HIGH            PWR\_CR3\_EWUP4  }}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN5\_HIGH            PWR\_CR3\_EWUP5  }}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN1\_LOW             (uint32\_t)((PWR\_CR4\_WP1<<PWR\_WUP\_POLARITY\_SHIFT) | PWR\_CR3\_EWUP1) }}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN2\_LOW             (uint32\_t)((PWR\_CR4\_WP2<<PWR\_WUP\_POLARITY\_SHIFT) | PWR\_CR3\_EWUP2) }}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN3\_LOW             (uint32\_t)((PWR\_CR4\_WP3<<PWR\_WUP\_POLARITY\_SHIFT) | PWR\_CR3\_EWUP3) }}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN4\_LOW             (uint32\_t)((PWR\_CR4\_WP4<<PWR\_WUP\_POLARITY\_SHIFT) | PWR\_CR3\_EWUP4) }}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define PWR\_WAKEUP\_PIN5\_LOW             (uint32\_t)((PWR\_CR4\_WP5<<PWR\_WUP\_POLARITY\_SHIFT) | PWR\_CR3\_EWUP5) }}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define PWR\_PVM\_1                  PWR\_CR2\_PVME1  }}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define PWR\_PVM\_2                  PWR\_CR2\_PVME2  }}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define PWR\_PVM\_3                  PWR\_CR2\_PVME3  }}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define PWR\_PVM\_4                  PWR\_CR2\_PVME4  }}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_NORMAL                 0x00000000U   }}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_IT\_RISING              0x00010001U   }}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_IT\_FALLING             0x00010002U   }}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_IT\_RISING\_FALLING      0x00010003U   }}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_EVENT\_RISING           0x00020001U   }}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_EVENT\_FALLING          0x00020002U   }}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define PWR\_PVM\_MODE\_EVENT\_RISING\_FALLING   0x00020003U   }}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#if defined(PWR\_CR5\_R1MODE)}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE1\_BOOST  ((uint32\_t)0x00000000)  }}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/*PWR\_CR5\_R1MODE */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE1        PWR\_CR1\_VOS\_0           }}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define PWR\_REGULATOR\_VOLTAGE\_SCALE2        PWR\_CR1\_VOS\_1           }}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define PWR\_BATTERY\_CHARGING\_RESISTOR\_5           0x00000000U           }}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define PWR\_BATTERY\_CHARGING\_RESISTOR\_1\_5         PWR\_CR4\_VBRS          }}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define PWR\_BATTERY\_CHARGING\_DISABLE        0x00000000U}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define PWR\_BATTERY\_CHARGING\_ENABLE         PWR\_CR4\_VBE}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_0   PWR\_PUCRA\_PA0    }}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_1   PWR\_PUCRA\_PA1    }}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_2   PWR\_PUCRA\_PA2    }}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_3   PWR\_PUCRA\_PA3    }}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_4   PWR\_PUCRA\_PA4    }}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_5   PWR\_PUCRA\_PA5    }}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_6   PWR\_PUCRA\_PA6    }}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_7   PWR\_PUCRA\_PA7    }}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_8   PWR\_PUCRA\_PA8    }}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_9   PWR\_PUCRA\_PA9    }}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_10  PWR\_PUCRA\_PA10   }}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_11  PWR\_PUCRA\_PA11   }}
+\DoxyCodeLine{175 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_12  PWR\_PUCRA\_PA12   }}
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_13  PWR\_PUCRA\_PA13   }}
+\DoxyCodeLine{177 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_14  PWR\_PDCRA\_PA14   }}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#define PWR\_GPIO\_BIT\_15  PWR\_PUCRA\_PA15   }}
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define PWR\_GPIO\_A   0x00000000U      }}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define PWR\_GPIO\_B   0x00000001U      }}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define PWR\_GPIO\_C   0x00000002U      }}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define PWR\_GPIO\_D   0x00000003U      }}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define PWR\_GPIO\_E   0x00000004U      }}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define PWR\_GPIO\_F   0x00000005U      }}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define PWR\_GPIO\_G   0x00000006U      }}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define PWR\_EXTI\_LINE\_PVM1  0x00000008U  }}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define PWR\_EXTI\_LINE\_PVM2  0x00000010U  }}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define PWR\_EXTI\_LINE\_PVM3  0x00000020U  }}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define PWR\_EXTI\_LINE\_PVM4  0x00000040U  }}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#define PWR\_EVENT\_LINE\_PVM1     0x00000008U     }}
+\DoxyCodeLine{217 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define PWR\_EVENT\_LINE\_PVM2     0x00000010U     }}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define PWR\_EVENT\_LINE\_PVM3     0x00000020U     }}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define PWR\_EVENT\_LINE\_PVM4     0x00000040U     }}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define PWR\_FLAG\_WUF1                       0x0020U              }}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define PWR\_FLAG\_WUF2                       0x0021U              }}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define PWR\_FLAG\_WUF3                       0x0022U              }}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define PWR\_FLAG\_WUF4                       0x0023U              }}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#define PWR\_FLAG\_WUF5                       0x0024U              }}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define PWR\_FLAG\_WU                         PWR\_SR1\_WUF          }}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define PWR\_FLAG\_SB                         0x0028U              }}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define PWR\_FLAG\_WUFI                       0x002FU              }}
+\DoxyCodeLine{246 \textcolor{preprocessor}{\#define PWR\_FLAG\_REGLPS                     0x0048U              }}
+\DoxyCodeLine{247 \textcolor{preprocessor}{\#define PWR\_FLAG\_REGLPF                     0x0049U              }}
+\DoxyCodeLine{248 \textcolor{preprocessor}{\#define PWR\_FLAG\_VOSF                       0x004AU              }}
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define PWR\_FLAG\_PVDO                       0x004BU              }}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define PWR\_FLAG\_PVMO1                      0x004CU              }}
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define PWR\_FLAG\_PVMO2                      0x004DU              }}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{\#define PWR\_FLAG\_PVMO3                      0x004EU              }}
+\DoxyCodeLine{257 \textcolor{preprocessor}{\#define PWR\_FLAG\_PVMO4                      0x004FU              }}
+\DoxyCodeLine{266 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_IT()   SET\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{277 }
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_IT()  CLEAR\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{283 }
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_EVENT()   SET\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM1)}}
+\DoxyCodeLine{289 }
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_EVENT()  CLEAR\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM1)}}
+\DoxyCodeLine{295 }
+\DoxyCodeLine{300 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_RISING\_EDGE()   SET\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{301 }
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_RISING\_EDGE()  CLEAR\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_FALLING\_EDGE()   SET\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 }
+\DoxyCodeLine{319 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_FALLING\_EDGE()  CLEAR\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{320 }
+\DoxyCodeLine{321 }
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{327 \textcolor{preprocessor}{  do \{                                                    \(\backslash\)}}
+\DoxyCodeLine{328 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{329 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM1\_EXTI\_ENABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{330 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{  do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{338 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM1\_EXTI\_DISABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{340 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_GENERATE\_SWIT() SET\_BIT(EXTI-\/>SWIER2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{347 }
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_GET\_FLAG()  (EXTI-\/>PR2 \& PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM1\_EXTI\_CLEAR\_FLAG()  WRITE\_REG(EXTI-\/>PR2, PWR\_EXTI\_LINE\_PVM1)}}
+\DoxyCodeLine{359 }
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{361 }
+\DoxyCodeLine{362 }
+\DoxyCodeLine{363 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{368 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_IT()   SET\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_IT()  CLEAR\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{375 }
+\DoxyCodeLine{380 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_EVENT()   SET\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM2)}}
+\DoxyCodeLine{381 }
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_EVENT()  CLEAR\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM2)}}
+\DoxyCodeLine{387 }
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_RISING\_EDGE()   SET\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{393 }
+\DoxyCodeLine{398 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_RISING\_EDGE()  CLEAR\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{399 }
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_FALLING\_EDGE()   SET\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{406 }
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_FALLING\_EDGE()  CLEAR\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{412 }
+\DoxyCodeLine{413 }
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{  do \{                                                    \(\backslash\)}}
+\DoxyCodeLine{420 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{421 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM2\_EXTI\_ENABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{422 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{423 }
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{429 \textcolor{preprocessor}{  do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM2\_EXTI\_DISABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{432 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{433 }
+\DoxyCodeLine{438 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_GENERATE\_SWIT() SET\_BIT(EXTI-\/>SWIER2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{439 }
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_GET\_FLAG()  (EXTI-\/>PR2 \& PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{445 }
+\DoxyCodeLine{450 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM2\_EXTI\_CLEAR\_FLAG()  WRITE\_REG(EXTI-\/>PR2, PWR\_EXTI\_LINE\_PVM2)}}
+\DoxyCodeLine{451 }
+\DoxyCodeLine{452 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{453 }
+\DoxyCodeLine{454 }
+\DoxyCodeLine{459 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_IT()   SET\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{465 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_IT()  CLEAR\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{466 }
+\DoxyCodeLine{471 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_EVENT()   SET\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM3)}}
+\DoxyCodeLine{472 }
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_EVENT()  CLEAR\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM3)}}
+\DoxyCodeLine{478 }
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_RISING\_EDGE()   SET\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{489 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_RISING\_EDGE()  CLEAR\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{490 }
+\DoxyCodeLine{495 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_FALLING\_EDGE()   SET\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{496 }
+\DoxyCodeLine{497 }
+\DoxyCodeLine{502 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_FALLING\_EDGE()  CLEAR\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{503 }
+\DoxyCodeLine{504 }
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{510 \textcolor{preprocessor}{  do \{                                                    \(\backslash\)}}
+\DoxyCodeLine{511 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{512 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM3\_EXTI\_ENABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{514 }
+\DoxyCodeLine{519 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{520 \textcolor{preprocessor}{  do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{521 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{522 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM3\_EXTI\_DISABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{523 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_GENERATE\_SWIT() SET\_BIT(EXTI-\/>SWIER2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{530 }
+\DoxyCodeLine{535 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_GET\_FLAG()  (EXTI-\/>PR2 \& PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{536 }
+\DoxyCodeLine{541 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM3\_EXTI\_CLEAR\_FLAG()  WRITE\_REG(EXTI-\/>PR2, PWR\_EXTI\_LINE\_PVM3)}}
+\DoxyCodeLine{542 }
+\DoxyCodeLine{543 }
+\DoxyCodeLine{544 }
+\DoxyCodeLine{545 }
+\DoxyCodeLine{550 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_IT()   SET\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{551 }
+\DoxyCodeLine{556 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_IT()  CLEAR\_BIT(EXTI-\/>IMR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{557 }
+\DoxyCodeLine{562 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_EVENT()   SET\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM4)}}
+\DoxyCodeLine{563 }
+\DoxyCodeLine{568 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_EVENT()  CLEAR\_BIT(EXTI-\/>EMR2, PWR\_EVENT\_LINE\_PVM4)}}
+\DoxyCodeLine{569 }
+\DoxyCodeLine{574 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_RISING\_EDGE()   SET\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_RISING\_EDGE()  CLEAR\_BIT(EXTI-\/>RTSR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{581 }
+\DoxyCodeLine{586 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_FALLING\_EDGE()   SET\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{587 }
+\DoxyCodeLine{588 }
+\DoxyCodeLine{593 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_FALLING\_EDGE()  CLEAR\_BIT(EXTI-\/>FTSR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{594 }
+\DoxyCodeLine{595 }
+\DoxyCodeLine{600 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{601 \textcolor{preprocessor}{  do \{                                                    \(\backslash\)}}
+\DoxyCodeLine{602 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{603 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM4\_EXTI\_ENABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{604 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{605 }
+\DoxyCodeLine{610 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_RISING\_FALLING\_EDGE()  \(\backslash\)}}
+\DoxyCodeLine{611 \textcolor{preprocessor}{  do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{612 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_RISING\_EDGE();             \(\backslash\)}}
+\DoxyCodeLine{613 \textcolor{preprocessor}{    \_\_HAL\_PWR\_PVM4\_EXTI\_DISABLE\_FALLING\_EDGE();            \(\backslash\)}}
+\DoxyCodeLine{614 \textcolor{preprocessor}{  \} while(0)}}
+\DoxyCodeLine{615 }
+\DoxyCodeLine{620 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_GENERATE\_SWIT() SET\_BIT(EXTI-\/>SWIER2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{621 }
+\DoxyCodeLine{626 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_GET\_FLAG()  (EXTI-\/>PR2 \& PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{627 }
+\DoxyCodeLine{632 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_PVM4\_EXTI\_CLEAR\_FLAG()  WRITE\_REG(EXTI-\/>PR2, PWR\_EXTI\_LINE\_PVM4)}}
+\DoxyCodeLine{633 }
+\DoxyCodeLine{634 }
+\DoxyCodeLine{654 \textcolor{preprocessor}{\#define \_\_HAL\_PWR\_VOLTAGESCALING\_CONFIG(\_\_REGULATOR\_\_) do \{                                                     \(\backslash\)}}
+\DoxyCodeLine{655 \textcolor{preprocessor}{                                                            \_\_IO uint32\_t tmpreg;                               \(\backslash\)}}
+\DoxyCodeLine{656 \textcolor{preprocessor}{                                                            MODIFY\_REG(PWR-\/>CR1, PWR\_CR1\_VOS, (\_\_REGULATOR\_\_)); \(\backslash\)}}
+\DoxyCodeLine{657 \textcolor{preprocessor}{                                                            }\textcolor{comment}{/* Delay after an RCC peripheral clock enabling */}\textcolor{preprocessor}{  \(\backslash\)}}
+\DoxyCodeLine{658 \textcolor{preprocessor}{                                                            tmpreg = READ\_BIT(PWR-\/>CR1, PWR\_CR1\_VOS);           \(\backslash\)}}
+\DoxyCodeLine{659 \textcolor{preprocessor}{                                                            UNUSED(tmpreg);                                     \(\backslash\)}}
+\DoxyCodeLine{660 \textcolor{preprocessor}{                                                          \} while(0)}}
+\DoxyCodeLine{661 }
+\DoxyCodeLine{666 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define IS\_PWR\_WAKEUP\_PIN(PIN) (((PIN) == PWR\_WAKEUP\_PIN1) || \(\backslash\)}}
+\DoxyCodeLine{672 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN2) || \(\backslash\)}}
+\DoxyCodeLine{673 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN3) || \(\backslash\)}}
+\DoxyCodeLine{674 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN4) || \(\backslash\)}}
+\DoxyCodeLine{675 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN5) || \(\backslash\)}}
+\DoxyCodeLine{676 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN1\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{677 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN2\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{678 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN3\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{679 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN4\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{680 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN5\_HIGH) || \(\backslash\)}}
+\DoxyCodeLine{681 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN1\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{682 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN2\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{683 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN3\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{684 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN4\_LOW) || \(\backslash\)}}
+\DoxyCodeLine{685 \textcolor{preprocessor}{                                ((PIN) == PWR\_WAKEUP\_PIN5\_LOW))}}
+\DoxyCodeLine{686 }
+\DoxyCodeLine{687 \textcolor{preprocessor}{\#define IS\_PWR\_PVM\_TYPE(TYPE) (((TYPE) == PWR\_PVM\_1) ||\(\backslash\)}}
+\DoxyCodeLine{688 \textcolor{preprocessor}{                               ((TYPE) == PWR\_PVM\_2) ||\(\backslash\)}}
+\DoxyCodeLine{689 \textcolor{preprocessor}{                               ((TYPE) == PWR\_PVM\_3) ||\(\backslash\)}}
+\DoxyCodeLine{690 \textcolor{preprocessor}{                               ((TYPE) == PWR\_PVM\_4))}}
+\DoxyCodeLine{691 }
+\DoxyCodeLine{692 \textcolor{preprocessor}{\#define IS\_PWR\_PVM\_MODE(MODE)  (((MODE) == PWR\_PVM\_MODE\_NORMAL)              ||\(\backslash\)}}
+\DoxyCodeLine{693 \textcolor{preprocessor}{                                ((MODE) == PWR\_PVM\_MODE\_IT\_RISING)           ||\(\backslash\)}}
+\DoxyCodeLine{694 \textcolor{preprocessor}{                                ((MODE) == PWR\_PVM\_MODE\_IT\_FALLING)          ||\(\backslash\)}}
+\DoxyCodeLine{695 \textcolor{preprocessor}{                                ((MODE) == PWR\_PVM\_MODE\_IT\_RISING\_FALLING)   ||\(\backslash\)}}
+\DoxyCodeLine{696 \textcolor{preprocessor}{                                ((MODE) == PWR\_PVM\_MODE\_EVENT\_RISING)        ||\(\backslash\)}}
+\DoxyCodeLine{697 \textcolor{preprocessor}{                                ((MODE) == PWR\_PVM\_MODE\_EVENT\_FALLING)       ||\(\backslash\)}}
+\DoxyCodeLine{698 \textcolor{preprocessor}{                                ((MODE) == PWR\_PVM\_MODE\_EVENT\_RISING\_FALLING))}}
+\DoxyCodeLine{699 }
+\DoxyCodeLine{700 \textcolor{preprocessor}{\#if defined(PWR\_CR5\_R1MODE)}}
+\DoxyCodeLine{701 \textcolor{preprocessor}{\#define IS\_PWR\_VOLTAGE\_SCALING\_RANGE(RANGE) (((RANGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE1\_BOOST) || \(\backslash\)}}
+\DoxyCodeLine{702 \textcolor{preprocessor}{                                             ((RANGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE1)       || \(\backslash\)}}
+\DoxyCodeLine{703 \textcolor{preprocessor}{                                             ((RANGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE2))}}
+\DoxyCodeLine{704 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{705 \textcolor{preprocessor}{\#define IS\_PWR\_VOLTAGE\_SCALING\_RANGE(RANGE) (((RANGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE1) || \(\backslash\)}}
+\DoxyCodeLine{706 \textcolor{preprocessor}{                                             ((RANGE) == PWR\_REGULATOR\_VOLTAGE\_SCALE2))}}
+\DoxyCodeLine{707 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{708 }
+\DoxyCodeLine{709 }
+\DoxyCodeLine{710 \textcolor{preprocessor}{\#define IS\_PWR\_BATTERY\_RESISTOR\_SELECT(RESISTOR) (((RESISTOR) == PWR\_BATTERY\_CHARGING\_RESISTOR\_5) ||\(\backslash\)}}
+\DoxyCodeLine{711 \textcolor{preprocessor}{                                                  ((RESISTOR) == PWR\_BATTERY\_CHARGING\_RESISTOR\_1\_5))}}
+\DoxyCodeLine{712 }
+\DoxyCodeLine{713 \textcolor{preprocessor}{\#define IS\_PWR\_BATTERY\_CHARGING(CHARGING) (((CHARGING) == PWR\_BATTERY\_CHARGING\_DISABLE) ||\(\backslash\)}}
+\DoxyCodeLine{714 \textcolor{preprocessor}{                                           ((CHARGING) == PWR\_BATTERY\_CHARGING\_ENABLE))}}
+\DoxyCodeLine{715 }
+\DoxyCodeLine{716 \textcolor{preprocessor}{\#define IS\_PWR\_GPIO\_BIT\_NUMBER(BIT\_NUMBER) (((BIT\_NUMBER) \& GPIO\_PIN\_MASK) != (uint32\_t)0x00U)}}
+\DoxyCodeLine{717 \textcolor{preprocessor}{\#define IS\_PWR\_GPIO(GPIO) (((GPIO) == PWR\_GPIO\_A) ||\(\backslash\)}}
+\DoxyCodeLine{718 \textcolor{preprocessor}{                           ((GPIO) == PWR\_GPIO\_B) ||\(\backslash\)}}
+\DoxyCodeLine{719 \textcolor{preprocessor}{                           ((GPIO) == PWR\_GPIO\_C) ||\(\backslash\)}}
+\DoxyCodeLine{720 \textcolor{preprocessor}{                           ((GPIO) == PWR\_GPIO\_D) ||\(\backslash\)}}
+\DoxyCodeLine{721 \textcolor{preprocessor}{                           ((GPIO) == PWR\_GPIO\_E) ||\(\backslash\)}}
+\DoxyCodeLine{722 \textcolor{preprocessor}{                           ((GPIO) == PWR\_GPIO\_F) ||\(\backslash\)}}
+\DoxyCodeLine{723 \textcolor{preprocessor}{                           ((GPIO) == PWR\_GPIO\_G))}}
+\DoxyCodeLine{724 }
+\DoxyCodeLine{725 }
+\DoxyCodeLine{740 \textcolor{comment}{/* Peripheral Control functions  **********************************************/}}
+\DoxyCodeLine{741 uint32\_t HAL\_PWREx\_GetVoltageRange(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{742 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_ControlVoltageScaling(uint32\_t VoltageScaling);}
+\DoxyCodeLine{743 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableBatteryCharging(uint32\_t ResistorSelection);}
+\DoxyCodeLine{744 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableBatteryCharging(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{745 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableInternalWakeUpLine(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{746 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableInternalWakeUpLine(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{747 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_EnableGPIOPullUp(uint32\_t GPIO, uint32\_t GPIONumber);}
+\DoxyCodeLine{748 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DisableGPIOPullUp(uint32\_t GPIO, uint32\_t GPIONumber);}
+\DoxyCodeLine{749 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_EnableGPIOPullDown(uint32\_t GPIO, uint32\_t GPIONumber);}
+\DoxyCodeLine{750 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DisableGPIOPullDown(uint32\_t GPIO, uint32\_t GPIONumber);}
+\DoxyCodeLine{751 \textcolor{keywordtype}{void} HAL\_PWREx\_EnablePullUpPullDownConfig(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{752 \textcolor{keywordtype}{void} HAL\_PWREx\_DisablePullUpPullDownConfig(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{753 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableSRAM2ContentRetention(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{754 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableSRAM2ContentRetention(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{755 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{756 \textcolor{keywordtype}{void} HAL\_PWREx\_EnablePVM1(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{757 \textcolor{keywordtype}{void} HAL\_PWREx\_DisablePVM1(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{758 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{759 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{760 \textcolor{keywordtype}{void} HAL\_PWREx\_EnablePVM2(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{761 \textcolor{keywordtype}{void} HAL\_PWREx\_DisablePVM2(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{762 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{763 \textcolor{keywordtype}{void} HAL\_PWREx\_EnablePVM3(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{764 \textcolor{keywordtype}{void} HAL\_PWREx\_DisablePVM3(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{765 \textcolor{keywordtype}{void} HAL\_PWREx\_EnablePVM4(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{766 \textcolor{keywordtype}{void} HAL\_PWREx\_DisablePVM4(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{767 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_ConfigPVM(\mbox{\hyperlink{struct_p_w_r___p_v_m_type_def}{PWR\_PVMTypeDef}} *sConfigPVM);}
+\DoxyCodeLine{768 }
+\DoxyCodeLine{769 \textcolor{comment}{/* Low Power modes configuration functions ************************************/}}
+\DoxyCodeLine{770 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableLowPowerRunMode(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{771 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_PWREx\_DisableLowPowerRunMode(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{772 \textcolor{keywordtype}{void} HAL\_PWREx\_EnterSTOP0Mode(uint8\_t STOPEntry);}
+\DoxyCodeLine{773 \textcolor{keywordtype}{void} HAL\_PWREx\_EnterSTOP1Mode(uint8\_t STOPEntry);}
+\DoxyCodeLine{774 \textcolor{keywordtype}{void} HAL\_PWREx\_EnterSHUTDOWNMode(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{775 }
+\DoxyCodeLine{776 \textcolor{keywordtype}{void} HAL\_PWREx\_PVD\_PVM\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{777 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME1)}}
+\DoxyCodeLine{778 \textcolor{keywordtype}{void} HAL\_PWREx\_PVM1Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{779 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME1 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{780 \textcolor{preprocessor}{\#if defined(PWR\_CR2\_PVME2)}}
+\DoxyCodeLine{781 \textcolor{keywordtype}{void} HAL\_PWREx\_PVM2Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{782 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR2\_PVME2 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{783 \textcolor{keywordtype}{void} HAL\_PWREx\_PVM3Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{784 \textcolor{keywordtype}{void} HAL\_PWREx\_PVM4Callback(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{785 }
+\DoxyCodeLine{786 \textcolor{preprocessor}{\#if defined(PWR\_CR3\_UCPD\_STDBY)}}
+\DoxyCodeLine{787 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableUCPDStandbyMode(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{788 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableUCPDStandbyMode(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{789 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR3\_UCPD\_STDBY */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{790 \textcolor{preprocessor}{\#if defined(PWR\_CR3\_UCPD\_DBDIS)}}
+\DoxyCodeLine{791 \textcolor{keywordtype}{void} HAL\_PWREx\_EnableUCPDDeadBattery(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{792 \textcolor{keywordtype}{void} HAL\_PWREx\_DisableUCPDDeadBattery(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{793 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* PWR\_CR3\_UCPD\_DBDIS */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{794 }
+\DoxyCodeLine{811 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{812 \}}
+\DoxyCodeLine{813 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{814 }
+\DoxyCodeLine{815 }
+\DoxyCodeLine{816 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_PWR\_EX\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{817 }
+
+\end{DoxyCode}

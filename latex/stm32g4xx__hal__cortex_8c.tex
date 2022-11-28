@@ -1,0 +1,90 @@
+\hypertarget{stm32g4xx__hal__cortex_8c}{}\doxysection{Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Src/stm32g4xx\+\_\+hal\+\_\+cortex.c File Reference}
+\label{stm32g4xx__hal__cortex_8c}\index{Drivers/STM32G4xx\_HAL\_Driver/Src/stm32g4xx\_hal\_cortex.c@{Drivers/STM32G4xx\_HAL\_Driver/Src/stm32g4xx\_hal\_cortex.c}}
+
+
+CORTEX HAL module driver. This file provides firmware functions to manage the following functionalities of the CORTEX\+:  
+
+
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal.\+h\char`\"{}}\newline
+
+
+\doxysubsection{Detailed Description}
+CORTEX HAL module driver. This file provides firmware functions to manage the following functionalities of the CORTEX\+: 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team
+\begin{DoxyItemize}
+\item Initialization and Configuration functions
+\item Peripheral Control functions
+\end{DoxyItemize}
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS.
+
+\begin{DoxyVerb}==============================================================================
+                      ##### How to use this driver #####
+==============================================================================
+
+  [..]
+  *** How to configure Interrupts using CORTEX HAL driver ***
+  ===========================================================
+  [..]
+  This section provides functions allowing to configure the NVIC interrupts (IRQ).
+  The Cortex-M4 exceptions are managed by CMSIS functions.
+
+  (#) Configure the NVIC Priority Grouping using HAL_NVIC_SetPriorityGrouping() function.
+  (#) Configure the priority of the selected IRQ Channels using HAL_NVIC_SetPriority().
+  (#) Enable the selected IRQ Channels using HAL_NVIC_EnableIRQ().
+
+   -@- When the NVIC_PRIORITYGROUP_0 is selected, IRQ pre-emption is no more possible.
+       The pending IRQ priority will be managed only by the sub priority.
+
+   -@- IRQ priority order (sorted by highest to lowest priority):
+      (+@) Lowest pre-emption priority
+      (+@) Lowest sub priority
+      (+@) Lowest hardware priority (IRQ number)
+
+  [..]
+  *** How to configure SysTick using CORTEX HAL driver ***
+  ========================================================
+  [..]
+  Setup SysTick Timer for time base.
+
+ (+) The HAL_SYSTICK_Config() function calls the SysTick_Config() function which
+     is a CMSIS function that:
+      (++) Configures the SysTick Reload register with value passed as function parameter.
+      (++) Configures the SysTick IRQ priority to the lowest value (0x0F).
+      (++) Resets the SysTick Counter register.
+      (++) Configures the SysTick Counter clock source to be Core Clock Source (HCLK).
+      (++) Enables the SysTick Interrupt.
+      (++) Starts the SysTick Counter.
+
+ (+) You can change the SysTick Clock source to be HCLK_Div8 by calling the macro
+     __HAL_CORTEX_SYSTICKCLK_CONFIG(SYSTICK_CLKSOURCE_HCLK_DIV8) just after the
+     HAL_SYSTICK_Config() function call. The __HAL_CORTEX_SYSTICKCLK_CONFIG() macro is defined
+     inside the stm32g4xx_hal_cortex.h file.
+
+ (+) You can change the SysTick IRQ priority by calling the
+     HAL_NVIC_SetPriority(SysTick_IRQn,...) function just after the HAL_SYSTICK_Config() function
+     call. The HAL_NVIC_SetPriority() call the NVIC_SetPriority() function which is a CMSIS function.
+
+ (+) To adjust the SysTick time base, use the following formula:
+
+     Reload Value = SysTick Counter Clock (Hz) x  Desired Time base (s)
+     (++) Reload Value is the parameter to be passed for HAL_SYSTICK_Config() function
+     (++) Reload Value should not exceed 0xFFFFFF\end{DoxyVerb}
+
+
+The table below gives the allowed values of the pre-\/emption priority and subpriority according to the Priority Grouping configuration performed by HAL\+\_\+\+NVIC\+\_\+\+Set\+Priority\+Grouping() function.
+
+\DoxyHorRuler{0}
+ \hypertarget{stm32g4xx__hal__cortex_8c_autotoc_md16}{}\doxysubsection{NVIC\+\_\+\+Priority\+Group   $\vert$ NVIC\+\_\+\+IRQChannel\+Preemption\+Priority $\vert$ NVIC\+\_\+\+IRQChannel\+Sub\+Priority  $\vert$       Description}\label{stm32g4xx__hal__cortex_8c_autotoc_md16}
+NVIC\+\_\+\+PRIORITYGROUP\+\_\+0 $\vert$ 0 $\vert$ 0-\/15 $\vert$ 0 bit for pre-\/emption priority \hypertarget{stm32g4xx__hal__cortex_8c_autotoc_md17}{}\doxysubsubsection{$\vert$                                   $\vert$                             $\vert$ 4 bits for subpriority}\label{stm32g4xx__hal__cortex_8c_autotoc_md17}
+NVIC\+\_\+\+PRIORITYGROUP\+\_\+1 $\vert$ 0-\/1 $\vert$ 0-\/7 $\vert$ 1 bit for pre-\/emption priority \hypertarget{stm32g4xx__hal__cortex_8c_autotoc_md18}{}\doxysubsubsection{$\vert$                                   $\vert$                             $\vert$ 3 bits for subpriority}\label{stm32g4xx__hal__cortex_8c_autotoc_md18}
+NVIC\+\_\+\+PRIORITYGROUP\+\_\+2 $\vert$ 0-\/3 $\vert$ 0-\/3 $\vert$ 2 bits for pre-\/emption priority \hypertarget{stm32g4xx__hal__cortex_8c_autotoc_md19}{}\doxysubsubsection{$\vert$                                   $\vert$                             $\vert$ 2 bits for subpriority}\label{stm32g4xx__hal__cortex_8c_autotoc_md19}
+NVIC\+\_\+\+PRIORITYGROUP\+\_\+3 $\vert$ 0-\/7 $\vert$ 0-\/1 $\vert$ 3 bits for pre-\/emption priority \hypertarget{stm32g4xx__hal__cortex_8c_autotoc_md20}{}\doxysubsubsection{$\vert$                                   $\vert$                             $\vert$ 1 bit for subpriority}\label{stm32g4xx__hal__cortex_8c_autotoc_md20}
+NVIC\+\_\+\+PRIORITYGROUP\+\_\+4 $\vert$ 0-\/15 $\vert$ 0 $\vert$ 4 bits for pre-\/emption priority \hypertarget{stm32g4xx__hal__cortex_8c_autotoc_md21}{}\doxysubsection{$\vert$                                   $\vert$                             $\vert$ 0 bit for subpriority}\label{stm32g4xx__hal__cortex_8c_autotoc_md21}

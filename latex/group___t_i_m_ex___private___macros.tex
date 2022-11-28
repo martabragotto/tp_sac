@@ -1,0 +1,206 @@
+\hypertarget{group___t_i_m_ex___private___macros}{}\doxysection{TIM Extended Private Macros}
+\label{group___t_i_m_ex___private___macros}\index{TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga272fd7c1bd226d1b6eb26bd21b0fc5d5}\label{group___t_i_m_ex___private___macros_ga272fd7c1bd226d1b6eb26bd21b0fc5d5}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+REMAP}(\+\_\+\+\_\+\+REMAP\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+REMAP\+\_\+\+\_\+) \& 0x\+FFFC3\+FFFU) == 0x00000000U))
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_gac11038f927b530ed9ff66cbf88b5fe48}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUT}}(\+\_\+\+\_\+\+BREAKINPUT\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_ga8206e59b599377ce8abb3d806ffcf5a1}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_gafea36303ed2332cea12b392d987649e3}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+STATE}}(\+\_\+\+\_\+\+STATE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_ga350bdeccbe405fde9ab61b83a53321ea}{IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+POLARITY}}(\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga6c046891b6a59d63c2623b0847524da8}\label{group___t_i_m_ex___private___macros_ga6c046891b6a59d63c2623b0847524da8}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+TISEL}(\+\_\+\+\_\+\+TISEL\+\_\+\+\_\+)~((((\+\_\+\+\_\+\+TISEL\+\_\+\+\_\+) \& 0x\+F0\+F0\+F0\+F0U) == 0x00000000U))
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga00e67be9a03f9195f57bd0c96218935b}\label{group___t_i_m_ex___private___macros_ga00e67be9a03f9195f57bd0c96218935b}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+TISEL\+\_\+\+TIX\+\_\+\+INSTANCE}(INSTANCE,  CHANNEL)~  (IS\+\_\+\+TIM\+\_\+\+CCX\+\_\+\+INSTANCE(INSTANCE, CHANNEL) \&\& ((CHANNEL) $<$ \mbox{\hyperlink{group___t_i_m___channel_gae7a7e7ef775b2cce4dc5da3821c0703f}{TIM\+\_\+\+CHANNEL\+\_\+5}}))
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga45aa7e0471926553d2d8d039ac8f1084}\label{group___t_i_m_ex___private___macros_ga45aa7e0471926553d2d8d039ac8f1084}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+CLOCKSOURCE\+\_\+\+INSTANCE}(INSTANCE,  \+\_\+\+\_\+\+CLOCK\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga9daaf941265d7a880b86ac72e76f1fa8}\label{group___t_i_m_ex___private___macros_ga9daaf941265d7a880b86ac72e76f1fa8}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+TRIGGER\+\_\+\+INSTANCE}(INSTANCE,  \+\_\+\+\_\+\+SELECTION\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_gac1485c149788af52a519009a5a39f0c0}\label{group___t_i_m_ex___private___macros_gac1485c149788af52a519009a5a39f0c0}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+INTERNAL\+\_\+\+TRIGGEREVENT\+\_\+\+INSTANCE}(INSTANCE,  \+\_\+\+\_\+\+SELECTION\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_ga99905b57e00e93f620f4b3067215404b}{IS\+\_\+\+TIM\+\_\+\+OC\+\_\+\+CHANNEL\+\_\+\+MODE}}(\+\_\+\+\_\+\+MODE\+\_\+\+\_\+,  \+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_gaba0fea155a89e091dcc367e8df9f4da0}{IS\+\_\+\+TIM\+\_\+\+PULSEONCOMPARE\+\_\+\+CHANNEL}}(\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga0b7897081c4e4bfdd2f7e3b29dfc77e2}\label{group___t_i_m_ex___private___macros_ga0b7897081c4e4bfdd2f7e3b29dfc77e2}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+PULSEONCOMPARE\+\_\+\+INSTANCE}(INSTANCE)~IS\+\_\+\+TIM\+\_\+\+CC3\+\_\+\+INSTANCE(INSTANCE)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga597ce8cc544d2b7b10a43026f74cc6a8}\label{group___t_i_m_ex___private___macros_ga597ce8cc544d2b7b10a43026f74cc6a8}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+PULSEONCOMPARE\+\_\+\+WIDTH}(\+\_\+\+\_\+\+WIDTH\+\_\+\+\_\+)~((\+\_\+\+\_\+\+WIDTH\+\_\+\+\_\+) $<$= 0x\+FFU)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga01abca880a265e33dadd3389e7916830}\label{group___t_i_m_ex___private___macros_ga01abca880a265e33dadd3389e7916830}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+PULSEONCOMPARE\+\_\+\+WIDTHPRESCALER}(\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+) $<$= 0x7U)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_ga78d30ba9074d4b276253d737245edf52}{IS\+\_\+\+TIM\+\_\+\+SLAVE\+\_\+\+PRELOAD\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_gaabf84063ff0ddd681ed5b24df2aff017}{IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+POLARITY}}(\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_ga9c9ba3574dc1e4d2c2b1504d6922ee1e}{IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+PRESCALER}}(\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+)
+\item 
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga636a0b8a99364da956b95f7e4dc94f07}\label{group___t_i_m_ex___private___macros_ga636a0b8a99364da956b95f7e4dc94f07}} 
+\#define {\bfseries IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+FILTER}(\+\_\+\+\_\+\+FILTER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+FILTER\+\_\+\+\_\+) $<$= 0x\+FUL)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_ga053bf6ebb98a11ac8705eb6dde675a7d}{IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+POSITION}}(\+\_\+\+\_\+\+POSITION\+\_\+\+\_\+)
+\item 
+\#define \mbox{\hyperlink{group___t_i_m_ex___private___macros_gafefcc25b8db74409799b9fe205f06ff2}{IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+DIRECTION}}(\+\_\+\+\_\+\+DIRECTION\+\_\+\+\_\+)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_gac11038f927b530ed9ff66cbf88b5fe48}\label{group___t_i_m_ex___private___macros_gac11038f927b530ed9ff66cbf88b5fe48}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_BREAKINPUT@{IS\_TIM\_BREAKINPUT}}
+\index{IS\_TIM\_BREAKINPUT@{IS\_TIM\_BREAKINPUT}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_BREAKINPUT}{IS\_TIM\_BREAKINPUT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+BREAKINPUT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+BREAKINPUT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                            (((\_\_BREAKINPUT\_\_) == \mbox{\hyperlink{group___t_i_m_ex___break___input_ga729a1c5fd937111405416cb6dc216162}{TIM\_BREAKINPUT\_BRK}})  || \(\backslash\)}
+\DoxyCodeLine{                                            ((\_\_BREAKINPUT\_\_) == \mbox{\hyperlink{group___t_i_m_ex___break___input_ga2473abcbfc87ad498da670688ae3573d}{TIM\_BREAKINPUT\_BRK2}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga8206e59b599377ce8abb3d806ffcf5a1}\label{group___t_i_m_ex___private___macros_ga8206e59b599377ce8abb3d806ffcf5a1}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_BREAKINPUTSOURCE@{IS\_TIM\_BREAKINPUTSOURCE}}
+\index{IS\_TIM\_BREAKINPUTSOURCE@{IS\_TIM\_BREAKINPUTSOURCE}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_BREAKINPUTSOURCE}{IS\_TIM\_BREAKINPUTSOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              (((\_\_SOURCE\_\_) == TIM\_BREAKINPUTSOURCE\_BKIN)  || \(\backslash\)}
+\DoxyCodeLine{                                              ((\_\_SOURCE\_\_) == TIM\_BREAKINPUTSOURCE\_COMP1) || \(\backslash\)}
+\DoxyCodeLine{                                              ((\_\_SOURCE\_\_) == TIM\_BREAKINPUTSOURCE\_COMP2) || \(\backslash\)}
+\DoxyCodeLine{                                              ((\_\_SOURCE\_\_) == TIM\_BREAKINPUTSOURCE\_COMP3) || \(\backslash\)}
+\DoxyCodeLine{                                              ((\_\_SOURCE\_\_) == TIM\_BREAKINPUTSOURCE\_COMP4))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga350bdeccbe405fde9ab61b83a53321ea}\label{group___t_i_m_ex___private___macros_ga350bdeccbe405fde9ab61b83a53321ea}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_BREAKINPUTSOURCE\_POLARITY@{IS\_TIM\_BREAKINPUTSOURCE\_POLARITY}}
+\index{IS\_TIM\_BREAKINPUTSOURCE\_POLARITY@{IS\_TIM\_BREAKINPUTSOURCE\_POLARITY}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_BREAKINPUTSOURCE\_POLARITY}{IS\_TIM\_BREAKINPUTSOURCE\_POLARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+POLARITY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                         (((\_\_POLARITY\_\_) == \mbox{\hyperlink{group___t_i_m_ex___break___input___source___polarity_ga74e8fc7221fa7e194acb39794b803334}{TIM\_BREAKINPUTSOURCE\_POLARITY\_LOW}})  || \(\backslash\)}
+\DoxyCodeLine{                                                         ((\_\_POLARITY\_\_) == \mbox{\hyperlink{group___t_i_m_ex___break___input___source___polarity_ga0157e9dfd27513767399b58ec78e0693}{TIM\_BREAKINPUTSOURCE\_POLARITY\_HIGH}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_gafea36303ed2332cea12b392d987649e3}\label{group___t_i_m_ex___private___macros_gafea36303ed2332cea12b392d987649e3}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_BREAKINPUTSOURCE\_STATE@{IS\_TIM\_BREAKINPUTSOURCE\_STATE}}
+\index{IS\_TIM\_BREAKINPUTSOURCE\_STATE@{IS\_TIM\_BREAKINPUTSOURCE\_STATE}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_BREAKINPUTSOURCE\_STATE}{IS\_TIM\_BREAKINPUTSOURCE\_STATE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+BREAKINPUTSOURCE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+STATE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                   (((\_\_STATE\_\_) == \mbox{\hyperlink{group___t_i_m_ex___break___input___source___enable_gaa95a5b76d66c123e6234803f73dcafdb}{TIM\_BREAKINPUTSOURCE\_DISABLE}})  || \(\backslash\)}
+\DoxyCodeLine{                                                   ((\_\_STATE\_\_) == \mbox{\hyperlink{group___t_i_m_ex___break___input___source___enable_gaf955feb94df5918b6392c0b0a5dbfc45}{TIM\_BREAKINPUTSOURCE\_ENABLE}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_gafefcc25b8db74409799b9fe205f06ff2}\label{group___t_i_m_ex___private___macros_gafefcc25b8db74409799b9fe205f06ff2}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_ENCODERINDEX\_DIRECTION@{IS\_TIM\_ENCODERINDEX\_DIRECTION}}
+\index{IS\_TIM\_ENCODERINDEX\_DIRECTION@{IS\_TIM\_ENCODERINDEX\_DIRECTION}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_ENCODERINDEX\_DIRECTION}{IS\_TIM\_ENCODERINDEX\_DIRECTION}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+DIRECTION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+DIRECTION\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                           (((\_\_DIRECTION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___direction_ga7a373e0096631bc7637a18b45174215b}{TIM\_ENCODERINDEX\_DIRECTION\_UP\_DOWN}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_DIRECTION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___direction_ga2eb6ca5f117ef12f07c7d0a07a742414}{TIM\_ENCODERINDEX\_DIRECTION\_UP}})      || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_DIRECTION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___direction_ga18067192d482513163c167c50cb0a378}{TIM\_ENCODERINDEX\_DIRECTION\_DOWN}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_gaabf84063ff0ddd681ed5b24df2aff017}\label{group___t_i_m_ex___private___macros_gaabf84063ff0ddd681ed5b24df2aff017}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_ENCODERINDEX\_POLARITY@{IS\_TIM\_ENCODERINDEX\_POLARITY}}
+\index{IS\_TIM\_ENCODERINDEX\_POLARITY@{IS\_TIM\_ENCODERINDEX\_POLARITY}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_ENCODERINDEX\_POLARITY}{IS\_TIM\_ENCODERINDEX\_POLARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+POLARITY(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+POLARITY\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                           (((\_\_POLARITY\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___polarity_gadbee509c4999add9dd1f5918d2a9abcb}{TIM\_ENCODERINDEX\_POLARITY\_INVERTED}})  || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_POLARITY\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___polarity_ga3709570ed16cfe4489717f8958f0ca7d}{TIM\_ENCODERINDEX\_POLARITY\_NONINVERTED}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga053bf6ebb98a11ac8705eb6dde675a7d}\label{group___t_i_m_ex___private___macros_ga053bf6ebb98a11ac8705eb6dde675a7d}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_ENCODERINDEX\_POSITION@{IS\_TIM\_ENCODERINDEX\_POSITION}}
+\index{IS\_TIM\_ENCODERINDEX\_POSITION@{IS\_TIM\_ENCODERINDEX\_POSITION}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_ENCODERINDEX\_POSITION}{IS\_TIM\_ENCODERINDEX\_POSITION}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+POSITION(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+POSITION\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                           (((\_\_POSITION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___position_ga2b212de3ae176d0c159a0d67abc0ca10}{TIM\_ENCODERINDEX\_POSITION\_00}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_POSITION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___position_ga214beeffa0566fa33727fd4aec41c2d4}{TIM\_ENCODERINDEX\_POSITION\_01}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_POSITION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___position_gada94ecf6f59ed81d91e79e342bf93d53}{TIM\_ENCODERINDEX\_POSITION\_10}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_POSITION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___position_gaf2425708892dd17996e66a729b30a014}{TIM\_ENCODERINDEX\_POSITION\_11}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_POSITION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___position_gad507349838800972399958081645e648}{TIM\_ENCODERINDEX\_POSITION\_0}})  || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_POSITION\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___position_ga4b32076f982434dbed55b0e6d6e41c06}{TIM\_ENCODERINDEX\_POSITION\_1}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga9c9ba3574dc1e4d2c2b1504d6922ee1e}\label{group___t_i_m_ex___private___macros_ga9c9ba3574dc1e4d2c2b1504d6922ee1e}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_ENCODERINDEX\_PRESCALER@{IS\_TIM\_ENCODERINDEX\_PRESCALER}}
+\index{IS\_TIM\_ENCODERINDEX\_PRESCALER@{IS\_TIM\_ENCODERINDEX\_PRESCALER}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_ENCODERINDEX\_PRESCALER}{IS\_TIM\_ENCODERINDEX\_PRESCALER}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+ENCODERINDEX\+\_\+\+PRESCALER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+PRESCALER\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                           (((\_\_PRESCALER\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___prescaler_gae7df0dc4f6881c6261ede944ddc641b1}{TIM\_ENCODERINDEX\_PRESCALER\_DIV1}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_PRESCALER\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___prescaler_gacf70fa7f9f9502dd24ec418773ab482f}{TIM\_ENCODERINDEX\_PRESCALER\_DIV2}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_PRESCALER\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___prescaler_gad560c629517ec5f56b32176ddd5101c2}{TIM\_ENCODERINDEX\_PRESCALER\_DIV4}}) || \(\backslash\)}
+\DoxyCodeLine{                                                           ((\_\_PRESCALER\_\_) == \mbox{\hyperlink{group___t_i_m_ex___encoder___index___prescaler_ga3ccdccdee523f67876f830c8c6abda3a}{TIM\_ENCODERINDEX\_PRESCALER\_DIV8}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga99905b57e00e93f620f4b3067215404b}\label{group___t_i_m_ex___private___macros_ga99905b57e00e93f620f4b3067215404b}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_OC\_CHANNEL\_MODE@{IS\_TIM\_OC\_CHANNEL\_MODE}}
+\index{IS\_TIM\_OC\_CHANNEL\_MODE@{IS\_TIM\_OC\_CHANNEL\_MODE}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_OC\_CHANNEL\_MODE}{IS\_TIM\_OC\_CHANNEL\_MODE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+OC\+\_\+\+CHANNEL\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+MODE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (IS\_TIM\_OC\_MODE(\_\_MODE\_\_) \(\backslash\)}
+\DoxyCodeLine{   \&\& ((((\_\_MODE\_\_) == \mbox{\hyperlink{group___t_i_m___output___compare__and___p_w_m__modes_ga61d44917f745204082f797836636b565}{TIM\_OCMODE\_DIRECTION\_OUTPUT}}) || ((\_\_MODE\_\_) == \mbox{\hyperlink{group___t_i_m___output___compare__and___p_w_m__modes_ga8d3fa8a278aa80490b67c28de1e538af}{TIM\_OCMODE\_PULSE\_ON\_COMPARE}})) \(\backslash\)}
+\DoxyCodeLine{       ? (((\_\_CHANNEL\_\_) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}}) || ((\_\_CHANNEL\_\_) == \mbox{\hyperlink{group___t_i_m___channel_gad59ef74820ee8bf77fa1f8d589fde2ac}{TIM\_CHANNEL\_4}})) : (1 == 1)))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_gaba0fea155a89e091dcc367e8df9f4da0}\label{group___t_i_m_ex___private___macros_gaba0fea155a89e091dcc367e8df9f4da0}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_PULSEONCOMPARE\_CHANNEL@{IS\_TIM\_PULSEONCOMPARE\_CHANNEL}}
+\index{IS\_TIM\_PULSEONCOMPARE\_CHANNEL@{IS\_TIM\_PULSEONCOMPARE\_CHANNEL}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_PULSEONCOMPARE\_CHANNEL}{IS\_TIM\_PULSEONCOMPARE\_CHANNEL}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+PULSEONCOMPARE\+\_\+\+CHANNEL(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+CHANNEL\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  (((\_\_CHANNEL\_\_) == \mbox{\hyperlink{group___t_i_m___channel_ga4ea100c1789b178f3cb46721b7257e2d}{TIM\_CHANNEL\_3}}) ||    \(\backslash\)}
+\DoxyCodeLine{   ((\_\_CHANNEL\_\_) == \mbox{\hyperlink{group___t_i_m___channel_gad59ef74820ee8bf77fa1f8d589fde2ac}{TIM\_CHANNEL\_4}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___t_i_m_ex___private___macros_ga78d30ba9074d4b276253d737245edf52}\label{group___t_i_m_ex___private___macros_ga78d30ba9074d4b276253d737245edf52}} 
+\index{TIM Extended Private Macros@{TIM Extended Private Macros}!IS\_TIM\_SLAVE\_PRELOAD\_SOURCE@{IS\_TIM\_SLAVE\_PRELOAD\_SOURCE}}
+\index{IS\_TIM\_SLAVE\_PRELOAD\_SOURCE@{IS\_TIM\_SLAVE\_PRELOAD\_SOURCE}!TIM Extended Private Macros@{TIM Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_TIM\_SLAVE\_PRELOAD\_SOURCE}{IS\_TIM\_SLAVE\_PRELOAD\_SOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+TIM\+\_\+\+SLAVE\+\_\+\+PRELOAD\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SOURCE\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                    (((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___t_i_m_ex___s_m_s___preload___enable_gac0344ce0270cb7f4db9913955c8b3dd0}{TIM\_SMS\_PRELOAD\_SOURCE\_UPDATE}}) \(\backslash\)}
+\DoxyCodeLine{                                                    || ((\_\_SOURCE\_\_) == \mbox{\hyperlink{group___t_i_m_ex___s_m_s___preload___enable_gafcbf792653e42d042fa5f0683eb69160}{TIM\_SMS\_PRELOAD\_SOURCE\_INDEX}}))}
+
+\end{DoxyCode}

@@ -1,0 +1,263 @@
+\hypertarget{group___d_m_a___exported___macros}{}\doxysection{DMA Exported Macros}
+\label{group___d_m_a___exported___macros}\index{DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_gaadcee34f0999c8eafd37de2f69daa0ac}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___d_m_a___exported___types_gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2}{HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+RESET}})
+\begin{DoxyCompactList}\small\item\em Reset DMA handle state. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_ga93900b3ef3f87ef924eb887279a434b4}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR $\vert$=  \mbox{\hyperlink{group___peripheral___registers___bits___definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})
+\begin{DoxyCompactList}\small\item\em Enable the specified DMA Channel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&=  $\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})
+\begin{DoxyCompactList}\small\item\em Disable the specified DMA Channel. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_gabc041fb1c85ea7a3af94e42470ef7f2a}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Return the current DMA Channel transfer complete flag. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_ga2124233229c04ca90b790cd8cddfa98b}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Enable the specified DMA Channel interrupts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_ga2867eab09398df2daac55c3f327654da}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))
+\begin{DoxyCompactList}\small\item\em Disable the specified DMA Channel interrupts. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_ga206f24e6bee4600515b9b6b1ec79365b}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))
+\begin{DoxyCompactList}\small\item\em Check whether the specified DMA Channel interrupt is enabled or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___d_m_a___exported___macros_ga082d691311bac96641dc35a17cfe8e63}{\+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+COUNTER}}(\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNDTR)
+\begin{DoxyCompactList}\small\item\em Return the number of remaining data units in the current DMA Channel transfer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_gabc041fb1c85ea7a3af94e42470ef7f2a}\label{group___d_m_a___exported___macros_gabc041fb1c85ea7a3af94e42470ef7f2a}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_CLEAR\_FLAG@{\_\_HAL\_DMA\_CLEAR\_FLAG}}
+\index{\_\_HAL\_DMA\_CLEAR\_FLAG@{\_\_HAL\_DMA\_CLEAR\_FLAG}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_CLEAR\_FLAG}{\_\_HAL\_DMA\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                    (((uint32\_t)((\_\_HANDLE\_\_)-\/>Instance) > ((uint32\_t)DMA1\_Channel6))? \(\backslash\)}
+\DoxyCodeLine{                                                    (DMA2-\/>IFCR = (\_\_FLAG\_\_)) : (DMA1-\/>IFCR = (\_\_FLAG\_\_)))}
+
+\end{DoxyCode}
+
+
+Return the current DMA Channel transfer complete flag. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified transfer complete flag index.\\
+\hline
+\end{DoxyRetVals}
+Return the current DMA Channel half transfer complete flag. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified half transfer complete flag index.\\
+\hline
+\end{DoxyRetVals}
+Return the current DMA Channel transfer error flag. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified transfer error flag index.\\
+\hline
+\end{DoxyRetVals}
+Return the current DMA Channel Global interrupt flag. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & specified transfer error flag index.\\
+\hline
+\end{DoxyRetVals}
+Get the DMA Channel pending flags. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & Get the specified flag. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+FLAG\+\_\+\+TCx Transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+HTx Half transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+TEx Transfer error flag \item DMA\+\_\+\+FLAG\+\_\+\+GLx Global interrupt flag Where x can be from 1 to 8 to select the DMA Channel x flag. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & state of FLAG (SET or RESET).\\
+\hline
+\end{DoxyRetVals}
+Clear the DMA Channel pending flags. 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the flag to clear. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+FLAG\+\_\+\+TCx Transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+HTx Half transfer complete flag \item DMA\+\_\+\+FLAG\+\_\+\+TEx Transfer error flag \item DMA\+\_\+\+FLAG\+\_\+\+GLx Global interrupt flag Where x can be from 1 to 8 to select the DMA Channel x flag. \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}\label{group___d_m_a___exported___macros_gafeef4c5e8c3f015cdecc0f37bbe063dc}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_DISABLE@{\_\_HAL\_DMA\_DISABLE}}
+\index{\_\_HAL\_DMA\_DISABLE@{\_\_HAL\_DMA\_DISABLE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_DISABLE}{\_\_HAL\_DMA\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&=  $\sim$\mbox{\hyperlink{group___peripheral___registers___bits___definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})}
+
+
+
+Disable the specified DMA Channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_ga2867eab09398df2daac55c3f327654da}\label{group___d_m_a___exported___macros_ga2867eab09398df2daac55c3f327654da}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_DISABLE\_IT@{\_\_HAL\_DMA\_DISABLE\_IT}}
+\index{\_\_HAL\_DMA\_DISABLE\_IT@{\_\_HAL\_DMA\_DISABLE\_IT}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_DISABLE\_IT}{\_\_HAL\_DMA\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \&= $\sim$(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Disable the specified DMA Channel interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the DMA interrupt sources to be enabled or disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+IT\+\_\+\+TC Transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+HT Half transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+TE Transfer error interrupt mask \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_ga93900b3ef3f87ef924eb887279a434b4}\label{group___d_m_a___exported___macros_ga93900b3ef3f87ef924eb887279a434b4}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_ENABLE@{\_\_HAL\_DMA\_ENABLE}}
+\index{\_\_HAL\_DMA\_ENABLE@{\_\_HAL\_DMA\_ENABLE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_ENABLE}{\_\_HAL\_DMA\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR $\vert$=  \mbox{\hyperlink{group___peripheral___registers___bits___definition_gababa3817d21a78079be76bc26b2c10f2}{DMA\+\_\+\+CCR\+\_\+\+EN}})}
+
+
+
+Enable the specified DMA Channel. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_ga2124233229c04ca90b790cd8cddfa98b}\label{group___d_m_a___exported___macros_ga2124233229c04ca90b790cd8cddfa98b}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_ENABLE\_IT@{\_\_HAL\_DMA\_ENABLE\_IT}}
+\index{\_\_HAL\_DMA\_ENABLE\_IT@{\_\_HAL\_DMA\_ENABLE\_IT}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_ENABLE\_IT}{\_\_HAL\_DMA\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR $\vert$= (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+))}
+
+
+
+Enable the specified DMA Channel interrupts. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the DMA interrupt sources to be enabled or disabled. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+IT\+\_\+\+TC Transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+HT Half transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+TE Transfer error interrupt mask \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_ga082d691311bac96641dc35a17cfe8e63}\label{group___d_m_a___exported___macros_ga082d691311bac96641dc35a17cfe8e63}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_COUNTER@{\_\_HAL\_DMA\_GET\_COUNTER}}
+\index{\_\_HAL\_DMA\_GET\_COUNTER@{\_\_HAL\_DMA\_GET\_COUNTER}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_COUNTER}{\_\_HAL\_DMA\_GET\_COUNTER}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+COUNTER(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CNDTR)}
+
+
+
+Return the number of remaining data units in the current DMA Channel transfer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & number of remaining data units in the current DMA Channel transfer. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_ga206f24e6bee4600515b9b6b1ec79365b}\label{group___d_m_a___exported___macros_ga206f24e6bee4600515b9b6b1ec79365b}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_GET\_IT\_SOURCE@{\_\_HAL\_DMA\_GET\_IT\_SOURCE}}
+\index{\_\_HAL\_DMA\_GET\_IT\_SOURCE@{\_\_HAL\_DMA\_GET\_IT\_SOURCE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_GET\_IT\_SOURCE}{\_\_HAL\_DMA\_GET\_IT\_SOURCE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+GET\+\_\+\+IT\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$Instance-\/$>$CCR \& (\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)))}
+
+
+
+Check whether the specified DMA Channel interrupt is enabled or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & specifies the DMA interrupt source to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item DMA\+\_\+\+IT\+\_\+\+TC Transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+HT Half transfer complete interrupt mask \item DMA\+\_\+\+IT\+\_\+\+TE Transfer error interrupt mask \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & state of DMA\+\_\+\+IT (SET or RESET). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___d_m_a___exported___macros_gaadcee34f0999c8eafd37de2f69daa0ac}\label{group___d_m_a___exported___macros_gaadcee34f0999c8eafd37de2f69daa0ac}} 
+\index{DMA Exported Macros@{DMA Exported Macros}!\_\_HAL\_DMA\_RESET\_HANDLE\_STATE@{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}}
+\index{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE@{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}!DMA Exported Macros@{DMA Exported Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}{\_\_HAL\_DMA\_RESET\_HANDLE\_STATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+DMA\+\_\+\+RESET\+\_\+\+HANDLE\+\_\+\+STATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+)-\/$>$State = \mbox{\hyperlink{group___d_m_a___exported___types_gga9c012af359987a240826f29073bbe463a9e7be73da32b8c837cde0318e0d5eed2}{HAL\+\_\+\+DMA\+\_\+\+STATE\+\_\+\+RESET}})}
+
+
+
+Reset DMA handle state. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HANDLE\+\_\+\+\_\+} & DMA handle \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

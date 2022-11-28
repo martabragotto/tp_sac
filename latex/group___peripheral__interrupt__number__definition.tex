@@ -1,0 +1,518 @@
+\hypertarget{group___peripheral__interrupt__number__definition}{}\doxysection{Peripheral\+\_\+interrupt\+\_\+number\+\_\+definition}
+\label{group___peripheral__interrupt__number__definition}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}} \{ \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ade177d9c70c89e084093024b932a4e30}{Non\+Maskable\+Int\+\_\+\+IRQn}} = -\/14
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab1a222a34a32f0ef5ac65e714efc1f85}{Hard\+Fault\+\_\+\+IRQn}} = -\/13
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a33ff1cf7098de65d61b6354fee6cd5aa}{Memory\+Management\+\_\+\+IRQn}} = -\/12
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8693500eff174f16119e96234fee73af}{Bus\+Fault\+\_\+\+IRQn}} = -\/11
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6895237c9443601ac832efa635dd8bbf}{Usage\+Fault\+\_\+\+IRQn}} = -\/10
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a4ce820b3cc6cf3a796b41aadc0cf1237}{SVCall\+\_\+\+IRQn}} = -\/5
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8e033fcef7aed98a31c60a7de206722c}{Debug\+Monitor\+\_\+\+IRQn}} = -\/4
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a03c3cc89984928816d81793fc7bce4a2}{Pend\+SV\+\_\+\+IRQn}} = -\/2
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}{Sys\+Tick\+\_\+\+IRQn}} = -\/1
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a971089d7566ef902dfa0c80ac3a8fd52}{WWDG\+\_\+\+IRQn}} = 0
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8adf63a7857ebc4223f721c0dd73c92b4b}{PVD\+\_\+\+PVM\+\_\+\+IRQn}} = 1
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1b2d04af9cc6d4671d89b04ca905caf9}{RTC\+\_\+\+TAMP\+\_\+\+LSECSS\+\_\+\+IRQn}} = 2
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a173ccc3f31df1f7e43de2ddeab3d1777}{RTC\+\_\+\+WKUP\+\_\+\+IRQn}} = 3
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a91b73963ce243a1d031576d49e137fab}{FLASH\+\_\+\+IRQn}} = 4
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5710b22392997bac63daa5c999730f77}{RCC\+\_\+\+IRQn}} = 5
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}{EXTI0\+\_\+\+IRQn}} = 6
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ae4badcdecdb94eb10129c4c0577c5e19}{EXTI1\+\_\+\+IRQn}} = 7
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a082cb3f7839069a0715fd76c7eacbbc9}{EXTI2\+\_\+\+IRQn}} = 8
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8add889c84ba5de466ced209069e05d602}{EXTI3\+\_\+\+IRQn}} = 9
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab70a40106ca4486770df5d2072d9ac0e}{EXTI4\+\_\+\+IRQn}} = 10
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3ccf41a34f494246c67d3239afa9c97f}{DMA1\+\_\+\+Channel1\+\_\+\+IRQn}} = 11
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1c7824eed187b747bcf8a3b4cd22c8fc}{DMA1\+\_\+\+Channel2\+\_\+\+IRQn}} = 12
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3d575a484e3cb668a42e6f9074112d23}{DMA1\+\_\+\+Channel3\+\_\+\+IRQn}} = 13
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ae36905d55d7cbb8ffb2de44c9b88bb31}{DMA1\+\_\+\+Channel4\+\_\+\+IRQn}} = 14
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8abf98e4379328f74686524faa05bf6177}{DMA1\+\_\+\+Channel5\+\_\+\+IRQn}} = 15
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aab3710849c919f2327eaa001d9e2a7a0}{DMA1\+\_\+\+Channel6\+\_\+\+IRQn}} = 16
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a19cf421347f52d547d370887640c158a}{ADC1\+\_\+2\+\_\+\+IRQn}} = 18
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa1340f31ba333994815917c9cb9fee76}{USB\+\_\+\+HP\+\_\+\+IRQn}} = 19
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a439338b15222bd9bb6c01c31ee63afec}{USB\+\_\+\+LP\+\_\+\+IRQn}} = 20
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3e202b560a588551c0b02f4b2577d256}{FDCAN1\+\_\+\+IT0\+\_\+\+IRQn}} = 21
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af599297929c1aa264aaa7fcb9fbb71f4}{FDCAN1\+\_\+\+IT1\+\_\+\+IRQn}} = 22
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa3aa50e0353871985facf62d055faa52}{EXTI9\+\_\+5\+\_\+\+IRQn}} = 23
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8dc25281ae7cf5a9e866a3b9f69c296e}{TIM1\+\_\+\+BRK\+\_\+\+TIM15\+\_\+\+IRQn}} = 24
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ace5676d446329834dd12515a1ea71646}{TIM1\+\_\+\+UP\+\_\+\+TIM16\+\_\+\+IRQn}} = 25
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5e8877dfe9231e48010f08246bb2b05c}{TIM1\+\_\+\+TRG\+\_\+\+COM\+\_\+\+TIM17\+\_\+\+IRQn}} = 26
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af312f0a21f600f9b286427e50c549ca9}{TIM1\+\_\+\+CC\+\_\+\+IRQn}} = 27
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3a4e2095a926e4095d3c846eb1c98afa}{TIM2\+\_\+\+IRQn}} = 28
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a985574288f66e2a00e97387424a9a2d8}{TIM3\+\_\+\+IRQn}} = 29
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a368b899ca740b9ae0d75841f3abf68c4}{TIM4\+\_\+\+IRQn}} = 30
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a9852dbbe8c014e716ce7e03a7b809751}{I2\+C1\+\_\+\+EV\+\_\+\+IRQn}} = 31
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2ec363869f4488782dc10a60abce3b34}{I2\+C1\+\_\+\+ER\+\_\+\+IRQn}} = 32
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3020193786527c47d2e4d8c92ceee804}{I2\+C2\+\_\+\+EV\+\_\+\+IRQn}} = 33
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a60c35f2d48d512bd6818bc9fef7053d7}{I2\+C2\+\_\+\+ER\+\_\+\+IRQn}} = 34
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aacdff1a9c42582ed663214cbe62c1174}{SPI1\+\_\+\+IRQn}} = 35
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a505fbd4ccf7c2a14c8b76dc9e58f7ede}{SPI2\+\_\+\+IRQn}} = 36
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ad97cb163e1f678367e37c50d54d161ab}{USART1\+\_\+\+IRQn}} = 37
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3f9c48714d0e5baaba6613343f0da68e}{USART2\+\_\+\+IRQn}} = 38
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8afb13802afc1f5fdf5c90e73ee99e5ff3}{USART3\+\_\+\+IRQn}} = 39
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a9fb0ad0c850234d1983fafdb17378e2f}{EXTI15\+\_\+10\+\_\+\+IRQn}} = 40
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8afe09d6563a21a1540f658163a76a3b37}{RTC\+\_\+\+Alarm\+\_\+\+IRQn}} = 41
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2ad262973688511beafcd1312ce78357}{USBWake\+Up\+\_\+\+IRQn}} = 42
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac2465727aec26e840077f8df9b7af33a}{TIM8\+\_\+\+BRK\+\_\+\+IRQn}} = 43
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af20a30306a1b6d4fc8a2da095a2ca7e9}{TIM8\+\_\+\+UP\+\_\+\+IRQn}} = 44
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a01458aa0285988970fb26ba382d62bcb}{TIM8\+\_\+\+TRG\+\_\+\+COM\+\_\+\+IRQn}} = 45
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a637750639eff4e2b4aae80ed6f3cf67f}{TIM8\+\_\+\+CC\+\_\+\+IRQn}} = 46
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa52967af3850dd051e31eee8807171c6}{LPTIM1\+\_\+\+IRQn}} = 49
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a4e9331739fb76a2ca7781fede070ae44}{SPI3\+\_\+\+IRQn}} = 51
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aded5314b20c6e4e80cb6ab0668ffb8d5}{UART4\+\_\+\+IRQn}} = 52
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5f581e9aedfaccd9b1db9ec793804b45}{TIM6\+\_\+\+DAC\+\_\+\+IRQn}} = 54
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a53cadc1e164ec85d0ea4cd143608e8e1}{TIM7\+\_\+\+IRQn}} = 55
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8abe9f38bb58d55fd4a58854bd0edacdd0}{DMA2\+\_\+\+Channel1\+\_\+\+IRQn}} = 56
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac78d6b1f0f3b4adbff1c1fa48628e490}{DMA2\+\_\+\+Channel2\+\_\+\+IRQn}} = 57
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8adc1fa33023c357ca97ede35f9ad55898}{DMA2\+\_\+\+Channel3\+\_\+\+IRQn}} = 58
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a0d761f0d0a93b5aa3dc821480dc3f6c0}{DMA2\+\_\+\+Channel4\+\_\+\+IRQn}} = 59
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac411f23d16ba0034c22b68b10013532a}{DMA2\+\_\+\+Channel5\+\_\+\+IRQn}} = 60
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2a9eb102f825dbbb737f4332dda46140}{UCPD1\+\_\+\+IRQn}} = 63
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a03c2b634ac34db4d43de6f33e35c6ee7}{COMP1\+\_\+2\+\_\+3\+\_\+\+IRQn}} = 64
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a82d7c395cf638ee625655e93cd250ebe}{COMP4\+\_\+\+IRQn}} = 65
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a010fb52157ca5ccfb53c978700ba9695}{CRS\+\_\+\+IRQn}} = 75
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a367d6b48746f32fe63507226f80e51da}{SAI1\+\_\+\+IRQn}} = 76
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa6b8ff01b016a798c6e639728c179e4f}{FPU\+\_\+\+IRQn}} = 81
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a90c4647e57cff99fac635c532802c4b5}{RNG\+\_\+\+IRQn}} = 90
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af5ac0e39fc168694d2b7d39018c6cc0a}{LPUART1\+\_\+\+IRQn}} = 91
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8326db2d570cb865ffa1d49fa29d562a}{I2\+C3\+\_\+\+EV\+\_\+\+IRQn}} = 92
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6e954232d164a6942ebc7a6bd6f7736e}{I2\+C3\+\_\+\+ER\+\_\+\+IRQn}} = 93
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aaf36f4867b838cb3f4748744cac7a1af}{DMAMUX\+\_\+\+OVR\+\_\+\+IRQn}} = 94
+, \newline
+\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a87c638c1633339c44c4fb73bbe106d92}{DMA2\+\_\+\+Channel6\+\_\+\+IRQn}} = 97
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af9ce7d8677783e267d4c599903e925e4}{CORDIC\+\_\+\+IRQn}} = 100
+, \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a017836a26cf6fb68132aa3fc7a6bbcf4}{FMAC\+\_\+\+IRQn}} = 101
+ \}
+\begin{DoxyCompactList}\small\item\em STM32\+G4\+XX Interrupt Number Definition, according to the selected device in \mbox{\hyperlink{group___library__configuration__section}{Library\+\_\+configuration\+\_\+section}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}\label{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}} 
+\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!IRQn\_Type@{IRQn\_Type}}
+\index{IRQn\_Type@{IRQn\_Type}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}
+\doxysubsubsection{\texorpdfstring{IRQn\_Type}{IRQn\_Type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\+\_\+\+Type}}}
+
+
+
+STM32\+G4\+XX Interrupt Number Definition, according to the selected device in \mbox{\hyperlink{group___library__configuration__section}{Library\+\_\+configuration\+\_\+section}}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NonMaskableInt\_IRQn@{NonMaskableInt\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!NonMaskableInt\_IRQn@{NonMaskableInt\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ade177d9c70c89e084093024b932a4e30}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ade177d9c70c89e084093024b932a4e30}} 
+Non\+Maskable\+Int\+\_\+\+IRQn&2 Cortex-\/\+M4 Non Maskable Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HardFault\_IRQn@{HardFault\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!HardFault\_IRQn@{HardFault\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab1a222a34a32f0ef5ac65e714efc1f85}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab1a222a34a32f0ef5ac65e714efc1f85}} 
+Hard\+Fault\+\_\+\+IRQn&3 Cortex-\/\+M4 Hard Fault Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MemoryManagement\_IRQn@{MemoryManagement\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!MemoryManagement\_IRQn@{MemoryManagement\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a33ff1cf7098de65d61b6354fee6cd5aa}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a33ff1cf7098de65d61b6354fee6cd5aa}} 
+Memory\+Management\+\_\+\+IRQn&4 Cortex-\/\+M4 Memory Management Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BusFault\_IRQn@{BusFault\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!BusFault\_IRQn@{BusFault\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8693500eff174f16119e96234fee73af}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8693500eff174f16119e96234fee73af}} 
+Bus\+Fault\+\_\+\+IRQn&5 Cortex-\/\+M4 Bus Fault Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UsageFault\_IRQn@{UsageFault\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!UsageFault\_IRQn@{UsageFault\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6895237c9443601ac832efa635dd8bbf}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6895237c9443601ac832efa635dd8bbf}} 
+Usage\+Fault\+\_\+\+IRQn&6 Cortex-\/\+M4 Usage Fault Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SVCall\_IRQn@{SVCall\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!SVCall\_IRQn@{SVCall\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a4ce820b3cc6cf3a796b41aadc0cf1237}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a4ce820b3cc6cf3a796b41aadc0cf1237}} 
+SVCall\+\_\+\+IRQn&11 Cortex-\/\+M4 SV Call Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DebugMonitor\_IRQn@{DebugMonitor\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DebugMonitor\_IRQn@{DebugMonitor\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8e033fcef7aed98a31c60a7de206722c}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8e033fcef7aed98a31c60a7de206722c}} 
+Debug\+Monitor\+\_\+\+IRQn&12 Cortex-\/\+M4 Debug Monitor Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PendSV\_IRQn@{PendSV\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!PendSV\_IRQn@{PendSV\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a03c3cc89984928816d81793fc7bce4a2}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a03c3cc89984928816d81793fc7bce4a2}} 
+Pend\+SV\+\_\+\+IRQn&14 Cortex-\/\+M4 Pend SV Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SysTick\_IRQn@{SysTick\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!SysTick\_IRQn@{SysTick\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}} 
+Sys\+Tick\+\_\+\+IRQn&15 Cortex-\/\+M4 System Tick Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WWDG\_IRQn@{WWDG\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!WWDG\_IRQn@{WWDG\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a971089d7566ef902dfa0c80ac3a8fd52}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a971089d7566ef902dfa0c80ac3a8fd52}} 
+WWDG\+\_\+\+IRQn&Window Watch\+Dog Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PVD\_PVM\_IRQn@{PVD\_PVM\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!PVD\_PVM\_IRQn@{PVD\_PVM\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8adf63a7857ebc4223f721c0dd73c92b4b}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8adf63a7857ebc4223f721c0dd73c92b4b}} 
+PVD\+\_\+\+PVM\+\_\+\+IRQn&PVD/\+PVM1/\+PVM2/\+PVM3/\+PVM4 through EXTI Line detection Interrupts ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RTC\_TAMP\_LSECSS\_IRQn@{RTC\_TAMP\_LSECSS\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!RTC\_TAMP\_LSECSS\_IRQn@{RTC\_TAMP\_LSECSS\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1b2d04af9cc6d4671d89b04ca905caf9}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1b2d04af9cc6d4671d89b04ca905caf9}} 
+RTC\+\_\+\+TAMP\+\_\+\+LSECSS\+\_\+\+IRQn&RTC Tamper and Time\+Stamp and RCC LSE CSS interrupts through the EXTI ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RTC\_WKUP\_IRQn@{RTC\_WKUP\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!RTC\_WKUP\_IRQn@{RTC\_WKUP\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a173ccc3f31df1f7e43de2ddeab3d1777}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a173ccc3f31df1f7e43de2ddeab3d1777}} 
+RTC\+\_\+\+WKUP\+\_\+\+IRQn&RTC Wakeup interrupt through the EXTI line ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FLASH\_IRQn@{FLASH\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!FLASH\_IRQn@{FLASH\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a91b73963ce243a1d031576d49e137fab}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a91b73963ce243a1d031576d49e137fab}} 
+FLASH\+\_\+\+IRQn&FLASH global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RCC\_IRQn@{RCC\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!RCC\_IRQn@{RCC\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5710b22392997bac63daa5c999730f77}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5710b22392997bac63daa5c999730f77}} 
+RCC\+\_\+\+IRQn&RCC global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI0\_IRQn@{EXTI0\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI0\_IRQn@{EXTI0\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab6aa6f87d26bbc6cf99b067b8d75c2f7}} 
+EXTI0\+\_\+\+IRQn&EXTI Line0 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI1\_IRQn@{EXTI1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI1\_IRQn@{EXTI1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ae4badcdecdb94eb10129c4c0577c5e19}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ae4badcdecdb94eb10129c4c0577c5e19}} 
+EXTI1\+\_\+\+IRQn&EXTI Line1 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI2\_IRQn@{EXTI2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI2\_IRQn@{EXTI2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a082cb3f7839069a0715fd76c7eacbbc9}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a082cb3f7839069a0715fd76c7eacbbc9}} 
+EXTI2\+\_\+\+IRQn&EXTI Line2 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI3\_IRQn@{EXTI3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI3\_IRQn@{EXTI3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8add889c84ba5de466ced209069e05d602}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8add889c84ba5de466ced209069e05d602}} 
+EXTI3\+\_\+\+IRQn&EXTI Line3 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI4\_IRQn@{EXTI4\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI4\_IRQn@{EXTI4\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab70a40106ca4486770df5d2072d9ac0e}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ab70a40106ca4486770df5d2072d9ac0e}} 
+EXTI4\+\_\+\+IRQn&EXTI Line4 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA1\_Channel1\_IRQn@{DMA1\_Channel1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA1\_Channel1\_IRQn@{DMA1\_Channel1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3ccf41a34f494246c67d3239afa9c97f}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3ccf41a34f494246c67d3239afa9c97f}} 
+DMA1\+\_\+\+Channel1\+\_\+\+IRQn&DMA1 Channel 1 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA1\_Channel2\_IRQn@{DMA1\_Channel2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA1\_Channel2\_IRQn@{DMA1\_Channel2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1c7824eed187b747bcf8a3b4cd22c8fc}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a1c7824eed187b747bcf8a3b4cd22c8fc}} 
+DMA1\+\_\+\+Channel2\+\_\+\+IRQn&DMA1 Channel 2 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA1\_Channel3\_IRQn@{DMA1\_Channel3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA1\_Channel3\_IRQn@{DMA1\_Channel3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3d575a484e3cb668a42e6f9074112d23}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3d575a484e3cb668a42e6f9074112d23}} 
+DMA1\+\_\+\+Channel3\+\_\+\+IRQn&DMA1 Channel 3 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA1\_Channel4\_IRQn@{DMA1\_Channel4\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA1\_Channel4\_IRQn@{DMA1\_Channel4\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ae36905d55d7cbb8ffb2de44c9b88bb31}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ae36905d55d7cbb8ffb2de44c9b88bb31}} 
+DMA1\+\_\+\+Channel4\+\_\+\+IRQn&DMA1 Channel 4 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA1\_Channel5\_IRQn@{DMA1\_Channel5\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA1\_Channel5\_IRQn@{DMA1\_Channel5\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8abf98e4379328f74686524faa05bf6177}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8abf98e4379328f74686524faa05bf6177}} 
+DMA1\+\_\+\+Channel5\+\_\+\+IRQn&DMA1 Channel 5 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA1\_Channel6\_IRQn@{DMA1\_Channel6\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA1\_Channel6\_IRQn@{DMA1\_Channel6\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aab3710849c919f2327eaa001d9e2a7a0}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aab3710849c919f2327eaa001d9e2a7a0}} 
+DMA1\+\_\+\+Channel6\+\_\+\+IRQn&DMA1 Channel 6 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADC1\_2\_IRQn@{ADC1\_2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!ADC1\_2\_IRQn@{ADC1\_2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a19cf421347f52d547d370887640c158a}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a19cf421347f52d547d370887640c158a}} 
+ADC1\+\_\+2\+\_\+\+IRQn&ADC1 and ADC2 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USB\_HP\_IRQn@{USB\_HP\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!USB\_HP\_IRQn@{USB\_HP\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa1340f31ba333994815917c9cb9fee76}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa1340f31ba333994815917c9cb9fee76}} 
+USB\+\_\+\+HP\+\_\+\+IRQn&USB HP Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USB\_LP\_IRQn@{USB\_LP\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!USB\_LP\_IRQn@{USB\_LP\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a439338b15222bd9bb6c01c31ee63afec}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a439338b15222bd9bb6c01c31ee63afec}} 
+USB\+\_\+\+LP\+\_\+\+IRQn&USB LP Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FDCAN1\_IT0\_IRQn@{FDCAN1\_IT0\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!FDCAN1\_IT0\_IRQn@{FDCAN1\_IT0\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3e202b560a588551c0b02f4b2577d256}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3e202b560a588551c0b02f4b2577d256}} 
+FDCAN1\+\_\+\+IT0\+\_\+\+IRQn&FDCAN1 IT0 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FDCAN1\_IT1\_IRQn@{FDCAN1\_IT1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!FDCAN1\_IT1\_IRQn@{FDCAN1\_IT1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af599297929c1aa264aaa7fcb9fbb71f4}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af599297929c1aa264aaa7fcb9fbb71f4}} 
+FDCAN1\+\_\+\+IT1\+\_\+\+IRQn&FDCAN1 IT1 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI9\_5\_IRQn@{EXTI9\_5\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI9\_5\_IRQn@{EXTI9\_5\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa3aa50e0353871985facf62d055faa52}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa3aa50e0353871985facf62d055faa52}} 
+EXTI9\+\_\+5\+\_\+\+IRQn&External Line\mbox{[}9\+:5\mbox{]} Interrupts ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM1\_BRK\_TIM15\_IRQn@{TIM1\_BRK\_TIM15\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM1\_BRK\_TIM15\_IRQn@{TIM1\_BRK\_TIM15\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8dc25281ae7cf5a9e866a3b9f69c296e}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8dc25281ae7cf5a9e866a3b9f69c296e}} 
+TIM1\+\_\+\+BRK\+\_\+\+TIM15\+\_\+\+IRQn&TIM1 Break, Transition error, Index error and TIM15 global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM1\_UP\_TIM16\_IRQn@{TIM1\_UP\_TIM16\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM1\_UP\_TIM16\_IRQn@{TIM1\_UP\_TIM16\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ace5676d446329834dd12515a1ea71646}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ace5676d446329834dd12515a1ea71646}} 
+TIM1\+\_\+\+UP\+\_\+\+TIM16\+\_\+\+IRQn&TIM1 Update Interrupt and TIM16 global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM1\_TRG\_COM\_TIM17\_IRQn@{TIM1\_TRG\_COM\_TIM17\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM1\_TRG\_COM\_TIM17\_IRQn@{TIM1\_TRG\_COM\_TIM17\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5e8877dfe9231e48010f08246bb2b05c}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5e8877dfe9231e48010f08246bb2b05c}} 
+TIM1\+\_\+\+TRG\+\_\+\+COM\+\_\+\+TIM17\+\_\+\+IRQn&TIM1 TIM1 Trigger, Commutation, Direction change, Index and TIM17 global interrupt \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM1\_CC\_IRQn@{TIM1\_CC\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM1\_CC\_IRQn@{TIM1\_CC\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af312f0a21f600f9b286427e50c549ca9}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af312f0a21f600f9b286427e50c549ca9}} 
+TIM1\+\_\+\+CC\+\_\+\+IRQn&TIM1 Capture Compare Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM2\_IRQn@{TIM2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM2\_IRQn@{TIM2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3a4e2095a926e4095d3c846eb1c98afa}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3a4e2095a926e4095d3c846eb1c98afa}} 
+TIM2\+\_\+\+IRQn&TIM2 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM3\_IRQn@{TIM3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM3\_IRQn@{TIM3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a985574288f66e2a00e97387424a9a2d8}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a985574288f66e2a00e97387424a9a2d8}} 
+TIM3\+\_\+\+IRQn&TIM3 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM4\_IRQn@{TIM4\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM4\_IRQn@{TIM4\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a368b899ca740b9ae0d75841f3abf68c4}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a368b899ca740b9ae0d75841f3abf68c4}} 
+TIM4\+\_\+\+IRQn&TIM4 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C1\_EV\_IRQn@{I2C1\_EV\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!I2C1\_EV\_IRQn@{I2C1\_EV\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a9852dbbe8c014e716ce7e03a7b809751}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a9852dbbe8c014e716ce7e03a7b809751}} 
+I2\+C1\+\_\+\+EV\+\_\+\+IRQn&I2\+C1 Event Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C1\_ER\_IRQn@{I2C1\_ER\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!I2C1\_ER\_IRQn@{I2C1\_ER\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2ec363869f4488782dc10a60abce3b34}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2ec363869f4488782dc10a60abce3b34}} 
+I2\+C1\+\_\+\+ER\+\_\+\+IRQn&I2\+C1 Error Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C2\_EV\_IRQn@{I2C2\_EV\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!I2C2\_EV\_IRQn@{I2C2\_EV\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3020193786527c47d2e4d8c92ceee804}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3020193786527c47d2e4d8c92ceee804}} 
+I2\+C2\+\_\+\+EV\+\_\+\+IRQn&I2\+C2 Event Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C2\_ER\_IRQn@{I2C2\_ER\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!I2C2\_ER\_IRQn@{I2C2\_ER\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a60c35f2d48d512bd6818bc9fef7053d7}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a60c35f2d48d512bd6818bc9fef7053d7}} 
+I2\+C2\+\_\+\+ER\+\_\+\+IRQn&I2\+C2 Error Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI1\_IRQn@{SPI1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!SPI1\_IRQn@{SPI1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aacdff1a9c42582ed663214cbe62c1174}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aacdff1a9c42582ed663214cbe62c1174}} 
+SPI1\+\_\+\+IRQn&SPI1 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI2\_IRQn@{SPI2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!SPI2\_IRQn@{SPI2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a505fbd4ccf7c2a14c8b76dc9e58f7ede}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a505fbd4ccf7c2a14c8b76dc9e58f7ede}} 
+SPI2\+\_\+\+IRQn&SPI2 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USART1\_IRQn@{USART1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!USART1\_IRQn@{USART1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ad97cb163e1f678367e37c50d54d161ab}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ad97cb163e1f678367e37c50d54d161ab}} 
+USART1\+\_\+\+IRQn&USART1 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USART2\_IRQn@{USART2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!USART2\_IRQn@{USART2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3f9c48714d0e5baaba6613343f0da68e}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a3f9c48714d0e5baaba6613343f0da68e}} 
+USART2\+\_\+\+IRQn&USART2 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USART3\_IRQn@{USART3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!USART3\_IRQn@{USART3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8afb13802afc1f5fdf5c90e73ee99e5ff3}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8afb13802afc1f5fdf5c90e73ee99e5ff3}} 
+USART3\+\_\+\+IRQn&USART3 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXTI15\_10\_IRQn@{EXTI15\_10\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!EXTI15\_10\_IRQn@{EXTI15\_10\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a9fb0ad0c850234d1983fafdb17378e2f}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a9fb0ad0c850234d1983fafdb17378e2f}} 
+EXTI15\+\_\+10\+\_\+\+IRQn&External Line\mbox{[}15\+:10\mbox{]} Interrupts ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RTC\_Alarm\_IRQn@{RTC\_Alarm\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!RTC\_Alarm\_IRQn@{RTC\_Alarm\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8afe09d6563a21a1540f658163a76a3b37}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8afe09d6563a21a1540f658163a76a3b37}} 
+RTC\+\_\+\+Alarm\+\_\+\+IRQn&RTC Alarm (A and B) through EXTI Line Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{USBWakeUp\_IRQn@{USBWakeUp\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!USBWakeUp\_IRQn@{USBWakeUp\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2ad262973688511beafcd1312ce78357}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2ad262973688511beafcd1312ce78357}} 
+USBWake\+Up\+\_\+\+IRQn&USB Wakeup through EXTI line Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM8\_BRK\_IRQn@{TIM8\_BRK\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM8\_BRK\_IRQn@{TIM8\_BRK\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac2465727aec26e840077f8df9b7af33a}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac2465727aec26e840077f8df9b7af33a}} 
+TIM8\+\_\+\+BRK\+\_\+\+IRQn&TIM8 Break, Transition error and Index error Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM8\_UP\_IRQn@{TIM8\_UP\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM8\_UP\_IRQn@{TIM8\_UP\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af20a30306a1b6d4fc8a2da095a2ca7e9}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af20a30306a1b6d4fc8a2da095a2ca7e9}} 
+TIM8\+\_\+\+UP\+\_\+\+IRQn&TIM8 Update Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM8\_TRG\_COM\_IRQn@{TIM8\_TRG\_COM\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM8\_TRG\_COM\_IRQn@{TIM8\_TRG\_COM\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a01458aa0285988970fb26ba382d62bcb}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a01458aa0285988970fb26ba382d62bcb}} 
+TIM8\+\_\+\+TRG\+\_\+\+COM\+\_\+\+IRQn&TIM8 Trigger, Commutation, Direction change and Index Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM8\_CC\_IRQn@{TIM8\_CC\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM8\_CC\_IRQn@{TIM8\_CC\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a637750639eff4e2b4aae80ed6f3cf67f}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a637750639eff4e2b4aae80ed6f3cf67f}} 
+TIM8\+\_\+\+CC\+\_\+\+IRQn&TIM8 Capture Compare Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LPTIM1\_IRQn@{LPTIM1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!LPTIM1\_IRQn@{LPTIM1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa52967af3850dd051e31eee8807171c6}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa52967af3850dd051e31eee8807171c6}} 
+LPTIM1\+\_\+\+IRQn&LP TIM1 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SPI3\_IRQn@{SPI3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!SPI3\_IRQn@{SPI3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a4e9331739fb76a2ca7781fede070ae44}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a4e9331739fb76a2ca7781fede070ae44}} 
+SPI3\+\_\+\+IRQn&SPI3 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UART4\_IRQn@{UART4\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!UART4\_IRQn@{UART4\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aded5314b20c6e4e80cb6ab0668ffb8d5}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aded5314b20c6e4e80cb6ab0668ffb8d5}} 
+UART4\+\_\+\+IRQn&UART4 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM6\_DAC\_IRQn@{TIM6\_DAC\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM6\_DAC\_IRQn@{TIM6\_DAC\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5f581e9aedfaccd9b1db9ec793804b45}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a5f581e9aedfaccd9b1db9ec793804b45}} 
+TIM6\+\_\+\+DAC\+\_\+\+IRQn&TIM6 global and DAC1\&3 underrun error interrupts ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIM7\_IRQn@{TIM7\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!TIM7\_IRQn@{TIM7\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a53cadc1e164ec85d0ea4cd143608e8e1}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a53cadc1e164ec85d0ea4cd143608e8e1}} 
+TIM7\+\_\+\+IRQn&TIM7 global interrupts ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA2\_Channel1\_IRQn@{DMA2\_Channel1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA2\_Channel1\_IRQn@{DMA2\_Channel1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8abe9f38bb58d55fd4a58854bd0edacdd0}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8abe9f38bb58d55fd4a58854bd0edacdd0}} 
+DMA2\+\_\+\+Channel1\+\_\+\+IRQn&DMA2 Channel 1 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA2\_Channel2\_IRQn@{DMA2\_Channel2\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA2\_Channel2\_IRQn@{DMA2\_Channel2\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac78d6b1f0f3b4adbff1c1fa48628e490}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac78d6b1f0f3b4adbff1c1fa48628e490}} 
+DMA2\+\_\+\+Channel2\+\_\+\+IRQn&DMA2 Channel 2 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA2\_Channel3\_IRQn@{DMA2\_Channel3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA2\_Channel3\_IRQn@{DMA2\_Channel3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8adc1fa33023c357ca97ede35f9ad55898}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8adc1fa33023c357ca97ede35f9ad55898}} 
+DMA2\+\_\+\+Channel3\+\_\+\+IRQn&DMA2 Channel 3 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA2\_Channel4\_IRQn@{DMA2\_Channel4\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA2\_Channel4\_IRQn@{DMA2\_Channel4\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a0d761f0d0a93b5aa3dc821480dc3f6c0}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a0d761f0d0a93b5aa3dc821480dc3f6c0}} 
+DMA2\+\_\+\+Channel4\+\_\+\+IRQn&DMA2 Channel 4 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA2\_Channel5\_IRQn@{DMA2\_Channel5\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA2\_Channel5\_IRQn@{DMA2\_Channel5\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac411f23d16ba0034c22b68b10013532a}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8ac411f23d16ba0034c22b68b10013532a}} 
+DMA2\+\_\+\+Channel5\+\_\+\+IRQn&DMA2 Channel 5 global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{UCPD1\_IRQn@{UCPD1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!UCPD1\_IRQn@{UCPD1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2a9eb102f825dbbb737f4332dda46140}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a2a9eb102f825dbbb737f4332dda46140}} 
+UCPD1\+\_\+\+IRQn&UCPD global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMP1\_2\_3\_IRQn@{COMP1\_2\_3\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!COMP1\_2\_3\_IRQn@{COMP1\_2\_3\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a03c2b634ac34db4d43de6f33e35c6ee7}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a03c2b634ac34db4d43de6f33e35c6ee7}} 
+COMP1\+\_\+2\+\_\+3\+\_\+\+IRQn&COMP1, COMP2 and COMP3 Interrupts ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMP4\_IRQn@{COMP4\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!COMP4\_IRQn@{COMP4\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a82d7c395cf638ee625655e93cd250ebe}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a82d7c395cf638ee625655e93cd250ebe}} 
+COMP4\+\_\+\+IRQn&COMP4 ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CRS\_IRQn@{CRS\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!CRS\_IRQn@{CRS\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a010fb52157ca5ccfb53c978700ba9695}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a010fb52157ca5ccfb53c978700ba9695}} 
+CRS\+\_\+\+IRQn&CRS global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SAI1\_IRQn@{SAI1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!SAI1\_IRQn@{SAI1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a367d6b48746f32fe63507226f80e51da}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a367d6b48746f32fe63507226f80e51da}} 
+SAI1\+\_\+\+IRQn&Serial Audio Interface global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FPU\_IRQn@{FPU\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!FPU\_IRQn@{FPU\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa6b8ff01b016a798c6e639728c179e4f}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aa6b8ff01b016a798c6e639728c179e4f}} 
+FPU\+\_\+\+IRQn&FPU global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RNG\_IRQn@{RNG\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!RNG\_IRQn@{RNG\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a90c4647e57cff99fac635c532802c4b5}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a90c4647e57cff99fac635c532802c4b5}} 
+RNG\+\_\+\+IRQn&RNG global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LPUART1\_IRQn@{LPUART1\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!LPUART1\_IRQn@{LPUART1\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af5ac0e39fc168694d2b7d39018c6cc0a}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af5ac0e39fc168694d2b7d39018c6cc0a}} 
+LPUART1\+\_\+\+IRQn&LP UART 1 Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C3\_EV\_IRQn@{I2C3\_EV\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!I2C3\_EV\_IRQn@{I2C3\_EV\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8326db2d570cb865ffa1d49fa29d562a}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a8326db2d570cb865ffa1d49fa29d562a}} 
+I2\+C3\+\_\+\+EV\+\_\+\+IRQn&I2\+C3 Event Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{I2C3\_ER\_IRQn@{I2C3\_ER\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!I2C3\_ER\_IRQn@{I2C3\_ER\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6e954232d164a6942ebc7a6bd6f7736e}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6e954232d164a6942ebc7a6bd6f7736e}} 
+I2\+C3\+\_\+\+ER\+\_\+\+IRQn&I2\+C3 Error interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMAMUX\_OVR\_IRQn@{DMAMUX\_OVR\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMAMUX\_OVR\_IRQn@{DMAMUX\_OVR\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aaf36f4867b838cb3f4748744cac7a1af}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8aaf36f4867b838cb3f4748744cac7a1af}} 
+DMAMUX\+\_\+\+OVR\+\_\+\+IRQn&DMAMUX overrun global interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DMA2\_Channel6\_IRQn@{DMA2\_Channel6\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!DMA2\_Channel6\_IRQn@{DMA2\_Channel6\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a87c638c1633339c44c4fb73bbe106d92}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a87c638c1633339c44c4fb73bbe106d92}} 
+DMA2\+\_\+\+Channel6\+\_\+\+IRQn&DMA2 Channel 6 interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CORDIC\_IRQn@{CORDIC\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!CORDIC\_IRQn@{CORDIC\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af9ce7d8677783e267d4c599903e925e4}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8af9ce7d8677783e267d4c599903e925e4}} 
+CORDIC\+\_\+\+IRQn&CORDIC global Interrupt ~\newline
+ \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FMAC\_IRQn@{FMAC\_IRQn}!Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}}\index{Peripheral\_interrupt\_number\_definition@{Peripheral\_interrupt\_number\_definition}!FMAC\_IRQn@{FMAC\_IRQn}}}\mbox{\Hypertarget{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a017836a26cf6fb68132aa3fc7a6bbcf4}\label{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a017836a26cf6fb68132aa3fc7a6bbcf4}} 
+FMAC\+\_\+\+IRQn&FMAC global Interrupt ~\newline
+ \\
+\hline
+
+\end{DoxyEnumFields}

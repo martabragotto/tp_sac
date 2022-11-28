@@ -1,0 +1,284 @@
+\hypertarget{stm32g4xx__hal__conf_8h}{}\doxysection{Core/\+Inc/stm32g4xx\+\_\+hal\+\_\+conf.h File Reference}
+\label{stm32g4xx__hal__conf_8h}\index{Core/Inc/stm32g4xx\_hal\_conf.h@{Core/Inc/stm32g4xx\_hal\_conf.h}}
+
+
+HAL configuration file.  
+
+
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+rcc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+dma.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+cortex.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+exti.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+flash.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+pwr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+tim.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stm32g4xx\+\_\+hal\+\_\+uart.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a877ae99e8c47a609ea97c888912bf75f}\label{stm32g4xx__hal__conf_8h_a877ae99e8c47a609ea97c888912bf75f}} 
+\#define {\bfseries HAL\+\_\+\+MODULE\+\_\+\+ENABLED}
+\begin{DoxyCompactList}\small\item\em This is the list of modules to be used in the HAL driver. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a476f1655c969ae57e89a74d98c75f43f}\label{stm32g4xx__hal__conf_8h_a476f1655c969ae57e89a74d98c75f43f}} 
+\#define {\bfseries HAL\+\_\+\+ADC\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a23382b8f04b3e6db2c59dfa1ef5ea4a2}\label{stm32g4xx__hal__conf_8h_a23382b8f04b3e6db2c59dfa1ef5ea4a2}} 
+\#define {\bfseries HAL\+\_\+\+TIM\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a167269406e73327b95c3bb7b9cfe6d89}\label{stm32g4xx__hal__conf_8h_a167269406e73327b95c3bb7b9cfe6d89}} 
+\#define {\bfseries HAL\+\_\+\+UART\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a86165f80d6078719ee0715afe13febf5}\label{stm32g4xx__hal__conf_8h_a86165f80d6078719ee0715afe13febf5}} 
+\#define {\bfseries HAL\+\_\+\+GPIO\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aeb359e861d8a92c233c3229657dbcd74}\label{stm32g4xx__hal__conf_8h_aeb359e861d8a92c233c3229657dbcd74}} 
+\#define {\bfseries HAL\+\_\+\+EXTI\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a6552186102a1131b2849ac55a582945d}\label{stm32g4xx__hal__conf_8h_a6552186102a1131b2849ac55a582945d}} 
+\#define {\bfseries HAL\+\_\+\+DMA\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_ac3dd74314ed62ac8575e2f9f48b3ac48}\label{stm32g4xx__hal__conf_8h_ac3dd74314ed62ac8575e2f9f48b3ac48}} 
+\#define {\bfseries HAL\+\_\+\+RCC\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a7112575efe3740911f19a13e6b170fee}\label{stm32g4xx__hal__conf_8h_a7112575efe3740911f19a13e6b170fee}} 
+\#define {\bfseries HAL\+\_\+\+FLASH\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_ab51923c3716977d7923f49cc9d081aa8}\label{stm32g4xx__hal__conf_8h_ab51923c3716977d7923f49cc9d081aa8}} 
+\#define {\bfseries HAL\+\_\+\+PWR\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aa9b5a3a425901e097de70092dbe31e0f}\label{stm32g4xx__hal__conf_8h_aa9b5a3a425901e097de70092dbe31e0f}} 
+\#define {\bfseries HAL\+\_\+\+CORTEX\+\_\+\+MODULE\+\_\+\+ENABLED}
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_acc33abd5393affd16cc4a1397839dfe4}\label{stm32g4xx__hal__conf_8h_acc33abd5393affd16cc4a1397839dfe4}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+ADC\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\begin{DoxyCompactList}\small\item\em This is the list of modules where register callback can be used. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a94f0f5f870b8e45eab42cfe77e4210ed}\label{stm32g4xx__hal__conf_8h_a94f0f5f870b8e45eab42cfe77e4210ed}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+COMP\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a382744674caee964d227d41574fe2b73}\label{stm32g4xx__hal__conf_8h_a382744674caee964d227d41574fe2b73}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+CORDIC\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aab15bfcb9198618bda3d7e914193b466}\label{stm32g4xx__hal__conf_8h_aab15bfcb9198618bda3d7e914193b466}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+CRYP\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_af9580ae862dcc02cee7822030c48d6b8}\label{stm32g4xx__hal__conf_8h_af9580ae862dcc02cee7822030c48d6b8}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+DAC\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aa51881ed9e9d2aaa7d6f0d598d723e46}\label{stm32g4xx__hal__conf_8h_aa51881ed9e9d2aaa7d6f0d598d723e46}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+EXTI\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a5d191a50c40ac4b4e38f9f614e37e48c}\label{stm32g4xx__hal__conf_8h_a5d191a50c40ac4b4e38f9f614e37e48c}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+FDCAN\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a34a796bea8a48187716b99c6f14b14f2}\label{stm32g4xx__hal__conf_8h_a34a796bea8a48187716b99c6f14b14f2}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+FMAC\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a0c281b7bdebecbe9715d556f0f374fea}\label{stm32g4xx__hal__conf_8h_a0c281b7bdebecbe9715d556f0f374fea}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+HRTIM\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a99be773f7f62b6277d1c87658e085725}\label{stm32g4xx__hal__conf_8h_a99be773f7f62b6277d1c87658e085725}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+I2\+C\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a1bdc791c35b20c7188b3d74fd6c30ebf}\label{stm32g4xx__hal__conf_8h_a1bdc791c35b20c7188b3d74fd6c30ebf}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+I2\+S\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a4a459bcaa046998e6939fc66b0831e96}\label{stm32g4xx__hal__conf_8h_a4a459bcaa046998e6939fc66b0831e96}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+IRDA\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a5b148dcae2bf8f576fc69a349794df4c}\label{stm32g4xx__hal__conf_8h_a5b148dcae2bf8f576fc69a349794df4c}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+LPTIM\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a80498b459859528918535b88fed54b28}\label{stm32g4xx__hal__conf_8h_a80498b459859528918535b88fed54b28}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+NAND\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a7b38c01bd6621f3da5993d71eb5ff42e}\label{stm32g4xx__hal__conf_8h_a7b38c01bd6621f3da5993d71eb5ff42e}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+NOR\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a2c51d4e89cd75f4629092d46ca26a750}\label{stm32g4xx__hal__conf_8h_a2c51d4e89cd75f4629092d46ca26a750}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+OPAMP\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_afd18c04aa4a4a54446df8083be875a00}\label{stm32g4xx__hal__conf_8h_afd18c04aa4a4a54446df8083be875a00}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+PCD\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a95cbcf73c2ae3aea55fb62502ed224a2}\label{stm32g4xx__hal__conf_8h_a95cbcf73c2ae3aea55fb62502ed224a2}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+QSPI\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a9b01c64d19f0d4839b7da08bd61c7ff7}\label{stm32g4xx__hal__conf_8h_a9b01c64d19f0d4839b7da08bd61c7ff7}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+RNG\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a54badbcdb096ce802d2eed981cbbc31a}\label{stm32g4xx__hal__conf_8h_a54badbcdb096ce802d2eed981cbbc31a}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+RTC\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a0e2ac47c259fc72ef188c0406a2af803}\label{stm32g4xx__hal__conf_8h_a0e2ac47c259fc72ef188c0406a2af803}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+SAI\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a43bb2335641440326db0f05526c1bff9}\label{stm32g4xx__hal__conf_8h_a43bb2335641440326db0f05526c1bff9}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+SMARTCARD\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a74cae3ff25398b4a06a579a7164a8518}\label{stm32g4xx__hal__conf_8h_a74cae3ff25398b4a06a579a7164a8518}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+SMBUS\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a8d8be2d7e4ed5bfc7b64f60ba604c749}\label{stm32g4xx__hal__conf_8h_a8d8be2d7e4ed5bfc7b64f60ba604c749}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+SPI\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a5c7c04d57c22f5301f1ea589abc6f35f}\label{stm32g4xx__hal__conf_8h_a5c7c04d57c22f5301f1ea589abc6f35f}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+SRAM\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a5ef4d67cd7630f6e2e67d17370fbffdb}\label{stm32g4xx__hal__conf_8h_a5ef4d67cd7630f6e2e67d17370fbffdb}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+TIM\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a68c6c7c633e6cb378824020ef00a5701}\label{stm32g4xx__hal__conf_8h_a68c6c7c633e6cb378824020ef00a5701}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+UART\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_ac79983d623c7f760c5077618a453561b}\label{stm32g4xx__hal__conf_8h_ac79983d623c7f760c5077618a453561b}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+USART\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a6879802837c27d8761d8a8fdab626891}\label{stm32g4xx__hal__conf_8h_a6879802837c27d8761d8a8fdab626891}} 
+\#define {\bfseries USE\+\_\+\+HAL\+\_\+\+WWDG\+\_\+\+REGISTER\+\_\+\+CALLBACKS}~0U
+\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_aeafcff4f57440c60e64812dddd13e7cb}{HSE\+\_\+\+VALUE}}~(24000000\+UL)
+\begin{DoxyCompactList}\small\item\em Adjust the value of External High Speed oscillator (HSE) used in your application. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_a68ecbc9b0a1a40a1ec9d18d5e9747c4f}{HSE\+\_\+\+STARTUP\+\_\+\+TIMEOUT}}~(100\+UL)
+\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37}{HSI\+\_\+\+VALUE}}~(16000000\+UL)
+\begin{DoxyCompactList}\small\item\em Internal High Speed oscillator (HSI) value. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_a47f01e5e3f2edfa94bf74c08835f3875}{HSI48\+\_\+\+VALUE}}~(48000000\+UL)
+\begin{DoxyCompactList}\small\item\em Internal High Speed oscillator (HSI48) value for USB FS and RNG. This internal oscillator is mainly dedicated to provide a high precision clock to the USB peripheral by means of a special Clock Recovery System (CRS) circuitry. When the CRS is not used, the HSI48 RC oscillator runs on it default frequency which is subject to manufacturing process variations. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_a4872023e65449c0506aac3ea6bec99e9}{LSI\+\_\+\+VALUE}}~(32000\+UL)
+\begin{DoxyCompactList}\small\item\em Internal Low Speed oscillator (LSI) value. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}}~(32768UL)
+\begin{DoxyCompactList}\small\item\em External Low Speed oscillator (LSE) value. This value is used by the UART, RTC HAL module to compute the system frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_a85e6fc812dc26f7161a04be2568a5462}{LSE\+\_\+\+STARTUP\+\_\+\+TIMEOUT}}~(5000\+UL)
+\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_a8c47c935e91e70569098b41718558648}{EXTERNAL\+\_\+\+CLOCK\+\_\+\+VALUE}}~(12288000\+UL)
+\begin{DoxyCompactList}\small\item\em External clock source for I2S and SAI peripherals This value is used by the I2S and SAI HAL modules to compute the I2S and SAI clock source frequency, this source is inserted directly through I2\+S\+\_\+\+CKIN pad. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_aae550dad9f96d52cfce5e539adadbbb4}{VDD\+\_\+\+VALUE}}~(3300\+UL)
+\begin{DoxyCompactList}\small\item\em This is the HAL system configuration section. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{stm32g4xx__hal__conf_8h_ae27809d4959b9fd5b5d974e3e1c77d2e}{TICK\+\_\+\+INT\+\_\+\+PRIORITY}}~(15UL)
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_ad048ac737242c2c2cb9f4a72953d10ce}\label{stm32g4xx__hal__conf_8h_ad048ac737242c2c2cb9f4a72953d10ce}} 
+\#define {\bfseries USE\+\_\+\+RTOS}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a13fc0d5e7bb925385c0cc0772ba6a391}\label{stm32g4xx__hal__conf_8h_a13fc0d5e7bb925385c0cc0772ba6a391}} 
+\#define {\bfseries PREFETCH\+\_\+\+ENABLE}~0U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a3379989d46599c7e19a43f42e9145a4a}\label{stm32g4xx__hal__conf_8h_a3379989d46599c7e19a43f42e9145a4a}} 
+\#define {\bfseries INSTRUCTION\+\_\+\+CACHE\+\_\+\+ENABLE}~1U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a5b4c32a40cf49b06c0d761e385949a6b}\label{stm32g4xx__hal__conf_8h_a5b4c32a40cf49b06c0d761e385949a6b}} 
+\#define {\bfseries DATA\+\_\+\+CACHE\+\_\+\+ENABLE}~1U
+\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a4c6fab687afc7ba4469b1b2d34472358}\label{stm32g4xx__hal__conf_8h_a4c6fab687afc7ba4469b1b2d34472358}} 
+\#define {\bfseries USE\+\_\+\+SPI\+\_\+\+CRC}~0U
+\begin{DoxyCompactList}\small\item\em Uncomment the line below to expanse the \char`\"{}assert\+\_\+param\char`\"{} macro in the HAL drivers code. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}\label{stm32g4xx__hal__conf_8h_a631dea7b230e600555f979c62af1de21}} 
+\#define {\bfseries assert\+\_\+param}(expr)~((void)0U)
+\begin{DoxyCompactList}\small\item\em Include module\textquotesingle{}s header file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+HAL configuration file. 
+
+\begin{DoxyAuthor}{Author}
+MCD Application Team 
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2019 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a8c47c935e91e70569098b41718558648}\label{stm32g4xx__hal__conf_8h_a8c47c935e91e70569098b41718558648}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!EXTERNAL\_CLOCK\_VALUE@{EXTERNAL\_CLOCK\_VALUE}}
+\index{EXTERNAL\_CLOCK\_VALUE@{EXTERNAL\_CLOCK\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{EXTERNAL\_CLOCK\_VALUE}{EXTERNAL\_CLOCK\_VALUE}}
+{\footnotesize\ttfamily \#define EXTERNAL\+\_\+\+CLOCK\+\_\+\+VALUE~(12288000\+UL)}
+
+
+
+External clock source for I2S and SAI peripherals This value is used by the I2S and SAI HAL modules to compute the I2S and SAI clock source frequency, this source is inserted directly through I2\+S\+\_\+\+CKIN pad. 
+
+Value of the External oscillator in Hz \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a68ecbc9b0a1a40a1ec9d18d5e9747c4f}\label{stm32g4xx__hal__conf_8h_a68ecbc9b0a1a40a1ec9d18d5e9747c4f}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!HSE\_STARTUP\_TIMEOUT@{HSE\_STARTUP\_TIMEOUT}}
+\index{HSE\_STARTUP\_TIMEOUT@{HSE\_STARTUP\_TIMEOUT}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HSE\_STARTUP\_TIMEOUT}{HSE\_STARTUP\_TIMEOUT}}
+{\footnotesize\ttfamily \#define HSE\+\_\+\+STARTUP\+\_\+\+TIMEOUT~(100\+UL)}
+
+Time out for HSE start up, in ms \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aeafcff4f57440c60e64812dddd13e7cb}\label{stm32g4xx__hal__conf_8h_aeafcff4f57440c60e64812dddd13e7cb}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!HSE\_VALUE@{HSE\_VALUE}}
+\index{HSE\_VALUE@{HSE\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HSE\_VALUE}{HSE\_VALUE}}
+{\footnotesize\ttfamily \#define HSE\+\_\+\+VALUE~(24000000\+UL)}
+
+
+
+Adjust the value of External High Speed oscillator (HSE) used in your application. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). 
+
+Value of the External oscillator in Hz \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a47f01e5e3f2edfa94bf74c08835f3875}\label{stm32g4xx__hal__conf_8h_a47f01e5e3f2edfa94bf74c08835f3875}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!HSI48\_VALUE@{HSI48\_VALUE}}
+\index{HSI48\_VALUE@{HSI48\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HSI48\_VALUE}{HSI48\_VALUE}}
+{\footnotesize\ttfamily \#define HSI48\+\_\+\+VALUE~(48000000\+UL)}
+
+
+
+Internal High Speed oscillator (HSI48) value for USB FS and RNG. This internal oscillator is mainly dedicated to provide a high precision clock to the USB peripheral by means of a special Clock Recovery System (CRS) circuitry. When the CRS is not used, the HSI48 RC oscillator runs on it default frequency which is subject to manufacturing process variations. 
+
+Value of the Internal High Speed oscillator for USB FS/\+RNG in Hz. The real value my vary depending on manufacturing process variations. \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37}\label{stm32g4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!HSI\_VALUE@{HSI\_VALUE}}
+\index{HSI\_VALUE@{HSI\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{HSI\_VALUE}{HSI\_VALUE}}
+{\footnotesize\ttfamily \#define HSI\+\_\+\+VALUE~(16000000\+UL)}
+
+
+
+Internal High Speed oscillator (HSI) value. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). 
+
+Value of the Internal oscillator in Hz \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a85e6fc812dc26f7161a04be2568a5462}\label{stm32g4xx__hal__conf_8h_a85e6fc812dc26f7161a04be2568a5462}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!LSE\_STARTUP\_TIMEOUT@{LSE\_STARTUP\_TIMEOUT}}
+\index{LSE\_STARTUP\_TIMEOUT@{LSE\_STARTUP\_TIMEOUT}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{LSE\_STARTUP\_TIMEOUT}{LSE\_STARTUP\_TIMEOUT}}
+{\footnotesize\ttfamily \#define LSE\+\_\+\+STARTUP\+\_\+\+TIMEOUT~(5000\+UL)}
+
+Time out for LSE start up, in ms \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}\label{stm32g4xx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!LSE\_VALUE@{LSE\_VALUE}}
+\index{LSE\_VALUE@{LSE\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{LSE\_VALUE}{LSE\_VALUE}}
+{\footnotesize\ttfamily \#define LSE\+\_\+\+VALUE~(32768UL)}
+
+
+
+External Low Speed oscillator (LSE) value. This value is used by the UART, RTC HAL module to compute the system frequency. 
+
+Value of the External Low Speed oscillator in Hz \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_a4872023e65449c0506aac3ea6bec99e9}\label{stm32g4xx__hal__conf_8h_a4872023e65449c0506aac3ea6bec99e9}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!LSI\_VALUE@{LSI\_VALUE}}
+\index{LSI\_VALUE@{LSI\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{LSI\_VALUE}{LSI\_VALUE}}
+{\footnotesize\ttfamily \#define LSI\+\_\+\+VALUE~(32000\+UL)}
+
+
+
+Internal Low Speed oscillator (LSI) value. 
+
+\texorpdfstring{$<$}{<} Value of the Internal Low Speed oscillator in Hz The real value may vary depending on the variations in voltage and temperature. LSI Typical Value in Hz \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_ae27809d4959b9fd5b5d974e3e1c77d2e}\label{stm32g4xx__hal__conf_8h_ae27809d4959b9fd5b5d974e3e1c77d2e}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!TICK\_INT\_PRIORITY@{TICK\_INT\_PRIORITY}}
+\index{TICK\_INT\_PRIORITY@{TICK\_INT\_PRIORITY}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{TICK\_INT\_PRIORITY}{TICK\_INT\_PRIORITY}}
+{\footnotesize\ttfamily \#define TICK\+\_\+\+INT\+\_\+\+PRIORITY~(15UL)}
+
+tick interrupt priority (lowest by default) ~\newline
+ \mbox{\Hypertarget{stm32g4xx__hal__conf_8h_aae550dad9f96d52cfce5e539adadbbb4}\label{stm32g4xx__hal__conf_8h_aae550dad9f96d52cfce5e539adadbbb4}} 
+\index{stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}!VDD\_VALUE@{VDD\_VALUE}}
+\index{VDD\_VALUE@{VDD\_VALUE}!stm32g4xx\_hal\_conf.h@{stm32g4xx\_hal\_conf.h}}
+\doxysubsubsection{\texorpdfstring{VDD\_VALUE}{VDD\_VALUE}}
+{\footnotesize\ttfamily \#define VDD\+\_\+\+VALUE~(3300\+UL)}
+
+
+
+This is the HAL system configuration section. 
+
+Value of VDD in mv 

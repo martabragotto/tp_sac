@@ -1,0 +1,453 @@
+\hypertarget{stm32g4xx__hal__flash_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+flash.\+h}
+\label{stm32g4xx__hal__flash_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_flash.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_flash.h}}
+\mbox{\hyperlink{stm32g4xx__hal__flash_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{18 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_FLASH\_H}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_FLASH\_H}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{23 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{37 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{45 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{46 \{}
+\DoxyCodeLine{47   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a5d08471046a663db76d2252848a7d66c}{TypeErase}};   }
+\DoxyCodeLine{49   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a9590db921fb8d36daf38e097f68fc14f}{Banks}};       }
+\DoxyCodeLine{52   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a5738dc09e398d8f4fc006e4252093923}{Page}};        }
+\DoxyCodeLine{55   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_ad18bd4b3caaccd0d51a4faf3c6b3b57f}{NbPages}};     }
+\DoxyCodeLine{57 \} \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def}{FLASH\_EraseInitTypeDef}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a46bffc2a63ea02e15b9187856535d890}{OptionType}};     }
+\DoxyCodeLine{66   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a4af453feb7cd69d8ef344d9396fc6b89}{WRPArea}};        }
+\DoxyCodeLine{69   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a7da6e67f6aac5e371eaa746257a34a6c}{WRPStartOffset}}; }
+\DoxyCodeLine{71   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a8a3717ba2f2142c51faef2c00dfc883b}{WRPEndOffset}};   }
+\DoxyCodeLine{73   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a1f613ba2b87cf9caa84dc1d493e96dae}{RDPLevel}};       }
+\DoxyCodeLine{75   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a71770e44263750ea731fee8c2d74b307}{USERType}};       }
+\DoxyCodeLine{77   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_aeee4c65d539a25d8bfc7f83c7dc29012}{USERConfig}};     }
+\DoxyCodeLine{86   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a33a5b63814d8c38e158776c0c9c09a53}{PCROPConfig}};    }
+\DoxyCodeLine{89   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ad0597d5c1d37131b02b2b4abecb14b2d}{PCROPStartAddr}}; }
+\DoxyCodeLine{92   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_ad38368cf5344d6071cc1b6211289f274}{PCROPEndAddr}};   }
+\DoxyCodeLine{94   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a3e0e447aefa223bad2bc2fc718519521}{BootEntryPoint}}; }
+\DoxyCodeLine{96   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_a75a5741441eecdb40c16caf3d77e2173}{SecBank}};        }
+\DoxyCodeLine{102   uint32\_t \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def_aafbd466456909330f77994db3f19a0cf}{SecSize}};        }
+\DoxyCodeLine{106 \} \mbox{\hyperlink{struct_f_l_a_s_h___o_b_program_init_type_def}{FLASH\_OBProgramInitTypeDef}};}
+\DoxyCodeLine{107 }
+\DoxyCodeLine{111 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{112 \{}
+\DoxyCodeLine{113   FLASH\_PROC\_NONE = 0,}
+\DoxyCodeLine{114   FLASH\_PROC\_PAGE\_ERASE,}
+\DoxyCodeLine{115   FLASH\_PROC\_MASS\_ERASE,}
+\DoxyCodeLine{116   FLASH\_PROC\_PROGRAM,}
+\DoxyCodeLine{117   FLASH\_PROC\_PROGRAM\_LAST}
+\DoxyCodeLine{118 \} \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\_ProcedureTypeDef}};}
+\DoxyCodeLine{119 }
+\DoxyCodeLine{123 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{124 \{}
+\DoxyCodeLine{125   FLASH\_CACHE\_DISABLED = 0,}
+\DoxyCodeLine{126   FLASH\_CACHE\_ICACHE\_ENABLED,}
+\DoxyCodeLine{127   FLASH\_CACHE\_DCACHE\_ENABLED,}
+\DoxyCodeLine{128   FLASH\_CACHE\_ICACHE\_DCACHE\_ENABLED}
+\DoxyCodeLine{129 \} \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga551c2661127487b169802a5e41a64784}{FLASH\_CacheTypeDef}};}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{134 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{135 \{}
+\DoxyCodeLine{136   \mbox{\hyperlink{stm32g4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\_LockTypeDef}}             Lock;              \textcolor{comment}{/* FLASH locking object */}}
+\DoxyCodeLine{137   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               ErrorCode;         \textcolor{comment}{/* FLASH error code */}}
+\DoxyCodeLine{138   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga2b0268387bc11bcab76be9ce7c43eaaf}{FLASH\_ProcedureTypeDef}} ProcedureOnGoing;  \textcolor{comment}{/* Internal variable to indicate which procedure is ongoing or not in IT context */}}
+\DoxyCodeLine{139   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               Address;           \textcolor{comment}{/* Internal variable to save address selected for program in IT context */}}
+\DoxyCodeLine{140   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               Bank;              \textcolor{comment}{/* Internal variable to save current bank selected during erase in IT context */}}
+\DoxyCodeLine{141   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               Page;              \textcolor{comment}{/* Internal variable to define the current page which is erasing in IT context */}}
+\DoxyCodeLine{142   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} uint32\_t               NbPagesToErase;    \textcolor{comment}{/* Internal variable to save the remaining pages to erase in IT context */}}
+\DoxyCodeLine{143   \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\_\_IO}} \mbox{\hyperlink{group___f_l_a_s_h___exported___types_ga551c2661127487b169802a5e41a64784}{FLASH\_CacheTypeDef}}     CacheToReactivate; \textcolor{comment}{/* Internal variable to indicate which caches should be reactivated */}}
+\DoxyCodeLine{144 \} \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def}{FLASH\_ProcessTypeDef}};}
+\DoxyCodeLine{145 }
+\DoxyCodeLine{150 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_NONE      0x00000000U}}
+\DoxyCodeLine{159 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_OP        FLASH\_FLAG\_OPERR}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_PROG      FLASH\_FLAG\_PROGERR}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_WRP       FLASH\_FLAG\_WRPERR}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_PGA       FLASH\_FLAG\_PGAERR}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_SIZ       FLASH\_FLAG\_SIZERR}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_PGS       FLASH\_FLAG\_PGSERR}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_MIS       FLASH\_FLAG\_MISERR}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_FAST      FLASH\_FLAG\_FASTERR}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_RD        FLASH\_FLAG\_RDERR}}
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_OPTV      FLASH\_FLAG\_OPTVERR}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_ECCC      FLASH\_FLAG\_ECCC}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_ECCD      FLASH\_FLAG\_ECCD}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_ECCC2     FLASH\_FLAG\_ECCC2}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define HAL\_FLASH\_ERROR\_ECCD2     FLASH\_FLAG\_ECCD2}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{\#define FLASH\_TYPEERASE\_PAGES     0x00U                    }}
+\DoxyCodeLine{183 \textcolor{preprocessor}{\#define FLASH\_TYPEERASE\_MASSERASE 0x01U                    }}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define FLASH\_BANK\_1              0x00000001U              }}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define FLASH\_BANK\_2              0x00000002U              }}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define FLASH\_BANK\_BOTH           (FLASH\_BANK\_1 | FLASH\_BANK\_2) }}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define FLASH\_BANK\_BOTH           FLASH\_BANK\_1             }}
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define FLASH\_TYPEPROGRAM\_DOUBLEWORD    0x00U              }}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define FLASH\_TYPEPROGRAM\_FAST          0x01U              }}
+\DoxyCodeLine{209 \textcolor{preprocessor}{\#define FLASH\_TYPEPROGRAM\_FAST\_AND\_LAST 0x02U              }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#define OPTIONBYTE\_WRP            0x01U                    }}
+\DoxyCodeLine{219 \textcolor{preprocessor}{\#define OPTIONBYTE\_RDP            0x02U                    }}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define OPTIONBYTE\_USER           0x04U                    }}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define OPTIONBYTE\_PCROP          0x08U                    }}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define OPTIONBYTE\_BOOT\_LOCK      0x10U                    }}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define OPTIONBYTE\_SEC            0x20U                    }}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define OB\_WRPAREA\_BANK1\_AREAA    0x00U                    }}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define OB\_WRPAREA\_BANK1\_AREAB    0x01U                    }}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define OB\_WRPAREA\_BANK2\_AREAA    0x02U                    }}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define OB\_WRPAREA\_BANK2\_AREAB    0x04U                    }}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define OB\_BOOT\_LOCK\_DISABLE      0x00000000U              }}
+\DoxyCodeLine{245 \textcolor{preprocessor}{\#define OB\_BOOT\_LOCK\_ENABLE       FLASH\_SEC1R\_BOOT\_LOCK    }}
+\DoxyCodeLine{253 \textcolor{preprocessor}{\#define OB\_RDP\_LEVEL\_0            0xAAU}}
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define OB\_RDP\_LEVEL\_1            0xBBU}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{\#define OB\_RDP\_LEVEL\_2            0xCCU                    }}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define OB\_USER\_BOR\_LEV           0x00000001U              }}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define OB\_USER\_nRST\_STOP         0x00000002U              }}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define OB\_USER\_nRST\_STDBY        0x00000004U              }}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define OB\_USER\_IWDG\_SW           0x00000008U              }}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define OB\_USER\_IWDG\_STOP         0x00000010U              }}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#define OB\_USER\_IWDG\_STDBY        0x00000020U              }}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#define OB\_USER\_WWDG\_SW           0x00000040U              }}
+\DoxyCodeLine{271 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{272 \textcolor{preprocessor}{\#define OB\_USER\_BFB2              0x00000080U              }}
+\DoxyCodeLine{273 \textcolor{preprocessor}{\#define OB\_USER\_DBANK             0x00000100U              }}
+\DoxyCodeLine{274 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_PB4\_PUPEN)}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define OB\_USER\_PB4\_PUPEN         0x00000100U              }}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{278 \textcolor{preprocessor}{\#define OB\_USER\_nBOOT1            0x00000200U              }}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define OB\_USER\_SRAM\_PE           0x00000400U              }}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define OB\_USER\_CCMSRAM\_RST       0x00000800U              }}
+\DoxyCodeLine{281 \textcolor{preprocessor}{\#define OB\_USER\_nRST\_SHDW         0x00001000U              }}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define OB\_USER\_nSWBOOT0          0x00002000U              }}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define OB\_USER\_nBOOT0            0x00004000U              }}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define OB\_USER\_NRST\_MODE         0x00008000U              }}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define OB\_USER\_IRHEN             0x00010000U              }}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL\_0            FLASH\_OPTR\_BOR\_LEV\_0     }}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL\_1            FLASH\_OPTR\_BOR\_LEV\_1     }}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL\_2            FLASH\_OPTR\_BOR\_LEV\_2     }}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL\_3            FLASH\_OPTR\_BOR\_LEV\_3     }}
+\DoxyCodeLine{297 \textcolor{preprocessor}{\#define OB\_BOR\_LEVEL\_4            FLASH\_OPTR\_BOR\_LEV\_4     }}
+\DoxyCodeLine{305 \textcolor{preprocessor}{\#define OB\_STOP\_RST               0x00000000U              }}
+\DoxyCodeLine{306 \textcolor{preprocessor}{\#define OB\_STOP\_NORST             FLASH\_OPTR\_nRST\_STOP     }}
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#define OB\_STANDBY\_RST            0x00000000U              }}
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#define OB\_STANDBY\_NORST          FLASH\_OPTR\_nRST\_STDBY    }}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define OB\_SHUTDOWN\_RST           0x00000000U              }}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define OB\_SHUTDOWN\_NORST         FLASH\_OPTR\_nRST\_SHDW     }}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define OB\_IWDG\_HW                0x00000000U              }}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define OB\_IWDG\_SW                FLASH\_OPTR\_IWDG\_SW       }}
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#define OB\_IWDG\_STOP\_FREEZE       0x00000000U              }}
+\DoxyCodeLine{342 \textcolor{preprocessor}{\#define OB\_IWDG\_STOP\_RUN          FLASH\_OPTR\_IWDG\_STOP     }}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define OB\_IWDG\_STDBY\_FREEZE      0x00000000U              }}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define OB\_IWDG\_STDBY\_RUN         FLASH\_OPTR\_IWDG\_STDBY    }}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define OB\_WWDG\_HW                0x00000000U              }}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define OB\_WWDG\_SW                FLASH\_OPTR\_WWDG\_SW       }}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{369 \textcolor{preprocessor}{\#define OB\_BFB2\_DISABLE           0x00000000U              }}
+\DoxyCodeLine{370 \textcolor{preprocessor}{\#define OB\_BFB2\_ENABLE            FLASH\_OPTR\_BFB2          }}
+\DoxyCodeLine{378 \textcolor{preprocessor}{\#define OB\_DBANK\_128\_BITS         0x00000000U              }}
+\DoxyCodeLine{379 \textcolor{preprocessor}{\#define OB\_DBANK\_64\_BITS          FLASH\_OPTR\_DBANK         }}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{384 }
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_PB4\_PUPEN)}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#define OB\_PB4\_PUPEN\_DISABLE      0x00000000U              }}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define OB\_PB4\_PUPEN\_ENABLE       FLASH\_OPTR\_PB4\_PUPEN     }}
+\DoxyCodeLine{394 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#define OB\_BOOT1\_SRAM             0x00000000U              }}
+\DoxyCodeLine{400 \textcolor{preprocessor}{\#define OB\_BOOT1\_SYSTEM           FLASH\_OPTR\_nBOOT1        }}
+\DoxyCodeLine{408 \textcolor{preprocessor}{\#define OB\_SRAM\_PARITY\_ENABLE     0x00000000U              }}
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define OB\_SRAM\_PARITY\_DISABLE    FLASH\_OPTR\_SRAM\_PE       }}
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define OB\_CCMSRAM\_RST\_ERASE      0x00000000U              }}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define OB\_CCMSRAM\_RST\_NOT\_ERASE  FLASH\_OPTR\_CCMSRAM\_RST   }}
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#define OB\_BOOT0\_FROM\_OB          0x00000000U              }}
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define OB\_BOOT0\_FROM\_PIN         FLASH\_OPTR\_nSWBOOT0      }}
+\DoxyCodeLine{435 \textcolor{preprocessor}{\#define OB\_nBOOT0\_RESET           0x00000000U              }}
+\DoxyCodeLine{436 \textcolor{preprocessor}{\#define OB\_nBOOT0\_SET             FLASH\_OPTR\_nBOOT0        }}
+\DoxyCodeLine{444 \textcolor{preprocessor}{\#define OB\_NRST\_MODE\_INPUT\_ONLY   FLASH\_OPTR\_NRST\_MODE\_0   }}
+\DoxyCodeLine{445 \textcolor{preprocessor}{\#define OB\_NRST\_MODE\_GPIO         FLASH\_OPTR\_NRST\_MODE\_1   }}
+\DoxyCodeLine{446 \textcolor{preprocessor}{\#define OB\_NRST\_MODE\_INPUT\_OUTPUT FLASH\_OPTR\_NRST\_MODE     }}
+\DoxyCodeLine{454 \textcolor{preprocessor}{\#define OB\_IRH\_DISABLE            0x00000000U              }}
+\DoxyCodeLine{455 \textcolor{preprocessor}{\#define OB\_IRH\_ENABLE             FLASH\_OPTR\_IRHEN         }}
+\DoxyCodeLine{463 \textcolor{preprocessor}{\#define OB\_PCROP\_RDP\_NOT\_ERASE    0x00000000U              }}
+\DoxyCodeLine{465 \textcolor{preprocessor}{\#define OB\_PCROP\_RDP\_ERASE        FLASH\_PCROP1ER\_PCROP\_RDP }}
+\DoxyCodeLine{474 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_0           FLASH\_ACR\_LATENCY\_0WS    }}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_1           FLASH\_ACR\_LATENCY\_1WS    }}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_2           FLASH\_ACR\_LATENCY\_2WS    }}
+\DoxyCodeLine{477 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_3           FLASH\_ACR\_LATENCY\_3WS    }}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_4           FLASH\_ACR\_LATENCY\_4WS    }}
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_5           FLASH\_ACR\_LATENCY\_5WS    }}
+\DoxyCodeLine{480 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_6           FLASH\_ACR\_LATENCY\_6WS    }}
+\DoxyCodeLine{481 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_7           FLASH\_ACR\_LATENCY\_7WS    }}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_8           FLASH\_ACR\_LATENCY\_8WS    }}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_9           FLASH\_ACR\_LATENCY\_9WS    }}
+\DoxyCodeLine{484 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_10          FLASH\_ACR\_LATENCY\_10WS   }}
+\DoxyCodeLine{485 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_11          FLASH\_ACR\_LATENCY\_11WS   }}
+\DoxyCodeLine{486 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_12          FLASH\_ACR\_LATENCY\_12WS   }}
+\DoxyCodeLine{487 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_13          FLASH\_ACR\_LATENCY\_13WS   }}
+\DoxyCodeLine{488 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_14          FLASH\_ACR\_LATENCY\_14WS   }}
+\DoxyCodeLine{489 \textcolor{preprocessor}{\#define FLASH\_LATENCY\_15          FLASH\_ACR\_LATENCY\_15WS   }}
+\DoxyCodeLine{497 \textcolor{preprocessor}{\#define FLASH\_KEY1                0x45670123U              }}
+\DoxyCodeLine{498 \textcolor{preprocessor}{\#define FLASH\_KEY2                0xCDEF89ABU              }}
+\DoxyCodeLine{501 \textcolor{preprocessor}{\#define FLASH\_PDKEY1              0x04152637U              }}
+\DoxyCodeLine{502 \textcolor{preprocessor}{\#define FLASH\_PDKEY2              0xFAFBFCFDU              }}
+\DoxyCodeLine{505 \textcolor{preprocessor}{\#define FLASH\_OPTKEY1             0x08192A3BU              }}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define FLASH\_OPTKEY2             0x4C5D6E7FU              }}
+\DoxyCodeLine{515 \textcolor{preprocessor}{\#define FLASH\_FLAG\_EOP            FLASH\_SR\_EOP             }}
+\DoxyCodeLine{516 \textcolor{preprocessor}{\#define FLASH\_FLAG\_OPERR          FLASH\_SR\_OPERR           }}
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define FLASH\_FLAG\_PROGERR        FLASH\_SR\_PROGERR         }}
+\DoxyCodeLine{518 \textcolor{preprocessor}{\#define FLASH\_FLAG\_WRPERR         FLASH\_SR\_WRPERR          }}
+\DoxyCodeLine{519 \textcolor{preprocessor}{\#define FLASH\_FLAG\_PGAERR         FLASH\_SR\_PGAERR          }}
+\DoxyCodeLine{520 \textcolor{preprocessor}{\#define FLASH\_FLAG\_SIZERR         FLASH\_SR\_SIZERR          }}
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define FLASH\_FLAG\_PGSERR         FLASH\_SR\_PGSERR          }}
+\DoxyCodeLine{522 \textcolor{preprocessor}{\#define FLASH\_FLAG\_MISERR         FLASH\_SR\_MISERR          }}
+\DoxyCodeLine{523 \textcolor{preprocessor}{\#define FLASH\_FLAG\_FASTERR        FLASH\_SR\_FASTERR         }}
+\DoxyCodeLine{524 \textcolor{preprocessor}{\#define FLASH\_FLAG\_RDERR          FLASH\_SR\_RDERR           }}
+\DoxyCodeLine{525 \textcolor{preprocessor}{\#define FLASH\_FLAG\_OPTVERR        FLASH\_SR\_OPTVERR         }}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define FLASH\_FLAG\_BSY            FLASH\_SR\_BSY             }}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ECCC           FLASH\_ECCR\_ECCC          }}
+\DoxyCodeLine{528 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ECCD           FLASH\_ECCR\_ECCD          }}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ECCC2          FLASH\_ECCR\_ECCC2         }}
+\DoxyCodeLine{531 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ECCD2          FLASH\_ECCR\_ECCD2         }}
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{533 }
+\DoxyCodeLine{534 \textcolor{preprocessor}{\#define FLASH\_FLAG\_SR\_ERRORS      (FLASH\_FLAG\_OPERR   | FLASH\_FLAG\_PROGERR | FLASH\_FLAG\_WRPERR | \(\backslash\)}}
+\DoxyCodeLine{535 \textcolor{preprocessor}{                                   FLASH\_FLAG\_PGAERR  | FLASH\_FLAG\_SIZERR  | FLASH\_FLAG\_PGSERR | \(\backslash\)}}
+\DoxyCodeLine{536 \textcolor{preprocessor}{                                   FLASH\_FLAG\_MISERR  | FLASH\_FLAG\_FASTERR | FLASH\_FLAG\_RDERR  | \(\backslash\)}}
+\DoxyCodeLine{537 \textcolor{preprocessor}{                                   FLASH\_FLAG\_OPTVERR)}}
+\DoxyCodeLine{538 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ECCR\_ERRORS    (FLASH\_FLAG\_ECCC    | FLASH\_FLAG\_ECCD    | FLASH\_FLAG\_ECCC2  | FLASH\_FLAG\_ECCD2)}}
+\DoxyCodeLine{540 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{541 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ECCR\_ERRORS    (FLASH\_FLAG\_ECCC    | FLASH\_FLAG\_ECCD)}}
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{543 \textcolor{preprocessor}{\#define FLASH\_FLAG\_ALL\_ERRORS     (FLASH\_FLAG\_SR\_ERRORS | FLASH\_FLAG\_ECCR\_ERRORS)}}
+\DoxyCodeLine{552 \textcolor{preprocessor}{\#define FLASH\_IT\_EOP              FLASH\_CR\_EOPIE           }}
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#define FLASH\_IT\_OPERR            FLASH\_CR\_ERRIE           }}
+\DoxyCodeLine{554 \textcolor{preprocessor}{\#define FLASH\_IT\_RDERR            FLASH\_CR\_RDERRIE         }}
+\DoxyCodeLine{555 \textcolor{preprocessor}{\#define FLASH\_IT\_ECCC            (FLASH\_ECCR\_ECCIE >> 24U) }}
+\DoxyCodeLine{564 \textcolor{comment}{/* Exported macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{592 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_SET\_LATENCY(\_\_LATENCY\_\_)    MODIFY\_REG(FLASH-\/>ACR, FLASH\_ACR\_LATENCY, (\_\_LATENCY\_\_))}}
+\DoxyCodeLine{593 }
+\DoxyCodeLine{615 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_GET\_LATENCY()               READ\_BIT(FLASH-\/>ACR, FLASH\_ACR\_LATENCY)}}
+\DoxyCodeLine{616 }
+\DoxyCodeLine{621 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_PREFETCH\_BUFFER\_ENABLE()    SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_PRFTEN)}}
+\DoxyCodeLine{622 }
+\DoxyCodeLine{627 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_PREFETCH\_BUFFER\_DISABLE()   CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_PRFTEN)}}
+\DoxyCodeLine{628 }
+\DoxyCodeLine{633 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_ENABLE()  SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_ICEN)}}
+\DoxyCodeLine{634 }
+\DoxyCodeLine{639 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_DISABLE() CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_ICEN)}}
+\DoxyCodeLine{640 }
+\DoxyCodeLine{645 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DATA\_CACHE\_ENABLE()         SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_DCEN)}}
+\DoxyCodeLine{646 }
+\DoxyCodeLine{651 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DATA\_CACHE\_DISABLE()        CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_DCEN)}}
+\DoxyCodeLine{652 }
+\DoxyCodeLine{658 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_INSTRUCTION\_CACHE\_RESET()   do \{ SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_ICRST);   \(\backslash\)}}
+\DoxyCodeLine{659 \textcolor{preprocessor}{                                                     CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_ICRST); \(\backslash\)}}
+\DoxyCodeLine{660 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{661 }
+\DoxyCodeLine{667 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DATA\_CACHE\_RESET()          do \{ SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_DCRST);   \(\backslash\)}}
+\DoxyCodeLine{668 \textcolor{preprocessor}{                                                     CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_DCRST); \(\backslash\)}}
+\DoxyCodeLine{669 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{670 }
+\DoxyCodeLine{676 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_POWER\_DOWN\_ENABLE()         do \{ WRITE\_REG(FLASH-\/>PDKEYR, FLASH\_PDKEY1); \(\backslash\)}}
+\DoxyCodeLine{677 \textcolor{preprocessor}{                                                     WRITE\_REG(FLASH-\/>PDKEYR, FLASH\_PDKEY2); \(\backslash\)}}
+\DoxyCodeLine{678 \textcolor{preprocessor}{                                                     SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_RUN\_PD);   \(\backslash\)}}
+\DoxyCodeLine{679 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{680 }
+\DoxyCodeLine{686 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_POWER\_DOWN\_DISABLE()        do \{ WRITE\_REG(FLASH-\/>PDKEYR, FLASH\_PDKEY1); \(\backslash\)}}
+\DoxyCodeLine{687 \textcolor{preprocessor}{                                                     WRITE\_REG(FLASH-\/>PDKEYR, FLASH\_PDKEY2); \(\backslash\)}}
+\DoxyCodeLine{688 \textcolor{preprocessor}{                                                     CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_RUN\_PD); \(\backslash\)}}
+\DoxyCodeLine{689 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{690 }
+\DoxyCodeLine{695 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_SLEEP\_POWERDOWN\_ENABLE()    SET\_BIT(FLASH-\/>ACR, FLASH\_ACR\_SLEEP\_PD)}}
+\DoxyCodeLine{696 }
+\DoxyCodeLine{701 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_SLEEP\_POWERDOWN\_DISABLE()   CLEAR\_BIT(FLASH-\/>ACR, FLASH\_ACR\_SLEEP\_PD)}}
+\DoxyCodeLine{702 }
+\DoxyCodeLine{722 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_ENABLE\_IT(\_\_INTERRUPT\_\_)    do \{ if(((\_\_INTERRUPT\_\_) \& FLASH\_IT\_ECCC) != 0U) \{ SET\_BIT(FLASH-\/>ECCR, FLASH\_ECCR\_ECCIE); \}\(\backslash\)}}
+\DoxyCodeLine{723 \textcolor{preprocessor}{                                                     if(((\_\_INTERRUPT\_\_) \& (\string~FLASH\_IT\_ECCC)) != 0U) \{ SET\_BIT(FLASH-\/>CR, ((\_\_INTERRUPT\_\_) \& (\string~FLASH\_IT\_ECCC))); \}\(\backslash\)}}
+\DoxyCodeLine{724 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{725 }
+\DoxyCodeLine{736 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_DISABLE\_IT(\_\_INTERRUPT\_\_)   do \{ if(((\_\_INTERRUPT\_\_) \& FLASH\_IT\_ECCC) != 0U) \{ CLEAR\_BIT(FLASH-\/>ECCR, FLASH\_ECCR\_ECCIE); \}\(\backslash\)}}
+\DoxyCodeLine{737 \textcolor{preprocessor}{                                                     if(((\_\_INTERRUPT\_\_) \& (\string~FLASH\_IT\_ECCC)) != 0U) \{ CLEAR\_BIT(FLASH-\/>CR, ((\_\_INTERRUPT\_\_) \& (\string~FLASH\_IT\_ECCC))); \}\(\backslash\)}}
+\DoxyCodeLine{738 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{739 }
+\DoxyCodeLine{763 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_GET\_FLAG(\_\_FLAG\_\_)          ((((\_\_FLAG\_\_) \& FLASH\_FLAG\_ECCR\_ERRORS) != 0U) ? \(\backslash\)}}
+\DoxyCodeLine{764 \textcolor{preprocessor}{                                                 (READ\_BIT(FLASH-\/>ECCR, (\_\_FLAG\_\_)) == (\_\_FLAG\_\_)) : \(\backslash\)}}
+\DoxyCodeLine{765 \textcolor{preprocessor}{                                                 (READ\_BIT(FLASH-\/>SR,   (\_\_FLAG\_\_)) == (\_\_FLAG\_\_)))}}
+\DoxyCodeLine{766 }
+\DoxyCodeLine{791 \textcolor{preprocessor}{\#define \_\_HAL\_FLASH\_CLEAR\_FLAG(\_\_FLAG\_\_)        do \{ if(((\_\_FLAG\_\_) \& FLASH\_FLAG\_ECCR\_ERRORS) != 0U) \{ SET\_BIT(FLASH-\/>ECCR, ((\_\_FLAG\_\_) \& FLASH\_FLAG\_ECCR\_ERRORS)); \}\(\backslash\)}}
+\DoxyCodeLine{792 \textcolor{preprocessor}{                                                     if(((\_\_FLAG\_\_) \& \string~(FLASH\_FLAG\_ECCR\_ERRORS)) != 0U) \{ WRITE\_REG(FLASH-\/>SR, ((\_\_FLAG\_\_) \& \string~(FLASH\_FLAG\_ECCR\_ERRORS))); \}\(\backslash\)}}
+\DoxyCodeLine{793 \textcolor{preprocessor}{                                                   \} while (0)}}
+\DoxyCodeLine{798 \textcolor{comment}{/* Include FLASH HAL Extended module */}}
+\DoxyCodeLine{799 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__flash__ex_8h}{stm32g4xx\_hal\_flash\_ex.h}}"{}}}
+\DoxyCodeLine{800 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__flash__ramfunc_8h}{stm32g4xx\_hal\_flash\_ramfunc.h}}"{}}}
+\DoxyCodeLine{801 }
+\DoxyCodeLine{802 \textcolor{comment}{/* Exported variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{806 \textcolor{keyword}{extern} \mbox{\hyperlink{struct_f_l_a_s_h___process_type_def}{FLASH\_ProcessTypeDef}} pFlash;}
+\DoxyCodeLine{811 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{816 \textcolor{comment}{/* Program operation functions  ***********************************************/}}
+\DoxyCodeLine{820 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_Program(uint32\_t TypeProgram, uint32\_t Address, uint64\_t Data);}
+\DoxyCodeLine{821 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_Program\_IT(uint32\_t TypeProgram, uint32\_t Address, uint64\_t Data);}
+\DoxyCodeLine{822 \textcolor{comment}{/* FLASH IRQ handler method */}}
+\DoxyCodeLine{823 \textcolor{keywordtype}{void}               HAL\_FLASH\_IRQHandler(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{824 \textcolor{comment}{/* Callbacks in non blocking modes */}}
+\DoxyCodeLine{825 \textcolor{keywordtype}{void}               HAL\_FLASH\_EndOfOperationCallback(uint32\_t ReturnValue);}
+\DoxyCodeLine{826 \textcolor{keywordtype}{void}               HAL\_FLASH\_OperationErrorCallback(uint32\_t ReturnValue);}
+\DoxyCodeLine{831 \textcolor{comment}{/* Peripheral Control functions  **********************************************/}}
+\DoxyCodeLine{835 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_Unlock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{836 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_Lock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{837 \textcolor{comment}{/* Option bytes control */}}
+\DoxyCodeLine{838 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_OB\_Unlock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{839 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_OB\_Lock(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{840 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  HAL\_FLASH\_OB\_Launch(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{845 \textcolor{comment}{/* Peripheral State functions  ************************************************/}}
+\DoxyCodeLine{849 uint32\_t HAL\_FLASH\_GetError(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{861 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}}  FLASH\_WaitForLastOperation(uint32\_t Timeout);}
+\DoxyCodeLine{866 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{870 \textcolor{preprocessor}{\#define FLASH\_SIZE\_DATA\_REGISTER        FLASHSIZE\_BASE}}
+\DoxyCodeLine{871 }
+\DoxyCodeLine{872 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{873 \textcolor{preprocessor}{\#define FLASH\_SIZE                      ((((*((uint16\_t *)FLASH\_SIZE\_DATA\_REGISTER)) == 0xFFFFU)) ? (0x200UL << 10U) : \(\backslash\)}}
+\DoxyCodeLine{874 \textcolor{preprocessor}{                                        (((*((uint32\_t *)FLASH\_SIZE\_DATA\_REGISTER)) \& 0xFFFFUL) << 10U))}}
+\DoxyCodeLine{875 \textcolor{preprocessor}{\#define FLASH\_BANK\_SIZE                 (FLASH\_SIZE >> 1)}}
+\DoxyCodeLine{876 \textcolor{preprocessor}{\#define FLASH\_PAGE\_NB                   128U}}
+\DoxyCodeLine{877 \textcolor{preprocessor}{\#define FLASH\_PAGE\_SIZE\_128\_BITS        0x1000U }\textcolor{comment}{/* 4 KB */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{878 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{879 \textcolor{preprocessor}{\#define FLASH\_SIZE                      ((((*((uint16\_t *)FLASH\_SIZE\_DATA\_REGISTER)) == 0xFFFFU)) ? (0x80UL << 10U) : \(\backslash\)}}
+\DoxyCodeLine{880 \textcolor{preprocessor}{                                        (((*((uint32\_t *)FLASH\_SIZE\_DATA\_REGISTER)) \& 0xFFFFUL) << 10U))}}
+\DoxyCodeLine{881 \textcolor{preprocessor}{\#define FLASH\_BANK\_SIZE                 (FLASH\_SIZE)}}
+\DoxyCodeLine{882 \textcolor{preprocessor}{\#define FLASH\_PAGE\_NB                   ((FLASH\_SIZE == 0x00080000U) ? 256U : \(\backslash\)}}
+\DoxyCodeLine{883 \textcolor{preprocessor}{                                        ((FLASH\_SIZE == 0x00040000U) ? 128U : 64U))}}
+\DoxyCodeLine{884 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{885 }
+\DoxyCodeLine{886 \textcolor{preprocessor}{\#define FLASH\_PAGE\_SIZE                 0x800U  }\textcolor{comment}{/* 2 KB */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{887 }
+\DoxyCodeLine{888 \textcolor{preprocessor}{\#define FLASH\_TIMEOUT\_VALUE             1000U   }\textcolor{comment}{/* 1 s  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{889 }
+\DoxyCodeLine{894 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{899 \textcolor{preprocessor}{\#define IS\_FLASH\_TYPEERASE(VALUE)          (((VALUE) == FLASH\_TYPEERASE\_PAGES) || \(\backslash\)}}
+\DoxyCodeLine{900 \textcolor{preprocessor}{                                            ((VALUE) == FLASH\_TYPEERASE\_MASSERASE))}}
+\DoxyCodeLine{901 }
+\DoxyCodeLine{902 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{903 \textcolor{preprocessor}{\#define IS\_FLASH\_BANK(BANK)                (((BANK) == FLASH\_BANK\_1)  || \(\backslash\)}}
+\DoxyCodeLine{904 \textcolor{preprocessor}{                                            ((BANK) == FLASH\_BANK\_2)  || \(\backslash\)}}
+\DoxyCodeLine{905 \textcolor{preprocessor}{                                            ((BANK) == FLASH\_BANK\_BOTH))}}
+\DoxyCodeLine{906 }
+\DoxyCodeLine{907 \textcolor{preprocessor}{\#define IS\_FLASH\_BANK\_EXCLUSIVE(BANK)      (((BANK) == FLASH\_BANK\_1)  || \(\backslash\)}}
+\DoxyCodeLine{908 \textcolor{preprocessor}{                                            ((BANK) == FLASH\_BANK\_2))}}
+\DoxyCodeLine{909 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{910 \textcolor{preprocessor}{\#define IS\_FLASH\_BANK(BANK)                ((BANK) == FLASH\_BANK\_1)}}
+\DoxyCodeLine{911 }
+\DoxyCodeLine{912 \textcolor{preprocessor}{\#define IS\_FLASH\_BANK\_EXCLUSIVE(BANK)      ((BANK) == FLASH\_BANK\_1)}}
+\DoxyCodeLine{913 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{914 }
+\DoxyCodeLine{915 \textcolor{preprocessor}{\#define IS\_FLASH\_TYPEPROGRAM(VALUE)        (((VALUE) == FLASH\_TYPEPROGRAM\_DOUBLEWORD) || \(\backslash\)}}
+\DoxyCodeLine{916 \textcolor{preprocessor}{                                            ((VALUE) == FLASH\_TYPEPROGRAM\_FAST) || \(\backslash\)}}
+\DoxyCodeLine{917 \textcolor{preprocessor}{                                            ((VALUE) == FLASH\_TYPEPROGRAM\_FAST\_AND\_LAST))}}
+\DoxyCodeLine{918 }
+\DoxyCodeLine{919 \textcolor{preprocessor}{\#define IS\_FLASH\_MAIN\_MEM\_ADDRESS(ADDRESS) (((ADDRESS) >= FLASH\_BASE) \&\& ((ADDRESS) < (FLASH\_BASE+FLASH\_SIZE)))}}
+\DoxyCodeLine{920 }
+\DoxyCodeLine{921 \textcolor{preprocessor}{\#define IS\_FLASH\_OTP\_ADDRESS(ADDRESS)      (((ADDRESS) >= 0x1FFF7000U) \&\& ((ADDRESS) <= 0x1FFF73FFU))}}
+\DoxyCodeLine{922 }
+\DoxyCodeLine{923 \textcolor{preprocessor}{\#define IS\_FLASH\_PROGRAM\_ADDRESS(ADDRESS)  (IS\_FLASH\_MAIN\_MEM\_ADDRESS(ADDRESS) || IS\_FLASH\_OTP\_ADDRESS(ADDRESS))}}
+\DoxyCodeLine{924 }
+\DoxyCodeLine{925 \textcolor{preprocessor}{\#define IS\_FLASH\_PAGE(PAGE)                ((PAGE) < FLASH\_PAGE\_NB)}}
+\DoxyCodeLine{926 }
+\DoxyCodeLine{927 \textcolor{preprocessor}{\#define IS\_OPTIONBYTE(VALUE)               (((VALUE) <= (OPTIONBYTE\_WRP | OPTIONBYTE\_RDP | OPTIONBYTE\_USER | OPTIONBYTE\_PCROP | \(\backslash\)}}
+\DoxyCodeLine{928 \textcolor{preprocessor}{                                            OPTIONBYTE\_BOOT\_LOCK | OPTIONBYTE\_SEC)))}}
+\DoxyCodeLine{929 }
+\DoxyCodeLine{930 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{931 \textcolor{preprocessor}{\#define IS\_OB\_WRPAREA(VALUE)               (((VALUE) == OB\_WRPAREA\_BANK1\_AREAA) || ((VALUE) == OB\_WRPAREA\_BANK1\_AREAB) || \(\backslash\)}}
+\DoxyCodeLine{932 \textcolor{preprocessor}{                                            ((VALUE) == OB\_WRPAREA\_BANK2\_AREAA) || ((VALUE) == OB\_WRPAREA\_BANK2\_AREAB))}}
+\DoxyCodeLine{933 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{934 \textcolor{preprocessor}{\#define IS\_OB\_WRPAREA(VALUE)               (((VALUE) == OB\_WRPAREA\_BANK1\_AREAA) || ((VALUE) == OB\_WRPAREA\_BANK1\_AREAB))}}
+\DoxyCodeLine{935 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{936 }
+\DoxyCodeLine{937 \textcolor{preprocessor}{\#define IS\_OB\_BOOT\_LOCK(VALUE)             (((VALUE) == OB\_BOOT\_LOCK\_ENABLE) || ((VALUE) == OB\_BOOT\_LOCK\_DISABLE))}}
+\DoxyCodeLine{938 }
+\DoxyCodeLine{939 \textcolor{preprocessor}{\#define IS\_OB\_RDP\_LEVEL(LEVEL)             (((LEVEL) == OB\_RDP\_LEVEL\_0) ||\(\backslash\)}}
+\DoxyCodeLine{940 \textcolor{preprocessor}{                                            ((LEVEL) == OB\_RDP\_LEVEL\_1) ||\(\backslash\)}}
+\DoxyCodeLine{941 \textcolor{preprocessor}{                                            ((LEVEL) == OB\_RDP\_LEVEL\_2))}}
+\DoxyCodeLine{942 }
+\DoxyCodeLine{943 \textcolor{preprocessor}{\#define IS\_OB\_USER\_TYPE(TYPE)              (((TYPE) <= 0x1FFFFU) \&\& ((TYPE) != 0U))}}
+\DoxyCodeLine{944 }
+\DoxyCodeLine{945 \textcolor{preprocessor}{\#define IS\_OB\_USER\_BOR\_LEVEL(LEVEL)        (((LEVEL) == OB\_BOR\_LEVEL\_0) || ((LEVEL) == OB\_BOR\_LEVEL\_1) || \(\backslash\)}}
+\DoxyCodeLine{946 \textcolor{preprocessor}{                                            ((LEVEL) == OB\_BOR\_LEVEL\_2) || ((LEVEL) == OB\_BOR\_LEVEL\_3) || \(\backslash\)}}
+\DoxyCodeLine{947 \textcolor{preprocessor}{                                            ((LEVEL) == OB\_BOR\_LEVEL\_4))}}
+\DoxyCodeLine{948 }
+\DoxyCodeLine{949 \textcolor{preprocessor}{\#define IS\_OB\_USER\_STOP(VALUE)             (((VALUE) == OB\_STOP\_RST) || ((VALUE) == OB\_STOP\_NORST))}}
+\DoxyCodeLine{950 }
+\DoxyCodeLine{951 \textcolor{preprocessor}{\#define IS\_OB\_USER\_STANDBY(VALUE)          (((VALUE) == OB\_STANDBY\_RST) || ((VALUE) == OB\_STANDBY\_NORST))}}
+\DoxyCodeLine{952 }
+\DoxyCodeLine{953 \textcolor{preprocessor}{\#define IS\_OB\_USER\_SHUTDOWN(VALUE)         (((VALUE) == OB\_SHUTDOWN\_RST) || ((VALUE) == OB\_SHUTDOWN\_NORST))}}
+\DoxyCodeLine{954 }
+\DoxyCodeLine{955 \textcolor{preprocessor}{\#define IS\_OB\_USER\_IWDG(VALUE)             (((VALUE) == OB\_IWDG\_HW) || ((VALUE) == OB\_IWDG\_SW))}}
+\DoxyCodeLine{956 }
+\DoxyCodeLine{957 \textcolor{preprocessor}{\#define IS\_OB\_USER\_IWDG\_STOP(VALUE)        (((VALUE) == OB\_IWDG\_STOP\_FREEZE) || ((VALUE) == OB\_IWDG\_STOP\_RUN))}}
+\DoxyCodeLine{958 }
+\DoxyCodeLine{959 \textcolor{preprocessor}{\#define IS\_OB\_USER\_IWDG\_STDBY(VALUE)       (((VALUE) == OB\_IWDG\_STDBY\_FREEZE) || ((VALUE) == OB\_IWDG\_STDBY\_RUN))}}
+\DoxyCodeLine{960 }
+\DoxyCodeLine{961 \textcolor{preprocessor}{\#define IS\_OB\_USER\_WWDG(VALUE)             (((VALUE) == OB\_WWDG\_HW) || ((VALUE) == OB\_WWDG\_SW))}}
+\DoxyCodeLine{962 }
+\DoxyCodeLine{963 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_DBANK)}}
+\DoxyCodeLine{964 \textcolor{preprocessor}{\#define IS\_OB\_USER\_BFB2(VALUE)             (((VALUE) == OB\_BFB2\_DISABLE) || ((VALUE) == OB\_BFB2\_ENABLE))}}
+\DoxyCodeLine{965 }
+\DoxyCodeLine{966 \textcolor{preprocessor}{\#define IS\_OB\_USER\_DBANK(VALUE)            (((VALUE) == OB\_DBANK\_128\_BITS) || ((VALUE) == OB\_DBANK\_64\_BITS))}}
+\DoxyCodeLine{967 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{968 }
+\DoxyCodeLine{969 \textcolor{preprocessor}{\#if defined (FLASH\_OPTR\_PB4\_PUPEN)}}
+\DoxyCodeLine{970 \textcolor{preprocessor}{\#define IS\_OB\_USER\_PB4\_PUPEN(VALUE)        (((VALUE) == OB\_PB4\_PUPEN\_DISABLE) || ((VALUE) == OB\_PB4\_PUPEN\_ENABLE))}}
+\DoxyCodeLine{971 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{972 }
+\DoxyCodeLine{973 \textcolor{preprocessor}{\#define IS\_OB\_USER\_BOOT1(VALUE)            (((VALUE) == OB\_BOOT1\_SRAM) || ((VALUE) == OB\_BOOT1\_SYSTEM))}}
+\DoxyCodeLine{974 }
+\DoxyCodeLine{975 \textcolor{preprocessor}{\#define IS\_OB\_USER\_SRAM\_PARITY(VALUE)      (((VALUE) == OB\_SRAM\_PARITY\_ENABLE) || ((VALUE) == OB\_SRAM\_PARITY\_DISABLE))}}
+\DoxyCodeLine{976 }
+\DoxyCodeLine{977 \textcolor{preprocessor}{\#define IS\_OB\_USER\_CCMSRAM\_RST(VALUE)      (((VALUE) == OB\_CCMSRAM\_RST\_ERASE) || ((VALUE) == OB\_CCMSRAM\_RST\_NOT\_ERASE))}}
+\DoxyCodeLine{978 }
+\DoxyCodeLine{979 \textcolor{preprocessor}{\#define IS\_OB\_USER\_SWBOOT0(VALUE)          (((VALUE) == OB\_BOOT0\_FROM\_OB) || ((VALUE) == OB\_BOOT0\_FROM\_PIN))}}
+\DoxyCodeLine{980 }
+\DoxyCodeLine{981 \textcolor{preprocessor}{\#define IS\_OB\_USER\_BOOT0(VALUE)            (((VALUE) == OB\_nBOOT0\_RESET) || ((VALUE) == OB\_nBOOT0\_SET))}}
+\DoxyCodeLine{982 }
+\DoxyCodeLine{983 \textcolor{preprocessor}{\#define IS\_OB\_USER\_NRST\_MODE(VALUE)        (((VALUE) == OB\_NRST\_MODE\_GPIO) || ((VALUE) == OB\_NRST\_MODE\_INPUT\_ONLY) || \(\backslash\)}}
+\DoxyCodeLine{984 \textcolor{preprocessor}{                                            ((VALUE) == OB\_NRST\_MODE\_INPUT\_OUTPUT))}}
+\DoxyCodeLine{985 }
+\DoxyCodeLine{986 \textcolor{preprocessor}{\#define IS\_OB\_USER\_IRHEN(VALUE)            (((VALUE) == OB\_IRH\_ENABLE) || ((VALUE) == OB\_IRH\_DISABLE))}}
+\DoxyCodeLine{987 }
+\DoxyCodeLine{988 \textcolor{preprocessor}{\#define IS\_OB\_PCROP\_RDP(VALUE)             (((VALUE) == OB\_PCROP\_RDP\_NOT\_ERASE) || ((VALUE) == OB\_PCROP\_RDP\_ERASE))}}
+\DoxyCodeLine{989 }
+\DoxyCodeLine{990 \textcolor{preprocessor}{\#define IS\_OB\_SECMEM\_SIZE(VALUE)           ((VALUE) <= FLASH\_PAGE\_NB)}}
+\DoxyCodeLine{991 }
+\DoxyCodeLine{992 \textcolor{preprocessor}{\#define IS\_FLASH\_LATENCY(LATENCY)          (((LATENCY) == FLASH\_LATENCY\_0) || ((LATENCY) == FLASH\_LATENCY\_1) || \(\backslash\)}}
+\DoxyCodeLine{993 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_2) || ((LATENCY) == FLASH\_LATENCY\_3) || \(\backslash\)}}
+\DoxyCodeLine{994 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_4) || ((LATENCY) == FLASH\_LATENCY\_5) || \(\backslash\)}}
+\DoxyCodeLine{995 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_6) || ((LATENCY) == FLASH\_LATENCY\_7) || \(\backslash\)}}
+\DoxyCodeLine{996 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_8) || ((LATENCY) == FLASH\_LATENCY\_9) || \(\backslash\)}}
+\DoxyCodeLine{997 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_10) || ((LATENCY) == FLASH\_LATENCY\_11) || \(\backslash\)}}
+\DoxyCodeLine{998 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_12) || ((LATENCY) == FLASH\_LATENCY\_13) || \(\backslash\)}}
+\DoxyCodeLine{999 \textcolor{preprocessor}{                                            ((LATENCY) == FLASH\_LATENCY\_14) || ((LATENCY) == FLASH\_LATENCY\_15))}}
+\DoxyCodeLine{1012 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{1013 \}}
+\DoxyCodeLine{1014 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1015 }
+\DoxyCodeLine{1016 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_FLASH\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1017 }
+
+\end{DoxyCode}

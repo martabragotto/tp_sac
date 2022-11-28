@@ -1,0 +1,219 @@
+\hypertarget{group___c_m_s_i_s___core___cache_functions}{}\doxysection{Cache Functions}
+\label{group___c_m_s_i_s___core___cache_functions}\index{Cache Functions@{Cache Functions}}
+
+
+Functions that configure Instruction and Data cache.  
+
+
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group___c_m_s_i_s___core___sys_tick_functions}{Sys\+Tick Functions}}
+\begin{DoxyCompactList}\small\item\em Functions that configure the System. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga980ffe52af778f2535ccc52f25f9a7de}{SCB\+\_\+\+Enable\+ICache}} (void)
+\begin{DoxyCompactList}\small\item\em Enable I-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga56baa06298799dea5f207d4c12d9d4a6}{SCB\+\_\+\+Disable\+ICache}} (void)
+\begin{DoxyCompactList}\small\item\em Disable I-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga62419cb7e6773e3d9236f14e458c1b05}{SCB\+\_\+\+Invalidate\+ICache}} (void)
+\begin{DoxyCompactList}\small\item\em Invalidate I-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_gaf6bed290ff6916337b0ce6c09131f699}{SCB\+\_\+\+Invalidate\+ICache\+\_\+by\+\_\+\+Addr}} (void $\ast$addr, int32\+\_\+t isize)
+\begin{DoxyCompactList}\small\item\em I-\/\+Cache Invalidate by address. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga3861db932100ccb53f994e2cc68ed79c}{SCB\+\_\+\+Enable\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Enable D-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_gafe64b44d1a61483a947e44a77a9d3287}{SCB\+\_\+\+Disable\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Disable D-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga99fe43c224644881935de135ceaa2dd9}{SCB\+\_\+\+Invalidate\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Invalidate D-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_gaf5585be5547cc60585d702a6129f4c17}{SCB\+\_\+\+Clean\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Clean D-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga5b22ca58709fadc326da83197a2f28bb}{SCB\+\_\+\+Clean\+Invalidate\+DCache}} (void)
+\begin{DoxyCompactList}\small\item\em Clean \& Invalidate D-\/\+Cache. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga9945b206324ddbcd32818f1a4e49df83}{SCB\+\_\+\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr}} (void $\ast$addr, int32\+\_\+t dsize)
+\begin{DoxyCompactList}\small\item\em D-\/\+Cache Invalidate by address. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_gab86b0b49bac2b14b21cc1590009efac5}{SCB\+\_\+\+Clean\+DCache\+\_\+by\+\_\+\+Addr}} (uint32\+\_\+t $\ast$addr, int32\+\_\+t dsize)
+\begin{DoxyCompactList}\small\item\em D-\/\+Cache Clean by address. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga853737b61ec075250d5991748fdd0e83}{SCB\+\_\+\+Clean\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr}} (uint32\+\_\+t $\ast$addr, int32\+\_\+t dsize)
+\begin{DoxyCompactList}\small\item\em D-\/\+Cache Clean and Invalidate by address. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga3d672529cd193537fe2a0141931c6ad9}\label{group___c_m_s_i_s___core___cache_functions_ga3d672529cd193537fe2a0141931c6ad9}} 
+\#define {\bfseries CCSIDR\+\_\+\+WAYS}(x)~(((x) \& \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gae093c4c635dad43845967512fa87173a}{SCB\+\_\+\+CCSIDR\+\_\+\+ASSOCIATIVITY\+\_\+\+Msk}}) $>$$>$ \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gae67f2f83976b819fb3039fc35cfef0fb}{SCB\+\_\+\+CCSIDR\+\_\+\+ASSOCIATIVITY\+\_\+\+Pos}})
+\item 
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_gaf20feee7c52fee32b48ee0d2ceaaf932}\label{group___c_m_s_i_s___core___cache_functions_gaf20feee7c52fee32b48ee0d2ceaaf932}} 
+\#define {\bfseries CCSIDR\+\_\+\+SETS}(x)~(((x) \& \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga47d1f01185d7a039334031008386c5a8}{SCB\+\_\+\+CCSIDR\+\_\+\+NUMSETS\+\_\+\+Msk}}      ) $>$$>$ \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga1028d2c238f74d2aa021f53ffbe8d7ab}{SCB\+\_\+\+CCSIDR\+\_\+\+NUMSETS\+\_\+\+Pos}}      )
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_ga8f36551f2593cd3715d1e68e37f97f12}{\+\_\+\+\_\+\+SCB\+\_\+\+DCACHE\+\_\+\+LINE\+\_\+\+SIZE}}~32U
+\item 
+\#define \mbox{\hyperlink{group___c_m_s_i_s___core___cache_functions_gadd99421e7a7d7121063ef94b49f97e90}{\+\_\+\+\_\+\+SCB\+\_\+\+ICACHE\+\_\+\+LINE\+\_\+\+SIZE}}~32U
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Functions that configure Instruction and Data cache. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga8f36551f2593cd3715d1e68e37f97f12}\label{group___c_m_s_i_s___core___cache_functions_ga8f36551f2593cd3715d1e68e37f97f12}} 
+\index{Cache Functions@{Cache Functions}!\_\_SCB\_DCACHE\_LINE\_SIZE@{\_\_SCB\_DCACHE\_LINE\_SIZE}}
+\index{\_\_SCB\_DCACHE\_LINE\_SIZE@{\_\_SCB\_DCACHE\_LINE\_SIZE}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{\_\_SCB\_DCACHE\_LINE\_SIZE}{\_\_SCB\_DCACHE\_LINE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+SCB\+\_\+\+DCACHE\+\_\+\+LINE\+\_\+\+SIZE~32U}
+
+Cortex-\/\+M7 cache line size is fixed to 32 bytes (8 words). See also register SCB\+\_\+\+CCSIDR \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_gadd99421e7a7d7121063ef94b49f97e90}\label{group___c_m_s_i_s___core___cache_functions_gadd99421e7a7d7121063ef94b49f97e90}} 
+\index{Cache Functions@{Cache Functions}!\_\_SCB\_ICACHE\_LINE\_SIZE@{\_\_SCB\_ICACHE\_LINE\_SIZE}}
+\index{\_\_SCB\_ICACHE\_LINE\_SIZE@{\_\_SCB\_ICACHE\_LINE\_SIZE}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{\_\_SCB\_ICACHE\_LINE\_SIZE}{\_\_SCB\_ICACHE\_LINE\_SIZE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+SCB\+\_\+\+ICACHE\+\_\+\+LINE\+\_\+\+SIZE~32U}
+
+Cortex-\/\+M7 cache line size is fixed to 32 bytes (8 words). See also register SCB\+\_\+\+CCSIDR 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_gaf5585be5547cc60585d702a6129f4c17}\label{group___c_m_s_i_s___core___cache_functions_gaf5585be5547cc60585d702a6129f4c17}} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanDCache@{SCB\_CleanDCache}}
+\index{SCB\_CleanDCache@{SCB\_CleanDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_CleanDCache()}{SCB\_CleanDCache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Clean\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clean D-\/\+Cache. 
+
+Cleans D-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_gab86b0b49bac2b14b21cc1590009efac5}\label{group___c_m_s_i_s___core___cache_functions_gab86b0b49bac2b14b21cc1590009efac5}} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanDCache\_by\_Addr@{SCB\_CleanDCache\_by\_Addr}}
+\index{SCB\_CleanDCache\_by\_Addr@{SCB\_CleanDCache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_CleanDCache\_by\_Addr()}{SCB\_CleanDCache\_by\_Addr()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Clean\+DCache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{addr,  }\item[{int32\+\_\+t}]{dsize }\end{DoxyParamCaption})}
+
+
+
+D-\/\+Cache Clean by address. 
+
+Cleans D-\/\+Cache for the given address D-\/\+Cache is cleaned starting from a 32 byte aligned address in 32 byte granularity. D-\/\+Cache memory blocks which are part of given address + given size are cleaned. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga5b22ca58709fadc326da83197a2f28bb}\label{group___c_m_s_i_s___core___cache_functions_ga5b22ca58709fadc326da83197a2f28bb}} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanInvalidateDCache@{SCB\_CleanInvalidateDCache}}
+\index{SCB\_CleanInvalidateDCache@{SCB\_CleanInvalidateDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_CleanInvalidateDCache()}{SCB\_CleanInvalidateDCache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Clean\+Invalidate\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Clean \& Invalidate D-\/\+Cache. 
+
+Cleans and Invalidates D-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga853737b61ec075250d5991748fdd0e83}\label{group___c_m_s_i_s___core___cache_functions_ga853737b61ec075250d5991748fdd0e83}} 
+\index{Cache Functions@{Cache Functions}!SCB\_CleanInvalidateDCache\_by\_Addr@{SCB\_CleanInvalidateDCache\_by\_Addr}}
+\index{SCB\_CleanInvalidateDCache\_by\_Addr@{SCB\_CleanInvalidateDCache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_CleanInvalidateDCache\_by\_Addr()}{SCB\_CleanInvalidateDCache\_by\_Addr()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Clean\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{uint32\+\_\+t $\ast$}]{addr,  }\item[{int32\+\_\+t}]{dsize }\end{DoxyParamCaption})}
+
+
+
+D-\/\+Cache Clean and Invalidate by address. 
+
+Cleans and invalidates D\+\_\+\+Cache for the given address D-\/\+Cache is cleaned and invalidated starting from a 32 byte aligned address in 32 byte granularity. D-\/\+Cache memory blocks which are part of given address + given size are cleaned and invalidated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address (aligned to 32-\/byte boundary) \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_gafe64b44d1a61483a947e44a77a9d3287}\label{group___c_m_s_i_s___core___cache_functions_gafe64b44d1a61483a947e44a77a9d3287}} 
+\index{Cache Functions@{Cache Functions}!SCB\_DisableDCache@{SCB\_DisableDCache}}
+\index{SCB\_DisableDCache@{SCB\_DisableDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_DisableDCache()}{SCB\_DisableDCache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Disable\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable D-\/\+Cache. 
+
+Turns off D-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga56baa06298799dea5f207d4c12d9d4a6}\label{group___c_m_s_i_s___core___cache_functions_ga56baa06298799dea5f207d4c12d9d4a6}} 
+\index{Cache Functions@{Cache Functions}!SCB\_DisableICache@{SCB\_DisableICache}}
+\index{SCB\_DisableICache@{SCB\_DisableICache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_DisableICache()}{SCB\_DisableICache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Disable\+ICache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable I-\/\+Cache. 
+
+Turns off I-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga3861db932100ccb53f994e2cc68ed79c}\label{group___c_m_s_i_s___core___cache_functions_ga3861db932100ccb53f994e2cc68ed79c}} 
+\index{Cache Functions@{Cache Functions}!SCB\_EnableDCache@{SCB\_EnableDCache}}
+\index{SCB\_EnableDCache@{SCB\_EnableDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_EnableDCache()}{SCB\_EnableDCache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Enable\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable D-\/\+Cache. 
+
+Turns on D-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga980ffe52af778f2535ccc52f25f9a7de}\label{group___c_m_s_i_s___core___cache_functions_ga980ffe52af778f2535ccc52f25f9a7de}} 
+\index{Cache Functions@{Cache Functions}!SCB\_EnableICache@{SCB\_EnableICache}}
+\index{SCB\_EnableICache@{SCB\_EnableICache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_EnableICache()}{SCB\_EnableICache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Enable\+ICache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable I-\/\+Cache. 
+
+Turns on I-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga99fe43c224644881935de135ceaa2dd9}\label{group___c_m_s_i_s___core___cache_functions_ga99fe43c224644881935de135ceaa2dd9}} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateDCache@{SCB\_InvalidateDCache}}
+\index{SCB\_InvalidateDCache@{SCB\_InvalidateDCache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_InvalidateDCache()}{SCB\_InvalidateDCache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Invalidate\+DCache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Invalidate D-\/\+Cache. 
+
+Invalidates D-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga9945b206324ddbcd32818f1a4e49df83}\label{group___c_m_s_i_s___core___cache_functions_ga9945b206324ddbcd32818f1a4e49df83}} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateDCache\_by\_Addr@{SCB\_InvalidateDCache\_by\_Addr}}
+\index{SCB\_InvalidateDCache\_by\_Addr@{SCB\_InvalidateDCache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_InvalidateDCache\_by\_Addr()}{SCB\_InvalidateDCache\_by\_Addr()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Invalidate\+DCache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{void $\ast$}]{addr,  }\item[{int32\+\_\+t}]{dsize }\end{DoxyParamCaption})}
+
+
+
+D-\/\+Cache Invalidate by address. 
+
+Invalidates D-\/\+Cache for the given address. D-\/\+Cache is invalidated starting from a 32 byte aligned address in 32 byte granularity. D-\/\+Cache memory blocks which are part of given address + given size are invalidated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em dsize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_ga62419cb7e6773e3d9236f14e458c1b05}\label{group___c_m_s_i_s___core___cache_functions_ga62419cb7e6773e3d9236f14e458c1b05}} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateICache@{SCB\_InvalidateICache}}
+\index{SCB\_InvalidateICache@{SCB\_InvalidateICache}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_InvalidateICache()}{SCB\_InvalidateICache()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Invalidate\+ICache (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Invalidate I-\/\+Cache. 
+
+Invalidates I-\/\+Cache \mbox{\Hypertarget{group___c_m_s_i_s___core___cache_functions_gaf6bed290ff6916337b0ce6c09131f699}\label{group___c_m_s_i_s___core___cache_functions_gaf6bed290ff6916337b0ce6c09131f699}} 
+\index{Cache Functions@{Cache Functions}!SCB\_InvalidateICache\_by\_Addr@{SCB\_InvalidateICache\_by\_Addr}}
+\index{SCB\_InvalidateICache\_by\_Addr@{SCB\_InvalidateICache\_by\_Addr}!Cache Functions@{Cache Functions}}
+\doxysubsubsection{\texorpdfstring{SCB\_InvalidateICache\_by\_Addr()}{SCB\_InvalidateICache\_by\_Addr()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+FORCEINLINE void SCB\+\_\+\+Invalidate\+ICache\+\_\+by\+\_\+\+Addr (\begin{DoxyParamCaption}\item[{void $\ast$}]{addr,  }\item[{int32\+\_\+t}]{isize }\end{DoxyParamCaption})}
+
+
+
+I-\/\+Cache Invalidate by address. 
+
+Invalidates I-\/\+Cache for the given address. I-\/\+Cache is invalidated starting from a 32 byte aligned address in 32 byte granularity. I-\/\+Cache memory blocks which are part of given address + given size are invalidated. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em addr} & address \\
+\hline
+\mbox{\texttt{ in}}  & {\em isize} & size of memory block (in number of bytes) \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,307 @@
+\hypertarget{stm32g4xx__ll__crs_8h_source}{}\doxysection{stm32g4xx\+\_\+ll\+\_\+crs.\+h}
+\label{stm32g4xx__ll__crs_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_crs.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_ll\_crs.h}}
+\mbox{\hyperlink{stm32g4xx__ll__crs_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef \_\_STM32G4xx\_LL\_CRS\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define \_\_STM32G4xx\_LL\_CRS\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx_8h}{stm32g4xx.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#if defined(CRS)}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{40 \textcolor{comment}{/* Private types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{41 \textcolor{comment}{/* Private variables -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{42 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{43 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{46 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_SYNCOKF                 CRS\_ISR\_SYNCOKF}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_SYNCWARNF               CRS\_ISR\_SYNCWARNF}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_ERRF                    CRS\_ISR\_ERRF}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_ESYNCF                  CRS\_ISR\_ESYNCF}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_SYNCERR                 CRS\_ISR\_SYNCERR}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_SYNCMISS                CRS\_ISR\_SYNCMISS}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define LL\_CRS\_ISR\_TRIMOVF                 CRS\_ISR\_TRIMOVF}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define LL\_CRS\_CR\_SYNCOKIE                 CRS\_CR\_SYNCOKIE}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define LL\_CRS\_CR\_SYNCWARNIE               CRS\_CR\_SYNCWARNIE}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define LL\_CRS\_CR\_ERRIE                    CRS\_CR\_ERRIE}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define LL\_CRS\_CR\_ESYNCIE                  CRS\_CR\_ESYNCIE}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_1                  ((uint32\_t)0x00U)                         }}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_2                  CRS\_CFGR\_SYNCDIV\_0                        }}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_4                  CRS\_CFGR\_SYNCDIV\_1                        }}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_8                  (CRS\_CFGR\_SYNCDIV\_1 | CRS\_CFGR\_SYNCDIV\_0) }}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_16                 CRS\_CFGR\_SYNCDIV\_2                        }}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_32                 (CRS\_CFGR\_SYNCDIV\_2 | CRS\_CFGR\_SYNCDIV\_0) }}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_64                 (CRS\_CFGR\_SYNCDIV\_2 | CRS\_CFGR\_SYNCDIV\_1) }}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_DIV\_128                CRS\_CFGR\_SYNCDIV                          }}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_SOURCE\_GPIO            ((uint32\_t)0x00U)       }}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_SOURCE\_LSE             CRS\_CFGR\_SYNCSRC\_0      }}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_SOURCE\_USB             CRS\_CFGR\_SYNCSRC\_1      }}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_POLARITY\_RISING        ((uint32\_t)0x00U)     }}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define LL\_CRS\_SYNC\_POLARITY\_FALLING       CRS\_CFGR\_SYNCPOL      }}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define LL\_CRS\_FREQ\_ERROR\_DIR\_UP             ((uint32\_t)0x00U)         }}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define LL\_CRS\_FREQ\_ERROR\_DIR\_DOWN           ((uint32\_t)CRS\_ISR\_FEDIR) }}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define LL\_CRS\_RELOADVALUE\_DEFAULT         ((uint32\_t)0xBB7FU)}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define LL\_CRS\_ERRORLIMIT\_DEFAULT          ((uint32\_t)0x22U)}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define LL\_CRS\_HSI48CALIBRATION\_DEFAULT    ((uint32\_t)0x40U)}}
+\DoxyCodeLine{150 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define LL\_CRS\_WriteReg(\_\_INSTANCE\_\_, \_\_REG\_\_, \_\_VALUE\_\_) WRITE\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_, (\_\_VALUE\_\_))}}
+\DoxyCodeLine{167 }
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define LL\_CRS\_ReadReg(\_\_INSTANCE\_\_, \_\_REG\_\_) READ\_REG(\_\_INSTANCE\_\_-\/>\_\_REG\_\_)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define \_\_LL\_CRS\_CALC\_CALCULATE\_RELOADVALUE(\_\_FTARGET\_\_, \_\_FSYNC\_\_) (((\_\_FTARGET\_\_) / (\_\_FSYNC\_\_)) -\/ 1U)}}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{204 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{219 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_EnableFreqErrorCounter(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\_CR\_CEN}});}
+\DoxyCodeLine{222 \}}
+\DoxyCodeLine{223 }
+\DoxyCodeLine{229 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_DisableFreqErrorCounter(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{230 \{}
+\DoxyCodeLine{231   CLEAR\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\_CR\_CEN}});}
+\DoxyCodeLine{232 \}}
+\DoxyCodeLine{233 }
+\DoxyCodeLine{239 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsEnabledFreqErrorCounter(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{240 \{}
+\DoxyCodeLine{241   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\_CR\_CEN}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\_CR\_CEN}})) ? 1UL : 0UL);}
+\DoxyCodeLine{242 \}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{249 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_EnableAutoTrimming(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{250 \{}
+\DoxyCodeLine{251   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\_CR\_AUTOTRIMEN}});}
+\DoxyCodeLine{252 \}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{259 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_DisableAutoTrimming(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{260 \{}
+\DoxyCodeLine{261   CLEAR\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\_CR\_AUTOTRIMEN}});}
+\DoxyCodeLine{262 \}}
+\DoxyCodeLine{263 }
+\DoxyCodeLine{269 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsEnabledAutoTrimming(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{270 \{}
+\DoxyCodeLine{271   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\_CR\_AUTOTRIMEN}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\_CR\_AUTOTRIMEN}})) ? 1UL : 0UL);}
+\DoxyCodeLine{272 \}}
+\DoxyCodeLine{273 }
+\DoxyCodeLine{282 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_SetHSI48SmoothTrimming(uint32\_t Value)}
+\DoxyCodeLine{283 \{}
+\DoxyCodeLine{284   MODIFY\_REG(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga755d695431db14c1b3b15a48ede61c13}{CRS\_CR\_TRIM}}, Value << CRS\_CR\_TRIM\_Pos);}
+\DoxyCodeLine{285 \}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{292 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetHSI48SmoothTrimming(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{293 \{}
+\DoxyCodeLine{294   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga755d695431db14c1b3b15a48ede61c13}{CRS\_CR\_TRIM}}) >> CRS\_CR\_TRIM\_Pos);}
+\DoxyCodeLine{295 \}}
+\DoxyCodeLine{296 }
+\DoxyCodeLine{305 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_SetReloadCounter(uint32\_t Value)}
+\DoxyCodeLine{306 \{}
+\DoxyCodeLine{307   MODIFY\_REG(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7e54b011ada0eeb4b6ed9cdd24d517f9}{CRS\_CFGR\_RELOAD}}, Value);}
+\DoxyCodeLine{308 \}}
+\DoxyCodeLine{309 }
+\DoxyCodeLine{315 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetReloadCounter(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{316 \{}
+\DoxyCodeLine{317   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7e54b011ada0eeb4b6ed9cdd24d517f9}{CRS\_CFGR\_RELOAD}}));}
+\DoxyCodeLine{318 \}}
+\DoxyCodeLine{319 }
+\DoxyCodeLine{327 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_SetFreqErrorLimit(uint32\_t Value)}
+\DoxyCodeLine{328 \{}
+\DoxyCodeLine{329   MODIFY\_REG(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga48c70ae21b6a35ed520a2b30df2c4852}{CRS\_CFGR\_FELIM}}, Value << CRS\_CFGR\_FELIM\_Pos);}
+\DoxyCodeLine{330 \}}
+\DoxyCodeLine{331 }
+\DoxyCodeLine{337 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetFreqErrorLimit(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{338 \{}
+\DoxyCodeLine{339   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga48c70ae21b6a35ed520a2b30df2c4852}{CRS\_CFGR\_FELIM}}) >> CRS\_CFGR\_FELIM\_Pos);}
+\DoxyCodeLine{340 \}}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{356 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_SetSyncDivider(uint32\_t Divider)}
+\DoxyCodeLine{357 \{}
+\DoxyCodeLine{358   MODIFY\_REG(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad0b3ee2ab042802997e57d788c640647}{CRS\_CFGR\_SYNCDIV}}, Divider);}
+\DoxyCodeLine{359 \}}
+\DoxyCodeLine{360 }
+\DoxyCodeLine{374 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetSyncDivider(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{375 \{}
+\DoxyCodeLine{376   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad0b3ee2ab042802997e57d788c640647}{CRS\_CFGR\_SYNCDIV}}));}
+\DoxyCodeLine{377 \}}
+\DoxyCodeLine{378 }
+\DoxyCodeLine{388 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_SetSyncSignalSource(uint32\_t Source)}
+\DoxyCodeLine{389 \{}
+\DoxyCodeLine{390   MODIFY\_REG(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga441881d5e657b04236e440918fe63d20}{CRS\_CFGR\_SYNCSRC}}, Source);}
+\DoxyCodeLine{391 \}}
+\DoxyCodeLine{392 }
+\DoxyCodeLine{401 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetSyncSignalSource(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{402 \{}
+\DoxyCodeLine{403   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga441881d5e657b04236e440918fe63d20}{CRS\_CFGR\_SYNCSRC}}));}
+\DoxyCodeLine{404 \}}
+\DoxyCodeLine{405 }
+\DoxyCodeLine{414 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_SetSyncPolarity(uint32\_t Polarity)}
+\DoxyCodeLine{415 \{}
+\DoxyCodeLine{416   MODIFY\_REG(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab28395cefb0927f2118a9a840a2e2d71}{CRS\_CFGR\_SYNCPOL}}, Polarity);}
+\DoxyCodeLine{417 \}}
+\DoxyCodeLine{418 }
+\DoxyCodeLine{426 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetSyncPolarity(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{427 \{}
+\DoxyCodeLine{428   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>CFGR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab28395cefb0927f2118a9a840a2e2d71}{CRS\_CFGR\_SYNCPOL}}));}
+\DoxyCodeLine{429 \}}
+\DoxyCodeLine{430 }
+\DoxyCodeLine{449 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_ConfigSynchronization(uint32\_t HSI48CalibrationValue, uint32\_t ErrorLimitValue,}
+\DoxyCodeLine{450                                                   uint32\_t ReloadValue, uint32\_t Settings)}
+\DoxyCodeLine{451 \{}
+\DoxyCodeLine{452   MODIFY\_REG(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga755d695431db14c1b3b15a48ede61c13}{CRS\_CR\_TRIM}}, HSI48CalibrationValue);}
+\DoxyCodeLine{453   MODIFY\_REG(CRS-\/>CFGR,}
+\DoxyCodeLine{454              \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga7e54b011ada0eeb4b6ed9cdd24d517f9}{CRS\_CFGR\_RELOAD}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga48c70ae21b6a35ed520a2b30df2c4852}{CRS\_CFGR\_FELIM}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_gad0b3ee2ab042802997e57d788c640647}{CRS\_CFGR\_SYNCDIV}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga441881d5e657b04236e440918fe63d20}{CRS\_CFGR\_SYNCSRC}} | \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab28395cefb0927f2118a9a840a2e2d71}{CRS\_CFGR\_SYNCPOL}},}
+\DoxyCodeLine{455              ReloadValue | (ErrorLimitValue << CRS\_CFGR\_FELIM\_Pos) | Settings);}
+\DoxyCodeLine{456 \}}
+\DoxyCodeLine{457 }
+\DoxyCodeLine{471 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_GenerateEvent\_SWSYNC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{472 \{}
+\DoxyCodeLine{473   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga53d79706214ba4ee9310e4b678d67e44}{CRS\_CR\_SWSYNC}});}
+\DoxyCodeLine{474 \}}
+\DoxyCodeLine{475 }
+\DoxyCodeLine{484 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetFreqErrorDirection(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{485 \{}
+\DoxyCodeLine{486   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga91196b059d8ff52c4f28bc964c8a446a}{CRS\_ISR\_FEDIR}}));}
+\DoxyCodeLine{487 \}}
+\DoxyCodeLine{488 }
+\DoxyCodeLine{494 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_GetFreqErrorCapture(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{495 \{}
+\DoxyCodeLine{496   \textcolor{keywordflow}{return} (uint32\_t)(READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf0b8a9757678f28814b1a0c1baca63e2}{CRS\_ISR\_FECAP}}) >> CRS\_ISR\_FECAP\_Pos);}
+\DoxyCodeLine{497 \}}
+\DoxyCodeLine{498 }
+\DoxyCodeLine{512 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_SYNCOK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{513 \{}
+\DoxyCodeLine{514   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae0a9b5f8992ead0ad76fbb08a5e32419}{CRS\_ISR\_SYNCOKF}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gae0a9b5f8992ead0ad76fbb08a5e32419}{CRS\_ISR\_SYNCOKF}})) ? 1UL : 0UL);}
+\DoxyCodeLine{515 \}}
+\DoxyCodeLine{516 }
+\DoxyCodeLine{522 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_SYNCWARN(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{523 \{}
+\DoxyCodeLine{524   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga0f33a79fec47400ab363bbf5b4b9f2b5}{CRS\_ISR\_SYNCWARNF}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga0f33a79fec47400ab363bbf5b4b9f2b5}{CRS\_ISR\_SYNCWARNF}})) ? 1UL : 0UL);}
+\DoxyCodeLine{525 \}}
+\DoxyCodeLine{526 }
+\DoxyCodeLine{532 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_ERR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{533 \{}
+\DoxyCodeLine{534   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga963b451a4ca8890ee3d323304f0b9298}{CRS\_ISR\_ERRF}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga963b451a4ca8890ee3d323304f0b9298}{CRS\_ISR\_ERRF}})) ? 1UL : 0UL);}
+\DoxyCodeLine{535 \}}
+\DoxyCodeLine{536 }
+\DoxyCodeLine{542 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_ESYNC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{543 \{}
+\DoxyCodeLine{544   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga819c4d424be7915f9660ecb19c234a8f}{CRS\_ISR\_ESYNCF}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga819c4d424be7915f9660ecb19c234a8f}{CRS\_ISR\_ESYNCF}})) ? 1UL : 0UL);}
+\DoxyCodeLine{545 \}}
+\DoxyCodeLine{546 }
+\DoxyCodeLine{552 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_SYNCERR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{553 \{}
+\DoxyCodeLine{554   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga80d05ae1142788a65444c0463a26bcfb}{CRS\_ISR\_SYNCERR}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga80d05ae1142788a65444c0463a26bcfb}{CRS\_ISR\_SYNCERR}})) ? 1UL : 0UL);}
+\DoxyCodeLine{555 \}}
+\DoxyCodeLine{556 }
+\DoxyCodeLine{562 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_SYNCMISS(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{563 \{}
+\DoxyCodeLine{564   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga9f2241bd51b436f7b381ad410124aec5}{CRS\_ISR\_SYNCMISS}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga9f2241bd51b436f7b381ad410124aec5}{CRS\_ISR\_SYNCMISS}})) ? 1UL : 0UL);}
+\DoxyCodeLine{565 \}}
+\DoxyCodeLine{566 }
+\DoxyCodeLine{572 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsActiveFlag\_TRIMOVF(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{573 \{}
+\DoxyCodeLine{574   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>ISR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf3852f10eb46159b7888c71e6d9cec3b}{CRS\_ISR\_TRIMOVF}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gaf3852f10eb46159b7888c71e6d9cec3b}{CRS\_ISR\_TRIMOVF}})) ? 1UL : 0UL);}
+\DoxyCodeLine{575 \}}
+\DoxyCodeLine{576 }
+\DoxyCodeLine{582 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_ClearFlag\_SYNCOK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{583 \{}
+\DoxyCodeLine{584   WRITE\_REG(CRS-\/>ICR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gaa42110e626aeef3ca9d76c8bda1f08d6}{CRS\_ICR\_SYNCOKC}});}
+\DoxyCodeLine{585 \}}
+\DoxyCodeLine{586 }
+\DoxyCodeLine{592 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_ClearFlag\_SYNCWARN(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{593 \{}
+\DoxyCodeLine{594   WRITE\_REG(CRS-\/>ICR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gab772d21f8bc42ad5761a270d663be1ce}{CRS\_ICR\_SYNCWARNC}});}
+\DoxyCodeLine{595 \}}
+\DoxyCodeLine{596 }
+\DoxyCodeLine{603 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_ClearFlag\_ERR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{604 \{}
+\DoxyCodeLine{605   WRITE\_REG(CRS-\/>ICR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gae67dc4a9e576468b0c322902c7c47793}{CRS\_ICR\_ERRC}});}
+\DoxyCodeLine{606 \}}
+\DoxyCodeLine{607 }
+\DoxyCodeLine{613 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_ClearFlag\_ESYNC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{614 \{}
+\DoxyCodeLine{615   WRITE\_REG(CRS-\/>ICR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gacfaa0b3004143ca5b1a7fe5ed23daccf}{CRS\_ICR\_ESYNCC}});}
+\DoxyCodeLine{616 \}}
+\DoxyCodeLine{617 }
+\DoxyCodeLine{631 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_EnableIT\_SYNCOK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{632 \{}
+\DoxyCodeLine{633   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga246a4b3d840b5b9a18f6ea414fc48297}{CRS\_CR\_SYNCOKIE}});}
+\DoxyCodeLine{634 \}}
+\DoxyCodeLine{635 }
+\DoxyCodeLine{641 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_DisableIT\_SYNCOK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{642 \{}
+\DoxyCodeLine{643   CLEAR\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga246a4b3d840b5b9a18f6ea414fc48297}{CRS\_CR\_SYNCOKIE}});}
+\DoxyCodeLine{644 \}}
+\DoxyCodeLine{645 }
+\DoxyCodeLine{651 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsEnabledIT\_SYNCOK(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{652 \{}
+\DoxyCodeLine{653   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga246a4b3d840b5b9a18f6ea414fc48297}{CRS\_CR\_SYNCOKIE}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga246a4b3d840b5b9a18f6ea414fc48297}{CRS\_CR\_SYNCOKIE}})) ? 1UL : 0UL);}
+\DoxyCodeLine{654 \}}
+\DoxyCodeLine{655 }
+\DoxyCodeLine{661 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_EnableIT\_SYNCWARN(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{662 \{}
+\DoxyCodeLine{663   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac27fb8e1741d3b5c19a527955eb00bad}{CRS\_CR\_SYNCWARNIE}});}
+\DoxyCodeLine{664 \}}
+\DoxyCodeLine{665 }
+\DoxyCodeLine{671 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_DisableIT\_SYNCWARN(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{672 \{}
+\DoxyCodeLine{673   CLEAR\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac27fb8e1741d3b5c19a527955eb00bad}{CRS\_CR\_SYNCWARNIE}});}
+\DoxyCodeLine{674 \}}
+\DoxyCodeLine{675 }
+\DoxyCodeLine{681 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsEnabledIT\_SYNCWARN(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{682 \{}
+\DoxyCodeLine{683   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac27fb8e1741d3b5c19a527955eb00bad}{CRS\_CR\_SYNCWARNIE}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gac27fb8e1741d3b5c19a527955eb00bad}{CRS\_CR\_SYNCWARNIE}})) ? 1UL : 0UL);}
+\DoxyCodeLine{684 \}}
+\DoxyCodeLine{685 }
+\DoxyCodeLine{691 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_EnableIT\_ERR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{692 \{}
+\DoxyCodeLine{693   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac616bbfe903ec7cc2be289db5fba0fe5}{CRS\_CR\_ERRIE}});}
+\DoxyCodeLine{694 \}}
+\DoxyCodeLine{695 }
+\DoxyCodeLine{701 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_DisableIT\_ERR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{702 \{}
+\DoxyCodeLine{703   CLEAR\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac616bbfe903ec7cc2be289db5fba0fe5}{CRS\_CR\_ERRIE}});}
+\DoxyCodeLine{704 \}}
+\DoxyCodeLine{705 }
+\DoxyCodeLine{711 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsEnabledIT\_ERR(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{712 \{}
+\DoxyCodeLine{713   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gac616bbfe903ec7cc2be289db5fba0fe5}{CRS\_CR\_ERRIE}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_gac616bbfe903ec7cc2be289db5fba0fe5}{CRS\_CR\_ERRIE}})) ? 1UL : 0UL);}
+\DoxyCodeLine{714 \}}
+\DoxyCodeLine{715 }
+\DoxyCodeLine{721 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_EnableIT\_ESYNC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{722 \{}
+\DoxyCodeLine{723   SET\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3831818c762e279f698faf27f4e7db4a}{CRS\_CR\_ESYNCIE}});}
+\DoxyCodeLine{724 \}}
+\DoxyCodeLine{725 }
+\DoxyCodeLine{731 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} LL\_CRS\_DisableIT\_ESYNC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{732 \{}
+\DoxyCodeLine{733   CLEAR\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3831818c762e279f698faf27f4e7db4a}{CRS\_CR\_ESYNCIE}});}
+\DoxyCodeLine{734 \}}
+\DoxyCodeLine{735 }
+\DoxyCodeLine{741 \_\_STATIC\_INLINE uint32\_t LL\_CRS\_IsEnabledIT\_ESYNC(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{742 \{}
+\DoxyCodeLine{743   \textcolor{keywordflow}{return} ((READ\_BIT(CRS-\/>CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3831818c762e279f698faf27f4e7db4a}{CRS\_CR\_ESYNCIE}}) == (\mbox{\hyperlink{group___peripheral___registers___bits___definition_ga3831818c762e279f698faf27f4e7db4a}{CRS\_CR\_ESYNCIE}})) ? 1UL : 0UL);}
+\DoxyCodeLine{744 \}}
+\DoxyCodeLine{745 }
+\DoxyCodeLine{750 \textcolor{preprocessor}{\#if defined(USE\_FULL\_LL\_DRIVER)}}
+\DoxyCodeLine{755 ErrorStatus LL\_CRS\_DeInit(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{756 }
+\DoxyCodeLine{760 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* USE\_FULL\_LL\_DRIVER */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{761 }
+\DoxyCodeLine{770 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* defined(CRS) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{771 }
+\DoxyCodeLine{776 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{777 \}}
+\DoxyCodeLine{778 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{779 }
+\DoxyCodeLine{780 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_STM32G4xx\_LL\_CRS\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{781 }
+
+\end{DoxyCode}

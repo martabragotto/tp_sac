@@ -1,0 +1,37 @@
+\hypertarget{group___h_a_l___i2_c___aliased___functions}{}\doxysection{HAL I2C Aliased Functions maintained for legacy purpose}
+\label{group___h_a_l___i2_c___aliased___functions}\index{HAL I2C Aliased Functions maintained for legacy purpose@{HAL I2C Aliased Functions maintained for legacy purpose}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___i2_c___aliased___functions_ga29a6d7298eb9b8290229e37a6eee9c21}\label{group___h_a_l___i2_c___aliased___functions_ga29a6d7298eb9b8290229e37a6eee9c21}} 
+\#define {\bfseries HAL\+\_\+\+I2\+CEx\+\_\+\+Analog\+Filter\+\_\+\+Config}~HAL\+\_\+\+I2\+CEx\+\_\+\+Config\+Analog\+Filter
+\item 
+\mbox{\Hypertarget{group___h_a_l___i2_c___aliased___functions_gad145cb83d816a71f5f8085e5abb9cf8a}\label{group___h_a_l___i2_c___aliased___functions_gad145cb83d816a71f5f8085e5abb9cf8a}} 
+\#define {\bfseries HAL\+\_\+\+I2\+CEx\+\_\+\+Digital\+Filter\+\_\+\+Config}~HAL\+\_\+\+I2\+CEx\+\_\+\+Config\+Digital\+Filter
+\item 
+\mbox{\Hypertarget{group___h_a_l___i2_c___aliased___functions_gab58dc8da5184549e6b0ada3895968b2d}\label{group___h_a_l___i2_c___aliased___functions_gab58dc8da5184549e6b0ada3895968b2d}} 
+\#define {\bfseries HAL\+\_\+\+FMPI2\+CEx\+\_\+\+Analog\+Filter\+\_\+\+Config}~HAL\+\_\+\+FMPI2\+CEx\+\_\+\+Config\+Analog\+Filter
+\item 
+\mbox{\Hypertarget{group___h_a_l___i2_c___aliased___functions_ga26c863f7dd300fa407da0a808888c8d2}\label{group___h_a_l___i2_c___aliased___functions_ga26c863f7dd300fa407da0a808888c8d2}} 
+\#define {\bfseries HAL\+\_\+\+FMPI2\+CEx\+\_\+\+Digital\+Filter\+\_\+\+Config}~HAL\+\_\+\+FMPI2\+CEx\+\_\+\+Config\+Digital\+Filter
+\item 
+\#define \mbox{\hyperlink{group___h_a_l___i2_c___aliased___functions_ga340e0d97db96b108c18718d4b37bdb29}{HAL\+\_\+\+I2\+CFast\+Mode\+Plus\+Config}}(SYSCFG\+\_\+\+I2\+CFast\+Mode\+Plus,  cmd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___h_a_l___i2_c___aliased___functions_ga340e0d97db96b108c18718d4b37bdb29}\label{group___h_a_l___i2_c___aliased___functions_ga340e0d97db96b108c18718d4b37bdb29}} 
+\index{HAL I2C Aliased Functions maintained for legacy purpose@{HAL I2C Aliased Functions maintained for legacy purpose}!HAL\_I2CFastModePlusConfig@{HAL\_I2CFastModePlusConfig}}
+\index{HAL\_I2CFastModePlusConfig@{HAL\_I2CFastModePlusConfig}!HAL I2C Aliased Functions maintained for legacy purpose@{HAL I2C Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_I2CFastModePlusConfig}{HAL\_I2CFastModePlusConfig}}
+{\footnotesize\ttfamily \#define HAL\+\_\+\+I2\+CFast\+Mode\+Plus\+Config(\begin{DoxyParamCaption}\item[{}]{SYSCFG\+\_\+\+I2\+CFast\+Mode\+Plus,  }\item[{}]{cmd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                                 (((cmd\(\backslash\)}
+\DoxyCodeLine{                                                                 )==ENABLE)? HAL\_I2CEx\_EnableFastModePlus(SYSCFG\_I2CFastModePlus): HAL\_I2CEx\_DisableFastModePlus(SYSCFG\_I2CFastModePlus))}
+
+\end{DoxyCode}

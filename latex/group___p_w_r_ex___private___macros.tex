@@ -1,0 +1,137 @@
+\hypertarget{group___p_w_r_ex___private___macros}{}\doxysection{PWR Extended Private Macros}
+\label{group___p_w_r_ex___private___macros}\index{PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_gac6fcc59d6ff95b8feda1b228517f9c3f}{IS\+\_\+\+PWR\+\_\+\+WAKEUP\+\_\+\+PIN}}(PIN)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_ga7547d3dc786e6c6837163ba243df5938}{IS\+\_\+\+PWR\+\_\+\+PVM\+\_\+\+TYPE}}(TYPE)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_ga5b2a8b140093af19e61dc7bef31cd2f9}{IS\+\_\+\+PWR\+\_\+\+PVM\+\_\+\+MODE}}(MODE)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_ga35f3636d8fff27feb210e9860076ef2f}{IS\+\_\+\+PWR\+\_\+\+VOLTAGE\+\_\+\+SCALING\+\_\+\+RANGE}}(RANGE)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_ga3fa01a4ed0f3f68986664d2b117b3640}{IS\+\_\+\+PWR\+\_\+\+BATTERY\+\_\+\+RESISTOR\+\_\+\+SELECT}}(RESISTOR)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_ga195caa7e530c7c937bb0b7e5f0049b44}{IS\+\_\+\+PWR\+\_\+\+BATTERY\+\_\+\+CHARGING}}(CHARGING)
+\item 
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga6d03ede8c3b6a365694f254f790fbe72}\label{group___p_w_r_ex___private___macros_ga6d03ede8c3b6a365694f254f790fbe72}} 
+\#define {\bfseries IS\+\_\+\+PWR\+\_\+\+GPIO\+\_\+\+BIT\+\_\+\+NUMBER}(BIT\+\_\+\+NUMBER)~(((BIT\+\_\+\+NUMBER) \& GPIO\+\_\+\+PIN\+\_\+\+MASK) != (uint32\+\_\+t)0x00U)
+\item 
+\#define \mbox{\hyperlink{group___p_w_r_ex___private___macros_ga32fc5d1337f1f0984f6034c2c582e6fe}{IS\+\_\+\+PWR\+\_\+\+GPIO}}(GPIO)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga195caa7e530c7c937bb0b7e5f0049b44}\label{group___p_w_r_ex___private___macros_ga195caa7e530c7c937bb0b7e5f0049b44}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_BATTERY\_CHARGING@{IS\_PWR\_BATTERY\_CHARGING}}
+\index{IS\_PWR\_BATTERY\_CHARGING@{IS\_PWR\_BATTERY\_CHARGING}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_BATTERY\_CHARGING}{IS\_PWR\_BATTERY\_CHARGING}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+BATTERY\+\_\+\+CHARGING(\begin{DoxyParamCaption}\item[{}]{CHARGING }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((CHARGING) == PWR\_BATTERY\_CHARGING\_DISABLE) ||\(\backslash\)}
+\DoxyCodeLine{                                           ((CHARGING) == PWR\_BATTERY\_CHARGING\_ENABLE))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga3fa01a4ed0f3f68986664d2b117b3640}\label{group___p_w_r_ex___private___macros_ga3fa01a4ed0f3f68986664d2b117b3640}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_BATTERY\_RESISTOR\_SELECT@{IS\_PWR\_BATTERY\_RESISTOR\_SELECT}}
+\index{IS\_PWR\_BATTERY\_RESISTOR\_SELECT@{IS\_PWR\_BATTERY\_RESISTOR\_SELECT}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_BATTERY\_RESISTOR\_SELECT}{IS\_PWR\_BATTERY\_RESISTOR\_SELECT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+BATTERY\+\_\+\+RESISTOR\+\_\+\+SELECT(\begin{DoxyParamCaption}\item[{}]{RESISTOR }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                  (((RESISTOR) == \mbox{\hyperlink{group___p_w_r_ex___v_b_a_t___battery___charging___selection_ga27d3d5ee9e0fc78ecac6e41498a37916}{PWR\_BATTERY\_CHARGING\_RESISTOR\_5}}) ||\(\backslash\)}
+\DoxyCodeLine{                                                  ((RESISTOR) == \mbox{\hyperlink{group___p_w_r_ex___v_b_a_t___battery___charging___selection_gacebb57480a111beaf8ca05f014cbd096}{PWR\_BATTERY\_CHARGING\_RESISTOR\_1\_5}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga32fc5d1337f1f0984f6034c2c582e6fe}\label{group___p_w_r_ex___private___macros_ga32fc5d1337f1f0984f6034c2c582e6fe}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_GPIO@{IS\_PWR\_GPIO}}
+\index{IS\_PWR\_GPIO@{IS\_PWR\_GPIO}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_GPIO}{IS\_PWR\_GPIO}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+GPIO(\begin{DoxyParamCaption}\item[{}]{GPIO }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                           (((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_ga89e70f23992ce82aed435254a3a2436a}{PWR\_GPIO\_A}}) ||\(\backslash\)}
+\DoxyCodeLine{                           ((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_ga56dd775ffa87ae1e07b84ff963b6f723}{PWR\_GPIO\_B}}) ||\(\backslash\)}
+\DoxyCodeLine{                           ((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_gaffb175dc1b426b66fc8334298dedfb2d}{PWR\_GPIO\_C}}) ||\(\backslash\)}
+\DoxyCodeLine{                           ((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_ga8313451988e399483edbb9bc5925654d}{PWR\_GPIO\_D}}) ||\(\backslash\)}
+\DoxyCodeLine{                           ((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_ga08573302cabcc409ef1208ace1834ddc}{PWR\_GPIO\_E}}) ||\(\backslash\)}
+\DoxyCodeLine{                           ((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_ga94b434338719750707a69ee3b449c4d6}{PWR\_GPIO\_F}}) ||\(\backslash\)}
+\DoxyCodeLine{                           ((GPIO) == \mbox{\hyperlink{group___p_w_r_ex___g_p_i_o_ga17eabe49014d65432d96c4ff2f3751fa}{PWR\_GPIO\_G}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga5b2a8b140093af19e61dc7bef31cd2f9}\label{group___p_w_r_ex___private___macros_ga5b2a8b140093af19e61dc7bef31cd2f9}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_PVM\_MODE@{IS\_PWR\_PVM\_MODE}}
+\index{IS\_PWR\_PVM\_MODE@{IS\_PWR\_PVM\_MODE}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_PVM\_MODE}{IS\_PWR\_PVM\_MODE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+PVM\+\_\+\+MODE(\begin{DoxyParamCaption}\item[{}]{MODE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_gad8229b40226586fb6ed0c5ed03e13192}{PWR\_PVM\_MODE\_NORMAL}})              ||\(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_ga14319471a3942f3366d75ac95016e2c8}{PWR\_PVM\_MODE\_IT\_RISING}})           ||\(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_ga2fbc393dcad6eff93dbcc760c7105120}{PWR\_PVM\_MODE\_IT\_FALLING}})          ||\(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_ga7f8bbfa985e2e882aed920ef1c8aeab6}{PWR\_PVM\_MODE\_IT\_RISING\_FALLING}})   ||\(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_ga7c3d9d5cd70ca547f2ae2fce71a11946}{PWR\_PVM\_MODE\_EVENT\_RISING}})        ||\(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_ga42335bcf1f82a11d860ed81021fbacf5}{PWR\_PVM\_MODE\_EVENT\_FALLING}})       ||\(\backslash\)}
+\DoxyCodeLine{                                ((MODE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___mode_gad3c21712da2fda2f964ee16366e88cb2}{PWR\_PVM\_MODE\_EVENT\_RISING\_FALLING}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga7547d3dc786e6c6837163ba243df5938}\label{group___p_w_r_ex___private___macros_ga7547d3dc786e6c6837163ba243df5938}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_PVM\_TYPE@{IS\_PWR\_PVM\_TYPE}}
+\index{IS\_PWR\_PVM\_TYPE@{IS\_PWR\_PVM\_TYPE}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_PVM\_TYPE}{IS\_PWR\_PVM\_TYPE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+PVM\+\_\+\+TYPE(\begin{DoxyParamCaption}\item[{}]{TYPE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                               (((TYPE) == PWR\_PVM\_1) ||\(\backslash\)}
+\DoxyCodeLine{                               ((TYPE) == PWR\_PVM\_2) ||\(\backslash\)}
+\DoxyCodeLine{                               ((TYPE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___type_ga9690d421376ae26081cb09a9cca14d29}{PWR\_PVM\_3}}) ||\(\backslash\)}
+\DoxyCodeLine{                               ((TYPE) == \mbox{\hyperlink{group___p_w_r_ex___p_v_m___type_gae463ebfbf26b923dab5599424adefd87}{PWR\_PVM\_4}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_ga35f3636d8fff27feb210e9860076ef2f}\label{group___p_w_r_ex___private___macros_ga35f3636d8fff27feb210e9860076ef2f}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_VOLTAGE\_SCALING\_RANGE@{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}}
+\index{IS\_PWR\_VOLTAGE\_SCALING\_RANGE@{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}{IS\_PWR\_VOLTAGE\_SCALING\_RANGE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+VOLTAGE\+\_\+\+SCALING\+\_\+\+RANGE(\begin{DoxyParamCaption}\item[{}]{RANGE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                             (((RANGE) == \mbox{\hyperlink{group___p_w_r_ex___regulator___voltage___scale_ga3b5ca5ab9c19938a14d273825bcf840e}{PWR\_REGULATOR\_VOLTAGE\_SCALE1}}) || \(\backslash\)}
+\DoxyCodeLine{                                             ((RANGE) == \mbox{\hyperlink{group___p_w_r_ex___regulator___voltage___scale_gaa0d38e304a0adfdbb58a61c96bdb95e9}{PWR\_REGULATOR\_VOLTAGE\_SCALE2}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___p_w_r_ex___private___macros_gac6fcc59d6ff95b8feda1b228517f9c3f}\label{group___p_w_r_ex___private___macros_gac6fcc59d6ff95b8feda1b228517f9c3f}} 
+\index{PWR Extended Private Macros@{PWR Extended Private Macros}!IS\_PWR\_WAKEUP\_PIN@{IS\_PWR\_WAKEUP\_PIN}}
+\index{IS\_PWR\_WAKEUP\_PIN@{IS\_PWR\_WAKEUP\_PIN}!PWR Extended Private Macros@{PWR Extended Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_PWR\_WAKEUP\_PIN}{IS\_PWR\_WAKEUP\_PIN}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+PWR\+\_\+\+WAKEUP\+\_\+\+PIN(\begin{DoxyParamCaption}\item[{}]{PIN }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                (((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga0da8e7cbe0826e93b777ae4419a1cd05}{PWR\_WAKEUP\_PIN1}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga0c718de5967a8d2cec63d0b5fe0b2ada}{PWR\_WAKEUP\_PIN2}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga0cd92601d07cf7594716c22a0aa3ba26}{PWR\_WAKEUP\_PIN3}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga043f15e42e900b9609b0558f68ba4bb9}{PWR\_WAKEUP\_PIN4}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_gaef728b0a555c4f84d27367c34d993774}{PWR\_WAKEUP\_PIN5}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_gaeb626f09f1270e2a23729dac3fd269d1}{PWR\_WAKEUP\_PIN1\_HIGH}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga1216218e63be4edd833ba66170266903}{PWR\_WAKEUP\_PIN2\_HIGH}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_gacb7728048ff1fb42457c3b60cb5a8069}{PWR\_WAKEUP\_PIN3\_HIGH}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_gaa53d4e6305c7d8aa72c851c8d2749fa9}{PWR\_WAKEUP\_PIN4\_HIGH}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga8e8488c6402a2b350ec77c1fb16bdf43}{PWR\_WAKEUP\_PIN5\_HIGH}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga71106c9ef5fe0ce824983011cf5812db}{PWR\_WAKEUP\_PIN1\_LOW}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga2fa3e2360a56cd447dd49de0b075313f}{PWR\_WAKEUP\_PIN2\_LOW}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_gad1b726fce8345126b6bd9a38cc93de1a}{PWR\_WAKEUP\_PIN3\_LOW}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga5345ca56a0983765d0d6a97c5a53d910}{PWR\_WAKEUP\_PIN4\_LOW}}) || \(\backslash\)}
+\DoxyCodeLine{                                ((PIN) == \mbox{\hyperlink{group___p_w_r_ex___wake_up___pins_ga602a80b3379fe10be146b365bd85fe01}{PWR\_WAKEUP\_PIN5\_LOW}}))}
+
+\end{DoxyCode}

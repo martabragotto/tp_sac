@@ -1,0 +1,507 @@
+\hypertarget{group___r_c_c___l_l___e_f___p_l_l}{}\doxysection{PLL}
+\label{group___r_c_c___l_l___e_f___p_l_l}\index{PLL@{PLL}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga86d714579aac9b2f9b3216b6825c369b}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable}} (void)
+\begin{DoxyCompactList}\small\item\em Enable PLL @rmtoll CR PLLON LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga9e3b0e21f16147d992e0df9b87c410bd}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable}} (void)
+\begin{DoxyCompactList}\small\item\em Disable PLL. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga86334eeeb7d86032a1087bf1b0fb1860}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Ready}} (void)
+\begin{DoxyCompactList}\small\item\em Check if PLL Ready @rmtoll CR PLLRDY LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Ready. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga2750df8ba57b39f426e73de366444bd2}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+SYS}} (uint32\+\_\+t Source, uint32\+\_\+t PLLM, uint32\+\_\+t PLLN, uint32\+\_\+t PLLR)
+\begin{DoxyCompactList}\small\item\em Configure PLL used for SYSCLK Domain. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga721b467fddb230113bfd9d78ea682483}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+ADC}} (uint32\+\_\+t Source, uint32\+\_\+t PLLM, uint32\+\_\+t PLLN, uint32\+\_\+t PLLP)
+\begin{DoxyCompactList}\small\item\em Configure PLL used for ADC domain clock. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga5073ee320f5b0711bba681f9364f46ec}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+48M}} (uint32\+\_\+t Source, uint32\+\_\+t PLLM, uint32\+\_\+t PLLN, uint32\+\_\+t PLLQ)
+\begin{DoxyCompactList}\small\item\em Configure PLL used for 48Mhz domain clock. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gab03a55b3dfe05c5901bbd9b6c6fee0a0}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Set\+Main\+Source}} (uint32\+\_\+t PLLSource)
+\begin{DoxyCompactList}\small\item\em Configure PLL clock source @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Set\+Main\+Source. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga9d9b3802b37694ec9290e80438637a85}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Main\+Source}} (void)
+\begin{DoxyCompactList}\small\item\em Get the oscillator used as PLL clock source. @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Main\+Source. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN}} (void)
+\begin{DoxyCompactList}\small\item\em Get Main PLL multiplication factor for VCO @rmtoll PLLCFGR PLLN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga99fe1b554c8f04d8fed520689c3ec3b8}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetP}} (void)
+\begin{DoxyCompactList}\small\item\em Get Main PLL division factor for PLLP. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga2fa76fbe2c7f4db07eee43dc259c53fd}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetQ}} (void)
+\begin{DoxyCompactList}\small\item\em Get Main PLL division factor for PLLQ. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gab2eda08d7c23715c04620e5dfac0fd1d}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetR}} (void)
+\begin{DoxyCompactList}\small\item\em Get Main PLL division factor for PLLR. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider}} (void)
+\begin{DoxyCompactList}\small\item\em Get Division factor for the main PLL and other PLL @rmtoll PLLCFGR PLLM LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gabcb759b1d1f25ffb7625a30cd5b9cafa}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+ADC}} (void)
+\begin{DoxyCompactList}\small\item\em Enable PLL output mapped on ADC domain clock @rmtoll PLLCFGR PLLPEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+ADC. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga6d08058714eed86b99b64833dcfdc89d}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+\+ADC}} (void)
+\begin{DoxyCompactList}\small\item\em Disable PLL output mapped on ADC domain clock. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga70f96967bb551a506fca31eb0840a1be}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+ADC}} (void)
+\begin{DoxyCompactList}\small\item\em Check if PLL output mapped on ADC domain clock is enabled @rmtoll PLLCFGR PLLPEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+ADC. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gaf1ee48fdb4cfaf2d758b5e169b4f51e9}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+48M}} (void)
+\begin{DoxyCompactList}\small\item\em Enable PLL output mapped on 48MHz domain clock @rmtoll PLLCFGR PLLQEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+48M. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga4ded7a3fe19720a3818098b097a6d777}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+48M}} (void)
+\begin{DoxyCompactList}\small\item\em Disable PLL output mapped on 48MHz domain clock. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga37de31cae3138fb9557f1f7a5c1d4097}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+48M}} (void)
+\begin{DoxyCompactList}\small\item\em Check if PLL output mapped on 48MHz domain clock is enabled @rmtoll PLLCFGR PLLQEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+48M. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gacaed1b53cb0a74900e6636eaa447e421}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+SYS}} (void)
+\begin{DoxyCompactList}\small\item\em Enable PLL output mapped on SYSCLK domain @rmtoll PLLCFGR PLLREN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+SYS. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga88b78c3e1c52643b0770e59fa6b27b30}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+\+SYS}} (void)
+\begin{DoxyCompactList}\small\item\em Disable PLL output mapped on SYSCLK domain. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gabcbd16f33a9493c356620b6fb1accc37}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+SYS}} (void)
+\begin{DoxyCompactList}\small\item\em Check if PLL output mapped on SYSCLK domain clock is enabled @rmtoll PLLCFGR PLLREN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+SYS. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga5073ee320f5b0711bba681f9364f46ec}\label{group___r_c_c___l_l___e_f___p_l_l_ga5073ee320f5b0711bba681f9364f46ec}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_ConfigDomain\_48M@{LL\_RCC\_PLL\_ConfigDomain\_48M}}
+\index{LL\_RCC\_PLL\_ConfigDomain\_48M@{LL\_RCC\_PLL\_ConfigDomain\_48M}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_ConfigDomain\_48M()}{LL\_RCC\_PLL\_ConfigDomain\_48M()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+48M (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Source,  }\item[{uint32\+\_\+t}]{PLLM,  }\item[{uint32\+\_\+t}]{PLLN,  }\item[{uint32\+\_\+t}]{PLLQ }\end{DoxyParamCaption})}
+
+
+
+Configure PLL used for 48Mhz domain clock. 
+
+\begin{DoxyNote}{Note}
+PLL Source and PLLM Divider can be written only when PLL, is disabled. 
+
+PLLN/\+PLLQ can be written only when PLL is disabled. 
+
+This can be selected for USB, RNG @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+48M~\newline
+ PLLCFGR PLLM LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+48M~\newline
+ PLLCFGR PLLN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+48M~\newline
+ PLLCFGR PLLQ LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+48M 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga90a71ed6ed4b44a5b6ad271fd8b6c570}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+NONE}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga709a71b78d39545b3eb3fcbf0cb72ff8}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSI}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga1016d09eeee6f436b77fc117a9c67ffb}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSE}} \end{DoxyItemize}
+\\
+\hline
+{\em PLLM} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+{\em PLLN} & Between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+{\em PLLQ} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_gaf38bd2100e9509177cd2547beaae71a8}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_ga02e6914db7c67fc460a128c564248b37}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_ga16712e41719abb2e1dd05b5e1c61351d}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_gaab501e88c2532da4b353cbcacb6e3f35}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+8}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga721b467fddb230113bfd9d78ea682483}\label{group___r_c_c___l_l___e_f___p_l_l_ga721b467fddb230113bfd9d78ea682483}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_ConfigDomain\_ADC@{LL\_RCC\_PLL\_ConfigDomain\_ADC}}
+\index{LL\_RCC\_PLL\_ConfigDomain\_ADC@{LL\_RCC\_PLL\_ConfigDomain\_ADC}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_ConfigDomain\_ADC()}{LL\_RCC\_PLL\_ConfigDomain\_ADC()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+ADC (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Source,  }\item[{uint32\+\_\+t}]{PLLM,  }\item[{uint32\+\_\+t}]{PLLN,  }\item[{uint32\+\_\+t}]{PLLP }\end{DoxyParamCaption})}
+
+
+
+Configure PLL used for ADC domain clock. 
+
+\begin{DoxyNote}{Note}
+PLL Source and PLLM Divider can be written only when PLL is disabled. 
+
+PLLN/\+PLLP can be written only when PLL is disabled. @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+ADC~\newline
+ PLLCFGR PLLM LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+ADC~\newline
+ PLLCFGR PLLN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+ADC~\newline
+ PLLCFGR PLLPDIV LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+ADC 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga90a71ed6ed4b44a5b6ad271fd8b6c570}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+NONE}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga709a71b78d39545b3eb3fcbf0cb72ff8}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSI}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga1016d09eeee6f436b77fc117a9c67ffb}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSE}} \end{DoxyItemize}
+\\
+\hline
+{\em PLLM} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+{\em PLLN} & Between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+{\em PLLP} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga3edf8c5068934ce4c6e0dba896ba08d3}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5aa963724bf2bf600b0bbcf84234af21}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga56b3badb5b903f446602242beec4719e}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaa8fe0b27fb5ab96469437702b3dbf361}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga46c4368f091fad0c985a572a090f2248}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga756034d29371e52379a88565b84e7391}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga334f469572145faafd7f209bdcb95127}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga89b9dd1778b4a1c69ac204a9ca3a52b2}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga8adc785b325a8d9ace5806b0af73240c}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga9e40ede643bedc75c2d0ec4cd699d575}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gab5c8f949e49e6d0c26a31d22e575e81b}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga4dc355ebaea666e9c88197d749aa1763}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gacd556a5a065fc9750c59acd3cd1b7dbf}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaf9dcbe3e9baadd67c651bf74a18b9629}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gac7916a4363fcf740781c9f20d0033a4a}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+16}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2f87bf6c3c509434b412a841f09142fc}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+17}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga9936cac6a0beac587c928deb58053617}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+18}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gabffbca59cef0f982296001ec00d6592e}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+19}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gabd528c007e7a9b4803b7e1fab13b5a7d}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+20}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5301fed4a08424e8589a54a95db3cd29}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+21}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaca0519b243160cd3f364112aea262de2}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+22}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2b1864ab87b3128548191d845b5f3ded}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+23}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga4f669eced056a53ad18283ec3660da10}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+24}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5dc9c10b862e0e6bf5a1a7732abf1d36}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+25}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga36dc00779f2c1290bb46925b165d5a5a}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+26}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gab8e5921f9c0dee5e5ca60ad66e299ce7}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+27}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaccc3b67761a26d889b5e8648a8f1aaca}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+28}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga08224042cb020fbe18004ea898fdc061}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+29}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaf4e8ebaf6c1fed2ec606204115915425}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+30}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga1aa1846ce0b2537e766ffbdc44ce73a5}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+31}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga2750df8ba57b39f426e73de366444bd2}\label{group___r_c_c___l_l___e_f___p_l_l_ga2750df8ba57b39f426e73de366444bd2}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_ConfigDomain\_SYS@{LL\_RCC\_PLL\_ConfigDomain\_SYS}}
+\index{LL\_RCC\_PLL\_ConfigDomain\_SYS@{LL\_RCC\_PLL\_ConfigDomain\_SYS}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_ConfigDomain\_SYS()}{LL\_RCC\_PLL\_ConfigDomain\_SYS()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+SYS (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Source,  }\item[{uint32\+\_\+t}]{PLLM,  }\item[{uint32\+\_\+t}]{PLLN,  }\item[{uint32\+\_\+t}]{PLLR }\end{DoxyParamCaption})}
+
+
+
+Configure PLL used for SYSCLK Domain. 
+
+\begin{DoxyNote}{Note}
+PLL Source and PLLM Divider can be written only when PLL is disabled. 
+
+PLLN/\+PLLR can be written only when PLL is disabled. @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+SYS~\newline
+ PLLCFGR PLLM LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+SYS~\newline
+ PLLCFGR PLLN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+SYS~\newline
+ PLLCFGR PLLR LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Config\+Domain\+\_\+\+SYS 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga90a71ed6ed4b44a5b6ad271fd8b6c570}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+NONE}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga709a71b78d39545b3eb3fcbf0cb72ff8}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSI}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga1016d09eeee6f436b77fc117a9c67ffb}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSE}} \end{DoxyItemize}
+\\
+\hline
+{\em PLLM} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+{\em PLLN} & Between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+{\em PLLR} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_gac27e19980121da34c0eedd414bd22124}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_gaff60dae6a7b530aa26b8712d22f002f5}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_ga58c29e7d62eeb6c59a42771b5ee921f4}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_ga9d01c19cdf626ae6055fada37a65d079}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+8}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga9e3b0e21f16147d992e0df9b87c410bd}\label{group___r_c_c___l_l___e_f___p_l_l_ga9e3b0e21f16147d992e0df9b87c410bd}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_Disable@{LL\_RCC\_PLL\_Disable}}
+\index{LL\_RCC\_PLL\_Disable@{LL\_RCC\_PLL\_Disable}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_Disable()}{LL\_RCC\_PLL\_Disable()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable PLL. 
+
+\begin{DoxyNote}{Note}
+Cannot be disabled if the PLL clock is used as the system clock @rmtoll CR PLLON LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga4ded7a3fe19720a3818098b097a6d777}\label{group___r_c_c___l_l___e_f___p_l_l_ga4ded7a3fe19720a3818098b097a6d777}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_DisableDomain\_48M@{LL\_RCC\_PLL\_DisableDomain\_48M}}
+\index{LL\_RCC\_PLL\_DisableDomain\_48M@{LL\_RCC\_PLL\_DisableDomain\_48M}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_DisableDomain\_48M()}{LL\_RCC\_PLL\_DisableDomain\_48M()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+48M (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable PLL output mapped on 48MHz domain clock. 
+
+\begin{DoxyNote}{Note}
+Cannot be disabled if the PLL clock is used as the system clock 
+
+In order to save power, when the PLLCLK of the PLL is not used, should be 0 @rmtoll PLLCFGR PLLQEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+48M 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga6d08058714eed86b99b64833dcfdc89d}\label{group___r_c_c___l_l___e_f___p_l_l_ga6d08058714eed86b99b64833dcfdc89d}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_DisableDomain\_ADC@{LL\_RCC\_PLL\_DisableDomain\_ADC}}
+\index{LL\_RCC\_PLL\_DisableDomain\_ADC@{LL\_RCC\_PLL\_DisableDomain\_ADC}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_DisableDomain\_ADC()}{LL\_RCC\_PLL\_DisableDomain\_ADC()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+\+ADC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable PLL output mapped on ADC domain clock. 
+
+\begin{DoxyNote}{Note}
+Cannot be disabled if the PLL clock is used as the system clock 
+
+In order to save power, when the PLLCLK of the PLL is not used, should be 0 @rmtoll PLLCFGR PLLPEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+\+ADC 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga88b78c3e1c52643b0770e59fa6b27b30}\label{group___r_c_c___l_l___e_f___p_l_l_ga88b78c3e1c52643b0770e59fa6b27b30}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_DisableDomain\_SYS@{LL\_RCC\_PLL\_DisableDomain\_SYS}}
+\index{LL\_RCC\_PLL\_DisableDomain\_SYS@{LL\_RCC\_PLL\_DisableDomain\_SYS}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_DisableDomain\_SYS()}{LL\_RCC\_PLL\_DisableDomain\_SYS()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+\+SYS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable PLL output mapped on SYSCLK domain. 
+
+\begin{DoxyNote}{Note}
+Cannot be disabled if the PLL clock is used as the system clock 
+
+In order to save power, when the PLLCLK of the PLL is not used, Main PLL should be 0 @rmtoll PLLCFGR PLLREN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Disable\+Domain\+\_\+\+SYS 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga86d714579aac9b2f9b3216b6825c369b}\label{group___r_c_c___l_l___e_f___p_l_l_ga86d714579aac9b2f9b3216b6825c369b}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_Enable@{LL\_RCC\_PLL\_Enable}}
+\index{LL\_RCC\_PLL\_Enable@{LL\_RCC\_PLL\_Enable}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_Enable()}{LL\_RCC\_PLL\_Enable()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable PLL @rmtoll CR PLLON LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gaf1ee48fdb4cfaf2d758b5e169b4f51e9}\label{group___r_c_c___l_l___e_f___p_l_l_gaf1ee48fdb4cfaf2d758b5e169b4f51e9}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_EnableDomain\_48M@{LL\_RCC\_PLL\_EnableDomain\_48M}}
+\index{LL\_RCC\_PLL\_EnableDomain\_48M@{LL\_RCC\_PLL\_EnableDomain\_48M}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_EnableDomain\_48M()}{LL\_RCC\_PLL\_EnableDomain\_48M()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+48M (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable PLL output mapped on 48MHz domain clock @rmtoll PLLCFGR PLLQEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+48M. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gabcb759b1d1f25ffb7625a30cd5b9cafa}\label{group___r_c_c___l_l___e_f___p_l_l_gabcb759b1d1f25ffb7625a30cd5b9cafa}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_EnableDomain\_ADC@{LL\_RCC\_PLL\_EnableDomain\_ADC}}
+\index{LL\_RCC\_PLL\_EnableDomain\_ADC@{LL\_RCC\_PLL\_EnableDomain\_ADC}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_EnableDomain\_ADC()}{LL\_RCC\_PLL\_EnableDomain\_ADC()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+ADC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable PLL output mapped on ADC domain clock @rmtoll PLLCFGR PLLPEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+ADC. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gacaed1b53cb0a74900e6636eaa447e421}\label{group___r_c_c___l_l___e_f___p_l_l_gacaed1b53cb0a74900e6636eaa447e421}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_EnableDomain\_SYS@{LL\_RCC\_PLL\_EnableDomain\_SYS}}
+\index{LL\_RCC\_PLL\_EnableDomain\_SYS@{LL\_RCC\_PLL\_EnableDomain\_SYS}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_EnableDomain\_SYS()}{LL\_RCC\_PLL\_EnableDomain\_SYS()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+SYS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable PLL output mapped on SYSCLK domain @rmtoll PLLCFGR PLLREN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Enable\+Domain\+\_\+\+SYS. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}\label{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_GetDivider@{LL\_RCC\_PLL\_GetDivider}}
+\index{LL\_RCC\_PLL\_GetDivider@{LL\_RCC\_PLL\_GetDivider}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_GetDivider()}{LL\_RCC\_PLL\_GetDivider()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Division factor for the main PLL and other PLL @rmtoll PLLCFGR PLLM LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga9d9b3802b37694ec9290e80438637a85}\label{group___r_c_c___l_l___e_f___p_l_l_ga9d9b3802b37694ec9290e80438637a85}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_GetMainSource@{LL\_RCC\_PLL\_GetMainSource}}
+\index{LL\_RCC\_PLL\_GetMainSource@{LL\_RCC\_PLL\_GetMainSource}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_GetMainSource()}{LL\_RCC\_PLL\_GetMainSource()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Main\+Source (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the oscillator used as PLL clock source. @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Main\+Source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga90a71ed6ed4b44a5b6ad271fd8b6c570}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+NONE}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga709a71b78d39545b3eb3fcbf0cb72ff8}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSI}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga1016d09eeee6f436b77fc117a9c67ffb}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSE}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}\label{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_GetN@{LL\_RCC\_PLL\_GetN}}
+\index{LL\_RCC\_PLL\_GetN@{LL\_RCC\_PLL\_GetN}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_GetN()}{LL\_RCC\_PLL\_GetN()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Main PLL multiplication factor for VCO @rmtoll PLLCFGR PLLN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Between} & Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga99fe1b554c8f04d8fed520689c3ec3b8}\label{group___r_c_c___l_l___e_f___p_l_l_ga99fe1b554c8f04d8fed520689c3ec3b8}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_GetP@{LL\_RCC\_PLL\_GetP}}
+\index{LL\_RCC\_PLL\_GetP@{LL\_RCC\_PLL\_GetP}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_GetP()}{LL\_RCC\_PLL\_GetP()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetP (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Main PLL division factor for PLLP. 
+
+\begin{DoxyNote}{Note}
+Used for PLLADCCLK (ADC clock) @rmtoll PLLCFGR PLLPDIV LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetP~\newline
+@rmtoll PLLCFGR PLLP LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetP 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga3edf8c5068934ce4c6e0dba896ba08d3}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5aa963724bf2bf600b0bbcf84234af21}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga56b3badb5b903f446602242beec4719e}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaa8fe0b27fb5ab96469437702b3dbf361}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga46c4368f091fad0c985a572a090f2248}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga756034d29371e52379a88565b84e7391}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga334f469572145faafd7f209bdcb95127}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga89b9dd1778b4a1c69ac204a9ca3a52b2}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga8adc785b325a8d9ace5806b0af73240c}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga9e40ede643bedc75c2d0ec4cd699d575}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gab5c8f949e49e6d0c26a31d22e575e81b}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga4dc355ebaea666e9c88197d749aa1763}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gacd556a5a065fc9750c59acd3cd1b7dbf}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaf9dcbe3e9baadd67c651bf74a18b9629}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gac7916a4363fcf740781c9f20d0033a4a}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+16}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2f87bf6c3c509434b412a841f09142fc}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+17}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga9936cac6a0beac587c928deb58053617}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+18}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gabffbca59cef0f982296001ec00d6592e}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+19}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gabd528c007e7a9b4803b7e1fab13b5a7d}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+20}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5301fed4a08424e8589a54a95db3cd29}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+21}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaca0519b243160cd3f364112aea262de2}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+22}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2b1864ab87b3128548191d845b5f3ded}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+23}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga4f669eced056a53ad18283ec3660da10}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+24}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5dc9c10b862e0e6bf5a1a7732abf1d36}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+25}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga36dc00779f2c1290bb46925b165d5a5a}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+26}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gab8e5921f9c0dee5e5ca60ad66e299ce7}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+27}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaccc3b67761a26d889b5e8648a8f1aaca}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+28}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga08224042cb020fbe18004ea898fdc061}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+29}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaf4e8ebaf6c1fed2ec606204115915425}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+30}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga1aa1846ce0b2537e766ffbdc44ce73a5}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+31}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga2fa76fbe2c7f4db07eee43dc259c53fd}\label{group___r_c_c___l_l___e_f___p_l_l_ga2fa76fbe2c7f4db07eee43dc259c53fd}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_GetQ@{LL\_RCC\_PLL\_GetQ}}
+\index{LL\_RCC\_PLL\_GetQ@{LL\_RCC\_PLL\_GetQ}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_GetQ()}{LL\_RCC\_PLL\_GetQ()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetQ (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Main PLL division factor for PLLQ. 
+
+\begin{DoxyNote}{Note}
+Used for PLL48\+M1\+CLK selected for USB, RNG (48 MHz clock) @rmtoll PLLCFGR PLLQ LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetQ 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_gaf38bd2100e9509177cd2547beaae71a8}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_ga02e6914db7c67fc460a128c564248b37}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_ga16712e41719abb2e1dd05b5e1c61351d}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_gaab501e88c2532da4b353cbcacb6e3f35}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+8}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gab2eda08d7c23715c04620e5dfac0fd1d}\label{group___r_c_c___l_l___e_f___p_l_l_gab2eda08d7c23715c04620e5dfac0fd1d}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_GetR@{LL\_RCC\_PLL\_GetR}}
+\index{LL\_RCC\_PLL\_GetR@{LL\_RCC\_PLL\_GetR}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_GetR()}{LL\_RCC\_PLL\_GetR()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetR (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Main PLL division factor for PLLR. 
+
+\begin{DoxyNote}{Note}
+Used for PLLCLK (system clock) @rmtoll PLLCFGR PLLR LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetR 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_gac27e19980121da34c0eedd414bd22124}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_gaff60dae6a7b530aa26b8712d22f002f5}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_ga58c29e7d62eeb6c59a42771b5ee921f4}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_ga9d01c19cdf626ae6055fada37a65d079}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+8}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga37de31cae3138fb9557f1f7a5c1d4097}\label{group___r_c_c___l_l___e_f___p_l_l_ga37de31cae3138fb9557f1f7a5c1d4097}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_IsEnabledDomain\_48M@{LL\_RCC\_PLL\_IsEnabledDomain\_48M}}
+\index{LL\_RCC\_PLL\_IsEnabledDomain\_48M@{LL\_RCC\_PLL\_IsEnabledDomain\_48M}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_IsEnabledDomain\_48M()}{LL\_RCC\_PLL\_IsEnabledDomain\_48M()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+48M (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if PLL output mapped on 48MHz domain clock is enabled @rmtoll PLLCFGR PLLQEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+48M. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of bit (1 or 0). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga70f96967bb551a506fca31eb0840a1be}\label{group___r_c_c___l_l___e_f___p_l_l_ga70f96967bb551a506fca31eb0840a1be}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_IsEnabledDomain\_ADC@{LL\_RCC\_PLL\_IsEnabledDomain\_ADC}}
+\index{LL\_RCC\_PLL\_IsEnabledDomain\_ADC@{LL\_RCC\_PLL\_IsEnabledDomain\_ADC}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_IsEnabledDomain\_ADC()}{LL\_RCC\_PLL\_IsEnabledDomain\_ADC()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+ADC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if PLL output mapped on ADC domain clock is enabled @rmtoll PLLCFGR PLLPEN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+ADC. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of bit (1 or 0). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gabcbd16f33a9493c356620b6fb1accc37}\label{group___r_c_c___l_l___e_f___p_l_l_gabcbd16f33a9493c356620b6fb1accc37}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_IsEnabledDomain\_SYS@{LL\_RCC\_PLL\_IsEnabledDomain\_SYS}}
+\index{LL\_RCC\_PLL\_IsEnabledDomain\_SYS@{LL\_RCC\_PLL\_IsEnabledDomain\_SYS}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_IsEnabledDomain\_SYS()}{LL\_RCC\_PLL\_IsEnabledDomain\_SYS()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+SYS (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if PLL output mapped on SYSCLK domain clock is enabled @rmtoll PLLCFGR PLLREN LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Enabled\+Domain\+\_\+\+SYS. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of bit (1 or 0). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_ga86334eeeb7d86032a1087bf1b0fb1860}\label{group___r_c_c___l_l___e_f___p_l_l_ga86334eeeb7d86032a1087bf1b0fb1860}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_IsReady@{LL\_RCC\_PLL\_IsReady}}
+\index{LL\_RCC\_PLL\_IsReady@{LL\_RCC\_PLL\_IsReady}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_IsReady()}{LL\_RCC\_PLL\_IsReady()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Check if PLL Ready @rmtoll CR PLLRDY LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Is\+Ready. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of bit (1 or 0). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_f___p_l_l_gab03a55b3dfe05c5901bbd9b6c6fee0a0}\label{group___r_c_c___l_l___e_f___p_l_l_gab03a55b3dfe05c5901bbd9b6c6fee0a0}} 
+\index{PLL@{PLL}!LL\_RCC\_PLL\_SetMainSource@{LL\_RCC\_PLL\_SetMainSource}}
+\index{LL\_RCC\_PLL\_SetMainSource@{LL\_RCC\_PLL\_SetMainSource}!PLL@{PLL}}
+\doxysubsubsection{\texorpdfstring{LL\_RCC\_PLL\_SetMainSource()}{LL\_RCC\_PLL\_SetMainSource()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Set\+Main\+Source (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{PLLSource }\end{DoxyParamCaption})}
+
+
+
+Configure PLL clock source @rmtoll PLLCFGR PLLSRC LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Set\+Main\+Source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em PLLSource} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga90a71ed6ed4b44a5b6ad271fd8b6c570}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+NONE}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga709a71b78d39545b3eb3fcbf0cb72ff8}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSI}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_s_o_u_r_c_e_ga1016d09eeee6f436b77fc117a9c67ffb}{LL\+\_\+\+RCC\+\_\+\+PLLSOURCE\+\_\+\+HSE}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

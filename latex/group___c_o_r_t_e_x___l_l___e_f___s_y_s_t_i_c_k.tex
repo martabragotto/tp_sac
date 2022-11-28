@@ -1,0 +1,125 @@
+\hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k}{}\doxysection{SYSTICK}
+\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k}\index{SYSTICK@{SYSTICK}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaf5dfb37d859552753594f9cc66431ba6}{LL\+\_\+\+SYSTICK\+\_\+\+Is\+Active\+Counter\+Flag}} (void)
+\begin{DoxyCompactList}\small\item\em This function checks if the Systick counter flag is active or not. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaaf98ae8e0298b44c5d58a3ba9ef358f7}{LL\+\_\+\+SYSTICK\+\_\+\+Set\+Clk\+Source}} (uint32\+\_\+t Source)
+\begin{DoxyCompactList}\small\item\em Configures the Sys\+Tick clock source @rmtoll STK\+\_\+\+CTRL CLKSOURCE LL\+\_\+\+SYSTICK\+\_\+\+Set\+Clk\+Source. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga2cfeb1396db13a9fbc208cc659064b19}{LL\+\_\+\+SYSTICK\+\_\+\+Get\+Clk\+Source}} (void)
+\begin{DoxyCompactList}\small\item\em Get the Sys\+Tick clock source @rmtoll STK\+\_\+\+CTRL CLKSOURCE LL\+\_\+\+SYSTICK\+\_\+\+Get\+Clk\+Source. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga770fac4394ddde9a53e1a236c81538f0}{LL\+\_\+\+SYSTICK\+\_\+\+Enable\+IT}} (void)
+\begin{DoxyCompactList}\small\item\em Enable Sys\+Tick exception request @rmtoll STK\+\_\+\+CTRL TICKINT LL\+\_\+\+SYSTICK\+\_\+\+Enable\+IT. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga11d0d066050805c9e8d24718d8a15e4d}{LL\+\_\+\+SYSTICK\+\_\+\+Disable\+IT}} (void)
+\begin{DoxyCompactList}\small\item\em Disable Sys\+Tick exception request @rmtoll STK\+\_\+\+CTRL TICKINT LL\+\_\+\+SYSTICK\+\_\+\+Disable\+IT. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gab34484042fd5a82aa80ba94223b6fbde}{LL\+\_\+\+SYSTICK\+\_\+\+Is\+Enabled\+IT}} (void)
+\begin{DoxyCompactList}\small\item\em Checks if the SYSTICK interrupt is enabled or disabled. @rmtoll STK\+\_\+\+CTRL TICKINT LL\+\_\+\+SYSTICK\+\_\+\+Is\+Enabled\+IT. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga11d0d066050805c9e8d24718d8a15e4d}\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga11d0d066050805c9e8d24718d8a15e4d}} 
+\index{SYSTICK@{SYSTICK}!LL\_SYSTICK\_DisableIT@{LL\_SYSTICK\_DisableIT}}
+\index{LL\_SYSTICK\_DisableIT@{LL\_SYSTICK\_DisableIT}!SYSTICK@{SYSTICK}}
+\doxysubsubsection{\texorpdfstring{LL\_SYSTICK\_DisableIT()}{LL\_SYSTICK\_DisableIT()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+SYSTICK\+\_\+\+Disable\+IT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Disable Sys\+Tick exception request @rmtoll STK\+\_\+\+CTRL TICKINT LL\+\_\+\+SYSTICK\+\_\+\+Disable\+IT. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga770fac4394ddde9a53e1a236c81538f0}\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga770fac4394ddde9a53e1a236c81538f0}} 
+\index{SYSTICK@{SYSTICK}!LL\_SYSTICK\_EnableIT@{LL\_SYSTICK\_EnableIT}}
+\index{LL\_SYSTICK\_EnableIT@{LL\_SYSTICK\_EnableIT}!SYSTICK@{SYSTICK}}
+\doxysubsubsection{\texorpdfstring{LL\_SYSTICK\_EnableIT()}{LL\_SYSTICK\_EnableIT()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+SYSTICK\+\_\+\+Enable\+IT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Enable Sys\+Tick exception request @rmtoll STK\+\_\+\+CTRL TICKINT LL\+\_\+\+SYSTICK\+\_\+\+Enable\+IT. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga2cfeb1396db13a9fbc208cc659064b19}\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_ga2cfeb1396db13a9fbc208cc659064b19}} 
+\index{SYSTICK@{SYSTICK}!LL\_SYSTICK\_GetClkSource@{LL\_SYSTICK\_GetClkSource}}
+\index{LL\_SYSTICK\_GetClkSource@{LL\_SYSTICK\_GetClkSource}!SYSTICK@{SYSTICK}}
+\doxysubsubsection{\texorpdfstring{LL\_SYSTICK\_GetClkSource()}{LL\_SYSTICK\_GetClkSource()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+SYSTICK\+\_\+\+Get\+Clk\+Source (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get the Sys\+Tick clock source @rmtoll STK\+\_\+\+CTRL CLKSOURCE LL\+\_\+\+SYSTICK\+\_\+\+Get\+Clk\+Source. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___c_l_k_s_o_u_r_c_e___h_c_l_k_gab13c4588c1b1a8b867541a4ad928d205}{LL\+\_\+\+SYSTICK\+\_\+\+CLKSOURCE\+\_\+\+HCLK\+\_\+\+DIV8}} \item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___c_l_k_s_o_u_r_c_e___h_c_l_k_gaa92530d2f2cd8ce785297e4aed960ff0}{LL\+\_\+\+SYSTICK\+\_\+\+CLKSOURCE\+\_\+\+HCLK}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaf5dfb37d859552753594f9cc66431ba6}\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaf5dfb37d859552753594f9cc66431ba6}} 
+\index{SYSTICK@{SYSTICK}!LL\_SYSTICK\_IsActiveCounterFlag@{LL\_SYSTICK\_IsActiveCounterFlag}}
+\index{LL\_SYSTICK\_IsActiveCounterFlag@{LL\_SYSTICK\_IsActiveCounterFlag}!SYSTICK@{SYSTICK}}
+\doxysubsubsection{\texorpdfstring{LL\_SYSTICK\_IsActiveCounterFlag()}{LL\_SYSTICK\_IsActiveCounterFlag()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+SYSTICK\+\_\+\+Is\+Active\+Counter\+Flag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function checks if the Systick counter flag is active or not. 
+
+\begin{DoxyNote}{Note}
+It can be used in timeout function on application side. @rmtoll STK\+\_\+\+CTRL COUNTFLAG LL\+\_\+\+SYSTICK\+\_\+\+Is\+Active\+Counter\+Flag 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of bit (1 or 0). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gab34484042fd5a82aa80ba94223b6fbde}\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gab34484042fd5a82aa80ba94223b6fbde}} 
+\index{SYSTICK@{SYSTICK}!LL\_SYSTICK\_IsEnabledIT@{LL\_SYSTICK\_IsEnabledIT}}
+\index{LL\_SYSTICK\_IsEnabledIT@{LL\_SYSTICK\_IsEnabledIT}!SYSTICK@{SYSTICK}}
+\doxysubsubsection{\texorpdfstring{LL\_SYSTICK\_IsEnabledIT()}{LL\_SYSTICK\_IsEnabledIT()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+SYSTICK\+\_\+\+Is\+Enabled\+IT (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Checks if the SYSTICK interrupt is enabled or disabled. @rmtoll STK\+\_\+\+CTRL TICKINT LL\+\_\+\+SYSTICK\+\_\+\+Is\+Enabled\+IT. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em State} & of bit (1 or 0). \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaaf98ae8e0298b44c5d58a3ba9ef358f7}\label{group___c_o_r_t_e_x___l_l___e_f___s_y_s_t_i_c_k_gaaf98ae8e0298b44c5d58a3ba9ef358f7}} 
+\index{SYSTICK@{SYSTICK}!LL\_SYSTICK\_SetClkSource@{LL\_SYSTICK\_SetClkSource}}
+\index{LL\_SYSTICK\_SetClkSource@{LL\_SYSTICK\_SetClkSource}!SYSTICK@{SYSTICK}}
+\doxysubsubsection{\texorpdfstring{LL\_SYSTICK\_SetClkSource()}{LL\_SYSTICK\_SetClkSource()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+SYSTICK\+\_\+\+Set\+Clk\+Source (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Source }\end{DoxyParamCaption})}
+
+
+
+Configures the Sys\+Tick clock source @rmtoll STK\+\_\+\+CTRL CLKSOURCE LL\+\_\+\+SYSTICK\+\_\+\+Set\+Clk\+Source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Source} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___c_l_k_s_o_u_r_c_e___h_c_l_k_gab13c4588c1b1a8b867541a4ad928d205}{LL\+\_\+\+SYSTICK\+\_\+\+CLKSOURCE\+\_\+\+HCLK\+\_\+\+DIV8}} \item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___c_l_k_s_o_u_r_c_e___h_c_l_k_gaa92530d2f2cd8ce785297e4aed960ff0}{LL\+\_\+\+SYSTICK\+\_\+\+CLKSOURCE\+\_\+\+HCLK}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,79 @@
+\hypertarget{group___d_m_a_ex___private___macros}{}\doxysection{DMAEx Private Macros}
+\label{group___d_m_a_ex___private___macros}\index{DMAEx Private Macros@{DMAEx Private Macros}}
+
+
+DMAEx private macros.  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_gace9e93ce8fbac8137eb4f4043e398471}\label{group___d_m_a_ex___private___macros_gace9e93ce8fbac8137eb4f4043e398471}} 
+\#define {\bfseries IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+SIGNAL\+\_\+\+ID}(SIGNAL\+\_\+\+ID)~((SIGNAL\+\_\+\+ID) $<$= \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_signal_i_d__selection_ga1f16354b732fa8aa600f1c20182f5c0a}{HAL\+\_\+\+DMAMUX1\+\_\+\+SYNC\+\_\+\+LPTIM1\+\_\+\+OUT}})
+\item 
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_ga558077b36b0a28f13aa6e3901b0bc3b7}\label{group___d_m_a_ex___private___macros_ga558077b36b0a28f13aa6e3901b0bc3b7}} 
+\#define {\bfseries IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+REQUEST\+\_\+\+NUMBER}(REQUEST\+\_\+\+NUMBER)~(((REQUEST\+\_\+\+NUMBER) $>$ 0U) \&\& ((REQUEST\+\_\+\+NUMBER) $<$= 32U))
+\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___private___macros_gaaa05d69b908dd2d78540da6997590012}{IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+POLARITY}}(POLARITY)
+\item 
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_gabef88bd7531f3bc3a9cb807f76b243f0}\label{group___d_m_a_ex___private___macros_gabef88bd7531f3bc3a9cb807f76b243f0}} 
+\#define {\bfseries IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+STATE}(SYNC)~(((SYNC) == DISABLE)   $\vert$$\vert$ ((SYNC) == ENABLE))
+\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___private___macros_ga8f06cc3561c442ce2fdb192a85bc3d99}{IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+EVENT}}(EVENT)
+\item 
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_ga6e68deba3ecfe83dfe73a42730e56dbd}\label{group___d_m_a_ex___private___macros_ga6e68deba3ecfe83dfe73a42730e56dbd}} 
+\#define {\bfseries IS\+\_\+\+DMAMUX\+\_\+\+REQUEST\+\_\+\+GEN\+\_\+\+SIGNAL\+\_\+\+ID}(SIGNAL\+\_\+\+ID)~((SIGNAL\+\_\+\+ID) $<$= \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___signal_generator_i_d__selection_ga533184141e58f7bd498b862e6ed5e678}{HAL\+\_\+\+DMAMUX1\+\_\+\+REQ\+\_\+\+GEN\+\_\+\+LPTIM1\+\_\+\+OUT}})
+\item 
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_ga2e93828eacf890335947826617002477}\label{group___d_m_a_ex___private___macros_ga2e93828eacf890335947826617002477}} 
+\#define {\bfseries IS\+\_\+\+DMAMUX\+\_\+\+REQUEST\+\_\+\+GEN\+\_\+\+REQUEST\+\_\+\+NUMBER}(REQUEST\+\_\+\+NUMBER)~(((REQUEST\+\_\+\+NUMBER) $>$ 0U) \&\& ((REQUEST\+\_\+\+NUMBER) $<$= 32U))
+\item 
+\#define \mbox{\hyperlink{group___d_m_a_ex___private___macros_ga221ba2c84284ddc0cf883b6ce91a3652}{IS\+\_\+\+DMAMUX\+\_\+\+REQUEST\+\_\+\+GEN\+\_\+\+POLARITY}}(POLARITY)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DMAEx private macros. 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_ga221ba2c84284ddc0cf883b6ce91a3652}\label{group___d_m_a_ex___private___macros_ga221ba2c84284ddc0cf883b6ce91a3652}} 
+\index{DMAEx Private Macros@{DMAEx Private Macros}!IS\_DMAMUX\_REQUEST\_GEN\_POLARITY@{IS\_DMAMUX\_REQUEST\_GEN\_POLARITY}}
+\index{IS\_DMAMUX\_REQUEST\_GEN\_POLARITY@{IS\_DMAMUX\_REQUEST\_GEN\_POLARITY}!DMAEx Private Macros@{DMAEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_DMAMUX\_REQUEST\_GEN\_POLARITY}{IS\_DMAMUX\_REQUEST\_GEN\_POLARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DMAMUX\+\_\+\+REQUEST\+\_\+\+GEN\+\_\+\+POLARITY(\begin{DoxyParamCaption}\item[{}]{POLARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                  (((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___request_genenerator_polarity__selection_gae3aed48930b69abaa33eb22846713c02}{HAL\_DMAMUX\_REQ\_GEN\_NO\_EVENT}})   || \(\backslash\)}
+\DoxyCodeLine{                                                  ((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___request_genenerator_polarity__selection_gaaa1f41347f9cb8cb5698ac54cd78a231}{HAL\_DMAMUX\_REQ\_GEN\_RISING}})  || \(\backslash\)}
+\DoxyCodeLine{                                                  ((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___request_genenerator_polarity__selection_ga57ffa0ff2fac3d39f6721068fc5001a8}{HAL\_DMAMUX\_REQ\_GEN\_FALLING}}) || \(\backslash\)}
+\DoxyCodeLine{                                                  ((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___request_genenerator_polarity__selection_ga988e899ab81ba1cffd5e399c890ad298}{HAL\_DMAMUX\_REQ\_GEN\_RISING\_FALLING}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_ga8f06cc3561c442ce2fdb192a85bc3d99}\label{group___d_m_a_ex___private___macros_ga8f06cc3561c442ce2fdb192a85bc3d99}} 
+\index{DMAEx Private Macros@{DMAEx Private Macros}!IS\_DMAMUX\_SYNC\_EVENT@{IS\_DMAMUX\_SYNC\_EVENT}}
+\index{IS\_DMAMUX\_SYNC\_EVENT@{IS\_DMAMUX\_SYNC\_EVENT}!DMAEx Private Macros@{DMAEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_DMAMUX\_SYNC\_EVENT}{IS\_DMAMUX\_SYNC\_EVENT}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+EVENT(\begin{DoxyParamCaption}\item[{}]{EVENT }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                     (((EVENT) == DISABLE)   || \(\backslash\)}
+\DoxyCodeLine{                                     ((EVENT) == ENABLE))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___d_m_a_ex___private___macros_gaaa05d69b908dd2d78540da6997590012}\label{group___d_m_a_ex___private___macros_gaaa05d69b908dd2d78540da6997590012}} 
+\index{DMAEx Private Macros@{DMAEx Private Macros}!IS\_DMAMUX\_SYNC\_POLARITY@{IS\_DMAMUX\_SYNC\_POLARITY}}
+\index{IS\_DMAMUX\_SYNC\_POLARITY@{IS\_DMAMUX\_SYNC\_POLARITY}!DMAEx Private Macros@{DMAEx Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_DMAMUX\_SYNC\_POLARITY}{IS\_DMAMUX\_SYNC\_POLARITY}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+DMAMUX\+\_\+\+SYNC\+\_\+\+POLARITY(\begin{DoxyParamCaption}\item[{}]{POLARITY }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                           (((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_polarity__selection_gaa8b1d6e81ee59c0628f3bce29ccf134b}{HAL\_DMAMUX\_SYNC\_NO\_EVENT}})    || \(\backslash\)}
+\DoxyCodeLine{                                           ((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_polarity__selection_gad4f63b3d3f679a6515b32641eac6b7f3}{HAL\_DMAMUX\_SYNC\_RISING}})   || \(\backslash\)}
+\DoxyCodeLine{                                           ((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_polarity__selection_gab2ee2ed0e142780a10ffae50c10ea0d3}{HAL\_DMAMUX\_SYNC\_FALLING}})  || \(\backslash\)}
+\DoxyCodeLine{                                           ((POLARITY) == \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_polarity__selection_gab705a14d27bb03f26f81ecd0f18268af}{HAL\_DMAMUX\_SYNC\_RISING\_FALLING}}))}
+
+\end{DoxyCode}

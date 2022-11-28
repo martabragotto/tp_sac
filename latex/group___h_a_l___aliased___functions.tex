@@ -1,0 +1,69 @@
+\hypertarget{group___h_a_l___aliased___functions}{}\doxysection{HAL Generic Aliased Functions maintained for legacy purpose}
+\label{group___h_a_l___aliased___functions}\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga334dab724209d848427632878cd18590}\label{group___h_a_l___aliased___functions_ga334dab724209d848427632878cd18590}} 
+\#define {\bfseries HAL\+\_\+\+Enable\+DBGSleep\+Mode}~HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGSleep\+Mode
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_gadd190a639a43b5aa49cf3d773d6e877f}\label{group___h_a_l___aliased___functions_gadd190a639a43b5aa49cf3d773d6e877f}} 
+\#define {\bfseries HAL\+\_\+\+Disable\+DBGSleep\+Mode}~HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGSleep\+Mode
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga5d8db04085885e06f167cb9e901bb729}\label{group___h_a_l___aliased___functions_ga5d8db04085885e06f167cb9e901bb729}} 
+\#define {\bfseries HAL\+\_\+\+Enable\+DBGStop\+Mode}~HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStop\+Mode
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_gaca227f80c71d94c0880bd681d68deb85}\label{group___h_a_l___aliased___functions_gaca227f80c71d94c0880bd681d68deb85}} 
+\#define {\bfseries HAL\+\_\+\+Disable\+DBGStop\+Mode}~HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStop\+Mode
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga829fe0c92393d65bcb65eb8b8f7bdc99}\label{group___h_a_l___aliased___functions_ga829fe0c92393d65bcb65eb8b8f7bdc99}} 
+\#define {\bfseries HAL\+\_\+\+Enable\+DBGStandby\+Mode}~HAL\+\_\+\+DBGMCU\+\_\+\+Enable\+DBGStandby\+Mode
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_gac17bfe5c0df5508f778b7f3784b9723a}\label{group___h_a_l___aliased___functions_gac17bfe5c0df5508f778b7f3784b9723a}} 
+\#define {\bfseries HAL\+\_\+\+Disable\+DBGStandby\+Mode}~HAL\+\_\+\+DBGMCU\+\_\+\+Disable\+DBGStandby\+Mode
+\item 
+\#define \mbox{\hyperlink{group___h_a_l___aliased___functions_gaeece8fd3268534ce330c635222ce79a3}{HAL\+\_\+\+DBG\+\_\+\+Low\+Power\+Config}}(Periph,  cmd)
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga2c3d2cdc9071cfc99696e78c29621852}\label{group___h_a_l___aliased___functions_ga2c3d2cdc9071cfc99696e78c29621852}} 
+\#define {\bfseries HAL\+\_\+\+VREFINT\+\_\+\+Output\+Select}~HAL\+\_\+\+SYSCFG\+\_\+\+VREFINT\+\_\+\+Output\+Select
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga72384357565be710258691efd3b3b72c}\label{group___h_a_l___aliased___functions_ga72384357565be710258691efd3b3b72c}} 
+\#define {\bfseries HAL\+\_\+\+Lock\+\_\+\+Cmd}(cmd)~(((cmd)==ENABLE) ? HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+\_\+\+Lock\+\_\+\+VREFINT() \+: HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+\_\+\+Lock\+\_\+\+VREFINT())
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga89195eed3652b3f7ce36e89f3cc8e3a6}\label{group___h_a_l___aliased___functions_ga89195eed3652b3f7ce36e89f3cc8e3a6}} 
+\#define {\bfseries HAL\+\_\+\+VREFINT\+\_\+\+Cmd}(cmd)~(((cmd)==ENABLE)? HAL\+\_\+\+SYSCFG\+\_\+\+Enable\+VREFINT() \+: HAL\+\_\+\+SYSCFG\+\_\+\+Disable\+VREFINT())
+\item 
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga2945c26e7b184a3ee89309906de33cd3}\label{group___h_a_l___aliased___functions_ga2945c26e7b184a3ee89309906de33cd3}} 
+\#define {\bfseries HAL\+\_\+\+ADC\+\_\+\+Enable\+Buffer\+\_\+\+Cmd}(cmd)~(((cmd)==ENABLE) ? HAL\+\_\+\+ADCEx\+\_\+\+Enable\+VREFINT() \+: HAL\+\_\+\+ADCEx\+\_\+\+Disable\+VREFINT())
+\item 
+\#define \mbox{\hyperlink{group___h_a_l___aliased___functions_ga674bce235a7be59ff19cca605b2e3ce8}{HAL\+\_\+\+ADC\+\_\+\+Enable\+Buffer\+Sensor\+\_\+\+Cmd}}(cmd)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_ga674bce235a7be59ff19cca605b2e3ce8}\label{group___h_a_l___aliased___functions_ga674bce235a7be59ff19cca605b2e3ce8}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_ADC\_EnableBufferSensor\_Cmd@{HAL\_ADC\_EnableBufferSensor\_Cmd}}
+\index{HAL\_ADC\_EnableBufferSensor\_Cmd@{HAL\_ADC\_EnableBufferSensor\_Cmd}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_ADC\_EnableBufferSensor\_Cmd}{HAL\_ADC\_EnableBufferSensor\_Cmd}}
+{\footnotesize\ttfamily \#define HAL\+\_\+\+ADC\+\_\+\+Enable\+Buffer\+Sensor\+\_\+\+Cmd(\begin{DoxyParamCaption}\item[{}]{cmd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              (((cmd\(\backslash\)}
+\DoxyCodeLine{                                              )==ENABLE) ?  HAL\_ADCEx\_EnableVREFINTTempSensor() : HAL\_ADCEx\_DisableVREFINTTempSensor())}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___h_a_l___aliased___functions_gaeece8fd3268534ce330c635222ce79a3}\label{group___h_a_l___aliased___functions_gaeece8fd3268534ce330c635222ce79a3}} 
+\index{HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}!HAL\_DBG\_LowPowerConfig@{HAL\_DBG\_LowPowerConfig}}
+\index{HAL\_DBG\_LowPowerConfig@{HAL\_DBG\_LowPowerConfig}!HAL Generic Aliased Functions maintained for legacy purpose@{HAL Generic Aliased Functions maintained for legacy purpose}}
+\doxysubsubsection{\texorpdfstring{HAL\_DBG\_LowPowerConfig}{HAL\_DBG\_LowPowerConfig}}
+{\footnotesize\ttfamily \#define HAL\+\_\+\+DBG\+\_\+\+Low\+Power\+Config(\begin{DoxyParamCaption}\item[{}]{Periph,  }\item[{}]{cmd }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                              (((cmd\(\backslash\)}
+\DoxyCodeLine{                                              )==ENABLE)? HAL\_DBGMCU\_DBG\_EnableLowPowerConfig(Periph) : HAL\_DBGMCU\_DBG\_DisableLowPowerConfig(Periph))}
+
+\end{DoxyCode}

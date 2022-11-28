@@ -1,0 +1,51 @@
+\hypertarget{group___c_o_r_t_e_x___private___macros}{}\doxysection{CORTEX Private Macros}
+\label{group___c_o_r_t_e_x___private___macros}\index{CORTEX Private Macros@{CORTEX Private Macros}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___c_o_r_t_e_x___private___macros_ga6569304a39fe4f91bd59b6a586c8ede9}{IS\+\_\+\+NVIC\+\_\+\+PRIORITY\+\_\+\+GROUP}}(GROUP)
+\item 
+\mbox{\Hypertarget{group___c_o_r_t_e_x___private___macros_gaf30fd8f5960c2e28a772d8f16bb156dd}\label{group___c_o_r_t_e_x___private___macros_gaf30fd8f5960c2e28a772d8f16bb156dd}} 
+\#define {\bfseries IS\+\_\+\+NVIC\+\_\+\+PREEMPTION\+\_\+\+PRIORITY}(PRIORITY)~((PRIORITY) $<$ 0x10U)
+\item 
+\mbox{\Hypertarget{group___c_o_r_t_e_x___private___macros_ga010705bc997dcff935b965b372cba61d}\label{group___c_o_r_t_e_x___private___macros_ga010705bc997dcff935b965b372cba61d}} 
+\#define {\bfseries IS\+\_\+\+NVIC\+\_\+\+SUB\+\_\+\+PRIORITY}(PRIORITY)~((PRIORITY) $<$ 0x10U)
+\item 
+\mbox{\Hypertarget{group___c_o_r_t_e_x___private___macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}\label{group___c_o_r_t_e_x___private___macros_ga9b8dcac4ed8e88c14d9bb04e369dad6a}} 
+\#define {\bfseries IS\+\_\+\+NVIC\+\_\+\+DEVICE\+\_\+\+IRQ}(IRQ)~((IRQ) $>$ \mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}{Sys\+Tick\+\_\+\+IRQn}})
+\item 
+\#define \mbox{\hyperlink{group___c_o_r_t_e_x___private___macros_ga22d6291f6aed29442cf4cd9098fa0784}{IS\+\_\+\+SYSTICK\+\_\+\+CLK\+\_\+\+SOURCE}}(SOURCE)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___private___macros_ga6569304a39fe4f91bd59b6a586c8ede9}\label{group___c_o_r_t_e_x___private___macros_ga6569304a39fe4f91bd59b6a586c8ede9}} 
+\index{CORTEX Private Macros@{CORTEX Private Macros}!IS\_NVIC\_PRIORITY\_GROUP@{IS\_NVIC\_PRIORITY\_GROUP}}
+\index{IS\_NVIC\_PRIORITY\_GROUP@{IS\_NVIC\_PRIORITY\_GROUP}!CORTEX Private Macros@{CORTEX Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_NVIC\_PRIORITY\_GROUP}{IS\_NVIC\_PRIORITY\_GROUP}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+NVIC\+\_\+\+PRIORITY\+\_\+\+GROUP(\begin{DoxyParamCaption}\item[{}]{GROUP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((GROUP) == \mbox{\hyperlink{group___c_o_r_t_e_x___preemption___priority___group_ga5e97dcff77680602c86e44f23f5ffa1a}{NVIC\_PRIORITYGROUP\_0}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((GROUP) == \mbox{\hyperlink{group___c_o_r_t_e_x___preemption___priority___group_ga702227137b010421c3a3b6434005a132}{NVIC\_PRIORITYGROUP\_1}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((GROUP) == \mbox{\hyperlink{group___c_o_r_t_e_x___preemption___priority___group_gaa43a3fd37850c120ce567ab2743d11b4}{NVIC\_PRIORITYGROUP\_2}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((GROUP) == \mbox{\hyperlink{group___c_o_r_t_e_x___preemption___priority___group_ga8ddb24962e6f0fc3273139d45d374b09}{NVIC\_PRIORITYGROUP\_3}}) || \(\backslash\)}
+\DoxyCodeLine{                                       ((GROUP) == \mbox{\hyperlink{group___c_o_r_t_e_x___preemption___priority___group_gae6eab9140204bc938255aa148e597c45}{NVIC\_PRIORITYGROUP\_4}}))}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___private___macros_ga22d6291f6aed29442cf4cd9098fa0784}\label{group___c_o_r_t_e_x___private___macros_ga22d6291f6aed29442cf4cd9098fa0784}} 
+\index{CORTEX Private Macros@{CORTEX Private Macros}!IS\_SYSTICK\_CLK\_SOURCE@{IS\_SYSTICK\_CLK\_SOURCE}}
+\index{IS\_SYSTICK\_CLK\_SOURCE@{IS\_SYSTICK\_CLK\_SOURCE}!CORTEX Private Macros@{CORTEX Private Macros}}
+\doxysubsubsection{\texorpdfstring{IS\_SYSTICK\_CLK\_SOURCE}{IS\_SYSTICK\_CLK\_SOURCE}}
+{\footnotesize\ttfamily \#define IS\+\_\+\+SYSTICK\+\_\+\+CLK\+\_\+\+SOURCE(\begin{DoxyParamCaption}\item[{}]{SOURCE }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                       (((SOURCE) == SYSTICK\_CLKSOURCE\_HCLK) || \(\backslash\)}
+\DoxyCodeLine{                                       ((SOURCE) == SYSTICK\_CLKSOURCE\_HCLK\_DIV8))}
+
+\end{DoxyCode}

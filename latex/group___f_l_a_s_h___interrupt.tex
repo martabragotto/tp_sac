@@ -1,0 +1,148 @@
+\hypertarget{group___f_l_a_s_h___interrupt}{}\doxysection{FLASH Interrupts Macros}
+\label{group___f_l_a_s_h___interrupt}\index{FLASH Interrupts Macros@{FLASH Interrupts Macros}}
+
+
+macros to handle FLASH interrupts  
+
+
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___interrupt_ga13fa137a911f02a2f94fb9fb0762a340}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+ENABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Enable the specified FLASH interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___interrupt_ga1f40f507b5d4b3a4da68e4244a1097ee}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+DISABLE\+\_\+\+IT}}(\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Disable the specified FLASH interrupt. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___interrupt_ga0d3dd161fecc0e47c9e109c7c28672c1}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+GET\+\_\+\+FLAG}}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Check whether the specified FLASH flag is set or not. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___f_l_a_s_h___interrupt_ga68e49c4675761e2ec35153e747de7622}{\+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+CLEAR\+\_\+\+FLAG}}(\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Clear the FLASH\textquotesingle{}s pending flags. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+macros to handle FLASH interrupts 
+
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___f_l_a_s_h___interrupt_ga68e49c4675761e2ec35153e747de7622}\label{group___f_l_a_s_h___interrupt_ga68e49c4675761e2ec35153e747de7622}} 
+\index{FLASH Interrupts Macros@{FLASH Interrupts Macros}!\_\_HAL\_FLASH\_CLEAR\_FLAG@{\_\_HAL\_FLASH\_CLEAR\_FLAG}}
+\index{\_\_HAL\_FLASH\_CLEAR\_FLAG@{\_\_HAL\_FLASH\_CLEAR\_FLAG}!FLASH Interrupts Macros@{FLASH Interrupts Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_FLASH\_CLEAR\_FLAG}{\_\_HAL\_FLASH\_CLEAR\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+CLEAR\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                     \textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if}(((\_\_FLAG\_\_) \& FLASH\_FLAG\_ECCR\_ERRORS) != 0U) \{ SET\_BIT(FLASH-\/>ECCR, ((\_\_FLAG\_\_) \& FLASH\_FLAG\_ECCR\_ERRORS)); \}\(\backslash\)}
+\DoxyCodeLine{                                                     if(((\_\_FLAG\_\_) \& \string~(FLASH\_FLAG\_ECCR\_ERRORS)) != 0U) \{ WRITE\_REG(FLASH-\/>SR, ((\_\_FLAG\_\_) \& \string~(FLASH\_FLAG\_ECCR\_ERRORS))); \}\(\backslash\)}
+\DoxyCodeLine{                                                   \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Clear the FLASH\textquotesingle{}s pending flags. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the FLASH flags to clear. This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item FLASH\+\_\+\+FLAG\+\_\+\+EOP\+: FLASH End of Operation flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPERR\+: FLASH Operation error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PROGERR\+: FLASH Programming error flag \item FLASH\+\_\+\+FLAG\+\_\+\+WRPERR\+: FLASH Write protection error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGAERR\+: FLASH Programming alignment error flag \item FLASH\+\_\+\+FLAG\+\_\+\+SIZERR\+: FLASH Size error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGSERR\+: FLASH Programming sequence error flag \item FLASH\+\_\+\+FLAG\+\_\+\+MISERR\+: FLASH Fast programming data miss error flag \item FLASH\+\_\+\+FLAG\+\_\+\+FASTERR\+: FLASH Fast programming error flag \item FLASH\+\_\+\+FLAG\+\_\+\+RDERR\+: FLASH PCROP read error flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPTVERR\+: FLASH Option validity error flag \item FLASH\+\_\+\+FLAG\+\_\+\+ECCC\+: FLASH one ECC error has been detected and corrected in 64 LSB bits \item FLASH\+\_\+\+FLAG\+\_\+\+ECCD\+: FLASH two ECC errors have been detected in 64 LSB bits \item FLASH\+\_\+\+FLAG\+\_\+\+ECCC2($\ast$)\+: FLASH one ECC error has been detected and corrected in 64 MSB bits (mode 128 bits only) \item FLASH\+\_\+\+FLAG\+\_\+\+ECCD2($\ast$)\+: FLASH two ECC errors have been detected in 64 MSB bits (mode 128 bits only) \item FLASH\+\_\+\+FLAG\+\_\+\+SR\+\_\+\+ERRORS\+: FLASH All SR errors flags \item FLASH\+\_\+\+FLAG\+\_\+\+ECCR\+\_\+\+ERRORS\+: FLASH All ECCR errors flags \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+($\ast$) availability depends on devices 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___f_l_a_s_h___interrupt_ga1f40f507b5d4b3a4da68e4244a1097ee}\label{group___f_l_a_s_h___interrupt_ga1f40f507b5d4b3a4da68e4244a1097ee}} 
+\index{FLASH Interrupts Macros@{FLASH Interrupts Macros}!\_\_HAL\_FLASH\_DISABLE\_IT@{\_\_HAL\_FLASH\_DISABLE\_IT}}
+\index{\_\_HAL\_FLASH\_DISABLE\_IT@{\_\_HAL\_FLASH\_DISABLE\_IT}!FLASH Interrupts Macros@{FLASH Interrupts Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_FLASH\_DISABLE\_IT}{\_\_HAL\_FLASH\_DISABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+DISABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                     \textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if}(((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___f_l_a_s_h___interrupt__definition_gaecdc533ad50a649b780f72e8dee48a1b}{FLASH\_IT\_ECCC}}) != 0U) \{ CLEAR\_BIT(FLASH-\/>ECCR, FLASH\_ECCR\_ECCIE); \}\(\backslash\)}
+\DoxyCodeLine{                                                     if(((\_\_INTERRUPT\_\_) \& (\string~\mbox{\hyperlink{group___f_l_a_s_h___interrupt__definition_gaecdc533ad50a649b780f72e8dee48a1b}{FLASH\_IT\_ECCC}})) != 0U) \{ CLEAR\_BIT(FLASH-\/>CR, ((\_\_INTERRUPT\_\_) \& (\string~\mbox{\hyperlink{group___f_l_a_s_h___interrupt__definition_gaecdc533ad50a649b780f72e8dee48a1b}{FLASH\_IT\_ECCC}}))); \}\(\backslash\)}
+\DoxyCodeLine{                                                   \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Disable the specified FLASH interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & FLASH interrupt This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item FLASH\+\_\+\+IT\+\_\+\+EOP\+: End of FLASH Operation Interrupt \item FLASH\+\_\+\+IT\+\_\+\+OPERR\+: Error Interrupt \item FLASH\+\_\+\+IT\+\_\+\+RDERR\+: PCROP Read Error Interrupt \item FLASH\+\_\+\+IT\+\_\+\+ECCC\+: ECC Correction Interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___f_l_a_s_h___interrupt_ga13fa137a911f02a2f94fb9fb0762a340}\label{group___f_l_a_s_h___interrupt_ga13fa137a911f02a2f94fb9fb0762a340}} 
+\index{FLASH Interrupts Macros@{FLASH Interrupts Macros}!\_\_HAL\_FLASH\_ENABLE\_IT@{\_\_HAL\_FLASH\_ENABLE\_IT}}
+\index{\_\_HAL\_FLASH\_ENABLE\_IT@{\_\_HAL\_FLASH\_ENABLE\_IT}!FLASH Interrupts Macros@{FLASH Interrupts Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_FLASH\_ENABLE\_IT}{\_\_HAL\_FLASH\_ENABLE\_IT}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+ENABLE\+\_\+\+IT(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                     \textcolor{keywordflow}{do} \{ \textcolor{keywordflow}{if}(((\_\_INTERRUPT\_\_) \& \mbox{\hyperlink{group___f_l_a_s_h___interrupt__definition_gaecdc533ad50a649b780f72e8dee48a1b}{FLASH\_IT\_ECCC}}) != 0U) \{ SET\_BIT(FLASH-\/>ECCR, FLASH\_ECCR\_ECCIE); \}\(\backslash\)}
+\DoxyCodeLine{                                                     if(((\_\_INTERRUPT\_\_) \& (\string~\mbox{\hyperlink{group___f_l_a_s_h___interrupt__definition_gaecdc533ad50a649b780f72e8dee48a1b}{FLASH\_IT\_ECCC}})) != 0U) \{ SET\_BIT(FLASH-\/>CR, ((\_\_INTERRUPT\_\_) \& (\string~\mbox{\hyperlink{group___f_l_a_s_h___interrupt__definition_gaecdc533ad50a649b780f72e8dee48a1b}{FLASH\_IT\_ECCC}}))); \}\(\backslash\)}
+\DoxyCodeLine{                                                   \} \textcolor{keywordflow}{while} (0)}
+
+\end{DoxyCode}
+
+
+Enable the specified FLASH interrupt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+INTERRUPT\+\_\+\+\_\+} & FLASH interrupt This parameter can be any combination of the following values\+: \begin{DoxyItemize}
+\item FLASH\+\_\+\+IT\+\_\+\+EOP\+: End of FLASH Operation Interrupt \item FLASH\+\_\+\+IT\+\_\+\+OPERR\+: Error Interrupt \item FLASH\+\_\+\+IT\+\_\+\+RDERR\+: PCROP Read Error Interrupt \item FLASH\+\_\+\+IT\+\_\+\+ECCC\+: ECC Correction Interrupt \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em none} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___f_l_a_s_h___interrupt_ga0d3dd161fecc0e47c9e109c7c28672c1}\label{group___f_l_a_s_h___interrupt_ga0d3dd161fecc0e47c9e109c7c28672c1}} 
+\index{FLASH Interrupts Macros@{FLASH Interrupts Macros}!\_\_HAL\_FLASH\_GET\_FLAG@{\_\_HAL\_FLASH\_GET\_FLAG}}
+\index{\_\_HAL\_FLASH\_GET\_FLAG@{\_\_HAL\_FLASH\_GET\_FLAG}!FLASH Interrupts Macros@{FLASH Interrupts Macros}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_FLASH\_GET\_FLAG}{\_\_HAL\_FLASH\_GET\_FLAG}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+FLASH\+\_\+\+GET\+\_\+\+FLAG(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+FLAG\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                                                 ((((\_\_FLAG\_\_) \& FLASH\_FLAG\_ECCR\_ERRORS) != 0U) ? \(\backslash\)}
+\DoxyCodeLine{                                                 (READ\_BIT(FLASH-\/>ECCR, (\_\_FLAG\_\_)) == (\_\_FLAG\_\_)) : \(\backslash\)}
+\DoxyCodeLine{                                                 (READ\_BIT(FLASH-\/>SR,   (\_\_FLAG\_\_)) == (\_\_FLAG\_\_)))}
+
+\end{DoxyCode}
+
+
+Check whether the specified FLASH flag is set or not. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+FLAG\+\_\+\+\_\+} & specifies the FLASH flag to check. This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item FLASH\+\_\+\+FLAG\+\_\+\+EOP\+: FLASH End of Operation flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPERR\+: FLASH Operation error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PROGERR\+: FLASH Programming error flag \item FLASH\+\_\+\+FLAG\+\_\+\+WRPERR\+: FLASH Write protection error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGAERR\+: FLASH Programming alignment error flag \item FLASH\+\_\+\+FLAG\+\_\+\+SIZERR\+: FLASH Size error flag \item FLASH\+\_\+\+FLAG\+\_\+\+PGSERR\+: FLASH Programming sequence error flag \item FLASH\+\_\+\+FLAG\+\_\+\+MISERR\+: FLASH Fast programming data miss error flag \item FLASH\+\_\+\+FLAG\+\_\+\+FASTERR\+: FLASH Fast programming error flag \item FLASH\+\_\+\+FLAG\+\_\+\+RDERR\+: FLASH PCROP read error flag \item FLASH\+\_\+\+FLAG\+\_\+\+OPTVERR\+: FLASH Option validity error flag \item FLASH\+\_\+\+FLAG\+\_\+\+BSY\+: FLASH write/erase operations in progress flag \item FLASH\+\_\+\+FLAG\+\_\+\+ECCC\+: FLASH one ECC error has been detected and corrected in 64 LSB bits \item FLASH\+\_\+\+FLAG\+\_\+\+ECCD\+: FLASH two ECC errors have been detected in 64 LSB bits \item FLASH\+\_\+\+FLAG\+\_\+\+ECCC2($\ast$)\+: FLASH one ECC error has been detected and corrected in 64 MSB bits (mode 128 bits only) \item FLASH\+\_\+\+FLAG\+\_\+\+ECCD2($\ast$)\+: FLASH two ECC errors have been detected in 64 MSB bits (mode 128 bits only) \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+($\ast$) availability depends on devices 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em The} & new state of FLASH\+\_\+\+FLAG (SET or RESET). \\
+\hline
+\end{DoxyRetVals}

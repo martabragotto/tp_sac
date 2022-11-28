@@ -1,0 +1,169 @@
+\hypertarget{stm32g4xx__hal__exti_8h_source}{}\doxysection{stm32g4xx\+\_\+hal\+\_\+exti.\+h}
+\label{stm32g4xx__hal__exti_8h_source}\index{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_exti.h@{Drivers/STM32G4xx\_HAL\_Driver/Inc/stm32g4xx\_hal\_exti.h}}
+\mbox{\hyperlink{stm32g4xx__hal__exti_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{19 \textcolor{comment}{/* Define to prevent recursive inclusion -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#ifndef STM32G4xx\_HAL\_EXTI\_H}}
+\DoxyCodeLine{21 \textcolor{preprocessor}{\#define STM32G4xx\_HAL\_EXTI\_H}}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{24 \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{comment}{/* Includes -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{stm32g4xx__hal__def_8h}{stm32g4xx\_hal\_def.h}}"{}}}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{39 \textcolor{comment}{/* Exported types -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{44 \textcolor{keyword}{typedef} \textcolor{keyword}{enum}}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46   HAL\_EXTI\_COMMON\_CB\_ID         = 0x00UL}
+\DoxyCodeLine{47 \} EXTI\_CallbackIDTypeDef;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 }
+\DoxyCodeLine{53 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55   uint32\_t \mbox{\hyperlink{struct_e_x_t_i___handle_type_def_a6a2875051ad4276be5322ffa99e12566}{Line}};                    }
+\DoxyCodeLine{56   void (* PendingCallback)(void);   }
+\DoxyCodeLine{57 \} \mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}};}
+\DoxyCodeLine{58 }
+\DoxyCodeLine{62 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64   uint32\_t \mbox{\hyperlink{struct_e_x_t_i___config_type_def_a19ad88703f9ac13e8a741afdba86f6af}{Line}};      }
+\DoxyCodeLine{66   uint32\_t \mbox{\hyperlink{struct_e_x_t_i___config_type_def_a6393a89a8cd198b19e10876e6f12cf5b}{Mode}};      }
+\DoxyCodeLine{68   uint32\_t \mbox{\hyperlink{struct_e_x_t_i___config_type_def_acf6d2ea84df5f2b705676584ae00707a}{Trigger}};   }
+\DoxyCodeLine{70   uint32\_t \mbox{\hyperlink{struct_e_x_t_i___config_type_def_acb9a59bb7943a21c105481f85007a79c}{GPIOSel}};   }
+\DoxyCodeLine{73 \} \mbox{\hyperlink{struct_e_x_t_i___config_type_def}{EXTI\_ConfigTypeDef}};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{79 \textcolor{comment}{/* Exported constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define EXTI\_LINE\_0                         (EXTI\_GPIO     | EXTI\_REG1 | 0x00u)}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define EXTI\_LINE\_1                         (EXTI\_GPIO     | EXTI\_REG1 | 0x01u)}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define EXTI\_LINE\_2                         (EXTI\_GPIO     | EXTI\_REG1 | 0x02u)}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define EXTI\_LINE\_3                         (EXTI\_GPIO     | EXTI\_REG1 | 0x03u)}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define EXTI\_LINE\_4                         (EXTI\_GPIO     | EXTI\_REG1 | 0x04u)}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define EXTI\_LINE\_5                         (EXTI\_GPIO     | EXTI\_REG1 | 0x05u)}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define EXTI\_LINE\_6                         (EXTI\_GPIO     | EXTI\_REG1 | 0x06u)}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define EXTI\_LINE\_7                         (EXTI\_GPIO     | EXTI\_REG1 | 0x07u)}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define EXTI\_LINE\_8                         (EXTI\_GPIO     | EXTI\_REG1 | 0x08u)}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define EXTI\_LINE\_9                         (EXTI\_GPIO     | EXTI\_REG1 | 0x09u)}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define EXTI\_LINE\_10                        (EXTI\_GPIO     | EXTI\_REG1 | 0x0Au)}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define EXTI\_LINE\_11                        (EXTI\_GPIO     | EXTI\_REG1 | 0x0Bu)}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define EXTI\_LINE\_12                        (EXTI\_GPIO     | EXTI\_REG1 | 0x0Cu)}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define EXTI\_LINE\_13                        (EXTI\_GPIO     | EXTI\_REG1 | 0x0Du)}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define EXTI\_LINE\_14                        (EXTI\_GPIO     | EXTI\_REG1 | 0x0Eu)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define EXTI\_LINE\_15                        (EXTI\_GPIO     | EXTI\_REG1 | 0x0Fu)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define EXTI\_LINE\_16                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x10u)}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define EXTI\_LINE\_17                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x11u)}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define EXTI\_LINE\_18                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x12u)}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define EXTI\_LINE\_19                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x13u)}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define EXTI\_LINE\_20                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x14u)}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define EXTI\_LINE\_21                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x15u)}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define EXTI\_LINE\_22                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x16u)}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define EXTI\_LINE\_23                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x17u)}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define EXTI\_LINE\_24                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x18u)}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define EXTI\_LINE\_25                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x19u)}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define EXTI\_LINE\_26                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x1Au)}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define EXTI\_LINE\_27                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x1Bu)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define EXTI\_LINE\_28                        (EXTI\_DIRECT   | EXTI\_REG1 | 0x1Cu)}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define EXTI\_LINE\_29                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x1Du)}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define EXTI\_LINE\_30                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x1Eu)}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define EXTI\_LINE\_31                        (EXTI\_CONFIG   | EXTI\_REG1 | 0x1Fu)}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define EXTI\_LINE\_32                        (EXTI\_CONFIG   | EXTI\_REG2 | 0x00u)}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define EXTI\_LINE\_33                        (EXTI\_CONFIG   | EXTI\_REG2 | 0x01u)}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define EXTI\_LINE\_34                        (EXTI\_DIRECT   | EXTI\_REG2 | 0x02u)}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define EXTI\_LINE\_35                        (EXTI\_DIRECT   | EXTI\_REG2 | 0x03u)}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define EXTI\_LINE\_36                        (EXTI\_DIRECT   | EXTI\_REG2 | 0x04u)}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define EXTI\_LINE\_37                        (EXTI\_DIRECT   | EXTI\_REG2 | 0x05u)}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define EXTI\_LINE\_38                        (EXTI\_CONFIG   | EXTI\_REG2 | 0x06u)}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define EXTI\_LINE\_39                        (EXTI\_CONFIG   | EXTI\_REG2 | 0x07u)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define EXTI\_LINE\_40                        (EXTI\_CONFIG   | EXTI\_REG2 | 0x08u)}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define EXTI\_LINE\_41                        (EXTI\_CONFIG   | EXTI\_REG2 | 0x09u)}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{\#define EXTI\_LINE\_42                        (EXTI\_DIRECT   | EXTI\_REG2 | 0x0Au)}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{\#define EXTI\_LINE\_43                        (EXTI\_DIRECT   | EXTI\_REG2 | 0x0Bu)}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define EXTI\_MODE\_NONE                      0x00000000U}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define EXTI\_MODE\_INTERRUPT                 0x00000001U}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define EXTI\_MODE\_EVENT                     0x00000002U}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define EXTI\_TRIGGER\_NONE                   0x00000000U}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define EXTI\_TRIGGER\_RISING                 0x00000001U}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define EXTI\_TRIGGER\_FALLING                0x00000002U}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define EXTI\_TRIGGER\_RISING\_FALLING         (EXTI\_TRIGGER\_RISING | EXTI\_TRIGGER\_FALLING)}}
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define EXTI\_GPIOA                          0x00000000U}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define EXTI\_GPIOB                          0x00000001U}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define EXTI\_GPIOC                          0x00000002U}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define EXTI\_GPIOD                          0x00000003U}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define EXTI\_GPIOE                          0x00000004U}}
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#define EXTI\_GPIOF                          0x00000005U}}
+\DoxyCodeLine{166 \textcolor{preprocessor}{\#define EXTI\_GPIOG                          0x00000006U}}
+\DoxyCodeLine{175 \textcolor{comment}{/* Exported macro -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{184 \textcolor{comment}{/* Private constants -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define EXTI\_PROPERTY\_SHIFT                 24U}}
+\DoxyCodeLine{192 \textcolor{preprocessor}{\#define EXTI\_DIRECT                         (0x01uL << EXTI\_PROPERTY\_SHIFT)}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{\#define EXTI\_CONFIG                         (0x02uL << EXTI\_PROPERTY\_SHIFT)}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{\#define EXTI\_GPIO                           ((0x04uL << EXTI\_PROPERTY\_SHIFT) | EXTI\_CONFIG)}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{\#define EXTI\_RESERVED                       (0x08uL << EXTI\_PROPERTY\_SHIFT)}}
+\DoxyCodeLine{196 \textcolor{preprocessor}{\#define EXTI\_PROPERTY\_MASK                  (EXTI\_DIRECT | EXTI\_CONFIG | EXTI\_GPIO)}}
+\DoxyCodeLine{197 }
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define EXTI\_REG\_SHIFT                      16U}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define EXTI\_REG1                           (0x00uL << EXTI\_REG\_SHIFT)}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define EXTI\_REG2                           (0x01uL << EXTI\_REG\_SHIFT)}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define EXTI\_REG\_MASK                       (EXTI\_REG1 | EXTI\_REG2)}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define EXTI\_PIN\_MASK                       0x0000001FU}}
+\DoxyCodeLine{206 }
+\DoxyCodeLine{210 \textcolor{preprocessor}{\#define EXTI\_MODE\_MASK                      (EXTI\_MODE\_EVENT | EXTI\_MODE\_INTERRUPT)}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#define EXTI\_TRIGGER\_MASK                   (EXTI\_TRIGGER\_RISING | EXTI\_TRIGGER\_FALLING)}}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define EXTI\_LINE\_NB                        44UL}}
+\DoxyCodeLine{221 }
+\DoxyCodeLine{226 \textcolor{comment}{/* Private macros -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define IS\_EXTI\_LINE(\_\_EXTI\_LINE\_\_)          ((((\_\_EXTI\_LINE\_\_) \& \string~(EXTI\_PROPERTY\_MASK | EXTI\_REG\_MASK | EXTI\_PIN\_MASK)) == 0x00U) \&\& \(\backslash\)}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{                                              ((((\_\_EXTI\_LINE\_\_) \& EXTI\_PROPERTY\_MASK) == EXTI\_DIRECT)   || \(\backslash\)}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{                                               (((\_\_EXTI\_LINE\_\_) \& EXTI\_PROPERTY\_MASK) == EXTI\_CONFIG)   || \(\backslash\)}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{                                               (((\_\_EXTI\_LINE\_\_) \& EXTI\_PROPERTY\_MASK) == EXTI\_GPIO))    \&\& \(\backslash\)}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{                                              (((\_\_EXTI\_LINE\_\_) \& (EXTI\_REG\_MASK | EXTI\_PIN\_MASK))      < \(\backslash\)}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{                                               (((EXTI\_LINE\_NB / 32u) << EXTI\_REG\_SHIFT) | (EXTI\_LINE\_NB \% 32u))))}}
+\DoxyCodeLine{236 }
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define IS\_EXTI\_MODE(\_\_EXTI\_LINE\_\_)          ((((\_\_EXTI\_LINE\_\_) \& EXTI\_MODE\_MASK) != 0x00U) \&\& \(\backslash\)}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{                                              (((\_\_EXTI\_LINE\_\_) \& \string~EXTI\_MODE\_MASK) == 0x00U))}}
+\DoxyCodeLine{239 }
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define IS\_EXTI\_TRIGGER(\_\_EXTI\_LINE\_\_)       (((\_\_EXTI\_LINE\_\_) \& \string~EXTI\_TRIGGER\_MASK) == 0x00U)}}
+\DoxyCodeLine{241 }
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define IS\_EXTI\_CONFIG\_LINE(\_\_EXTI\_LINE\_\_)   (((\_\_EXTI\_LINE\_\_) \& EXTI\_CONFIG) != 0x00U)}}
+\DoxyCodeLine{243 }
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define IS\_EXTI\_GPIO\_PORT(\_\_PORT\_\_)     (((\_\_PORT\_\_) == EXTI\_GPIOA) || \(\backslash\)}}
+\DoxyCodeLine{245 \textcolor{preprocessor}{                                         ((\_\_PORT\_\_) == EXTI\_GPIOB) || \(\backslash\)}}
+\DoxyCodeLine{246 \textcolor{preprocessor}{                                         ((\_\_PORT\_\_) == EXTI\_GPIOC) || \(\backslash\)}}
+\DoxyCodeLine{247 \textcolor{preprocessor}{                                         ((\_\_PORT\_\_) == EXTI\_GPIOD) || \(\backslash\)}}
+\DoxyCodeLine{248 \textcolor{preprocessor}{                                         ((\_\_PORT\_\_) == EXTI\_GPIOE) || \(\backslash\)}}
+\DoxyCodeLine{249 \textcolor{preprocessor}{                                         ((\_\_PORT\_\_) == EXTI\_GPIOF) || \(\backslash\)}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{                                         ((\_\_PORT\_\_) == EXTI\_GPIOG))}}
+\DoxyCodeLine{251 }
+\DoxyCodeLine{252 \textcolor{preprocessor}{\#define IS\_EXTI\_GPIO\_PIN(\_\_PIN\_\_)        ((\_\_PIN\_\_) < 16u)}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 \textcolor{preprocessor}{\#define IS\_EXTI\_PENDING\_EDGE(\_\_EDGE\_\_)   (((\_\_EDGE\_\_) == EXTI\_TRIGGER\_RISING)   || \(\backslash\)}}
+\DoxyCodeLine{255 \textcolor{preprocessor}{                                          ((\_\_EDGE\_\_) == EXTI\_TRIGGER\_FALLING)|| \(\backslash\)}}
+\DoxyCodeLine{256 \textcolor{preprocessor}{                                          ((\_\_EDGE\_\_) == EXTI\_TRIGGER\_RISING\_FALLING))}}
+\DoxyCodeLine{257 }
+\DoxyCodeLine{258 \textcolor{preprocessor}{\#define IS\_EXTI\_CB(\_\_CB\_\_)               ((\_\_CB\_\_) == HAL\_EXTI\_COMMON\_CB\_ID)}}
+\DoxyCodeLine{264 \textcolor{comment}{/* Exported functions -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{274 \textcolor{comment}{/* Configuration functions ****************************************************/}}
+\DoxyCodeLine{275 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_EXTI\_SetConfigLine(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti, \mbox{\hyperlink{struct_e_x_t_i___config_type_def}{EXTI\_ConfigTypeDef}} *pExtiConfig);}
+\DoxyCodeLine{276 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_EXTI\_GetConfigLine(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti, \mbox{\hyperlink{struct_e_x_t_i___config_type_def}{EXTI\_ConfigTypeDef}} *pExtiConfig);}
+\DoxyCodeLine{277 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_EXTI\_ClearConfigLine(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti);}
+\DoxyCodeLine{278 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_EXTI\_RegisterCallback(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti, EXTI\_CallbackIDTypeDef CallbackID, \textcolor{keywordtype}{void} (*pPendingCbfn)(\textcolor{keywordtype}{void}));}
+\DoxyCodeLine{279 \mbox{\hyperlink{stm32g4xx__hal__def_8h_a63c0679d1cb8b8c684fbb0632743478f}{HAL\_StatusTypeDef}} HAL\_EXTI\_GetHandle(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti, uint32\_t ExtiLine);}
+\DoxyCodeLine{288 \textcolor{comment}{/* IO operation functions *****************************************************/}}
+\DoxyCodeLine{289 \textcolor{keywordtype}{void}              HAL\_EXTI\_IRQHandler(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti);}
+\DoxyCodeLine{290 uint32\_t          HAL\_EXTI\_GetPending(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti, uint32\_t Edge);}
+\DoxyCodeLine{291 \textcolor{keywordtype}{void}              HAL\_EXTI\_ClearPending(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti, uint32\_t Edge);}
+\DoxyCodeLine{292 \textcolor{keywordtype}{void}              HAL\_EXTI\_GenerateSWI(\mbox{\hyperlink{struct_e_x_t_i___handle_type_def}{EXTI\_HandleTypeDef}} *hexti);}
+\DoxyCodeLine{293 }
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{311 \}}
+\DoxyCodeLine{312 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{313 }
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* STM32G4xx\_HAL\_EXTI\_H */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{315 }
+
+\end{DoxyCode}

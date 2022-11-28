@@ -1,0 +1,1417 @@
+\hypertarget{core__cm4_8h_source}{}\doxysection{core\+\_\+cm4.\+h}
+\label{core__cm4_8h_source}\index{Drivers/CMSIS/Include/core\_cm4.h@{Drivers/CMSIS/Include/core\_cm4.h}}
+\mbox{\hyperlink{core__cm4_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{/**************************************************************************/}}
+\DoxyCodeLine{7 \textcolor{comment}{/*}}
+\DoxyCodeLine{8 \textcolor{comment}{ * Copyright (c) 2009-\/2019 Arm Limited. All rights reserved.}}
+\DoxyCodeLine{9 \textcolor{comment}{ *}}
+\DoxyCodeLine{10 \textcolor{comment}{ * SPDX-\/License-\/Identifier: Apache-\/2.0}}
+\DoxyCodeLine{11 \textcolor{comment}{ *}}
+\DoxyCodeLine{12 \textcolor{comment}{ * Licensed under the Apache License, Version 2.0 (the License); you may}}
+\DoxyCodeLine{13 \textcolor{comment}{ * not use this file except in compliance with the License.}}
+\DoxyCodeLine{14 \textcolor{comment}{ * You may obtain a copy of the License at}}
+\DoxyCodeLine{15 \textcolor{comment}{ *}}
+\DoxyCodeLine{16 \textcolor{comment}{ * www.apache.org/licenses/LICENSE-\/2.0}}
+\DoxyCodeLine{17 \textcolor{comment}{ *}}
+\DoxyCodeLine{18 \textcolor{comment}{ * Unless required by applicable law or agreed to in writing, software}}
+\DoxyCodeLine{19 \textcolor{comment}{ * distributed under the License is distributed on an AS IS BASIS, WITHOUT}}
+\DoxyCodeLine{20 \textcolor{comment}{ * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.}}
+\DoxyCodeLine{21 \textcolor{comment}{ * See the License for the specific language governing permissions and}}
+\DoxyCodeLine{22 \textcolor{comment}{ * limitations under the License.}}
+\DoxyCodeLine{23 \textcolor{comment}{ */}}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#if   defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{  \#pragma system\_include         }\textcolor{comment}{/* treat file as system include file for MISRA check */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#elif defined (\_\_clang\_\_)}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{  \#pragma clang system\_header   }\textcolor{comment}{/* treat file as system include file */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM4\_H\_GENERIC}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define \_\_CORE\_CM4\_H\_GENERIC}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{37  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{55 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{56 \textcolor{comment}{ *                 CMSIS definitions}}
+\DoxyCodeLine{57 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{63 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmsis__version_8h}{cmsis\_version.h}}"{}}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \textcolor{comment}{/* CMSIS CM4 definitions */}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define \_\_CM4\_CMSIS\_VERSION\_MAIN  (\_\_CM\_CMSIS\_VERSION\_MAIN)              }}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define \_\_CM4\_CMSIS\_VERSION\_SUB   (\_\_CM\_CMSIS\_VERSION\_SUB)               }}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define \_\_CM4\_CMSIS\_VERSION       ((\_\_CM4\_CMSIS\_VERSION\_MAIN << 16U) | \(\backslash\)}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{                                    \_\_CM4\_CMSIS\_VERSION\_SUB           )  }}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define \_\_CORTEX\_M                (4U)                                   }}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#if defined ( \_\_CC\_ARM )}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{  \#if defined \_\_TARGET\_FPU\_VFP}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{      \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#elif defined (\_\_ARMCC\_VERSION) \&\& (\_\_ARMCC\_VERSION >= 6010050)}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{  \#if defined \_\_ARM\_FP}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{      \#warning "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{99 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#elif defined ( \_\_GNUC\_\_ )}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{  \#if defined (\_\_VFP\_FP\_\_) \&\& !defined(\_\_SOFTFP\_\_)}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{      \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#elif defined ( \_\_ICCARM\_\_ )}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{  \#if defined \_\_ARMVFP\_\_}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{      \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{123 }
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#elif defined ( \_\_TI\_ARM\_\_ )}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{  \#if defined \_\_TI\_VFP\_SUPPORT\_\_}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{129 \textcolor{preprocessor}{      \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{130 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{131 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#elif defined ( \_\_TASKING\_\_ )}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{  \#if defined \_\_FPU\_VFP\_\_}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{      \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{147 }
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#elif defined ( \_\_CSMC\_\_ )}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{  \#if ( \_\_CSMC\_\_ \& 0x400U)}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{    \#if defined (\_\_FPU\_PRESENT) \&\& (\_\_FPU\_PRESENT == 1U)}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       1U}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{    \#else}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{      \#error "{}Compiler generates FPU instructions for a device without an FPU (check \_\_FPU\_PRESENT)"{}}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{      \#define \_\_FPU\_USED       0U}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{    \#endif}}
+\DoxyCodeLine{156 \textcolor{preprocessor}{  \#else}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{    \#define \_\_FPU\_USED         0U}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{161 }
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cmsis__compiler_8h}{cmsis\_compiler.h}}"{}}               \textcolor{comment}{/* CMSIS compiler specific defines */}}
+\DoxyCodeLine{163 }
+\DoxyCodeLine{164 }
+\DoxyCodeLine{165 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{166 \}}
+\DoxyCodeLine{167 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{168 }
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM4\_H\_GENERIC */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{170 }
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#ifndef \_\_CMSIS\_GENERIC}}
+\DoxyCodeLine{172 }
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#ifndef \_\_CORE\_CM4\_H\_DEPENDANT}}
+\DoxyCodeLine{174 \textcolor{preprocessor}{\#define \_\_CORE\_CM4\_H\_DEPENDANT}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{177  \textcolor{keyword}{extern} \textcolor{stringliteral}{"{}C"{}} \{}
+\DoxyCodeLine{178 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180 \textcolor{comment}{/* check device defines and use defaults */}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#if defined \_\_CHECK\_DEVICE\_DEFINES}}
+\DoxyCodeLine{182 \textcolor{preprocessor}{  \#ifndef \_\_CM4\_REV}}
+\DoxyCodeLine{183 \textcolor{preprocessor}{    \#define \_\_CM4\_REV               0x0000U}}
+\DoxyCodeLine{184 \textcolor{preprocessor}{    \#warning "{}\_\_CM4\_REV not defined in device header file; using default!"{}}}
+\DoxyCodeLine{185 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 \textcolor{preprocessor}{  \#ifndef \_\_FPU\_PRESENT}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{    \#define \_\_FPU\_PRESENT             0U}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{    \#warning "{}\_\_FPU\_PRESENT not defined in device header file; using default!"{}}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{191 }
+\DoxyCodeLine{192 \textcolor{preprocessor}{  \#ifndef \_\_MPU\_PRESENT}}
+\DoxyCodeLine{193 \textcolor{preprocessor}{    \#define \_\_MPU\_PRESENT             0U}}
+\DoxyCodeLine{194 \textcolor{preprocessor}{    \#warning "{}\_\_MPU\_PRESENT not defined in device header file; using default!"{}}}
+\DoxyCodeLine{195 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{196 }
+\DoxyCodeLine{197 \textcolor{preprocessor}{  \#ifndef \_\_NVIC\_PRIO\_BITS}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{    \#define \_\_NVIC\_PRIO\_BITS          3U}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{    \#warning "{}\_\_NVIC\_PRIO\_BITS not defined in device header file; using default!"{}}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{201 }
+\DoxyCodeLine{202 \textcolor{preprocessor}{  \#ifndef \_\_Vendor\_SysTickConfig}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{    \#define \_\_Vendor\_SysTickConfig    0U}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{    \#warning "{}\_\_Vendor\_SysTickConfig not defined in device header file; using default!"{}}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{207 }
+\DoxyCodeLine{208 \textcolor{comment}{/* IO definitions (access restrictions to peripheral registers) */}}
+\DoxyCodeLine{216 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{217 \textcolor{preprocessor}{  \#define   \_\_I     volatile             }}
+\DoxyCodeLine{218 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{219 \textcolor{preprocessor}{  \#define   \_\_I     volatile const       }}
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define     \_\_O     volatile             }}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define     \_\_IO    volatile             }}
+\DoxyCodeLine{224 \textcolor{comment}{/* following defines should be used for structure members */}}
+\DoxyCodeLine{225 \textcolor{preprocessor}{\#define     \_\_IM     volatile const      }}
+\DoxyCodeLine{226 \textcolor{preprocessor}{\#define     \_\_OM     volatile            }}
+\DoxyCodeLine{227 \textcolor{preprocessor}{\#define     \_\_IOM    volatile            }}
+\DoxyCodeLine{233 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{234 \textcolor{comment}{ *                 Register Abstraction}}
+\DoxyCodeLine{235 \textcolor{comment}{  Core Register contain:}}
+\DoxyCodeLine{236 \textcolor{comment}{  -\/ Core Register}}
+\DoxyCodeLine{237 \textcolor{comment}{  -\/ Core NVIC Register}}
+\DoxyCodeLine{238 \textcolor{comment}{  -\/ Core SCB Register}}
+\DoxyCodeLine{239 \textcolor{comment}{  -\/ Core SysTick Register}}
+\DoxyCodeLine{240 \textcolor{comment}{  -\/ Core Debug Register}}
+\DoxyCodeLine{241 \textcolor{comment}{  -\/ Core MPU Register}}
+\DoxyCodeLine{242 \textcolor{comment}{  -\/ Core FPU Register}}
+\DoxyCodeLine{243 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{259 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{260 \{}
+\DoxyCodeLine{261   \textcolor{keyword}{struct}}
+\DoxyCodeLine{262   \{}
+\DoxyCodeLine{263     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga734fa945f30c0b6e2f07e7f671133626}{\_reserved0}}:16;              }
+\DoxyCodeLine{264     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa335bc1a4b7fb4c19c3f156d353c25a6}{GE}}:4;                       }
+\DoxyCodeLine{265     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga636b0985ce005ae81f2478ef30d78f50}{\_reserved1}}:7;               }
+\DoxyCodeLine{266     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaf1a102454c2386ff95818134ccc61cd7}{Q}}:1;                        }
+\DoxyCodeLine{267     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa7f6c10b0e27c324179838b12b46eb28}{V}}:1;                        }
+\DoxyCodeLine{268     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa8ab05517bd03ae923bb810c2c15ca57}{C}}:1;                        }
+\DoxyCodeLine{269     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga04f46ede873fc5623d9ed8c399a53352}{Z}}:1;                        }
+\DoxyCodeLine{270     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga3465f768f3c21fcf6252b40b1a9a9516}{N}}:1;                        }
+\DoxyCodeLine{271   \} b;                                   }
+\DoxyCodeLine{272   uint32\_t w;                            }
+\DoxyCodeLine{273 \} \mbox{\hyperlink{union_a_p_s_r___type}{APSR\_Type}};}
+\DoxyCodeLine{274 }
+\DoxyCodeLine{275 \textcolor{comment}{/* APSR Register Definitions */}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define APSR\_N\_Pos                         31U                                            }}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define APSR\_N\_Msk                         (1UL << APSR\_N\_Pos)                            }}
+\DoxyCodeLine{279 \textcolor{preprocessor}{\#define APSR\_Z\_Pos                         30U                                            }}
+\DoxyCodeLine{280 \textcolor{preprocessor}{\#define APSR\_Z\_Msk                         (1UL << APSR\_Z\_Pos)                            }}
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define APSR\_C\_Pos                         29U                                            }}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define APSR\_C\_Msk                         (1UL << APSR\_C\_Pos)                            }}
+\DoxyCodeLine{285 \textcolor{preprocessor}{\#define APSR\_V\_Pos                         28U                                            }}
+\DoxyCodeLine{286 \textcolor{preprocessor}{\#define APSR\_V\_Msk                         (1UL << APSR\_V\_Pos)                            }}
+\DoxyCodeLine{288 \textcolor{preprocessor}{\#define APSR\_Q\_Pos                         27U                                            }}
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#define APSR\_Q\_Msk                         (1UL << APSR\_Q\_Pos)                            }}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define APSR\_GE\_Pos                        16U                                            }}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#define APSR\_GE\_Msk                        (0xFUL << APSR\_GE\_Pos)                         }}
+\DoxyCodeLine{298 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{299 \{}
+\DoxyCodeLine{300   \textcolor{keyword}{struct}}
+\DoxyCodeLine{301   \{}
+\DoxyCodeLine{302     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga392599f14dae69810fa4278b9d1c7941}{ISR}}:9;                      }
+\DoxyCodeLine{303     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gad8ccbbbeeda6da9bf35b391952ab7f50}{\_reserved0}}:23;              }
+\DoxyCodeLine{304   \} b;                                   }
+\DoxyCodeLine{305   uint32\_t w;                            }
+\DoxyCodeLine{306 \} \mbox{\hyperlink{union_i_p_s_r___type}{IPSR\_Type}};}
+\DoxyCodeLine{307 }
+\DoxyCodeLine{308 \textcolor{comment}{/* IPSR Register Definitions */}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define IPSR\_ISR\_Pos                        0U                                            }}
+\DoxyCodeLine{310 \textcolor{preprocessor}{\#define IPSR\_ISR\_Msk                       (0x1FFUL }\textcolor{comment}{/*<< IPSR\_ISR\_Pos*/}\textcolor{preprocessor}{)                  }}
+\DoxyCodeLine{316 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{317 \{}
+\DoxyCodeLine{318   \textcolor{keyword}{struct}}
+\DoxyCodeLine{319   \{}
+\DoxyCodeLine{320     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga40fed466c152495f045b7a8320a97049}{ISR}}:9;                      }
+\DoxyCodeLine{321     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac5f17ab8fe8ed463fb7ad1904a58dc66}{\_reserved0}}:1;               }
+\DoxyCodeLine{322     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga92c6c66cf05d6b23d66348bba9b2d5cb}{ICI\_IT\_1}}:6;                 }
+\DoxyCodeLine{323     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga86dac4fe25955d2a0feb09e0e63c3e4d}{GE}}:4;                       }
+\DoxyCodeLine{324     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga1943ce9aa80746b663fa7ac368e1febe}{\_reserved1}}:4;               }
+\DoxyCodeLine{325     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga4835fb0107e86f389b0e2035c168020f}{T}}:1;                        }
+\DoxyCodeLine{326     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga68ecc591b1f27e9bfac52ca60f1e85a7}{ICI\_IT\_2}}:2;                 }
+\DoxyCodeLine{327     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga4528096af04036d669cd0d38a2bf4352}{Q}}:1;                        }
+\DoxyCodeLine{328     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaf9eb5a0d09266bd5252ab545237a849b}{V}}:1;                        }
+\DoxyCodeLine{329     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac2addf2b6c1e38d1fad6a181b7e3fd53}{C}}:1;                        }
+\DoxyCodeLine{330     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga63ae8602d20f6e8714e248433165d2c8}{Z}}:1;                        }
+\DoxyCodeLine{331     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac34b92ef512d099cd62d526673aedcf3}{N}}:1;                        }
+\DoxyCodeLine{332   \} b;                                   }
+\DoxyCodeLine{333   uint32\_t w;                            }
+\DoxyCodeLine{334 \} \mbox{\hyperlink{unionx_p_s_r___type}{xPSR\_Type}};}
+\DoxyCodeLine{335 }
+\DoxyCodeLine{336 \textcolor{comment}{/* xPSR Register Definitions */}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define xPSR\_N\_Pos                         31U                                            }}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define xPSR\_N\_Msk                         (1UL << xPSR\_N\_Pos)                            }}
+\DoxyCodeLine{340 \textcolor{preprocessor}{\#define xPSR\_Z\_Pos                         30U                                            }}
+\DoxyCodeLine{341 \textcolor{preprocessor}{\#define xPSR\_Z\_Msk                         (1UL << xPSR\_Z\_Pos)                            }}
+\DoxyCodeLine{343 \textcolor{preprocessor}{\#define xPSR\_C\_Pos                         29U                                            }}
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#define xPSR\_C\_Msk                         (1UL << xPSR\_C\_Pos)                            }}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define xPSR\_V\_Pos                         28U                                            }}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define xPSR\_V\_Msk                         (1UL << xPSR\_V\_Pos)                            }}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define xPSR\_Q\_Pos                         27U                                            }}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define xPSR\_Q\_Msk                         (1UL << xPSR\_Q\_Pos)                            }}
+\DoxyCodeLine{352 \textcolor{preprocessor}{\#define xPSR\_ICI\_IT\_2\_Pos                  25U                                            }}
+\DoxyCodeLine{353 \textcolor{preprocessor}{\#define xPSR\_ICI\_IT\_2\_Msk                  (3UL << xPSR\_ICI\_IT\_2\_Pos)                     }}
+\DoxyCodeLine{355 \textcolor{preprocessor}{\#define xPSR\_T\_Pos                         24U                                            }}
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#define xPSR\_T\_Msk                         (1UL << xPSR\_T\_Pos)                            }}
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#define xPSR\_GE\_Pos                        16U                                            }}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define xPSR\_GE\_Msk                        (0xFUL << xPSR\_GE\_Pos)                         }}
+\DoxyCodeLine{361 \textcolor{preprocessor}{\#define xPSR\_ICI\_IT\_1\_Pos                  10U                                            }}
+\DoxyCodeLine{362 \textcolor{preprocessor}{\#define xPSR\_ICI\_IT\_1\_Msk                  (0x3FUL << xPSR\_ICI\_IT\_1\_Pos)                  }}
+\DoxyCodeLine{364 \textcolor{preprocessor}{\#define xPSR\_ISR\_Pos                        0U                                            }}
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define xPSR\_ISR\_Msk                       (0x1FFUL }\textcolor{comment}{/*<< xPSR\_ISR\_Pos*/}\textcolor{preprocessor}{)                  }}
+\DoxyCodeLine{371 \textcolor{keyword}{typedef} \textcolor{keyword}{union}}
+\DoxyCodeLine{372 \{}
+\DoxyCodeLine{373   \textcolor{keyword}{struct}}
+\DoxyCodeLine{374   \{}
+\DoxyCodeLine{375     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5b70f440453e1d207daae57855cd66ad}{nPRIV}}:1;                    }
+\DoxyCodeLine{376     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gad888ec10d5aba383089344231804311a}{SPSEL}}:1;                    }
+\DoxyCodeLine{377     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga5be6326aaa4d3ddcef30c5d4716e9bf5}{FPCA}}:1;                     }
+\DoxyCodeLine{378     uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga3e46a8c0cb8a7cb88f5770b1df0eab9e}{\_reserved0}}:29;              }
+\DoxyCodeLine{379   \} b;                                   }
+\DoxyCodeLine{380   uint32\_t w;                            }
+\DoxyCodeLine{381 \} \mbox{\hyperlink{union_c_o_n_t_r_o_l___type}{CONTROL\_Type}};}
+\DoxyCodeLine{382 }
+\DoxyCodeLine{383 \textcolor{comment}{/* CONTROL Register Definitions */}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#define CONTROL\_FPCA\_Pos                    2U                                            }}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#define CONTROL\_FPCA\_Msk                   (1UL << CONTROL\_FPCA\_Pos)                      }}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define CONTROL\_SPSEL\_Pos                   1U                                            }}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#define CONTROL\_SPSEL\_Msk                  (1UL << CONTROL\_SPSEL\_Pos)                     }}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define CONTROL\_nPRIV\_Pos                   0U                                            }}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define CONTROL\_nPRIV\_Msk                  (1UL }\textcolor{comment}{/*<< CONTROL\_nPRIV\_Pos*/}\textcolor{preprocessor}{)                 }}
+\DoxyCodeLine{406 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{407 \{}
+\DoxyCodeLine{408   \_\_IOM uint32\_t ISER[8U];               }
+\DoxyCodeLine{409         uint32\_t RESERVED0[24U];}
+\DoxyCodeLine{410   \_\_IOM uint32\_t ICER[8U];               }
+\DoxyCodeLine{411         uint32\_t RESERVED1[24U];}
+\DoxyCodeLine{412   \_\_IOM uint32\_t ISPR[8U];               }
+\DoxyCodeLine{413         uint32\_t RESERVED2[24U];}
+\DoxyCodeLine{414   \_\_IOM uint32\_t ICPR[8U];               }
+\DoxyCodeLine{415         uint32\_t RESERVED3[24U];}
+\DoxyCodeLine{416   \_\_IOM uint32\_t IABR[8U];               }
+\DoxyCodeLine{417         uint32\_t RESERVED4[56U];}
+\DoxyCodeLine{418   \_\_IOM uint8\_t  IP[240U];               }
+\DoxyCodeLine{419         uint32\_t RESERVED5[644U];}
+\DoxyCodeLine{420   \_\_OM  uint32\_t STIR;                   }
+\DoxyCodeLine{421 \}  \mbox{\hyperlink{struct_n_v_i_c___type}{NVIC\_Type}};}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{423 \textcolor{comment}{/* Software Triggered Interrupt Register Definitions */}}
+\DoxyCodeLine{424 \textcolor{preprocessor}{\#define NVIC\_STIR\_INTID\_Pos                 0U                                         }}
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#define NVIC\_STIR\_INTID\_Msk                (0x1FFUL }\textcolor{comment}{/*<< NVIC\_STIR\_INTID\_Pos*/}\textcolor{preprocessor}{)        }}
+\DoxyCodeLine{440 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{441 \{}
+\DoxyCodeLine{442   \_\_IM  uint32\_t CPUID;                  }
+\DoxyCodeLine{443   \_\_IOM uint32\_t ICSR;                   }
+\DoxyCodeLine{444   \_\_IOM uint32\_t VTOR;                   }
+\DoxyCodeLine{445   \_\_IOM uint32\_t AIRCR;                  }
+\DoxyCodeLine{446   \_\_IOM uint32\_t SCR;                    }
+\DoxyCodeLine{447   \_\_IOM uint32\_t CCR;                    }
+\DoxyCodeLine{448   \_\_IOM uint8\_t  SHP[12U];               }
+\DoxyCodeLine{449   \_\_IOM uint32\_t SHCSR;                  }
+\DoxyCodeLine{450   \_\_IOM uint32\_t CFSR;                   }
+\DoxyCodeLine{451   \_\_IOM uint32\_t HFSR;                   }
+\DoxyCodeLine{452   \_\_IOM uint32\_t DFSR;                   }
+\DoxyCodeLine{453   \_\_IOM uint32\_t MMFAR;                  }
+\DoxyCodeLine{454   \_\_IOM uint32\_t BFAR;                   }
+\DoxyCodeLine{455   \_\_IOM uint32\_t AFSR;                   }
+\DoxyCodeLine{456   \_\_IM  uint32\_t PFR[2U];                }
+\DoxyCodeLine{457   \_\_IM  uint32\_t DFR;                    }
+\DoxyCodeLine{458   \_\_IM  uint32\_t ADR;                    }
+\DoxyCodeLine{459   \_\_IM  uint32\_t MMFR[4U];               }
+\DoxyCodeLine{460   \_\_IM  uint32\_t ISAR[5U];               }
+\DoxyCodeLine{461         uint32\_t RESERVED0[5U];}
+\DoxyCodeLine{462   \_\_IOM uint32\_t CPACR;                  }
+\DoxyCodeLine{463 \} \mbox{\hyperlink{struct_s_c_b___type}{SCB\_Type}};}
+\DoxyCodeLine{464 }
+\DoxyCodeLine{465 \textcolor{comment}{/* SCB CPUID Register Definitions */}}
+\DoxyCodeLine{466 \textcolor{preprocessor}{\#define SCB\_CPUID\_IMPLEMENTER\_Pos          24U                                            }}
+\DoxyCodeLine{467 \textcolor{preprocessor}{\#define SCB\_CPUID\_IMPLEMENTER\_Msk          (0xFFUL << SCB\_CPUID\_IMPLEMENTER\_Pos)          }}
+\DoxyCodeLine{469 \textcolor{preprocessor}{\#define SCB\_CPUID\_VARIANT\_Pos              20U                                            }}
+\DoxyCodeLine{470 \textcolor{preprocessor}{\#define SCB\_CPUID\_VARIANT\_Msk              (0xFUL << SCB\_CPUID\_VARIANT\_Pos)               }}
+\DoxyCodeLine{472 \textcolor{preprocessor}{\#define SCB\_CPUID\_ARCHITECTURE\_Pos         16U                                            }}
+\DoxyCodeLine{473 \textcolor{preprocessor}{\#define SCB\_CPUID\_ARCHITECTURE\_Msk         (0xFUL << SCB\_CPUID\_ARCHITECTURE\_Pos)          }}
+\DoxyCodeLine{475 \textcolor{preprocessor}{\#define SCB\_CPUID\_PARTNO\_Pos                4U                                            }}
+\DoxyCodeLine{476 \textcolor{preprocessor}{\#define SCB\_CPUID\_PARTNO\_Msk               (0xFFFUL << SCB\_CPUID\_PARTNO\_Pos)              }}
+\DoxyCodeLine{478 \textcolor{preprocessor}{\#define SCB\_CPUID\_REVISION\_Pos              0U                                            }}
+\DoxyCodeLine{479 \textcolor{preprocessor}{\#define SCB\_CPUID\_REVISION\_Msk             (0xFUL }\textcolor{comment}{/*<< SCB\_CPUID\_REVISION\_Pos*/}\textcolor{preprocessor}{)          }}
+\DoxyCodeLine{481 \textcolor{comment}{/* SCB Interrupt Control State Register Definitions */}}
+\DoxyCodeLine{482 \textcolor{preprocessor}{\#define SCB\_ICSR\_NMIPENDSET\_Pos            31U                                            }}
+\DoxyCodeLine{483 \textcolor{preprocessor}{\#define SCB\_ICSR\_NMIPENDSET\_Msk            (1UL << SCB\_ICSR\_NMIPENDSET\_Pos)               }}
+\DoxyCodeLine{485 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVSET\_Pos             28U                                            }}
+\DoxyCodeLine{486 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVSET\_Msk             (1UL << SCB\_ICSR\_PENDSVSET\_Pos)                }}
+\DoxyCodeLine{488 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVCLR\_Pos             27U                                            }}
+\DoxyCodeLine{489 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSVCLR\_Msk             (1UL << SCB\_ICSR\_PENDSVCLR\_Pos)                }}
+\DoxyCodeLine{491 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTSET\_Pos             26U                                            }}
+\DoxyCodeLine{492 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTSET\_Msk             (1UL << SCB\_ICSR\_PENDSTSET\_Pos)                }}
+\DoxyCodeLine{494 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTCLR\_Pos             25U                                            }}
+\DoxyCodeLine{495 \textcolor{preprocessor}{\#define SCB\_ICSR\_PENDSTCLR\_Msk             (1UL << SCB\_ICSR\_PENDSTCLR\_Pos)                }}
+\DoxyCodeLine{497 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPREEMPT\_Pos            23U                                            }}
+\DoxyCodeLine{498 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPREEMPT\_Msk            (1UL << SCB\_ICSR\_ISRPREEMPT\_Pos)               }}
+\DoxyCodeLine{500 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPENDING\_Pos            22U                                            }}
+\DoxyCodeLine{501 \textcolor{preprocessor}{\#define SCB\_ICSR\_ISRPENDING\_Msk            (1UL << SCB\_ICSR\_ISRPENDING\_Pos)               }}
+\DoxyCodeLine{503 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTPENDING\_Pos           12U                                            }}
+\DoxyCodeLine{504 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTPENDING\_Msk           (0x1FFUL << SCB\_ICSR\_VECTPENDING\_Pos)          }}
+\DoxyCodeLine{506 \textcolor{preprocessor}{\#define SCB\_ICSR\_RETTOBASE\_Pos             11U                                            }}
+\DoxyCodeLine{507 \textcolor{preprocessor}{\#define SCB\_ICSR\_RETTOBASE\_Msk             (1UL << SCB\_ICSR\_RETTOBASE\_Pos)                }}
+\DoxyCodeLine{509 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTACTIVE\_Pos             0U                                            }}
+\DoxyCodeLine{510 \textcolor{preprocessor}{\#define SCB\_ICSR\_VECTACTIVE\_Msk            (0x1FFUL }\textcolor{comment}{/*<< SCB\_ICSR\_VECTACTIVE\_Pos*/}\textcolor{preprocessor}{)       }}
+\DoxyCodeLine{512 \textcolor{comment}{/* SCB Vector Table Offset Register Definitions */}}
+\DoxyCodeLine{513 \textcolor{preprocessor}{\#define SCB\_VTOR\_TBLOFF\_Pos                 7U                                            }}
+\DoxyCodeLine{514 \textcolor{preprocessor}{\#define SCB\_VTOR\_TBLOFF\_Msk                (0x1FFFFFFUL << SCB\_VTOR\_TBLOFF\_Pos)           }}
+\DoxyCodeLine{516 \textcolor{comment}{/* SCB Application Interrupt and Reset Control Register Definitions */}}
+\DoxyCodeLine{517 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEY\_Pos              16U                                            }}
+\DoxyCodeLine{518 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEY\_Msk              (0xFFFFUL << SCB\_AIRCR\_VECTKEY\_Pos)            }}
+\DoxyCodeLine{520 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEYSTAT\_Pos          16U                                            }}
+\DoxyCodeLine{521 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTKEYSTAT\_Msk          (0xFFFFUL << SCB\_AIRCR\_VECTKEYSTAT\_Pos)        }}
+\DoxyCodeLine{523 \textcolor{preprocessor}{\#define SCB\_AIRCR\_ENDIANESS\_Pos            15U                                            }}
+\DoxyCodeLine{524 \textcolor{preprocessor}{\#define SCB\_AIRCR\_ENDIANESS\_Msk            (1UL << SCB\_AIRCR\_ENDIANESS\_Pos)               }}
+\DoxyCodeLine{526 \textcolor{preprocessor}{\#define SCB\_AIRCR\_PRIGROUP\_Pos              8U                                            }}
+\DoxyCodeLine{527 \textcolor{preprocessor}{\#define SCB\_AIRCR\_PRIGROUP\_Msk             (7UL << SCB\_AIRCR\_PRIGROUP\_Pos)                }}
+\DoxyCodeLine{529 \textcolor{preprocessor}{\#define SCB\_AIRCR\_SYSRESETREQ\_Pos           2U                                            }}
+\DoxyCodeLine{530 \textcolor{preprocessor}{\#define SCB\_AIRCR\_SYSRESETREQ\_Msk          (1UL << SCB\_AIRCR\_SYSRESETREQ\_Pos)             }}
+\DoxyCodeLine{532 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTCLRACTIVE\_Pos         1U                                            }}
+\DoxyCodeLine{533 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTCLRACTIVE\_Msk        (1UL << SCB\_AIRCR\_VECTCLRACTIVE\_Pos)           }}
+\DoxyCodeLine{535 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTRESET\_Pos             0U                                            }}
+\DoxyCodeLine{536 \textcolor{preprocessor}{\#define SCB\_AIRCR\_VECTRESET\_Msk            (1UL }\textcolor{comment}{/*<< SCB\_AIRCR\_VECTRESET\_Pos*/}\textcolor{preprocessor}{)           }}
+\DoxyCodeLine{538 \textcolor{comment}{/* SCB System Control Register Definitions */}}
+\DoxyCodeLine{539 \textcolor{preprocessor}{\#define SCB\_SCR\_SEVONPEND\_Pos               4U                                            }}
+\DoxyCodeLine{540 \textcolor{preprocessor}{\#define SCB\_SCR\_SEVONPEND\_Msk              (1UL << SCB\_SCR\_SEVONPEND\_Pos)                 }}
+\DoxyCodeLine{542 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPDEEP\_Pos               2U                                            }}
+\DoxyCodeLine{543 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPDEEP\_Msk              (1UL << SCB\_SCR\_SLEEPDEEP\_Pos)                 }}
+\DoxyCodeLine{545 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPONEXIT\_Pos             1U                                            }}
+\DoxyCodeLine{546 \textcolor{preprocessor}{\#define SCB\_SCR\_SLEEPONEXIT\_Msk            (1UL << SCB\_SCR\_SLEEPONEXIT\_Pos)               }}
+\DoxyCodeLine{548 \textcolor{comment}{/* SCB Configuration Control Register Definitions */}}
+\DoxyCodeLine{549 \textcolor{preprocessor}{\#define SCB\_CCR\_STKALIGN\_Pos                9U                                            }}
+\DoxyCodeLine{550 \textcolor{preprocessor}{\#define SCB\_CCR\_STKALIGN\_Msk               (1UL << SCB\_CCR\_STKALIGN\_Pos)                  }}
+\DoxyCodeLine{552 \textcolor{preprocessor}{\#define SCB\_CCR\_BFHFNMIGN\_Pos               8U                                            }}
+\DoxyCodeLine{553 \textcolor{preprocessor}{\#define SCB\_CCR\_BFHFNMIGN\_Msk              (1UL << SCB\_CCR\_BFHFNMIGN\_Pos)                 }}
+\DoxyCodeLine{555 \textcolor{preprocessor}{\#define SCB\_CCR\_DIV\_0\_TRP\_Pos               4U                                            }}
+\DoxyCodeLine{556 \textcolor{preprocessor}{\#define SCB\_CCR\_DIV\_0\_TRP\_Msk              (1UL << SCB\_CCR\_DIV\_0\_TRP\_Pos)                 }}
+\DoxyCodeLine{558 \textcolor{preprocessor}{\#define SCB\_CCR\_UNALIGN\_TRP\_Pos             3U                                            }}
+\DoxyCodeLine{559 \textcolor{preprocessor}{\#define SCB\_CCR\_UNALIGN\_TRP\_Msk            (1UL << SCB\_CCR\_UNALIGN\_TRP\_Pos)               }}
+\DoxyCodeLine{561 \textcolor{preprocessor}{\#define SCB\_CCR\_USERSETMPEND\_Pos            1U                                            }}
+\DoxyCodeLine{562 \textcolor{preprocessor}{\#define SCB\_CCR\_USERSETMPEND\_Msk           (1UL << SCB\_CCR\_USERSETMPEND\_Pos)              }}
+\DoxyCodeLine{564 \textcolor{preprocessor}{\#define SCB\_CCR\_NONBASETHRDENA\_Pos          0U                                            }}
+\DoxyCodeLine{565 \textcolor{preprocessor}{\#define SCB\_CCR\_NONBASETHRDENA\_Msk         (1UL }\textcolor{comment}{/*<< SCB\_CCR\_NONBASETHRDENA\_Pos*/}\textcolor{preprocessor}{)        }}
+\DoxyCodeLine{567 \textcolor{comment}{/* SCB System Handler Control and State Register Definitions */}}
+\DoxyCodeLine{568 \textcolor{preprocessor}{\#define SCB\_SHCSR\_USGFAULTENA\_Pos          18U                                            }}
+\DoxyCodeLine{569 \textcolor{preprocessor}{\#define SCB\_SHCSR\_USGFAULTENA\_Msk          (1UL << SCB\_SHCSR\_USGFAULTENA\_Pos)             }}
+\DoxyCodeLine{571 \textcolor{preprocessor}{\#define SCB\_SHCSR\_BUSFAULTENA\_Pos          17U                                            }}
+\DoxyCodeLine{572 \textcolor{preprocessor}{\#define SCB\_SHCSR\_BUSFAULTENA\_Msk          (1UL << SCB\_SHCSR\_BUSFAULTENA\_Pos)             }}
+\DoxyCodeLine{574 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MEMFAULTENA\_Pos          16U                                            }}
+\DoxyCodeLine{575 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MEMFAULTENA\_Msk          (1UL << SCB\_SHCSR\_MEMFAULTENA\_Pos)             }}
+\DoxyCodeLine{577 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLPENDED\_Pos         15U                                            }}
+\DoxyCodeLine{578 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLPENDED\_Msk         (1UL << SCB\_SHCSR\_SVCALLPENDED\_Pos)            }}
+\DoxyCodeLine{580 \textcolor{preprocessor}{\#define SCB\_SHCSR\_BUSFAULTPENDED\_Pos       14U                                            }}
+\DoxyCodeLine{581 \textcolor{preprocessor}{\#define SCB\_SHCSR\_BUSFAULTPENDED\_Msk       (1UL << SCB\_SHCSR\_BUSFAULTPENDED\_Pos)          }}
+\DoxyCodeLine{583 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MEMFAULTPENDED\_Pos       13U                                            }}
+\DoxyCodeLine{584 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MEMFAULTPENDED\_Msk       (1UL << SCB\_SHCSR\_MEMFAULTPENDED\_Pos)          }}
+\DoxyCodeLine{586 \textcolor{preprocessor}{\#define SCB\_SHCSR\_USGFAULTPENDED\_Pos       12U                                            }}
+\DoxyCodeLine{587 \textcolor{preprocessor}{\#define SCB\_SHCSR\_USGFAULTPENDED\_Msk       (1UL << SCB\_SHCSR\_USGFAULTPENDED\_Pos)          }}
+\DoxyCodeLine{589 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SYSTICKACT\_Pos           11U                                            }}
+\DoxyCodeLine{590 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SYSTICKACT\_Msk           (1UL << SCB\_SHCSR\_SYSTICKACT\_Pos)              }}
+\DoxyCodeLine{592 \textcolor{preprocessor}{\#define SCB\_SHCSR\_PENDSVACT\_Pos            10U                                            }}
+\DoxyCodeLine{593 \textcolor{preprocessor}{\#define SCB\_SHCSR\_PENDSVACT\_Msk            (1UL << SCB\_SHCSR\_PENDSVACT\_Pos)               }}
+\DoxyCodeLine{595 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MONITORACT\_Pos            8U                                            }}
+\DoxyCodeLine{596 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MONITORACT\_Msk           (1UL << SCB\_SHCSR\_MONITORACT\_Pos)              }}
+\DoxyCodeLine{598 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLACT\_Pos             7U                                            }}
+\DoxyCodeLine{599 \textcolor{preprocessor}{\#define SCB\_SHCSR\_SVCALLACT\_Msk            (1UL << SCB\_SHCSR\_SVCALLACT\_Pos)               }}
+\DoxyCodeLine{601 \textcolor{preprocessor}{\#define SCB\_SHCSR\_USGFAULTACT\_Pos           3U                                            }}
+\DoxyCodeLine{602 \textcolor{preprocessor}{\#define SCB\_SHCSR\_USGFAULTACT\_Msk          (1UL << SCB\_SHCSR\_USGFAULTACT\_Pos)             }}
+\DoxyCodeLine{604 \textcolor{preprocessor}{\#define SCB\_SHCSR\_BUSFAULTACT\_Pos           1U                                            }}
+\DoxyCodeLine{605 \textcolor{preprocessor}{\#define SCB\_SHCSR\_BUSFAULTACT\_Msk          (1UL << SCB\_SHCSR\_BUSFAULTACT\_Pos)             }}
+\DoxyCodeLine{607 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MEMFAULTACT\_Pos           0U                                            }}
+\DoxyCodeLine{608 \textcolor{preprocessor}{\#define SCB\_SHCSR\_MEMFAULTACT\_Msk          (1UL }\textcolor{comment}{/*<< SCB\_SHCSR\_MEMFAULTACT\_Pos*/}\textcolor{preprocessor}{)         }}
+\DoxyCodeLine{610 \textcolor{comment}{/* SCB Configurable Fault Status Register Definitions */}}
+\DoxyCodeLine{611 \textcolor{preprocessor}{\#define SCB\_CFSR\_USGFAULTSR\_Pos            16U                                            }}
+\DoxyCodeLine{612 \textcolor{preprocessor}{\#define SCB\_CFSR\_USGFAULTSR\_Msk            (0xFFFFUL << SCB\_CFSR\_USGFAULTSR\_Pos)          }}
+\DoxyCodeLine{614 \textcolor{preprocessor}{\#define SCB\_CFSR\_BUSFAULTSR\_Pos             8U                                            }}
+\DoxyCodeLine{615 \textcolor{preprocessor}{\#define SCB\_CFSR\_BUSFAULTSR\_Msk            (0xFFUL << SCB\_CFSR\_BUSFAULTSR\_Pos)            }}
+\DoxyCodeLine{617 \textcolor{preprocessor}{\#define SCB\_CFSR\_MEMFAULTSR\_Pos             0U                                            }}
+\DoxyCodeLine{618 \textcolor{preprocessor}{\#define SCB\_CFSR\_MEMFAULTSR\_Msk            (0xFFUL }\textcolor{comment}{/*<< SCB\_CFSR\_MEMFAULTSR\_Pos*/}\textcolor{preprocessor}{)        }}
+\DoxyCodeLine{620 \textcolor{comment}{/* MemManage Fault Status Register (part of SCB Configurable Fault Status Register) */}}
+\DoxyCodeLine{621 \textcolor{preprocessor}{\#define SCB\_CFSR\_MMARVALID\_Pos             (SCB\_SHCSR\_MEMFAULTACT\_Pos + 7U)               }}
+\DoxyCodeLine{622 \textcolor{preprocessor}{\#define SCB\_CFSR\_MMARVALID\_Msk             (1UL << SCB\_CFSR\_MMARVALID\_Pos)                }}
+\DoxyCodeLine{624 \textcolor{preprocessor}{\#define SCB\_CFSR\_MLSPERR\_Pos               (SCB\_SHCSR\_MEMFAULTACT\_Pos + 5U)               }}
+\DoxyCodeLine{625 \textcolor{preprocessor}{\#define SCB\_CFSR\_MLSPERR\_Msk               (1UL << SCB\_CFSR\_MLSPERR\_Pos)                  }}
+\DoxyCodeLine{627 \textcolor{preprocessor}{\#define SCB\_CFSR\_MSTKERR\_Pos               (SCB\_SHCSR\_MEMFAULTACT\_Pos + 4U)               }}
+\DoxyCodeLine{628 \textcolor{preprocessor}{\#define SCB\_CFSR\_MSTKERR\_Msk               (1UL << SCB\_CFSR\_MSTKERR\_Pos)                  }}
+\DoxyCodeLine{630 \textcolor{preprocessor}{\#define SCB\_CFSR\_MUNSTKERR\_Pos             (SCB\_SHCSR\_MEMFAULTACT\_Pos + 3U)               }}
+\DoxyCodeLine{631 \textcolor{preprocessor}{\#define SCB\_CFSR\_MUNSTKERR\_Msk             (1UL << SCB\_CFSR\_MUNSTKERR\_Pos)                }}
+\DoxyCodeLine{633 \textcolor{preprocessor}{\#define SCB\_CFSR\_DACCVIOL\_Pos              (SCB\_SHCSR\_MEMFAULTACT\_Pos + 1U)               }}
+\DoxyCodeLine{634 \textcolor{preprocessor}{\#define SCB\_CFSR\_DACCVIOL\_Msk              (1UL << SCB\_CFSR\_DACCVIOL\_Pos)                 }}
+\DoxyCodeLine{636 \textcolor{preprocessor}{\#define SCB\_CFSR\_IACCVIOL\_Pos              (SCB\_SHCSR\_MEMFAULTACT\_Pos + 0U)               }}
+\DoxyCodeLine{637 \textcolor{preprocessor}{\#define SCB\_CFSR\_IACCVIOL\_Msk              (1UL }\textcolor{comment}{/*<< SCB\_CFSR\_IACCVIOL\_Pos*/}\textcolor{preprocessor}{)             }}
+\DoxyCodeLine{639 \textcolor{comment}{/* BusFault Status Register (part of SCB Configurable Fault Status Register) */}}
+\DoxyCodeLine{640 \textcolor{preprocessor}{\#define SCB\_CFSR\_BFARVALID\_Pos            (SCB\_CFSR\_BUSFAULTSR\_Pos + 7U)                  }}
+\DoxyCodeLine{641 \textcolor{preprocessor}{\#define SCB\_CFSR\_BFARVALID\_Msk            (1UL << SCB\_CFSR\_BFARVALID\_Pos)                 }}
+\DoxyCodeLine{643 \textcolor{preprocessor}{\#define SCB\_CFSR\_LSPERR\_Pos               (SCB\_CFSR\_BUSFAULTSR\_Pos + 5U)                  }}
+\DoxyCodeLine{644 \textcolor{preprocessor}{\#define SCB\_CFSR\_LSPERR\_Msk               (1UL << SCB\_CFSR\_LSPERR\_Pos)                    }}
+\DoxyCodeLine{646 \textcolor{preprocessor}{\#define SCB\_CFSR\_STKERR\_Pos               (SCB\_CFSR\_BUSFAULTSR\_Pos + 4U)                  }}
+\DoxyCodeLine{647 \textcolor{preprocessor}{\#define SCB\_CFSR\_STKERR\_Msk               (1UL << SCB\_CFSR\_STKERR\_Pos)                    }}
+\DoxyCodeLine{649 \textcolor{preprocessor}{\#define SCB\_CFSR\_UNSTKERR\_Pos             (SCB\_CFSR\_BUSFAULTSR\_Pos + 3U)                  }}
+\DoxyCodeLine{650 \textcolor{preprocessor}{\#define SCB\_CFSR\_UNSTKERR\_Msk             (1UL << SCB\_CFSR\_UNSTKERR\_Pos)                  }}
+\DoxyCodeLine{652 \textcolor{preprocessor}{\#define SCB\_CFSR\_IMPRECISERR\_Pos          (SCB\_CFSR\_BUSFAULTSR\_Pos + 2U)                  }}
+\DoxyCodeLine{653 \textcolor{preprocessor}{\#define SCB\_CFSR\_IMPRECISERR\_Msk          (1UL << SCB\_CFSR\_IMPRECISERR\_Pos)               }}
+\DoxyCodeLine{655 \textcolor{preprocessor}{\#define SCB\_CFSR\_PRECISERR\_Pos            (SCB\_CFSR\_BUSFAULTSR\_Pos + 1U)                  }}
+\DoxyCodeLine{656 \textcolor{preprocessor}{\#define SCB\_CFSR\_PRECISERR\_Msk            (1UL << SCB\_CFSR\_PRECISERR\_Pos)                 }}
+\DoxyCodeLine{658 \textcolor{preprocessor}{\#define SCB\_CFSR\_IBUSERR\_Pos              (SCB\_CFSR\_BUSFAULTSR\_Pos + 0U)                  }}
+\DoxyCodeLine{659 \textcolor{preprocessor}{\#define SCB\_CFSR\_IBUSERR\_Msk              (1UL << SCB\_CFSR\_IBUSERR\_Pos)                   }}
+\DoxyCodeLine{661 \textcolor{comment}{/* UsageFault Status Register (part of SCB Configurable Fault Status Register) */}}
+\DoxyCodeLine{662 \textcolor{preprocessor}{\#define SCB\_CFSR\_DIVBYZERO\_Pos            (SCB\_CFSR\_USGFAULTSR\_Pos + 9U)                  }}
+\DoxyCodeLine{663 \textcolor{preprocessor}{\#define SCB\_CFSR\_DIVBYZERO\_Msk            (1UL << SCB\_CFSR\_DIVBYZERO\_Pos)                 }}
+\DoxyCodeLine{665 \textcolor{preprocessor}{\#define SCB\_CFSR\_UNALIGNED\_Pos            (SCB\_CFSR\_USGFAULTSR\_Pos + 8U)                  }}
+\DoxyCodeLine{666 \textcolor{preprocessor}{\#define SCB\_CFSR\_UNALIGNED\_Msk            (1UL << SCB\_CFSR\_UNALIGNED\_Pos)                 }}
+\DoxyCodeLine{668 \textcolor{preprocessor}{\#define SCB\_CFSR\_NOCP\_Pos                 (SCB\_CFSR\_USGFAULTSR\_Pos + 3U)                  }}
+\DoxyCodeLine{669 \textcolor{preprocessor}{\#define SCB\_CFSR\_NOCP\_Msk                 (1UL << SCB\_CFSR\_NOCP\_Pos)                      }}
+\DoxyCodeLine{671 \textcolor{preprocessor}{\#define SCB\_CFSR\_INVPC\_Pos                (SCB\_CFSR\_USGFAULTSR\_Pos + 2U)                  }}
+\DoxyCodeLine{672 \textcolor{preprocessor}{\#define SCB\_CFSR\_INVPC\_Msk                (1UL << SCB\_CFSR\_INVPC\_Pos)                     }}
+\DoxyCodeLine{674 \textcolor{preprocessor}{\#define SCB\_CFSR\_INVSTATE\_Pos             (SCB\_CFSR\_USGFAULTSR\_Pos + 1U)                  }}
+\DoxyCodeLine{675 \textcolor{preprocessor}{\#define SCB\_CFSR\_INVSTATE\_Msk             (1UL << SCB\_CFSR\_INVSTATE\_Pos)                  }}
+\DoxyCodeLine{677 \textcolor{preprocessor}{\#define SCB\_CFSR\_UNDEFINSTR\_Pos           (SCB\_CFSR\_USGFAULTSR\_Pos + 0U)                  }}
+\DoxyCodeLine{678 \textcolor{preprocessor}{\#define SCB\_CFSR\_UNDEFINSTR\_Msk           (1UL << SCB\_CFSR\_UNDEFINSTR\_Pos)                }}
+\DoxyCodeLine{680 \textcolor{comment}{/* SCB Hard Fault Status Register Definitions */}}
+\DoxyCodeLine{681 \textcolor{preprocessor}{\#define SCB\_HFSR\_DEBUGEVT\_Pos              31U                                            }}
+\DoxyCodeLine{682 \textcolor{preprocessor}{\#define SCB\_HFSR\_DEBUGEVT\_Msk              (1UL << SCB\_HFSR\_DEBUGEVT\_Pos)                 }}
+\DoxyCodeLine{684 \textcolor{preprocessor}{\#define SCB\_HFSR\_FORCED\_Pos                30U                                            }}
+\DoxyCodeLine{685 \textcolor{preprocessor}{\#define SCB\_HFSR\_FORCED\_Msk                (1UL << SCB\_HFSR\_FORCED\_Pos)                   }}
+\DoxyCodeLine{687 \textcolor{preprocessor}{\#define SCB\_HFSR\_VECTTBL\_Pos                1U                                            }}
+\DoxyCodeLine{688 \textcolor{preprocessor}{\#define SCB\_HFSR\_VECTTBL\_Msk               (1UL << SCB\_HFSR\_VECTTBL\_Pos)                  }}
+\DoxyCodeLine{690 \textcolor{comment}{/* SCB Debug Fault Status Register Definitions */}}
+\DoxyCodeLine{691 \textcolor{preprocessor}{\#define SCB\_DFSR\_EXTERNAL\_Pos               4U                                            }}
+\DoxyCodeLine{692 \textcolor{preprocessor}{\#define SCB\_DFSR\_EXTERNAL\_Msk              (1UL << SCB\_DFSR\_EXTERNAL\_Pos)                 }}
+\DoxyCodeLine{694 \textcolor{preprocessor}{\#define SCB\_DFSR\_VCATCH\_Pos                 3U                                            }}
+\DoxyCodeLine{695 \textcolor{preprocessor}{\#define SCB\_DFSR\_VCATCH\_Msk                (1UL << SCB\_DFSR\_VCATCH\_Pos)                   }}
+\DoxyCodeLine{697 \textcolor{preprocessor}{\#define SCB\_DFSR\_DWTTRAP\_Pos                2U                                            }}
+\DoxyCodeLine{698 \textcolor{preprocessor}{\#define SCB\_DFSR\_DWTTRAP\_Msk               (1UL << SCB\_DFSR\_DWTTRAP\_Pos)                  }}
+\DoxyCodeLine{700 \textcolor{preprocessor}{\#define SCB\_DFSR\_BKPT\_Pos                   1U                                            }}
+\DoxyCodeLine{701 \textcolor{preprocessor}{\#define SCB\_DFSR\_BKPT\_Msk                  (1UL << SCB\_DFSR\_BKPT\_Pos)                     }}
+\DoxyCodeLine{703 \textcolor{preprocessor}{\#define SCB\_DFSR\_HALTED\_Pos                 0U                                            }}
+\DoxyCodeLine{704 \textcolor{preprocessor}{\#define SCB\_DFSR\_HALTED\_Msk                (1UL }\textcolor{comment}{/*<< SCB\_DFSR\_HALTED\_Pos*/}\textcolor{preprocessor}{)               }}
+\DoxyCodeLine{719 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{720 \{}
+\DoxyCodeLine{721         uint32\_t RESERVED0[1U];}
+\DoxyCodeLine{722   \_\_IM  uint32\_t ICTR;                   }
+\DoxyCodeLine{723   \_\_IOM uint32\_t ACTLR;                  }
+\DoxyCodeLine{724 \} \mbox{\hyperlink{struct_s_cn_s_c_b___type}{SCnSCB\_Type}};}
+\DoxyCodeLine{725 }
+\DoxyCodeLine{726 \textcolor{comment}{/* Interrupt Controller Type Register Definitions */}}
+\DoxyCodeLine{727 \textcolor{preprocessor}{\#define SCnSCB\_ICTR\_INTLINESNUM\_Pos         0U                                         }}
+\DoxyCodeLine{728 \textcolor{preprocessor}{\#define SCnSCB\_ICTR\_INTLINESNUM\_Msk        (0xFUL }\textcolor{comment}{/*<< SCnSCB\_ICTR\_INTLINESNUM\_Pos*/}\textcolor{preprocessor}{)  }}
+\DoxyCodeLine{730 \textcolor{comment}{/* Auxiliary Control Register Definitions */}}
+\DoxyCodeLine{731 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISOOFP\_Pos            9U                                         }}
+\DoxyCodeLine{732 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISOOFP\_Msk           (1UL << SCnSCB\_ACTLR\_DISOOFP\_Pos)           }}
+\DoxyCodeLine{734 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISFPCA\_Pos            8U                                         }}
+\DoxyCodeLine{735 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISFPCA\_Msk           (1UL << SCnSCB\_ACTLR\_DISFPCA\_Pos)           }}
+\DoxyCodeLine{737 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISFOLD\_Pos            2U                                         }}
+\DoxyCodeLine{738 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISFOLD\_Msk           (1UL << SCnSCB\_ACTLR\_DISFOLD\_Pos)           }}
+\DoxyCodeLine{740 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISDEFWBUF\_Pos         1U                                         }}
+\DoxyCodeLine{741 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISDEFWBUF\_Msk        (1UL << SCnSCB\_ACTLR\_DISDEFWBUF\_Pos)        }}
+\DoxyCodeLine{743 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISMCYCINT\_Pos         0U                                         }}
+\DoxyCodeLine{744 \textcolor{preprocessor}{\#define SCnSCB\_ACTLR\_DISMCYCINT\_Msk        (1UL }\textcolor{comment}{/*<< SCnSCB\_ACTLR\_DISMCYCINT\_Pos*/}\textcolor{preprocessor}{)    }}
+\DoxyCodeLine{759 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{760 \{}
+\DoxyCodeLine{761   \_\_IOM uint32\_t CTRL;                   }
+\DoxyCodeLine{762   \_\_IOM uint32\_t LOAD;                   }
+\DoxyCodeLine{763   \_\_IOM uint32\_t VAL;                    }
+\DoxyCodeLine{764   \_\_IM  uint32\_t CALIB;                  }
+\DoxyCodeLine{765 \} \mbox{\hyperlink{struct_sys_tick___type}{SysTick\_Type}};}
+\DoxyCodeLine{766 }
+\DoxyCodeLine{767 \textcolor{comment}{/* SysTick Control / Status Register Definitions */}}
+\DoxyCodeLine{768 \textcolor{preprocessor}{\#define SysTick\_CTRL\_COUNTFLAG\_Pos         16U                                            }}
+\DoxyCodeLine{769 \textcolor{preprocessor}{\#define SysTick\_CTRL\_COUNTFLAG\_Msk         (1UL << SysTick\_CTRL\_COUNTFLAG\_Pos)            }}
+\DoxyCodeLine{771 \textcolor{preprocessor}{\#define SysTick\_CTRL\_CLKSOURCE\_Pos          2U                                            }}
+\DoxyCodeLine{772 \textcolor{preprocessor}{\#define SysTick\_CTRL\_CLKSOURCE\_Msk         (1UL << SysTick\_CTRL\_CLKSOURCE\_Pos)            }}
+\DoxyCodeLine{774 \textcolor{preprocessor}{\#define SysTick\_CTRL\_TICKINT\_Pos            1U                                            }}
+\DoxyCodeLine{775 \textcolor{preprocessor}{\#define SysTick\_CTRL\_TICKINT\_Msk           (1UL << SysTick\_CTRL\_TICKINT\_Pos)              }}
+\DoxyCodeLine{777 \textcolor{preprocessor}{\#define SysTick\_CTRL\_ENABLE\_Pos             0U                                            }}
+\DoxyCodeLine{778 \textcolor{preprocessor}{\#define SysTick\_CTRL\_ENABLE\_Msk            (1UL }\textcolor{comment}{/*<< SysTick\_CTRL\_ENABLE\_Pos*/}\textcolor{preprocessor}{)           }}
+\DoxyCodeLine{780 \textcolor{comment}{/* SysTick Reload Register Definitions */}}
+\DoxyCodeLine{781 \textcolor{preprocessor}{\#define SysTick\_LOAD\_RELOAD\_Pos             0U                                            }}
+\DoxyCodeLine{782 \textcolor{preprocessor}{\#define SysTick\_LOAD\_RELOAD\_Msk            (0xFFFFFFUL }\textcolor{comment}{/*<< SysTick\_LOAD\_RELOAD\_Pos*/}\textcolor{preprocessor}{)    }}
+\DoxyCodeLine{784 \textcolor{comment}{/* SysTick Current Register Definitions */}}
+\DoxyCodeLine{785 \textcolor{preprocessor}{\#define SysTick\_VAL\_CURRENT\_Pos             0U                                            }}
+\DoxyCodeLine{786 \textcolor{preprocessor}{\#define SysTick\_VAL\_CURRENT\_Msk            (0xFFFFFFUL }\textcolor{comment}{/*<< SysTick\_VAL\_CURRENT\_Pos*/}\textcolor{preprocessor}{)    }}
+\DoxyCodeLine{788 \textcolor{comment}{/* SysTick Calibration Register Definitions */}}
+\DoxyCodeLine{789 \textcolor{preprocessor}{\#define SysTick\_CALIB\_NOREF\_Pos            31U                                            }}
+\DoxyCodeLine{790 \textcolor{preprocessor}{\#define SysTick\_CALIB\_NOREF\_Msk            (1UL << SysTick\_CALIB\_NOREF\_Pos)               }}
+\DoxyCodeLine{792 \textcolor{preprocessor}{\#define SysTick\_CALIB\_SKEW\_Pos             30U                                            }}
+\DoxyCodeLine{793 \textcolor{preprocessor}{\#define SysTick\_CALIB\_SKEW\_Msk             (1UL << SysTick\_CALIB\_SKEW\_Pos)                }}
+\DoxyCodeLine{795 \textcolor{preprocessor}{\#define SysTick\_CALIB\_TENMS\_Pos             0U                                            }}
+\DoxyCodeLine{796 \textcolor{preprocessor}{\#define SysTick\_CALIB\_TENMS\_Msk            (0xFFFFFFUL }\textcolor{comment}{/*<< SysTick\_CALIB\_TENMS\_Pos*/}\textcolor{preprocessor}{)    }}
+\DoxyCodeLine{811 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{812 \{}
+\DoxyCodeLine{813   \_\_OM  \textcolor{keyword}{union}}
+\DoxyCodeLine{814   \{}
+\DoxyCodeLine{815     \_\_OM  uint8\_t    \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaf3ce39cfc9de4a588cbf03f12e2721bd}{u8}};                 }
+\DoxyCodeLine{816     \_\_OM  uint16\_t   \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga369b3d7ffa4f8b883f69534d85f863e7}{u16}};                }
+\DoxyCodeLine{817     \_\_OM  uint32\_t   \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga4ee297e91e57c9081ede307200120757}{u32}};                }
+\DoxyCodeLine{818   \}  PORT [32U];                         }
+\DoxyCodeLine{819         uint32\_t RESERVED0[864U];}
+\DoxyCodeLine{820   \_\_IOM uint32\_t TER;                    }
+\DoxyCodeLine{821         uint32\_t RESERVED1[15U];}
+\DoxyCodeLine{822   \_\_IOM uint32\_t TPR;                    }
+\DoxyCodeLine{823         uint32\_t RESERVED2[15U];}
+\DoxyCodeLine{824   \_\_IOM uint32\_t TCR;                    }
+\DoxyCodeLine{825         uint32\_t RESERVED3[32U];}
+\DoxyCodeLine{826         uint32\_t RESERVED4[43U];}
+\DoxyCodeLine{827   \_\_OM  uint32\_t LAR;                    }
+\DoxyCodeLine{828   \_\_IM  uint32\_t LSR;                    }
+\DoxyCodeLine{829         uint32\_t RESERVED5[6U];}
+\DoxyCodeLine{830   \_\_IM  uint32\_t PID4;                   }
+\DoxyCodeLine{831   \_\_IM  uint32\_t PID5;                   }
+\DoxyCodeLine{832   \_\_IM  uint32\_t PID6;                   }
+\DoxyCodeLine{833   \_\_IM  uint32\_t PID7;                   }
+\DoxyCodeLine{834   \_\_IM  uint32\_t PID0;                   }
+\DoxyCodeLine{835   \_\_IM  uint32\_t PID1;                   }
+\DoxyCodeLine{836   \_\_IM  uint32\_t PID2;                   }
+\DoxyCodeLine{837   \_\_IM  uint32\_t PID3;                   }
+\DoxyCodeLine{838   \_\_IM  uint32\_t CID0;                   }
+\DoxyCodeLine{839   \_\_IM  uint32\_t CID1;                   }
+\DoxyCodeLine{840   \_\_IM  uint32\_t CID2;                   }
+\DoxyCodeLine{841   \_\_IM  uint32\_t CID3;                   }
+\DoxyCodeLine{842 \} \mbox{\hyperlink{struct_i_t_m___type}{ITM\_Type}};}
+\DoxyCodeLine{843 }
+\DoxyCodeLine{844 \textcolor{comment}{/* ITM Trace Privilege Register Definitions */}}
+\DoxyCodeLine{845 \textcolor{preprocessor}{\#define ITM\_TPR\_PRIVMASK\_Pos                0U                                            }}
+\DoxyCodeLine{846 \textcolor{preprocessor}{\#define ITM\_TPR\_PRIVMASK\_Msk               (0xFFFFFFFFUL }\textcolor{comment}{/*<< ITM\_TPR\_PRIVMASK\_Pos*/}\textcolor{preprocessor}{)     }}
+\DoxyCodeLine{848 \textcolor{comment}{/* ITM Trace Control Register Definitions */}}
+\DoxyCodeLine{849 \textcolor{preprocessor}{\#define ITM\_TCR\_BUSY\_Pos                   23U                                            }}
+\DoxyCodeLine{850 \textcolor{preprocessor}{\#define ITM\_TCR\_BUSY\_Msk                   (1UL << ITM\_TCR\_BUSY\_Pos)                      }}
+\DoxyCodeLine{852 \textcolor{preprocessor}{\#define ITM\_TCR\_TraceBusID\_Pos             16U                                            }}
+\DoxyCodeLine{853 \textcolor{preprocessor}{\#define ITM\_TCR\_TraceBusID\_Msk             (0x7FUL << ITM\_TCR\_TraceBusID\_Pos)             }}
+\DoxyCodeLine{855 \textcolor{preprocessor}{\#define ITM\_TCR\_GTSFREQ\_Pos                10U                                            }}
+\DoxyCodeLine{856 \textcolor{preprocessor}{\#define ITM\_TCR\_GTSFREQ\_Msk                (3UL << ITM\_TCR\_GTSFREQ\_Pos)                   }}
+\DoxyCodeLine{858 \textcolor{preprocessor}{\#define ITM\_TCR\_TSPrescale\_Pos              8U                                            }}
+\DoxyCodeLine{859 \textcolor{preprocessor}{\#define ITM\_TCR\_TSPrescale\_Msk             (3UL << ITM\_TCR\_TSPrescale\_Pos)                }}
+\DoxyCodeLine{861 \textcolor{preprocessor}{\#define ITM\_TCR\_SWOENA\_Pos                  4U                                            }}
+\DoxyCodeLine{862 \textcolor{preprocessor}{\#define ITM\_TCR\_SWOENA\_Msk                 (1UL << ITM\_TCR\_SWOENA\_Pos)                    }}
+\DoxyCodeLine{864 \textcolor{preprocessor}{\#define ITM\_TCR\_DWTENA\_Pos                  3U                                            }}
+\DoxyCodeLine{865 \textcolor{preprocessor}{\#define ITM\_TCR\_DWTENA\_Msk                 (1UL << ITM\_TCR\_DWTENA\_Pos)                    }}
+\DoxyCodeLine{867 \textcolor{preprocessor}{\#define ITM\_TCR\_SYNCENA\_Pos                 2U                                            }}
+\DoxyCodeLine{868 \textcolor{preprocessor}{\#define ITM\_TCR\_SYNCENA\_Msk                (1UL << ITM\_TCR\_SYNCENA\_Pos)                   }}
+\DoxyCodeLine{870 \textcolor{preprocessor}{\#define ITM\_TCR\_TSENA\_Pos                   1U                                            }}
+\DoxyCodeLine{871 \textcolor{preprocessor}{\#define ITM\_TCR\_TSENA\_Msk                  (1UL << ITM\_TCR\_TSENA\_Pos)                     }}
+\DoxyCodeLine{873 \textcolor{preprocessor}{\#define ITM\_TCR\_ITMENA\_Pos                  0U                                            }}
+\DoxyCodeLine{874 \textcolor{preprocessor}{\#define ITM\_TCR\_ITMENA\_Msk                 (1UL }\textcolor{comment}{/*<< ITM\_TCR\_ITMENA\_Pos*/}\textcolor{preprocessor}{)                }}
+\DoxyCodeLine{876 \textcolor{comment}{/* ITM Lock Status Register Definitions */}}
+\DoxyCodeLine{877 \textcolor{preprocessor}{\#define ITM\_LSR\_ByteAcc\_Pos                 2U                                            }}
+\DoxyCodeLine{878 \textcolor{preprocessor}{\#define ITM\_LSR\_ByteAcc\_Msk                (1UL << ITM\_LSR\_ByteAcc\_Pos)                   }}
+\DoxyCodeLine{880 \textcolor{preprocessor}{\#define ITM\_LSR\_Access\_Pos                  1U                                            }}
+\DoxyCodeLine{881 \textcolor{preprocessor}{\#define ITM\_LSR\_Access\_Msk                 (1UL << ITM\_LSR\_Access\_Pos)                    }}
+\DoxyCodeLine{883 \textcolor{preprocessor}{\#define ITM\_LSR\_Present\_Pos                 0U                                            }}
+\DoxyCodeLine{884 \textcolor{preprocessor}{\#define ITM\_LSR\_Present\_Msk                (1UL }\textcolor{comment}{/*<< ITM\_LSR\_Present\_Pos*/}\textcolor{preprocessor}{)                }\textcolor{comment}{/* end of group CMSIS\_ITM */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{887 }
+\DoxyCodeLine{888 }
+\DoxyCodeLine{899 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{900 \{}
+\DoxyCodeLine{901   \_\_IOM uint32\_t CTRL;                   }
+\DoxyCodeLine{902   \_\_IOM uint32\_t CYCCNT;                 }
+\DoxyCodeLine{903   \_\_IOM uint32\_t CPICNT;                 }
+\DoxyCodeLine{904   \_\_IOM uint32\_t EXCCNT;                 }
+\DoxyCodeLine{905   \_\_IOM uint32\_t SLEEPCNT;               }
+\DoxyCodeLine{906   \_\_IOM uint32\_t LSUCNT;                 }
+\DoxyCodeLine{907   \_\_IOM uint32\_t FOLDCNT;                }
+\DoxyCodeLine{908   \_\_IM  uint32\_t PCSR;                   }
+\DoxyCodeLine{909   \_\_IOM uint32\_t COMP0;                  }
+\DoxyCodeLine{910   \_\_IOM uint32\_t MASK0;                  }
+\DoxyCodeLine{911   \_\_IOM uint32\_t FUNCTION0;              }
+\DoxyCodeLine{912         uint32\_t RESERVED0[1U];}
+\DoxyCodeLine{913   \_\_IOM uint32\_t COMP1;                  }
+\DoxyCodeLine{914   \_\_IOM uint32\_t MASK1;                  }
+\DoxyCodeLine{915   \_\_IOM uint32\_t FUNCTION1;              }
+\DoxyCodeLine{916         uint32\_t RESERVED1[1U];}
+\DoxyCodeLine{917   \_\_IOM uint32\_t COMP2;                  }
+\DoxyCodeLine{918   \_\_IOM uint32\_t MASK2;                  }
+\DoxyCodeLine{919   \_\_IOM uint32\_t FUNCTION2;              }
+\DoxyCodeLine{920         uint32\_t RESERVED2[1U];}
+\DoxyCodeLine{921   \_\_IOM uint32\_t COMP3;                  }
+\DoxyCodeLine{922   \_\_IOM uint32\_t MASK3;                  }
+\DoxyCodeLine{923   \_\_IOM uint32\_t FUNCTION3;              }
+\DoxyCodeLine{924 \} \mbox{\hyperlink{struct_d_w_t___type}{DWT\_Type}};}
+\DoxyCodeLine{925 }
+\DoxyCodeLine{926 \textcolor{comment}{/* DWT Control Register Definitions */}}
+\DoxyCodeLine{927 \textcolor{preprocessor}{\#define DWT\_CTRL\_NUMCOMP\_Pos               28U                                         }}
+\DoxyCodeLine{928 \textcolor{preprocessor}{\#define DWT\_CTRL\_NUMCOMP\_Msk               (0xFUL << DWT\_CTRL\_NUMCOMP\_Pos)             }}
+\DoxyCodeLine{930 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOTRCPKT\_Pos              27U                                         }}
+\DoxyCodeLine{931 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOTRCPKT\_Msk              (0x1UL << DWT\_CTRL\_NOTRCPKT\_Pos)            }}
+\DoxyCodeLine{933 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOEXTTRIG\_Pos             26U                                         }}
+\DoxyCodeLine{934 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOEXTTRIG\_Msk             (0x1UL << DWT\_CTRL\_NOEXTTRIG\_Pos)           }}
+\DoxyCodeLine{936 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOCYCCNT\_Pos              25U                                         }}
+\DoxyCodeLine{937 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOCYCCNT\_Msk              (0x1UL << DWT\_CTRL\_NOCYCCNT\_Pos)            }}
+\DoxyCodeLine{939 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOPRFCNT\_Pos              24U                                         }}
+\DoxyCodeLine{940 \textcolor{preprocessor}{\#define DWT\_CTRL\_NOPRFCNT\_Msk              (0x1UL << DWT\_CTRL\_NOPRFCNT\_Pos)            }}
+\DoxyCodeLine{942 \textcolor{preprocessor}{\#define DWT\_CTRL\_CYCEVTENA\_Pos             22U                                         }}
+\DoxyCodeLine{943 \textcolor{preprocessor}{\#define DWT\_CTRL\_CYCEVTENA\_Msk             (0x1UL << DWT\_CTRL\_CYCEVTENA\_Pos)           }}
+\DoxyCodeLine{945 \textcolor{preprocessor}{\#define DWT\_CTRL\_FOLDEVTENA\_Pos            21U                                         }}
+\DoxyCodeLine{946 \textcolor{preprocessor}{\#define DWT\_CTRL\_FOLDEVTENA\_Msk            (0x1UL << DWT\_CTRL\_FOLDEVTENA\_Pos)          }}
+\DoxyCodeLine{948 \textcolor{preprocessor}{\#define DWT\_CTRL\_LSUEVTENA\_Pos             20U                                         }}
+\DoxyCodeLine{949 \textcolor{preprocessor}{\#define DWT\_CTRL\_LSUEVTENA\_Msk             (0x1UL << DWT\_CTRL\_LSUEVTENA\_Pos)           }}
+\DoxyCodeLine{951 \textcolor{preprocessor}{\#define DWT\_CTRL\_SLEEPEVTENA\_Pos           19U                                         }}
+\DoxyCodeLine{952 \textcolor{preprocessor}{\#define DWT\_CTRL\_SLEEPEVTENA\_Msk           (0x1UL << DWT\_CTRL\_SLEEPEVTENA\_Pos)         }}
+\DoxyCodeLine{954 \textcolor{preprocessor}{\#define DWT\_CTRL\_EXCEVTENA\_Pos             18U                                         }}
+\DoxyCodeLine{955 \textcolor{preprocessor}{\#define DWT\_CTRL\_EXCEVTENA\_Msk             (0x1UL << DWT\_CTRL\_EXCEVTENA\_Pos)           }}
+\DoxyCodeLine{957 \textcolor{preprocessor}{\#define DWT\_CTRL\_CPIEVTENA\_Pos             17U                                         }}
+\DoxyCodeLine{958 \textcolor{preprocessor}{\#define DWT\_CTRL\_CPIEVTENA\_Msk             (0x1UL << DWT\_CTRL\_CPIEVTENA\_Pos)           }}
+\DoxyCodeLine{960 \textcolor{preprocessor}{\#define DWT\_CTRL\_EXCTRCENA\_Pos             16U                                         }}
+\DoxyCodeLine{961 \textcolor{preprocessor}{\#define DWT\_CTRL\_EXCTRCENA\_Msk             (0x1UL << DWT\_CTRL\_EXCTRCENA\_Pos)           }}
+\DoxyCodeLine{963 \textcolor{preprocessor}{\#define DWT\_CTRL\_PCSAMPLENA\_Pos            12U                                         }}
+\DoxyCodeLine{964 \textcolor{preprocessor}{\#define DWT\_CTRL\_PCSAMPLENA\_Msk            (0x1UL << DWT\_CTRL\_PCSAMPLENA\_Pos)          }}
+\DoxyCodeLine{966 \textcolor{preprocessor}{\#define DWT\_CTRL\_SYNCTAP\_Pos               10U                                         }}
+\DoxyCodeLine{967 \textcolor{preprocessor}{\#define DWT\_CTRL\_SYNCTAP\_Msk               (0x3UL << DWT\_CTRL\_SYNCTAP\_Pos)             }}
+\DoxyCodeLine{969 \textcolor{preprocessor}{\#define DWT\_CTRL\_CYCTAP\_Pos                 9U                                         }}
+\DoxyCodeLine{970 \textcolor{preprocessor}{\#define DWT\_CTRL\_CYCTAP\_Msk                (0x1UL << DWT\_CTRL\_CYCTAP\_Pos)              }}
+\DoxyCodeLine{972 \textcolor{preprocessor}{\#define DWT\_CTRL\_POSTINIT\_Pos               5U                                         }}
+\DoxyCodeLine{973 \textcolor{preprocessor}{\#define DWT\_CTRL\_POSTINIT\_Msk              (0xFUL << DWT\_CTRL\_POSTINIT\_Pos)            }}
+\DoxyCodeLine{975 \textcolor{preprocessor}{\#define DWT\_CTRL\_POSTPRESET\_Pos             1U                                         }}
+\DoxyCodeLine{976 \textcolor{preprocessor}{\#define DWT\_CTRL\_POSTPRESET\_Msk            (0xFUL << DWT\_CTRL\_POSTPRESET\_Pos)          }}
+\DoxyCodeLine{978 \textcolor{preprocessor}{\#define DWT\_CTRL\_CYCCNTENA\_Pos              0U                                         }}
+\DoxyCodeLine{979 \textcolor{preprocessor}{\#define DWT\_CTRL\_CYCCNTENA\_Msk             (0x1UL }\textcolor{comment}{/*<< DWT\_CTRL\_CYCCNTENA\_Pos*/}\textcolor{preprocessor}{)       }}
+\DoxyCodeLine{981 \textcolor{comment}{/* DWT CPI Count Register Definitions */}}
+\DoxyCodeLine{982 \textcolor{preprocessor}{\#define DWT\_CPICNT\_CPICNT\_Pos               0U                                         }}
+\DoxyCodeLine{983 \textcolor{preprocessor}{\#define DWT\_CPICNT\_CPICNT\_Msk              (0xFFUL }\textcolor{comment}{/*<< DWT\_CPICNT\_CPICNT\_Pos*/}\textcolor{preprocessor}{)       }}
+\DoxyCodeLine{985 \textcolor{comment}{/* DWT Exception Overhead Count Register Definitions */}}
+\DoxyCodeLine{986 \textcolor{preprocessor}{\#define DWT\_EXCCNT\_EXCCNT\_Pos               0U                                         }}
+\DoxyCodeLine{987 \textcolor{preprocessor}{\#define DWT\_EXCCNT\_EXCCNT\_Msk              (0xFFUL }\textcolor{comment}{/*<< DWT\_EXCCNT\_EXCCNT\_Pos*/}\textcolor{preprocessor}{)       }}
+\DoxyCodeLine{989 \textcolor{comment}{/* DWT Sleep Count Register Definitions */}}
+\DoxyCodeLine{990 \textcolor{preprocessor}{\#define DWT\_SLEEPCNT\_SLEEPCNT\_Pos           0U                                         }}
+\DoxyCodeLine{991 \textcolor{preprocessor}{\#define DWT\_SLEEPCNT\_SLEEPCNT\_Msk          (0xFFUL }\textcolor{comment}{/*<< DWT\_SLEEPCNT\_SLEEPCNT\_Pos*/}\textcolor{preprocessor}{)   }}
+\DoxyCodeLine{993 \textcolor{comment}{/* DWT LSU Count Register Definitions */}}
+\DoxyCodeLine{994 \textcolor{preprocessor}{\#define DWT\_LSUCNT\_LSUCNT\_Pos               0U                                         }}
+\DoxyCodeLine{995 \textcolor{preprocessor}{\#define DWT\_LSUCNT\_LSUCNT\_Msk              (0xFFUL }\textcolor{comment}{/*<< DWT\_LSUCNT\_LSUCNT\_Pos*/}\textcolor{preprocessor}{)       }}
+\DoxyCodeLine{997 \textcolor{comment}{/* DWT Folded-\/instruction Count Register Definitions */}}
+\DoxyCodeLine{998 \textcolor{preprocessor}{\#define DWT\_FOLDCNT\_FOLDCNT\_Pos             0U                                         }}
+\DoxyCodeLine{999 \textcolor{preprocessor}{\#define DWT\_FOLDCNT\_FOLDCNT\_Msk            (0xFFUL }\textcolor{comment}{/*<< DWT\_FOLDCNT\_FOLDCNT\_Pos*/}\textcolor{preprocessor}{)     }}
+\DoxyCodeLine{1001 \textcolor{comment}{/* DWT Comparator Mask Register Definitions */}}
+\DoxyCodeLine{1002 \textcolor{preprocessor}{\#define DWT\_MASK\_MASK\_Pos                   0U                                         }}
+\DoxyCodeLine{1003 \textcolor{preprocessor}{\#define DWT\_MASK\_MASK\_Msk                  (0x1FUL }\textcolor{comment}{/*<< DWT\_MASK\_MASK\_Pos*/}\textcolor{preprocessor}{)           }}
+\DoxyCodeLine{1005 \textcolor{comment}{/* DWT Comparator Function Register Definitions */}}
+\DoxyCodeLine{1006 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_MATCHED\_Pos           24U                                         }}
+\DoxyCodeLine{1007 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_MATCHED\_Msk           (0x1UL << DWT\_FUNCTION\_MATCHED\_Pos)         }}
+\DoxyCodeLine{1009 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVADDR1\_Pos        16U                                         }}
+\DoxyCodeLine{1010 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVADDR1\_Msk        (0xFUL << DWT\_FUNCTION\_DATAVADDR1\_Pos)      }}
+\DoxyCodeLine{1012 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVADDR0\_Pos        12U                                         }}
+\DoxyCodeLine{1013 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVADDR0\_Msk        (0xFUL << DWT\_FUNCTION\_DATAVADDR0\_Pos)      }}
+\DoxyCodeLine{1015 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVSIZE\_Pos         10U                                         }}
+\DoxyCodeLine{1016 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVSIZE\_Msk         (0x3UL << DWT\_FUNCTION\_DATAVSIZE\_Pos)       }}
+\DoxyCodeLine{1018 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_LNK1ENA\_Pos            9U                                         }}
+\DoxyCodeLine{1019 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_LNK1ENA\_Msk           (0x1UL << DWT\_FUNCTION\_LNK1ENA\_Pos)         }}
+\DoxyCodeLine{1021 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVMATCH\_Pos         8U                                         }}
+\DoxyCodeLine{1022 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_DATAVMATCH\_Msk        (0x1UL << DWT\_FUNCTION\_DATAVMATCH\_Pos)      }}
+\DoxyCodeLine{1024 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_CYCMATCH\_Pos           7U                                         }}
+\DoxyCodeLine{1025 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_CYCMATCH\_Msk          (0x1UL << DWT\_FUNCTION\_CYCMATCH\_Pos)        }}
+\DoxyCodeLine{1027 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_EMITRANGE\_Pos          5U                                         }}
+\DoxyCodeLine{1028 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_EMITRANGE\_Msk         (0x1UL << DWT\_FUNCTION\_EMITRANGE\_Pos)       }}
+\DoxyCodeLine{1030 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_FUNCTION\_Pos           0U                                         }}
+\DoxyCodeLine{1031 \textcolor{preprocessor}{\#define DWT\_FUNCTION\_FUNCTION\_Msk          (0xFUL }\textcolor{comment}{/*<< DWT\_FUNCTION\_FUNCTION\_Pos*/}\textcolor{preprocessor}{)     }\textcolor{comment}{/* end of group CMSIS\_DWT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1034 }
+\DoxyCodeLine{1035 }
+\DoxyCodeLine{1046 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{1047 \{}
+\DoxyCodeLine{1048   \_\_IM  uint32\_t SSPSR;                  }
+\DoxyCodeLine{1049   \_\_IOM uint32\_t CSPSR;                  }
+\DoxyCodeLine{1050         uint32\_t RESERVED0[2U];}
+\DoxyCodeLine{1051   \_\_IOM uint32\_t ACPR;                   }
+\DoxyCodeLine{1052         uint32\_t RESERVED1[55U];}
+\DoxyCodeLine{1053   \_\_IOM uint32\_t SPPR;                   }
+\DoxyCodeLine{1054         uint32\_t RESERVED2[131U];}
+\DoxyCodeLine{1055   \_\_IM  uint32\_t FFSR;                   }
+\DoxyCodeLine{1056   \_\_IOM uint32\_t FFCR;                   }
+\DoxyCodeLine{1057   \_\_IM  uint32\_t FSCR;                   }
+\DoxyCodeLine{1058         uint32\_t RESERVED3[759U];}
+\DoxyCodeLine{1059   \_\_IM  uint32\_t TRIGGER;                }
+\DoxyCodeLine{1060   \_\_IM  uint32\_t FIFO0;                  }
+\DoxyCodeLine{1061   \_\_IM  uint32\_t ITATBCTR2;              }
+\DoxyCodeLine{1062         uint32\_t RESERVED4[1U];}
+\DoxyCodeLine{1063   \_\_IM  uint32\_t ITATBCTR0;              }
+\DoxyCodeLine{1064   \_\_IM  uint32\_t FIFO1;                  }
+\DoxyCodeLine{1065   \_\_IOM uint32\_t ITCTRL;                 }
+\DoxyCodeLine{1066         uint32\_t RESERVED5[39U];}
+\DoxyCodeLine{1067   \_\_IOM uint32\_t CLAIMSET;               }
+\DoxyCodeLine{1068   \_\_IOM uint32\_t CLAIMCLR;               }
+\DoxyCodeLine{1069         uint32\_t RESERVED7[8U];}
+\DoxyCodeLine{1070   \_\_IM  uint32\_t DEVID;                  }
+\DoxyCodeLine{1071   \_\_IM  uint32\_t DEVTYPE;                }
+\DoxyCodeLine{1072 \} \mbox{\hyperlink{struct_t_p_i___type}{TPI\_Type}};}
+\DoxyCodeLine{1073 }
+\DoxyCodeLine{1074 \textcolor{comment}{/* TPI Asynchronous Clock Prescaler Register Definitions */}}
+\DoxyCodeLine{1075 \textcolor{preprocessor}{\#define TPI\_ACPR\_PRESCALER\_Pos              0U                                         }}
+\DoxyCodeLine{1076 \textcolor{preprocessor}{\#define TPI\_ACPR\_PRESCALER\_Msk             (0x1FFFUL }\textcolor{comment}{/*<< TPI\_ACPR\_PRESCALER\_Pos*/}\textcolor{preprocessor}{)    }}
+\DoxyCodeLine{1078 \textcolor{comment}{/* TPI Selected Pin Protocol Register Definitions */}}
+\DoxyCodeLine{1079 \textcolor{preprocessor}{\#define TPI\_SPPR\_TXMODE\_Pos                 0U                                         }}
+\DoxyCodeLine{1080 \textcolor{preprocessor}{\#define TPI\_SPPR\_TXMODE\_Msk                (0x3UL }\textcolor{comment}{/*<< TPI\_SPPR\_TXMODE\_Pos*/}\textcolor{preprocessor}{)          }}
+\DoxyCodeLine{1082 \textcolor{comment}{/* TPI Formatter and Flush Status Register Definitions */}}
+\DoxyCodeLine{1083 \textcolor{preprocessor}{\#define TPI\_FFSR\_FtNonStop\_Pos              3U                                         }}
+\DoxyCodeLine{1084 \textcolor{preprocessor}{\#define TPI\_FFSR\_FtNonStop\_Msk             (0x1UL << TPI\_FFSR\_FtNonStop\_Pos)           }}
+\DoxyCodeLine{1086 \textcolor{preprocessor}{\#define TPI\_FFSR\_TCPresent\_Pos              2U                                         }}
+\DoxyCodeLine{1087 \textcolor{preprocessor}{\#define TPI\_FFSR\_TCPresent\_Msk             (0x1UL << TPI\_FFSR\_TCPresent\_Pos)           }}
+\DoxyCodeLine{1089 \textcolor{preprocessor}{\#define TPI\_FFSR\_FtStopped\_Pos              1U                                         }}
+\DoxyCodeLine{1090 \textcolor{preprocessor}{\#define TPI\_FFSR\_FtStopped\_Msk             (0x1UL << TPI\_FFSR\_FtStopped\_Pos)           }}
+\DoxyCodeLine{1092 \textcolor{preprocessor}{\#define TPI\_FFSR\_FlInProg\_Pos               0U                                         }}
+\DoxyCodeLine{1093 \textcolor{preprocessor}{\#define TPI\_FFSR\_FlInProg\_Msk              (0x1UL }\textcolor{comment}{/*<< TPI\_FFSR\_FlInProg\_Pos*/}\textcolor{preprocessor}{)        }}
+\DoxyCodeLine{1095 \textcolor{comment}{/* TPI Formatter and Flush Control Register Definitions */}}
+\DoxyCodeLine{1096 \textcolor{preprocessor}{\#define TPI\_FFCR\_TrigIn\_Pos                 8U                                         }}
+\DoxyCodeLine{1097 \textcolor{preprocessor}{\#define TPI\_FFCR\_TrigIn\_Msk                (0x1UL << TPI\_FFCR\_TrigIn\_Pos)              }}
+\DoxyCodeLine{1099 \textcolor{preprocessor}{\#define TPI\_FFCR\_EnFCont\_Pos                1U                                         }}
+\DoxyCodeLine{1100 \textcolor{preprocessor}{\#define TPI\_FFCR\_EnFCont\_Msk               (0x1UL << TPI\_FFCR\_EnFCont\_Pos)             }}
+\DoxyCodeLine{1102 \textcolor{comment}{/* TPI TRIGGER Register Definitions */}}
+\DoxyCodeLine{1103 \textcolor{preprocessor}{\#define TPI\_TRIGGER\_TRIGGER\_Pos             0U                                         }}
+\DoxyCodeLine{1104 \textcolor{preprocessor}{\#define TPI\_TRIGGER\_TRIGGER\_Msk            (0x1UL }\textcolor{comment}{/*<< TPI\_TRIGGER\_TRIGGER\_Pos*/}\textcolor{preprocessor}{)      }}
+\DoxyCodeLine{1106 \textcolor{comment}{/* TPI Integration ETM Data Register Definitions (FIFO0) */}}
+\DoxyCodeLine{1107 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ITM\_ATVALID\_Pos          29U                                         }}
+\DoxyCodeLine{1108 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ITM\_ATVALID\_Msk          (0x1UL << TPI\_FIFO0\_ITM\_ATVALID\_Pos)        }}
+\DoxyCodeLine{1110 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ITM\_bytecount\_Pos        27U                                         }}
+\DoxyCodeLine{1111 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ITM\_bytecount\_Msk        (0x3UL << TPI\_FIFO0\_ITM\_bytecount\_Pos)      }}
+\DoxyCodeLine{1113 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM\_ATVALID\_Pos          26U                                         }}
+\DoxyCodeLine{1114 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM\_ATVALID\_Msk          (0x1UL << TPI\_FIFO0\_ETM\_ATVALID\_Pos)        }}
+\DoxyCodeLine{1116 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM\_bytecount\_Pos        24U                                         }}
+\DoxyCodeLine{1117 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM\_bytecount\_Msk        (0x3UL << TPI\_FIFO0\_ETM\_bytecount\_Pos)      }}
+\DoxyCodeLine{1119 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM2\_Pos                 16U                                         }}
+\DoxyCodeLine{1120 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM2\_Msk                 (0xFFUL << TPI\_FIFO0\_ETM2\_Pos)              }}
+\DoxyCodeLine{1122 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM1\_Pos                  8U                                         }}
+\DoxyCodeLine{1123 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM1\_Msk                 (0xFFUL << TPI\_FIFO0\_ETM1\_Pos)              }}
+\DoxyCodeLine{1125 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM0\_Pos                  0U                                         }}
+\DoxyCodeLine{1126 \textcolor{preprocessor}{\#define TPI\_FIFO0\_ETM0\_Msk                 (0xFFUL }\textcolor{comment}{/*<< TPI\_FIFO0\_ETM0\_Pos*/}\textcolor{preprocessor}{)          }}
+\DoxyCodeLine{1128 \textcolor{comment}{/* TPI ITATBCTR2 Register Definitions */}}
+\DoxyCodeLine{1129 \textcolor{preprocessor}{\#define TPI\_ITATBCTR2\_ATREADY2\_Pos          0U                                         }}
+\DoxyCodeLine{1130 \textcolor{preprocessor}{\#define TPI\_ITATBCTR2\_ATREADY2\_Msk         (0x1UL }\textcolor{comment}{/*<< TPI\_ITATBCTR2\_ATREADY2\_Pos*/}\textcolor{preprocessor}{)   }}
+\DoxyCodeLine{1132 \textcolor{preprocessor}{\#define TPI\_ITATBCTR2\_ATREADY1\_Pos          0U                                         }}
+\DoxyCodeLine{1133 \textcolor{preprocessor}{\#define TPI\_ITATBCTR2\_ATREADY1\_Msk         (0x1UL }\textcolor{comment}{/*<< TPI\_ITATBCTR2\_ATREADY1\_Pos*/}\textcolor{preprocessor}{)   }}
+\DoxyCodeLine{1135 \textcolor{comment}{/* TPI Integration ITM Data Register Definitions (FIFO1) */}}
+\DoxyCodeLine{1136 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM\_ATVALID\_Pos          29U                                         }}
+\DoxyCodeLine{1137 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM\_ATVALID\_Msk          (0x1UL << TPI\_FIFO1\_ITM\_ATVALID\_Pos)        }}
+\DoxyCodeLine{1139 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM\_bytecount\_Pos        27U                                         }}
+\DoxyCodeLine{1140 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM\_bytecount\_Msk        (0x3UL << TPI\_FIFO1\_ITM\_bytecount\_Pos)      }}
+\DoxyCodeLine{1142 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ETM\_ATVALID\_Pos          26U                                         }}
+\DoxyCodeLine{1143 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ETM\_ATVALID\_Msk          (0x1UL << TPI\_FIFO1\_ETM\_ATVALID\_Pos)        }}
+\DoxyCodeLine{1145 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ETM\_bytecount\_Pos        24U                                         }}
+\DoxyCodeLine{1146 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ETM\_bytecount\_Msk        (0x3UL << TPI\_FIFO1\_ETM\_bytecount\_Pos)      }}
+\DoxyCodeLine{1148 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM2\_Pos                 16U                                         }}
+\DoxyCodeLine{1149 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM2\_Msk                 (0xFFUL << TPI\_FIFO1\_ITM2\_Pos)              }}
+\DoxyCodeLine{1151 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM1\_Pos                  8U                                         }}
+\DoxyCodeLine{1152 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM1\_Msk                 (0xFFUL << TPI\_FIFO1\_ITM1\_Pos)              }}
+\DoxyCodeLine{1154 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM0\_Pos                  0U                                         }}
+\DoxyCodeLine{1155 \textcolor{preprocessor}{\#define TPI\_FIFO1\_ITM0\_Msk                 (0xFFUL }\textcolor{comment}{/*<< TPI\_FIFO1\_ITM0\_Pos*/}\textcolor{preprocessor}{)          }}
+\DoxyCodeLine{1157 \textcolor{comment}{/* TPI ITATBCTR0 Register Definitions */}}
+\DoxyCodeLine{1158 \textcolor{preprocessor}{\#define TPI\_ITATBCTR0\_ATREADY2\_Pos          0U                                         }}
+\DoxyCodeLine{1159 \textcolor{preprocessor}{\#define TPI\_ITATBCTR0\_ATREADY2\_Msk         (0x1UL }\textcolor{comment}{/*<< TPI\_ITATBCTR0\_ATREADY2\_Pos*/}\textcolor{preprocessor}{)   }}
+\DoxyCodeLine{1161 \textcolor{preprocessor}{\#define TPI\_ITATBCTR0\_ATREADY1\_Pos          0U                                         }}
+\DoxyCodeLine{1162 \textcolor{preprocessor}{\#define TPI\_ITATBCTR0\_ATREADY1\_Msk         (0x1UL }\textcolor{comment}{/*<< TPI\_ITATBCTR0\_ATREADY1\_Pos*/}\textcolor{preprocessor}{)   }}
+\DoxyCodeLine{1164 \textcolor{comment}{/* TPI Integration Mode Control Register Definitions */}}
+\DoxyCodeLine{1165 \textcolor{preprocessor}{\#define TPI\_ITCTRL\_Mode\_Pos                 0U                                         }}
+\DoxyCodeLine{1166 \textcolor{preprocessor}{\#define TPI\_ITCTRL\_Mode\_Msk                (0x3UL }\textcolor{comment}{/*<< TPI\_ITCTRL\_Mode\_Pos*/}\textcolor{preprocessor}{)          }}
+\DoxyCodeLine{1168 \textcolor{comment}{/* TPI DEVID Register Definitions */}}
+\DoxyCodeLine{1169 \textcolor{preprocessor}{\#define TPI\_DEVID\_NRZVALID\_Pos             11U                                         }}
+\DoxyCodeLine{1170 \textcolor{preprocessor}{\#define TPI\_DEVID\_NRZVALID\_Msk             (0x1UL << TPI\_DEVID\_NRZVALID\_Pos)           }}
+\DoxyCodeLine{1172 \textcolor{preprocessor}{\#define TPI\_DEVID\_MANCVALID\_Pos            10U                                         }}
+\DoxyCodeLine{1173 \textcolor{preprocessor}{\#define TPI\_DEVID\_MANCVALID\_Msk            (0x1UL << TPI\_DEVID\_MANCVALID\_Pos)          }}
+\DoxyCodeLine{1175 \textcolor{preprocessor}{\#define TPI\_DEVID\_PTINVALID\_Pos             9U                                         }}
+\DoxyCodeLine{1176 \textcolor{preprocessor}{\#define TPI\_DEVID\_PTINVALID\_Msk            (0x1UL << TPI\_DEVID\_PTINVALID\_Pos)          }}
+\DoxyCodeLine{1178 \textcolor{preprocessor}{\#define TPI\_DEVID\_MinBufSz\_Pos              6U                                         }}
+\DoxyCodeLine{1179 \textcolor{preprocessor}{\#define TPI\_DEVID\_MinBufSz\_Msk             (0x7UL << TPI\_DEVID\_MinBufSz\_Pos)           }}
+\DoxyCodeLine{1181 \textcolor{preprocessor}{\#define TPI\_DEVID\_AsynClkIn\_Pos             5U                                         }}
+\DoxyCodeLine{1182 \textcolor{preprocessor}{\#define TPI\_DEVID\_AsynClkIn\_Msk            (0x1UL << TPI\_DEVID\_AsynClkIn\_Pos)          }}
+\DoxyCodeLine{1184 \textcolor{preprocessor}{\#define TPI\_DEVID\_NrTraceInput\_Pos          0U                                         }}
+\DoxyCodeLine{1185 \textcolor{preprocessor}{\#define TPI\_DEVID\_NrTraceInput\_Msk         (0x1FUL }\textcolor{comment}{/*<< TPI\_DEVID\_NrTraceInput\_Pos*/}\textcolor{preprocessor}{)  }}
+\DoxyCodeLine{1187 \textcolor{comment}{/* TPI DEVTYPE Register Definitions */}}
+\DoxyCodeLine{1188 \textcolor{preprocessor}{\#define TPI\_DEVTYPE\_SubType\_Pos             4U                                         }}
+\DoxyCodeLine{1189 \textcolor{preprocessor}{\#define TPI\_DEVTYPE\_SubType\_Msk            (0xFUL }\textcolor{comment}{/*<< TPI\_DEVTYPE\_SubType\_Pos*/}\textcolor{preprocessor}{)      }}
+\DoxyCodeLine{1191 \textcolor{preprocessor}{\#define TPI\_DEVTYPE\_MajorType\_Pos           0U                                         }}
+\DoxyCodeLine{1192 \textcolor{preprocessor}{\#define TPI\_DEVTYPE\_MajorType\_Msk          (0xFUL << TPI\_DEVTYPE\_MajorType\_Pos)         }\textcolor{comment}{/* end of group CMSIS\_TPI */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1195 }
+\DoxyCodeLine{1196 }
+\DoxyCodeLine{1197 \textcolor{preprocessor}{\#if defined (\_\_MPU\_PRESENT) \&\& (\_\_MPU\_PRESENT == 1U)}}
+\DoxyCodeLine{1208 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{1209 \{}
+\DoxyCodeLine{1210   \_\_IM  uint32\_t TYPE;                   }
+\DoxyCodeLine{1211   \_\_IOM uint32\_t CTRL;                   }
+\DoxyCodeLine{1212   \_\_IOM uint32\_t RNR;                    }
+\DoxyCodeLine{1213   \_\_IOM uint32\_t RBAR;                   }
+\DoxyCodeLine{1214   \_\_IOM uint32\_t RASR;                   }
+\DoxyCodeLine{1215   \_\_IOM uint32\_t RBAR\_A1;                }
+\DoxyCodeLine{1216   \_\_IOM uint32\_t RASR\_A1;                }
+\DoxyCodeLine{1217   \_\_IOM uint32\_t RBAR\_A2;                }
+\DoxyCodeLine{1218   \_\_IOM uint32\_t RASR\_A2;                }
+\DoxyCodeLine{1219   \_\_IOM uint32\_t RBAR\_A3;                }
+\DoxyCodeLine{1220   \_\_IOM uint32\_t RASR\_A3;                }
+\DoxyCodeLine{1221 \} MPU\_Type;}
+\DoxyCodeLine{1222 }
+\DoxyCodeLine{1223 \textcolor{preprocessor}{\#define MPU\_TYPE\_RALIASES                  4U}}
+\DoxyCodeLine{1224 }
+\DoxyCodeLine{1225 \textcolor{comment}{/* MPU Type Register Definitions */}}
+\DoxyCodeLine{1226 \textcolor{preprocessor}{\#define MPU\_TYPE\_IREGION\_Pos               16U                                            }}
+\DoxyCodeLine{1227 \textcolor{preprocessor}{\#define MPU\_TYPE\_IREGION\_Msk               (0xFFUL << MPU\_TYPE\_IREGION\_Pos)               }}
+\DoxyCodeLine{1229 \textcolor{preprocessor}{\#define MPU\_TYPE\_DREGION\_Pos                8U                                            }}
+\DoxyCodeLine{1230 \textcolor{preprocessor}{\#define MPU\_TYPE\_DREGION\_Msk               (0xFFUL << MPU\_TYPE\_DREGION\_Pos)               }}
+\DoxyCodeLine{1232 \textcolor{preprocessor}{\#define MPU\_TYPE\_SEPARATE\_Pos               0U                                            }}
+\DoxyCodeLine{1233 \textcolor{preprocessor}{\#define MPU\_TYPE\_SEPARATE\_Msk              (1UL }\textcolor{comment}{/*<< MPU\_TYPE\_SEPARATE\_Pos*/}\textcolor{preprocessor}{)             }}
+\DoxyCodeLine{1235 \textcolor{comment}{/* MPU Control Register Definitions */}}
+\DoxyCodeLine{1236 \textcolor{preprocessor}{\#define MPU\_CTRL\_PRIVDEFENA\_Pos             2U                                            }}
+\DoxyCodeLine{1237 \textcolor{preprocessor}{\#define MPU\_CTRL\_PRIVDEFENA\_Msk            (1UL << MPU\_CTRL\_PRIVDEFENA\_Pos)               }}
+\DoxyCodeLine{1239 \textcolor{preprocessor}{\#define MPU\_CTRL\_HFNMIENA\_Pos               1U                                            }}
+\DoxyCodeLine{1240 \textcolor{preprocessor}{\#define MPU\_CTRL\_HFNMIENA\_Msk              (1UL << MPU\_CTRL\_HFNMIENA\_Pos)                 }}
+\DoxyCodeLine{1242 \textcolor{preprocessor}{\#define MPU\_CTRL\_ENABLE\_Pos                 0U                                            }}
+\DoxyCodeLine{1243 \textcolor{preprocessor}{\#define MPU\_CTRL\_ENABLE\_Msk                (1UL }\textcolor{comment}{/*<< MPU\_CTRL\_ENABLE\_Pos*/}\textcolor{preprocessor}{)               }}
+\DoxyCodeLine{1245 \textcolor{comment}{/* MPU Region Number Register Definitions */}}
+\DoxyCodeLine{1246 \textcolor{preprocessor}{\#define MPU\_RNR\_REGION\_Pos                  0U                                            }}
+\DoxyCodeLine{1247 \textcolor{preprocessor}{\#define MPU\_RNR\_REGION\_Msk                 (0xFFUL }\textcolor{comment}{/*<< MPU\_RNR\_REGION\_Pos*/}\textcolor{preprocessor}{)             }}
+\DoxyCodeLine{1249 \textcolor{comment}{/* MPU Region Base Address Register Definitions */}}
+\DoxyCodeLine{1250 \textcolor{preprocessor}{\#define MPU\_RBAR\_ADDR\_Pos                   5U                                            }}
+\DoxyCodeLine{1251 \textcolor{preprocessor}{\#define MPU\_RBAR\_ADDR\_Msk                  (0x7FFFFFFUL << MPU\_RBAR\_ADDR\_Pos)             }}
+\DoxyCodeLine{1253 \textcolor{preprocessor}{\#define MPU\_RBAR\_VALID\_Pos                  4U                                            }}
+\DoxyCodeLine{1254 \textcolor{preprocessor}{\#define MPU\_RBAR\_VALID\_Msk                 (1UL << MPU\_RBAR\_VALID\_Pos)                    }}
+\DoxyCodeLine{1256 \textcolor{preprocessor}{\#define MPU\_RBAR\_REGION\_Pos                 0U                                            }}
+\DoxyCodeLine{1257 \textcolor{preprocessor}{\#define MPU\_RBAR\_REGION\_Msk                (0xFUL }\textcolor{comment}{/*<< MPU\_RBAR\_REGION\_Pos*/}\textcolor{preprocessor}{)             }}
+\DoxyCodeLine{1259 \textcolor{comment}{/* MPU Region Attribute and Size Register Definitions */}}
+\DoxyCodeLine{1260 \textcolor{preprocessor}{\#define MPU\_RASR\_ATTRS\_Pos                 16U                                            }}
+\DoxyCodeLine{1261 \textcolor{preprocessor}{\#define MPU\_RASR\_ATTRS\_Msk                 (0xFFFFUL << MPU\_RASR\_ATTRS\_Pos)               }}
+\DoxyCodeLine{1263 \textcolor{preprocessor}{\#define MPU\_RASR\_XN\_Pos                    28U                                            }}
+\DoxyCodeLine{1264 \textcolor{preprocessor}{\#define MPU\_RASR\_XN\_Msk                    (1UL << MPU\_RASR\_XN\_Pos)                       }}
+\DoxyCodeLine{1266 \textcolor{preprocessor}{\#define MPU\_RASR\_AP\_Pos                    24U                                            }}
+\DoxyCodeLine{1267 \textcolor{preprocessor}{\#define MPU\_RASR\_AP\_Msk                    (0x7UL << MPU\_RASR\_AP\_Pos)                     }}
+\DoxyCodeLine{1269 \textcolor{preprocessor}{\#define MPU\_RASR\_TEX\_Pos                   19U                                            }}
+\DoxyCodeLine{1270 \textcolor{preprocessor}{\#define MPU\_RASR\_TEX\_Msk                   (0x7UL << MPU\_RASR\_TEX\_Pos)                    }}
+\DoxyCodeLine{1272 \textcolor{preprocessor}{\#define MPU\_RASR\_S\_Pos                     18U                                            }}
+\DoxyCodeLine{1273 \textcolor{preprocessor}{\#define MPU\_RASR\_S\_Msk                     (1UL << MPU\_RASR\_S\_Pos)                        }}
+\DoxyCodeLine{1275 \textcolor{preprocessor}{\#define MPU\_RASR\_C\_Pos                     17U                                            }}
+\DoxyCodeLine{1276 \textcolor{preprocessor}{\#define MPU\_RASR\_C\_Msk                     (1UL << MPU\_RASR\_C\_Pos)                        }}
+\DoxyCodeLine{1278 \textcolor{preprocessor}{\#define MPU\_RASR\_B\_Pos                     16U                                            }}
+\DoxyCodeLine{1279 \textcolor{preprocessor}{\#define MPU\_RASR\_B\_Msk                     (1UL << MPU\_RASR\_B\_Pos)                        }}
+\DoxyCodeLine{1281 \textcolor{preprocessor}{\#define MPU\_RASR\_SRD\_Pos                    8U                                            }}
+\DoxyCodeLine{1282 \textcolor{preprocessor}{\#define MPU\_RASR\_SRD\_Msk                   (0xFFUL << MPU\_RASR\_SRD\_Pos)                   }}
+\DoxyCodeLine{1284 \textcolor{preprocessor}{\#define MPU\_RASR\_SIZE\_Pos                   1U                                            }}
+\DoxyCodeLine{1285 \textcolor{preprocessor}{\#define MPU\_RASR\_SIZE\_Msk                  (0x1FUL << MPU\_RASR\_SIZE\_Pos)                  }}
+\DoxyCodeLine{1287 \textcolor{preprocessor}{\#define MPU\_RASR\_ENABLE\_Pos                 0U                                            }}
+\DoxyCodeLine{1288 \textcolor{preprocessor}{\#define MPU\_RASR\_ENABLE\_Msk                (1UL }\textcolor{comment}{/*<< MPU\_RASR\_ENABLE\_Pos*/}\textcolor{preprocessor}{)               }}
+\DoxyCodeLine{1291 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* defined (\_\_MPU\_PRESENT) \&\& (\_\_MPU\_PRESENT == 1U) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1292 }
+\DoxyCodeLine{1293 }
+\DoxyCodeLine{1304 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{1305 \{}
+\DoxyCodeLine{1306         uint32\_t RESERVED0[1U];}
+\DoxyCodeLine{1307   \_\_IOM uint32\_t FPCCR;                  }
+\DoxyCodeLine{1308   \_\_IOM uint32\_t FPCAR;                  }
+\DoxyCodeLine{1309   \_\_IOM uint32\_t FPDSCR;                 }
+\DoxyCodeLine{1310   \_\_IM  uint32\_t MVFR0;                  }
+\DoxyCodeLine{1311   \_\_IM  uint32\_t MVFR1;                  }
+\DoxyCodeLine{1312   \_\_IM  uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga479130e53a8b3c36fd8ee38b503a3911}{MVFR2}};                  }
+\DoxyCodeLine{1313 \} \mbox{\hyperlink{struct_f_p_u___type}{FPU\_Type}};}
+\DoxyCodeLine{1314 }
+\DoxyCodeLine{1315 \textcolor{comment}{/* Floating-\/Point Context Control Register Definitions */}}
+\DoxyCodeLine{1316 \textcolor{preprocessor}{\#define FPU\_FPCCR\_ASPEN\_Pos                31U                                            }}
+\DoxyCodeLine{1317 \textcolor{preprocessor}{\#define FPU\_FPCCR\_ASPEN\_Msk                (1UL << FPU\_FPCCR\_ASPEN\_Pos)                   }}
+\DoxyCodeLine{1319 \textcolor{preprocessor}{\#define FPU\_FPCCR\_LSPEN\_Pos                30U                                            }}
+\DoxyCodeLine{1320 \textcolor{preprocessor}{\#define FPU\_FPCCR\_LSPEN\_Msk                (1UL << FPU\_FPCCR\_LSPEN\_Pos)                   }}
+\DoxyCodeLine{1322 \textcolor{preprocessor}{\#define FPU\_FPCCR\_MONRDY\_Pos                8U                                            }}
+\DoxyCodeLine{1323 \textcolor{preprocessor}{\#define FPU\_FPCCR\_MONRDY\_Msk               (1UL << FPU\_FPCCR\_MONRDY\_Pos)                  }}
+\DoxyCodeLine{1325 \textcolor{preprocessor}{\#define FPU\_FPCCR\_BFRDY\_Pos                 6U                                            }}
+\DoxyCodeLine{1326 \textcolor{preprocessor}{\#define FPU\_FPCCR\_BFRDY\_Msk                (1UL << FPU\_FPCCR\_BFRDY\_Pos)                   }}
+\DoxyCodeLine{1328 \textcolor{preprocessor}{\#define FPU\_FPCCR\_MMRDY\_Pos                 5U                                            }}
+\DoxyCodeLine{1329 \textcolor{preprocessor}{\#define FPU\_FPCCR\_MMRDY\_Msk                (1UL << FPU\_FPCCR\_MMRDY\_Pos)                   }}
+\DoxyCodeLine{1331 \textcolor{preprocessor}{\#define FPU\_FPCCR\_HFRDY\_Pos                 4U                                            }}
+\DoxyCodeLine{1332 \textcolor{preprocessor}{\#define FPU\_FPCCR\_HFRDY\_Msk                (1UL << FPU\_FPCCR\_HFRDY\_Pos)                   }}
+\DoxyCodeLine{1334 \textcolor{preprocessor}{\#define FPU\_FPCCR\_THREAD\_Pos                3U                                            }}
+\DoxyCodeLine{1335 \textcolor{preprocessor}{\#define FPU\_FPCCR\_THREAD\_Msk               (1UL << FPU\_FPCCR\_THREAD\_Pos)                  }}
+\DoxyCodeLine{1337 \textcolor{preprocessor}{\#define FPU\_FPCCR\_USER\_Pos                  1U                                            }}
+\DoxyCodeLine{1338 \textcolor{preprocessor}{\#define FPU\_FPCCR\_USER\_Msk                 (1UL << FPU\_FPCCR\_USER\_Pos)                    }}
+\DoxyCodeLine{1340 \textcolor{preprocessor}{\#define FPU\_FPCCR\_LSPACT\_Pos                0U                                            }}
+\DoxyCodeLine{1341 \textcolor{preprocessor}{\#define FPU\_FPCCR\_LSPACT\_Msk               (1UL }\textcolor{comment}{/*<< FPU\_FPCCR\_LSPACT\_Pos*/}\textcolor{preprocessor}{)              }}
+\DoxyCodeLine{1343 \textcolor{comment}{/* Floating-\/Point Context Address Register Definitions */}}
+\DoxyCodeLine{1344 \textcolor{preprocessor}{\#define FPU\_FPCAR\_ADDRESS\_Pos               3U                                            }}
+\DoxyCodeLine{1345 \textcolor{preprocessor}{\#define FPU\_FPCAR\_ADDRESS\_Msk              (0x1FFFFFFFUL << FPU\_FPCAR\_ADDRESS\_Pos)        }}
+\DoxyCodeLine{1347 \textcolor{comment}{/* Floating-\/Point Default Status Control Register Definitions */}}
+\DoxyCodeLine{1348 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_AHP\_Pos                 26U                                            }}
+\DoxyCodeLine{1349 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_AHP\_Msk                 (1UL << FPU\_FPDSCR\_AHP\_Pos)                    }}
+\DoxyCodeLine{1351 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_DN\_Pos                  25U                                            }}
+\DoxyCodeLine{1352 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_DN\_Msk                  (1UL << FPU\_FPDSCR\_DN\_Pos)                     }}
+\DoxyCodeLine{1354 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_FZ\_Pos                  24U                                            }}
+\DoxyCodeLine{1355 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_FZ\_Msk                  (1UL << FPU\_FPDSCR\_FZ\_Pos)                     }}
+\DoxyCodeLine{1357 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_RMode\_Pos               22U                                            }}
+\DoxyCodeLine{1358 \textcolor{preprocessor}{\#define FPU\_FPDSCR\_RMode\_Msk               (3UL << FPU\_FPDSCR\_RMode\_Pos)                  }}
+\DoxyCodeLine{1360 \textcolor{comment}{/* Media and FP Feature Register 0 Definitions */}}
+\DoxyCodeLine{1361 \textcolor{preprocessor}{\#define FPU\_MVFR0\_FP\_rounding\_modes\_Pos    28U                                            }}
+\DoxyCodeLine{1362 \textcolor{preprocessor}{\#define FPU\_MVFR0\_FP\_rounding\_modes\_Msk    (0xFUL << FPU\_MVFR0\_FP\_rounding\_modes\_Pos)     }}
+\DoxyCodeLine{1364 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Short\_vectors\_Pos        24U                                            }}
+\DoxyCodeLine{1365 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Short\_vectors\_Msk        (0xFUL << FPU\_MVFR0\_Short\_vectors\_Pos)         }}
+\DoxyCodeLine{1367 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Square\_root\_Pos          20U                                            }}
+\DoxyCodeLine{1368 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Square\_root\_Msk          (0xFUL << FPU\_MVFR0\_Square\_root\_Pos)           }}
+\DoxyCodeLine{1370 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Divide\_Pos               16U                                            }}
+\DoxyCodeLine{1371 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Divide\_Msk               (0xFUL << FPU\_MVFR0\_Divide\_Pos)                }}
+\DoxyCodeLine{1373 \textcolor{preprocessor}{\#define FPU\_MVFR0\_FP\_excep\_trapping\_Pos    12U                                            }}
+\DoxyCodeLine{1374 \textcolor{preprocessor}{\#define FPU\_MVFR0\_FP\_excep\_trapping\_Msk    (0xFUL << FPU\_MVFR0\_FP\_excep\_trapping\_Pos)     }}
+\DoxyCodeLine{1376 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Double\_precision\_Pos      8U                                            }}
+\DoxyCodeLine{1377 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Double\_precision\_Msk     (0xFUL << FPU\_MVFR0\_Double\_precision\_Pos)      }}
+\DoxyCodeLine{1379 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Single\_precision\_Pos      4U                                            }}
+\DoxyCodeLine{1380 \textcolor{preprocessor}{\#define FPU\_MVFR0\_Single\_precision\_Msk     (0xFUL << FPU\_MVFR0\_Single\_precision\_Pos)      }}
+\DoxyCodeLine{1382 \textcolor{preprocessor}{\#define FPU\_MVFR0\_A\_SIMD\_registers\_Pos      0U                                            }}
+\DoxyCodeLine{1383 \textcolor{preprocessor}{\#define FPU\_MVFR0\_A\_SIMD\_registers\_Msk     (0xFUL }\textcolor{comment}{/*<< FPU\_MVFR0\_A\_SIMD\_registers\_Pos*/}\textcolor{preprocessor}{)  }}
+\DoxyCodeLine{1385 \textcolor{comment}{/* Media and FP Feature Register 1 Definitions */}}
+\DoxyCodeLine{1386 \textcolor{preprocessor}{\#define FPU\_MVFR1\_FP\_fused\_MAC\_Pos         28U                                            }}
+\DoxyCodeLine{1387 \textcolor{preprocessor}{\#define FPU\_MVFR1\_FP\_fused\_MAC\_Msk         (0xFUL << FPU\_MVFR1\_FP\_fused\_MAC\_Pos)          }}
+\DoxyCodeLine{1389 \textcolor{preprocessor}{\#define FPU\_MVFR1\_FP\_HPFP\_Pos              24U                                            }}
+\DoxyCodeLine{1390 \textcolor{preprocessor}{\#define FPU\_MVFR1\_FP\_HPFP\_Msk              (0xFUL << FPU\_MVFR1\_FP\_HPFP\_Pos)               }}
+\DoxyCodeLine{1392 \textcolor{preprocessor}{\#define FPU\_MVFR1\_D\_NaN\_mode\_Pos            4U                                            }}
+\DoxyCodeLine{1393 \textcolor{preprocessor}{\#define FPU\_MVFR1\_D\_NaN\_mode\_Msk           (0xFUL << FPU\_MVFR1\_D\_NaN\_mode\_Pos)            }}
+\DoxyCodeLine{1395 \textcolor{preprocessor}{\#define FPU\_MVFR1\_FtZ\_mode\_Pos              0U                                            }}
+\DoxyCodeLine{1396 \textcolor{preprocessor}{\#define FPU\_MVFR1\_FtZ\_mode\_Msk             (0xFUL }\textcolor{comment}{/*<< FPU\_MVFR1\_FtZ\_mode\_Pos*/}\textcolor{preprocessor}{)          }}
+\DoxyCodeLine{1398 \textcolor{comment}{/* Media and FP Feature Register 2 Definitions */}}
+\DoxyCodeLine{1399 }
+\DoxyCodeLine{1400 \textcolor{preprocessor}{\#define FPU\_MVFR2\_VFP\_Misc\_Pos              4U                                            }}
+\DoxyCodeLine{1401 \textcolor{preprocessor}{\#define FPU\_MVFR2\_VFP\_Misc\_Msk             (0xFUL << FPU\_MVFR2\_VFP\_Misc\_Pos)              }}
+\DoxyCodeLine{1416 \textcolor{keyword}{typedef} \textcolor{keyword}{struct}}
+\DoxyCodeLine{1417 \{}
+\DoxyCodeLine{1418   \_\_IOM uint32\_t DHCSR;                  }
+\DoxyCodeLine{1419   \_\_OM  uint32\_t DCRSR;                  }
+\DoxyCodeLine{1420   \_\_IOM uint32\_t DCRDR;                  }
+\DoxyCodeLine{1421   \_\_IOM uint32\_t DEMCR;                  }
+\DoxyCodeLine{1422 \} \mbox{\hyperlink{struct_core_debug___type}{CoreDebug\_Type}};}
+\DoxyCodeLine{1423 }
+\DoxyCodeLine{1424 \textcolor{comment}{/* Debug Halting Control and Status Register Definitions */}}
+\DoxyCodeLine{1425 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_DBGKEY\_Pos         16U                                            }}
+\DoxyCodeLine{1426 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_DBGKEY\_Msk         (0xFFFFUL << CoreDebug\_DHCSR\_DBGKEY\_Pos)       }}
+\DoxyCodeLine{1428 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos     25U                                            }}
+\DoxyCodeLine{1429 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_RESET\_ST\_Msk     (1UL << CoreDebug\_DHCSR\_S\_RESET\_ST\_Pos)        }}
+\DoxyCodeLine{1431 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos    24U                                            }}
+\DoxyCodeLine{1432 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Msk    (1UL << CoreDebug\_DHCSR\_S\_RETIRE\_ST\_Pos)       }}
+\DoxyCodeLine{1434 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_LOCKUP\_Pos       19U                                            }}
+\DoxyCodeLine{1435 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_LOCKUP\_Msk       (1UL << CoreDebug\_DHCSR\_S\_LOCKUP\_Pos)          }}
+\DoxyCodeLine{1437 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_SLEEP\_Pos        18U                                            }}
+\DoxyCodeLine{1438 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_SLEEP\_Msk        (1UL << CoreDebug\_DHCSR\_S\_SLEEP\_Pos)           }}
+\DoxyCodeLine{1440 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_HALT\_Pos         17U                                            }}
+\DoxyCodeLine{1441 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_HALT\_Msk         (1UL << CoreDebug\_DHCSR\_S\_HALT\_Pos)            }}
+\DoxyCodeLine{1443 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_REGRDY\_Pos       16U                                            }}
+\DoxyCodeLine{1444 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_S\_REGRDY\_Msk       (1UL << CoreDebug\_DHCSR\_S\_REGRDY\_Pos)          }}
+\DoxyCodeLine{1446 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos     5U                                            }}
+\DoxyCodeLine{1447 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_SNAPSTALL\_Msk    (1UL << CoreDebug\_DHCSR\_C\_SNAPSTALL\_Pos)       }}
+\DoxyCodeLine{1449 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_MASKINTS\_Pos      3U                                            }}
+\DoxyCodeLine{1450 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_MASKINTS\_Msk     (1UL << CoreDebug\_DHCSR\_C\_MASKINTS\_Pos)        }}
+\DoxyCodeLine{1452 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_STEP\_Pos          2U                                            }}
+\DoxyCodeLine{1453 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_STEP\_Msk         (1UL << CoreDebug\_DHCSR\_C\_STEP\_Pos)            }}
+\DoxyCodeLine{1455 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_HALT\_Pos          1U                                            }}
+\DoxyCodeLine{1456 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_HALT\_Msk         (1UL << CoreDebug\_DHCSR\_C\_HALT\_Pos)            }}
+\DoxyCodeLine{1458 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos       0U                                            }}
+\DoxyCodeLine{1459 \textcolor{preprocessor}{\#define CoreDebug\_DHCSR\_C\_DEBUGEN\_Msk      (1UL }\textcolor{comment}{/*<< CoreDebug\_DHCSR\_C\_DEBUGEN\_Pos*/}\textcolor{preprocessor}{)     }}
+\DoxyCodeLine{1461 \textcolor{comment}{/* Debug Core Register Selector Register Definitions */}}
+\DoxyCodeLine{1462 \textcolor{preprocessor}{\#define CoreDebug\_DCRSR\_REGWnR\_Pos         16U                                            }}
+\DoxyCodeLine{1463 \textcolor{preprocessor}{\#define CoreDebug\_DCRSR\_REGWnR\_Msk         (1UL << CoreDebug\_DCRSR\_REGWnR\_Pos)            }}
+\DoxyCodeLine{1465 \textcolor{preprocessor}{\#define CoreDebug\_DCRSR\_REGSEL\_Pos          0U                                            }}
+\DoxyCodeLine{1466 \textcolor{preprocessor}{\#define CoreDebug\_DCRSR\_REGSEL\_Msk         (0x1FUL }\textcolor{comment}{/*<< CoreDebug\_DCRSR\_REGSEL\_Pos*/}\textcolor{preprocessor}{)     }}
+\DoxyCodeLine{1468 \textcolor{comment}{/* Debug Exception and Monitor Control Register Definitions */}}
+\DoxyCodeLine{1469 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_TRCENA\_Pos         24U                                            }}
+\DoxyCodeLine{1470 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_TRCENA\_Msk         (1UL << CoreDebug\_DEMCR\_TRCENA\_Pos)            }}
+\DoxyCodeLine{1472 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_REQ\_Pos        19U                                            }}
+\DoxyCodeLine{1473 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_REQ\_Msk        (1UL << CoreDebug\_DEMCR\_MON\_REQ\_Pos)           }}
+\DoxyCodeLine{1475 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_STEP\_Pos       18U                                            }}
+\DoxyCodeLine{1476 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_STEP\_Msk       (1UL << CoreDebug\_DEMCR\_MON\_STEP\_Pos)          }}
+\DoxyCodeLine{1478 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_PEND\_Pos       17U                                            }}
+\DoxyCodeLine{1479 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_PEND\_Msk       (1UL << CoreDebug\_DEMCR\_MON\_PEND\_Pos)          }}
+\DoxyCodeLine{1481 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_EN\_Pos         16U                                            }}
+\DoxyCodeLine{1482 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_MON\_EN\_Msk         (1UL << CoreDebug\_DEMCR\_MON\_EN\_Pos)            }}
+\DoxyCodeLine{1484 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_HARDERR\_Pos     10U                                            }}
+\DoxyCodeLine{1485 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_HARDERR\_Msk     (1UL << CoreDebug\_DEMCR\_VC\_HARDERR\_Pos)        }}
+\DoxyCodeLine{1487 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_INTERR\_Pos       9U                                            }}
+\DoxyCodeLine{1488 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_INTERR\_Msk      (1UL << CoreDebug\_DEMCR\_VC\_INTERR\_Pos)         }}
+\DoxyCodeLine{1490 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_BUSERR\_Pos       8U                                            }}
+\DoxyCodeLine{1491 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_BUSERR\_Msk      (1UL << CoreDebug\_DEMCR\_VC\_BUSERR\_Pos)         }}
+\DoxyCodeLine{1493 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_STATERR\_Pos      7U                                            }}
+\DoxyCodeLine{1494 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_STATERR\_Msk     (1UL << CoreDebug\_DEMCR\_VC\_STATERR\_Pos)        }}
+\DoxyCodeLine{1496 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_CHKERR\_Pos       6U                                            }}
+\DoxyCodeLine{1497 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_CHKERR\_Msk      (1UL << CoreDebug\_DEMCR\_VC\_CHKERR\_Pos)         }}
+\DoxyCodeLine{1499 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos      5U                                            }}
+\DoxyCodeLine{1500 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_NOCPERR\_Msk     (1UL << CoreDebug\_DEMCR\_VC\_NOCPERR\_Pos)        }}
+\DoxyCodeLine{1502 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_MMERR\_Pos        4U                                            }}
+\DoxyCodeLine{1503 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_MMERR\_Msk       (1UL << CoreDebug\_DEMCR\_VC\_MMERR\_Pos)          }}
+\DoxyCodeLine{1505 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_CORERESET\_Pos    0U                                            }}
+\DoxyCodeLine{1506 \textcolor{preprocessor}{\#define CoreDebug\_DEMCR\_VC\_CORERESET\_Msk   (1UL }\textcolor{comment}{/*<< CoreDebug\_DEMCR\_VC\_CORERESET\_Pos*/}\textcolor{preprocessor}{)  }}
+\DoxyCodeLine{1524 \textcolor{preprocessor}{\#define \_VAL2FLD(field, value)    (((uint32\_t)(value) << field \#\# \_Pos) \& field \#\# \_Msk)}}
+\DoxyCodeLine{1525 }
+\DoxyCodeLine{1532 \textcolor{preprocessor}{\#define \_FLD2VAL(field, value)    (((uint32\_t)(value) \& field \#\# \_Msk) >> field \#\# \_Pos)}}
+\DoxyCodeLine{1533 }
+\DoxyCodeLine{1544 \textcolor{comment}{/* Memory mapping of Core Hardware */}}
+\DoxyCodeLine{1545 \textcolor{preprocessor}{\#define SCS\_BASE            (0xE000E000UL)                            }}
+\DoxyCodeLine{1546 \textcolor{preprocessor}{\#define ITM\_BASE            (0xE0000000UL)                            }}
+\DoxyCodeLine{1547 \textcolor{preprocessor}{\#define DWT\_BASE            (0xE0001000UL)                            }}
+\DoxyCodeLine{1548 \textcolor{preprocessor}{\#define TPI\_BASE            (0xE0040000UL)                            }}
+\DoxyCodeLine{1549 \textcolor{preprocessor}{\#define CoreDebug\_BASE      (0xE000EDF0UL)                            }}
+\DoxyCodeLine{1550 \textcolor{preprocessor}{\#define SysTick\_BASE        (SCS\_BASE +  0x0010UL)                    }}
+\DoxyCodeLine{1551 \textcolor{preprocessor}{\#define NVIC\_BASE           (SCS\_BASE +  0x0100UL)                    }}
+\DoxyCodeLine{1552 \textcolor{preprocessor}{\#define SCB\_BASE            (SCS\_BASE +  0x0D00UL)                    }}
+\DoxyCodeLine{1554 \textcolor{preprocessor}{\#define SCnSCB              ((SCnSCB\_Type    *)     SCS\_BASE      )   }}
+\DoxyCodeLine{1555 \textcolor{preprocessor}{\#define SCB                 ((SCB\_Type       *)     SCB\_BASE      )   }}
+\DoxyCodeLine{1556 \textcolor{preprocessor}{\#define SysTick             ((SysTick\_Type   *)     SysTick\_BASE  )   }}
+\DoxyCodeLine{1557 \textcolor{preprocessor}{\#define NVIC                ((NVIC\_Type      *)     NVIC\_BASE     )   }}
+\DoxyCodeLine{1558 \textcolor{preprocessor}{\#define ITM                 ((ITM\_Type       *)     ITM\_BASE      )   }}
+\DoxyCodeLine{1559 \textcolor{preprocessor}{\#define DWT                 ((DWT\_Type       *)     DWT\_BASE      )   }}
+\DoxyCodeLine{1560 \textcolor{preprocessor}{\#define TPI                 ((TPI\_Type       *)     TPI\_BASE      )   }}
+\DoxyCodeLine{1561 \textcolor{preprocessor}{\#define CoreDebug           ((CoreDebug\_Type *)     CoreDebug\_BASE)   }}
+\DoxyCodeLine{1563 \textcolor{preprocessor}{\#if defined (\_\_MPU\_PRESENT) \&\& (\_\_MPU\_PRESENT == 1U)}}
+\DoxyCodeLine{1564 \textcolor{preprocessor}{  \#define MPU\_BASE          (SCS\_BASE +  0x0D90UL)                    }}
+\DoxyCodeLine{1565 \textcolor{preprocessor}{  \#define MPU               ((MPU\_Type       *)     MPU\_BASE      )   }}
+\DoxyCodeLine{1566 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1567 }
+\DoxyCodeLine{1568 \textcolor{preprocessor}{\#define FPU\_BASE            (SCS\_BASE +  0x0F30UL)                    }}
+\DoxyCodeLine{1569 \textcolor{preprocessor}{\#define FPU                 ((FPU\_Type       *)     FPU\_BASE      )   }}
+\DoxyCodeLine{1575 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{1576 \textcolor{comment}{ *                Hardware Abstraction Layer}}
+\DoxyCodeLine{1577 \textcolor{comment}{  Core Function Interface contains:}}
+\DoxyCodeLine{1578 \textcolor{comment}{  -\/ Core NVIC Functions}}
+\DoxyCodeLine{1579 \textcolor{comment}{  -\/ Core SysTick Functions}}
+\DoxyCodeLine{1580 \textcolor{comment}{  -\/ Core Debug Functions}}
+\DoxyCodeLine{1581 \textcolor{comment}{  -\/ Core Register Access Functions}}
+\DoxyCodeLine{1582 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{1589 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#   NVIC functions  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{1597 \textcolor{preprocessor}{\#ifdef CMSIS\_NVIC\_VIRTUAL}}
+\DoxyCodeLine{1598 \textcolor{preprocessor}{  \#ifndef CMSIS\_NVIC\_VIRTUAL\_HEADER\_FILE}}
+\DoxyCodeLine{1599 \textcolor{preprocessor}{    \#define CMSIS\_NVIC\_VIRTUAL\_HEADER\_FILE "{}cmsis\_nvic\_virtual.h"{}}}
+\DoxyCodeLine{1600 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{1601 \textcolor{preprocessor}{  \#include CMSIS\_NVIC\_VIRTUAL\_HEADER\_FILE}}
+\DoxyCodeLine{1602 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{1603 \textcolor{preprocessor}{  \#define NVIC\_SetPriorityGrouping    \_\_NVIC\_SetPriorityGrouping}}
+\DoxyCodeLine{1604 \textcolor{preprocessor}{  \#define NVIC\_GetPriorityGrouping    \_\_NVIC\_GetPriorityGrouping}}
+\DoxyCodeLine{1605 \textcolor{preprocessor}{  \#define NVIC\_EnableIRQ              \_\_NVIC\_EnableIRQ}}
+\DoxyCodeLine{1606 \textcolor{preprocessor}{  \#define NVIC\_GetEnableIRQ           \_\_NVIC\_GetEnableIRQ}}
+\DoxyCodeLine{1607 \textcolor{preprocessor}{  \#define NVIC\_DisableIRQ             \_\_NVIC\_DisableIRQ}}
+\DoxyCodeLine{1608 \textcolor{preprocessor}{  \#define NVIC\_GetPendingIRQ          \_\_NVIC\_GetPendingIRQ}}
+\DoxyCodeLine{1609 \textcolor{preprocessor}{  \#define NVIC\_SetPendingIRQ          \_\_NVIC\_SetPendingIRQ}}
+\DoxyCodeLine{1610 \textcolor{preprocessor}{  \#define NVIC\_ClearPendingIRQ        \_\_NVIC\_ClearPendingIRQ}}
+\DoxyCodeLine{1611 \textcolor{preprocessor}{  \#define NVIC\_GetActive              \_\_NVIC\_GetActive}}
+\DoxyCodeLine{1612 \textcolor{preprocessor}{  \#define NVIC\_SetPriority            \_\_NVIC\_SetPriority}}
+\DoxyCodeLine{1613 \textcolor{preprocessor}{  \#define NVIC\_GetPriority            \_\_NVIC\_GetPriority}}
+\DoxyCodeLine{1614 \textcolor{preprocessor}{  \#define NVIC\_SystemReset            \_\_NVIC\_SystemReset}}
+\DoxyCodeLine{1615 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* CMSIS\_NVIC\_VIRTUAL */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1616 }
+\DoxyCodeLine{1617 \textcolor{preprocessor}{\#ifdef CMSIS\_VECTAB\_VIRTUAL}}
+\DoxyCodeLine{1618 \textcolor{preprocessor}{  \#ifndef CMSIS\_VECTAB\_VIRTUAL\_HEADER\_FILE}}
+\DoxyCodeLine{1619 \textcolor{preprocessor}{    \#define CMSIS\_VECTAB\_VIRTUAL\_HEADER\_FILE "{}cmsis\_vectab\_virtual.h"{}}}
+\DoxyCodeLine{1620 \textcolor{preprocessor}{  \#endif}}
+\DoxyCodeLine{1621 \textcolor{preprocessor}{  \#include CMSIS\_VECTAB\_VIRTUAL\_HEADER\_FILE}}
+\DoxyCodeLine{1622 \textcolor{preprocessor}{\#else}}
+\DoxyCodeLine{1623 \textcolor{preprocessor}{  \#define NVIC\_SetVector              \_\_NVIC\_SetVector}}
+\DoxyCodeLine{1624 \textcolor{preprocessor}{  \#define NVIC\_GetVector              \_\_NVIC\_GetVector}}
+\DoxyCodeLine{1625 \textcolor{preprocessor}{\#endif  }\textcolor{comment}{/* (CMSIS\_VECTAB\_VIRTUAL) */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1626 }
+\DoxyCodeLine{1627 \textcolor{preprocessor}{\#define NVIC\_USER\_IRQ\_OFFSET          16}}
+\DoxyCodeLine{1628 }
+\DoxyCodeLine{1629 }
+\DoxyCodeLine{1630 \textcolor{comment}{/* The following EXC\_RETURN values are saved the LR on exception entry */}}
+\DoxyCodeLine{1631 \textcolor{preprocessor}{\#define EXC\_RETURN\_HANDLER         (0xFFFFFFF1UL)     }\textcolor{comment}{/* return to Handler mode, uses MSP after return                               */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1632 \textcolor{preprocessor}{\#define EXC\_RETURN\_THREAD\_MSP      (0xFFFFFFF9UL)     }\textcolor{comment}{/* return to Thread mode, uses MSP after return                                */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1633 \textcolor{preprocessor}{\#define EXC\_RETURN\_THREAD\_PSP      (0xFFFFFFFDUL)     }\textcolor{comment}{/* return to Thread mode, uses PSP after return                                */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1634 \textcolor{preprocessor}{\#define EXC\_RETURN\_HANDLER\_FPU     (0xFFFFFFE1UL)     }\textcolor{comment}{/* return to Handler mode, uses MSP after return, restore floating-\/point state */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1635 \textcolor{preprocessor}{\#define EXC\_RETURN\_THREAD\_MSP\_FPU  (0xFFFFFFE9UL)     }\textcolor{comment}{/* return to Thread mode, uses MSP after return, restore floating-\/point state  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1636 \textcolor{preprocessor}{\#define EXC\_RETURN\_THREAD\_PSP\_FPU  (0xFFFFFFEDUL)     }\textcolor{comment}{/* return to Thread mode, uses PSP after return, restore floating-\/point state  */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{1637 }
+\DoxyCodeLine{1638 }
+\DoxyCodeLine{1648 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \_\_NVIC\_SetPriorityGrouping(uint32\_t PriorityGroup)}
+\DoxyCodeLine{1649 \{}
+\DoxyCodeLine{1650   uint32\_t reg\_value;}
+\DoxyCodeLine{1651   uint32\_t PriorityGroupTmp = (PriorityGroup \& (uint32\_t)0x07UL);             \textcolor{comment}{/* only values 0..7 are used          */}}
+\DoxyCodeLine{1652 }
+\DoxyCodeLine{1653   reg\_value  =  \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR;                                                   \textcolor{comment}{/* read old register configuration    */}}
+\DoxyCodeLine{1654   reg\_value \&= \string~((uint32\_t)(\mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga90c7cf0c490e7ae55f9503a7fda1dd22}{SCB\_AIRCR\_VECTKEY\_Msk}} | \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga8be60fff03f48d0d345868060dc6dae7}{SCB\_AIRCR\_PRIGROUP\_Msk}})); \textcolor{comment}{/* clear bits to change               */}}
+\DoxyCodeLine{1655   reg\_value  =  (reg\_value                                   |}
+\DoxyCodeLine{1656                 ((uint32\_t)0x5FAUL << \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaaa27c0ba600bf82c3da08c748845b640}{SCB\_AIRCR\_VECTKEY\_Pos}}) |}
+\DoxyCodeLine{1657                 (PriorityGroupTmp << \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaca155deccdeca0f2c76b8100d24196c8}{SCB\_AIRCR\_PRIGROUP\_Pos}})  );              \textcolor{comment}{/* Insert write key and priority group */}}
+\DoxyCodeLine{1658   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR =  reg\_value;}
+\DoxyCodeLine{1659 \}}
+\DoxyCodeLine{1660 }
+\DoxyCodeLine{1661 }
+\DoxyCodeLine{1667 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gae1de06155d072758b3453edb07d12459}{\_\_NVIC\_GetPriorityGrouping}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1668 \{}
+\DoxyCodeLine{1669   \textcolor{keywordflow}{return} ((uint32\_t)((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR \& \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga8be60fff03f48d0d345868060dc6dae7}{SCB\_AIRCR\_PRIGROUP\_Msk}}) >> \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaca155deccdeca0f2c76b8100d24196c8}{SCB\_AIRCR\_PRIGROUP\_Pos}}));}
+\DoxyCodeLine{1670 \}}
+\DoxyCodeLine{1671 }
+\DoxyCodeLine{1672 }
+\DoxyCodeLine{1679 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga71227e1376cde11eda03fcb62f1b33ea}{\_\_NVIC\_EnableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1680 \{}
+\DoxyCodeLine{1681   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1682   \{}
+\DoxyCodeLine{1683     \_\_COMPILER\_BARRIER();}
+\DoxyCodeLine{1684     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISER[(((uint32\_t)IRQn) >> 5UL)] = (uint32\_t)(1UL << (((uint32\_t)IRQn) \& 0x1FUL));}
+\DoxyCodeLine{1685     \_\_COMPILER\_BARRIER();}
+\DoxyCodeLine{1686   \}}
+\DoxyCodeLine{1687 \}}
+\DoxyCodeLine{1688 }
+\DoxyCodeLine{1689 }
+\DoxyCodeLine{1698 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaaeb5e7cc0eaad4e2817272e7bf742083}{\_\_NVIC\_GetEnableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1699 \{}
+\DoxyCodeLine{1700   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1701   \{}
+\DoxyCodeLine{1702     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISER[(((uint32\_t)IRQn) >> 5UL)] \& (1UL << (((uint32\_t)IRQn) \& 0x1FUL))) != 0UL) ? 1UL : 0UL));}
+\DoxyCodeLine{1703   \}}
+\DoxyCodeLine{1704   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1705   \{}
+\DoxyCodeLine{1706     \textcolor{keywordflow}{return}(0U);}
+\DoxyCodeLine{1707   \}}
+\DoxyCodeLine{1708 \}}
+\DoxyCodeLine{1709 }
+\DoxyCodeLine{1710 }
+\DoxyCodeLine{1717 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gae016e4c1986312044ee768806537d52f}{\_\_NVIC\_DisableIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1718 \{}
+\DoxyCodeLine{1719   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1720   \{}
+\DoxyCodeLine{1721     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ICER[(((uint32\_t)IRQn) >> 5UL)] = (uint32\_t)(1UL << (((uint32\_t)IRQn) \& 0x1FUL));}
+\DoxyCodeLine{1722     \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();}
+\DoxyCodeLine{1723     \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gaad233022e850a009fc6f7602be1182f6}{\_\_ISB}}();}
+\DoxyCodeLine{1724   \}}
+\DoxyCodeLine{1725 \}}
+\DoxyCodeLine{1726 }
+\DoxyCodeLine{1727 }
+\DoxyCodeLine{1736 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga5a92ca5fa801ad7adb92be7257ab9694}{\_\_NVIC\_GetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1737 \{}
+\DoxyCodeLine{1738   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1739   \{}
+\DoxyCodeLine{1740     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISPR[(((uint32\_t)IRQn) >> 5UL)] \& (1UL << (((uint32\_t)IRQn) \& 0x1FUL))) != 0UL) ? 1UL : 0UL));}
+\DoxyCodeLine{1741   \}}
+\DoxyCodeLine{1742   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1743   \{}
+\DoxyCodeLine{1744     \textcolor{keywordflow}{return}(0U);}
+\DoxyCodeLine{1745   \}}
+\DoxyCodeLine{1746 \}}
+\DoxyCodeLine{1747 }
+\DoxyCodeLine{1748 }
+\DoxyCodeLine{1755 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaabefdd4b790b9a7308929938c0c1e1ad}{\_\_NVIC\_SetPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1756 \{}
+\DoxyCodeLine{1757   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1758   \{}
+\DoxyCodeLine{1759     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ISPR[(((uint32\_t)IRQn) >> 5UL)] = (uint32\_t)(1UL << (((uint32\_t)IRQn) \& 0x1FUL));}
+\DoxyCodeLine{1760   \}}
+\DoxyCodeLine{1761 \}}
+\DoxyCodeLine{1762 }
+\DoxyCodeLine{1763 }
+\DoxyCodeLine{1770 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga562a86dbdf14827d0fee8fdafb04d191}{\_\_NVIC\_ClearPendingIRQ}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1771 \{}
+\DoxyCodeLine{1772   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1773   \{}
+\DoxyCodeLine{1774     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>ICPR[(((uint32\_t)IRQn) >> 5UL)] = (uint32\_t)(1UL << (((uint32\_t)IRQn) \& 0x1FUL));}
+\DoxyCodeLine{1775   \}}
+\DoxyCodeLine{1776 \}}
+\DoxyCodeLine{1777 }
+\DoxyCodeLine{1778 }
+\DoxyCodeLine{1787 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaa2837003c28c45abf193fe5e8d27f593}{\_\_NVIC\_GetActive}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1788 \{}
+\DoxyCodeLine{1789   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1790   \{}
+\DoxyCodeLine{1791     \textcolor{keywordflow}{return}((uint32\_t)(((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IABR[(((uint32\_t)IRQn) >> 5UL)] \& (1UL << (((uint32\_t)IRQn) \& 0x1FUL))) != 0UL) ? 1UL : 0UL));}
+\DoxyCodeLine{1792   \}}
+\DoxyCodeLine{1793   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1794   \{}
+\DoxyCodeLine{1795     \textcolor{keywordflow}{return}(0U);}
+\DoxyCodeLine{1796   \}}
+\DoxyCodeLine{1797 \}}
+\DoxyCodeLine{1798 }
+\DoxyCodeLine{1799 }
+\DoxyCodeLine{1809 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga505338e23563a9c074910fb14e7d45fd}{\_\_NVIC\_SetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t priority)}
+\DoxyCodeLine{1810 \{}
+\DoxyCodeLine{1811   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1812   \{}
+\DoxyCodeLine{1813     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[((uint32\_t)IRQn)]               = (uint8\_t)((priority << (8U -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) \& (uint32\_t)0xFFUL);}
+\DoxyCodeLine{1814   \}}
+\DoxyCodeLine{1815   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1816   \{}
+\DoxyCodeLine{1817     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[(((uint32\_t)IRQn) \& 0xFUL)-\/4UL] = (uint8\_t)((priority << (8U -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) \& (uint32\_t)0xFFUL);}
+\DoxyCodeLine{1818   \}}
+\DoxyCodeLine{1819 \}}
+\DoxyCodeLine{1820 }
+\DoxyCodeLine{1821 }
+\DoxyCodeLine{1831 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gaeb9dc99c8e7700668813144261b0bc73}{\_\_NVIC\_GetPriority}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1832 \{}
+\DoxyCodeLine{1833 }
+\DoxyCodeLine{1834   \textcolor{keywordflow}{if} ((int32\_t)(IRQn) >= 0)}
+\DoxyCodeLine{1835   \{}
+\DoxyCodeLine{1836     \textcolor{keywordflow}{return}(((uint32\_t)\mbox{\hyperlink{group___c_m_s_i_s__core__base_gac8e97e8ce56ae9f57da1363a937f8a17}{NVIC}}-\/>IP[((uint32\_t)IRQn)]               >> (8U -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})));}
+\DoxyCodeLine{1837   \}}
+\DoxyCodeLine{1838   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1839   \{}
+\DoxyCodeLine{1840     \textcolor{keywordflow}{return}(((uint32\_t)\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>SHP[(((uint32\_t)IRQn) \& 0xFUL)-\/4UL] >> (8U -\/ \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})));}
+\DoxyCodeLine{1841   \}}
+\DoxyCodeLine{1842 \}}
+\DoxyCodeLine{1843 }
+\DoxyCodeLine{1844 }
+\DoxyCodeLine{1856 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_gadb94ac5d892b376e4f3555ae0418ebac}{NVIC\_EncodePriority}} (uint32\_t PriorityGroup, uint32\_t PreemptPriority, uint32\_t SubPriority)}
+\DoxyCodeLine{1857 \{}
+\DoxyCodeLine{1858   uint32\_t PriorityGroupTmp = (PriorityGroup \& (uint32\_t)0x07UL);   \textcolor{comment}{/* only values 0..7 are used          */}}
+\DoxyCodeLine{1859   uint32\_t PreemptPriorityBits;}
+\DoxyCodeLine{1860   uint32\_t SubPriorityBits;}
+\DoxyCodeLine{1861 }
+\DoxyCodeLine{1862   PreemptPriorityBits = ((7UL -\/ PriorityGroupTmp) > (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) ? (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}) : (uint32\_t)(7UL -\/ PriorityGroupTmp);}
+\DoxyCodeLine{1863   SubPriorityBits     = ((PriorityGroupTmp + (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) < (uint32\_t)7UL) ? (uint32\_t)0UL : (uint32\_t)((PriorityGroupTmp -\/ 7UL) + (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}));}
+\DoxyCodeLine{1864 }
+\DoxyCodeLine{1865   \textcolor{keywordflow}{return} (}
+\DoxyCodeLine{1866            ((PreemptPriority \& (uint32\_t)((1UL << (PreemptPriorityBits)) -\/ 1UL)) << SubPriorityBits) |}
+\DoxyCodeLine{1867            ((SubPriority     \& (uint32\_t)((1UL << (SubPriorityBits    )) -\/ 1UL)))}
+\DoxyCodeLine{1868          );}
+\DoxyCodeLine{1869 \}}
+\DoxyCodeLine{1870 }
+\DoxyCodeLine{1871 }
+\DoxyCodeLine{1883 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga3387607fd8a1a32cccd77d2ac672dd96}{NVIC\_DecodePriority}} (uint32\_t Priority, uint32\_t PriorityGroup, uint32\_t* \textcolor{keyword}{const} pPreemptPriority, uint32\_t* \textcolor{keyword}{const} pSubPriority)}
+\DoxyCodeLine{1884 \{}
+\DoxyCodeLine{1885   uint32\_t PriorityGroupTmp = (PriorityGroup \& (uint32\_t)0x07UL);   \textcolor{comment}{/* only values 0..7 are used          */}}
+\DoxyCodeLine{1886   uint32\_t PreemptPriorityBits;}
+\DoxyCodeLine{1887   uint32\_t SubPriorityBits;}
+\DoxyCodeLine{1888 }
+\DoxyCodeLine{1889   PreemptPriorityBits = ((7UL -\/ PriorityGroupTmp) > (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) ? (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}) : (uint32\_t)(7UL -\/ PriorityGroupTmp);}
+\DoxyCodeLine{1890   SubPriorityBits     = ((PriorityGroupTmp + (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}})) < (uint32\_t)7UL) ? (uint32\_t)0UL : (uint32\_t)((PriorityGroupTmp -\/ 7UL) + (uint32\_t)(\mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}));}
+\DoxyCodeLine{1891 }
+\DoxyCodeLine{1892   *pPreemptPriority = (Priority >> SubPriorityBits) \& (uint32\_t)((1UL << (PreemptPriorityBits)) -\/ 1UL);}
+\DoxyCodeLine{1893   *pSubPriority     = (Priority                   ) \& (uint32\_t)((1UL << (SubPriorityBits    )) -\/ 1UL);}
+\DoxyCodeLine{1894 \}}
+\DoxyCodeLine{1895 }
+\DoxyCodeLine{1896 }
+\DoxyCodeLine{1906 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga0df355460bc1783d58f9d72ee4884208}{\_\_NVIC\_SetVector}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn, uint32\_t vector)}
+\DoxyCodeLine{1907 \{}
+\DoxyCodeLine{1908   uint32\_t vectors = (uint32\_t )\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>VTOR;}
+\DoxyCodeLine{1909   (* (\textcolor{keywordtype}{int} *) (vectors + ((int32\_t)IRQn + NVIC\_USER\_IRQ\_OFFSET) * 4)) = vector;}
+\DoxyCodeLine{1910   \textcolor{comment}{/* ARM Application Note 321 states that the M4 does not require the architectural barrier */}}
+\DoxyCodeLine{1911 \}}
+\DoxyCodeLine{1912 }
+\DoxyCodeLine{1913 }
+\DoxyCodeLine{1922 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga44b665d2afb708121d9b10c76ff00ee5}{\_\_NVIC\_GetVector}}(\mbox{\hyperlink{group___peripheral__interrupt__number__definition_ga7e1129cd8a196f4284d41db3e82ad5c8}{IRQn\_Type}} IRQn)}
+\DoxyCodeLine{1923 \{}
+\DoxyCodeLine{1924   uint32\_t vectors = (uint32\_t )\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>VTOR;}
+\DoxyCodeLine{1925   return (uint32\_t)(* (\textcolor{keywordtype}{int} *) (vectors + ((int32\_t)IRQn + NVIC\_USER\_IRQ\_OFFSET) * 4));}
+\DoxyCodeLine{1926 \}}
+\DoxyCodeLine{1927 }
+\DoxyCodeLine{1928 }
+\DoxyCodeLine{1933 \_\_NO\_RETURN \_\_STATIC\_INLINE \textcolor{keywordtype}{void} \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga0d9aa2d30fa54b41eb780c16e35b676c}{\_\_NVIC\_SystemReset}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1934 \{}
+\DoxyCodeLine{1935   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();                                                          \textcolor{comment}{/* Ensure all outstanding memory accesses included}}
+\DoxyCodeLine{1936 \textcolor{comment}{                                                                       buffered write are completed before reset */}}
+\DoxyCodeLine{1937   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR  = (uint32\_t)((0x5FAUL << \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaaa27c0ba600bf82c3da08c748845b640}{SCB\_AIRCR\_VECTKEY\_Pos}})    |}
+\DoxyCodeLine{1938                            (\mbox{\hyperlink{group___c_m_s_i_s__core__base_gaaaf6477c2bde2f00f99e3c2fd1060b01}{SCB}}-\/>AIRCR \& \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_ga8be60fff03f48d0d345868060dc6dae7}{SCB\_AIRCR\_PRIGROUP\_Msk}}) |}
+\DoxyCodeLine{1939                             \mbox{\hyperlink{group___c_m_s_i_s___s_c_b_gaae1181119559a5bd36e62afa373fa720}{SCB\_AIRCR\_SYSRESETREQ\_Msk}}    );         \textcolor{comment}{/* Keep priority group unchanged */}}
+\DoxyCodeLine{1940   \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_ga067d257a2b34565410acefb5afef2203}{\_\_DSB}}();                                                          \textcolor{comment}{/* Ensure completion of memory access */}}
+\DoxyCodeLine{1941 }
+\DoxyCodeLine{1942   \textcolor{keywordflow}{for}(;;)                                                           \textcolor{comment}{/* wait until reset */}}
+\DoxyCodeLine{1943   \{}
+\DoxyCodeLine{1944     \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gabd585ddc865fb9b7f2493af1eee1a572}{\_\_NOP}}();}
+\DoxyCodeLine{1945   \}}
+\DoxyCodeLine{1946 \}}
+\DoxyCodeLine{1947 }
+\DoxyCodeLine{1951 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  MPU functions  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{1952 }
+\DoxyCodeLine{1953 \textcolor{preprocessor}{\#if defined (\_\_MPU\_PRESENT) \&\& (\_\_MPU\_PRESENT == 1U)}}
+\DoxyCodeLine{1954 }
+\DoxyCodeLine{1955 \textcolor{preprocessor}{\#include "{}mpu\_armv7.h"{}}}
+\DoxyCodeLine{1956 }
+\DoxyCodeLine{1957 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{1958 }
+\DoxyCodeLine{1959 }
+\DoxyCodeLine{1960 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#  FPU functions  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{1976 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s___core___n_v_i_c_functions_ga6bcad99ce80a0e7e4ddc6f2379081756}{SCB\_GetFPUType}}(\textcolor{keywordtype}{void})}
+\DoxyCodeLine{1977 \{}
+\DoxyCodeLine{1978   uint32\_t mvfr0;}
+\DoxyCodeLine{1979 }
+\DoxyCodeLine{1980   mvfr0 = \mbox{\hyperlink{group___c_m_s_i_s__core__base_gabc7c93f2594e85ece1e1a24f10591428}{FPU}}-\/>MVFR0;}
+\DoxyCodeLine{1981   \textcolor{keywordflow}{if}      ((mvfr0 \& (\mbox{\hyperlink{group___c_m_s_i_s___f_p_u_ga95008f205c9d25e4ffebdbdc50d5ae44}{FPU\_MVFR0\_Single\_precision\_Msk}} | \mbox{\hyperlink{group___c_m_s_i_s___f_p_u_ga3f2c8c6c759ffe70f548a165602ea901}{FPU\_MVFR0\_Double\_precision\_Msk}})) == 0x020U)}
+\DoxyCodeLine{1982   \{}
+\DoxyCodeLine{1983     \textcolor{keywordflow}{return} 1U;           \textcolor{comment}{/* Single precision FPU */}}
+\DoxyCodeLine{1984   \}}
+\DoxyCodeLine{1985   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{1986   \{}
+\DoxyCodeLine{1987     \textcolor{keywordflow}{return} 0U;           \textcolor{comment}{/* No FPU */}}
+\DoxyCodeLine{1988   \}}
+\DoxyCodeLine{1989 \}}
+\DoxyCodeLine{1990 }
+\DoxyCodeLine{1991 }
+\DoxyCodeLine{1996 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#    SysTick function  \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{2004 \textcolor{preprocessor}{\#if defined (\_\_Vendor\_SysTickConfig) \&\& (\_\_Vendor\_SysTickConfig == 0U)}}
+\DoxyCodeLine{2005 }
+\DoxyCodeLine{2017 \_\_STATIC\_INLINE uint32\_t SysTick\_Config(uint32\_t ticks)}
+\DoxyCodeLine{2018 \{}
+\DoxyCodeLine{2019   \textcolor{keywordflow}{if} ((ticks -\/ 1UL) > \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga265912a7962f0e1abd170336e579b1b1}{SysTick\_LOAD\_RELOAD\_Msk}})}
+\DoxyCodeLine{2020   \{}
+\DoxyCodeLine{2021     \textcolor{keywordflow}{return} (1UL);                                                   \textcolor{comment}{/* Reload value impossible */}}
+\DoxyCodeLine{2022   \}}
+\DoxyCodeLine{2023 }
+\DoxyCodeLine{2024   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>LOAD  = (uint32\_t)(ticks -\/ 1UL);                         \textcolor{comment}{/* set reload register */}}
+\DoxyCodeLine{2025   NVIC\_SetPriority (\mbox{\hyperlink{group___peripheral__interrupt__number__definition_gga7e1129cd8a196f4284d41db3e82ad5c8a6dbff8f8543325f3474cbae2446776e7}{SysTick\_IRQn}}, (1UL << \mbox{\hyperlink{group___configuration__section__for___c_m_s_i_s_gae3fe3587d5100c787e02102ce3944460}{\_\_NVIC\_PRIO\_BITS}}) -\/ 1UL); \textcolor{comment}{/* set Priority for Systick Interrupt */}}
+\DoxyCodeLine{2026   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>VAL   = 0UL;                                             \textcolor{comment}{/* Load the SysTick Counter Value */}}
+\DoxyCodeLine{2027   \mbox{\hyperlink{group___c_m_s_i_s__core__base_gacd96c53beeaff8f603fcda425eb295de}{SysTick}}-\/>CTRL  = \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_gaa41d06039797423a46596bd313d57373}{SysTick\_CTRL\_CLKSOURCE\_Msk}} |}
+\DoxyCodeLine{2028                    \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga95bb984266ca764024836a870238a027}{SysTick\_CTRL\_TICKINT\_Msk}}   |}
+\DoxyCodeLine{2029                    \mbox{\hyperlink{group___c_m_s_i_s___sys_tick_ga16c9fee0ed0235524bdeb38af328fd1f}{SysTick\_CTRL\_ENABLE\_Msk}};                         \textcolor{comment}{/* Enable SysTick IRQ and SysTick Timer */}}
+\DoxyCodeLine{2030   \textcolor{keywordflow}{return} (0UL);                                                     \textcolor{comment}{/* Function successful */}}
+\DoxyCodeLine{2031 \}}
+\DoxyCodeLine{2032 }
+\DoxyCodeLine{2033 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{2034 }
+\DoxyCodeLine{2039 \textcolor{comment}{/* \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# Debug In/Output function \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# */}}
+\DoxyCodeLine{2047 \textcolor{keyword}{extern} \textcolor{keyword}{volatile} int32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga12e68e55a7badc271b948d6c7230b2a8}{ITM\_RxBuffer}};                              }
+\DoxyCodeLine{2048 \textcolor{preprocessor}{\#define                 ITM\_RXBUFFER\_EMPTY  ((int32\_t)0x5AA55AA5U) }}
+\DoxyCodeLine{2059 \_\_STATIC\_INLINE uint32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac90a497bd64286b84552c2c553d3419e}{ITM\_SendChar}} (uint32\_t ch)}
+\DoxyCodeLine{2060 \{}
+\DoxyCodeLine{2061   \textcolor{keywordflow}{if} (((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gabae7cdf882def602cb787bb039ff6a43}{ITM}}-\/>TCR \& \mbox{\hyperlink{group___c_m_s_i_s___i_t_m_ga7dd53e3bff24ac09d94e61cb595cb2d9}{ITM\_TCR\_ITMENA\_Msk}}) != 0UL) \&\&      \textcolor{comment}{/* ITM enabled */}}
+\DoxyCodeLine{2062       ((\mbox{\hyperlink{group___c_m_s_i_s__core__base_gabae7cdf882def602cb787bb039ff6a43}{ITM}}-\/>TER \& 1UL               ) != 0UL)   )     \textcolor{comment}{/* ITM Port \#0 enabled */}}
+\DoxyCodeLine{2063   \{}
+\DoxyCodeLine{2064     \textcolor{keywordflow}{while} (\mbox{\hyperlink{group___c_m_s_i_s__core__base_gabae7cdf882def602cb787bb039ff6a43}{ITM}}-\/>PORT[0U].u32 == 0UL)}
+\DoxyCodeLine{2065     \{}
+\DoxyCodeLine{2066       \mbox{\hyperlink{group___c_m_s_i_s___core___instruction_interface_gabd585ddc865fb9b7f2493af1eee1a572}{\_\_NOP}}();}
+\DoxyCodeLine{2067     \}}
+\DoxyCodeLine{2068     \mbox{\hyperlink{group___c_m_s_i_s__core__base_gabae7cdf882def602cb787bb039ff6a43}{ITM}}-\/>PORT[0U].u8 = (uint8\_t)ch;}
+\DoxyCodeLine{2069   \}}
+\DoxyCodeLine{2070   \textcolor{keywordflow}{return} (ch);}
+\DoxyCodeLine{2071 \}}
+\DoxyCodeLine{2072 }
+\DoxyCodeLine{2073 }
+\DoxyCodeLine{2080 \_\_STATIC\_INLINE int32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gac3ee2c30a1ac4ed34c8a866a17decd53}{ITM\_ReceiveChar}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2081 \{}
+\DoxyCodeLine{2082   int32\_t ch = -\/1;                           \textcolor{comment}{/* no character available */}}
+\DoxyCodeLine{2083 }
+\DoxyCodeLine{2084   \textcolor{keywordflow}{if} (\mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga12e68e55a7badc271b948d6c7230b2a8}{ITM\_RxBuffer}} != \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa822cb398ee022b59e9e6c5d7bbb228a}{ITM\_RXBUFFER\_EMPTY}})}
+\DoxyCodeLine{2085   \{}
+\DoxyCodeLine{2086     ch = \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga12e68e55a7badc271b948d6c7230b2a8}{ITM\_RxBuffer}};}
+\DoxyCodeLine{2087     \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga12e68e55a7badc271b948d6c7230b2a8}{ITM\_RxBuffer}} = \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa822cb398ee022b59e9e6c5d7bbb228a}{ITM\_RXBUFFER\_EMPTY}};       \textcolor{comment}{/* ready for next character */}}
+\DoxyCodeLine{2088   \}}
+\DoxyCodeLine{2089 }
+\DoxyCodeLine{2090   \textcolor{keywordflow}{return} (ch);}
+\DoxyCodeLine{2091 \}}
+\DoxyCodeLine{2092 }
+\DoxyCodeLine{2093 }
+\DoxyCodeLine{2100 \_\_STATIC\_INLINE int32\_t \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gae61ce9ca5917735325cd93b0fb21dd29}{ITM\_CheckChar}} (\textcolor{keywordtype}{void})}
+\DoxyCodeLine{2101 \{}
+\DoxyCodeLine{2102 }
+\DoxyCodeLine{2103   \textcolor{keywordflow}{if} (\mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_ga12e68e55a7badc271b948d6c7230b2a8}{ITM\_RxBuffer}} == \mbox{\hyperlink{group___c_m_s_i_s__core___debug_functions_gaa822cb398ee022b59e9e6c5d7bbb228a}{ITM\_RXBUFFER\_EMPTY}})}
+\DoxyCodeLine{2104   \{}
+\DoxyCodeLine{2105     \textcolor{keywordflow}{return} (0);                              \textcolor{comment}{/* no character available */}}
+\DoxyCodeLine{2106   \}}
+\DoxyCodeLine{2107   \textcolor{keywordflow}{else}}
+\DoxyCodeLine{2108   \{}
+\DoxyCodeLine{2109     \textcolor{keywordflow}{return} (1);                              \textcolor{comment}{/*    character available */}}
+\DoxyCodeLine{2110   \}}
+\DoxyCodeLine{2111 \}}
+\DoxyCodeLine{2112 }
+\DoxyCodeLine{2118 \textcolor{preprocessor}{\#ifdef \_\_cplusplus}}
+\DoxyCodeLine{2119 \}}
+\DoxyCodeLine{2120 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{2121 }
+\DoxyCodeLine{2122 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CORE\_CM4\_H\_DEPENDANT */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{2123 }
+\DoxyCodeLine{2124 \textcolor{preprocessor}{\#endif }\textcolor{comment}{/* \_\_CMSIS\_GENERIC */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

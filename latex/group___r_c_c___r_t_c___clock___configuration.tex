@@ -1,0 +1,36 @@
+\hypertarget{group___r_c_c___r_t_c___clock___configuration}{}\doxysection{RCC RTC Clock Configuration}
+\label{group___r_c_c___r_t_c___clock___configuration}\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+ENABLE}}()~SET\+\_\+\+BIT(RCC-\/$>$BDCR, RCC\+\_\+\+BDCR\+\_\+\+RTCEN)
+\begin{DoxyCompactList}\small\item\em Macros to enable or disable the RTC clock. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_gaab5eeb81fc9f0c8d4450069f7a751855}\label{group___r_c_c___r_t_c___clock___configuration_gaab5eeb81fc9f0c8d4450069f7a751855}} 
+\#define {\bfseries \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+DISABLE}()~CLEAR\+\_\+\+BIT(RCC-\/$>$BDCR, RCC\+\_\+\+BDCR\+\_\+\+RTCEN)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}\label{group___r_c_c___r_t_c___clock___configuration_gab7cc36427c31da645a0e38e181f8ce0f}} 
+\index{RCC RTC Clock Configuration@{RCC RTC Clock Configuration}!\_\_HAL\_RCC\_RTC\_ENABLE@{\_\_HAL\_RCC\_RTC\_ENABLE}}
+\index{\_\_HAL\_RCC\_RTC\_ENABLE@{\_\_HAL\_RCC\_RTC\_ENABLE}!RCC RTC Clock Configuration@{RCC RTC Clock Configuration}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_RTC\_ENABLE}{\_\_HAL\_RCC\_RTC\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+RTC\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~SET\+\_\+\+BIT(RCC-\/$>$BDCR, RCC\+\_\+\+BDCR\+\_\+\+RTCEN)}
+
+
+
+Macros to enable or disable the RTC clock. 
+
+\begin{DoxyNote}{Note}
+As the RTC is in the Backup domain and write access is denied to this domain after reset, you have to enable write access using HAL\+\_\+\+PWR\+\_\+\+Enable\+Bk\+Up\+Access() function before to configure the RTC (to be done once after reset). 
+
+These macros must be used after the RTC clock source was selected. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

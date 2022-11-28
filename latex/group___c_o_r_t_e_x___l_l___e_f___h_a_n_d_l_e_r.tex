@@ -1,0 +1,59 @@
+\hypertarget{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r}{}\doxysection{HANDLER}
+\label{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r}\index{HANDLER@{HANDLER}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga904eb6ce46a723dd47b468241c6b0a2c}{LL\+\_\+\+HANDLER\+\_\+\+Enable\+Fault}} (uint32\+\_\+t Fault)
+\begin{DoxyCompactList}\small\item\em Enable a fault in System handler control register (SHCSR) @rmtoll SCB\+\_\+\+SHCSR MEMFAULTENA LL\+\_\+\+HANDLER\+\_\+\+Enable\+Fault. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga8b6826c996c587651a651a6138c44e1e}{LL\+\_\+\+HANDLER\+\_\+\+Disable\+Fault}} (uint32\+\_\+t Fault)
+\begin{DoxyCompactList}\small\item\em Disable a fault in System handler control register (SHCSR) @rmtoll SCB\+\_\+\+SHCSR MEMFAULTENA LL\+\_\+\+HANDLER\+\_\+\+Disable\+Fault. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga8b6826c996c587651a651a6138c44e1e}\label{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga8b6826c996c587651a651a6138c44e1e}} 
+\index{HANDLER@{HANDLER}!LL\_HANDLER\_DisableFault@{LL\_HANDLER\_DisableFault}}
+\index{LL\_HANDLER\_DisableFault@{LL\_HANDLER\_DisableFault}!HANDLER@{HANDLER}}
+\doxysubsubsection{\texorpdfstring{LL\_HANDLER\_DisableFault()}{LL\_HANDLER\_DisableFault()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+HANDLER\+\_\+\+Disable\+Fault (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Fault }\end{DoxyParamCaption})}
+
+
+
+Disable a fault in System handler control register (SHCSR) @rmtoll SCB\+\_\+\+SHCSR MEMFAULTENA LL\+\_\+\+HANDLER\+\_\+\+Disable\+Fault. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fault} & This parameter can be a combination of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___f_a_u_l_t_gadbac946ab3d6ddf6e039f892f15777d9}{LL\+\_\+\+HANDLER\+\_\+\+FAULT\+\_\+\+USG}} \item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___f_a_u_l_t_ga115d536ac8df55563b54b89397fdf465}{LL\+\_\+\+HANDLER\+\_\+\+FAULT\+\_\+\+BUS}} \item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___f_a_u_l_t_ga6d126af175425807712344e17d75152b}{LL\+\_\+\+HANDLER\+\_\+\+FAULT\+\_\+\+MEM}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga904eb6ce46a723dd47b468241c6b0a2c}\label{group___c_o_r_t_e_x___l_l___e_f___h_a_n_d_l_e_r_ga904eb6ce46a723dd47b468241c6b0a2c}} 
+\index{HANDLER@{HANDLER}!LL\_HANDLER\_EnableFault@{LL\_HANDLER\_EnableFault}}
+\index{LL\_HANDLER\_EnableFault@{LL\_HANDLER\_EnableFault}!HANDLER@{HANDLER}}
+\doxysubsubsection{\texorpdfstring{LL\_HANDLER\_EnableFault()}{LL\_HANDLER\_EnableFault()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE void LL\+\_\+\+HANDLER\+\_\+\+Enable\+Fault (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{Fault }\end{DoxyParamCaption})}
+
+
+
+Enable a fault in System handler control register (SHCSR) @rmtoll SCB\+\_\+\+SHCSR MEMFAULTENA LL\+\_\+\+HANDLER\+\_\+\+Enable\+Fault. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Fault} & This parameter can be a combination of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___f_a_u_l_t_gadbac946ab3d6ddf6e039f892f15777d9}{LL\+\_\+\+HANDLER\+\_\+\+FAULT\+\_\+\+USG}} \item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___f_a_u_l_t_ga115d536ac8df55563b54b89397fdf465}{LL\+\_\+\+HANDLER\+\_\+\+FAULT\+\_\+\+BUS}} \item \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_c___f_a_u_l_t_ga6d126af175425807712344e17d75152b}{LL\+\_\+\+HANDLER\+\_\+\+FAULT\+\_\+\+MEM}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

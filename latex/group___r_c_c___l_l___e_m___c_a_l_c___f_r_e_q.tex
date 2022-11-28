@@ -1,0 +1,212 @@
+\hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q}{}\doxysection{Calculate frequencies}
+\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q}\index{Calculate frequencies@{Calculate frequencies}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gaece6f01c8d2eb19007c7c206421b41f1}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+\+FREQ}}(\+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLR\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the PLLCLK frequency on system domain. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gac79745c8240aa1116b0ef05c828b7bed}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+\+ADC\+\_\+\+FREQ}}(\+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLP\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the PLLCLK frequency used on ADC domain. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gacdeec592d0ce229c48871deedf5b5a95}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+48\+M\+\_\+\+FREQ}}(\+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  \+\_\+\+\_\+\+PLLQ\+\_\+\+\_\+)
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the PLLCLK frequency used on 48M domain. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_ga49278d42cf8bff0cb67906156cddd42c}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+HCLK\+\_\+\+FREQ}}(\+\_\+\+\_\+\+SYSCLKFREQ\+\_\+\+\_\+,  \+\_\+\+\_\+\+AHBPRESCALER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+SYSCLKFREQ\+\_\+\+\_\+) $>$$>$ (\mbox{\hyperlink{group___s_t_m32_g4xx___system___private___variables_ga6e1d9cd666f0eacbfde31e9932a93466}{AHBPresc\+Table}}\mbox{[}((\+\_\+\+\_\+\+AHBPRESCALER\+\_\+\+\_\+) \& \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafe10e66938644ee8054a2426ff23efea}{RCC\+\_\+\+CFGR\+\_\+\+HPRE}}) $>$$>$  RCC\+\_\+\+CFGR\+\_\+\+HPRE\+\_\+\+Pos\mbox{]} \& 0x1\+FU))
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the HCLK frequency. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gae2ec8161a253e802118432ec9ca5422c}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PCLK1\+\_\+\+FREQ}}(\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+,  \+\_\+\+\_\+\+APB1\+PRESCALER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+) $>$$>$ (\mbox{\hyperlink{group___s_t_m32_g4xx___system___private___variables_ga5b4f8b768465842cf854a8f993b375e9}{APBPresc\+Table}}\mbox{[}(\+\_\+\+\_\+\+APB1\+PRESCALER\+\_\+\+\_\+) $>$$>$  RCC\+\_\+\+CFGR\+\_\+\+PPRE1\+\_\+\+Pos\mbox{]} \& 0x1\+FU))
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the PCLK1 frequency (ABP1) \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_ga67c9b1b48e2b3391c1c9d3d88c9f96f5}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PCLK2\+\_\+\+FREQ}}(\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+,  \+\_\+\+\_\+\+APB2\+PRESCALER\+\_\+\+\_\+)~((\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+) $>$$>$ (\mbox{\hyperlink{group___s_t_m32_g4xx___system___private___variables_ga5b4f8b768465842cf854a8f993b375e9}{APBPresc\+Table}}\mbox{[}(\+\_\+\+\_\+\+APB2\+PRESCALER\+\_\+\+\_\+) $>$$>$  RCC\+\_\+\+CFGR\+\_\+\+PPRE2\+\_\+\+Pos\mbox{]} \& 0x1\+FU))
+\begin{DoxyCompactList}\small\item\em Helper macro to calculate the PCLK2 frequency (ABP2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_ga49278d42cf8bff0cb67906156cddd42c}\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_ga49278d42cf8bff0cb67906156cddd42c}} 
+\index{Calculate frequencies@{Calculate frequencies}!\_\_LL\_RCC\_CALC\_HCLK\_FREQ@{\_\_LL\_RCC\_CALC\_HCLK\_FREQ}}
+\index{\_\_LL\_RCC\_CALC\_HCLK\_FREQ@{\_\_LL\_RCC\_CALC\_HCLK\_FREQ}!Calculate frequencies@{Calculate frequencies}}
+\doxysubsubsection{\texorpdfstring{\_\_LL\_RCC\_CALC\_HCLK\_FREQ}{\_\_LL\_RCC\_CALC\_HCLK\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+HCLK\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+SYSCLKFREQ\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+AHBPRESCALER\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+SYSCLKFREQ\+\_\+\+\_\+) $>$$>$ (\mbox{\hyperlink{group___s_t_m32_g4xx___system___private___variables_ga6e1d9cd666f0eacbfde31e9932a93466}{AHBPresc\+Table}}\mbox{[}((\+\_\+\+\_\+\+AHBPRESCALER\+\_\+\+\_\+) \& \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafe10e66938644ee8054a2426ff23efea}{RCC\+\_\+\+CFGR\+\_\+\+HPRE}}) $>$$>$  RCC\+\_\+\+CFGR\+\_\+\+HPRE\+\_\+\+Pos\mbox{]} \& 0x1\+FU))}
+
+
+
+Helper macro to calculate the HCLK frequency. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+SYSCLKFREQ\+\_\+\+\_\+} & SYSCLK frequency (based on HSE/\+HSI/\+PLLCLK) \\
+\hline
+{\em \+\_\+\+\_\+\+AHBPRESCALER\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_ga2822f1b5e4e5823a07b727df599d6209}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_gac4881c3e70771c5f1d7ab767c2387269}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_ga55bf4a1e422f90d58563fdf6ca9d9080}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_gae3c29ccf5abd8504a88b1ce9134295ca}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_gaaa1397c2d0f4e72529f16e10d11c8a75}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+16}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_ga585ffbb05508b5740364d60e78e3b224}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+64}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_ga70d7c2bf339a001963e93d062c949bac}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+128}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_ga1c7c7959a1f7847c7827c65bfcad188f}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+256}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___s_y_s_c_l_k___d_i_v_ga9f84bdbc7b8f511e6aaff490ac07e713}{LL\+\_\+\+RCC\+\_\+\+SYSCLK\+\_\+\+DIV\+\_\+512}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em HCLK} & clock frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gae2ec8161a253e802118432ec9ca5422c}\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gae2ec8161a253e802118432ec9ca5422c}} 
+\index{Calculate frequencies@{Calculate frequencies}!\_\_LL\_RCC\_CALC\_PCLK1\_FREQ@{\_\_LL\_RCC\_CALC\_PCLK1\_FREQ}}
+\index{\_\_LL\_RCC\_CALC\_PCLK1\_FREQ@{\_\_LL\_RCC\_CALC\_PCLK1\_FREQ}!Calculate frequencies@{Calculate frequencies}}
+\doxysubsubsection{\texorpdfstring{\_\_LL\_RCC\_CALC\_PCLK1\_FREQ}{\_\_LL\_RCC\_CALC\_PCLK1\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PCLK1\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+APB1\+PRESCALER\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+) $>$$>$ (\mbox{\hyperlink{group___s_t_m32_g4xx___system___private___variables_ga5b4f8b768465842cf854a8f993b375e9}{APBPresc\+Table}}\mbox{[}(\+\_\+\+\_\+\+APB1\+PRESCALER\+\_\+\+\_\+) $>$$>$  RCC\+\_\+\+CFGR\+\_\+\+PPRE1\+\_\+\+Pos\mbox{]} \& 0x1\+FU))}
+
+
+
+Helper macro to calculate the PCLK1 frequency (ABP1) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+} & HCLK frequency \\
+\hline
+{\em \+\_\+\+\_\+\+APB1\+PRESCALER\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b1___d_i_v_ga6b5b7c3a43aeda8f90ceb733343cd450}{LL\+\_\+\+RCC\+\_\+\+APB1\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b1___d_i_v_gad8a57a2f6f86b6c7397d9ac166c16126}{LL\+\_\+\+RCC\+\_\+\+APB1\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b1___d_i_v_ga1169e7d89bd094be53bf94b977f37e16}{LL\+\_\+\+RCC\+\_\+\+APB1\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b1___d_i_v_ga299a18aba20c83e0033b8799a2dec357}{LL\+\_\+\+RCC\+\_\+\+APB1\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b1___d_i_v_ga03796dedb27006a296938b3023b58b72}{LL\+\_\+\+RCC\+\_\+\+APB1\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em PCLK1} & clock frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_ga67c9b1b48e2b3391c1c9d3d88c9f96f5}\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_ga67c9b1b48e2b3391c1c9d3d88c9f96f5}} 
+\index{Calculate frequencies@{Calculate frequencies}!\_\_LL\_RCC\_CALC\_PCLK2\_FREQ@{\_\_LL\_RCC\_CALC\_PCLK2\_FREQ}}
+\index{\_\_LL\_RCC\_CALC\_PCLK2\_FREQ@{\_\_LL\_RCC\_CALC\_PCLK2\_FREQ}!Calculate frequencies@{Calculate frequencies}}
+\doxysubsubsection{\texorpdfstring{\_\_LL\_RCC\_CALC\_PCLK2\_FREQ}{\_\_LL\_RCC\_CALC\_PCLK2\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PCLK2\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+APB2\+PRESCALER\+\_\+\+\_\+ }\end{DoxyParamCaption})~((\+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+) $>$$>$ (\mbox{\hyperlink{group___s_t_m32_g4xx___system___private___variables_ga5b4f8b768465842cf854a8f993b375e9}{APBPresc\+Table}}\mbox{[}(\+\_\+\+\_\+\+APB2\+PRESCALER\+\_\+\+\_\+) $>$$>$  RCC\+\_\+\+CFGR\+\_\+\+PPRE2\+\_\+\+Pos\mbox{]} \& 0x1\+FU))}
+
+
+
+Helper macro to calculate the PCLK2 frequency (ABP2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+HCLKFREQ\+\_\+\+\_\+} & HCLK frequency \\
+\hline
+{\em \+\_\+\+\_\+\+APB2\+PRESCALER\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b2___d_i_v_ga7943edb9406cc5267c782e1d8e87dfbb}{LL\+\_\+\+RCC\+\_\+\+APB2\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b2___d_i_v_ga3270a1aab160f79c6e0657583a89c7cf}{LL\+\_\+\+RCC\+\_\+\+APB2\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b2___d_i_v_gae0deb2648c11fde50a6eec21a30a9da2}{LL\+\_\+\+RCC\+\_\+\+APB2\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b2___d_i_v_ga1f03b4b4266803f12f764f7c7ee0e3e4}{LL\+\_\+\+RCC\+\_\+\+APB2\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___a_p_b2___d_i_v_ga499303a545fd5e63d349ab83a126b2ba}{LL\+\_\+\+RCC\+\_\+\+APB2\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em PCLK2} & clock frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gacdeec592d0ce229c48871deedf5b5a95}\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gacdeec592d0ce229c48871deedf5b5a95}} 
+\index{Calculate frequencies@{Calculate frequencies}!\_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ@{\_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ}}
+\index{\_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ@{\_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ}!Calculate frequencies@{Calculate frequencies}}
+\doxysubsubsection{\texorpdfstring{\_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ}{\_\_LL\_RCC\_CALC\_PLLCLK\_48M\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+48\+M\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLQ\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                   ((\_\_INPUTFREQ\_\_) * (\_\_PLLN\_\_) / ((((\_\_PLLM\_\_)>> RCC\_PLLCFGR\_PLLM\_Pos) + 1U)) / \(\backslash\)}
+\DoxyCodeLine{                   ((((\_\_PLLQ\_\_) >> RCC\_PLLCFGR\_PLLQ\_Pos) + 1U) << 1U))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate the PLLCLK frequency used on 48M domain. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gacdeec592d0ce229c48871deedf5b5a95}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+48\+M\+\_\+\+FREQ}} (HSE\+\_\+\+VALUE,\mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider}} (), \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN}} (), \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga2fa76fbe2c7f4db07eee43dc259c53fd}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetQ}} ()); 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+} & PLL Input frequency (based on HSE/\+HSI) \\
+\hline
+{\em \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+{\em \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+} & Between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+{\em \+\_\+\+\_\+\+PLLQ\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_gaf38bd2100e9509177cd2547beaae71a8}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_ga02e6914db7c67fc460a128c564248b37}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_ga16712e41719abb2e1dd05b5e1c61351d}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_q___d_i_v_gaab501e88c2532da4b353cbcacb6e3f35}{LL\+\_\+\+RCC\+\_\+\+PLLQ\+\_\+\+DIV\+\_\+8}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em PLL} & clock frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gac79745c8240aa1116b0ef05c828b7bed}\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gac79745c8240aa1116b0ef05c828b7bed}} 
+\index{Calculate frequencies@{Calculate frequencies}!\_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ@{\_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ}}
+\index{\_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ@{\_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ}!Calculate frequencies@{Calculate frequencies}}
+\doxysubsubsection{\texorpdfstring{\_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ}{\_\_LL\_RCC\_CALC\_PLLCLK\_ADC\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+\+ADC\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLP\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                   ((\_\_INPUTFREQ\_\_) * (\_\_PLLN\_\_) / ((((\_\_PLLM\_\_)>> RCC\_PLLCFGR\_PLLM\_Pos) + 1U)) / \(\backslash\)}
+\DoxyCodeLine{                   ((\_\_PLLP\_\_) >> RCC\_PLLCFGR\_PLLPDIV\_Pos))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate the PLLCLK frequency used on ADC domain. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gac79745c8240aa1116b0ef05c828b7bed}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+\+ADC\+\_\+\+FREQ}} (HSE\+\_\+\+VALUE,\mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider}} (), \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN}} (), \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga99fe1b554c8f04d8fed520689c3ec3b8}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetP}} ()); 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+} & PLL Input frequency (based on HSE/\+HSI) \\
+\hline
+{\em \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}}\end{DoxyItemize}
+\\
+\hline
+{\em \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+} & Between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+{\em \+\_\+\+\_\+\+PLLP\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga3edf8c5068934ce4c6e0dba896ba08d3}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5aa963724bf2bf600b0bbcf84234af21}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga56b3badb5b903f446602242beec4719e}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaa8fe0b27fb5ab96469437702b3dbf361}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga46c4368f091fad0c985a572a090f2248}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga756034d29371e52379a88565b84e7391}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga334f469572145faafd7f209bdcb95127}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga89b9dd1778b4a1c69ac204a9ca3a52b2}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga8adc785b325a8d9ace5806b0af73240c}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga9e40ede643bedc75c2d0ec4cd699d575}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gab5c8f949e49e6d0c26a31d22e575e81b}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga4dc355ebaea666e9c88197d749aa1763}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gacd556a5a065fc9750c59acd3cd1b7dbf}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaf9dcbe3e9baadd67c651bf74a18b9629}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gac7916a4363fcf740781c9f20d0033a4a}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+16}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2f87bf6c3c509434b412a841f09142fc}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+17}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga9936cac6a0beac587c928deb58053617}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+18}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gabffbca59cef0f982296001ec00d6592e}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+19}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gabd528c007e7a9b4803b7e1fab13b5a7d}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+20}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5301fed4a08424e8589a54a95db3cd29}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+21}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaca0519b243160cd3f364112aea262de2}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+22}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga2b1864ab87b3128548191d845b5f3ded}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+23}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga4f669eced056a53ad18283ec3660da10}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+24}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga5dc9c10b862e0e6bf5a1a7732abf1d36}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+25}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga36dc00779f2c1290bb46925b165d5a5a}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+26}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gab8e5921f9c0dee5e5ca60ad66e299ce7}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+27}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaccc3b67761a26d889b5e8648a8f1aaca}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+28}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga08224042cb020fbe18004ea898fdc061}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+29}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_gaf4e8ebaf6c1fed2ec606204115915425}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+30}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_p___d_i_v_ga1aa1846ce0b2537e766ffbdc44ce73a5}{LL\+\_\+\+RCC\+\_\+\+PLLP\+\_\+\+DIV\+\_\+31}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em PLL} & clock frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gaece6f01c8d2eb19007c7c206421b41f1}\label{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gaece6f01c8d2eb19007c7c206421b41f1}} 
+\index{Calculate frequencies@{Calculate frequencies}!\_\_LL\_RCC\_CALC\_PLLCLK\_FREQ@{\_\_LL\_RCC\_CALC\_PLLCLK\_FREQ}}
+\index{\_\_LL\_RCC\_CALC\_PLLCLK\_FREQ@{\_\_LL\_RCC\_CALC\_PLLCLK\_FREQ}!Calculate frequencies@{Calculate frequencies}}
+\doxysubsubsection{\texorpdfstring{\_\_LL\_RCC\_CALC\_PLLCLK\_FREQ}{\_\_LL\_RCC\_CALC\_PLLCLK\_FREQ}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+\+FREQ(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLM\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLN\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+PLLR\+\_\+\+\_\+ }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{                   ((\_\_INPUTFREQ\_\_) * (\_\_PLLN\_\_) / ((((\_\_PLLM\_\_)>> RCC\_PLLCFGR\_PLLM\_Pos) + 1U)) / \(\backslash\)}
+\DoxyCodeLine{                   ((((\_\_PLLR\_\_) >> RCC\_PLLCFGR\_PLLR\_Pos) + 1U) * 2U))}
+
+\end{DoxyCode}
+
+
+Helper macro to calculate the PLLCLK frequency on system domain. 
+
+\begin{DoxyNote}{Note}
+ex\+: \mbox{\hyperlink{group___r_c_c___l_l___e_m___c_a_l_c___f_r_e_q_gaece6f01c8d2eb19007c7c206421b41f1}{\+\_\+\+\_\+\+LL\+\_\+\+RCC\+\_\+\+CALC\+\_\+\+PLLCLK\+\_\+\+FREQ}} (HSE\+\_\+\+VALUE,\mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_ga0d5975a2bb7111ff9dc46cfbffd3d832}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+Get\+Divider}} (), \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gad6a634beb13d8d21b62ba996eeab53c4}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetN}} (), \mbox{\hyperlink{group___r_c_c___l_l___e_f___p_l_l_gab2eda08d7c23715c04620e5dfac0fd1d}{LL\+\_\+\+RCC\+\_\+\+PLL\+\_\+\+GetR}} ()); 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+INPUTFREQ\+\_\+\+\_\+} & PLL Input frequency (based on HSE/\+HSI) \\
+\hline
+{\em \+\_\+\+\_\+\+PLLM\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gabebea61bf9311026af93837f6b4edc2b}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+1}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gac24f9fd7bd4b98cfd66e6439d8ea6468}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga84c779907aef2a45b744187bfaa5a7ac}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+3}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0c370c08ce98f8025cc122d3453ba72e}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gad2bc0d39cf3bf69c75be87bf94c68fb9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+5}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga29223ad8f6ab1fbcda8cc303b4d22f37}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf7d3200118b71984e365f868a9ecf4fe}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+7}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gacc20d37373e295e42048a50f71f5d337}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+8}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaa13233eefc6d1f17cc8e7c9093362026}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+9}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga94c363b53c77ffec11cab0dfe3b4d163}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+10}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga1499bff2e796ed9791f2a1882d6edde7}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+11}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaf714b0704e3a58639f7a22adcca0255d}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+12}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga8acbd833732976d12555631478208ec4}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+13}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gaeec81f5619ee987139148bed80eee61a}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+14}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_gab48bc188d9a40159a287bc14d05c5dc9}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+15}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_m___d_i_v_ga0d0c0f311ad441943661a8cf2f354a24}{LL\+\_\+\+RCC\+\_\+\+PLLM\+\_\+\+DIV\+\_\+16}} \end{DoxyItemize}
+\\
+\hline
+{\em \+\_\+\+\_\+\+PLLN\+\_\+\+\_\+} & Between Min\+\_\+\+Data = 8 and Max\+\_\+\+Data = 127 \\
+\hline
+{\em \+\_\+\+\_\+\+PLLR\+\_\+\+\_\+} & This parameter can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_gac27e19980121da34c0eedd414bd22124}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+2}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_gaff60dae6a7b530aa26b8712d22f002f5}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+4}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_ga58c29e7d62eeb6c59a42771b5ee921f4}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+6}} \item \mbox{\hyperlink{group___r_c_c___l_l___e_c___p_l_l_r___d_i_v_ga9d01c19cdf626ae6055fada37a65d079}{LL\+\_\+\+RCC\+\_\+\+PLLR\+\_\+\+DIV\+\_\+8}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em PLL} & clock frequency (in Hz) \\
+\hline
+\end{DoxyRetVals}

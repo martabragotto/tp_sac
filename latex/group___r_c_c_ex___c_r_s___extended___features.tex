@@ -1,0 +1,112 @@
+\hypertarget{group___r_c_c_ex___c_r_s___extended___features}{}\doxysection{RCCEx CRS Extended Features}
+\label{group___r_c_c_ex___c_r_s___extended___features}\index{RCCEx CRS Extended Features@{RCCEx CRS Extended Features}}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___c_r_s___extended___features_ga59fe9365920d435138c487b85068cab0}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+FREQ\+\_\+\+ERROR\+\_\+\+COUNTER\+\_\+\+ENABLE}}()~SET\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\+\_\+\+CR\+\_\+\+CEN}})
+\begin{DoxyCompactList}\small\item\em Enable the oscillator clock for frequency error counter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___c_r_s___extended___features_ga92d96e3857c138d9a313f74de163e833}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+FREQ\+\_\+\+ERROR\+\_\+\+COUNTER\+\_\+\+DISABLE}}()~CLEAR\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\+\_\+\+CR\+\_\+\+CEN}})
+\begin{DoxyCompactList}\small\item\em Disable the oscillator clock for frequency error counter. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___c_r_s___extended___features_gabed68fe74d544b1c602aa5a22a7af786}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+AUTOMATIC\+\_\+\+CALIB\+\_\+\+ENABLE}}()~SET\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\+\_\+\+CR\+\_\+\+AUTOTRIMEN}})
+\begin{DoxyCompactList}\small\item\em Enable the automatic hardware adjustment of TRIM bits. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___c_r_s___extended___features_ga1a3b49219a5d79ba0688074b56d33122}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+AUTOMATIC\+\_\+\+CALIB\+\_\+\+DISABLE}}()~CLEAR\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\+\_\+\+CR\+\_\+\+AUTOTRIMEN}})
+\begin{DoxyCompactList}\small\item\em Enable or disable the automatic hardware adjustment of TRIM bits. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{group___r_c_c_ex___c_r_s___extended___features_ga5c48aa81c5416362a3cbb499754754a1}{\+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+RELOADVALUE\+\_\+\+CALCULATE}}(\+\_\+\+\_\+\+FTARGET\+\_\+\+\_\+,  \+\_\+\+\_\+\+FSYNC\+\_\+\+\_\+)~(((\+\_\+\+\_\+\+FTARGET\+\_\+\+\_\+) / (\+\_\+\+\_\+\+FSYNC\+\_\+\+\_\+)) -\/ 1U)
+\begin{DoxyCompactList}\small\item\em Macro to calculate reload value to be set in CRS register according to target and sync frequencies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group___r_c_c_ex___c_r_s___extended___features_ga1a3b49219a5d79ba0688074b56d33122}\label{group___r_c_c_ex___c_r_s___extended___features_ga1a3b49219a5d79ba0688074b56d33122}} 
+\index{RCCEx CRS Extended Features@{RCCEx CRS Extended Features}!\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE@{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE}}
+\index{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE@{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE}!RCCEx CRS Extended Features@{RCCEx CRS Extended Features}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE}{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+AUTOMATIC\+\_\+\+CALIB\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~CLEAR\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\+\_\+\+CR\+\_\+\+AUTOTRIMEN}})}
+
+
+
+Enable or disable the automatic hardware adjustment of TRIM bits. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___c_r_s___extended___features_gabed68fe74d544b1c602aa5a22a7af786}\label{group___r_c_c_ex___c_r_s___extended___features_gabed68fe74d544b1c602aa5a22a7af786}} 
+\index{RCCEx CRS Extended Features@{RCCEx CRS Extended Features}!\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE@{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE}}
+\index{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE@{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE}!RCCEx CRS Extended Features@{RCCEx CRS Extended Features}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE}{\_\_HAL\_RCC\_CRS\_AUTOMATIC\_CALIB\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+AUTOMATIC\+\_\+\+CALIB\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~SET\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gafa48432b942f1896e05a2eff91178edd}{CRS\+\_\+\+CR\+\_\+\+AUTOTRIMEN}})}
+
+
+
+Enable the automatic hardware adjustment of TRIM bits. 
+
+\begin{DoxyNote}{Note}
+When the AUTOTRIMEN bit is set the CRS\+\_\+\+CFGR register becomes write-\/protected. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___c_r_s___extended___features_ga92d96e3857c138d9a313f74de163e833}\label{group___r_c_c_ex___c_r_s___extended___features_ga92d96e3857c138d9a313f74de163e833}} 
+\index{RCCEx CRS Extended Features@{RCCEx CRS Extended Features}!\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE@{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE}}
+\index{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE@{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE}!RCCEx CRS Extended Features@{RCCEx CRS Extended Features}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE}{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_DISABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+FREQ\+\_\+\+ERROR\+\_\+\+COUNTER\+\_\+\+DISABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~CLEAR\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\+\_\+\+CR\+\_\+\+CEN}})}
+
+
+
+Disable the oscillator clock for frequency error counter. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___c_r_s___extended___features_ga59fe9365920d435138c487b85068cab0}\label{group___r_c_c_ex___c_r_s___extended___features_ga59fe9365920d435138c487b85068cab0}} 
+\index{RCCEx CRS Extended Features@{RCCEx CRS Extended Features}!\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE@{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE}}
+\index{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE@{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE}!RCCEx CRS Extended Features@{RCCEx CRS Extended Features}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE}{\_\_HAL\_RCC\_CRS\_FREQ\_ERROR\_COUNTER\_ENABLE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+FREQ\+\_\+\+ERROR\+\_\+\+COUNTER\+\_\+\+ENABLE(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~SET\+\_\+\+BIT(CRS-\/$>$CR, \mbox{\hyperlink{group___peripheral___registers___bits___definition_gace21476d647129c935f84daf84d91699}{CRS\+\_\+\+CR\+\_\+\+CEN}})}
+
+
+
+Enable the oscillator clock for frequency error counter. 
+
+\begin{DoxyNote}{Note}
+when the CEN bit is set the CRS\+\_\+\+CFGR register becomes write-\/protected. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___r_c_c_ex___c_r_s___extended___features_ga5c48aa81c5416362a3cbb499754754a1}\label{group___r_c_c_ex___c_r_s___extended___features_ga5c48aa81c5416362a3cbb499754754a1}} 
+\index{RCCEx CRS Extended Features@{RCCEx CRS Extended Features}!\_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE@{\_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE}}
+\index{\_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE@{\_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE}!RCCEx CRS Extended Features@{RCCEx CRS Extended Features}}
+\doxysubsubsection{\texorpdfstring{\_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE}{\_\_HAL\_RCC\_CRS\_RELOADVALUE\_CALCULATE}}
+{\footnotesize\ttfamily \#define \+\_\+\+\_\+\+HAL\+\_\+\+RCC\+\_\+\+CRS\+\_\+\+RELOADVALUE\+\_\+\+CALCULATE(\begin{DoxyParamCaption}\item[{}]{\+\_\+\+\_\+\+FTARGET\+\_\+\+\_\+,  }\item[{}]{\+\_\+\+\_\+\+FSYNC\+\_\+\+\_\+ }\end{DoxyParamCaption})~(((\+\_\+\+\_\+\+FTARGET\+\_\+\+\_\+) / (\+\_\+\+\_\+\+FSYNC\+\_\+\+\_\+)) -\/ 1U)}
+
+
+
+Macro to calculate reload value to be set in CRS register according to target and sync frequencies. 
+
+\begin{DoxyNote}{Note}
+The RELOAD value should be selected according to the ratio between the target frequency and the frequency of the synchronization source after prescaling. It is then decreased by one in order to reach the expected synchronization on the zero value. The formula is the following\+: RELOAD = (f\+TARGET / f\+SYNC) -\/1 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+\+\_\+\+FTARGET\+\_\+\+\_\+} & Target frequency (value in Hz) \\
+\hline
+{\em \+\_\+\+\_\+\+FSYNC\+\_\+\+\_\+} & Synchronization signal frequency (value in Hz) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}

@@ -1,0 +1,96 @@
+\hypertarget{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o}{}\doxysection{MCU INFO}
+\label{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o}\index{MCU INFO@{MCU INFO}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga648a5236b7fa08786086fcc4ce42b4b9}{LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer}} (void)
+\begin{DoxyCompactList}\small\item\em Get Implementer code @rmtoll SCB\+\_\+\+CPUID IMPLEMENTER LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga1f843da5f8524bace7fcf8dcce7996cb}{LL\+\_\+\+CPUID\+\_\+\+Get\+Variant}} (void)
+\begin{DoxyCompactList}\small\item\em Get Variant number (The r value in the rnpn product revision identifier) @rmtoll SCB\+\_\+\+CPUID VARIANT LL\+\_\+\+CPUID\+\_\+\+Get\+Variant. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gadc6dc3055d2a192ac1218e09a1e8fd19}{LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture}} (void)
+\begin{DoxyCompactList}\small\item\em Get Architecture number @rmtoll SCB\+\_\+\+CPUID ARCHITECTURE LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gac98fd56ad9162c3f372004bd07038bdb}{LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No}} (void)
+\begin{DoxyCompactList}\small\item\em Get Part number @rmtoll SCB\+\_\+\+CPUID PARTNO LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga7372821defd92c49ea4563da407acd01}{LL\+\_\+\+CPUID\+\_\+\+Get\+Revision}} (void)
+\begin{DoxyCompactList}\small\item\em Get Revision number (The p value in the rnpn product revision identifier, indicates patch release) @rmtoll SCB\+\_\+\+CPUID REVISION LL\+\_\+\+CPUID\+\_\+\+Get\+Revision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gadc6dc3055d2a192ac1218e09a1e8fd19}\label{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gadc6dc3055d2a192ac1218e09a1e8fd19}} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetArchitecture@{LL\_CPUID\_GetArchitecture}}
+\index{LL\_CPUID\_GetArchitecture@{LL\_CPUID\_GetArchitecture}!MCU INFO@{MCU INFO}}
+\doxysubsubsection{\texorpdfstring{LL\_CPUID\_GetArchitecture()}{LL\_CPUID\_GetArchitecture()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Architecture number @rmtoll SCB\+\_\+\+CPUID ARCHITECTURE LL\+\_\+\+CPUID\+\_\+\+Get\+Architecture. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & should be equal to 0xF for Cortex-\/\+M4 devices \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga648a5236b7fa08786086fcc4ce42b4b9}\label{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga648a5236b7fa08786086fcc4ce42b4b9}} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetImplementer@{LL\_CPUID\_GetImplementer}}
+\index{LL\_CPUID\_GetImplementer@{LL\_CPUID\_GetImplementer}!MCU INFO@{MCU INFO}}
+\doxysubsubsection{\texorpdfstring{LL\_CPUID\_GetImplementer()}{LL\_CPUID\_GetImplementer()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Implementer code @rmtoll SCB\+\_\+\+CPUID IMPLEMENTER LL\+\_\+\+CPUID\+\_\+\+Get\+Implementer. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & should be equal to 0x41 for ARM \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gac98fd56ad9162c3f372004bd07038bdb}\label{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_gac98fd56ad9162c3f372004bd07038bdb}} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetParNo@{LL\_CPUID\_GetParNo}}
+\index{LL\_CPUID\_GetParNo@{LL\_CPUID\_GetParNo}!MCU INFO@{MCU INFO}}
+\doxysubsubsection{\texorpdfstring{LL\_CPUID\_GetParNo()}{LL\_CPUID\_GetParNo()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Part number @rmtoll SCB\+\_\+\+CPUID PARTNO LL\+\_\+\+CPUID\+\_\+\+Get\+Par\+No. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & should be equal to 0x\+C24 for Cortex-\/\+M4 \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga7372821defd92c49ea4563da407acd01}\label{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga7372821defd92c49ea4563da407acd01}} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetRevision@{LL\_CPUID\_GetRevision}}
+\index{LL\_CPUID\_GetRevision@{LL\_CPUID\_GetRevision}!MCU INFO@{MCU INFO}}
+\doxysubsubsection{\texorpdfstring{LL\_CPUID\_GetRevision()}{LL\_CPUID\_GetRevision()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Revision (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Revision number (The p value in the rnpn product revision identifier, indicates patch release) @rmtoll SCB\+\_\+\+CPUID REVISION LL\+\_\+\+CPUID\+\_\+\+Get\+Revision. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & between 0 and 255 (0x1\+: patch 1) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga1f843da5f8524bace7fcf8dcce7996cb}\label{group___c_o_r_t_e_x___l_l___e_f___m_c_u___i_n_f_o_ga1f843da5f8524bace7fcf8dcce7996cb}} 
+\index{MCU INFO@{MCU INFO}!LL\_CPUID\_GetVariant@{LL\_CPUID\_GetVariant}}
+\index{LL\_CPUID\_GetVariant@{LL\_CPUID\_GetVariant}!MCU INFO@{MCU INFO}}
+\doxysubsubsection{\texorpdfstring{LL\_CPUID\_GetVariant()}{LL\_CPUID\_GetVariant()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+CPUID\+\_\+\+Get\+Variant (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Variant number (The r value in the rnpn product revision identifier) @rmtoll SCB\+\_\+\+CPUID VARIANT LL\+\_\+\+CPUID\+\_\+\+Get\+Variant. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Value} & between 0 and 255 (0x0\+: revision 0) \\
+\hline
+\end{DoxyRetVals}

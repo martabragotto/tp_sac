@@ -1,0 +1,46 @@
+\hypertarget{struct_a_d_c___injection_config_type_def}{}\doxysection{ADC\+\_\+\+Injection\+Config\+Type\+Def Struct Reference}
+\label{struct_a_d_c___injection_config_type_def}\index{ADC\_InjectionConfigTypeDef@{ADC\_InjectionConfigTypeDef}}
+
+
+ADC group injected contexts queue configuration.  
+
+
+
+
+{\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+adc.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___injection_config_type_def_a68445359cbf5484c11ca4a48171bb471}{Context\+Queue}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___injection_config_type_def_a1124ad2c7ec568c5242fd55bf2211727}{Channel\+Count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ADC group injected contexts queue configuration. 
+
+\begin{DoxyNote}{Note}
+Structure intended to be used only through structure \char`\"{}\+ADC\+\_\+\+Handle\+Type\+Def\char`\"{} 
+\end{DoxyNote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_a_d_c___injection_config_type_def_a1124ad2c7ec568c5242fd55bf2211727}\label{struct_a_d_c___injection_config_type_def_a1124ad2c7ec568c5242fd55bf2211727}} 
+\index{ADC\_InjectionConfigTypeDef@{ADC\_InjectionConfigTypeDef}!ChannelCount@{ChannelCount}}
+\index{ChannelCount@{ChannelCount}!ADC\_InjectionConfigTypeDef@{ADC\_InjectionConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{ChannelCount}{ChannelCount}}
+{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Injection\+Config\+Type\+Def\+::\+Channel\+Count}
+
+Number of channels in the injected sequence \mbox{\Hypertarget{struct_a_d_c___injection_config_type_def_a68445359cbf5484c11ca4a48171bb471}\label{struct_a_d_c___injection_config_type_def_a68445359cbf5484c11ca4a48171bb471}} 
+\index{ADC\_InjectionConfigTypeDef@{ADC\_InjectionConfigTypeDef}!ContextQueue@{ContextQueue}}
+\index{ContextQueue@{ContextQueue}!ADC\_InjectionConfigTypeDef@{ADC\_InjectionConfigTypeDef}}
+\doxysubsubsection{\texorpdfstring{ContextQueue}{ContextQueue}}
+{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Injection\+Config\+Type\+Def\+::\+Context\+Queue}
+
+Injected channel configuration context\+: build-\/up over each HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Config\+Channel() call to finally initialize JSQR register at HAL\+\_\+\+ADCEx\+\_\+\+Injected\+Config\+Channel() last call 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32g4xx__hal__adc_8h}{stm32g4xx\+\_\+hal\+\_\+adc.\+h}}\end{DoxyCompactItemize}

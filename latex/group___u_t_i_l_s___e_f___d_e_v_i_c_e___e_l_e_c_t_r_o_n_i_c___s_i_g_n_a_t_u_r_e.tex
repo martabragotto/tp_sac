@@ -1,0 +1,101 @@
+\hypertarget{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e}{}\doxysection{DEVICE ELECTRONIC SIGNATURE}
+\label{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e}\index{DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga3a0b557447143f41b93a7fa45270b5b8}{LL\+\_\+\+Get\+UID\+\_\+\+Word0}} (void)
+\begin{DoxyCompactList}\small\item\em Get Word0 of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga67007778e77a6fafc8a1fc440dc208b2}{LL\+\_\+\+Get\+UID\+\_\+\+Word1}} (void)
+\begin{DoxyCompactList}\small\item\em Get Word1 of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gaa15df2bc902d392f67ee9873943d4904}{LL\+\_\+\+Get\+UID\+\_\+\+Word2}} (void)
+\begin{DoxyCompactList}\small\item\em Get Word2 of the unique device identifier (UID based on 96 bits) \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga0e8379766a1799f3c5fedadaa2b0c47e}{LL\+\_\+\+Get\+Flash\+Size}} (void)
+\begin{DoxyCompactList}\small\item\em Get Flash memory size. \end{DoxyCompactList}\item 
+\+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t \mbox{\hyperlink{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gadac3ab6581c114d1ce31034f80b49249}{LL\+\_\+\+Get\+Package\+Type}} (void)
+\begin{DoxyCompactList}\small\item\em Get Package type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga0e8379766a1799f3c5fedadaa2b0c47e}\label{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga0e8379766a1799f3c5fedadaa2b0c47e}} 
+\index{DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}!LL\_GetFlashSize@{LL\_GetFlashSize}}
+\index{LL\_GetFlashSize@{LL\_GetFlashSize}!DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{LL\_GetFlashSize()}{LL\_GetFlashSize()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+Get\+Flash\+Size (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Flash memory size. 
+
+\begin{DoxyNote}{Note}
+This bitfield indicates the size of the device Flash memory expressed in Kbytes. As an example, 0x040 corresponds to 64 Kbytes. 
+\end{DoxyNote}
+
+\begin{DoxyRetVals}{Return values}
+{\em FLASH\+\_\+\+SIZE\mbox{[}15\+:0\mbox{]}} & Flash memory size \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gadac3ab6581c114d1ce31034f80b49249}\label{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gadac3ab6581c114d1ce31034f80b49249}} 
+\index{DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}!LL\_GetPackageType@{LL\_GetPackageType}}
+\index{LL\_GetPackageType@{LL\_GetPackageType}!DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{LL\_GetPackageType()}{LL\_GetPackageType()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+Get\+Package\+Type (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Package type. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em Returned} & value can be one of the following values\+: \begin{DoxyItemize}
+\item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga38042cafe8d211a2807c485fbcf84644}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP64}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga020e7c1e82f91902bf4093deb831d003}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP100}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_gada223f2d3004d1ecb60ccf07e2036fe6}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+WLCSP81}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga3c16d4dcbfaccefbd5fbfcc27c6aa47a}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP128}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga16d82a00fd32a2c9c01c72e5c317eee8}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFQFPN32}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga0af4ad6f590f9edc18ceea814aaec6c5}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP32}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga51af7680248107e329d4d938e1f49b95}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFQFPN48}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_gaa16a15f4a202ade3965c491bc29545d2}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP48}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga7278d66c2b9051357da6a1a769c460ae}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+WLCSP49}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_gab96d13b626286095261274af2cc90626}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFBGA64}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga2b15523f3f1952044581025116a5c271}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+UFBGA100}} \item \mbox{\hyperlink{group___u_t_i_l_s___e_c___p_a_c_k_a_g_e_t_y_p_e_ga1cb187c017a118996420336c1106024a}{LL\+\_\+\+UTILS\+\_\+\+PACKAGETYPE\+\_\+\+LQFP48\+\_\+\+EBIKE}} \end{DoxyItemize}
+\\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga3a0b557447143f41b93a7fa45270b5b8}\label{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga3a0b557447143f41b93a7fa45270b5b8}} 
+\index{DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}!LL\_GetUID\_Word0@{LL\_GetUID\_Word0}}
+\index{LL\_GetUID\_Word0@{LL\_GetUID\_Word0}!DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{LL\_GetUID\_Word0()}{LL\_GetUID\_Word0()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+Get\+UID\+\_\+\+Word0 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Word0 of the unique device identifier (UID based on 96 bits) 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em UID\mbox{[}31\+:0\mbox{]}} & X and Y coordinates on the wafer expressed in BCD format \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga67007778e77a6fafc8a1fc440dc208b2}\label{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_ga67007778e77a6fafc8a1fc440dc208b2}} 
+\index{DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}!LL\_GetUID\_Word1@{LL\_GetUID\_Word1}}
+\index{LL\_GetUID\_Word1@{LL\_GetUID\_Word1}!DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{LL\_GetUID\_Word1()}{LL\_GetUID\_Word1()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+Get\+UID\+\_\+\+Word1 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Word1 of the unique device identifier (UID based on 96 bits) 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em UID\mbox{[}63\+:32\mbox{]}} & Wafer number (UID\mbox{[}39\+:32\mbox{]}) \& LOT\+\_\+\+NUM\mbox{[}23\+:0\mbox{]} (UID\mbox{[}63\+:40\mbox{]}) \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gaa15df2bc902d392f67ee9873943d4904}\label{group___u_t_i_l_s___e_f___d_e_v_i_c_e___e_l_e_c_t_r_o_n_i_c___s_i_g_n_a_t_u_r_e_gaa15df2bc902d392f67ee9873943d4904}} 
+\index{DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}!LL\_GetUID\_Word2@{LL\_GetUID\_Word2}}
+\index{LL\_GetUID\_Word2@{LL\_GetUID\_Word2}!DEVICE ELECTRONIC SIGNATURE@{DEVICE ELECTRONIC SIGNATURE}}
+\doxysubsubsection{\texorpdfstring{LL\_GetUID\_Word2()}{LL\_GetUID\_Word2()}}
+{\footnotesize\ttfamily \+\_\+\+\_\+\+STATIC\+\_\+\+INLINE uint32\+\_\+t LL\+\_\+\+Get\+UID\+\_\+\+Word2 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Get Word2 of the unique device identifier (UID based on 96 bits) 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em UID\mbox{[}95\+:64\mbox{]}} & Lot number (ASCII encoded) -\/ LOT\+\_\+\+NUM\mbox{[}55\+:24\mbox{]} \\
+\hline
+\end{DoxyRetVals}

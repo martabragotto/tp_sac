@@ -1,0 +1,185 @@
+\hypertarget{struct_____d_m_a___handle_type_def}{}\doxysection{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def Struct Reference}
+\label{struct_____d_m_a___handle_type_def}\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+
+
+DMA handle Structure definition.  
+
+
+
+
+{\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+dma.\+h$>$}
+
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_d_m_a___channel___type_def}{DMA\+\_\+\+Channel\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a9368ced5769abb92a56886ff879a7f5e}{Instance}}
+\item 
+\mbox{\hyperlink{struct_d_m_a___init_type_def}{DMA\+\_\+\+Init\+Type\+Def}} \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a3792cb34cedb0e2ab204e41b53ef75ad}{Init}}
+\item 
+\mbox{\hyperlink{stm32g4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a005e867f695aa4b85aca665af7345b51}{Lock}}
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group___d_m_a___exported___types_ga9c012af359987a240826f29073bbe463}{HAL\+\_\+\+DMA\+\_\+\+State\+Type\+Def}} \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a9759b676141bec799cdab94c3e08e6e4}{State}}
+\item 
+void $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_af42684decd26b1c5d49a529fcf99be30}{Parent}}
+\item 
+void($\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a4d3306134cfab7bde2b4912ae652b24b}{Xfer\+Cplt\+Callback}} )(struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)
+\item 
+void($\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_ab18b84e2f0ff70605946b5d37688427e}{Xfer\+Half\+Cplt\+Callback}} )(struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)
+\item 
+void($\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a940b278bd8b7f975770b547e28b5c87f}{Xfer\+Error\+Callback}} )(struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)
+\item 
+void($\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a2bd9fe30ccc5365f0d8b6341a1f59559}{Xfer\+Abort\+Callback}} )(struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)
+\item 
+\mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a67a2a8b907bc9b5c0af87f9de2bffc29}{Error\+Code}}
+\item 
+\mbox{\hyperlink{struct_d_m_a___type_def}{DMA\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a782724cfffb6bcdaa37360a93c3e8926}{Dma\+Base\+Address}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a6bc83cac62e984f201c0e1b2eca70d57}{Channel\+Index}}
+\item 
+\mbox{\hyperlink{struct_d_m_a_m_u_x___channel___type_def}{DMAMUX\+\_\+\+Channel\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a24a731022309a3db8df5f122cfb25a3e}{DMAmux\+Channel}}
+\item 
+\mbox{\hyperlink{struct_d_m_a_m_u_x___channel_status___type_def}{DMAMUX\+\_\+\+Channel\+Status\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_aa02c98efe118956a212040b33a856c7f}{DMAmux\+Channel\+Status}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a32e3ce38ea5aff70b1b691b274436fdb}{DMAmux\+Channel\+Status\+Mask}}
+\item 
+\mbox{\hyperlink{struct_d_m_a_m_u_x___request_gen___type_def}{DMAMUX\+\_\+\+Request\+Gen\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a8b8e183f16b522f282bdbe40056d31ef}{DMAmux\+Request\+Gen}}
+\item 
+\mbox{\hyperlink{struct_d_m_a_m_u_x___request_gen_status___type_def}{DMAMUX\+\_\+\+Request\+Gen\+Status\+\_\+\+Type\+Def}} $\ast$ \mbox{\hyperlink{struct_____d_m_a___handle_type_def_a0a5339c70c25c2cff8b612f7c1dafd51}{DMAmux\+Request\+Gen\+Status}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{struct_____d_m_a___handle_type_def_af18bf241f91e316a3638f0334c614a6d}{DMAmux\+Request\+Gen\+Status\+Mask}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+DMA handle Structure definition. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a6bc83cac62e984f201c0e1b2eca70d57}\label{struct_____d_m_a___handle_type_def_a6bc83cac62e984f201c0e1b2eca70d57}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!ChannelIndex@{ChannelIndex}}
+\index{ChannelIndex@{ChannelIndex}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ChannelIndex}{ChannelIndex}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Channel\+Index}
+
+DMA Channel Index ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a782724cfffb6bcdaa37360a93c3e8926}\label{struct_____d_m_a___handle_type_def_a782724cfffb6bcdaa37360a93c3e8926}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DmaBaseAddress@{DmaBaseAddress}}
+\index{DmaBaseAddress@{DmaBaseAddress}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DmaBaseAddress}{DmaBaseAddress}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a___type_def}{DMA\+\_\+\+Type\+Def}}$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Dma\+Base\+Address}
+
+DMA Channel Base Address ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a24a731022309a3db8df5f122cfb25a3e}\label{struct_____d_m_a___handle_type_def_a24a731022309a3db8df5f122cfb25a3e}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxChannel@{DMAmuxChannel}}
+\index{DMAmuxChannel@{DMAmuxChannel}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxChannel}{DMAmuxChannel}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a_m_u_x___channel___type_def}{DMAMUX\+\_\+\+Channel\+\_\+\+Type\+Def}}$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+DMAmux\+Channel}
+
+Register base address ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_aa02c98efe118956a212040b33a856c7f}\label{struct_____d_m_a___handle_type_def_aa02c98efe118956a212040b33a856c7f}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxChannelStatus@{DMAmuxChannelStatus}}
+\index{DMAmuxChannelStatus@{DMAmuxChannelStatus}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxChannelStatus}{DMAmuxChannelStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a_m_u_x___channel_status___type_def}{DMAMUX\+\_\+\+Channel\+Status\+\_\+\+Type\+Def}}$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+DMAmux\+Channel\+Status}
+
+DMAMUX Channels Status Base Address ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a32e3ce38ea5aff70b1b691b274436fdb}\label{struct_____d_m_a___handle_type_def_a32e3ce38ea5aff70b1b691b274436fdb}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxChannelStatusMask@{DMAmuxChannelStatusMask}}
+\index{DMAmuxChannelStatusMask@{DMAmuxChannelStatusMask}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxChannelStatusMask}{DMAmuxChannelStatusMask}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+DMAmux\+Channel\+Status\+Mask}
+
+DMAMUX Channel Status Mask ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a8b8e183f16b522f282bdbe40056d31ef}\label{struct_____d_m_a___handle_type_def_a8b8e183f16b522f282bdbe40056d31ef}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxRequestGen@{DMAmuxRequestGen}}
+\index{DMAmuxRequestGen@{DMAmuxRequestGen}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxRequestGen}{DMAmuxRequestGen}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a_m_u_x___request_gen___type_def}{DMAMUX\+\_\+\+Request\+Gen\+\_\+\+Type\+Def}}$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+DMAmux\+Request\+Gen}
+
+DMAMUX request generator Base Address \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a0a5339c70c25c2cff8b612f7c1dafd51}\label{struct_____d_m_a___handle_type_def_a0a5339c70c25c2cff8b612f7c1dafd51}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxRequestGenStatus@{DMAmuxRequestGenStatus}}
+\index{DMAmuxRequestGenStatus@{DMAmuxRequestGenStatus}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxRequestGenStatus}{DMAmuxRequestGenStatus}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a_m_u_x___request_gen_status___type_def}{DMAMUX\+\_\+\+Request\+Gen\+Status\+\_\+\+Type\+Def}}$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+DMAmux\+Request\+Gen\+Status}
+
+DMAMUX request generator Address ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_af18bf241f91e316a3638f0334c614a6d}\label{struct_____d_m_a___handle_type_def_af18bf241f91e316a3638f0334c614a6d}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!DMAmuxRequestGenStatusMask@{DMAmuxRequestGenStatusMask}}
+\index{DMAmuxRequestGenStatusMask@{DMAmuxRequestGenStatusMask}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{DMAmuxRequestGenStatusMask}{DMAmuxRequestGenStatusMask}}
+{\footnotesize\ttfamily uint32\+\_\+t \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+DMAmux\+Request\+Gen\+Status\+Mask}
+
+DMAMUX request generator Status mask \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a67a2a8b907bc9b5c0af87f9de2bffc29}\label{struct_____d_m_a___handle_type_def_a67a2a8b907bc9b5c0af87f9de2bffc29}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!ErrorCode@{ErrorCode}}
+\index{ErrorCode@{ErrorCode}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{ErrorCode}{ErrorCode}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} uint32\+\_\+t \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Error\+Code}
+
+DMA Error code ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a3792cb34cedb0e2ab204e41b53ef75ad}\label{struct_____d_m_a___handle_type_def_a3792cb34cedb0e2ab204e41b53ef75ad}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Init@{Init}}
+\index{Init@{Init}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Init}{Init}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a___init_type_def}{DMA\+\_\+\+Init\+Type\+Def}} \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Init}
+
+DMA communication parameters ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a9368ced5769abb92a56886ff879a7f5e}\label{struct_____d_m_a___handle_type_def_a9368ced5769abb92a56886ff879a7f5e}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Instance@{Instance}}
+\index{Instance@{Instance}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_d_m_a___channel___type_def}{DMA\+\_\+\+Channel\+\_\+\+Type\+Def}}$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Instance}
+
+Register base address ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a005e867f695aa4b85aca665af7345b51}\label{struct_____d_m_a___handle_type_def_a005e867f695aa4b85aca665af7345b51}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Lock@{Lock}}
+\index{Lock@{Lock}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Lock}{Lock}}
+{\footnotesize\ttfamily \mbox{\hyperlink{stm32g4xx__hal__def_8h_ab367482e943333a1299294eadaad284b}{HAL\+\_\+\+Lock\+Type\+Def}} \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Lock}
+
+DMA locking object ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_af42684decd26b1c5d49a529fcf99be30}\label{struct_____d_m_a___handle_type_def_af42684decd26b1c5d49a529fcf99be30}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!Parent@{Parent}}
+\index{Parent@{Parent}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{Parent}{Parent}}
+{\footnotesize\ttfamily void$\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Parent}
+
+Parent object state ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a9759b676141bec799cdab94c3e08e6e4}\label{struct_____d_m_a___handle_type_def_a9759b676141bec799cdab94c3e08e6e4}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!State@{State}}
+\index{State@{State}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \mbox{\hyperlink{core__armv81mml_8h_aec43007d9998a0a0e01faede4133d6be}{\+\_\+\+\_\+\+IO}} \mbox{\hyperlink{group___d_m_a___exported___types_ga9c012af359987a240826f29073bbe463}{HAL\+\_\+\+DMA\+\_\+\+State\+Type\+Def}} \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+State}
+
+DMA transfer state ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a2bd9fe30ccc5365f0d8b6341a1f59559}\label{struct_____d_m_a___handle_type_def_a2bd9fe30ccc5365f0d8b6341a1f59559}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferAbortCallback@{XferAbortCallback}}
+\index{XferAbortCallback@{XferAbortCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferAbortCallback}{XferAbortCallback}}
+{\footnotesize\ttfamily void($\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Xfer\+Abort\+Callback) (struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)}
+
+DMA transfer abort callback ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a4d3306134cfab7bde2b4912ae652b24b}\label{struct_____d_m_a___handle_type_def_a4d3306134cfab7bde2b4912ae652b24b}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferCpltCallback@{XferCpltCallback}}
+\index{XferCpltCallback@{XferCpltCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferCpltCallback}{XferCpltCallback}}
+{\footnotesize\ttfamily void($\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Xfer\+Cplt\+Callback) (struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)}
+
+DMA transfer complete callback ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_a940b278bd8b7f975770b547e28b5c87f}\label{struct_____d_m_a___handle_type_def_a940b278bd8b7f975770b547e28b5c87f}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferErrorCallback@{XferErrorCallback}}
+\index{XferErrorCallback@{XferErrorCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferErrorCallback}{XferErrorCallback}}
+{\footnotesize\ttfamily void($\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Xfer\+Error\+Callback) (struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)}
+
+DMA transfer error callback ~\newline
+ \mbox{\Hypertarget{struct_____d_m_a___handle_type_def_ab18b84e2f0ff70605946b5d37688427e}\label{struct_____d_m_a___handle_type_def_ab18b84e2f0ff70605946b5d37688427e}} 
+\index{\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}!XferHalfCpltCallback@{XferHalfCpltCallback}}
+\index{XferHalfCpltCallback@{XferHalfCpltCallback}!\_\_DMA\_HandleTypeDef@{\_\_DMA\_HandleTypeDef}}
+\doxysubsubsection{\texorpdfstring{XferHalfCpltCallback}{XferHalfCpltCallback}}
+{\footnotesize\ttfamily void($\ast$ \+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def\+::\+Xfer\+Half\+Cplt\+Callback) (struct \mbox{\hyperlink{struct_____d_m_a___handle_type_def}{\+\_\+\+\_\+\+DMA\+\_\+\+Handle\+Type\+Def}} $\ast$hdma)}
+
+DMA Half transfer complete callback ~\newline
+ 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Drivers/\+STM32\+G4xx\+\_\+\+HAL\+\_\+\+Driver/\+Inc/\mbox{\hyperlink{stm32g4xx__hal__dma_8h}{stm32g4xx\+\_\+hal\+\_\+dma.\+h}}\end{DoxyCompactItemize}
