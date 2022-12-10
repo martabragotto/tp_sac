@@ -40,6 +40,15 @@
 \item 
 \mbox{\Hypertarget{main_8c_af58f5cd494d5aa25df318845c300b73c}\label{main_8c_af58f5cd494d5aa25df318845c300b73c}} 
 \#define {\bfseries ISO\+\_\+\+RESET\+\_\+\+TIME}~70
+\item 
+\mbox{\Hypertarget{main_8c_a56ba174230e79864ff45b1764512828d}\label{main_8c_a56ba174230e79864ff45b1764512828d}} 
+\#define {\bfseries HALF\+\_\+\+COUNTER\+\_\+\+ENCODER}~32767
+\item 
+\mbox{\Hypertarget{main_8c_a0e9e19885becad75b533b44b3e506ea1}\label{main_8c_a0e9e19885becad75b533b44b3e506ea1}} 
+\#define {\bfseries SAMPLING\+\_\+\+FREQ}~100
+\item 
+\mbox{\Hypertarget{main_8c_a26a092ec4753d0ed0612721421b76592}\label{main_8c_a26a092ec4753d0ed0612721421b76592}} 
+\#define {\bfseries RISES\+\_\+\+PER\+\_\+\+TURN}~4096
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -52,10 +61,12 @@ void \mbox{\hyperlink{main_8c_aa311b2a3989643c1921082b0f1129011}{Start\+PWM}} ()
 \begin{DoxyCompactList}\small\item\em PWM timers start function. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8c_a55d46d35989b6322d554ad828c28c0a8}{Stop\+PWM}} ()
 \begin{DoxyCompactList}\small\item\em PWM timers stop function. \end{DoxyCompactList}\item 
-float \mbox{\hyperlink{main_8c_acfcac2c6e0767adc997aefa7967c6820}{Current\+Conversion}} ()
-\begin{DoxyCompactList}\small\item\em current conversion function \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{main_8c_aedd0d594bb64967c4fa126558749e5ae}{Duty\+Cycle\+Func\+Def}} (int dutycycle\+IN)
 \begin{DoxyCompactList}\small\item\em duty cycle function definition \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8c_acfcac2c6e0767adc997aefa7967c6820}{Current\+Conversion}} ()
+\begin{DoxyCompactList}\small\item\em current conversion function \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8c_aaf041cd6199ecfed5cd69c2db8092b36}{Speed\+Calculation}} (uint32\+\_\+t counter)
+\begin{DoxyCompactList}\small\item\em speed calculation from encoder counter value \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
 \begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
 void {\bfseries HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} $\ast$huart)
@@ -148,10 +159,19 @@ float \mbox{\hyperlink{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}{Sensed\+\_\+\+
 \mbox{\Hypertarget{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}\label{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}} 
 float {\bfseries Current\+Value\+Float}
 \item 
-\mbox{\Hypertarget{main_8c_a4b6011269ed77855ed19c6eb0b4b2fde}\label{main_8c_a4b6011269ed77855ed19c6eb0b4b2fde}} 
-char {\bfseries Current\+\_\+\+Sensed} \mbox{[}30\mbox{]}
+\mbox{\Hypertarget{main_8c_a6678c7525d7c1b074ce9f205bc866d0a}\label{main_8c_a6678c7525d7c1b074ce9f205bc866d0a}} 
+char {\bfseries Current\+\_\+\+Sensed} \mbox{[}50\mbox{]}
 \item 
 int \mbox{\hyperlink{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}} =0
+\item 
+\mbox{\Hypertarget{main_8c_a30a12e12def3cb1d36811aca6054e75a}\label{main_8c_a30a12e12def3cb1d36811aca6054e75a}} 
+char {\bfseries Speed\+\_\+\+Sensed} \mbox{[}50\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_af0c385d1d97a8d6371b10eaad1329d5f}\label{main_8c_af0c385d1d97a8d6371b10eaad1329d5f}} 
+int {\bfseries Counter\+Taken} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a7f7e4724cf57d59513b39c5ecc81adc8}\label{main_8c_a7f7e4724cf57d59513b39c5ecc81adc8}} 
+float {\bfseries speed}
 \end{DoxyCompactItemize}
 
 
@@ -263,6 +283,29 @@ The application entry point.
 
 \begin{DoxyRetVals}{Return values}
 {\em int} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_aaf041cd6199ecfed5cd69c2db8092b36}\label{main_8c_aaf041cd6199ecfed5cd69c2db8092b36}} 
+\index{main.c@{main.c}!SpeedCalculation@{SpeedCalculation}}
+\index{SpeedCalculation@{SpeedCalculation}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SpeedCalculation()}{SpeedCalculation()}}
+{\footnotesize\ttfamily float Speed\+Calculation (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{counter }\end{DoxyParamCaption})}
+
+
+
+speed calculation from encoder counter value 
+
+\begin{DoxyNote}{Note}
+This function converts encoder counter value in speed in rad/sec 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em int} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em float} & \\
 \hline
 \end{DoxyRetVals}
 \mbox{\Hypertarget{main_8c_aa311b2a3989643c1921082b0f1129011}\label{main_8c_aa311b2a3989643c1921082b0f1129011}} 
