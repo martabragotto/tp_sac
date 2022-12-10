@@ -55,9 +55,24 @@ since the clock works at a frequency of 170MHz, the number of clockturns needed 
 	1/170 MHz : ClockTurnsNumber = 2us --> at least ClockTurnsNumber= 340 are needed to reach 2us //350 has been chosen in the beginning as ISO_RESET_TIME (number of clockturns)
 	Then by the oscilloscope (picture screenOscilloscopioPeriod1) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (picture screenOscilloscopioPeriod2).
 	
-DMA Settings 
+DMA Settings and CURRENT SENSING
 The DMA has been associated to a new timer TIM8. The voltage output frequency of the full bridge is two times the switching frequency which is 16KHz, and since the required number of samplings per period is 10 the Timer has been set in order to work at 320KHz. 
 Callback function has been used only as a flag while the conversion has been performed in the main. 
 The conversion has been performed by averaging the 10 raw data and then dividing it by 4095 and multiplying it by 3,3.
 Have a look at the images "currentSensedValuesOnTerminal" "CurrentSensedWithOscilloscope" to see the measured current.
 
+Notice that in the following test, we had a hardware problem. Current sensor in the power module had higher values than expected in output. So the gain is set to 3 instead of 12 as shown in the datasheet. With this changed the sensor output and oscilloscope output are coherent. Have a look at the images "CurrentSpeedSensed" "NewCurrentSensedWithOscilloscope" to see the measured current.
+
+SPEED SENSING
+In order to sense the current, two timers are used. The first one is set to work in "encoder mode" to sens the input values from the motor's encoder. In particular the counter is set to the middle value. The encoder mode adds one to the counter when motor turns in clockwise direction and subtracts one when in conterclockwise direction, so we start from the middle value of the counter to take into account both clockwise and conterclockwise rotations.
+Then a second timer is set to evaluate the value of the rotor position at constant rate to calculate the speed of rotation. Indeed
+RotationSpeed=deltaAngle x TimerFrequency
+The timer frequency is set at 100Hz
+The encoder mode timer is set to tick at both rising and folling edge of the encoder signal and it processes the signal of two. Then the total number of trigger events that can increase or decrease the timer counter is 1024 x 4=4096 per round. A changing in the encoder timer counter means a chainging if 2pi/4096 radiant in rotor's position.
+
+The following lines converts the data from encoder mode timer into rotational speed in radiant per second
+speed = 2 * 3.14 * (((float)counter-HALF_COUNTER_ENCODER)/RISES_PER_TURN) * SAMPLING_FREQ;
+where
+HALF_COUNTER_ENCODER=32767 (Middle value of the encoder mode timer's counter)
+RISES_PER_TURN=4096
+SAMPLING_FREQ=100
