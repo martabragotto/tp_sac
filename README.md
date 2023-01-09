@@ -78,7 +78,7 @@ In order to let inverter receive an up signal of at least 2 us, the following ca
 since the clock works at a frequency of 170MHz, the number of clockturns needed to arrive to 2 us is:
 	1/170 MHz : ClockTurnsNumber = 2us --> at least ClockTurnsNumber= 340 are needed to reach 2us //350 has been chosen in the beginning as ISO_RESET_TIME (number of clockturns)
 	
-	Then by the oscilloscope (see picture screenOscilloscopioPeriod1 below) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (see picture screenOscilloscopioPeriod2 below).
+Then by the oscilloscope (see picture screenOscilloscopioPeriod1 below) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (see picture screenOscilloscopioPeriod2 below).
 	
 screenOscilloscopioPeriod2:
 
