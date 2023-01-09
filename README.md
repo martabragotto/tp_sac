@@ -55,6 +55,7 @@ since the clock works at a frequency of 170MHz, the number of clockturns needed 
 	1/170 MHz : ClockTurnsNumber = 2us --> at least ClockTurnsNumber= 340 are needed to reach 2us //350 has been chosen in the beginning as ISO_RESET_TIME (number of clockturns)
 	Then by the oscilloscope (picture screenOscilloscopioPeriod1) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (picture screenOscilloscopioPeriod2).
 	
+	
 DMA Settings and CURRENT SENSING
 The DMA has been associated to a new timer TIM8. The voltage output frequency of the full bridge is two times the switching frequency which is 16KHz, and since the required number of samplings per period is 10 the Timer has been set in order to work at 320KHz. 
 Callback function has been used only as a flag while the conversion has been performed in the main. 
