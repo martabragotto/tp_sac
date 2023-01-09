@@ -19,17 +19,30 @@ pulse channel 1 = 1239-1 has been put.
 Channel 2 had to be shifted of half a period, with respect to PA11 output. To do this, pulse value has been set as: pulse channel 2 = counter period - pulse channel 1 
 pulse channel 2 = 3987-1
 
-Output test --> look at the image "screenOscilloscopioFrequencyCheck" for frequency and duty cycle check.
+Output test --> look at the image "screenOscilloscopioFrequencyCheck" below for frequency and duty cycle check.
+
+screenOscilloscopioFrequencyCheck:
+![screenOscilloscopioFrequencyCheck](https://user-images.githubusercontent.com/73655064/211313367-2397494a-979b-47e1-9afe-b66d3b97218e.png)
+
 
 Duty cycle setting by shell commands:
 In order to do that we "dutycycle" string is detected as argv[0] and the new percentage value is detected as argv[1].
 Then the percentage value has been divided by 100 to have it convertd into the factor by which multiply counter period value and get new pulse value for channel1 PWM
 The second pulse value has been calculated as before (pulse channel 2 = counter period - pulse channel 1)
 
-Output tests with 0.15, 0.60, 0.80 ad dutycycle values: look at the images "screenOscilloscopioPeriodValue", "screenOscilloscopioAlpha0.15", "screenOscilloscopioAlpha0.60", "screenOscilloscopioAlpha0.80" for check
+Output tests with 0.15, 0.60, 0.80 ad dutycycle values: look at the images "screenOscilloscopioPeriodValue", "screenOscilloscopioAlpha0.15", "screenOscilloscopioAlpha0.60", "screenOscilloscopioAlpha0.80" below for check.
+
+
+screenOscilloscopioPeriodValue:
 ![screenOscilloscopioPeriodValue](https://user-images.githubusercontent.com/73655064/211312404-436823cc-92ef-4d11-abac-c8a478f99e61.png)
+
+screenOscilloscopioAlpha0.15 :
 ![screenOscilloscopioAlpha0 15](https://user-images.githubusercontent.com/73655064/211312472-44317d62-266e-492d-871c-f5b0c61cca7f.png)
+
+screenOscilloscopioAlpha0.60 :
 ![screenOscilloscopioAlpha0 60](https://user-images.githubusercontent.com/73655064/211312477-838bf9b9-dadd-4115-88ef-dd7b62ffb20e.png)
+
+screenOscilloscopioAlpha0.80 :
 ![screenOscilloscopioAlpha0 80](https://user-images.githubusercontent.com/73655064/211312479-1a788364-bc73-403b-b7ea-6983249a837f.png)
 
 
@@ -59,8 +72,16 @@ ISO RESET CODE
 In order to let inverter receive an up signal of at least 2 us, the following calculation has been done: 
 since the clock works at a frequency of 170MHz, the number of clockturns needed to arrive to 2 us is:
 	1/170 MHz : ClockTurnsNumber = 2us --> at least ClockTurnsNumber= 340 are needed to reach 2us //350 has been chosen in the beginning as ISO_RESET_TIME (number of clockturns)
-	Then by the oscilloscope (picture screenOscilloscopioPeriod1) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (picture screenOscilloscopioPeriod2).
 	
+	Then by the oscilloscope (see picture screenOscilloscopioPeriod1 below) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (see picture screenOscilloscopioPeriod2 below).
+	
+screenOscilloscopioPeriod2:
+	![screenOscilloscopioPeriod1](https://user-images.githubusercontent.com/73655064/211313674-b7dcab79-2535-4594-9d06-65a85d6fc3f5.png)
+
+	
+screenOscilloscopioPeriod2:
+	![screenOscilloscopioPeriod2](https://user-images.githubusercontent.com/73655064/211313663-76b20660-0c11-4052-be43-d1382e8421c9.png)
+
 	
 DMA Settings and CURRENT SENSING
 The DMA has been associated to a new timer TIM8. The voltage output frequency of the full bridge is two times the switching frequency which is 16KHz, and since the required number of samplings per period is 10 the Timer has been set in order to work at 320KHz. 
@@ -68,10 +89,22 @@ Callback function has been used only as a flag while the conversion has been per
 The conversion has been performed by averaging the 10 raw data and then dividing it by 4095 and multiplying it by 3,3.
 Have a look at the images "currentSensedValuesOnTerminal" "CurrentSensedWithOscilloscope" to see the measured current.
 
+currentSensedValuesOnTerminal:
+![CurrentSensedValuesOnTerminal](https://user-images.githubusercontent.com/73655064/211314058-48021472-fce9-40b1-8f2b-854a97929819.jpeg)
+
+CurrentSensedWithOscilloscope:
+![CurrentSensedWithOscilloscope](https://user-images.githubusercontent.com/73655064/211314079-e1d13715-a702-4531-aa73-76ab3e6fd57f.png)
 
 
 
 Notice that in the following test, we had a hardware problem. Current sensor in the power module had higher values than expected in output. So the gain is set to 3 instead of 12 as shown in the datasheet. With this changed the sensor output and oscilloscope output are coherent. Have a look at the images "CurrentSpeedSensed" "NewCurrentSensedWithOscilloscope" to see the measured current.
+
+CurrentSpeedSensed:
+![CurrentSpeedSensed](https://user-images.githubusercontent.com/73655064/211314136-92f26c73-2b67-4ad0-84fd-9ef46d4939d3.JPG)
+
+NewCurrentSensedWithOscilloscope
+![NewCurrentSensedWithOscilloscope](https://user-images.githubusercontent.com/73655064/211314178-c18fb638-6b82-4327-b16d-f90fab26b754.png)
+
 
 SPEED SENSING
 In order to sense the current, two timers are used. The first one is set to work in "encoder mode" to sens the input values from the motor's encoder. In particular the counter is set to the middle value. The encoder mode adds one to the counter when motor turns in clockwise direction and subtracts one when in conterclockwise direction, so we start from the middle value of the counter to take into account both clockwise and conterclockwise rotations.
