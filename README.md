@@ -107,6 +107,7 @@ NewCurrentSensedWithOscilloscope
 
 
 SPEED SENSING
+
 In order to sense the current, two timers are used. The first one is set to work in "encoder mode" to sens the input values from the motor's encoder. In particular the counter is set to the middle value. The encoder mode adds one to the counter when motor turns in clockwise direction and subtracts one when in conterclockwise direction, so we start from the middle value of the counter to take into account both clockwise and conterclockwise rotations.
 Then a second timer is set to evaluate the value of the rotor position at constant rate to calculate the speed of rotation. Indeed
 RotationSpeed=deltaAngle x TimerFrequency
@@ -119,3 +120,21 @@ where
 HALF_COUNTER_ENCODER=32767 (Middle value of the encoder mode timer's counter)
 RISES_PER_TURN=4096
 SAMPLING_FREQ=100
+
+CURRENT CONTROL 
+
+Accordind to the control scheme realised through simulink the following coefficients for the current PID has been found: 
+
+	KpC=0
+	KiC=0,00118870172705228
+	
+Then the continuous time control scheme has been translated into C, discret time code as , the following: 
+AntiWindup solution: in order to not realise the control for saturised alfa then if alfa is >1 is then set to 1 and if alfa is <0 is then set to 0.
+
+SPEED CONTROL 
+
+Accordind to the control scheme realised through simulink the following coefficients for the current PID has been found: 
+
+	KpC=0,00302065389254772
+	KiC=0,000072398235347041
+
