@@ -143,7 +143,7 @@ According to the control scheme realised through simulink the following coeffici
 	KiC = 25,206814338745
 
 Then the control scheme has been translated into C, discret time code as , the following: 
-//
+<
 int CurrentPI(float CurrentReq)
 {
 	int alpha;
@@ -174,7 +174,7 @@ int CurrentPI(float CurrentReq)
 	return alpha;
 
 }
-//
+>
 
 AntiWindup solution: in order to not realise the control for saturised alfa then if alfa is >1 is then set to 1 and if alfa is <0 is then set to 0.
 
