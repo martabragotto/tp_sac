@@ -82,12 +82,12 @@ since the clock works at a frequency of 170MHz, the number of clockturns needed 
 	
 screenOscilloscopioPeriod2:
 
-	![screenOscilloscopioPeriod1](https://user-images.githubusercontent.com/73655064/211313674-b7dcab79-2535-4594-9d06-65a85d6fc3f5.png)
+![screenOscilloscopioPeriod1](https://user-images.githubusercontent.com/73655064/211313674-b7dcab79-2535-4594-9d06-65a85d6fc3f5.png)
 
 	
 screenOscilloscopioPeriod2:
 
-	![screenOscilloscopioPeriod2](https://user-images.githubusercontent.com/73655064/211313663-76b20660-0c11-4052-be43-d1382e8421c9.png)
+![screenOscilloscopioPeriod2](https://user-images.githubusercontent.com/73655064/211313663-76b20660-0c11-4052-be43-d1382e8421c9.png)
 
 	
 DMA Settings and CURRENT SENSING
