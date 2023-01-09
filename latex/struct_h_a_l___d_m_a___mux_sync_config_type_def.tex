@@ -9,18 +9,18 @@ HAL DMA Synchro definition.
 
 {\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+dma\+\_\+ex.\+h$>$}
 
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a94e5c09dc5fe0ae5088bb54be6a715fb}{Sync\+Signal\+ID}}
+uint32\+\_\+t \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a4ef93606c67966acc563bf0310deb41a}{Sync\+Signal\+ID}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_ab9358d892ba465e1e224533e5e2edc94}{Sync\+Polarity}}
+uint32\+\_\+t \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a37e1815fbee67df61d816d67b25862b0}{Sync\+Polarity}}
 \item 
-Functional\+State \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a7b213a462174caf2f7ae69a0cea1e274}{Sync\+Enable}}
+Functional\+State \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_ac2b94fdec06b819485f9e2d5460458b9}{Sync\+Enable}}
 \item 
-Functional\+State \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a7248b89bd87a648b1b1e18fdc03a6296}{Event\+Enable}}
+Functional\+State \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a5ee470a808913e5869eb96c47a72d714}{Event\+Enable}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_a534a4c42abdfb49854d915bcc7dddbd9}{Request\+Number}}
+uint32\+\_\+t \mbox{\hyperlink{struct_h_a_l___d_m_a___mux_sync_config_type_def_aa98130d429e9c3f42fc783fa8d70a00f}{Request\+Number}}
 \end{DoxyCompactItemize}
 
 
@@ -29,36 +29,36 @@ HAL DMA Synchro definition.
 
 HAL DMAMUX Synchronization configuration structure definition 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a7248b89bd87a648b1b1e18fdc03a6296}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a7248b89bd87a648b1b1e18fdc03a6296}} 
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a5ee470a808913e5869eb96c47a72d714}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a5ee470a808913e5869eb96c47a72d714}} 
 \index{HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}!EventEnable@{EventEnable}}
 \index{EventEnable@{EventEnable}!HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}}
 \doxysubsubsection{\texorpdfstring{EventEnable}{EventEnable}}
-{\footnotesize\ttfamily Functional\+State HAL\+\_\+\+DMA\+\_\+\+Mux\+Sync\+Config\+Type\+Def\+::\+Event\+Enable}
+{\footnotesize\ttfamily Functional\+State Event\+Enable}
 
-Specifies if an event shall be generated once the Request\+Number is reached. This parameter can take the value ENABLE or DISABLE \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a534a4c42abdfb49854d915bcc7dddbd9}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a534a4c42abdfb49854d915bcc7dddbd9}} 
+Specifies if an event shall be generated once the Request\+Number is reached. This parameter can take the value ENABLE or DISABLE \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_aa98130d429e9c3f42fc783fa8d70a00f}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_aa98130d429e9c3f42fc783fa8d70a00f}} 
 \index{HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}!RequestNumber@{RequestNumber}}
 \index{RequestNumber@{RequestNumber}!HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}}
 \doxysubsubsection{\texorpdfstring{RequestNumber}{RequestNumber}}
-{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+DMA\+\_\+\+Mux\+Sync\+Config\+Type\+Def\+::\+Request\+Number}
+{\footnotesize\ttfamily uint32\+\_\+t Request\+Number}
 
-Specifies the number of DMA request that will be authorized after a sync event This parameter must be a number between Min\+\_\+\+Data = 1 and Max\+\_\+\+Data = 32 \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a7b213a462174caf2f7ae69a0cea1e274}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a7b213a462174caf2f7ae69a0cea1e274}} 
+Specifies the number of DMA request that will be authorized after a sync event This parameter must be a number between Min\+\_\+\+Data = 1 and Max\+\_\+\+Data = 32 \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_ac2b94fdec06b819485f9e2d5460458b9}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_ac2b94fdec06b819485f9e2d5460458b9}} 
 \index{HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}!SyncEnable@{SyncEnable}}
 \index{SyncEnable@{SyncEnable}!HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}}
 \doxysubsubsection{\texorpdfstring{SyncEnable}{SyncEnable}}
-{\footnotesize\ttfamily Functional\+State HAL\+\_\+\+DMA\+\_\+\+Mux\+Sync\+Config\+Type\+Def\+::\+Sync\+Enable}
+{\footnotesize\ttfamily Functional\+State Sync\+Enable}
 
-Specifies if the synchronization shall be enabled or disabled This parameter can take the value ENABLE or DISABLE \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_ab9358d892ba465e1e224533e5e2edc94}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_ab9358d892ba465e1e224533e5e2edc94}} 
+Specifies if the synchronization shall be enabled or disabled This parameter can take the value ENABLE or DISABLE \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a37e1815fbee67df61d816d67b25862b0}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a37e1815fbee67df61d816d67b25862b0}} 
 \index{HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}!SyncPolarity@{SyncPolarity}}
 \index{SyncPolarity@{SyncPolarity}!HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}}
 \doxysubsubsection{\texorpdfstring{SyncPolarity}{SyncPolarity}}
-{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+DMA\+\_\+\+Mux\+Sync\+Config\+Type\+Def\+::\+Sync\+Polarity}
+{\footnotesize\ttfamily uint32\+\_\+t Sync\+Polarity}
 
-Specifies the polarity of the signal on which the DMA request is synchronized. This parameter can be a value of \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_polarity__selection}{DMAMUX Sync\+Polarity selection}} \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a94e5c09dc5fe0ae5088bb54be6a715fb}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a94e5c09dc5fe0ae5088bb54be6a715fb}} 
+Specifies the polarity of the signal on which the DMA request is synchronized. This parameter can be a value of \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_polarity__selection}{DMAMUX Sync\+Polarity selection}} \mbox{\Hypertarget{struct_h_a_l___d_m_a___mux_sync_config_type_def_a4ef93606c67966acc563bf0310deb41a}\label{struct_h_a_l___d_m_a___mux_sync_config_type_def_a4ef93606c67966acc563bf0310deb41a}} 
 \index{HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}!SyncSignalID@{SyncSignalID}}
 \index{SyncSignalID@{SyncSignalID}!HAL\_DMA\_MuxSyncConfigTypeDef@{HAL\_DMA\_MuxSyncConfigTypeDef}}
 \doxysubsubsection{\texorpdfstring{SyncSignalID}{SyncSignalID}}
-{\footnotesize\ttfamily uint32\+\_\+t HAL\+\_\+\+DMA\+\_\+\+Mux\+Sync\+Config\+Type\+Def\+::\+Sync\+Signal\+ID}
+{\footnotesize\ttfamily uint32\+\_\+t Sync\+Signal\+ID}
 
 Specifies the synchronization signal gating the DMA request in periodic mode. This parameter can be a value of \mbox{\hyperlink{group___d_m_a_ex___d_m_a_m_u_x___sync_signal_i_d__selection}{DMAMUX Sync\+Signal\+ID selection}} 
 

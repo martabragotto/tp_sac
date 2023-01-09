@@ -44,11 +44,29 @@
 \mbox{\Hypertarget{main_8c_a56ba174230e79864ff45b1764512828d}\label{main_8c_a56ba174230e79864ff45b1764512828d}} 
 \#define {\bfseries HALF\+\_\+\+COUNTER\+\_\+\+ENCODER}~32767
 \item 
-\mbox{\Hypertarget{main_8c_a0e9e19885becad75b533b44b3e506ea1}\label{main_8c_a0e9e19885becad75b533b44b3e506ea1}} 
-\#define {\bfseries SAMPLING\+\_\+\+FREQ}~100
+\mbox{\Hypertarget{main_8c_a1ed27881941825478cf2b3e71dfd0126}\label{main_8c_a1ed27881941825478cf2b3e71dfd0126}} 
+\#define {\bfseries SAMPLING\+\_\+\+FREQ\+\_\+\+SPEED}~100
 \item 
 \mbox{\Hypertarget{main_8c_a26a092ec4753d0ed0612721421b76592}\label{main_8c_a26a092ec4753d0ed0612721421b76592}} 
 \#define {\bfseries RISES\+\_\+\+PER\+\_\+\+TURN}~4096
+\item 
+\mbox{\Hypertarget{main_8c_a7b69aabaeaacd5501e028178635a184f}\label{main_8c_a7b69aabaeaacd5501e028178635a184f}} 
+\#define {\bfseries SAMPLING\+\_\+\+FREQ\+\_\+\+CURRENT}~32000
+\item 
+\mbox{\Hypertarget{main_8c_a12e15c42ee74a0753c1a8cb469b4782d}\label{main_8c_a12e15c42ee74a0753c1a8cb469b4782d}} 
+\#define {\bfseries KpC}~0.\+0342717381517845
+\item 
+\mbox{\Hypertarget{main_8c_ae45dbbaf2799907c90c812312e7c59cf}\label{main_8c_ae45dbbaf2799907c90c812312e7c59cf}} 
+\#define {\bfseries KiC}~25.\+206814338745
+\item 
+\mbox{\Hypertarget{main_8c_ae7d73fcc8b5d52e9e0ad27c31bc4a5d7}\label{main_8c_ae7d73fcc8b5d52e9e0ad27c31bc4a5d7}} 
+\#define {\bfseries KpS}~2.\+25311945059239
+\item 
+\mbox{\Hypertarget{main_8c_a5e4eb53b07ce95c284754c9fc0056b65}\label{main_8c_a5e4eb53b07ce95c284754c9fc0056b65}} 
+\#define {\bfseries KiS}~7.\+88672319650441
+\item 
+\mbox{\Hypertarget{main_8c_a9783a1ea8c093eb3b264c0090561870c}\label{main_8c_a9783a1ea8c093eb3b264c0090561870c}} 
+\#define {\bfseries NOMINAL\+\_\+\+CURRENT}~12.\+2
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
@@ -67,6 +85,10 @@ float \mbox{\hyperlink{main_8c_acfcac2c6e0767adc997aefa7967c6820}{Current\+Conve
 \begin{DoxyCompactList}\small\item\em current conversion function \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{main_8c_aaf041cd6199ecfed5cd69c2db8092b36}{Speed\+Calculation}} (uint32\+\_\+t counter)
 \begin{DoxyCompactList}\small\item\em speed calculation from encoder counter value \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8c_a4372bcf127b7f1e4088e920089bd17d4}{Current\+PI}} (float Current\+Req)
+\begin{DoxyCompactList}\small\item\em PI controller for current loop. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{main_8c_ac0212ad84deb89907d705ec6327645eb}{Speed\+PI}} (float Speed\+Req)
+\begin{DoxyCompactList}\small\item\em PI controller for speed loop. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
 \begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
 void {\bfseries HAL\+\_\+\+UART\+\_\+\+Rx\+Cplt\+Callback} (\mbox{\hyperlink{group___u_a_r_t___exported___types_ga5de4a49eb132735325e706f406c69d6e}{UART\+\_\+\+Handle\+Type\+Def}} $\ast$huart)
@@ -113,7 +135,7 @@ uint8\+\_\+t {\bfseries newline} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{
 uint8\+\_\+t {\bfseries cmd\+Not\+Found} \mbox{[}$\,$\mbox{]} =\char`\"{}Command not found\textbackslash{}r\textbackslash{}n\char`\"{}
 \item 
 \mbox{\Hypertarget{main_8c_aad594d8cb92082da3ee0ede1e1161b9b}\label{main_8c_aad594d8cb92082da3ee0ede1e1161b9b}} 
-uint8\+\_\+t {\bfseries help\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n set \textbackslash{}r\textbackslash{}n get \textbackslash{}r\textbackslash{}n pinout \textbackslash{}r\textbackslash{}n start \textbackslash{}r\textbackslash{}n stop \textbackslash{}r\textbackslash{}n dutycycle\textbackslash{}r\textbackslash{}n \textbackslash{}r\textbackslash{}n\char`\"{}
+uint8\+\_\+t {\bfseries help\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n set \textbackslash{}r\textbackslash{}n get \textbackslash{}r\textbackslash{}n pinout \textbackslash{}r\textbackslash{}n start \textbackslash{}r\textbackslash{}n stop \textbackslash{}r\textbackslash{}n \mbox{\hyperlink{main_8c_aad387ea7ef87850d0f52146fd98ae08d}{dutycycle}} -\/ value between 0 and 100 \textbackslash{}r\textbackslash{}n current -\/ value in m\+Ampere requested \textbackslash{}r\textbackslash{}n \textbackslash{}r\textbackslash{}n\char`\"{}
 \item 
 \mbox{\Hypertarget{main_8c_a88cdec764d4f983cfad9858c6ef0eb47}\label{main_8c_a88cdec764d4f983cfad9858c6ef0eb47}} 
 uint8\+\_\+t {\bfseries pinout\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n PA2\+: USART TX \textbackslash{}r\textbackslash{}n PA3\+: USART RX \textbackslash{}r\textbackslash{}n PA5\+: LED \textbackslash{}r\textbackslash{}n PA8\+: TIM1\+\_\+\+CH1 \textbackslash{}r\textbackslash{}n PA9\+: TIM1\+\_\+\+CH2 \textbackslash{}r\textbackslash{}n PA11\+: TIM1\+\_\+\+CH1N \textbackslash{}r\textbackslash{}n PA12\+: TIM1\+\_\+\+CH2N \textbackslash{}r\textbackslash{}n PC13\+: BUTTON \textbackslash{}r\textbackslash{}n\char`\"{}
@@ -126,6 +148,9 @@ uint8\+\_\+t {\bfseries stop\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textback
 \item 
 \mbox{\Hypertarget{main_8c_a851649d562ce3474ce8aed38ada4252f}\label{main_8c_a851649d562ce3474ce8aed38ada4252f}} 
 uint8\+\_\+t {\bfseries duty\+Cycle\+Choice\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n duty cycle value chosen \textbackslash{}r\textbackslash{}n\char`\"{}
+\item 
+\mbox{\Hypertarget{main_8c_a6d67c9a087074bad9897771f720f7c1e}\label{main_8c_a6d67c9a087074bad9897771f720f7c1e}} 
+uint8\+\_\+t {\bfseries Current\+Choice\+Content} \mbox{[}$\,$\mbox{]} =\char`\"{}\textbackslash{}r\textbackslash{}n current value chosen \textbackslash{}r\textbackslash{}n\char`\"{}
 \item 
 int \mbox{\hyperlink{main_8c_aad387ea7ef87850d0f52146fd98ae08d}{dutycycle}}
 \item 
@@ -156,11 +181,38 @@ float \mbox{\hyperlink{main_8c_ae1bfa6f9f62ab5a631d50a6044d92ed3}{Converted\+\_\
 \item 
 float \mbox{\hyperlink{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}{Sensed\+\_\+\+Current\+\_\+\+Value}}
 \item 
-\mbox{\Hypertarget{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}\label{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}} 
-float {\bfseries Current\+Value\+Float}
+float \mbox{\hyperlink{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}{Current\+Value\+Float}}
+\item 
+float \mbox{\hyperlink{main_8c_a69a240f3ff71bf79fbae11b9e0eaa570}{requested\+Current}}
+\item 
+float \mbox{\hyperlink{main_8c_a9c257e30b69ee6589880871b37f2f9c2}{errorI}} \mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{main_8c_ae3908f9f3dc6cbb33abcdb3feade98f3}{alphaI}} \mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{main_8c_a04771d81c8e9a047b5123abcc24981d4}{alphaP}}
+\item 
+float \mbox{\hyperlink{main_8c_a71e3068b27873dbc7426308ef4b3d5d4}{old\+Current}}
+\item 
+\mbox{\Hypertarget{main_8c_a9ee15b26ab580d77c9b6568264f8d532}\label{main_8c_a9ee15b26ab580d77c9b6568264f8d532}} 
+float {\bfseries Rot\+Speed}
+\item 
+\mbox{\Hypertarget{main_8c_a66f2f942a58be1595f4b317dfb1fe8fd}\label{main_8c_a66f2f942a58be1595f4b317dfb1fe8fd}} 
+float {\bfseries requested\+Speed}
+\item 
+float \mbox{\hyperlink{main_8c_a43cfd0249135576d926ae147ee1591b4}{speedP}}
+\item 
+float \mbox{\hyperlink{main_8c_a2a6183ad26b0c41dd52c4c01891fe036}{errorS}} \mbox{[}2\mbox{]}
+\item 
+float \mbox{\hyperlink{main_8c_aadc45638247fcf298faa2bf7f16fda9d}{speedI}} \mbox{[}2\mbox{]}
 \item 
 \mbox{\Hypertarget{main_8c_a6678c7525d7c1b074ce9f205bc866d0a}\label{main_8c_a6678c7525d7c1b074ce9f205bc866d0a}} 
 char {\bfseries Current\+\_\+\+Sensed} \mbox{[}50\mbox{]}
+\item 
+\mbox{\Hypertarget{main_8c_a0bfba8ab314a1132089b3324c7d62c5d}\label{main_8c_a0bfba8ab314a1132089b3324c7d62c5d}} 
+int {\bfseries Current\+PIcontroller\+Enable} =0
+\item 
+\mbox{\Hypertarget{main_8c_a2fafadc1dc76e3706b4bee38203729eb}\label{main_8c_a2fafadc1dc76e3706b4bee38203729eb}} 
+int {\bfseries Speed\+PIcontroller\+Enable} =0
 \item 
 int \mbox{\hyperlink{main_8c_ab66ed8e0098c0a86b458672a55a9cca9}{k}} =0
 \item 
@@ -207,6 +259,29 @@ This function converts raw voltage data from ADC to current value to be used in 
 
 \begin{DoxyRetVals}{Return values}
 {\em float} & \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_a4372bcf127b7f1e4088e920089bd17d4}\label{main_8c_a4372bcf127b7f1e4088e920089bd17d4}} 
+\index{main.c@{main.c}!CurrentPI@{CurrentPI}}
+\index{CurrentPI@{CurrentPI}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CurrentPI()}{CurrentPI()}}
+{\footnotesize\ttfamily int Current\+PI (\begin{DoxyParamCaption}\item[{float}]{Current\+Req }\end{DoxyParamCaption})}
+
+
+
+PI controller for current loop. 
+
+\begin{DoxyNote}{Note}
+this note takes the value of the current requested by the user and determines the duty cycle. The PI controller gains are determined with simulation and are defined values. The anti wind-\/up is done as well in the controller. Current values are defined globally and used in the function. the output value is the dutycycle value, between 0 and 100 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em float} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
 \hline
 \end{DoxyRetVals}
 \mbox{\Hypertarget{main_8c_aedd0d594bb64967c4fa126558749e5ae}\label{main_8c_aedd0d594bb64967c4fa126558749e5ae}} 
@@ -308,6 +383,29 @@ This function converts encoder counter value in speed in rad/sec
 {\em float} & \\
 \hline
 \end{DoxyRetVals}
+\mbox{\Hypertarget{main_8c_ac0212ad84deb89907d705ec6327645eb}\label{main_8c_ac0212ad84deb89907d705ec6327645eb}} 
+\index{main.c@{main.c}!SpeedPI@{SpeedPI}}
+\index{SpeedPI@{SpeedPI}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{SpeedPI()}{SpeedPI()}}
+{\footnotesize\ttfamily float Speed\+PI (\begin{DoxyParamCaption}\item[{float}]{Speed\+Req }\end{DoxyParamCaption})}
+
+
+
+PI controller for speed loop. 
+
+\begin{DoxyNote}{Note}
+this note takes the value of the current requested by the user and determines the duty cycle. The PI controller gains are determined with simulation and are defined values. The anti wind-\/up is done as well in the controller. Current values are defined globally and used in the function. the output value is the current needed for the speed requested 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em float} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
 \mbox{\Hypertarget{main_8c_aa311b2a3989643c1921082b0f1129011}\label{main_8c_aa311b2a3989643c1921082b0f1129011}} 
 \index{main.c@{main.c}!StartPWM@{StartPWM}}
 \index{StartPWM@{StartPWM}!main.c@{main.c}}
@@ -376,7 +474,19 @@ Initializes the RCC Oscillators according to the specified parameters in the \mb
 Initializes the CPU, AHB and APB buses clocks
 
 \doxysubsection{Variable Documentation}
-\mbox{\Hypertarget{main_8c_aacc036bac39053bd95f63cd00661d683}\label{main_8c_aacc036bac39053bd95f63cd00661d683}} 
+\mbox{\Hypertarget{main_8c_ae3908f9f3dc6cbb33abcdb3feade98f3}\label{main_8c_ae3908f9f3dc6cbb33abcdb3feade98f3}} 
+\index{main.c@{main.c}!alphaI@{alphaI}}
+\index{alphaI@{alphaI}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{alphaI}{alphaI}}
+{\footnotesize\ttfamily float alphaI\mbox{[}2\mbox{]}}
+
+array with the values of the dutycycle value of the integral part of the controller at previous time instant, errorI\mbox{[}0\mbox{]}, and present time instant, errorI\mbox{[}1\mbox{]} \mbox{\Hypertarget{main_8c_a04771d81c8e9a047b5123abcc24981d4}\label{main_8c_a04771d81c8e9a047b5123abcc24981d4}} 
+\index{main.c@{main.c}!alphaP@{alphaP}}
+\index{alphaP@{alphaP}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{alphaP}{alphaP}}
+{\footnotesize\ttfamily float alphaP}
+
+proportional part of current control \mbox{\Hypertarget{main_8c_aacc036bac39053bd95f63cd00661d683}\label{main_8c_aacc036bac39053bd95f63cd00661d683}} 
 \index{main.c@{main.c}!Average\_Voltage@{Average\_Voltage}}
 \index{Average\_Voltage@{Average\_Voltage}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{Average\_Voltage}{Average\_Voltage}}
@@ -388,7 +498,13 @@ raw sensed value on average \mbox{\Hypertarget{main_8c_ae1bfa6f9f62ab5a631d50a60
 \doxysubsubsection{\texorpdfstring{Converted\_Average\_Voltage}{Converted\_Average\_Voltage}}
 {\footnotesize\ttfamily float Converted\+\_\+\+Average\+\_\+\+Voltage}
 
-actual voltage value in output, converted ad follows\+: Converted\+\_\+\+Average\+\_\+\+Voltage=(Average\+\_\+\+Voltage/4095.\+0)$\ast$3.3 \mbox{\Hypertarget{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}\label{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}} 
+actual voltage value in output, converted ad follows\+: Converted\+\_\+\+Average\+\_\+\+Voltage=(Average\+\_\+\+Voltage/4095.\+0)$\ast$3.3 \mbox{\Hypertarget{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}\label{main_8c_a53cb420b8b2a4ccd797c9b023a5fe795}} 
+\index{main.c@{main.c}!CurrentValueFloat@{CurrentValueFloat}}
+\index{CurrentValueFloat@{CurrentValueFloat}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{CurrentValueFloat}{CurrentValueFloat}}
+{\footnotesize\ttfamily float Current\+Value\+Float}
+
+value of the current at present time \mbox{\Hypertarget{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}\label{main_8c_acb1ac491cbe7fd325dc057b9b5ea0704}} 
 \index{main.c@{main.c}!DMA\_Received@{DMA\_Received}}
 \index{DMA\_Received@{DMA\_Received}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{DMA\_Received}{DMA\_Received}}
@@ -400,7 +516,19 @@ variable used as a flag. If it is 1 the DMA buffer is full and the current avera
 \doxysubsubsection{\texorpdfstring{dutycycle}{dutycycle}}
 {\footnotesize\ttfamily int dutycycle}
 
-value between 1 and 0 \mbox{\Hypertarget{main_8c_acb559820d9ca11295b4500f179ef6392}\label{main_8c_acb559820d9ca11295b4500f179ef6392}} 
+value between 1 and 0 \mbox{\Hypertarget{main_8c_a9c257e30b69ee6589880871b37f2f9c2}\label{main_8c_a9c257e30b69ee6589880871b37f2f9c2}} 
+\index{main.c@{main.c}!errorI@{errorI}}
+\index{errorI@{errorI}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{errorI}{errorI}}
+{\footnotesize\ttfamily float errorI\mbox{[}2\mbox{]}}
+
+array with the values of the current error at previous time instant, errorI\mbox{[}0\mbox{]}, and present time instant, errorI\mbox{[}1\mbox{]} \mbox{\Hypertarget{main_8c_a2a6183ad26b0c41dd52c4c01891fe036}\label{main_8c_a2a6183ad26b0c41dd52c4c01891fe036}} 
+\index{main.c@{main.c}!errorS@{errorS}}
+\index{errorS@{errorS}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{errorS}{errorS}}
+{\footnotesize\ttfamily float errorS\mbox{[}2\mbox{]}}
+
+array with the values of the speed error at previous time instant, errorI\mbox{[}0\mbox{]}, and present time instant, errorI\mbox{[}1\mbox{]} \mbox{\Hypertarget{main_8c_acb559820d9ca11295b4500f179ef6392}\label{main_8c_acb559820d9ca11295b4500f179ef6392}} 
 \index{main.c@{main.c}!i@{i}}
 \index{i@{i}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{i}{i}}
@@ -412,19 +540,43 @@ used for ISO\+\_\+\+RESET time counter and to sum elements in DMA buffer \mbox{\
 \doxysubsubsection{\texorpdfstring{k}{k}}
 {\footnotesize\ttfamily int k =0}
 
-used in the for to print the sensed current value with a delay (only for debug) \mbox{\Hypertarget{main_8c_af3122c916cbc41bed80c6f811cd2dc23}\label{main_8c_af3122c916cbc41bed80c6f811cd2dc23}} 
+used in the for to print the sensed current value with a delay (only for debug) \mbox{\Hypertarget{main_8c_a71e3068b27873dbc7426308ef4b3d5d4}\label{main_8c_a71e3068b27873dbc7426308ef4b3d5d4}} 
+\index{main.c@{main.c}!oldCurrent@{oldCurrent}}
+\index{oldCurrent@{oldCurrent}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{oldCurrent}{oldCurrent}}
+{\footnotesize\ttfamily float old\+Current}
+
+value of the current at the previous time instant used for PI controller. Set at the beginning to 0 \mbox{\Hypertarget{main_8c_af3122c916cbc41bed80c6f811cd2dc23}\label{main_8c_af3122c916cbc41bed80c6f811cd2dc23}} 
 \index{main.c@{main.c}!Raw\_Data\_Sum@{Raw\_Data\_Sum}}
 \index{Raw\_Data\_Sum@{Raw\_Data\_Sum}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{Raw\_Data\_Sum}{Raw\_Data\_Sum}}
 {\footnotesize\ttfamily uint16\+\_\+t Raw\+\_\+\+Data\+\_\+\+Sum =0}
 
-variable in which is stored the sum of all the raw values from the sensor \mbox{\Hypertarget{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}\label{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}} 
+variable in which is stored the sum of all the raw values from the sensor \mbox{\Hypertarget{main_8c_a69a240f3ff71bf79fbae11b9e0eaa570}\label{main_8c_a69a240f3ff71bf79fbae11b9e0eaa570}} 
+\index{main.c@{main.c}!requestedCurrent@{requestedCurrent}}
+\index{requestedCurrent@{requestedCurrent}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{requestedCurrent}{requestedCurrent}}
+{\footnotesize\ttfamily float requested\+Current}
+
+value in Ampere \mbox{\Hypertarget{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}\label{main_8c_a6db2baed3b7aef6fd88da47d6c65dfe6}} 
 \index{main.c@{main.c}!Sensed\_Current\_Value@{Sensed\_Current\_Value}}
 \index{Sensed\_Current\_Value@{Sensed\_Current\_Value}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{Sensed\_Current\_Value}{Sensed\_Current\_Value}}
 {\footnotesize\ttfamily float Sensed\+\_\+\+Current\+\_\+\+Value}
 
-average current value in output, converted ad follows\+: Sensed\+\_\+\+Current\+\_\+\+Value=12$\ast$(Converted\+\_\+\+Average\+\_\+\+Voltage -\/2.\+5); values for the conversion are take by datasheet \mbox{\Hypertarget{main_8c_a835573497a60b314a9bf5a6fcac9602a}\label{main_8c_a835573497a60b314a9bf5a6fcac9602a}} 
+average current value in output, converted ad follows\+: Sensed\+\_\+\+Current\+\_\+\+Value=12$\ast$(Converted\+\_\+\+Average\+\_\+\+Voltage -\/2.\+5); values for the conversion are take by datasheet \mbox{\Hypertarget{main_8c_aadc45638247fcf298faa2bf7f16fda9d}\label{main_8c_aadc45638247fcf298faa2bf7f16fda9d}} 
+\index{main.c@{main.c}!speedI@{speedI}}
+\index{speedI@{speedI}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{speedI}{speedI}}
+{\footnotesize\ttfamily float speedI\mbox{[}2\mbox{]}}
+
+array with the values of the speed value of the integral part of the controller at previous time instant, errorI\mbox{[}0\mbox{]}, and present time instant, errorI\mbox{[}1\mbox{]} \mbox{\Hypertarget{main_8c_a43cfd0249135576d926ae147ee1591b4}\label{main_8c_a43cfd0249135576d926ae147ee1591b4}} 
+\index{main.c@{main.c}!speedP@{speedP}}
+\index{speedP@{speedP}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{speedP}{speedP}}
+{\footnotesize\ttfamily float speedP}
+
+proportional part of speed control \mbox{\Hypertarget{main_8c_a835573497a60b314a9bf5a6fcac9602a}\label{main_8c_a835573497a60b314a9bf5a6fcac9602a}} 
 \index{main.c@{main.c}!started@{started}}
 \index{started@{started}!main.c@{main.c}}
 \doxysubsubsection{\texorpdfstring{started}{started}}

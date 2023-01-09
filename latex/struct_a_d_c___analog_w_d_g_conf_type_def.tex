@@ -9,22 +9,22 @@ Structure definition of ADC analog watchdog.
 
 {\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+adc.\+h$>$}
 
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a025e81af21b93c5b8daf9f5241383302}{Watchdog\+Number}}
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a316457f389072f7a80b62e2b3c8fdef4}{Watchdog\+Number}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_ad4c60783321a30e8edffa323148e424d}{Watchdog\+Mode}}
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a13924e920be2454c955a2139e2c3eb1a}{Watchdog\+Mode}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_abc86b5861e3eff802fe765e62054f348}{Channel}}
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_ae82bf9242a014164f9f6907f29782c44}{Channel}}
 \item 
-Functional\+State \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a3bdb322d2f20ec5b94ae50ad954618af}{ITMode}}
+Functional\+State \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a8eb71d040cef0d56f25d29aa57ba5d3d}{ITMode}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a9bee62b3d364713a16a15cefcc217e65}{High\+Threshold}}
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a5c3a76d9a8ac84c537e7df10b0315e5a}{High\+Threshold}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a77e1743ebd27333ac2c9de55a25cd4c8}{Low\+Threshold}}
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a018c772cad96f1f0493ec0019ecc08f9}{Low\+Threshold}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_af1a2fe954f68e96f7de2b7f6eda48bbb}{Filtering\+Config}}
+uint32\+\_\+t \mbox{\hyperlink{struct_a_d_c___analog_w_d_g_conf_type_def_a30490e08d7a329a508b79a126027e9b0}{Filtering\+Config}}
 \end{DoxyCompactItemize}
 
 
@@ -40,48 +40,48 @@ The setting of these parameters by function HAL\+\_\+\+ADC\+\_\+\+Analog\+WDGCon
 \end{DoxyNote}
 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_abc86b5861e3eff802fe765e62054f348}\label{struct_a_d_c___analog_w_d_g_conf_type_def_abc86b5861e3eff802fe765e62054f348}} 
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_ae82bf9242a014164f9f6907f29782c44}\label{struct_a_d_c___analog_w_d_g_conf_type_def_ae82bf9242a014164f9f6907f29782c44}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!Channel@{Channel}}
 \index{Channel@{Channel}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{Channel}{Channel}}
-{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+Channel}
+{\footnotesize\ttfamily uint32\+\_\+t Channel}
 
-Select which ADC channel to monitor by analog watchdog. For Analog Watchdog 1\+: this parameter has an effect only if parameter \textquotesingle{}Watchdog\+Mode\textquotesingle{} is configured on single channel (only 1 channel can be monitored). For Analog Watchdog 2 and 3\+: Several channels can be monitored. To use this feature, call successively the function HAL\+\_\+\+ADC\+\_\+\+Analog\+WDGConfig() for each channel to be added (or removed with value \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+NONE\textquotesingle{}). This parameter can be a value of \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l}{ADC instance -\/ Channel number}}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_af1a2fe954f68e96f7de2b7f6eda48bbb}\label{struct_a_d_c___analog_w_d_g_conf_type_def_af1a2fe954f68e96f7de2b7f6eda48bbb}} 
+Select which ADC channel to monitor by analog watchdog. For Analog Watchdog 1\+: this parameter has an effect only if parameter \textquotesingle{}Watchdog\+Mode\textquotesingle{} is configured on single channel (only 1 channel can be monitored). For Analog Watchdog 2 and 3\+: Several channels can be monitored. To use this feature, call successively the function HAL\+\_\+\+ADC\+\_\+\+Analog\+WDGConfig() for each channel to be added (or removed with value \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+NONE\textquotesingle{}). This parameter can be a value of \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___c_h_a_n_n_e_l}{ADC instance -\/ Channel number}}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a30490e08d7a329a508b79a126027e9b0}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a30490e08d7a329a508b79a126027e9b0}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!FilteringConfig@{FilteringConfig}}
 \index{FilteringConfig@{FilteringConfig}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{FilteringConfig}{FilteringConfig}}
-{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+Filtering\+Config}
+{\footnotesize\ttfamily uint32\+\_\+t Filtering\+Config}
 
-Specify whether filtering should be use and the number of samples to consider. Before setting flag or raising interrupt, analog watchdog can wait to have several consecutive out-\/of-\/window samples. This parameter allows to configure this number. This parameter only applies to Analog watchdog 1. For others, use value ADC\+\_\+\+AWD\+\_\+\+FILTERING\+\_\+\+NONE. This parameter can be a value of \mbox{\hyperlink{group___a_d_c__analog__watchdog__filtering__config}{ADC Analog Watchdog filtering configuration}}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a9bee62b3d364713a16a15cefcc217e65}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a9bee62b3d364713a16a15cefcc217e65}} 
+Specify whether filtering should be use and the number of samples to consider. Before setting flag or raising interrupt, analog watchdog can wait to have several consecutive out-\/of-\/window samples. This parameter allows to configure this number. This parameter only applies to Analog watchdog 1. For others, use value ADC\+\_\+\+AWD\+\_\+\+FILTERING\+\_\+\+NONE. This parameter can be a value of \mbox{\hyperlink{group___a_d_c__analog__watchdog__filtering__config}{ADC Analog Watchdog filtering configuration}}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a5c3a76d9a8ac84c537e7df10b0315e5a}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a5c3a76d9a8ac84c537e7df10b0315e5a}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!HighThreshold@{HighThreshold}}
 \index{HighThreshold@{HighThreshold}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{HighThreshold}{HighThreshold}}
-{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+High\+Threshold}
+{\footnotesize\ttfamily uint32\+\_\+t High\+Threshold}
 
-Configure the ADC analog watchdog High threshold value. Depending of ADC resolution selected (12, 10, 8 or 6 bits), this parameter must be a number between Min\+\_\+\+Data = 0x000 and Max\+\_\+\+Data = 0x\+FFF, 0x3\+FF, 0x\+FF or 0x3F respectively. Note\+: Analog watchdog 2 and 3 are limited to a resolution of 8 bits\+: if ADC resolution is 12 bits the 4 LSB are ignored, if ADC resolution is 10 bits the 2 LSB are ignored. Note\+: If ADC oversampling is enabled, ADC analog watchdog thresholds are impacted\+: the comparison of analog watchdog thresholds is done on oversampling final computation (after ratio and shift application)\+: ADC data register bitfield \mbox{[}15\+:4\mbox{]} (12 most significant bits). \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a3bdb322d2f20ec5b94ae50ad954618af}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a3bdb322d2f20ec5b94ae50ad954618af}} 
+Configure the ADC analog watchdog High threshold value. Depending of ADC resolution selected (12, 10, 8 or 6 bits), this parameter must be a number between Min\+\_\+\+Data = 0x000 and Max\+\_\+\+Data = 0x\+FFF, 0x3\+FF, 0x\+FF or 0x3F respectively. Note\+: Analog watchdog 2 and 3 are limited to a resolution of 8 bits\+: if ADC resolution is 12 bits the 4 LSB are ignored, if ADC resolution is 10 bits the 2 LSB are ignored. Note\+: If ADC oversampling is enabled, ADC analog watchdog thresholds are impacted\+: the comparison of analog watchdog thresholds is done on oversampling final computation (after ratio and shift application)\+: ADC data register bitfield \mbox{[}15\+:4\mbox{]} (12 most significant bits). \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a8eb71d040cef0d56f25d29aa57ba5d3d}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a8eb71d040cef0d56f25d29aa57ba5d3d}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!ITMode@{ITMode}}
 \index{ITMode@{ITMode}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{ITMode}{ITMode}}
-{\footnotesize\ttfamily Functional\+State ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+ITMode}
+{\footnotesize\ttfamily Functional\+State ITMode}
 
-Specify whether the analog watchdog is configured in interrupt or polling mode. This parameter can be set to ENABLE or DISABLE \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a77e1743ebd27333ac2c9de55a25cd4c8}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a77e1743ebd27333ac2c9de55a25cd4c8}} 
+Specify whether the analog watchdog is configured in interrupt or polling mode. This parameter can be set to ENABLE or DISABLE \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a018c772cad96f1f0493ec0019ecc08f9}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a018c772cad96f1f0493ec0019ecc08f9}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!LowThreshold@{LowThreshold}}
 \index{LowThreshold@{LowThreshold}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{LowThreshold}{LowThreshold}}
-{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+Low\+Threshold}
+{\footnotesize\ttfamily uint32\+\_\+t Low\+Threshold}
 
-Configures the ADC analog watchdog Low threshold value. Depending of ADC resolution selected (12, 10, 8 or 6 bits), this parameter must be a number between Min\+\_\+\+Data = 0x000 and Max\+\_\+\+Data = 0x\+FFF, 0x3\+FF, 0x\+FF or 0x3F respectively. Note\+: Analog watchdog 2 and 3 are limited to a resolution of 8 bits\+: if ADC resolution is 12 bits the 4 LSB are ignored, if ADC resolution is 10 bits the 2 LSB are ignored. Note\+: If ADC oversampling is enabled, ADC analog watchdog thresholds are impacted\+: the comparison of analog watchdog thresholds is done on oversampling final computation (after ratio and shift application)\+: ADC data register bitfield \mbox{[}15\+:4\mbox{]} (12 most significant bits). \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_ad4c60783321a30e8edffa323148e424d}\label{struct_a_d_c___analog_w_d_g_conf_type_def_ad4c60783321a30e8edffa323148e424d}} 
+Configures the ADC analog watchdog Low threshold value. Depending of ADC resolution selected (12, 10, 8 or 6 bits), this parameter must be a number between Min\+\_\+\+Data = 0x000 and Max\+\_\+\+Data = 0x\+FFF, 0x3\+FF, 0x\+FF or 0x3F respectively. Note\+: Analog watchdog 2 and 3 are limited to a resolution of 8 bits\+: if ADC resolution is 12 bits the 4 LSB are ignored, if ADC resolution is 10 bits the 2 LSB are ignored. Note\+: If ADC oversampling is enabled, ADC analog watchdog thresholds are impacted\+: the comparison of analog watchdog thresholds is done on oversampling final computation (after ratio and shift application)\+: ADC data register bitfield \mbox{[}15\+:4\mbox{]} (12 most significant bits). \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a13924e920be2454c955a2139e2c3eb1a}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a13924e920be2454c955a2139e2c3eb1a}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!WatchdogMode@{WatchdogMode}}
 \index{WatchdogMode@{WatchdogMode}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{WatchdogMode}{WatchdogMode}}
-{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+Watchdog\+Mode}
+{\footnotesize\ttfamily uint32\+\_\+t Watchdog\+Mode}
 
-Configure the ADC analog watchdog mode\+: single/all/none channels. For Analog Watchdog 1\+: Configure the ADC analog watchdog mode\+: single channel or all channels, ADC groups regular and-\/or injected. For Analog Watchdog 2 and 3\+: Several channels can be monitored by applying successively the AWD init structure. Channels on ADC group regular and injected are not differentiated\+: Set value \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+SINGLE\+\_\+xxx\textquotesingle{} to monitor 1 channel, value \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+ALL\+\_\+xxx\textquotesingle{} to monitor all channels, \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+NONE\textquotesingle{} to monitor no channel. This parameter can be a value of \mbox{\hyperlink{group___a_d_c__analog__watchdog__mode}{ADC Analog Watchdog Mode}}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a025e81af21b93c5b8daf9f5241383302}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a025e81af21b93c5b8daf9f5241383302}} 
+Configure the ADC analog watchdog mode\+: single/all/none channels. For Analog Watchdog 1\+: Configure the ADC analog watchdog mode\+: single channel or all channels, ADC groups regular and-\/or injected. For Analog Watchdog 2 and 3\+: Several channels can be monitored by applying successively the AWD init structure. Channels on ADC group regular and injected are not differentiated\+: Set value \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+SINGLE\+\_\+xxx\textquotesingle{} to monitor 1 channel, value \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+ALL\+\_\+xxx\textquotesingle{} to monitor all channels, \textquotesingle{}ADC\+\_\+\+ANALOGWATCHDOG\+\_\+\+NONE\textquotesingle{} to monitor no channel. This parameter can be a value of \mbox{\hyperlink{group___a_d_c__analog__watchdog__mode}{ADC Analog Watchdog Mode}}. \mbox{\Hypertarget{struct_a_d_c___analog_w_d_g_conf_type_def_a316457f389072f7a80b62e2b3c8fdef4}\label{struct_a_d_c___analog_w_d_g_conf_type_def_a316457f389072f7a80b62e2b3c8fdef4}} 
 \index{ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}!WatchdogNumber@{WatchdogNumber}}
 \index{WatchdogNumber@{WatchdogNumber}!ADC\_AnalogWDGConfTypeDef@{ADC\_AnalogWDGConfTypeDef}}
 \doxysubsubsection{\texorpdfstring{WatchdogNumber}{WatchdogNumber}}
-{\footnotesize\ttfamily uint32\+\_\+t ADC\+\_\+\+Analog\+WDGConf\+Type\+Def\+::\+Watchdog\+Number}
+{\footnotesize\ttfamily uint32\+\_\+t Watchdog\+Number}
 
 Select which ADC analog watchdog is monitoring the selected channel. For Analog Watchdog 1\+: Only 1 channel can be monitored (or overall group of channels by setting parameter \textquotesingle{}Watchdog\+Mode\textquotesingle{}) For Analog Watchdog 2 and 3\+: Several channels can be monitored (by successive calls of \textquotesingle{}HAL\+\_\+\+ADC\+\_\+\+Analog\+WDGConfig()\textquotesingle{} for each channel) This parameter can be a value of \mbox{\hyperlink{group___a_d_c___h_a_l___e_c___a_w_d___n_u_m_b_e_r}{Analog watchdog -\/ Analog watchdog number}}. 
 

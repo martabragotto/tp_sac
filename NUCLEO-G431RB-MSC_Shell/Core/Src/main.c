@@ -244,8 +244,9 @@ float SpeedCalculation(uint32_t counter)
 }
 /**
  * @brief PI controller for current loop
- * @note   this note takes the value of the current requested by the user and determines the duty cycle. The PI controller gains are determined wuth simulation and
+ * @note   this note takes the value of the current requested by the user and determines the duty cycle. The PI controller gains are determined with simulation and
  * are defined values. The anti wind-up is done as well in the controller. Current values are defined globally and used in the function.
+ * the output value is the dutycycle value, between 0 and 100
  * @param float
  * @retval int
  */
@@ -281,8 +282,9 @@ int CurrentPI(float CurrentReq)
 }
 /**
  * @brief PI controller for speed loop
- * @note   this note takes the value of the current requested by the user and determines the duty cycle. The PI controller gains are determined wuth simulation and
+ * @note   this note takes the value of the current requested by the user and determines the duty cycle. The PI controller gains are determined with simulation and
  * are defined values. The anti wind-up is done as well in the controller. Current values are defined globally and used in the function.
+ * the output value is the current needed for the speed requested
  * @param float
  * @retval int
  */
@@ -535,6 +537,7 @@ int main(void)
 				HAL_UART_Transmit(&huart2, CurrentChoiceContent, sizeof(CurrentChoiceContent), HAL_MAX_DELAY);
 
 				requestedSpeed= atoi(argv[1]); // int value in rpm
+				CurrentPIcontrollerEnable=1;
 				SpeedPIcontrollerEnable=1;
 
 			}

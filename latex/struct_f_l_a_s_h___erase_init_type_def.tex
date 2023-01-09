@@ -9,46 +9,46 @@ FLASH Erase structure definition.
 
 {\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+flash.\+h$>$}
 
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a5d08471046a663db76d2252848a7d66c}{Type\+Erase}}
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_ae2154c09320f3ef7feb8f4a84e9ac17b}{Type\+Erase}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a9590db921fb8d36daf38e097f68fc14f}{Banks}}
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_aa07868a5b012861c6111322c3dccdbec}{Banks}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a5738dc09e398d8f4fc006e4252093923}{Page}}
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_ad5ac387429b4b85d2ee00e34559b4a28}{Page}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_ad18bd4b3caaccd0d51a4faf3c6b3b57f}{Nb\+Pages}}
+uint32\+\_\+t \mbox{\hyperlink{struct_f_l_a_s_h___erase_init_type_def_a883b193a78c63e993f1d70102eac64b3}{Nb\+Pages}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 FLASH Erase structure definition. 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_a9590db921fb8d36daf38e097f68fc14f}\label{struct_f_l_a_s_h___erase_init_type_def_a9590db921fb8d36daf38e097f68fc14f}} 
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_aa07868a5b012861c6111322c3dccdbec}\label{struct_f_l_a_s_h___erase_init_type_def_aa07868a5b012861c6111322c3dccdbec}} 
 \index{FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}!Banks@{Banks}}
 \index{Banks@{Banks}!FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}}
 \doxysubsubsection{\texorpdfstring{Banks}{Banks}}
-{\footnotesize\ttfamily uint32\+\_\+t FLASH\+\_\+\+Erase\+Init\+Type\+Def\+::\+Banks}
+{\footnotesize\ttfamily uint32\+\_\+t Banks}
 
-Select bank to erase. This parameter must be a value of \mbox{\hyperlink{group___f_l_a_s_h___banks}{FLASH Banks}} (FLASH\+\_\+\+BANK\+\_\+\+BOTH should be used only for mass erase) \mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_ad18bd4b3caaccd0d51a4faf3c6b3b57f}\label{struct_f_l_a_s_h___erase_init_type_def_ad18bd4b3caaccd0d51a4faf3c6b3b57f}} 
+Select bank to erase. This parameter must be a value of \mbox{\hyperlink{group___f_l_a_s_h___banks}{FLASH Banks}} (FLASH\+\_\+\+BANK\+\_\+\+BOTH should be used only for mass erase) \mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_a883b193a78c63e993f1d70102eac64b3}\label{struct_f_l_a_s_h___erase_init_type_def_a883b193a78c63e993f1d70102eac64b3}} 
 \index{FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}!NbPages@{NbPages}}
 \index{NbPages@{NbPages}!FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}}
 \doxysubsubsection{\texorpdfstring{NbPages}{NbPages}}
-{\footnotesize\ttfamily uint32\+\_\+t FLASH\+\_\+\+Erase\+Init\+Type\+Def\+::\+Nb\+Pages}
+{\footnotesize\ttfamily uint32\+\_\+t Nb\+Pages}
 
-Number of pages to be erased. This parameter must be a value between 1 and (max number of pages in the bank -\/ value of initial page) \mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_a5738dc09e398d8f4fc006e4252093923}\label{struct_f_l_a_s_h___erase_init_type_def_a5738dc09e398d8f4fc006e4252093923}} 
+Number of pages to be erased. This parameter must be a value between 1 and (max number of pages in the bank -\/ value of initial page) \mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_ad5ac387429b4b85d2ee00e34559b4a28}\label{struct_f_l_a_s_h___erase_init_type_def_ad5ac387429b4b85d2ee00e34559b4a28}} 
 \index{FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}!Page@{Page}}
 \index{Page@{Page}!FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}}
 \doxysubsubsection{\texorpdfstring{Page}{Page}}
-{\footnotesize\ttfamily uint32\+\_\+t FLASH\+\_\+\+Erase\+Init\+Type\+Def\+::\+Page}
+{\footnotesize\ttfamily uint32\+\_\+t Page}
 
-Initial Flash page to erase when page erase is disabled. This parameter must be a value between 0 and (max number of pages in the bank -\/ 1) (eg \+: 127 for 512KB dual bank) \mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_a5d08471046a663db76d2252848a7d66c}\label{struct_f_l_a_s_h___erase_init_type_def_a5d08471046a663db76d2252848a7d66c}} 
+Initial Flash page to erase when page erase is disabled. This parameter must be a value between 0 and (max number of pages in the bank -\/ 1) (eg \+: 127 for 512KB dual bank) \mbox{\Hypertarget{struct_f_l_a_s_h___erase_init_type_def_ae2154c09320f3ef7feb8f4a84e9ac17b}\label{struct_f_l_a_s_h___erase_init_type_def_ae2154c09320f3ef7feb8f4a84e9ac17b}} 
 \index{FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}!TypeErase@{TypeErase}}
 \index{TypeErase@{TypeErase}!FLASH\_EraseInitTypeDef@{FLASH\_EraseInitTypeDef}}
 \doxysubsubsection{\texorpdfstring{TypeErase}{TypeErase}}
-{\footnotesize\ttfamily uint32\+\_\+t FLASH\+\_\+\+Erase\+Init\+Type\+Def\+::\+Type\+Erase}
+{\footnotesize\ttfamily uint32\+\_\+t Type\+Erase}
 
 Mass erase or page erase. This parameter can be a value of \mbox{\hyperlink{group___f_l_a_s_h___type___erase}{FLASH Erase Type}} 
 

@@ -9,46 +9,46 @@ RCC\+\_\+\+CRS Synchronization structure definition.
 
 {\ttfamily \#include $<$stm32g4xx\+\_\+hal\+\_\+rcc\+\_\+ex.\+h$>$}
 
-\doxysubsection*{Public Attributes}
+\doxysubsection*{Data Fields}
 \begin{DoxyCompactItemize}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a90a25bed84151a9a8c0a1d960a3e02a6}{Reload\+Value}}
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a670045cfad50e7e4b3a31c0119d6e4fd}{Reload\+Value}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a79058ce364a2cf1f488a4aefd121f4b0}{HSI48\+Calibration\+Value}}
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a33d4291a43bf4a02c59e67c23d090c32}{HSI48\+Calibration\+Value}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_af659c26e117a160f4dd21274745e3576}{Freq\+Error\+Capture}}
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a4daae605939159f7f1dd079c6cfe59a8}{Freq\+Error\+Capture}}
 \item 
-uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a949ae83235d75bd091e6cce031e5e57d}{Freq\+Error\+Direction}}
+uint32\+\_\+t \mbox{\hyperlink{struct_r_c_c___c_r_s_synchro_info_type_def_a25a4c347bbdb1f1c8f6d977fc83a0817}{Freq\+Error\+Direction}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 RCC\+\_\+\+CRS Synchronization structure definition. 
 
-\doxysubsection{Member Data Documentation}
-\mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_af659c26e117a160f4dd21274745e3576}\label{struct_r_c_c___c_r_s_synchro_info_type_def_af659c26e117a160f4dd21274745e3576}} 
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a4daae605939159f7f1dd079c6cfe59a8}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a4daae605939159f7f1dd079c6cfe59a8}} 
 \index{RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}!FreqErrorCapture@{FreqErrorCapture}}
 \index{FreqErrorCapture@{FreqErrorCapture}!RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}}
 \doxysubsubsection{\texorpdfstring{FreqErrorCapture}{FreqErrorCapture}}
-{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+CRSSynchro\+Info\+Type\+Def\+::\+Freq\+Error\+Capture}
+{\footnotesize\ttfamily uint32\+\_\+t Freq\+Error\+Capture}
 
-Specifies the value loaded in the .FECAP, the frequency error counter value latched in the time of the last SYNC event. This parameter must be a number between 0 and 0x\+FFFF \mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a949ae83235d75bd091e6cce031e5e57d}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a949ae83235d75bd091e6cce031e5e57d}} 
+Specifies the value loaded in the .FECAP, the frequency error counter value latched in the time of the last SYNC event. This parameter must be a number between 0 and 0x\+FFFF \mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a25a4c347bbdb1f1c8f6d977fc83a0817}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a25a4c347bbdb1f1c8f6d977fc83a0817}} 
 \index{RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}!FreqErrorDirection@{FreqErrorDirection}}
 \index{FreqErrorDirection@{FreqErrorDirection}!RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}}
 \doxysubsubsection{\texorpdfstring{FreqErrorDirection}{FreqErrorDirection}}
-{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+CRSSynchro\+Info\+Type\+Def\+::\+Freq\+Error\+Direction}
+{\footnotesize\ttfamily uint32\+\_\+t Freq\+Error\+Direction}
 
-Specifies the value loaded in the .FEDIR, the counting direction of the frequency error counter latched in the time of the last SYNC event. It shows whether the actual frequency is below or above the target. This parameter must be a value of \mbox{\hyperlink{group___r_c_c_ex___c_r_s___freq_error_direction}{RCCEx CRS Freq\+Error\+Direction}} \mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a79058ce364a2cf1f488a4aefd121f4b0}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a79058ce364a2cf1f488a4aefd121f4b0}} 
+Specifies the value loaded in the .FEDIR, the counting direction of the frequency error counter latched in the time of the last SYNC event. It shows whether the actual frequency is below or above the target. This parameter must be a value of \mbox{\hyperlink{group___r_c_c_ex___c_r_s___freq_error_direction}{RCCEx CRS Freq\+Error\+Direction}} \mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a33d4291a43bf4a02c59e67c23d090c32}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a33d4291a43bf4a02c59e67c23d090c32}} 
 \index{RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}!HSI48CalibrationValue@{HSI48CalibrationValue}}
 \index{HSI48CalibrationValue@{HSI48CalibrationValue}!RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}}
 \doxysubsubsection{\texorpdfstring{HSI48CalibrationValue}{HSI48CalibrationValue}}
-{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+CRSSynchro\+Info\+Type\+Def\+::\+HSI48\+Calibration\+Value}
+{\footnotesize\ttfamily uint32\+\_\+t HSI48\+Calibration\+Value}
 
-Specifies value loaded in HSI48 oscillator smooth trimming. This parameter must be a number between 0 and 0x7F \mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a90a25bed84151a9a8c0a1d960a3e02a6}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a90a25bed84151a9a8c0a1d960a3e02a6}} 
+Specifies value loaded in HSI48 oscillator smooth trimming. This parameter must be a number between 0 and 0x7F \mbox{\Hypertarget{struct_r_c_c___c_r_s_synchro_info_type_def_a670045cfad50e7e4b3a31c0119d6e4fd}\label{struct_r_c_c___c_r_s_synchro_info_type_def_a670045cfad50e7e4b3a31c0119d6e4fd}} 
 \index{RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}!ReloadValue@{ReloadValue}}
 \index{ReloadValue@{ReloadValue}!RCC\_CRSSynchroInfoTypeDef@{RCC\_CRSSynchroInfoTypeDef}}
 \doxysubsubsection{\texorpdfstring{ReloadValue}{ReloadValue}}
-{\footnotesize\ttfamily uint32\+\_\+t RCC\+\_\+\+CRSSynchro\+Info\+Type\+Def\+::\+Reload\+Value}
+{\footnotesize\ttfamily uint32\+\_\+t Reload\+Value}
 
 Specifies the value loaded in the Counter reload value. This parameter must be a number between 0 and 0x\+FFFF 
 

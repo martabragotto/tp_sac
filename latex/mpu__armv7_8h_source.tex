@@ -109,8 +109,8 @@
 \DoxyCodeLine{178 }
 \DoxyCodeLine{179 }
 \DoxyCodeLine{183 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\{}
-\DoxyCodeLine{184   uint32\_t \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_afe7a7721aa08988d915670efa432cdd2}{RBAR}}; }
-\DoxyCodeLine{185   uint32\_t \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_a38c1d3bc6a9ffc9423d633add01928f1}{RASR}}; }
+\DoxyCodeLine{184   uint32\_t \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_a0b30f076910cb037e031563046dd5e10}{RBAR}}; }
+\DoxyCodeLine{185   uint32\_t \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_a868291e1acbf1ce869f6e98a7c68718a}{RASR}}; }
 \DoxyCodeLine{186 \} \mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}};}
 \DoxyCodeLine{187     }
 \DoxyCodeLine{191 \_\_STATIC\_INLINE \textcolor{keywordtype}{void} ARM\_MPU\_Enable(uint32\_t MPU\_Control)}
@@ -164,11 +164,11 @@
 \DoxyCodeLine{262 \{}
 \DoxyCodeLine{263   \textcolor{keyword}{const} uint32\_t rowWordSize = \textcolor{keyword}{sizeof}(\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t}{ARM\_MPU\_Region\_t}})/4U;}
 \DoxyCodeLine{264   \textcolor{keywordflow}{while} (cnt > MPU\_TYPE\_RALIASES) \{}
-\DoxyCodeLine{265     ARM\_MPU\_OrderedMemcpy(\&(MPU-\/>RBAR), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_afe7a7721aa08988d915670efa432cdd2}{RBAR}}), MPU\_TYPE\_RALIASES*rowWordSize);}
+\DoxyCodeLine{265     ARM\_MPU\_OrderedMemcpy(\&(MPU-\/>RBAR), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_a0b30f076910cb037e031563046dd5e10}{RBAR}}), MPU\_TYPE\_RALIASES*rowWordSize);}
 \DoxyCodeLine{266     table += MPU\_TYPE\_RALIASES;}
 \DoxyCodeLine{267     cnt -\/= MPU\_TYPE\_RALIASES;}
 \DoxyCodeLine{268   \}}
-\DoxyCodeLine{269   ARM\_MPU\_OrderedMemcpy(\&(MPU-\/>RBAR), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_afe7a7721aa08988d915670efa432cdd2}{RBAR}}), cnt*rowWordSize);}
+\DoxyCodeLine{269   ARM\_MPU\_OrderedMemcpy(\&(MPU-\/>RBAR), \&(table-\/>\mbox{\hyperlink{struct_a_r_m___m_p_u___region__t_a0b30f076910cb037e031563046dd5e10}{RBAR}}), cnt*rowWordSize);}
 \DoxyCodeLine{270 \}}
 \DoxyCodeLine{271 }
 \DoxyCodeLine{272 \textcolor{preprocessor}{\#endif}}
