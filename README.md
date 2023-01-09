@@ -27,6 +27,12 @@ Then the percentage value has been divided by 100 to have it convertd into the f
 The second pulse value has been calculated as before (pulse channel 2 = counter period - pulse channel 1)
 
 Output tests with 0.15, 0.60, 0.80 ad dutycycle values: look at the images "screenOscilloscopioPeriodValue", "screenOscilloscopioAlpha0.15", "screenOscilloscopioAlpha0.60", "screenOscilloscopioAlpha0.80" for check
+![screenOscilloscopioPeriodValue](https://user-images.githubusercontent.com/73655064/211312404-436823cc-92ef-4d11-abac-c8a478f99e61.png)
+![screenOscilloscopioAlpha0 15](https://user-images.githubusercontent.com/73655064/211312472-44317d62-266e-492d-871c-f5b0c61cca7f.png)
+![screenOscilloscopioAlpha0 60](https://user-images.githubusercontent.com/73655064/211312477-838bf9b9-dadd-4115-88ef-dd7b62ffb20e.png)
+![screenOscilloscopioAlpha0 80](https://user-images.githubusercontent.com/73655064/211312479-1a788364-bc73-403b-b7ea-6983249a837f.png)
+
+
 Notice that the up time values are at least 2microseconds shorter due to dead time setting.
 
 Dead time is set as follow:
@@ -61,6 +67,9 @@ The DMA has been associated to a new timer TIM8. The voltage output frequency of
 Callback function has been used only as a flag while the conversion has been performed in the main. 
 The conversion has been performed by averaging the 10 raw data and then dividing it by 4095 and multiplying it by 3,3.
 Have a look at the images "currentSensedValuesOnTerminal" "CurrentSensedWithOscilloscope" to see the measured current.
+
+
+
 
 Notice that in the following test, we had a hardware problem. Current sensor in the power module had higher values than expected in output. So the gain is set to 3 instead of 12 as shown in the datasheet. With this changed the sensor output and oscilloscope output are coherent. Have a look at the images "CurrentSpeedSensed" "NewCurrentSensedWithOscilloscope" to see the measured current.
 
