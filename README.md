@@ -134,13 +134,22 @@ where
 
 CURRENT CONTROL 
 
-According to the control scheme realised through simulink the following coefficients for the current PID has been found: 
+To control the current a PI controller is designed to reach the value desired.
+At first, the desired value is determined by the user when calling the function. On command line the user need to write "current" followed by the value of the current desired in mAmpere. Then the value is used by the controller to determine the dutycycle.
+
+According to the control scheme realised through simulink the following coefficients for the current PI has been found: 
 
 	KpC = 0,0342717381517845
 	KiC = 25,206814338745
-	
-Then the continuous time control scheme has been translated into C, discret time code as , the following: 
+
+Then the control scheme has been translated into C, discret time code as , the following: 
+
 AntiWindup solution: in order to not realise the control for saturised alfa then if alfa is >1 is then set to 1 and if alfa is <0 is then set to 0.
+
+Each time the current is sensed, the controller is called and determines a new value for the dutycycle. 
+Everytime the motor is stopped, the error is reset to 0 value and the integrator part is set to the initial value 0,5
+
+
 
 The following "currentControl" image shows the functioning of the current control at the set current of 400 mA.
 
