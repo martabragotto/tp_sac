@@ -121,20 +121,20 @@ SPEED SENSING
 
 In order to sense the current, two timers are used. The first one is set to work in "encoder mode" to sens the input values from the motor's encoder. In particular the counter is set to the middle value. The encoder mode adds one to the counter when motor turns in clockwise direction and subtracts one when in conterclockwise direction, so we start from the middle value of the counter to take into account both clockwise and conterclockwise rotations.
 Then a second timer is set to evaluate the value of the rotor position at constant rate to calculate the speed of rotation. Indeed
-RotationSpeed=deltaAngle x TimerFrequency
+	RotationSpeed=deltaAngle x TimerFrequency
 The timer frequency is set at 100Hz
 The encoder mode timer is set to tick at both rising and folling edge of the encoder signal and it processes the signal of two. Then the total number of trigger events that can increase or decrease the timer counter is 1024 x 4=4096 per round. A changing in the encoder timer counter means a chainging if 2pi/4096 radiant in rotor's position.
 
 The following lines converts the data from encoder mode timer into rotational speed in radiant per second
-speed = 2 * 3.14 * (((float)counter-HALF_COUNTER_ENCODER)/RISES_PER_TURN) * SAMPLING_FREQ;
+	speed = 2 * 3.14 * (((float)counter-HALF_COUNTER_ENCODER)/RISES_PER_TURN) * SAMPLING_FREQ;
 where
-HALF_COUNTER_ENCODER=32767 (Middle value of the encoder mode timer's counter)
-RISES_PER_TURN=4096
-SAMPLING_FREQ=100
+	HALF_COUNTER_ENCODER=32767 (Middle value of the encoder mode timer's counter)
+	RISES_PER_TURN=4096
+	SAMPLING_FREQ=100
 
 CURRENT CONTROL 
 
-Accordind to the control scheme realised through simulink the following coefficients for the current PID has been found: 
+According to the control scheme realised through simulink the following coefficients for the current PID has been found: 
 
 	KpC = 0,0342717381517845
 	KiC = 25,206814338745
@@ -150,7 +150,7 @@ currentControl:
 
 SPEED CONTROL 
 
-Accordind to the control scheme realised through simulink the following coefficients for the current PID has been found: 
+According to the control scheme realised through simulink the following coefficients for the current PID has been found: 
 
 	KpC = 2,25311945059239
 	KiC = 7,88672319650441
