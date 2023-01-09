@@ -70,8 +70,8 @@ Following the shown formulas the first 3 lines of calculations have been compute
 			110XXXXX 
 	11 in binary is 01011 so the final minimum DTG in binary will be 11001011 that is 203 in decimal 
 
-	Actually 203 has been chosen as DTG in the code.
-	This is the minimum value, this value can be increased if needed (i.e. at 205)
+Actually 203 has been chosen as DTG in the code.
+This is the minimum value, this value can be increased if needed (i.e. at 205)
 	
 ISO RESET CODE 
 In order to let inverter receive an up signal of at least 2 us, the following calculation has been done: 
