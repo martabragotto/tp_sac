@@ -135,7 +135,7 @@ where
 CURRENT CONTROL 
 
 To control the current a PI controller is designed to reach the value desired.
-At first, the desired value is determined by the user when calling the function. On command line the user need to write "current" followed by the value of the current desired in mAmpere. Then the value is used by the controller to determine the dutycycle.
+At first, the desired value is determined by the user when calling the function. On command line the user need to write "current" followed by the value of the current desired in mA. Then the value is used by the controller to determine the dutycycle.
 
 According to the control scheme realised through simulink the following coefficients for the current PI has been found: 
 
@@ -143,28 +143,59 @@ According to the control scheme realised through simulink the following coeffici
 	KiC = 25,206814338745
 
 Then the control scheme has been translated into C, discret time code as , the following: 
+int CurrentPI(float CurrentReq)
+{
+	int alpha;
+
+	//new error calculation
+	errorI[1]=CurrentReq-CurrentValueFloat;
+
+	//proportional and integral alpha calculation
+	alphaP=KpC*errorI[1];
+	alphaI[1]=alphaI[0]+((KiC/(2*SAMPLING_FREQ_CURRENT))*(errorI[1]+errorI[0]));
+	alpha= 100*(alphaP+alphaI[1]);
+
+	//error and alpha values storage
+	errorI[0]=errorI[1];
+	alphaI[0]=alphaI[1];
+
+	//anti wind-up
+	if(alpha>100)
+	{
+		alpha=100;
+		alphaI[0]=1;
+	}
+	else if(alpha<0)
+	{
+		alpha=0;
+		alphaI[0]=0;
+	}
+	return alpha;
+
+}
 
 AntiWindup solution: in order to not realise the control for saturised alfa then if alfa is >1 is then set to 1 and if alfa is <0 is then set to 0.
 
 Each time the current is sensed, the controller is called and determines a new value for the dutycycle. 
-Everytime the motor is stopped, the error is reset to 0 value and the integrator part is set to the initial value 0,5
+Everytime the motor is stopped, the error is reset to 0 value and the integrator part is set to the initial value 0,5.
 
 
-
-The following "currentControl" image shows the functioning of the current control at the set current of 400 mA.
+The following "currentControl" image shows the functioning of the current control at the set current of 2000 mA, followed by the output values of the board read by teraterm
 
 currentControl: 
+![tek00002](https://user-images.githubusercontent.com/114988835/211408751-8711ffc0-e0e5-492f-a115-4822d9307bb8.png)
+![corrente2A](https://user-images.githubusercontent.com/114988835/211408885-aacc52ee-d0ed-46d2-ac36-336c35d839c6.JPG)
 
-![currentControl](https://user-images.githubusercontent.com/73655064/211350204-776997bf-cf80-477c-8b3b-81a354d241cd.png)
 
 SPEED CONTROL 
 
+To control the speed, the structure of the controller is exactly the same of the current controller. The desired value of the speed is written by the user in rpm.
 According to the control scheme realised through simulink the following coefficients for the current PID has been found: 
 
 	KpC = 2,25311945059239
 	KiC = 7,88672319650441
 
-
-The following "speedControl" image shows the functioning of the speed control at the set speed of 
-
-speedControl: 
+ Speed controller is called each time a new value of the sensed rotational speed is ready and determines the current needed. Then the current controller is used to determine the correct dutycycle.
+Everytime the motor is stopped, the error is reset to 0 value and the integrator part is set to the initial value 0.
+ 
+ This last controller has not been tested yet.
