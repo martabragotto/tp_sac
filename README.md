@@ -22,6 +22,7 @@ pulse channel 2 = 3987-1
 Output test --> look at the image "screenOscilloscopioFrequencyCheck" below for frequency and duty cycle check.
 
 screenOscilloscopioFrequencyCheck:
+
 ![screenOscilloscopioFrequencyCheck](https://user-images.githubusercontent.com/73655064/211313367-2397494a-979b-47e1-9afe-b66d3b97218e.png)
 
 
@@ -34,15 +35,19 @@ Output tests with 0.15, 0.60, 0.80 ad dutycycle values: look at the images "scre
 
 
 screenOscilloscopioPeriodValue:
+
 ![screenOscilloscopioPeriodValue](https://user-images.githubusercontent.com/73655064/211312404-436823cc-92ef-4d11-abac-c8a478f99e61.png)
 
 screenOscilloscopioAlpha0.15 :
+
 ![screenOscilloscopioAlpha0 15](https://user-images.githubusercontent.com/73655064/211312472-44317d62-266e-492d-871c-f5b0c61cca7f.png)
 
 screenOscilloscopioAlpha0.60 :
+
 ![screenOscilloscopioAlpha0 60](https://user-images.githubusercontent.com/73655064/211312477-838bf9b9-dadd-4115-88ef-dd7b62ffb20e.png)
 
 screenOscilloscopioAlpha0.80 :
+
 ![screenOscilloscopioAlpha0 80](https://user-images.githubusercontent.com/73655064/211312479-1a788364-bc73-403b-b7ea-6983249a837f.png)
 
 
@@ -76,10 +81,12 @@ since the clock works at a frequency of 170MHz, the number of clockturns needed 
 	Then by the oscilloscope (see picture screenOscilloscopioPeriod1 below) the up period time of the pin has been measured, and it could be noticed that it was 18,76 us, almost 10 times the minimum value. This is because the while cycle actually did not last only one clock period. So the ClockTurnsNumber have been changed to 70 (see picture screenOscilloscopioPeriod2 below).
 	
 screenOscilloscopioPeriod2:
+
 	![screenOscilloscopioPeriod1](https://user-images.githubusercontent.com/73655064/211313674-b7dcab79-2535-4594-9d06-65a85d6fc3f5.png)
 
 	
 screenOscilloscopioPeriod2:
+
 	![screenOscilloscopioPeriod2](https://user-images.githubusercontent.com/73655064/211313663-76b20660-0c11-4052-be43-d1382e8421c9.png)
 
 	
@@ -90,9 +97,11 @@ The conversion has been performed by averaging the 10 raw data and then dividing
 Have a look at the images "currentSensedValuesOnTerminal" "CurrentSensedWithOscilloscope" to see the measured current.
 
 currentSensedValuesOnTerminal:
+
 ![CurrentSensedValuesOnTerminal](https://user-images.githubusercontent.com/73655064/211314058-48021472-fce9-40b1-8f2b-854a97929819.jpeg)
 
 CurrentSensedWithOscilloscope:
+
 ![CurrentSensedWithOscilloscope](https://user-images.githubusercontent.com/73655064/211314079-e1d13715-a702-4531-aa73-76ab3e6fd57f.png)
 
 
@@ -100,9 +109,11 @@ CurrentSensedWithOscilloscope:
 Notice that in the following test, we had a hardware problem. Current sensor in the power module had higher values than expected in output. So the gain is set to 3 instead of 12 as shown in the datasheet. With this changed the sensor output and oscilloscope output are coherent. Have a look at the images "CurrentSpeedSensed" "NewCurrentSensedWithOscilloscope" to see the measured current.
 
 CurrentSpeedSensed:
+
 ![CurrentSpeedSensed](https://user-images.githubusercontent.com/73655064/211314136-92f26c73-2b67-4ad0-84fd-9ef46d4939d3.JPG)
 
 NewCurrentSensedWithOscilloscope
+
 ![NewCurrentSensedWithOscilloscope](https://user-images.githubusercontent.com/73655064/211314178-c18fb638-6b82-4327-b16d-f90fab26b754.png)
 
 
@@ -132,7 +143,9 @@ Then the continuous time control scheme has been translated into C, discret time
 AntiWindup solution: in order to not realise the control for saturised alfa then if alfa is >1 is then set to 1 and if alfa is <0 is then set to 0.
 
 The following "currentControl" image shows the functioning of the current control at the set current of 400 mA.
+
 currentControl: 
+
 ![currentControl](https://user-images.githubusercontent.com/73655064/211350204-776997bf-cf80-477c-8b3b-81a354d241cd.png)
 
 SPEED CONTROL 
@@ -144,4 +157,5 @@ Accordind to the control scheme realised through simulink the following coeffici
 
 
 The following "speedControl" image shows the functioning of the speed control at the set speed of 
+
 speedControl: 
