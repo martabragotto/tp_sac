@@ -143,8 +143,8 @@ According to the control scheme realised through simulink the following coeffici
 	KiC = 25,206814338745
 
 Then the control scheme has been translated into C, discret time code as , the following: 
-<
-int CurrentPI(float CurrentReq)
+
+<int CurrentPI(float CurrentReq)
 {
 	int alpha;
 
