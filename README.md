@@ -125,16 +125,23 @@ CURRENT CONTROL
 
 Accordind to the control scheme realised through simulink the following coefficients for the current PID has been found: 
 
-	KpC=0
-	KiC=0,00118870172705228
+	KpC = 0,0342717381517845
+	KiC = 25,206814338745
 	
 Then the continuous time control scheme has been translated into C, discret time code as , the following: 
 AntiWindup solution: in order to not realise the control for saturised alfa then if alfa is >1 is then set to 1 and if alfa is <0 is then set to 0.
+
+The following "currentControl" image shows the functioning of the current control at the set current of 400 mA.
+currentControl: 
+![currentControl](https://user-images.githubusercontent.com/73655064/211350204-776997bf-cf80-477c-8b3b-81a354d241cd.png)
 
 SPEED CONTROL 
 
 Accordind to the control scheme realised through simulink the following coefficients for the current PID has been found: 
 
-	KpC=0,00302065389254772
-	KiC=0,000072398235347041
+	KpC = 2,25311945059239
+	KiC = 7,88672319650441
 
+
+The following "speedControl" image shows the functioning of the speed control at the set speed of 
+speedControl: 
