@@ -463,15 +463,9 @@ int main(void)
 			}
 			else if(strcmp(argv[0],"start")==0){
 				HAL_UART_Transmit(&huart2, startContent, sizeof(startContent), HAL_MAX_DELAY);
+
 				//ISO_RESET code
 				ISO_RESET();
-				/* code replaced by the function
-				HAL_GPIO_WritePin(ISO_RESET_GPIO_Port, ISO_RESET_Pin, GPIO_PIN_SET);
-				for(i=0; i<ISO_RESET_TIME; i++)
-				{
-					//wait for at least 2microSec
-				}
-				HAL_GPIO_WritePin(ISO_RESET_GPIO_Port, ISO_RESET_Pin, GPIO_PIN_RESET);*/
 
 				//Timers start and dutycycle setting at 50
 
@@ -483,11 +477,6 @@ int main(void)
 				speedI[0]=0;
 				StartPWM();
 
-				/*code replaced by the function
-				HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_1);
-				HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_2);
-				HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_1);
-				HAL_TIMEx_PWMN_Start(&htim1, TIM_CHANNEL_2);*/
 
 			}
 			else if(strcmp(argv[0],"stop")==0){
@@ -497,6 +486,7 @@ int main(void)
 				//reset of PWM timers at 50 dutycycle
 				dutycycle= 50;
 				DutyCycleFuncDef(dutycycle);
+
 				//setting integral error to zero
 				errorI[0]=0;
 				alphaI[1]=0;
@@ -504,12 +494,7 @@ int main(void)
 				speedI[1]=0;
 				CurrentPIcontrollerEnable=0;
 				SpeedPIcontrollerEnable=0;
-				/*code replaced by StopPWM function
-				//Timers stop
-				HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_1);
-				HAL_TIM_PWM_Stop(&htim1, TIM_CHANNEL_2);
-				HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_1);
-				HAL_TIMEx_PWMN_Stop(&htim1, TIM_CHANNEL_2);*/
+
 			}
 			else if(strcmp(argv[0],"dutycycle")==0){
 
@@ -517,12 +502,7 @@ int main(void)
 
 				dutycycle= atoi(argv[1]);
 				DutyCycleFuncDef(dutycycle);
-				/*code replaced by function
-				pulse=(dutycycle*TIM1_ARR)/100;
-				TIM1->CCR1=pulse;
-				TIM1->CCR2=TIM1_ARR-pulse;*/
 
-				//HAL_UART_Transmit(&huart2, &pulse, sizeof(pulse), HAL_MAX_DELAY);
 			}
 			else if(strcmp(argv[0],"current")==0){
 
@@ -552,24 +532,9 @@ int main(void)
 		{
 			oldCurrent=CurrentValueFloat;
 			CurrentValueFloat=CurrentConversion();
-			/*code replaced by function*/
-			//HAL_UART_Transmit(&huart2, "DMA current recieved\r\n ", sizeof("DMA current recieved\r\n"), HAL_MAX_DELAY);
-			/*Raw_Data_Sum=0;
-			for(i=0;i<10;i++)
-			{
-				Raw_Data_Sum=Raw_Data_Sum+ADC_buffer[i];
-			}
-			Average_Voltage=Raw_Data_Sum/ADC_BUFF_SIZE;
-			Converted_Average_Voltage=(Average_Voltage/4095.0)*3.3;
-			Sensed_Current_Value=12*(Converted_Average_Voltage -2.5);
-			sprintf(Current_Sensed, "current sensed is %.3f \r\n", Sensed_Current_Value);
-			if(k==100000)
-			{
-				HAL_UART_Transmit(&huart2, Current_Sensed, sizeof(Current_Sensed), HAL_MAX_DELAY);
-				//HAL_UART_Transmit(&huart2, ADC_buffer, sizeof(ADC_buffer), HAL_MAX_DELAY);
-				k=0;
-			}*/
+
 			k++; //value used for debug
+
 			//current controller
 			if (CurrentPIcontrollerEnable)
 			{
